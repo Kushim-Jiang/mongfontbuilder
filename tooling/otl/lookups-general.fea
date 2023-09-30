@@ -1,0 +1,48 @@
+# ==================================
+# III: Mongolian-specific
+# ==================================
+
+# control character: preprocessing
+include(lookups-general-preprocessing.fea);
+
+# III.1: Phonetic - Chachlag
+include(lookups-general-chachlag.fea);
+
+# III.2: Phonetic - Syllabic
+include(lookups-general-syllabic-hag.fea);
+include(lookups-general-syllabic-tag.fea);
+include(lookups-general-syllabic-mag.fea);
+include(lookups-general-syllabic-sib.fea);
+
+# III.3: Phonetic - Particle
+
+include(lookups-general-particle.fea);
+
+# III.4: Graphemic - Devsger
+
+include(lookups-general-devsger.fea);
+
+# III.5: Graphemic - Postbowed
+
+include(lookups-general-postbowed.fea);
+
+# III.6: Uncaptured - FVS
+
+include(lookups-general-fvs.fea);
+
+
+# ==================================
+# IIb: cursive script
+# ==================================
+
+# IIb.1: ligature
+
+include(lookups-general-ligature.fea);
+
+# IIb.2: cleanup of format controls
+
+include(lookups-general-postprocessing.fea);
+
+# IIb.3: optional treatments
+
+include(lookups-general-optional.fea);

@@ -1,0 +1,15 @@
+# ==================================
+# categories for MCS, FVS
+# ==================================
+
+include(classes-categories-all.fea);
+
+
+# ==================================
+# categories for Hudum+AG, Todo+AG, Manchu+AG, Sibe
+# ==================================
+
+include(classes-categories-hag.fea);
+include(classes-categories-tag.fea);
+include(classes-categories-mag.fea);
+include(classes-categories-sib.fea);

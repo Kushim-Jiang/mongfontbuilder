@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "kushim-mongolian-utn"
+version = "0.0.0"
+description = ""
+authors = [
+    "Kushim Jiang <kushim_jiang@outlook.com>",
+    "Liang Hai <lianghai@gmail.com>",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fontmake = "^3.7.1"
+PyYaml = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

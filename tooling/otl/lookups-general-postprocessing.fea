@@ -1,0 +1,9 @@
+# ==================================
+# postprocessing: control characters
+# ==================================
+
+lookup IIb.controls.postprocessing {
+    sub nirugu.ignored' lookup _.nominal;
+    sub @fvs.ignored' lookup _.nominal;
+    sub mvs' lookup _.nominal;
+} IIb.controls.postprocessing;
