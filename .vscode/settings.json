@@ -1,0 +1,21 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+  },
+  "black-formatter.args": [
+    "--line-length",
+    "100"
+  ],
+  "isort.args": [
+    "--profile",
+    "black"
+  ]
+}

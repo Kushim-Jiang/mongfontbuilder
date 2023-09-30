@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "be5invis.opentype-feature-file-support",
+    "ms-python.black-formatter",
+    "ms-python.python",
+    "redhat.vscode-yaml",
+    "tamasfe.even-better-toml"
+  ]
+}
