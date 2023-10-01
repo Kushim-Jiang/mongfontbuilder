@@ -7,6 +7,8 @@ from fontmake.font_project import FontProject
 from fontTools.feaLib.parser import Parser
 from fontTools.ttLib import TTFont
 from fontTools.ttLib.tables._n_a_m_e import table__n_a_m_e
+from glyphsLib import GSFont
+from glyphsLib.builder import UFOBuilder
 from ufoLib2.objects import Font, Info
 
 tooling_dir = Path(__file__).parent
@@ -14,13 +16,23 @@ tooling_dir = Path(__file__).parent
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("ufo", type=Path)
+    parser.add_argument("font", type=Path)
     parser.add_argument("--family-name")
     parser.add_argument("--output-dir", type=Path)
+
     args = parser.parse_args()
+    font_path: Path = args.font
+
+    assert font_path.suffix in {".ufo", ".glyphs", ".glyphspackage"}
+
+    if font_path.suffix == ".ufo":
+        font = Font.open(font_path)
+    else:
+        builder = UFOBuilder(GSFont(font_path))
+        (font,) = builder.masters
 
     build(
-        ufo=Font.open(args.ufo),
+        ufo=font,
         family_name=args.family_name,
         output_dir=args.output_dir,
     )
