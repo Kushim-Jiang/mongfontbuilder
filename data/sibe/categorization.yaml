@@ -1,0 +1,8 @@
+letter:
+  vowel:
+    masculine: [.a, .o, .ue]
+    feminine: [.e, .u]
+    neuter: [.i]
+    other: [.ii]
+
+  consonant: [.sbm, .n, .ng, .k, .g, .h, .b, .p, .s, .sh, .t, .d, .l, .m, .ch, .j, .y, .r, .f, .w, .kh, .gh, .hh, .c, .z, .rh, .cr, .zr]

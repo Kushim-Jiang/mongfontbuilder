@@ -1,0 +1,615 @@
+- cp: 0x1820 # ᠠ MONGOLIAN LETTER A
+  id: "a"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .A]
+        fvs: 3
+      - written_units: [.A]
+        fvs: 1
+      - written_units: [.Aa]
+        fvs: 2
+    init:
+      - written_units: [.A, .A]
+        fvs: 2
+      - written_units: [.A]
+        fvs: 1
+    medi:
+      - written_units: [.A]
+      - written_units: [.A, .A]
+        fvs: 1
+    fina:
+      - written_units: [.A]
+        fvs: 2
+      - written_units: [.Aa]
+        fvs: 1
+
+- cp: 0x1821 # ᠡ MONGOLIAN LETTER E
+  id: "e"
+  presentation_forms:
+    isol:
+      - written_units: [.A]
+        fvs: 2
+      - written_units: [.Aa]
+        fvs: 1
+    init:
+      - written_units: [.A]
+      - written_units: [.A, .A]
+        fvs: 1
+    medi:
+      - written_units: [.A]
+    fina:
+      - written_units: [.A]
+        fvs: 2
+      - written_units: [.Aa]
+        fvs: 1
+
+- cp: 0x1827 # ᠧ MONGOLIAN LETTER EE
+  id: "ee"
+  transcription: "é"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .W]
+    init:
+      - written_units: [.A, .W]
+    medi:
+      - written_units: [.W]
+    fina:
+      - written_units: [.W]
+
+- cp: 0x1822 # ᠢ MONGOLIAN LETTER I
+  id: "i"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .I]
+        fvs: 3
+      - written_units: [.I]
+        fvs: 1
+      - written_units: [.Ix]
+        fvs: 2
+    init:
+      - written_units: [.A, .I]
+        fvs: 2
+      - written_units: [.I]
+        fvs: 1
+    medi:
+      - written_units: [.I]
+        fvs: 3
+      - written_units: [.A, .I]
+        fvs: 1
+      - written_units: [.I, .I]
+        fvs: 2
+    fina:
+      - written_units: [.I]
+
+- cp: 0x1823 # ᠣ MONGOLIAN LETTER O
+  id: "o"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .O]
+    init:
+      - written_units: [.A, .O]
+    medi:
+      - written_units: [.O]
+      - written_units: [.A, .O]
+        fvs: 1
+    fina:
+      - written_units: [.U]
+        fvs: 2
+      - written_units: [.O]
+        fvs: 1
+
+- cp: 0x1824 # ᠤ MONGOLIAN LETTER U
+  id: "u"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .O]
+        fvs: 3
+      - written_units: [.U]
+        fvs: 1
+      - written_units: [.Ux]
+        fvs: 2
+    init:
+      - written_units: [.A, .O]
+        fvs: 2
+      - written_units: [.O]
+        fvs: 1
+    medi:
+      - written_units: [.O]
+      - written_units: [.A, .O]
+        fvs: 1
+    fina:
+      - written_units: [.U]
+        fvs: 2
+      - written_units: [.O]
+        fvs: 1
+
+- cp: 0x1825 # ᠥ MONGOLIAN LETTER OE
+  id: "oe"
+  transcription: "ö"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .Ue]
+      - written_units: [.A, .U]
+        fvs: 1
+    init:
+      - written_units: [.A, .O, .I]
+    medi:
+      - written_units: [.O]
+        fvs: 3
+      - written_units: [.O, .I]
+        fvs: 1
+      - written_units: [.A, .O, .I]
+        fvs: 2
+    fina:
+      - written_units: [.U]
+        fvs: 3
+      - written_units: [.Ue]
+        fvs: 1
+      - written_units: [.O]
+        fvs: 2
+
+- cp: 0x1826 # ᠦ MONGOLIAN LETTER UE
+  id: "ue"
+  transcription: "ü"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .Ue]
+      - written_units: [.A, .U]
+        fvs: 1
+      - written_units: [.U]
+        fvs: 2
+      - written_units: [.Ux]
+        fvs: 3
+    init:
+      - written_units: [.A, .O, .I]
+        fvs: 2
+      - written_units: [.O]
+        fvs: 1
+    medi:
+      - written_units: [.O]
+        fvs: 3
+      - written_units: [.O, .I]
+        fvs: 1
+      - written_units: [.A, .O, .I]
+        fvs: 2
+    fina:
+      - written_units: [.U]
+        fvs: 3
+      - written_units: [.Ue]
+        fvs: 1
+      - written_units: [.O]
+        fvs: 2
+
+- cp: 0x1828 # ᠨ MONGOLIAN LETTER NA
+  id: "n"
+  presentation_forms:
+    isol:
+      - written_units: [.N.init]
+      - written_units: [.A.init]
+        fvs: 1
+    init:
+      - written_units: [.N]
+        fvs: 2
+      - written_units: [.A]
+        fvs: 1
+    medi:
+      - written_units: [.A]
+        fvs: 2
+      - written_units: [.N]
+        fvs: 1
+    fina:
+      - written_units: [.A]
+        fvs: 2
+      - written_units: [.N]
+        fvs: 1
+
+- cp: 0x1829 # ᠩ MONGOLIAN LETTER ANG
+  id: "ng"
+  transcription: "ŋ"
+  presentation_forms:
+    isol:
+      - written_units: [.A.medi, .G.medi]
+    init:
+      - written_units: [.A.medi, .G.medi]
+    medi:
+      - written_units: [.A, .G]
+    fina:
+      - written_units: [.A, .G]
+
+- cp: 0x182A # ᠪ MONGOLIAN LETTER BA
+  id: "b"
+  presentation_forms:
+    isol:
+      - written_units: [.B.init]
+    init:
+      - written_units: [.B]
+    medi:
+      - written_units: [.B]
+    fina:
+      - written_units: [.B]
+      - written_units: [.B2]
+        fvs: 1
+
+- cp: 0x182B # ᠫ MONGOLIAN LETTER PA
+  id: "p"
+  presentation_forms:
+    isol:
+      - written_units: [.P.init]
+    init:
+      - written_units: [.P]
+    medi:
+      - written_units: [.P]
+    fina:
+      - written_units: [.P]
+
+- cp: 0x182C # ᠬ MONGOLIAN LETTER QA
+  id: "h"
+  presentation_forms:
+    isol:
+      - written_units: [.H.init]
+      - written_units: [.Hx.init]
+        fvs: 1
+      - written_units: [.G.init]
+        fvs: 2
+      - written_units: [.Gx.init]
+        fvs: 4
+    init:
+      - written_units: [.H]
+        fvs: 3
+      - written_units: [.Hx]
+        fvs: 1
+      - written_units: [.G]
+        fvs: 2
+      - written_units: [.Gx]
+        fvs: 4
+    medi:
+      - written_units: [.H]
+        fvs: 3
+      - written_units: [.Hx]
+        fvs: 1
+      - written_units: [.G]
+        fvs: 2
+      - written_units: [.Gx]
+        fvs: 4
+    fina:
+      - written_units: [.H]
+      - written_units: [.Hx]
+        fvs: 1
+
+- cp: 0x182D # ᠭ MONGOLIAN LETTER GA
+  id: "g"
+  presentation_forms:
+    isol:
+      - written_units: [.Hx.init]
+      - written_units: [.H.init]
+        fvs: 1
+      - written_units: [.G.init]
+        fvs: 2
+      - written_units: [.Gx.init]
+        fvs: 4
+    init:
+      - written_units: [.Hx]
+        fvs: 3
+      - written_units: [.H]
+        fvs: 1
+      - written_units: [.G]
+        fvs: 2
+      - written_units: [.Gx]
+        fvs: 4
+    medi:
+      - written_units: [.H]
+        fvs: 3
+      - written_units: [.Hx]
+        fvs: 1
+      - written_units: [.G]
+        fvs: 2
+      - written_units: [.Gx]
+        fvs: 4
+    fina:
+      - written_units: [.H]
+        fvs: 1
+      - written_units: [.G]
+        fvs: 2
+      - written_units: [.Hx]
+        fvs: 3
+
+- cp: 0x182E # ᠮ MONGOLIAN LETTER MA
+  id: "m"
+  presentation_forms:
+    isol:
+      - written_units: [.M.init]
+    init:
+      - written_units: [.M]
+    medi:
+      - written_units: [.M]
+    fina:
+      - written_units: [.M]
+
+- cp: 0x182F # ᠯ MONGOLIAN LETTER LA
+  id: "l"
+  presentation_forms:
+    isol:
+      - written_units: [.L.init]
+    init:
+      - written_units: [.L]
+    medi:
+      - written_units: [.L]
+    fina:
+      - written_units: [.L]
+
+- cp: 0x1830 # ᠰ MONGOLIAN LETTER SA
+  id: "s"
+  presentation_forms:
+    isol:
+      - written_units: [.S.init]
+    init:
+      - written_units: [.S]
+    medi:
+      - written_units: [.S]
+    fina:
+      - written_units: [.S]
+      - written_units: [.Sz]
+        fvs: 1
+
+- cp: 0x1831 # ᠱ MONGOLIAN LETTER SHA
+  id: "sh"
+  transcription: "ś"
+  presentation_forms:
+    isol:
+      - written_units: [.Sh.init]
+      - written_units: [.S.init]
+        fvs: 1
+    init:
+      - written_units: [.Sh]
+        fvs: 2
+      - written_units: [.S]
+        fvs: 1
+    medi:
+      - written_units: [.Sh]
+        fvs: 2
+      - written_units: [.S]
+        fvs: 1
+    fina:
+      - written_units: [.Sh]
+
+- cp: 0x1832 # ᠲ MONGOLIAN LETTER TA
+  id: "t"
+  presentation_forms:
+    isol:
+      - written_units: [.T.init]
+    init:
+      - written_units: [.T]
+    medi:
+      - written_units: [.D]
+        fvs: 2
+      - written_units: [.T]
+        fvs: 1
+    fina:
+      - written_units: [.T]
+
+- cp: 0x1833 # ᠳ MONGOLIAN LETTER DA
+  id: "d"
+  presentation_forms:
+    isol:
+      - written_units: [.D.init]
+      - written_units: [.T.init]
+        fvs: 1
+    init:
+      - written_units: [.T]
+        fvs: 2
+      - written_units: [.D]
+        fvs: 1
+    medi:
+      - written_units: [.Dd]
+        fvs: 2
+      - written_units: [.D]
+        fvs: 1
+    fina:
+      - written_units: [.Dd]
+      - written_units: [.D]
+        fvs: 1
+
+- cp: 0x1834 # ᠴ MONGOLIAN LETTER CHA
+  id: "ch"
+  transcription: "ć"
+  presentation_forms:
+    isol:
+      - written_units: [.Ch.init]
+    init:
+      - written_units: [.Ch]
+    medi:
+      - written_units: [.Ch]
+    fina:
+      - written_units: [.Ch]
+
+- cp: 0x1835 # ᠵ MONGOLIAN LETTER JA
+  id: "j"
+  presentation_forms:
+    isol:
+      - written_units: [.I.init]
+      - written_units: [.I]
+        fvs: 1
+    init:
+      - written_units: [.I]
+    medi:
+      - written_units: [.J]
+    fina:
+      - written_units: [.J]
+      - written_units: [.I]
+        fvs: 1
+
+- cp: 0x1836 # ᠶ MONGOLIAN LETTER YA
+  id: "y"
+  presentation_forms:
+    isol:
+      - written_units: [.Y.init]
+      - written_units: [.I.init]
+        fvs: 1
+    init:
+      - written_units: [.Y]
+        fvs: 2
+      - written_units: [.I]
+        fvs: 1
+    medi:
+      - written_units: [.Y]
+        fvs: 3
+      - written_units: [.I]
+        fvs: 1
+      - written_units: [.I, .I]
+        fvs: 2
+    fina:
+      - written_units: [.I]
+
+- cp: 0x1837 # ᠷ MONGOLIAN LETTER RA
+  id: "r"
+  presentation_forms:
+    isol:
+      - written_units: [.R.init]
+    init:
+      - written_units: [.R]
+    medi:
+      - written_units: [.R]
+    fina:
+      - written_units: [.R]
+
+- cp: 0x1838 # ᠸ MONGOLIAN LETTER WA
+  id: "w"
+  presentation_forms:
+    isol:
+      - written_units: [.W.init]
+    init:
+      - written_units: [.W]
+    medi:
+      - written_units: [.W]
+      - written_units: [.O]
+        fvs: 1
+    fina:
+      - written_units: [.W]
+      - written_units: [.U]
+        fvs: 1
+
+- cp: 0x1839 # ᠹ MONGOLIAN LETTER FA
+  id: "f"
+  presentation_forms:
+    isol:
+      - written_units: [.F.init]
+    init:
+      - written_units: [.F]
+    medi:
+      - written_units: [.F]
+    fina:
+      - written_units: [.F]
+
+- cp: 0x183A # ᠺ MONGOLIAN LETTER KA
+  id: "k2"
+  transcription: "ḳ"
+  presentation_forms:
+    isol:
+      - written_units: [.K2.init]
+    init:
+      - written_units: [.K2]
+    medi:
+      - written_units: [.K2]
+    fina:
+      - written_units: [.K2]
+
+- cp: 0x183B # ᠻ MONGOLIAN LETTER KHA
+  id: "k"
+  presentation_forms:
+    isol:
+      - written_units: [.K.init]
+    init:
+      - written_units: [.K]
+    medi:
+      - written_units: [.K]
+    fina:
+      - written_units: [.K]
+
+- cp: 0x183C # ᠼ MONGOLIAN LETTER TSA
+  id: "c"
+  presentation_forms:
+    isol:
+      - written_units: [.C.init]
+    init:
+      - written_units: [.C]
+    medi:
+      - written_units: [.C]
+    fina:
+      - written_units: [.C]
+
+- cp: 0x183D # ᠽ MONGOLIAN LETTER ZA
+  id: "z"
+  presentation_forms:
+    isol:
+      - written_units: [.Z.init]
+    init:
+      - written_units: [.Z]
+    medi:
+      - written_units: [.Z]
+    fina:
+      - written_units: [.Z]
+
+- cp: 0x183E # ᠾ MONGOLIAN LETTER HAA
+  id: "hh"
+  transcription: "ħ"
+  presentation_forms:
+    isol:
+      - written_units: [.A.init, .Hr.init]
+    init:
+      - written_units: [.A, .Hr]
+    medi:
+      - written_units: [.Hr]
+    fina:
+      - written_units: [.Hr]
+
+- cp: 0x183F # ᠿ MONGOLIAN LETTER ZRA
+  id: "rh"
+  transcription: "ř"
+  presentation_forms:
+    isol:
+      - written_units: [.Rh.init]
+    init:
+      - written_units: [.Rh]
+    medi:
+      - written_units: [.Rh]
+    fina:
+      - written_units: [.Rh]
+
+- cp: 0x1840 # ᡀ MONGOLIAN LETTER LHA
+  id: "lh"
+  transcription: "ł"
+  presentation_forms:
+    isol:
+      - written_units: [.L.init, .Hr.medi]
+    init:
+      - written_units: [.L, .Hr]
+    medi:
+      - written_units: [.L, .Hr]
+    fina:
+      - written_units: [.L.medi, .Hr.medi]
+
+- cp: 0x1841 # ᡁ MONGOLIAN LETTER ZHI
+  id: "zr"
+  transcription: "ž"
+  presentation_forms:
+    isol:
+      - written_units: [.Zr.init]
+    init:
+      - written_units: [.Zr]
+    medi:
+      - written_units: [.Zr.init]
+    fina:
+      - written_units: [.Zr.init]
+
+- cp: 0x1842 # ᡂ MONGOLIAN LETTER CHI
+  id: "cr"
+  transcription: "č"
+  presentation_forms:
+    isol:
+      - written_units: [.Cr.init]
+    init:
+      - written_units: [.Cr]
+    medi:
+      - written_units: [.Cr.init]
+    fina:
+      - written_units: [.Cr.init]

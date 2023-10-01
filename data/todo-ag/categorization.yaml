@@ -1,0 +1,7 @@
+letter:
+  vowel:
+    masculine: [.a, .o]
+    feminine: [.e, .ue]
+    neuter: [.i]
+
+  consonant: [.kTag, .khTag, .gTag, .g, .ng, .ngTag, .j, .chTag, .jTag, .ny, .trTag, .trhTag, .drTag, .nrTag, .tTag, .t, .d, .n, .pTag, .p, .b, .m, .y, .yTag, .r, .l, .w, .waTag, .sh, .shTag, .s, .hh, .c, .z, .zhTag, .zTag, .qTag, .lh]

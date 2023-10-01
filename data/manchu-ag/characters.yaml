@@ -1,0 +1,729 @@
+- cp: 0x1820 # ᠠ MONGOLIAN LETTER A
+  id: "a"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .A]
+        fvs: 3
+    init:
+      - written_units: [.A, .A]
+        fvs: 2
+    medi:
+      - written_units: [.A]
+        fvs: 1
+    fina:
+      - written_units: [.A]
+        fvs: 2
+      - written_units: [.Aa]
+        fvs: 1
+
+- cp: 0x1887 # ᢇ MONGOLIAN LETTER ALI GALI A
+  id: "aaMag"
+  transcription: "āₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .Al]
+    init:
+      - written_units: [.A, .A]
+    medi:
+      - written_units: [.A]
+    fina:
+      - written_units: [.Al]
+
+- cp: 0x185D # ᡝ MONGOLIAN LETTER SIBE E
+  id: "e"
+  presentation_forms:
+    isol:
+      - written_units: [.A]
+    init:
+      - written_units: [.A]
+    medi:
+      - written_units: [.Ah]
+        fvs: 2
+      - written_units: [.A]
+        fvs: 1
+    fina:
+      - written_units: [.Ah]
+        fvs: 4
+      - written_units: [.A]
+        fvs: 1
+      - written_units: [.At]
+        fvs: 2
+      - written_units: [.Aa]
+        fvs: 3
+
+- cp: 0x1873 # ᡳ MONGOLIAN LETTER MANCHU I
+  id: "i"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .I]
+        fvs: 2
+      - written_units: [.I]
+        fvs: 1
+    init:
+      - written_units: [.A, .I]
+    medi:
+      - written_units: [.I]
+        fvs: 3
+      - written_units: [.I, .I]
+        fvs: 2
+    fina:
+      - written_units: [.I]
+        fvs: 3
+      - written_units: [.I2]
+        fvs: 1
+      - written_units: [.Iy]
+        fvs: 2
+      - written_units: [.A, .I]
+        fvs: 4
+
+- cp: 0x185F # ᡟ MONGOLIAN LETTER SIBE IY
+  id: "ii"
+  transcription: "ï"
+  presentation_forms:
+    isol:
+      - written_units: [.Ai.medi]
+    init:
+      - written_units: [.Ai.medi]
+    medi:
+      - written_units: [.Ai]
+    fina:
+      - written_units: [.Ai]
+
+- cp: 0x1823 # ᠣ MONGOLIAN LETTER O
+  id: "o"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .O]
+    init:
+      - written_units: [.A, .O]
+    medi:
+      - written_units: [.O]
+    fina:
+      - written_units: [.U]
+        fvs: 2
+      - written_units: [.O]
+        fvs: 1
+
+- cp: 0x1860 # ᡠ MONGOLIAN LETTER SIBE UE
+  id: "u"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .Oh]
+    init:
+      - written_units: [.A, .Oh]
+    medi:
+      - written_units: [.Oh]
+        fvs: 2
+      - written_units: [.O]
+        fvs: 1
+    fina:
+      - written_units: [.Uh]
+        fvs: 4
+      - written_units: [.U]
+        fvs: 1
+      - written_units: [.Oh]
+        fvs: 2
+      - written_units: [.O]
+        fvs: 3
+
+- cp: 0x1861 # ᡡ MONGOLIAN LETTER SIBE U
+  id: "ue"
+  transcription: "ü"
+  presentation_forms:
+    isol:
+      - written_units: [.A, .Ue]
+    init:
+      - written_units: [.A, .O, .I]
+    medi:
+      - written_units: [.O, .I]
+    fina:
+      - written_units: [.Ue]
+
+- cp: 0x186C # ᡬ MONGOLIAN LETTER SIBE GAA
+  id: "gh"
+  transcription: "ġ"
+  presentation_forms:
+    isol:
+      - written_units: [.Kh.init]
+    init:
+      - written_units: [.Kh]
+    medi:
+      - written_units: [.Kh]
+    fina:
+      - written_units: [.Kh.medi]
+
+- cp: 0x183A # ᠺ MONGOLIAN LETTER KA
+  id: "kh"
+  transcription: "ḳ"
+  presentation_forms:
+    isol:
+      - written_units: [.K2.init]
+    init:
+      - written_units: [.K2]
+    medi:
+      - written_units: [.K2]
+    fina:
+      - written_units: [.K2.medi]
+
+- cp: 0x1864 # ᡤ MONGOLIAN LETTER SIBE GA
+  id: "g"
+  presentation_forms:
+    isol:
+      - written_units: [.Hh.init]
+      - written_units: [.Gh.init]
+        fvs: 1
+    init:
+      - written_units: [.Hh]
+        fvs: 2
+      - written_units: [.Gh]
+        fvs: 1
+    medi:
+      - written_units: [.Hh]
+        fvs: 2
+      - written_units: [.Gh]
+        fvs: 1
+    fina:
+      - written_units: [.Hh.medi]
+
+- cp: 0x1874 # ᡴ MONGOLIAN LETTER MANCHU KA
+  id: "k"
+  presentation_forms:
+    isol:
+      - written_units: [.H.init]
+      - written_units: [.G.init]
+        fvs: 1
+      - written_units: [.Gx.init]
+        fvs: 2
+    init:
+      - written_units: [.H]
+        fvs: 3
+      - written_units: [.G]
+        fvs: 1
+      - written_units: [.Gx]
+        fvs: 2
+    medi:
+      - written_units: [.H]
+        fvs: 3
+      - written_units: [.Hx]
+        fvs: 1
+      - written_units: [.G]
+        fvs: 2
+      - written_units: [.Gx]
+        fvs: 4
+    fina:
+      - written_units: [.Hx]
+        fvs: 3
+      - written_units: [.G4]
+        fvs: 1
+      - written_units: [.Gx]
+        fvs: 2
+
+- cp: 0x189A # ᢚ MONGOLIAN LETTER MANCHU ALI GALI GHA
+  id: "ghMag"
+  transcription: "gʰₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Hy.init]
+    init:
+      - written_units: [.Hy]
+    medi:
+      - written_units: [.Hy]
+      - written_units: [.Hy2]
+        fvs: 1
+    fina:
+      - written_units: [.Hy.medi]
+
+- cp: 0x189B # ᢛ MONGOLIAN LETTER MANCHU ALI GALI NGA
+  id: "ngMag"
+  transcription: "ŋₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Nb.init]
+    init:
+      - written_units: [.Nb]
+    medi:
+      - written_units: [.Nb]
+    fina:
+      - written_units: [.Nb.medi]
+
+- cp: 0x1829 # ᠩ MONGOLIAN LETTER ANG
+  id: "ng"
+  transcription: "ŋ"
+  presentation_forms:
+    isol:
+      - written_units: [.A.medi, .G.medi]
+    init:
+      - written_units: [.A.medi, .G.medi]
+    medi:
+      - written_units: [.A, .G]
+    fina:
+      - written_units: [.A, .G]
+
+- cp: 0x189C # ᢜ MONGOLIAN LETTER MANCHU ALI GALI CA
+  id: "cMag"
+  transcription: "cₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Ct.init]
+    init:
+      - written_units: [.Ct]
+    medi:
+      - written_units: [.Ct]
+    fina:
+      - written_units: [.Ct.medi]
+
+- cp: 0x186E # ᡮ MONGOLIAN LETTER SIBE TSA
+  id: "c"
+  presentation_forms:
+    isol:
+      - written_units: [.Cs.init]
+    init:
+      - written_units: [.Cs]
+    medi:
+      - written_units: [.Cs]
+    fina:
+      - written_units: [.Cs.medi]
+
+- cp: 0x186F # ᡯ MONGOLIAN LETTER SIBE ZA
+  id: "z"
+  presentation_forms:
+    isol:
+      - written_units: [.Zs.init]
+    init:
+      - written_units: [.Zs]
+    medi:
+      - written_units: [.Zs]
+    fina:
+      - written_units: [.Zs]
+
+- cp: 0x189D # ᢝ MONGOLIAN LETTER MANCHU ALI GALI JHA
+  id: "jhMag"
+  transcription: "jʰₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Zt.init]
+    init:
+      - written_units: [.Zt]
+    medi:
+      - written_units: [.Zt]
+    fina:
+      - written_units: [.Zt.medi]
+
+- cp: 0x189E # ᢞ MONGOLIAN LETTER MANCHU ALI GALI TTA
+  id: "trMag"
+  transcription: "ṭₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.It.init]
+    init:
+      - written_units: [.It]
+    medi:
+      - written_units: [.Jt]
+    fina:
+      - written_units: [.Jt]
+
+- cp: 0x1871 # ᡱ MONGOLIAN LETTER SIBE CHA
+  id: "cr"
+  transcription: "č"
+  presentation_forms:
+    isol:
+      - written_units: [.Cc.init]
+    init:
+      - written_units: [.Cc]
+    medi:
+      - written_units: [.Cc]
+    fina:
+      - written_units: [.Cc]
+
+- cp: 0x1877 # ᡷ MONGOLIAN LETTER MANCHU ZHA
+  id: "zr"
+  transcription: "ž"
+  presentation_forms:
+    isol:
+      - written_units: [.Ic.init]
+    init:
+      - written_units: [.Ic]
+    medi:
+      - written_units: [.Jc]
+    fina:
+      - written_units: [.Jc]
+
+- cp: 0x189F # ᢟ MONGOLIAN LETTER MANCHU ALI GALI DDHA
+  id: "drhMag"
+  transcription: "ḍʰₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Ih.init]
+    init:
+      - written_units: [.Ih]
+    medi:
+      - written_units: [.Jh]
+    fina:
+      - written_units: [.Jh]
+
+- cp: 0x188F # ᢏ MONGOLIAN LETTER ALI GALI NNA
+  id: "nrMag"
+  transcription: "ṇₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Wn.init]
+    init:
+      - written_units: [.Wn]
+    medi:
+      - written_units: [.Wn]
+    fina:
+      - written_units: [.Wn]
+
+- cp: 0x18A0 # ᢠ MONGOLIAN LETTER MANCHU ALI GALI TA
+  id: "tMag"
+  transcription: "tₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Dr.init]
+      - written_units: [.Dy.init]
+        fvs: 1
+    init:
+      - written_units: [.Dr]
+        fvs: 2
+      - written_units: [.Dy]
+        fvs: 1
+    medi:
+      - written_units: [.Dr]
+        fvs: 2
+      - written_units: [.Dy]
+        fvs: 1
+    fina:
+      - written_units: [.Dr]
+
+- cp: 0x1868 # ᡨ MONGOLIAN LETTER SIBE TA
+  id: "t"
+  presentation_forms:
+    isol:
+      - written_units: [.Tb.init]
+      - written_units: [.T.init]
+        fvs: 1
+    init:
+      - written_units: [.Tb]
+        fvs: 2
+      - written_units: [.T]
+        fvs: 1
+    medi:
+      - written_units: [.Db]
+        fvs: 3
+      - written_units: [.D]
+        fvs: 1
+      - written_units: [.Dd]
+        fvs: 2
+    fina:
+      - written_units: [.Dd]
+
+- cp: 0x1869 # ᡩ MONGOLIAN LETTER SIBE DA
+  id: "d"
+  presentation_forms:
+    isol:
+      - written_units: [.Th.init]
+      - written_units: [.Tt.init]
+        fvs: 1
+    init:
+      - written_units: [.Th]
+        fvs: 2
+      - written_units: [.Tt]
+        fvs: 1
+    medi:
+      - written_units: [.Dh]
+        fvs: 2
+      - written_units: [.Dt]
+        fvs: 1
+    fina:
+      - written_units: [.Dh.medi]
+
+- cp: 0x1828 # ᠨ MONGOLIAN LETTER NA
+  id: "n"
+  presentation_forms:
+    isol:
+      - written_units: [.N.init]
+    init:
+      - written_units: [.N]
+        fvs: 2
+      - written_units: [.A]
+        fvs: 1
+    medi:
+      - written_units: [.A]
+        fvs: 2
+      - written_units: [.N]
+        fvs: 1
+    fina:
+      - written_units: [.A]
+        fvs: 2
+      - written_units: [.N2]
+        fvs: 1
+
+- cp: 0x1892 # ᢒ MONGOLIAN LETTER ALI GALI PA
+  id: "pMag"
+  transcription: "pₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Bg.init]
+    init:
+      - written_units: [.Bg]
+    medi:
+      - written_units: [.Bg]
+    fina:
+      - written_units: [.Bg]
+
+- cp: 0x1866 # ᡦ MONGOLIAN LETTER SIBE PA
+  id: "p"
+  presentation_forms:
+    isol:
+      - written_units: [.Pb.init]
+    init:
+      - written_units: [.Pb]
+    medi:
+      - written_units: [.Pb]
+    fina:
+      - written_units: [.Pb.medi]
+
+- cp: 0x182A # ᠪ MONGOLIAN LETTER BA
+  id: "b"
+  presentation_forms:
+    isol:
+      - written_units: [.B.init]
+    init:
+      - written_units: [.B]
+    medi:
+      - written_units: [.B]
+    fina:
+      - written_units: [.B]
+
+- cp: 0x18A8 # ᢨ MONGOLIAN LETTER MANCHU ALI GALI BHA
+  id: "bhMag"
+  transcription: "bʰₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Bc.init]
+    init:
+      - written_units: [.Bc]
+    medi:
+      - written_units: [.Bc]
+    fina:
+      - written_units: [.Bc.medi]
+
+- cp: 0x182E # ᠮ MONGOLIAN LETTER MA
+  id: "m"
+  presentation_forms:
+    isol:
+      - written_units: [.M.init]
+    init:
+      - written_units: [.M]
+    medi:
+      - written_units: [.M]
+    fina:
+      - written_units: [.M]
+
+- cp: 0x1836 # ᠶ MONGOLIAN LETTER YA
+  id: "y"
+  presentation_forms:
+    isol:
+      - written_units: [.Y.init]
+    init:
+      - written_units: [.Y]
+        fvs: 2
+    medi:
+      - written_units: [.Y]
+        fvs: 3
+    fina:
+      - written_units: [.Y.medi]
+
+- cp: 0x1875 # ᡵ MONGOLIAN LETTER MANCHU RA
+  id: "r"
+  presentation_forms:
+    isol:
+      - written_units: [.R.init]
+      - written_units: [.R3.init]
+        fvs: 1
+    init:
+      - written_units: [.R]
+      - written_units: [.R3]
+        fvs: 1
+    medi:
+      - written_units: [.R]
+      - written_units: [.R3]
+        fvs: 1
+    fina:
+      - written_units: [.R2]
+
+- cp: 0x182F # ᠯ MONGOLIAN LETTER LA
+  id: "l"
+  presentation_forms:
+    isol:
+      - written_units: [.L.init]
+      - written_units: [.L2]
+        fvs: 1
+    init:
+      - written_units: [.L]
+      - written_units: [.L2]
+        fvs: 1
+    medi:
+      - written_units: [.L]
+    fina:
+      - written_units: [.L]
+
+- cp: 0x1838 # ᠸ MONGOLIAN LETTER WA
+  id: "w"
+  presentation_forms:
+    isol:
+      - written_units: [.W.init]
+    init:
+      - written_units: [.W]
+    medi:
+      - written_units: [.W]
+    fina:
+      - written_units: [.W]
+
+- cp: 0x1867 # ᡧ MONGOLIAN LETTER SIBE SHA
+  id: "sh"
+  transcription: "ś"
+  presentation_forms:
+    isol:
+      - written_units: [.Sp.init]
+    init:
+      - written_units: [.Sp]
+    medi:
+      - written_units: [.Sp]
+    fina:
+      - written_units: [.Sp]
+
+- cp: 0x18A2 # ᢢ MONGOLIAN LETTER MANCHU ALI GALI SSA
+  id: "shMag"
+  transcription: "ṣₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Sx.init]
+    init:
+      - written_units: [.Sx]
+    medi:
+      - written_units: [.Sx]
+    fina:
+      - written_units: [.Sx]
+
+- cp: 0x1830 # ᠰ MONGOLIAN LETTER SA
+  id: "s"
+  presentation_forms:
+    isol:
+      - written_units: [.S.init]
+    init:
+      - written_units: [.S]
+    medi:
+      - written_units: [.S]
+    fina:
+      - written_units: [.S]
+
+- cp: 0x1865 # ᡥ MONGOLIAN LETTER SIBE HA
+  id: "h"
+  presentation_forms:
+    isol:
+      - written_units: [.Hc.init]
+      - written_units: [.Gc.init]
+        fvs: 1
+    init:
+      - written_units: [.Hc]
+        fvs: 2
+      - written_units: [.Gc]
+        fvs: 1
+    medi:
+      - written_units: [.Hc]
+        fvs: 2
+      - written_units: [.Gc]
+        fvs: 1
+    fina:
+      - written_units: [.Hc.medi]
+
+- cp: 0x18A3 # ᢣ MONGOLIAN LETTER MANCHU ALI GALI CYA
+  id: "crMag"
+  transcription: "čₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Iq.init]
+    init:
+      - written_units: [.Iq]
+    medi:
+      - written_units: [.Jq]
+    fina:
+      - written_units: [.Jq]
+
+- cp: 0x1834 # ᠴ MONGOLIAN LETTER CHA
+  id: "ch"
+  transcription: "ć"
+  presentation_forms:
+    isol:
+      - written_units: [.Ch.init]
+    init:
+      - written_units: [.Ch]
+    medi:
+      - written_units: [.Ch]
+    fina:
+      - written_units: [.Ch]
+
+- cp: 0x1835 # ᠵ MONGOLIAN LETTER JA
+  id: "j"
+  presentation_forms:
+    isol:
+      - written_units: [.I.init]
+    init:
+      - written_units: [.I]
+    medi:
+      - written_units: [.J]
+    fina:
+      - written_units: [.J]
+
+- cp: 0x18A4 # ᢤ MONGOLIAN LETTER MANCHU ALI GALI ZHA
+  id: "zhMag"
+  transcription: "ẑₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.St.init]
+    init:
+      - written_units: [.St]
+    medi:
+      - written_units: [.St]
+    fina:
+      - written_units: [.St]
+
+- cp: 0x18A5 # ᢥ MONGOLIAN LETTER MANCHU ALI GALI ZA
+  id: "zMag"
+  transcription: "zₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Sc.init]
+    init:
+      - written_units: [.Sc]
+    medi:
+      - written_units: [.Sc]
+    fina:
+      - written_units: [.Sc]
+
+- cp: 0x1807 # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
+  id: "sbm"
+  transcription: "Ɂ"
+  presentation_forms:
+    isol:
+      - written_units: [.A2.medi]
+    init:
+      - written_units: [.A2]
+    medi:
+      - written_units: [.A]
+    fina:
+      - written_units: [.A.medi]
+
+- cp: 0x18AA # ᢪ MONGOLIAN LETTER MANCHU ALI GALI LHA
+  id: "lhMag"
+  transcription: "łₘ"
+  presentation_forms:
+    isol:
+      - written_units: [.Lc.init]
+    init:
+      - written_units: [.Lc]
+    medi:
+      - written_units: [.Lc]
+    fina:
+      - written_units: [.Lc.medi]
