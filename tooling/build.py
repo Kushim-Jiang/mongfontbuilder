@@ -15,13 +15,12 @@ tooling_dir = Path(__file__).parent
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("ufo", type=Path)
-    parser.add_argument("family_name")
-    parser.add_argument("--output-dir", type=Path, default=Path.cwd())
+    parser.add_argument("--family-name")
+    parser.add_argument("--output-dir", type=Path)
     args = parser.parse_args()
 
     build(
         ufo=Font.open(args.ufo),
-        otl_code_path=tooling_dir / "otl" / "main.fea",
         family_name=args.family_name,
         output_dir=args.output_dir,
     )
@@ -29,9 +28,9 @@ def main():
 
 def build(
     ufo: Font,
-    otl_code_path: Path,
-    family_name: str,
-    output_dir: Path,
+    otl_code_path=tooling_dir / "otl" / "main.fea",
+    family_name: str | None = None,
+    output_dir=Path.cwd(),
     keep_info=False,
 ) -> Path:
     """Common logic for building fonts."""
