@@ -44,9 +44,11 @@ def main():
         source_glyph_name_to_expected = {k: v or k for k, v in data.items()}
     else:
         source_glyph_name_to_expected = {}
+
     assert source_glyph_name_to_expected.keys() <= ufo.keys(), (
         source_glyph_name_to_expected.keys() - ufo.keys()
     )
+    rename_glyphs(ufo, source_glyph_name_to_expected)
 
     constructMissingGlyphs(ufo)
 
@@ -57,15 +59,26 @@ def main():
     )
 
 
+def rename_glyphs(ufo: Font, name_mapping: dict[str, str]):
+    for glyph in ufo:
+        for component in glyph.components:
+            if new_name := name_mapping.get(component.baseGlyph):
+                component.baseGlyph = new_name
+
+    for old_name, new_name in name_mapping.items():
+        if new_name in ufo:
+            continue  # TODO: duplicated new names should not be allowed in name_mapping
+        ufo.renameGlyph(old_name, new_name)
+
+
 def constructMissingGlyphs(ufo: Font):
     with (data_dir / "glyphs.yaml").open() as f:
         expected_glyph_names: dict[str, None] = yaml.safe_load(f)
 
     for expected_glyph_name in expected_glyph_names.keys():
         if expected_glyph_name not in ufo:
-            ufo.newGlyph(expected_glyph_name)
-
-    # TODO
+            glyph = ufo.newGlyph(expected_glyph_name)
+            # FIXME: populate glyph.components
 
     assert ufo.keys() >= expected_glyph_names.keys()
 
