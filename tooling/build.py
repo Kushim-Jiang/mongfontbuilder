@@ -3,6 +3,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from typing import cast
 
+import yaml
 from fontmake.font_project import FontProject
 from fontTools.feaLib.parser import Parser
 from fontTools.ttLib import TTFont
@@ -12,6 +13,13 @@ from glyphsLib.builder import UFOBuilder
 from ufoLib2.objects import Font, Info
 
 tooling_dir = Path(__file__).parent
+repo_dir = tooling_dir / ".."
+
+data_dir = repo_dir / "data"
+otl_dir = tooling_dir / "otl"
+
+with (data_dir / "glyphs.yaml").open() as f:
+    expected_glyph_names: set[str] = {*yaml.safe_load(f)}
 
 
 def main():
@@ -24,12 +32,15 @@ def main():
     font_path: Path = args.font
 
     assert font_path.suffix in {".ufo", ".glyphs", ".glyphspackage"}
-
     if font_path.suffix == ".ufo":
         font = Font.open(font_path)
     else:
         builder = UFOBuilder(GSFont(font_path))
         (font,) = builder.masters
+
+    # TODO: match glyph sets
+
+    assert font.keys() >= expected_glyph_names
 
     build(
         ufo=font,
@@ -40,12 +51,14 @@ def main():
 
 def build(
     ufo: Font,
-    otl_code_path=tooling_dir / "otl" / "main.fea",
+    otl_code_path=otl_dir / "main.fea",
     family_name: str | None = None,
-    output_dir=Path.cwd(),
+    output_dir: Path | None = None,
     keep_info=False,
 ) -> Path:
     """Common logic for building fonts."""
+
+    output_dir = output_dir or Path.cwd()
 
     if not keep_info:
         ufo.info = Info()  # drop all existing info data
