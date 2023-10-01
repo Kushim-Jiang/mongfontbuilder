@@ -18,35 +18,56 @@ repo_dir = tooling_dir / ".."
 data_dir = repo_dir / "data"
 otl_dir = tooling_dir / "otl"
 
-with (data_dir / "glyphs.yaml").open() as f:
-    expected_glyph_names: set[str] = {*yaml.safe_load(f)}
-
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("font", type=Path)
+    parser.add_argument("--glyph-name-mapping", type=Path)
     parser.add_argument("--family-name")
     parser.add_argument("--output-dir", type=Path)
 
     args = parser.parse_args()
     font_path: Path = args.font
+    glyph_name_mapping_path: Path | None = args.glyph_name_mapping
 
     assert font_path.suffix in {".ufo", ".glyphs", ".glyphspackage"}
     if font_path.suffix == ".ufo":
-        font = Font.open(font_path)
+        ufo = Font.open(font_path)
     else:
         builder = UFOBuilder(GSFont(font_path))
-        (font,) = builder.masters
+        (ufo,) = builder.masters
 
-    # TODO: match glyph sets
+    source_glyph_name_to_expected: dict[str, str]
+    if glyph_name_mapping_path:
+        with glyph_name_mapping_path.open() as f:
+            data: dict[str, str | None] = yaml.safe_load(f)
+        source_glyph_name_to_expected = {k: v or k for k, v in data.items()}
+    else:
+        source_glyph_name_to_expected = {}
+    assert source_glyph_name_to_expected.keys() <= ufo.keys(), (
+        source_glyph_name_to_expected.keys() - ufo.keys()
+    )
 
-    assert font.keys() >= expected_glyph_names
+    constructMissingGlyphs(ufo)
 
     build(
-        ufo=font,
+        ufo=ufo,
         family_name=args.family_name,
         output_dir=args.output_dir,
     )
+
+
+def constructMissingGlyphs(ufo: Font):
+    with (data_dir / "glyphs.yaml").open() as f:
+        expected_glyph_names: dict[str, None] = yaml.safe_load(f)
+
+    for expected_glyph_name in expected_glyph_names.keys():
+        if expected_glyph_name not in ufo:
+            ufo.newGlyph(expected_glyph_name)
+
+    # TODO
+
+    assert ufo.keys() >= expected_glyph_names.keys()
 
 
 def build(
