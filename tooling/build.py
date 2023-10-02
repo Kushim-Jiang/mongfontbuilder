@@ -8,15 +8,17 @@ from fontmake.font_project import FontProject
 from fontTools.feaLib.parser import Parser
 from fontTools.ttLib import TTFont
 from fontTools.ttLib.tables._n_a_m_e import table__n_a_m_e
-from glyphsLib import GSFont
 from glyphsLib.builder import UFOBuilder
-from ufoLib2.objects import Font, Info
+from glyphsLib.parser import load
+from ufoLib2.objects import Font, Glyph, Info
+from ufoLib2.pointPens.glyphPointPen import GlyphPointPen
 
 tooling_dir = Path(__file__).parent
 repo_dir = tooling_dir / ".."
 
 data_dir = repo_dir / "data"
 otl_dir = tooling_dir / "otl"
+glyph_dir = data_dir / "glyphs.yaml"
 
 
 def main():
@@ -32,31 +34,121 @@ def main():
 
     assert font_path.suffix in {".ufo", ".glyphs", ".glyphspackage"}
     if font_path.suffix == ".ufo":
-        ufo = Font.open(font_path)
+        design_ufo = Font.open(font_path)
     else:
-        builder = UFOBuilder(GSFont(font_path))
-        (ufo,) = builder.masters
+        builder = UFOBuilder(load(font_path))
+        (design_ufo,) = builder.masters
 
-    source_glyph_name_to_expected: dict[str, str]
+    glyph_mapping: dict[str, str | None] = {}
     if glyph_name_mapping_path:
         with glyph_name_mapping_path.open() as f:
-            data: dict[str, str | None] = yaml.safe_load(f)
-        source_glyph_name_to_expected = {k: v or k for k, v in data.items()}
-    else:
-        source_glyph_name_to_expected = {}
+            glyph_mapping = yaml.safe_load(f)
 
-    assert source_glyph_name_to_expected.keys() <= ufo.keys(), (
-        source_glyph_name_to_expected.keys() - ufo.keys()
-    )
-    rename_glyphs(ufo, source_glyph_name_to_expected)
-
-    constructMissingGlyphs(ufo)
+    ufo = construct_glyph_set(design_ufo, glyph_mapping)
 
     build(
         ufo=ufo,
         family_name=args.family_name,
         output_dir=args.output_dir,
     )
+
+
+def get_units(glyph_name: str | None):
+    if glyph_name is None:
+        return None
+    if "_" in glyph_name:
+        return None
+    glyph_names = glyph_name.split(".")
+    if len(glyph_names) == 2:
+        return ".".join(glyph_names)
+    if len(glyph_names) == 3:
+        return ".".join(glyph_names[1:])
+    return None
+
+
+def get_cp(glyph_name: str):
+    return int(glyph_name[3:], 16)
+
+
+def copy_glyph(old_glyph: Glyph, new_glyph: Glyph):
+    new_pen = GlyphPointPen(new_glyph)
+    for component in old_glyph.components:
+        component.drawPoints(new_pen)
+    old_glyph.clearComponents()
+    new_glyph.copyDataFromGlyph(old_glyph)
+
+
+def construct_glyph_set(design_ufo: Font, glyph_mapping: dict[str, str | None]) -> Font:
+    ufo = Font(info=design_ufo.info)
+    glyph = ufo.newGlyph(".notdef")
+    glyph.copyDataFromGlyph(design_ufo[".notdef"])
+    ufo.glyphOrder = [".notdef"]
+
+    with glyph_dir.open() as f:
+        expected_glyph_names: dict[str, dict[str, None]] = yaml.safe_load(f)
+
+    exact_mapping = {
+        expected_name: [
+            glyph_name
+            for glyph_name in glyph_mapping
+            if glyph_mapping.get(glyph_name) == expected_name
+        ]
+        for expected_name in {*glyph_mapping.values()}
+    }
+    unit_mapping = {
+        expected_name: [
+            glyph_name
+            for glyph_name in glyph_mapping
+            if get_units(glyph_mapping.get(glyph_name)) == expected_name
+        ]
+        for expected_name in {*[get_units(glyph_name) for glyph_name in glyph_mapping]} - {None}
+    }
+
+    # parse presentation glyphs
+    presentation_glyphs: dict[str, None] = expected_glyph_names.get("presentation") or {}
+    for glyph_name in presentation_glyphs:
+        glyph = ufo.newGlyph(glyph_name)
+        exact_glyphs = exact_mapping.get(glyph_name) or []
+        unit_glyphs = unit_mapping.get(glyph_name) or []
+        if len(exact_glyphs):
+            old_glyph = design_ufo[exact_glyphs[0]]
+            copy_glyph(old_glyph, glyph)
+        elif len(unit_glyphs):
+            old_glyph = design_ufo[unit_glyphs[0]]
+            copy_glyph(old_glyph, glyph)
+        glyph.unicode = None
+        ufo.glyphOrder += [glyph_name]
+
+    # parse nominal glyphs
+    nominal_glyphs: dict[str, None] = expected_glyph_names.get("nominal") or {}
+    for glyph_name in nominal_glyphs:
+        glyph = ufo.newGlyph(glyph_name)
+        cmap_glyphs = [glyph for glyph in design_ufo if glyph.unicode == get_cp(glyph_name)]
+        if len(cmap_glyphs):
+            old_glyph = cmap_glyphs[0]
+            copy_glyph(old_glyph, glyph)
+        glyph.unicode = get_cp(glyph_name)
+        ufo.glyphOrder += [glyph_name]
+
+    # parse ligature and control glyphs
+    ligature_glyphs: dict[str, None] = expected_glyph_names.get("ligature") or {}
+    control_glyphs: dict[str, None] = expected_glyph_names.get("control") or {}
+
+    for glyph_name in [*ligature_glyphs, *control_glyphs]:
+        glyph = ufo.newGlyph(glyph_name)
+        exact_glyphs = exact_mapping.get(glyph_name) or []
+        if len(exact_glyphs):
+            old_glyph = design_ufo[exact_glyphs[0]]
+            copy_glyph(old_glyph, glyph)
+        ufo.glyphOrder += [glyph_name]
+
+    # parse empty glyphs
+    empty_glyphs: dict[str, None] = expected_glyph_names.get("empty") or {}
+    for glyph_name in empty_glyphs:
+        glyph = ufo.newGlyph(glyph_name)
+        ufo.glyphOrder += [glyph_name]
+
+    return ufo
 
 
 def rename_glyphs(ufo: Font, name_mapping: dict[str, str]):
