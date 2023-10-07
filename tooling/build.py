@@ -151,7 +151,10 @@ def construct_glyph_set(ufo: Font, glyph_mapping: dict[str, str | None]):
             ref_glyph = cmap_glyphs[0]
             quote_glyph([ref_glyph], glyph)
         else:
-            quote_glyph([LEFT_SPACING, ufo[nominal_mapping[glyph_name]], RIGHT_SPACING], glyph)
+            quote_glyph(
+                [LEFT_SPACING, ufo[glyph_name + "." + nominal_mapping[glyph_name]], RIGHT_SPACING],
+                glyph,
+            )
         glyph.unicode = get_cp(glyph_name)
         ufo.glyphOrder += [glyph_name]
 
