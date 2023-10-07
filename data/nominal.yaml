@@ -23,101 +23,101 @@ uni1834: uni1834.Ch.init
 uni1835: uni1835.I.init
 uni1836: uni1836.Y.init
 uni1837: uni1837.R.init
-uni1838:
-uni1839:
-uni183A:
-uni183B:
-uni183C:
-uni183D:
-uni183E:
-uni183F:
-uni1840:
-uni1841:
-uni1842:
-uni1843:
-uni1844:
-uni1845:
-uni1846:
-uni1847:
-uni1848:
-uni1849:
-uni184A:
-uni184B:
-uni184C:
-uni184D:
-uni184E:
-uni184F:
-uni1850:
-uni1851:
-uni1852:
-uni1853:
-uni1854:
-uni1855:
-uni1856:
-uni1857:
-uni1858:
-uni1859:
-uni185A:
-uni185B:
-uni185C:
-uni185D:
-uni185E:
-uni185F:
-uni1860:
-uni1861:
-uni1862:
-uni1863:
-uni1864:
-uni1865:
-uni1866:
-uni1867:
-uni1868:
-uni1869:
-uni186A:
-uni186B:
-uni186C:
-uni186D:
-uni186E:
-uni186F:
-uni1870:
-uni1871:
-uni1872:
-uni1873:
-uni1874:
-uni1875:
-uni1876:
-uni1877:
-uni1887:
-uni1888:
-uni1889:
-uni188A:
-uni188B:
-uni188C:
-uni188D:
-uni188E:
-uni188F:
-uni1890:
-uni1891:
-uni1892:
-uni1893:
-uni1894:
-uni1895:
-uni1896:
-uni1897:
-uni1899:
-uni189A:
-uni189B:
-uni189C:
-uni189D:
-uni189E:
-uni189F:
-uni18A0:
-uni18A1:
-uni18A2:
-uni18A3:
-uni18A4:
-uni18A5:
-uni18A6:
-uni18A7:
-uni18A8:
-uni18AA:
+uni1838: uni1838.W.init
+uni1839: uni1839.F.init
+uni183A: uni183A.K2.init
+uni183B: uni183B.K.init
+uni183C: uni183C.C.init
+uni183D: uni183D.Z.init
+uni183E: uni183E.AHr.init
+uni183F: uni183F.Rh.init
+uni1840: uni1840.LHr.init
+uni1841: uni1841.Zr.init
+uni1842: uni1842.Cr.init
+uni1843: uni1843.Lv.medi
+uni1844: uni1844.AE.isol
+uni1845: uni1845.AI3.isol
+uni1846: uni1846.AOb.isol
+uni1847: uni1847.AUp.isol
+uni1848: uni1848.AOt.isol
+uni1849: uni1849.AU.isol
+uni184A: uni184A.AG2.fina
+uni184B: uni184B.B2.fina
+uni184C: uni184C.Pp.init
+uni184D: uni184D.Hx2.init
+uni184E: uni184E.Hb.init
+uni184F: uni184F.M2.fina
+uni1850: uni1850.Tp.init
+uni1851: uni1851.Dp.init
+uni1852: uni1852.Jb.init
+uni1853: uni1853.Cp.init
+uni1854: uni1854.J.init
+uni1855: uni1855.I.medi
+uni1856: uni1856.Wb.init
+uni1857: uni1857.Kp.init
+uni1858: uni1858.Gp.init
+uni1859: uni1859.AHr.fina
+uni185A: uni185A.BYp.init
+uni185B: uni185B.Ny.init
+uni185C: uni185C.Zz.init
+uni185D: uni185D.Ah.fina
+uni185E: uni185E.AI.medi
+uni185F: uni185F.Ai.medi
+uni1860: uni1860.AOh.isol
+uni1861: uni1861.OI.medi
+uni1862: uni1862.AG3.fina
+uni1863: uni1863.Nx.fina
+uni1864: uni1864.Hh.init
+uni1865: uni1865.Hc.init
+uni1866: uni1866.Pb.init
+uni1867: uni1867.Sp.init
+uni1868: uni1868.Tb.init
+uni1869: uni1869.Th.init
+uni186A: uni186A.J2.medi # uni186A.J2.init
+uni186B: uni186B.V.init
+uni186C: uni186C.Kh.init
+uni186D: uni186D.Kc.init
+uni186E: uni186E.Cs.init
+uni186F: uni186F.Zs.init
+uni1870: uni1870.Rr.init
+uni1871: uni1871.Cc.init
+uni1872: uni1872.Ic.medi # uni1872.Ic.init
+uni1873: uni1873.II.medi
+uni1874: uni1874.Hx.fina
+uni1875: uni1875.R2.fina
+uni1876: uni1876.V.medi
+uni1877: uni1877.Ic.init
+uni1887: uni1887.AAl.isol
+uni1888: uni1888.AI4.isol
+uni1889: uni1889.G.init
+uni188A: uni188A.NG.init
+uni188B: uni188B.Zc.init
+uni188C: uni188C.Zr.init
+uni188D: uni188D.Cr2.init
+uni188E: uni188E.Ds.init
+uni188F: uni188F.Wn.init
+uni1890: uni1890.Dv.init
+uni1891: uni1891.Dq.init
+uni1892: uni1892.Bg.init
+uni1893: uni1893.Pg.init
+uni1894: uni1894.Sx.init
+uni1895: uni1895.Rh2.init
+uni1896: uni1896.Zz.init
+uni1897: uni1897.Q.init
+uni1899: uni1899.Rz.init
+uni189A: uni189A.Hy.init
+uni189B: uni189B.Nb.init
+uni189C: uni189C.Ct.init
+uni189D: uni189D.Zt.init
+uni189E: uni189E.It.init
+uni189F: uni189F.Ih.init
+uni18A0: uni18A0.Dr.init
+uni18A1: uni18A1.Tx.init
+uni18A2: uni18A2.Sx.init
+uni18A3: uni18A3.Iq.init
+uni18A4: uni18A4.St.init
+uni18A5: uni18A5.Sc.init
+uni18A6: uni18A6.Wp.medi
+uni18A7: uni18A7.Yp.medi
+uni18A8: uni18A8.Bc.init
+uni18AA: uni18AA.Lc.init

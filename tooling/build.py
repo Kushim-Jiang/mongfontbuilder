@@ -19,6 +19,7 @@ repo_dir = tooling_dir / ".."
 data_dir = repo_dir / "data"
 otl_dir = tooling_dir / "otl"
 glyph_dir = data_dir / "glyphs.yaml"
+nominal_dir = data_dir / "nominal.yaml"
 
 
 def main():
@@ -71,14 +72,18 @@ def get_cp(glyph_name: str):
     return int(glyph_name[3:], 16)
 
 
-def quote_glyph(old_glyph: Glyph, new_glyph: Glyph):
-    component = Component(old_glyph.name or "", Identity.translate(int(new_glyph.width), 0))
-    new_glyph.components.append(component)
-    new_glyph.width += old_glyph.width
+def quote_glyph(old_glyphs: list[Glyph | int], new_glyph: Glyph):
+    for glyph in old_glyphs:
+        if isinstance(glyph, int):
+            new_glyph.width += glyph
+        else:
+            component = Component(glyph.name or "", Identity.translate(int(new_glyph.width), 0))
+            new_glyph.components.append(component)
+            new_glyph.width += glyph.width
 
 
 def construct_glyph_set(ufo: Font, glyph_mapping: dict[str, str | None]):
-    #
+    # add __
     for glyph_name in [*ufo.keys()]:
         for component in ufo[glyph_name].components:
             component.baseGlyph = "__" + component.baseGlyph
@@ -88,7 +93,7 @@ def construct_glyph_set(ufo: Font, glyph_mapping: dict[str, str | None]):
     ufo.lib["public.skipExportGlyphs"] = [glyph.name for glyph in ufo]
 
     glyph = ufo.newGlyph(".notdef")
-    quote_glyph(ufo["__.notdef"], glyph)
+    quote_glyph([ufo["__.notdef"]], glyph)
     ufo.glyphOrder = [".notdef"]
 
     with glyph_dir.open() as f:
@@ -118,20 +123,35 @@ def construct_glyph_set(ufo: Font, glyph_mapping: dict[str, str | None]):
         unit_glyphs = unit_mapping.get(glyph_name, [])
         if len(exact_glyphs):
             ref_glyph = ufo[exact_glyphs[0]]
-            quote_glyph(ref_glyph, glyph)
+            quote_glyph([ref_glyph], glyph)
         elif len(unit_glyphs):
             ref_glyph = ufo[unit_glyphs[0]]
-            quote_glyph(ref_glyph, glyph)
+            quote_glyph([ref_glyph], glyph)
         glyph.unicode = None
         ufo.glyphOrder += [glyph_name]
 
+    LEFT_SPACING = 40
+    RIGHT_SPACING = 100
+    for glyph_name in expected_glyph_names.get("presentation", {}):
+        if "_" in glyph_name:
+            if glyph_name.endswith("isol"):
+                quote_glyph([LEFT_SPACING, ufo[glyph_name[:-6]], RIGHT_SPACING], ufo[glyph_name])
+            elif glyph_name.endswith("init"):
+                quote_glyph([LEFT_SPACING, ufo[glyph_name[:-6]]], ufo[glyph_name])
+            elif glyph_name.endswith("fina"):
+                quote_glyph([ufo[glyph_name[:-6]], RIGHT_SPACING], ufo[glyph_name])
+
     # parse nominal glyphs
+    with nominal_dir.open() as f:
+        nominal_mapping = yaml.safe_load(f)
     for glyph_name in expected_glyph_names.get("nominal", {}):
         glyph = ufo.newGlyph(glyph_name)
         cmap_glyphs = [glyph for glyph in ufo if glyph.unicode == get_cp(glyph_name)]
         if len(cmap_glyphs):
             ref_glyph = cmap_glyphs[0]
-            quote_glyph(ref_glyph, glyph)
+            quote_glyph([ref_glyph], glyph)
+        else:
+            quote_glyph([LEFT_SPACING, ufo[nominal_mapping[glyph_name]], RIGHT_SPACING], glyph)
         glyph.unicode = get_cp(glyph_name)
         ufo.glyphOrder += [glyph_name]
 
@@ -144,7 +164,7 @@ def construct_glyph_set(ufo: Font, glyph_mapping: dict[str, str | None]):
         exact_glyphs = exact_mapping.get(glyph_name, [])
         if len(exact_glyphs):
             ref_glyph = ufo[exact_glyphs[0]]
-            quote_glyph(ref_glyph, glyph)
+            quote_glyph([ref_glyph], glyph)
         ufo.glyphOrder += [glyph_name]
 
     # parse empty glyphs
