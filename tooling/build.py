@@ -109,24 +109,27 @@ def construct_glyph_set(ufo: Font, glyph_mapping: dict[str, str | None]):
     }
     unit_mapping = {
         expected_name: [
-            glyph_name
-            for glyph_name in glyph_mapping
-            if get_units(glyph_mapping.get(glyph_name)) == expected_name
+            mapped_glyph
+            for glyph_name in exact_mapping
+            for mapped_glyph in exact_mapping.get(glyph_name, [])
+            if get_units(glyph_name) == expected_name
         ]
-        for expected_name in {*[get_units(glyph_name) for glyph_name in glyph_mapping]} - {None}
+        for expected_name in set(get_units(glyph_name) for glyph_name in exact_mapping) - {None}
     }
 
     # parse presentation glyphs
     for glyph_name in expected_glyph_names.get("presentation", {}):
         glyph = ufo.newGlyph(glyph_name)
         exact_glyphs = exact_mapping.get(glyph_name, [])
-        unit_glyphs = unit_mapping.get(glyph_name, [])
+        unit_glyphs = unit_mapping.get(get_units(glyph_name), [])
         if len(exact_glyphs):
             ref_glyph = ufo[exact_glyphs[0]]
             quote_glyph([ref_glyph], glyph)
         elif len(unit_glyphs):
             ref_glyph = ufo[unit_glyphs[0]]
             quote_glyph([ref_glyph], glyph)
+        elif "_" not in glyph_name:
+            print(f"we don't have {glyph_name}")
         glyph.unicode = None
         ufo.glyphOrder += [glyph_name]
 
@@ -168,6 +171,8 @@ def construct_glyph_set(ufo: Font, glyph_mapping: dict[str, str | None]):
         if len(exact_glyphs):
             ref_glyph = ufo[exact_glyphs[0]]
             quote_glyph([ref_glyph], glyph)
+        else:
+            print(f"we don't have {glyph_name}")
         ufo.glyphOrder += [glyph_name]
 
     # parse empty glyphs
