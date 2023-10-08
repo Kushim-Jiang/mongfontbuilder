@@ -279,6 +279,7 @@ lookup _.tod_tag.manual {
     sub @g-tod.isol' fvs1.ignored by uni184E.G.init._isol;
     sub @g-tod.init' fvs2.ignored by uni184E.Hb.init;
     sub @g-tod.init' fvs1.ignored by uni184E.G.init;
+    sub @g-tod.init' fvs3.ignored by uni184E.Hp.init;
     sub @g-tod.medi' fvs3.ignored by uni184E.Hb.medi;
     sub @g-tod.medi' fvs1.ignored by uni184E.Hp.medi;
     sub @g-tod.medi' fvs2.ignored by uni184E.G.medi;
@@ -340,6 +341,7 @@ lookup III.tod_tag.fvs {
     sub @h-tod.isol' lookup _.tod_tag.manual fvs1.ignored' lookup _.effective;
     sub @h-tod.init' lookup _.tod_tag.manual fvs2.ignored' lookup _.effective;
     sub @h-tod.init' lookup _.tod_tag.manual fvs1.ignored' lookup _.effective;
+    sub @h-tod.init' lookup _.tod_tag.manual fvs3.ignored' lookup _.effective;
     sub @h-tod.medi' lookup _.tod_tag.manual fvs2.ignored' lookup _.effective;
     sub @h-tod.medi' lookup _.tod_tag.manual fvs1.ignored' lookup _.effective;
     sub @g-tod.isol' lookup _.tod_tag.manual fvs1.ignored' lookup _.effective;

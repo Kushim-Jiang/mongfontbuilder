@@ -64,7 +64,7 @@
 @h-tod.fina = [uni184D.K.fina];
 @h-tod = [@h-tod.isol @h-tod.init @h-tod.medi @h-tod.fina];
 @g-tod.isol = [uni184E.Hb.init._isol uni184E.G.init._isol];
-@g-tod.init = [uni184E.Hb.init uni184E.G.init];
+@g-tod.init = [uni184E.Hb.init uni184E.G.init uni184E.Hp.init];
 @g-tod.medi = [uni184E.Hb.medi uni184E.Hp.medi uni184E.G.medi];
 @g-tod.fina = [uni184E.Hp.fina];
 @g-tod = [@g-tod.isol @g-tod.init @g-tod.medi @g-tod.fina];
@@ -150,7 +150,7 @@
 @gh-tod = [@gh-tod.isol @gh-tod.init @gh-tod.medi @gh-tod.fina];
 @hh-tod.isol = [uni1859.AHr.init._isol];
 @hh-tod.init = [uni1859.AHr.init];
-@hh-tod.medi = [uni1859.AHr.medi];
+@hh-tod.medi = [uni1859.AHr.medi uni1859.Hr.medi];
 @hh-tod.fina = [uni1859.AHr.fina];
 @hh-tod = [@hh-tod.isol @hh-tod.init @hh-tod.medi @hh-tod.fina];
 @jy-tod.isol = [uni185A.BYp.init._isol];
@@ -163,9 +163,9 @@
 @ny-tod.medi = [uni185B.Ny.medi];
 @ny-tod.fina = [uni185B.Ny.fina];
 @ny-tod = [@ny-tod.isol @ny-tod.init @ny-tod.medi @ny-tod.fina];
-@zr-tod.isol = [uni185C.Zz.init._isol];
-@zr-tod.init = [uni185C.Zz.init];
-@zr-tod.medi = [uni185C.Zz.medi];
+@zr-tod.isol = [uni185C.Zz.init._isol uni185C.Zc.init._isol];
+@zr-tod.init = [uni185C.Zz.init uni185C.Zc.init];
+@zr-tod.medi = [uni185C.Zz.medi uni185C.Zc.medi];
 @zr-tod.fina = [uni185C.Zz.fina];
 @zr-tod = [@zr-tod.isol @zr-tod.init @zr-tod.medi @zr-tod.fina];
 @lh-tod.isol = [uni1840.LHr.init._isol];

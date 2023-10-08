@@ -131,7 +131,7 @@
 @k2-hud.isol = [uni183A.K2.init._isol];
 @k2-hud.init = [uni183A.K2.init];
 @k2-hud.medi = [uni183A.K2.medi];
-@k2-hud.fina = [uni183A.K2.fina];
+@k2-hud.fina = [uni183A.K2.fina uni183A.K2Vi.fina];
 @k2-hud = [@k2-hud.isol @k2-hud.init @k2-hud.medi @k2-hud.fina];
 @k-hud.isol = [uni183B.K.init._isol];
 @k-hud.init = [uni183B.K.init];
