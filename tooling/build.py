@@ -28,6 +28,7 @@ def main():
     parser.add_argument("--glyph-name-mapping", type=Path)
     parser.add_argument("--family-name")
     parser.add_argument("--output-dir", type=Path)
+    parser.add_argument("--debug", type=bool, default=False)
 
     args = parser.parse_args()
     font_path: Path = args.font
@@ -52,6 +53,7 @@ def main():
         ufo=ufo,
         family_name=args.family_name,
         output_dir=args.output_dir,
+        debug=args.debug,
     )
 
 
@@ -187,10 +189,15 @@ def build(
     family_name: str | None = None,
     output_dir: Path | None = None,
     keep_info=False,
+    debug=False,
 ) -> Path:
     """Common logic for building fonts."""
 
     output_dir = output_dir or Path.cwd()
+    if debug:
+        import os
+
+        os.environ["FONTTOOLS_LOOKUP_DEBUGGING"] = "1"
 
     if not keep_info:
         ufo.info = Info()  # drop all existing info data
