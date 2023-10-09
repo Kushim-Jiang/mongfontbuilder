@@ -48,8 +48,8 @@ lookup III.controls.preprocessing {
 
 lookup III.tod_tag.lvs.preprocessing {
     lookupflag IgnoreMarks;
-    sub [@tod.consonant.medi @tod.vowel.medi @tag.consonant.medi @tag.vowel.medi]' lookup condition.tod.fina @lvs-tod.fina' lookup _.ignored;
-    sub [@tod.consonant.init @tod.vowel.init @tag.consonant.init @tag.vowel.init]' lookup condition.tod.isol @lvs-tod.fina' lookup _.ignored;
+    sub [@tod.consonant.medi @tod.vowel.medi @tag.consonant.medi @tag.vowel.medi]' lookup condition.tod_tag.fina @lvs-tod.fina' lookup _.ignored;
+    sub [@tod.consonant.init @tod.vowel.init @tag.consonant.init @tag.vowel.init]' lookup condition.tod_tag.isol @lvs-tod.fina' lookup _.ignored;
     sub @lvs-tod' lookup _.ignored;
     lookupflag 0;
 } III.tod_tag.lvs.preprocessing;

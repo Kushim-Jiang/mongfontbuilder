@@ -10,9 +10,9 @@
 @tod.vowel.medi = [@a-tod.medi @e-tod.medi @i-tod.medi @o-tod.medi @u-tod.medi @oe-tod.medi @ue-tod.medi];
 @tod.vowel.fina = [@a-tod.fina @e-tod.fina @i-tod.fina @o-tod.fina @u-tod.fina @oe-tod.fina @ue-tod.fina];
 
-@tag.consonant = [@k-tag @kh-tag @g-tag @g-tod @ng-tod @ng-tag @j-tod @zr-tod @ny-tod @tr-tag @trh-tag @dr-tag @nr-tag @t-tag @t-tod @d-tod @n-tod @p-tag @ph-tag @b-tod @m-tod @y-tod @y-tag @r-tod @l-tod @w-tod @wa-tag @sh-tod @sh-tag @hh-tod @c-tod @z-tod @zh-tag @z-tag @q-tag @lh-tod];
-@tag.consonant.init = [@k-tag.init @kh-tag.init @g-tag.init @g-tod @ng-tod @ng-tag.init @j-tod @zr-tod @ny-tod @tr-tag.init @trh-tag.init @dr-tag.init @nr-tag.init @t-tag.init @t-tod @d-tod @n-tod @p-tag.init @ph-tag.init @b-tod @m-tod @y-tod @y-tag.init @r-tod @l-tod @w-tod @wa-tag.init @sh-tod @sh-tag.init @hh-tod @c-tod @z-tod @zh-tag.init @z-tag.init @q-tag.init @lh-tod];
-@tag.consonant.medi = [@k-tag.medi @kh-tag.medi @g-tag.medi @g-tod @ng-tod @ng-tag.medi @j-tod @zr-tod @ny-tod @tr-tag.medi @trh-tag.medi @dr-tag.medi @nr-tag.medi @t-tag.medi @t-tod @d-tod @n-tod @p-tag.medi @ph-tag.medi @b-tod @m-tod @y-tod @y-tag.medi @r-tod @l-tod @w-tod @wa-tag.medi @sh-tod @sh-tag.medi @hh-tod @c-tod @z-tod @zh-tag.medi @z-tag.medi @q-tag.medi @lh-tod];
+@tag.consonant = [@k-tag @kh-tag @g-tag @g-tod @ng-tod @ng-tag @j-tod @zr-tod @ny-tod @tr-tag @trh-tag @dr-tag @nr-tag @t-tag @t-tod @d-tod @n-tod @p-tag @p-tod @b-tod @m-tod @y-tod @y-tag @r-tod @l-tod @w-tod @wa-tag @sh-tod @sh-tag @hh-tod @c-tod @z-tod @zh-tag @z-tag @q-tag @lh-tod];
+@tag.consonant.init = [@k-tag.init @kh-tag.init @g-tag.init @g-tod @ng-tod @ng-tag.init @j-tod @zr-tod @ny-tod @tr-tag.init @trh-tag.init @dr-tag.init @nr-tag.init @t-tag.init @t-tod @d-tod @n-tod @p-tag.init @p-tod.init @b-tod @m-tod @y-tod @y-tag.init @r-tod @l-tod @w-tod @wa-tag.init @sh-tod @sh-tag.init @hh-tod @c-tod @z-tod @zh-tag.init @z-tag.init @q-tag.init @lh-tod];
+@tag.consonant.medi = [@k-tag.medi @kh-tag.medi @g-tag.medi @g-tod @ng-tod @ng-tag.medi @j-tod @zr-tod @ny-tod @tr-tag.medi @trh-tag.medi @dr-tag.medi @nr-tag.medi @t-tag.medi @t-tod @d-tod @n-tod @p-tag.medi @p-tod.medi @b-tod @m-tod @y-tod @y-tag.medi @r-tod @l-tod @w-tod @wa-tag.medi @sh-tod @sh-tag.medi @hh-tod @c-tod @z-tod @zh-tag.medi @z-tag.medi @q-tag.medi @lh-tod];
 @tag.vowel.masculine = [@a-tod @o-tod];
 @tag.vowel.feminine = [@e-tod @ue-tod];
 @tag.vowel.neuter = [@i-tod];

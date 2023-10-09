@@ -70,8 +70,16 @@ lookup condition.tod.masculine_devsger {
     sub @g-tod.medi by uni184E.Hp.medi;
 } condition.tod.masculine_devsger;
 
+lookup condition.tod_tag.vowel_medi {
+    sub uni1846.Ob.fina by uni1846.Ob.medi;
+    sub uni1847.Op.fina by uni1847.Op.medi;
+    sub uni1848.Ot.fina by uni1848.Ot.medi;
+    sub uni1848.O.fina by uni1848.O.medi;
+    sub uni1849.O.fina by uni1849.O.medi;
+} condition.tod_tag.vowel_medi;
+
 # joining
-lookup condition.tod.isol {
+lookup condition.tod_tag.isol {
     sub @a-tod by uni1820.AA.isol;
     sub @e-tod by uni1844.AE.isol;
     sub @i-tod by uni1845.AI3.isol;
@@ -107,9 +115,26 @@ lookup condition.tod.isol {
     sub @ny-tod by uni185B.Ny.init._isol;
     sub @zr-tod by uni185C.Zz.init._isol;
     sub @lh-tod by uni1840.LHr.init._isol;
-} condition.tod.isol;
+    sub @k-tag by uni183A.K2.init._isol;
+    sub @kh-tag by uni183B.K.init._isol;
+    sub @g-tag by uni1889.G.init._isol;
+    sub @ng-tag by uni188A.NG.init._isol;
+    sub @ch-tag by uni183C.C.init._isol;
+    sub @tr-tag by uni188C.Zr.init._isol;
+    sub @trh-tag by uni188D.Cr2.init._isol;
+    sub @dr-tag by uni188E.Ds.init._isol;
+    sub @nr-tag by uni188F.Wn.init._isol;
+    sub @t-tag by uni1890.Dv.init._isol;
+    sub @p-tag by uni1892.Bh.init._isol;
+    sub @y-tag by uni18A7.Yp.medi._isol;
+    sub @wa-tag by uni18A6.Wp.medi._isol;
+    sub @sh-tag by uni1894.Sx.init._isol;
+    sub @zh-tag by uni1899.Rz.init._isol;
+    sub @z-tag by uni1896.Zz.init._isol;
+    sub @q-tag by uni1897.Q.init._isol;
+} condition.tod_tag.isol;
 
-lookup condition.tod.init {
+lookup condition.tod_tag.init {
     sub @a-tod by uni1820.AA.init;
     sub @e-tod by uni1844.AE.init;
     sub @i-tod by uni1845.AIp.init;
@@ -145,9 +170,26 @@ lookup condition.tod.init {
     sub @ny-tod by uni185B.Ny.init;
     sub @zr-tod by uni185C.Zz.init;
     sub @lh-tod by uni1840.LHr.init;
-} condition.tod.init;
+    sub @k-tag by uni183A.K2.init;
+    sub @kh-tag by uni183B.K.init;
+    sub @g-tag by uni1889.G.init;
+    sub @ng-tag by uni188A.NG.init;
+    sub @ch-tag by uni183C.C.init;
+    sub @tr-tag by uni188C.Zr.init;
+    sub @trh-tag by uni188D.Cr2.init;
+    sub @dr-tag by uni188E.Ds.init;
+    sub @nr-tag by uni188F.Wn.init;
+    sub @t-tag by uni1890.Dv.init;
+    sub @p-tag by uni1892.Bh.init;
+    sub @y-tag by uni18A7.Yp.medi._init;
+    sub @wa-tag by uni18A6.Wp.medi._init;
+    sub @sh-tag by uni1894.Sx.init;
+    sub @zh-tag by uni1899.Rz.init;
+    sub @z-tag by uni1896.Zz.init;
+    sub @q-tag by uni1897.Q.init;
+} condition.tod_tag.init;
 
-lookup condition.tod.medi {
+lookup condition.tod_tag.medi {
     sub @a-tod by uni1820.A.medi;
     sub @e-tod by uni1844.E.medi;
     sub @i-tod by uni1845.Ip.medi;
@@ -183,9 +225,26 @@ lookup condition.tod.medi {
     sub @ny-tod by uni185B.Ny.medi;
     sub @zr-tod by uni185C.Zz.medi;
     sub @lh-tod by uni1840.LHr.medi;
-} condition.tod.medi;
+    sub @k-tag by uni183A.K2.medi;
+    sub @kh-tag by uni183B.K.medi;
+    sub @g-tag by uni1889.G.medi;
+    sub @ng-tag by uni188A.NG.medi;
+    sub @ch-tag by uni183C.C.medi;
+    sub @tr-tag by uni188C.Zr.medi;
+    sub @trh-tag by uni188D.Cr2.medi;
+    sub @dr-tag by uni188E.Ds.medi;
+    sub @nr-tag by uni188F.Wn.medi;
+    sub @t-tag by uni1890.Dv.medi;
+    sub @p-tag by uni1892.Bh.medi;
+    sub @y-tag by uni18A7.Yp.medi;
+    sub @wa-tag by uni18A6.Wp.medi;
+    sub @sh-tag by uni1894.Sx.medi;
+    sub @zh-tag by uni1899.Rz.medi;
+    sub @z-tag by uni1896.Zz.medi;
+    sub @q-tag by uni1897.Q.medi;
+} condition.tod_tag.medi;
 
-lookup condition.tod.fina {
+lookup condition.tod_tag.fina {
     sub @a-tod by uni1820.A.fina;
     sub @e-tod by uni1844.E.fina;
     sub @i-tod by uni1845.I3.fina;
@@ -221,7 +280,24 @@ lookup condition.tod.fina {
     sub @ny-tod by uni185B.Ny.fina;
     sub @zr-tod by uni185C.Zz.fina;
     sub @lh-tod by uni1840.LHr.medi._fina;
-} condition.tod.fina;
+    sub @k-tag by uni183A.K2.fina;
+    sub @kh-tag by uni183B.K.fina;
+    sub @g-tag by uni1889.GVi.fina;
+    sub @ng-tag by uni188A.NG4.fina;
+    sub @ch-tag by uni183C.C.fina;
+    sub @tr-tag by uni188C.Zr.fina;
+    sub @trh-tag by uni188D.Cr2.medi._fina;
+    sub @dr-tag by uni188E.Ds.fina;
+    sub @nr-tag by uni188F.Wn.fina;
+    sub @t-tag by uni1890.Dv.fina;
+    sub @p-tag by uni1892.Bg.fina;
+    sub @y-tag by uni18A7.Yp.fina;
+    sub @wa-tag by uni18A6.Wp.fina;
+    sub @sh-tag by uni1894.Sx.fina;
+    sub @zh-tag by uni1899.Rz.medi._fina;
+    sub @z-tag by uni1896.Zz.fina;
+    sub @q-tag by uni1897.Q.medi._fina;
+} condition.tod_tag.fina;
 
 # ==================================
 # conditions for Todo AG

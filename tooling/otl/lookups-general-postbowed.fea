@@ -23,13 +23,13 @@ lookup III.eac.post_bowed.preprocessing {
 lookup III.eac.a_e_o_u_oe_ue.post_bowed {
     lookupflag IgnoreMarks;
     # a/e
-    sub @hud.bowed.B @hud.bowed.K [@a-hud.fina @e-hud.fina]' lookup condition.hud.post_bowed;
-    sub @hud.bowed.B @hud.bowed.K @fvs [@a-hud.fina @e-hud.fina]' lookup condition.hud.post_bowed;
+    sub [@hud.bowed.B @hud.bowed.K] [@a-hud.fina @e-hud.fina]' lookup condition.hud.post_bowed;
+    sub [@hud.bowed.B @hud.bowed.K] @fvs [@a-hud.fina @e-hud.fina]' lookup condition.hud.post_bowed;
     sub [@g-hud @h-hud] @e-hud.fina' lookup condition.hud.post_bowed;
     sub [@g-hud @h-hud] [@fvs2 @fvs4] @e-hud.fina' lookup condition.hud.post_bowed;
     sub [@g-hud @h-hud] [@fvs1 @fvs3] @e-hud.fina' lookup condition.eac.fina;
     # o/u/oe/ue
-    sub @hud.bowed.B.init @hud.bowed.K.init @fvs [@oe-hud.fina @ue-hud.fina]' lookup condition.hud.marked;
+    sub [@hud.bowed.B.init @hud.bowed.K.init] @fvs [@oe-hud.fina @ue-hud.fina]' lookup condition.hud.marked;
     sub [@g-hud @h-hud] [@fvs1 @fvs3] [@o-hud.fina @u-hud.fina @oe-hud.fina @ue-hud.fina]' lookup condition.eac.fina;
     sub [@g-hud.medi @h-hud.medi] [@fvs2 @fvs4] [@o-hud.fina @u-hud.fina @oe-hud.fina @ue-hud.fina]' lookup condition.hud.post_bowed;
     sub [@g-hud.init @h-hud.init] [@fvs2 @fvs4] [@o-hud.fina @u-hud.fina]' lookup condition.eac.fina;
@@ -70,38 +70,28 @@ lookup III.tod.a_i_ue.post_bowed {
     lookupflag 0;
 } III.tod.a_i_ue.post_bowed;
 
+@tag.bowed.B = [@p-tag @p-tod @b-tod];
 @tag.bowed.K = [@k-tag @kh-tag @g-tag];
-@tag.bowed.B = [@p-tag @ph-tag @b-tod];
 lookup III.tag.a_i_ue.post_bowed {
     lookupflag IgnoreMarks;
     sub [@tag.bowed.K @tag.bowed.B] [@a-tod.fina @i-tod.fina @ue-tod.fina]' lookup condition.tod.post_bowed;
     lookupflag 0;
 } III.tag.a_i_ue.post_bowed;
 
+@tod.bowed.O_fina = [uni1846.Ob.fina uni1847.Op.fina uni1848.Ot.fina uni1848.O.fina uni1849.O.fina];
 lookup III.tod.lvs.postprocessing {
     lookupflag UseMarkFilteringSet [lvs.ignored];
-    sub [@tod.bowed.B @tod.bowed.K] uni1820.Aa.fina' lookup condition.tod.medi lvs.ignored' lookup condition.tod.post_bowed_a;
-    sub [@tod.consonant.fina @i-tod.fina @u-tod.fina @ue-tod.fina]' lookup condition.tod.medi lvs.ignored' lookup condition.tod.fina;
-
-    sub [@tod.consonant @i-tod @u-tod @ue-tod] lvs.ignored' lookup condition.tod.medi [@tod.consonant @tod.vowel];
-    sub lvs.ignored' lookup condition.tod.init [@tod.consonant @tod.vowel];
-    sub [@tod.consonant @i-tod @u-tod @ue-tod] lvs.ignored' lookup condition.tod.fina;
-
-    sub [@tod.bowed.B @tod.bowed.K] [uni1820.A.medi uni1820.A.fina uni1846.Ob.medi uni1846.Ob.fina uni1848.Ot.medi uni1848.Ot.fina]' lookup condition.tod.medi lvs.ignored' lookup condition.tod.medi [@tod.consonant @tod.vowel @lvs-tod];
-    sub [@tod.bowed.B @tod.bowed.K] [uni1820.A.medi uni1820.A.fina uni1846.Ob.medi uni1846.Ob.fina uni1848.Ot.medi uni1848.Ot.fina]' lookup condition.tod.medi lvs.ignored' lookup condition.tod.fina;
+    sub [@tod.bowed.B @tod.bowed.K] uni1820.Aa.fina' lookup condition.tod_tag.medi lvs.ignored' lookup condition.tod.post_bowed_a;
+    sub @tod.bowed.O_fina' lookup condition.tod_tag.vowel_medi lvs.ignored' lookup condition.tod_tag.fina;
     lookupflag 0;
 } III.tod.lvs.postprocessing;
 
+@tag.bowed.O_fina = [uni1846.Ob.fina uni1849.O.fina];
 lookup III.tag.lvs.postprocessing {
     lookupflag UseMarkFilteringSet [lvs.ignored];
-    sub [@tag.bowed.B @tag.bowed.K] uni1820.Aa.fina' lookup condition.tod.medi lvs.ignored' lookup condition.tod.post_bowed_a;
-    sub [@tag.bowed.B @tag.bowed.K] uni1845.Ip.fina' lookup condition.tod.medi lvs.ignored' lookup condition.tod.post_bowed_i;
-
-    sub @tag.consonant lvs.ignored' lookup condition.tod.medi [@tag.consonant @tag.vowel];
-    sub lvs.ignored' lookup condition.tod.init [@tag.consonant @tag.vowel];
-    sub @tag.consonant lvs.ignored' lookup condition.tod.isol;
-
-    sub [@tod.bowed.B @tod.bowed.K] uni1846.Ob.fina' lookup condition.tod.medi lvs.ignored' lookup condition.tod.fina;
+    sub [@tag.bowed.B @tag.bowed.K] uni1820.Aa.fina' lookup condition.tod_tag.medi lvs.ignored' lookup condition.tod.post_bowed_a;
+    sub [@tag.bowed.B @tag.bowed.K] uni1845.Ip.fina' lookup condition.tod_tag.medi lvs.ignored' lookup condition.tod.post_bowed_i;
+    sub @tag.bowed.O_fina' lookup condition.tod_tag.vowel_medi lvs.ignored' lookup condition.tod_tag.fina;
     lookupflag 0;
 } III.tag.lvs.postprocessing;
 

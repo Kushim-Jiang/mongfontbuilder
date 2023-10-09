@@ -9,6 +9,12 @@ lookup III.hud.o_u_oe_ue.marked {
     lookupflag 0;
 } III.hud.o_u_oe_ue.marked;
 
+lookup III.hag.o_u_oe_ue.marked {
+    lookupflag IgnoreMarks;
+    sub @hag.consonant.init [@o-hud @ue-hud]' lookup condition.hud.marked;
+    lookupflag 0;
+} III.hag.o_u_oe_ue.marked;
+
 # EAC makes FVSes break the feature
 lookup III.eac.o_u_oe_ue.marked {
     lookupflag UseMarkFilteringSet @fvs;

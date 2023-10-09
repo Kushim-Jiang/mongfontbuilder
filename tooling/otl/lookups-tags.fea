@@ -35,6 +35,7 @@ lookup III.eac.a_e.chachlag;
 # Hudum+AG with EAC request and UTN request
 
 lookup III.hud.o_u_oe_ue.marked;
+lookup III.hag.o_u_oe_ue.marked;
 lookup III.eac.o_u_oe_ue.marked;
 lookup III.eac.d.marked;
 lookup III.eac.oe_ue.marked;
@@ -143,6 +144,7 @@ lookup IIb.sib.ligature;
 # ==================================
 
 lookup IIb.controls.postprocessing;
+lookup IIb.lvs.postprocessing;
 
 # ==================================
 # IIb.3: Optional treatments
