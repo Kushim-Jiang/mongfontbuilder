@@ -1,0 +1,8675 @@
+//定义变量
+if (typeof (all_char_rulewords) === "undefined") { var all_char_rulewords = {}; };
+//初始化数据
+all_char_rulewords = {
+    "updateversion": "2021.11.28.01",
+    "rulelist": [
+        {
+            "ruleindex": "MAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAD12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠪᠤ᠎ᠠ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠪᠤ᠎ᠠ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAD30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAD31",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠨ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠨ᠌᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAD32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠪᠤ᠎ᠠ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠷᠭᠠᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAS12",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠠᠪᠤ᠎ᠠ᠌ᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠌ᠷᠭᠠᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAS21",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠬᠤᠲᠠᠨ᠎ᠠᠴᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠤᠲᠠᠨ᠎ᠠ᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠴᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAS22",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠪᠠᠭᠱᠢ᠎ᠠᠴᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠪᠠᠭᠱᠢ᠎ᠠ᠊᠊ᠴ᠊ᠠ᠊ᠭ᠊ᠠ᠊ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAS23",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ᠋ᠪᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠋ᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠋ᠴᠠᠭᠠᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠠ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᠠᠰᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠠᠰᠠ᠌ᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠠᠰᠠ᠍ᠬᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠪᠠᠭᠠᠲᠤᠷ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠠᠷᠲ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠠ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAZ21",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠬᠠᠰᠠ᠋ᠭᠤᠯᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠪᠠ᠋ᠭᠠᠲᠤᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠠ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠠᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠨᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠪᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠳᠠ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠠ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱᠠᠹᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠯᠢᠺᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠤᠰᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠳᠠᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠠᠹᠠ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MAM31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠᠢᠨ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠤᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MED10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MED11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MED12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠡᠵᠢ᠎ᠡ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MED20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠡ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MED21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡᠭᠦᠨ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠭᠦᠨ᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MED22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠡᠵᠢ᠎ᠡ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MES10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MES11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡᠵᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠮᠡᠭᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡ᠌ᠮᠡᠭᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡ᠍ᠮᠡᠭᠡᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MES20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MES21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡ᠋ᠯᠡᠰᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡ᠋ᠴᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠡ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠡᠮᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠡᠯᠡᠬᠡᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠡ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠡᠳᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠪᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭ᠌ᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠳᠡ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠡ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠪᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠡᠬᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠡᠳᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠡᠬᠡ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MEM31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠨ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠵᠡᠶ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MID10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MID11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MID12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠨ᠎ᠢ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MID20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MID21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠢ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠨ᠎ᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MID22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MID30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MID31",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠨ᠎ᠢ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠱᠢᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠯᠡᠭᠦᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠍ᠠᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ᠌ᠶ᠋ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠌ᠶ᠋ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠌ᠶ᠋ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠌ᠶ᠋ᠠᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠊᠊ᠶ᠊᠊ᠠ᠊᠊ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠊᠊ᠶ᠊᠊ᠡ᠊᠊ᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠊᠊ᠶ᠊᠊ᠠ᠊᠊ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠊᠊ᠶ᠊᠊ᠡ᠊᠊ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIS23",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠱᠢᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠶ᠋ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠶ᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠶ᠋ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠶ᠋ᠡᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠢ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠢ᠍᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱᠢᠮᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠢᠩᠢᠷᠦᠭᠡᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠦᠢᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠦ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠢᠯᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠯᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠢᠯᠡᠳᠪᠦᠷᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ13",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱᠢᠢᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠢᠢᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠢᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠢ᠋ᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠢ᠍ᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠬᠤᠢᠢᠯᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠢᠢᠳᠪᠦᠷᠢᠯᠡᠵᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ14",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠷᠢᠭᠤᠨᠦ᠋ᠢᠯᠡᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠷᠢᠭᠤᠨᠥ᠋ᠢᠯᠡᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠯᠲᠠᠨᠰᠥ᠋ᠢᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠯᠲᠠᠨᠰᠥ᠋᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠯᠲᠠᠨᠰᠥ᠌ᠢᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠯᠲᠠᠨᠰᠥ᠌᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠬᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ15",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢ᠍ᠮᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠢ᠍ᠮᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠷᠠᠨᠨᠠᠢ᠍ᠮᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢ᠍ᠮᠠᠨᠴᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢ᠍ᠮᠠᠯᠵᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢ᠍ᠮᠠᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢ᠍ᠮᠠᠲᠠᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠢ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠢᠨᠢ᠋ᠷᠦᠭᠡᠯ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠲᠣᠢ᠋ᠮᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠢ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠢᠮᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠮᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠ᠋ᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠ᠋᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠ᠊ᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠲᠤᠢᠲᠡᠭᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢᠮᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠬᠤᠢᠢᠯᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠷᠠᠨᠨᠠᠢᠮᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢᠮᠠᠨᠴᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢᠮᠠᠯᠵᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢᠮᠠᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠢᠮᠠᠲᠠᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠢᠯᠥᠢᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢᠯᠥ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠬᠦᠢᠴᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠬᠦ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠴᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ33",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠦ᠍ᠢᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠦ᠍᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠥ᠍ᠢᠬᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ34",
+            "rulewords": [
+                { "state": "1", "shape": "46:", "word": "ᠦ᠋ᠢᠯᠡ", "flag": {} },
+                { "state": "1", "shape": "46:", "word": "ᠦ᠋᠊᠊᠊ᠢᠯᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIZ35",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠣᠴᠢ᠌ᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠰᠢ᠌ᠷᠭᠤᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠢ᠌ᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢ᠌ᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MIM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠠᠱᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠯᠪᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠵᠠᠭᠠᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣᠷᠭᠢᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣᠮᠤᠭ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠣ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠣᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠣᠣᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠣ᠌ᠣᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠣ᠍ᠣᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠲᠤᠣᠷᠤᠱᠢᠬᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠪᠣᠳᠠᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠣ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWZ21",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠣ᠋ᠨᠤᠭ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠪᠣ᠋ᠳᠠᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠣ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠣᠨᠣᠨᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠣᠨᠣᠨᠣ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣᠪᠣᠣ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠠᠷᠠᠮᠫᠣ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠣ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺᠠᠷᠠᠮᠫᠣ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠣ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MWM23",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺᠢᠨᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠣ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVD12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠨ᠎ᠤ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVD22",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠨ᠎ᠤ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVD30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVD31",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠨ᠎ᠤ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤᠷᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠍ᠷᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤᠨᠲᠠᠬᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤ᠌ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠌ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠤᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠊᠊᠊᠊ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVS23",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠊᠊᠊᠊ᠳ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVS24",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠲᠠᠰᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠷᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠤ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVZ11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠳᠤᠷᠠᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳᠤ᠌ᠷᠠᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳᠤ᠍ᠷᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠤᠷᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤᠳᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠤᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣᠪᠤᠭ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠤ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠮᠢᠨ᠌ᠤ᠋ᠷᠲᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠰᠤ᠋ᠶᠤᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠤ᠋ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤ᠋ᠳᠠᠭ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠤ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠊᠊᠊᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠭᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠭᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠭ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠠᠪᠠᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠠᠪᠠ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVM12",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠪᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣᠭᠴ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣᠭᠴᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠳᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVM13",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠪᠠᠢᠭᠰᠠᠨ᠎ᠴᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVM14",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠵᠠᠭᠤᠷ᠎ᠲᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠤ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠠᠪᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠮᠪᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MVM23",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠪᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠮᠪᠤ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠣᠭᠣᠨᠣ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠥ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠥ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠥ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠥ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠥᠨᠳᠥᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥ᠋ᠨᠳᠥᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥ᠌ᠨᠳᠥᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥ᠍ᠨᠳᠥᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠥ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠥ᠍᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠥᠥᠭ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠥᠨᠥᠳᠥᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠨᠠᠭᠠᠥᠷᠭᠡᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOZ13",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠥ᠍ᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠥ᠍ᠯᠥᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥᠥ᠍ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥᠨᠥ᠍ᠳᠥᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠥ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠥᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠶᠥᠷᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠢᠨᠪᠥ᠋ᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥᠥ᠋ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠥᠯᠥ᠋ᠭᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠥ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOZ31",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠪᠤᠶᠠᠨ᠌ᠥ᠌ᠯᠵᠡᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠥ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠥᠨᠥ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠥᠪᠥ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠥ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠥ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠥ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠥᠰᠥᠰᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦᠪᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥᠨᠥ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠥ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOM31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠥᠪᠥ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MOM32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠥᠨᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠥᠪᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠥ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠲᠡᠭᠦᠨ᠎ᠦ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUD30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUD31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUD32",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠡᠭᠦᠨ᠎ᠦ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUD40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUD41",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠡᠭᠦᠨ᠎ᠦ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦᠬᠡᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠌ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠌ᠬᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠍ᠬᠡᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠊᠊᠊᠊᠊᠊ᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋᠊᠊᠊᠊᠊ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUS23",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋᠊᠊᠊᠊᠊ᠳ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUS24",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠬᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠦ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠦ᠍᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠡᠦᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠦᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠦᠱᠢᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦᠰᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠢᠩᠦᠨᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠢᠯᠯᠯᠦᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠢᠯᠯᠯᠯᠦᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ13",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠦᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠊᠊᠊᠊᠊ᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ14",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠲᠦᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ15",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠲᠦᠨᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ16",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠊᠊ᠦ᠊᠊ᠭᠡ᠊᠊ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ17",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠯᠦᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠯ᠊᠊ᠦ᠊᠊ᠭᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ18",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠨᠦᠭᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠨ᠊᠊ᠦ᠊᠊ᠭᠦ᠊᠊ᠳ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ19",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠨᠦᠭᠡᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ1A",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠦ᠊᠊ᠨ᠊᠊ᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ1B",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠦ᠊᠊ᠭᠡ᠊᠊ᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ1C",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠦ᠊᠊ᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ1D",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠊᠊ᠦ᠊᠊ᠮ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ1E",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠊᠊ᠦ᠊᠊ᠮ᠊᠊ᠰ᠊᠊ᠡ᠊᠊ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ1F",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠦ᠍ᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠍ᠷᠭᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠦ᠍ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠦ᠍ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠦ᠍ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠦ᠍ᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠦ᠍ᠭᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠦ᠍ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ᠍ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ᠍ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ᠍ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠦ᠍ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠦ᠍ᠮᠰᠡᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠦ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠦᠷᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠷᠦᠹᠧᠰᠰᠣᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠦᠹᠧᠰᠰᠣᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠷᠦᠹᠧᠰᠰᠣᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦᠳᠦᠭᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠶᠦᠷᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠦᠯᠵᠢᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲ᠊᠊᠊᠊ᠷ᠊᠊᠊᠊᠊᠊ᠳ᠋᠊᠊᠊᠊᠊᠊᠊ᠦᠷᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠲᠲᠲᠲᠲ᠊᠊᠊᠊᠊ᠦᠷᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠪᠭᠬᠵᠯ᠊᠊᠊᠊᠊ᠦᠷᠭᠡᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸᠢᠷᠦ᠋ᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠦ᠋ᠷᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠯᠠᠢᠳᠦ᠋ᠭᠦᠷᠡᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠦ᠋ᠳᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠽᠢᠮᠪᠠᠪᠦ᠋ᠸᠧᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠦᠨᠠᠨᠵᠢᠶᠠᠬᠦ᠋ᠸᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠧᠯᠤᠷᠦ᠋ᠱᠢᠶ᠎ᠡ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MUZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠦ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUZ31",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠠᠯᠲᠠᠨᠪᠦ᠌ᠷᠭᠦᠳ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠦ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡ᠊᠊᠊᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠊᠊᠊᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭᠦᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠬᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠦ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM13",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠦᠭᠡᠢ᠎ᠴᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠦᠭᠡᠢ᠎ᠴ᠊᠊᠊᠊᠊ᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM14",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭᠡᠷ᠎ᠲᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠦ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠᠭᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭᠦᠦ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠦ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠭᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠦᠰᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠭᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠦ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MUM33",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠭᠠᠭᠴᠠ᠎ᠬᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XED10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠧ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XED11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠧ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XES10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠧ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XES11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠧᠮ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XEZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠧ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XEZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯᠧᠨᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠧᠷᠯᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠸᠢᠶᠧᠨᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XEM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠧ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XEM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡᠮᠧ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠣᠫᠫᠧ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MND10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MND11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠨ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MND20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MND21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠨᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠨ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠨ᠎ᠠᠴᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNS11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠨᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠨᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠨᠠ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠨᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠡ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠨᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠣ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠤ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠡᠬᠡᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠌ᠡᠬᠡᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠍ᠡᠬᠡᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ᠋ᠡᠬᠡᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠋ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠋ᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠋ᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠋ᠣ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠋ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠋ᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠋ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠋ᠥ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠧᠺᠦ᠋ᠨᠲ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠨᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠨ᠍ᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠰᠤᠨ᠌ᠡᠷᠳᠡᠨᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠠᠰᠤᠨ᠌ᠡᠷᠳᠡᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠨ᠌ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠨ᠌ᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠨ᠌᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠠᠷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 1, "mnksft": 1, "mgyzybaiti": 1, "mgyzyhawang": 1 } }
+            ]
+        },
+        {
+            "ruleindex": "MNZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠡᠮᠨᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠢᠨᠢ᠋ᠷᠦᠭᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠨᠦ᠍ᠳᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠨᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠨ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠨᠡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 1, "mnksft": 1, "mgyzybaiti": 1, "mgyzyhawang": 1 } },
+                { "state": "1", "shape": "", "word": "ᠭᠨ᠊᠊᠊ᠡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 1, "mnksft": 1, "mgyzybaiti": 1, "mgyzyhawang": 1 } },
+                { "state": "1", "shape": "", "word": "ᠠᠨ᠊ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠨ᠊᠊᠊᠊ᠠᠷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 1, "mnksft": 1, "mgyzybaiti": 1, "mgyzyhawang": 1 } },
+                { "state": "1", "shape": "", "word": "ᠠᠨ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠠᠷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 1, "mnksft": 1, "mgyzybaiti": 1, "mgyzyhawang": 1 } }
+            ]
+        },
+        {
+            "ruleindex": "MNZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠨ᠋ᠨ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠼᠸᠮᠸᠨ᠋ᠲ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠨ᠋ᠠᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNZ31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠨ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNZ32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡᠭᠦᠨ᠋᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNZ40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNZ41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠨ᠌᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠨ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠬᠨ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠨ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠨ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢᠨ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠌᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠨ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠨ᠌᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠨ᠎", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠨ᠎ᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠠᠨ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠋᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MNM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠨ᠋ᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣᠨ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XND10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XND11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XNS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠩ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XNS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠩᠩᠩᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XNZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠩ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XNZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠣᠩᠭᠣᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠨᠭ᠍ᠭᠠᠵᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠨᠭ᠌ᠭᠠᠵᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XNM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XNM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "﻿﻿ᠢᠨᠵᠧᠨᠧᠷᠢᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠍ᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠡ᠍", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠍ᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠢ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠪ᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠪ᠍ᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣ᠍", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠊ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠋᠊ᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠋᠊ᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠥ᠍", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠋᠊ᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠋᠊ᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠊ᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠋᠊ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠠᠭᠠᠵᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠ᠋ᠭᠠᠵᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠ᠌ᠭᠠᠵᠢ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠪᠡᠬᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠪᠡ᠋ᠬᠡ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠪᠢᠴᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢ᠋ᠴᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢ᠌ᠴᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢ᠍ᠴᠢᠭ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠪᠣᠷᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣ᠋ᠷᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣ᠌ᠷᠤ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠪᠤᠷᠤᠭᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤ᠋ᠷᠤᠭᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤ᠌ᠷᠤᠭᠤ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠪᠥᠷᠬᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠥ᠋ᠷᠬᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠥ᠌ᠷᠬᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠥ᠍ᠷᠬᠦᠭ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠪᠦᠳᠦᠭᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠋ᠳᠦᠭᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠌ᠳᠦᠭᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠍ᠳᠦᠭᠦᠨ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠪᠧᠪᠧᠪᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠠᠷᠤᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠡᠷᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣᠭᠴᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠋ᠤᠭᠴᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤᠳᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠥᠵᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠋ᠦᠵᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠸᠷᠯᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠯᠠᠮ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠡᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠪ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠᠮᠪᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠠᠪᠤᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠡᠪᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠷᠪᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠣᠪᠢᠨᠴᠢᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠯᠪᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣᠪᠣᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣᠪᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠪᠤᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠪᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥᠪᠦᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠣᠪᠴᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠠᠪᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪᠠ᠋ᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪᠠ᠌ᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "38᠄ ", "word": "ᠠᠪ᠊᠊ᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "38᠄ ", "word": "ᠠᠪ᠌ᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "38᠄ ", "word": "ᠠᠪ᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "38᠄ ", "word": "ᠠᠪ᠌ᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠡᠪᠡᠯᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠪᠡ᠋ᠯᠡ", "flag": {} },
+                { "state": "1", "shape": "38᠄ ", "word": "ᠡᠪ᠊᠊ᠡᠯᠡ", "flag": {} },
+                { "state": "1", "shape": "38᠄ ", "word": "ᠡᠪ᠋ᠡᠯᠡ", "flag": {} },
+                { "state": "1", "shape": "38᠄ ", "word": "ᠡᠪ᠊᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "38᠄ ", "word": "ᠡᠪ᠌ᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠯᠢᠪᠢᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠢᠪᠢ᠋ᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠢᠪᠢ᠌ᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠢᠪᠢ᠍ᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠯᠢᠪ᠊᠊ᠢᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠯᠢᠪ᠋ᠢᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠯᠢᠪ᠊᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠯᠢᠪ᠋ᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠠᠪᠣᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠪᠣ᠋ᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠪᠣ᠌ᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠠᠪ᠊᠊ᠣᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠠᠪ᠌ᠣᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠠᠪ᠊᠊ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠠᠪ᠌ᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠲᠠᠪᠤᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠪᠤ᠋ᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠪᠤ᠌ᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠲᠠᠪ᠊᠊ᠤᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠲᠠᠪ᠌ᠤᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠠᠪ᠊᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠠᠪ᠌ᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠡᠪᠥᠪᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠡᠪᠥ᠋ᠪᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠡᠪᠥ᠌ᠪᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠡᠪᠥ᠍ᠪᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠡᠪ᠊ᠥᠪᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠡᠪ᠌ᠥᠪᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠡᠪ᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠡᠪ᠌ᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠲᠡᠪᠦᠨᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠪᠦ᠋ᠨᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠪᠦ᠌ᠨᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠪᠦ᠍ᠨᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠲᠡᠪ᠊᠊ᠦᠨᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠲᠡᠪ᠌ᠦᠨᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠲᠡᠪ᠊᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠲᠡᠪ᠌ᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠧᠪᠧᠪᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠧᠪ᠊᠊ᠧᠪᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠧᠪ᠌ᠧᠪᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠧᠪ᠊᠊ᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪᠧᠪ᠌ᠧ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠪ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠪ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠪ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MBM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠡᠳᠦᠪ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MPD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠫ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MPD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠫ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MPS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠫ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MPS11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠫᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠠ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠡ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠡ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠡ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠢ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠣ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠣ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠣ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠤ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠤ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠤ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠥ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠥ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠥ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠦ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠦ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠦ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠧ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠠᠫᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠠ᠋ᠫᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠠ᠌ᠫᠠ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠡᠫᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠡ᠋ᠫᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠢᠫᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠢ᠋ᠫᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠢ᠌ᠫᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠢ᠍ᠫᠢ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠫᠣᠫᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠣ᠋ᠫᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠫᠣ᠌ᠫᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠤᠫᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠤ᠋ᠫᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠤ᠌ᠫᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠥᠫᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠥ᠋ᠫᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠥ᠌ᠫᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠥ᠍ᠫᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠦᠫᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠦ᠋ᠫᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠦ᠌ᠫᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠦ᠍ᠫᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠧᠫᠧ", "flag": {} },
+
+
+                { "state": "1", "shape": "", "word": "ᠫᠯᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠠᠷᠲ᠋ᠢᠽᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠢᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠤᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠧᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MPZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠫ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MPZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠫᠠᠫᠠᠫᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠠᠫᠠ᠋ᠫᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠠᠫᠠ᠌ᠫᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠡᠫᠡᠫᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠡᠫᠡ᠋ᠫᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠢᠫᠢᠫᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠢᠫᠢ᠋ᠫᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠢᠫᠢ᠌ᠫᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠢᠫᠢ᠍ᠫᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠣᠫᠣᠫᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠣᠫᠣ᠋ᠫᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠣᠫᠣ᠌ᠫᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠤᠫᠤᠫᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠤᠫᠤ᠋ᠫᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠤᠫᠤ᠌ᠫᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠥᠫᠥᠫᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠥᠫᠥ᠋ᠫᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠥᠫᠥ᠌ᠫᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠥᠫᠥ᠍ᠫᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠦᠫᠦᠫᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠦᠫᠦ᠋ᠫᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠦᠫᠦ᠌ᠫᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠦᠫᠦ᠍ᠫᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠧᠫᠧᠫᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠫᠤᠫᠫᠸ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠢᠫᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠢᠫᠧᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MPM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠫ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MPM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠫᠤᠮᠫ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠬ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHD30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHD31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHD40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠋᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHD41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠋᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHS11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠬᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠ᠋ᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠣᠲᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠣ᠋ᠲᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠤᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠤ᠋ᠳᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠬ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬ᠎ᠠᠴᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠬᠬ᠎ᠬ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠍᠊", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬ᠍ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬ᠍ᠠ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠡ᠋", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠣ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠤ᠌", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠬ᠍ᠥ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬ᠍ᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠠᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠠ᠋ᠳᠠ", "flag": {} },
+
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠡᠷᠡᠭ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠢᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠢ᠋ᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠢ᠌ᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠢ᠍ᠷᠠᠭ᠎ᠠ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠬ᠍ᠣᠩᠭᠣᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠣ᠋ᠩᠭᠣᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠤᠷᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠤ᠋ᠷᠠᠯ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠥᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠥ᠋ᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠥ᠌ᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠥ᠍ᠭᠦᠷᠭᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠦᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠦ᠋ᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠦ᠌ᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠦ᠍ᠷᠡᠯ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠍ᠧᠬᠧ", "flag": {} }
+            ]
+        },
+
+        {
+            "ruleindex": "MHS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHS21",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠬ᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬ᠋ᠠ᠌", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠡ᠋", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠣ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠤ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠠᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠠ᠋ᠳᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠢᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠢ᠋ᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠢ᠌ᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠢ᠍ᠷᠠᠭ᠎ᠠ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠬ᠋ᠣᠩᠭᠣᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠣ᠋ᠩᠭᠣᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠤᠷᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠤ᠋ᠷᠠᠯ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠥᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠥ᠋ᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠥ᠌ᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠥ᠍ᠭᠦᠷᠭᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠦᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠦ᠋ᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠦ᠌ᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋ᠦ᠍ᠷᠡᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHS30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHS31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠬᠬ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠬᠬ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠬᠬ᠎ᠬ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠥ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠧ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠷᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢ᠋ᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢ᠌ᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢ᠍ᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥ᠋ᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥ᠌ᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠥ᠍ᠭᠦᠷᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦ᠋ᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦ᠌ᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦ᠍ᠷᠡᠯ", "flag": {} },
+
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠊᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠬ᠊᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠊᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠊᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠊᠊ᠧ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MHS32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠬᠢᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHS33",
+            "rulewords": [
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌ᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌ᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠬ᠌᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌᠊ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠌᠊ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠌ᠠᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠌ᠠ᠋ᠳᠠ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠬ᠌ᠣᠩᠭᠣᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠌ᠣ᠋ᠩᠭᠣᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠌ᠤᠷᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠌ᠤ᠋ᠷᠠᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHS40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬ᠋᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHS41",
+            "rulewords": [
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋ᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠬ᠋᠋᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋᠊ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋᠊ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬ᠋᠋᠊ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬ᠋᠋ᠠᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋᠋ᠡᠷᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋᠋ᠢᠷᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋᠋ᠣᠷᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠋᠋ᠦᠷᠡᠯ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MHZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠍᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠬᠠᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠬ᠍ᠠᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠬ᠋ᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠬ᠋ᠠᠬ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠤᠬ᠋ᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠌᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MHZ31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠬᠬ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠬᠬ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠬᠬ᠎ᠬ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠬᠦᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠡᠬᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤᠷᠦᠬᠰᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠷᠡᠬᠦ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠧᠬᠨᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠧᠬᠨᠢᠭᠴᠦᠦᠯ", "flag": {} }
+            ]
+        }, 
+        {
+            "ruleindex": "MHZ33",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠬ᠌ᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠧᠬ᠌ᠨᠢᠭ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠋᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠬ᠋᠋ᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠬ᠋᠋ᠡᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠬ᠋᠋ᠢᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠬ᠋᠋ᠤᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠥᠬ᠋᠋ᠦᠬᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ50",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ51",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠬᠬ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠬᠬ᠎ᠬ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠬ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠬ᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ60",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHZ61",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠢᠬ᠋᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠢᠬ᠋᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠬ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠬᠬ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠬ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠬ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢᠬ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠬᠬ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠬᠠᠬ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠬ᠋᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MHM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠠᠬᠠᠬ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGD11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠭᠭᠭ᠎ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠭ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGD30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGD31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGD40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGD41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠍᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠊᠊᠊᠊᠊᠊᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠣᠶᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠎ᠠᠴᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠍᠊", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠍ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠍ᠠ᠌", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠍ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠡ᠋", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠣ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠤ᠌", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠭ᠍ᠥ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠍ᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠧ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠱᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠡᠨᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠠᠵᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠠ᠋ᠵᠠᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠡᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠢᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠢ᠋ᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠢ᠌ᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠢ᠍ᠨᠳᠠᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠣᠵᠢᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠣ᠋ᠵᠢᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠣᠵᠢᠩ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠤᠷᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠤ᠋ᠷᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠤᠷᠪᠠ", "flag": {} },
+
+                { "state": "1", "shape": "39: ", "word": "ᠭ᠍ᠥᠷᠦᠭᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠭ᠍ᠥ᠋ᠷᠦᠭᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠥ᠌ᠷᠦᠭᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠥ᠍ᠷᠦᠭᠡᠰᠦ", "flag": {} },
+
+                { "state": "1", "shape": "39: ", "word": "ᠭ᠍ᠦᠷᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠭ᠍ᠦ᠋ᠷᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠦ᠌ᠷᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠦ᠍ᠷᠦᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠍ᠧᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠠᠵᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠠ᠋ᠵᠠᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠡᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠢᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠢ᠋ᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠢ᠌ᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠢ᠍ᠨᠳᠠᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠣᠵᠢᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠣ᠋ᠵᠢᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠣᠵᠢᠩ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠤᠷᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠤ᠋ᠷᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠤᠷᠪᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠥᠷᠦᠭᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠥ᠋ᠷᠦᠭᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠥ᠌ᠷᠦᠭᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠥ᠍ᠷᠦᠭᠡᠰᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠦᠷᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠦ᠋ᠷᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠦ᠌ᠷᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠦ᠍ᠷᠦᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠧᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠱᠠᠨ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠭ᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋ᠤ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭᠡᠨᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠢᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠧ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠦᠢᠯᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠊ᠢᠢ᠊᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠊ᠢᠢ᠊ᠨ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠊ᠢᠢ᠊ᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠊ᠢᠢᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠊ᠢᠢᠢᠢ᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠌ᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠌ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠌ᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠧ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭᠭᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠭᠢᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠷᠮᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠊᠊᠊᠊ᠷᠮᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠭᠢᠪ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠠᠵᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠠ᠋ᠵᠠᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠡᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠢᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠢ᠋ᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠢ᠌ᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠢ᠍ᠨᠳᠠᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠣᠵᠢᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠣ᠋ᠵᠢᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠣᠵᠢᠩ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠤᠷᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠤ᠋ᠷᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠤᠷᠪᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥᠷᠦᠭᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥ᠋ᠷᠦᠭᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥ᠌ᠷᠦᠭᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥ᠍ᠷᠦᠭᠡᠰᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦᠷᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ᠋ᠷᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ᠌ᠷᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ᠍ᠷᠦᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠧᠨ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠭ᠌ᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠌ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌᠊᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭ᠌ᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠥ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌᠊᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠧ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS33",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠌ᠷᠠᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGS41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠋ᠭᠢᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠋ᠠᠵᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠋ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠋ᠢᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠋ᠤᠷᠪᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠋᠋ᠦᠷᠦᠨ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MGZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠍᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᠤᠷᠢᠭᠲᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠤᠭᠯᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠭᠯᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠵᠢᠭᠯᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠯᠢᠢᠭᠴᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠣᠢᠭᠯᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠢᠮᠱᠢᠭᠲᠠᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠲᠠᠯᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠭᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠭᠴᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠱᠢᠷᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠱᠢᠷᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠱᠢᠭᠤᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠱᠢᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭᠴᠢᠳᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭᠴᠢᠳᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭᠴᠢᠷᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠤᠢᠪᠢᠭᠴᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠯᠢᠭᠲᠠᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪᠢᠱᠢᠭᠯᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠱᠢᠭᠯᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠴᠢᠭᠯᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠱᠢᠪᠢᠯᠢᠭᠲᠠᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠱᠢᠪᠢᠯᠢᠭᠲᠡᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠢᠯᠢᠭᠷᠠᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠢᠯᠯᠢᠭᠷᠠᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠯᠢᠢᠭᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠭᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠤᠷᠭᠠᠭᠴᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠭᠤᠭᠳᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠠᠪᠤᠭᠳᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣᠢᠭᠯᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠲᠠᠯᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭᠴᠠᠷᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠭᠰᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠢᠭᠮᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠯᠠᠵᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠱᠢᠯᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠬᠢᠷᠯᠢᠭᠵᠢᠰᠬᠢᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠬᠢᠷᠯᠢᠭᠵᠢᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠣᠷᠢᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠣᠷᠢ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ᠊᠊᠊᠊ᠯ᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠯ᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠ᠊᠊ᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠭ᠍᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠭ᠍᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠭ᠊᠊᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠱᠢᠯ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭᠱᠢᠯ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭᠱᠢᠨ᠌᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭᠱᠢᠨ᠌᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢ᠊᠊᠊᠊᠊ᠭ᠊᠊᠊᠊᠊ᠱ᠊᠊᠊᠊᠊ᠢ᠊᠊᠊᠊᠊ᠯ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ᠊ᠱᠢ᠊ᠯ᠊ᠯ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠢᠮᠱᠢᠭ᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠊᠊᠊ᠢ᠊᠊᠊ᠮ᠊᠊᠊ᠱ᠊᠊᠊ᠢ᠊᠊᠊᠊᠊ᠭ᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠋ᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠌ᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠭᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠢ᠋ᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠢ᠌ᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠣ᠋ᠭᠰᠠᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳᠭᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳ᠍ᠭᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳ᠊᠊᠊ᠭᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠋ᠭᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠌ᠭᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠌ᠭᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠍ᠭᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠳᠠᠳᠭᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠳᠠᠰᠭᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠳᠠᠳ᠋ᠭᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠳᠠᠰ᠋ᠭᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠳᠠᠳ᠌ᠭᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠳᠠᠰ᠌ᠭᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠳᠠᠳ᠍ᠭᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠳᠠᠰ᠍ᠭᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠠᠯᠤᠰᠭᠤᠪᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠰ᠊᠊᠊ᠭᠣᠸ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ13",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠡᠴᠢᠭ᠍ᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠱᠢᠭ᠍ᠱᠢᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭ᠍ᠴᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠥᠷᠢᠭ᠍᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MGZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠭ᠊᠊᠊᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠭᠤᠳᠠᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳᠭ᠋ᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠠᠯᠤᠰᠭ᠋ᠤᠪᠢ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠡᠴᠢᠭ᠋ᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠰᠭ᠋ᠣᠸ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠩᠭ᠋ᠯᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠴᠠᠭ᠋ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠠᠭ᠋ᠠ᠋ᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠴᠡᠭ᠋ᠡᠭᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠲᠠᠩᠭ᠋ᠢᠯ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠣᠭ᠋ᠣᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠣᠭ᠋ᠣ᠋ᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠣᠭ᠋ᠣᠯ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭ᠋ᠤᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭ᠋ᠤ᠋ᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭ᠋ᠤᠴᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭᠥᠭ᠋ᠥᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠥᠭ᠋ᠥ᠋ᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠥᠭ᠋ᠥ᠌ᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠥᠭ᠋ᠥ᠍ᠭᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭ᠋ᠦᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭ᠋ᠦ᠋ᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭ᠋ᠦ᠌ᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭ᠋ᠦ᠍ᠬᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭᠧᠭ᠋ᠧᠭᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠵᠣᠷᠢᠭ᠋᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠥᠷᠢᠭ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭᠭᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦᠭᠱᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠱᠢᠷᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠭᠴᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠭᠴᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠳᠬᠢᠭᠳᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠢᠭᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠢᠭᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠯᠢᠢᠭᠴᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠭᠬᠢᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠴᠢᠭᠯᠡᠬᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠢᠱᠢᠭᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠯᠪᠢᠬᠳᠡᠵᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠠᠭᠠᠷᠳᠡᠬᠳᠡᠵᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠲ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠢᠱᠢᠭ᠌ᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠯᠢᠢᠭ᠌ᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠯᠢᠭᠲᠡᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠢᠢᠭᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠩᠭᠯᠢ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠯᠧᠨᠢᠩᠭᠷᠠᠳ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠧᠷᠭᠮᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠠᠯᠢᠨᠢᠩᠭᠷᠠᠳ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠷᠷᠷᠭᠷᠷᠷᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠢᠭᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠵᠢᠭᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠮᠵᠢᠭᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠷᠡᠵᠢᠭᠳᠡᠭᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠡᠩᠵᠢᠭᠴᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠪᠯᠢᠭᠬᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠱᠢᠯᠢᠭᠳᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠵᠢᠭᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭᠳᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠭᠬᠢᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠱᠢᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠭᠱᠢᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠱᠢᠯᠲᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠭᠱᠢᠭᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭᠱᠢᠭᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠤᠯᠥᠬᠰᠠᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬᠡᠱᠢᠭᠦ᠌ᠨᠳᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠱᠢᠭᠦ᠋ᠨᠳᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠱᠢᠭᠦ᠍ᠨᠳᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠱᠢᠯᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠱᠢᠯᠯ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠡᠴᠡᠭᠮ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠬᠢᠷᠯᠢᠭᠵᠢᠰᠬᠢᠭᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠬᠢᠷᠯᠢᠭᠵᠢᠭᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠥᠷᠢᠭ᠌᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ᠊᠊᠊᠊ᠯ᠊᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠥ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠯᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠯ᠊ᠭ᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠯ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ᠊᠊", "flag": {} },
+
+                { "state": "1", "shape": "38:44: ", "word": "᠊ᠭ᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "38:44: ", "word": "᠊ᠭ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡ᠊᠊ᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠊᠊ᠭ᠊᠊᠊᠊᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠭᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠊᠊ᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠭ᠊᠊ᠯᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠴ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠭᠭᠭ᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠭ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠭ᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠷᠷᠷᠭᠷᠷᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠷᠷᠷᠭᠷᠷᠷᠠ", "flag": {} },
+                { "state": "1", "shape": "50:", "word": "ᠷᠷᠷᠭᠪ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠡᠩᠵ᠊᠊ᠢ᠊᠊ᠭ᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭᠱᠢᠯ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ᠊ᠱᠢ᠊ᠯ᠊ᠯ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ᠊᠊᠊᠊᠊ᠱᠢ᠊᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ᠊᠊᠊ᠯ᠊᠊᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠯᠢᠭ᠊ᠡᠷᠬᠢᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡ᠋ᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠭᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠢ᠋ᠭᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠢ᠌ᠭ᠌ᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠦ᠋ᠭᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠦ᠌ᠭᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠦ᠍ᠭᠰᠡᠨ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MGZ32",
+            "rulewords": [
+                { "state": "1", "shape": "38: ", "word": "ᠭᠡᠭᠡᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠊ᠡᠭ᠊ᠡᠭ᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭᠢᠭᠢᠭᠢ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠭ᠊ᠢᠭ᠊ᠢᠭ᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭᠥᠭᠥᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠊ᠥᠭ᠊ᠥᠭ᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭᠦᠭᠦᠭᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠊ᠦᠭ᠊ᠦᠭ᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭᠧᠭᠧᠭᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠊ᠧᠭ᠊ᠧᠭ᠊ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭᠡᠭᠡᠷᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠭ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠡᠷᠡᠬᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ33",
+            "rulewords": [
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌ᠠᠭ᠌ᠠᠭ᠌ᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌᠊ᠠᠭ᠌᠊ᠠᠭ᠌᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌ᠣᠭ᠌ᠣᠭ᠌ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌᠊ᠣᠭ᠌᠊ᠣᠭ᠌᠊ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌ᠤᠭ᠌ᠤᠭ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌᠊ᠤᠭ᠌᠊ᠤᠭ᠌᠊ᠤ", "flag": {} },
+
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌ᠡᠭ᠌ᠡᠭ᠌ᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌᠊ᠡᠭ᠌᠊ᠡᠭ᠌᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌ᠢᠭ᠌ᠢᠭ᠌ᠢ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠭ᠌᠊ᠢᠭ᠌᠊ᠢᠭ᠌᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌ᠥᠭ᠌ᠥᠭ᠌ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌᠊ᠥᠭ᠌᠊ᠥᠭ᠌᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌ᠦᠭ᠌ᠦᠭ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌᠊ᠦᠭ᠌᠊ᠦᠭ᠌᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌ᠧᠭ᠌ᠧᠭ᠌ᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠌᠊ᠧᠭ᠌᠊ᠧᠭ᠌᠊ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠤᠭ᠌ᠶᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪᠤᠭ᠌ᠰᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠱᠢᠭ᠌ᠡᠷᠳᠡᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠱᠢᠭ᠌ᠦᠨᠳᠦᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠷᠷᠷᠭ᠌ᠷᠷᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠷᠷᠷᠭ᠌ᠷᠷᠷᠷᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪᠢᠱᠢᠭ᠌ᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠯᠢᠭ᠌ᠪᠠᠲᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠩᠭ᠌ᠯᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠴᠠᠭ᠌ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠠᠭ᠌ᠠ᠋ᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠴᠡᠭ᠌ᠡᠭᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠲᠠᠩᠭ᠌ᠢᠯ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠣᠭ᠌ᠣᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠣᠭ᠌ᠣ᠋ᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠣᠭ᠌ᠣᠯ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭ᠌ᠤᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭ᠌ᠤ᠋ᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭ᠌ᠤᠴᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭᠥᠭ᠌ᠥᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠥᠭ᠌ᠥ᠋ᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠥᠭ᠌ᠥ᠌ᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠥᠭ᠌ᠥ᠍ᠭᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭ᠌ᠦᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭ᠌ᠦ᠋ᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭ᠌ᠦ᠌ᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭ᠌ᠦ᠍ᠬᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠭᠧᠭ᠌ᠧᠭ᠌ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠵᠣᠷᠢᠭ᠌᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠣᠷᠢᠭ᠌᠊", "flag": {} }
+
+
+            ]
+        },
+        {
+            "ruleindex": "MGZ40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠋᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ41",
+            "rulewords": [
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋ᠠᠭ᠋᠋ᠠᠭ᠋᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋᠊ᠠᠭ᠋᠋᠊ᠠᠭ᠋᠋᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋ᠣᠭ᠋᠋ᠣᠭ᠋᠋ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋᠊ᠣᠭ᠋᠋᠊ᠣᠭ᠋᠋᠊ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋ᠤᠭ᠋᠋ᠤᠭ᠋᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋᠊ᠤᠭ᠋᠋᠊ᠤᠭ᠋᠋᠊ᠤ", "flag": {} },
+
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋ᠡᠭ᠋᠋ᠡᠭ᠋᠋ᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋᠊ᠡᠭ᠋᠋᠊ᠡᠭ᠋᠋᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋ᠢᠭ᠋᠋ᠢᠭ᠋᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠭ᠋᠋᠊ᠢᠭ᠋᠋᠊ᠢᠭ᠋᠋᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋ᠥᠭ᠋᠋ᠥᠭ᠋᠋ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋᠊ᠥᠭ᠋᠋᠊ᠥᠭ᠋᠋᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋ᠦᠭ᠋᠋ᠦᠭ᠋᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋᠊ᠦᠭ᠋᠋᠊ᠦᠭ᠋᠋᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋ᠧᠭ᠋᠋ᠧᠭ᠋᠋ᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠭ᠋᠋᠊ᠧᠭ᠋᠋᠊ᠧᠭ᠋᠋᠊ᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠬᠦᠭ᠋᠋ᠱᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠭ᠋᠋ᠱᠢᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠭ᠋᠋ᠡᠷᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤᠭ᠋᠋ᠶᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠢᠭ᠋᠋ᠤ᠋ᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠭ᠋᠋ᠦ᠍ᠬᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ50",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ51",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭᠭᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠤᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠣᠬᠢᠯᠭ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ52",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴᠣᠬᠢᠯᠭ᠍᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰᠭ᠍᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳᠭ᠍᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ60",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ61",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠋ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠌ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠍ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "40:", "word": "ᠳᠠᠳ᠋ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳ᠌ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳ᠍ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠊᠊ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳ᠊᠊ᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ62",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠭ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠭ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠭ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠭ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠤᠭ᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGZ63",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠋ᠭ᠋᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠌ᠭ᠋᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠰ᠍ᠭ᠋᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳ᠌ᠭ᠋᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠠᠳ᠍ᠭ᠋᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠭ᠋᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠣᠭ᠋᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠬᠬ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠬ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠬ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢᠬ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠋᠎", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MGM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠᠳᠠᠭ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠪᠠᠳᠠᠭ᠎ᠤᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠳᠠ᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠴᠤᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤᠷᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠢᠮᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠯᠢᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤᠷᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠠᠷᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠠᠷᠯ᠊᠊ᠢ᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠮᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠠᠯᠢᠭ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠶᠠᠭᠵᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠠᠩᠭᠢᠭ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠯᠣ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭᠢ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠠᠢᠷᠠᠭᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠮᠤᠭᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠤᠳᠤᠮᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠣᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠢᠷᠠᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠯᠢᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠮᠯᠢᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠢᠮᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠷᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠣᠬᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠷᠤᠮᠠᠨᠲ᠋ᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠢᠳᠠᠪᠤᠷᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠷᠠᠺᠲ᠋ᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠷᠱᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠭᠠᠵᠢᠮᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠤᠵᠢᠷᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠮᠢᠷᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠪᠴᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠣᠷᠪᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠩᠭᠢᠷᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠣᠯᠴᠢᠩᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠢᠵᠢᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠵᠢᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠡᠯᠡᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠠᠪᠤᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪᠢᠱᠢᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯᠢᠷᠯᠢᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠵᠢᠯᠢᠭ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭᠭᠭ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭᠭᠭ᠎ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰ᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰ᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠯᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠯ᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠯ᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠯᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠯ᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠯ᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠯᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠯ᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠯ᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠰᠯᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠰᠯ᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠰᠯ᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠷᠡᠭ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠡᠷᠡᠭ᠎ᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠯᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠴᠡ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠰᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠷᠮᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠭᠡᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠭᠡᠱᠢ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠴᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢ᠊᠊᠊ᠴ᠊᠊᠊ᠢ᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠯᠢᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠊᠊᠊ᠱ᠊᠊᠊ᠢ᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠴᠢᠷᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢᠵᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠢ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠵᠷᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠱ᠌ᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠭᠰᠡᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠥᠭᠦᠷᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠡᠵᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠪᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠷᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥᠨᠳᠦᠷᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡᠷᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠡ᠊᠊᠊᠊ᠷ᠊᠊᠊᠊ᠯ᠊᠊᠊᠊ᠢ᠊᠊᠊᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠡᠬᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠦᠴᠢᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠥᠮᠦᠷᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠦᠷᠢᠮᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠭᠡᠱᠢᠭᠯᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠢᠳᠢᠮᠯᠢᠭ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠪᠱᠢᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠱᠢᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠯᠡᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪᠢᠱᠢᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠲᠤᠪᠢᠯᠢᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠱᠢᠪᠢᠯᠢᠭ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭ᠍᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MGM31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠᠳᠠᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠦᠷᠯᠢᠭ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MMD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MMD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠮ᠎", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MMS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MMS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠠᠯ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠮ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠮ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠮ᠎ᠠᠴᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MMZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠮ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MMZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠠᠮᠠᠷ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MMZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MMZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯᠠᠮ᠎ᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MMM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠮ᠎", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MMM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠣᠮ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠯ᠎", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯᠢᠮᠪᠦ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠯ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠯ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠯ᠎ᠠᠴᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠯ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠠᠯᠤ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠠᠯ᠎ᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠯ᠎", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MLM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠭᠠᠯ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠰ᠎", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠷᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠰ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠰ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠰ᠎ᠠᠴᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠰ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠤᠰᠠᠯᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠷᠰᠯᠠᠨ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤᠯᠤᠰ᠎ᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSZ31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠤᠯᠤᠰ᠋᠎ᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎᠊ᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎᠊᠊ᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠰ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MSM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠯᠮᠠᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠯᠮᠠᠰ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠯᠮᠠᠰ᠍", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠰ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠰ᠋᠎", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MSM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠦᠮᠦᠰ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠱ᠎", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MXS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠡᠭᠡᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠣᠷᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠣᠷᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠥᠯᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠦᠭᠦᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠧᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠧᠩ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠱ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠱ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠱ᠎ᠠᠴᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXS12",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠱᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠱᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠱᠠ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠱᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠱᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠡ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠱᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠱᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠣ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠱᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠤ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠱᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠱᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠱᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊ᠧ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MXS13",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱ᠌ᠢᠷᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠌᠊᠊᠊᠊᠊ᠢᠷᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠌ᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠍ᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠌ᠢᠨ᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MXS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱ᠋᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱᠢᠨ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠨ᠎ᠡ", "flag": {} }
+
+
+            ]
+        }, {
+            "ruleindex": "MXS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠣ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠥ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠢᠨ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋᠊᠊᠊᠊᠊᠊ᠢᠨ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋᠊᠊᠊᠊ᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠡᠭᠡᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠣᠷᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠥᠯᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠦᠭᠦᠷᠡᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠋ᠧᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MXZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠱ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠱ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MXZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠠᠱᠠᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠱ᠍ᠠᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠱ᠊᠊᠊ᠠᠩ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᠢᠱ᠌ᠢᠶ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠱ᠌ᠠᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MXZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠱ᠋᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᠢᠱᠢᠶ᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠱᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠱ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠱᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠱ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠧᠯᠤᠷᠦ᠋ᠱᠢᠶ᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MXZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠠᠱ᠋ᠠᠩ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠱ᠋ᠢᠶ᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MXZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXZ31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠢᠱ᠎ᠡ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠱ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠱ᠎", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MXM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠠᠱ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTD11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTS10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠲᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠦ᠍ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠲᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠦ᠍ᠨᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠲ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠲ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTZ11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠠᠲᠠᠷ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠲᠤᠷᠢᠶ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠠᠲ᠌ᠧᠷᠢᠶᠠᠯ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠨᠠᠲ᠌ᠷᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠲ᠌ᠲ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠸᠢᠶᠧᠲ᠌ᠨᠠᠮ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTZ20",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "᠊ᠲ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠠᠲᠧᠷᠢᠶᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠲ᠊᠊᠊ᠧᠷᠢᠶᠠᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠲᠷᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠠᠲ᠊᠊᠊ᠷᠢ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠸᠢᠶᠧᠲᠨᠠᠮ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠸᠢᠶᠧᠲ᠊᠊᠊ᠨᠠᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠧᠲᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠧᠲ᠊᠊᠊ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠧᠲᠧ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨᠧᠲ᠊᠊᠊᠊᠊᠊ᠧ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠲᠲ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTZ22",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠲ᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠸᠢᠶᠧᠨ᠋ᠲ᠋ᠢᠶᠠᠩ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTM10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "᠊ᠲ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MTM11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠺᠠᠷᠲ", "flag": {} },
+                { "state": "1", "shape": "  ", "word": "ᠨᠣᠲ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDD10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠳ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDD11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠳ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠳ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDD21",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠳ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠳ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MDS11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠳᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳ᠍ᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳᠳᠳ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠍ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠍ᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳ᠌ᠢ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳ᠍ᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠍ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠣ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠍ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠤ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠍ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳ᠌ᠧ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠍ᠧ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠳ᠌ᠠᠯᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳ᠍ᠠᠯᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS20",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᠳ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS21",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠡ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠡ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠳᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠢ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠣ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠤ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠥ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠧ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠳᠧ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠳ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS22",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠪᠠᠭᠱᠢ᠎ᠳᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠳᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠳ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠳ᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊᠊ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS23",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠪᠠᠭᠱᠢ᠎ᠳᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠳᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠳ᠊᠊ᠠ᠊᠊ᠭ᠊᠊ᠠ᠊᠊ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠡᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠡ᠊᠊ᠭᠡ᠊᠊ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS24",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᠠᠪᠤ᠎ᠳᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊᠊ᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS25",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠳᠠᠬᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠠ᠊᠊ᠬᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠡᠬᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠡ᠊᠊ᠬᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS26",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠳᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠠ᠊᠊ᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠡ᠊᠊ᠭ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS27",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠤ᠊᠊ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠦ᠊᠊ᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS28",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠦ᠊᠊ᠨ᠊᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠤ᠊᠊ᠨ᠊᠊ᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS29",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠦ᠊᠊ᠭᠡ᠊᠊ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠊᠊ᠤ᠊᠊ᠭ᠊᠊ᠠ᠊᠊ᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDS2A",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠠᠯᠢᠶᠠᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳ᠋ᠳ᠋ᠳ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠡᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠠᠬᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠡᠬᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ᠍ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ᠍ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠦ᠍ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠤᠭᠠᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDZ10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "᠊ᠳ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠳ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDZ11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠠᠳᠬᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠳ᠊᠊᠊ᠬᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠳ᠊᠍᠊᠊ᠬᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠳ᠍ᠬᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳᠳᠳ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDZ12",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠴᠢᠮᠠᠳ᠌ᠣ᠋ᠳᠼᠠᠷ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠳ᠌ᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠳ᠌ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠠᠳ᠌ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠲᠡᠳ᠌ᠡ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠳ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠤᠳᠤᠯᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠤᠳ᠊᠊᠊ᠤᠯᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠤᠳ᠊᠊᠍᠊᠊᠊ᠤᠯᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠤᠳ᠍ᠤᠯᠬᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDZ22",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠡᠳ᠋ᠯᠡᠬᠦ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳ᠋ᠳ᠋ᠳ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠤᠳ᠋᠊᠊ᠤᠯᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠤᠳ᠋ᠤᠯᠬᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDM10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "᠊ᠳ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDM11",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᠠᠷᠠᠳ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠷᠠᠳ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠠᠷᠠᠳ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠳ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳᠳᠳ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MDM20",
+            "rulewords": [
+
+                { "state": "1", "shape": "  ", "word": "᠊ᠳ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MDM21",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠳ᠋ᠳ᠋ᠳ᠋", "flag": {} },
+                { "state": "1", "shape": "   ", "word": "ᠳᠡᠳ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MQD10",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠴ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MQD11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠴ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MQS10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠴᠠᠭᠠᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MQS11",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᠴᠠᠰᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MQZ10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠴ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MQZ11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠡᠴᠡᠬᠦ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MQM10",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "᠊ᠴ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MQM11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠺᠠᠷᠠᠴ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJD10",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠵ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJD11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠵ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJD20",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠵ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJD21",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠵ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJD22",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠵ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJS10",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠵ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJS11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠵᠠᠭᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠵ᠋ᠠᠭᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJS20",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠵ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "  ", "word": "ᠠᠮᠤᠢ ᠵ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠵ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠵ᠎ᠠᠴᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJZ10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠵ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠭᠠᠵᠠᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJZ20",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJZ21",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠠᠮᠤᠢᠵ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJM10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠵ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠵ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊᠊ᠵ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJM11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠵᠤᠷᠵ", "flag": {} },
+                { "state": "1", "shape": "  ", "word": "ᠵᠤᠷᠵ᠎ᠤᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJM20",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠵ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠮᠤᠢᠵ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJM22",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠵᠤᠷᠵ᠋", "flag": {} },
+                { "state": "1", "shape": "  ", "word": "ᠵᠤᠷᠵ᠋᠎ᠤᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MJM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} },
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠶ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠶ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYD20",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠶ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYD21",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠶ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶᠠᠮᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠶᠶ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠶᠶ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠶᠶᠶ᠎ᠶ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠶ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠶ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠶ᠎ᠠᠴᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "᠎ᠶᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠶᠣ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠥ᠍", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYS12",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᠪᠠᠭᠱᠢ᠎ᠶ᠌ᠢᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠶᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠊᠊ᠢ᠊᠊ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠎ᠶᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠊᠊ᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYS23",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠣ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠶ᠋ᠠᠮᠠᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠶ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠶ᠍᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶᠶᠶ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠶᠶ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠶᠶᠶ᠎ᠶ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠠᠶᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠶᠢᠬᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠶᠯᠡᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠶᠧᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠢᠶᠸᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠠᠶ᠍ᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠭᠡᠷ᠎ᠢᠶ᠍ᠡᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ20",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠶ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ21",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᠭᠡᠷ᠎ᠢᠶᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "  ", "word": "ᠭᠡᠷ᠎ᠢ᠊᠊ᠶ᠊᠊ᠡ᠊᠊ᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ22",
+            "rulewords": [
+                { "state": "1", "shape": "   ", "word": "ᠭᠡᠷ᠎ᠢᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "   ", "word": "ᠭᠡᠷ᠎ᠢ᠊᠊ᠶ᠊᠊ᠡ᠊᠊ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ23",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠠᠶ᠋ᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠶ᠋ᠢᠬᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠶ᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠶ᠋ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠶ᠋ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠢ᠋ᠶ᠋ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠬᠠᠰᠤ᠋ᠶ᠋ᠤᠨ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠪᠤᠶ᠋ᠠᠨ᠌ᠥ᠌ᠯᠵᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠶ᠋ᠬᠠᠤᠯᠠᠭᠠᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ30",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠶ᠌᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠬᠠᠶ᠌ᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠶ᠌ᠯ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠶ᠌ᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYZ41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶᠶᠶ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠶᠶᠶ᠎ᠶ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶᠠᠪᠤᠶ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYM10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠶ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠶ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MYM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶᠶᠶ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳᠠᠯᠠᠶ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRD10",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠷ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠷ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRS10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠷ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRS11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠷᠠᠳᠢᠤᠰ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠷᠸᠳᠠᠰᠲ᠋ᠤᠷ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠷ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠷ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠷ᠎ᠠᠴᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRZ10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠷ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠰᠠᠷᠠᠯ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRZ20",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᠷ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠷ᠊᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥᠭᠡᠷ᠎ᠡ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠷ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MRM11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠠᠭᠠᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠸ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠸ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWS11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠸᠠᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠸ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "᠎ᠸ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠸ᠎ᠠᠴᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠸ᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWZ11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠸᠠᠷ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠸ᠌ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠲᠠᠸ᠍ᠠᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠸ᠋᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWZ21",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠠᠸ᠋ᠭ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWZ31",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠭᠣᠸ᠎ᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XWZ32",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠭᠣᠸ᠋᠎ᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XWM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠸ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠸ᠎", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWM11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠨᠠᠮᠢᠨᠤᠸ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠨᠠᠮᠢᠨᠤᠸ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠨᠠᠮᠢᠨᠤᠸ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠤᠯᠢᠺᠤᠸ", "flag": {} },
+                { "state": "1", "shape": "  ", "word": "ᠨᠠᠮᠢᠨᠤᠸ᠎ᠦᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XWM20",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠸ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XWM21",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠠᠭᠤᠸ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠳᠡᠭᠦᠸ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠨᠠᠮᠢᠨᠤᠸ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XFD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠹ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XFD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠹ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XFS10",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠹ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XFS11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠹᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠠ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠡ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠡ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠡ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠢ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠣ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠣ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠣ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠤ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠤ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠤ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠥ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠥ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠥ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠦ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠦ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠦ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠧ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠠᠹᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠠ᠋ᠹᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠠ᠌ᠹᠠ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠡᠹᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠡ᠋ᠹᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠢᠹᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠢ᠋ᠹᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠢ᠌ᠹᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠢ᠍ᠹᠢ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠣᠹᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠣ᠋ᠹᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠣ᠌ᠹᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠤᠹᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠤ᠋ᠹᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠤ᠌ᠹᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠥᠹᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠥ᠋ᠹᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠥ᠌ᠹᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠥ᠍ᠹᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠦᠹᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠦ᠋ᠹᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠦ᠌ᠹᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠦ᠍ᠹᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠧᠹᠧ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠹᠷᠤᠨ᠋ᠲ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠢᠼᠢᠺ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XFZ10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "᠊ᠹ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XFZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠹᠠᠹᠠᠹᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠠᠹᠠ᠋ᠹᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠠᠹᠠ᠌ᠹᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠡᠹᠡᠹᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠡᠹᠡ᠋ᠹᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠢᠹᠢᠹᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠢᠹᠢ᠋ᠹᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠢᠹᠢ᠌ᠹᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠢᠹᠢ᠍ᠹᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠣᠹᠣᠹᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠣᠹᠣ᠋ᠹᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠣᠹᠣ᠌ᠹᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠤᠹᠤᠹᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠤᠹᠤ᠋ᠹᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠤᠹᠤ᠌ᠹᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠥᠹᠥᠹᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠥᠹᠥ᠋ᠹᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠥᠹᠥ᠌ᠹᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠥᠹᠥ᠍ᠹᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠦᠹᠦᠹᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠦᠹᠦ᠋ᠹᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠹᠦᠹᠦ᠌ᠹᠦ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠹᠦᠹᠦ᠍ᠹᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠹᠧᠹᠧᠹᠧ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠠᠹᠷᠢᠺᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠤᠹᠢᠶ᠎ᠠ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XFM10",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "᠊ᠹ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XFM11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠬᠠᠨᠢᠹ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MKD10",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠺ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MKD11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠺ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MKS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MKS11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠺᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠠ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠡ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠡ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠡ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠢ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠣ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠣ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠣ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠤ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠤ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠤ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠥ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠥ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠥ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠦ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠦ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠦ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠧ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠠᠺᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠠ᠋ᠺᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠠ᠌ᠺᠠ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠡᠺᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠡ᠋ᠺᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠢᠺᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠢ᠋ᠺᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠢ᠌ᠺᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠢ᠍ᠺᠢ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠺᠣᠺᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠣ᠋ᠺᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠺᠣ᠌ᠺᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠤᠺᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠤ᠋ᠺᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠤ᠌ᠺᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠥᠺᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠥ᠋ᠺᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠥ᠌ᠺᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠥ᠍ᠺᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠦᠺᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠦ᠋ᠺᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠦ᠌ᠺᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠦ᠍ᠺᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠧᠺᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠶᠦᠷᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠣᠯᠣᠨᠢ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MKZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠺ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MKZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺᠠᠺᠠᠺᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠠᠺᠠ᠋ᠺᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠠᠺᠠ᠌ᠺᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠡᠺᠡᠺᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠡᠺᠡ᠋ᠺᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠢᠺᠢᠺᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠢᠺᠢ᠋ᠺᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠢᠺᠢ᠌ᠺᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠢᠺᠢ᠍ᠺᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠣᠺᠣᠺᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠣᠺᠣ᠋ᠺᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠣᠺᠣ᠌ᠺᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠤᠺᠤᠺᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠤᠺᠤ᠋ᠺᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠤᠺᠤ᠌ᠺᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠥᠺᠥᠺᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠥᠺᠥ᠋ᠺᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠥᠺᠥ᠌ᠺᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠥᠺᠥ᠍ᠺᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠦᠺᠦᠺᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠦᠺᠦ᠋ᠺᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠦᠺᠦ᠌ᠺᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠺᠦᠺᠦ᠍ᠺᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠺᠧᠺᠧᠺᠧ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠳ᠋ᠣᠺᠲ᠋ᠣᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠢᠺᠷᠤᠮᠸᠲ᠋ᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "MKM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠺ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MKM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠶᠤᠷᠺ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠪᠠᠩᠺᠤᠺ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XKD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠻ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XKD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠻ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XKS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠻ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XKS11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠻᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠠ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠠ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠡ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠡ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠡ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠢ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠣ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠣ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠣ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠤ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠤ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠤ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠥ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠥ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠥ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠦ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠦ᠋", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠦ᠌", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠧ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠠᠻᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠠ᠋ᠻᠠ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠠ᠌ᠻᠠ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠡᠻᠡ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠡ᠋ᠻᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠢᠻᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠢ᠋ᠻᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠢ᠌ᠻᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠢ᠍ᠻᠢ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠣᠻᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠣ᠋ᠻᠣ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠻᠣ᠌ᠻᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠤᠻᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠤ᠋ᠻᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠤ᠌ᠻᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠥᠻᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠥ᠋ᠻᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠥ᠌ᠻᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠥ᠍ᠻᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠦᠻᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠦ᠋ᠻᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠦ᠌ᠻᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠦ᠍ᠻᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠧᠻᠧ", "flag": {} },
+
+                { "state": "1", "shape": " ", "word": "ᠻᠶᠦᠷᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠯᠦᠪ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XKZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠻ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XKZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠻᠠᠻᠠᠻᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠠᠻᠠ᠋ᠻᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠠᠻᠠ᠌ᠻᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠡᠻᠡᠻᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠡᠻᠡ᠋ᠻᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠢᠻᠢᠻᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠢᠻᠢ᠋ᠻᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠢᠻᠢ᠌ᠻᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠢᠻᠢ᠍ᠻᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠣᠻᠣᠻᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠣᠻᠣ᠋ᠻᠣ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠣᠻᠣ᠌ᠻᠣ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠤᠻᠤᠻᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠤᠻᠤ᠋ᠻᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠤᠻᠤ᠌ᠻᠤ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠥᠻᠥᠻᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠥᠻᠥ᠋ᠻᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠥᠻᠥ᠌ᠻᠥ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠥᠻᠥ᠍ᠻᠥ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠦᠻᠦᠻᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠦᠻᠦ᠋ᠻᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠦᠻᠦ᠌ᠻᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠻᠦᠻᠦ᠍ᠻᠦ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠻᠧᠻᠧᠻᠧ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳ᠋ᠣᠻᠲ᠋ᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠢᠻᠷᠤᠮᠸᠲ᠋ᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XKM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠻ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XKM11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠶᠤᠷᠻ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠩᠺᠤᠻ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XCD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠼ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XCD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠼ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XCS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠼ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XCS11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠼᠢᠹᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠼᠤᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XCZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠼ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XCZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠼᠤᠤᠼᠤᠤ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠸᠠᠺᠼᠢᠨ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XCM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠼ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XCM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠰᠲ᠋ᠠᠨᠼ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MZD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠽ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MZD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠽ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MZS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠽ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MZS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠽᠠᠨᠳᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠽᠠᠨᠳᠢ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MZZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠽ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MZZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠸᠢᠽᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠫᠠᠷᠲ᠋ᠢᠽᠠᠨ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MZM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠽ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "MZM11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠺᠸᠽ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠸᠡᠳᠦ᠋ᠽ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XHD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠾ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XHD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠾ", "flag": {} }
+
+
+            ]
+        },
+        {
+            "ruleindex": "XHS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠾ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XHS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠾᠸᠨᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠾᠸᠪᠸᠢ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XHZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠾ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XHZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠠᠨᠾᠦ᠋ᠢ", "flag": {} }
+
+
+            ]
+        },
+        {
+            "ruleindex": "XHM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠾ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XHM11",
+            "rulewords": [
+
+                { "state": "1", "shape": " ", "word": "ᠾᠨᠾ", "flag": {} },
+                { "state": "1", "shape": "  ", "word": "ᠸᠧᠢᠾ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XRD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠿ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XRD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠿ", "flag": {} }
+
+
+            ]
+        },
+        {
+            "ruleindex": "XRS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠿ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XRS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠿᠢ", "flag": {} }
+
+
+            ]
+        },
+        {
+            "ruleindex": "XRZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠿ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XRZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠿᠦᠿᠸᠡ", "flag": {} }
+
+
+            ]
+        },
+        {
+            "ruleindex": "XRM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠿ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XRM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠿᠠᠿᠠᠿ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XLD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡀ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XLD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡀ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XLS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡀ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XLS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡀᠠᠰᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᡀᠠᠮᠤ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XLZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡀ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XLZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡀᠠᡀᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᡀᠠᠵᠠᠪ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XLM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡀ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XLM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡀᠠᡀᡀ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XZD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡁ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XZD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡁ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XZS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡁ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XZS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡁᠢ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XZZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡁ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XZZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᠸᠧᠷᡁᠢᠨᠢᠶᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XZM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡁ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XZM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡁᠠᡁᠠᡁ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XQD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡂ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XQD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡂ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XQS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡂ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XQS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡂᠢ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XQZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡂ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XQZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡂᠢᡂᠢᡂᠢ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XQM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡂ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XQM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡂᠢᡂ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "XID10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XID11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XIS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XIS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠳᠤᠭᠠᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XIZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊᠊᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XIZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠠᠪᠤ᠊ᠳᠤᠭᠠᠷ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XIM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊᠊", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "XIM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠲᠠᠪᠤ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭᠠ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠮ᠊ᠯ᠊", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠊ᠭᠠᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠭᠠᠷ᠊", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠰᠠ᠌ᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡ᠌ᠯᠡᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠣ᠌ᠳᠣᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳᠤ᠌ᠷᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠨ᠌ᠠᠷᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠰ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠰ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠳ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠳ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠵᠣᠷᠵ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠶ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠸᠠᠸ᠌ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠸᠠᠸ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠠᠷ᠋ᠠᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠷᠠᠳ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠷ᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠷ᠎᠎᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠨ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠨ᠋᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠨ᠌᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠷᠠ‍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠷᠠ‍ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "‍ᠳ", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠡᠵᠢ᠎ᠠᠪᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠵᠢ᠎᠎᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎᠎᠎ᠡᠵᠢ", "flag": {} },
+                { "state": "1", "shape": "12", "word": "1᠎2", "flag": {} },
+                { "state": "1", "shape": "12", "word": "1 2", "flag": {} },
+                { "state": "1", "shape": "", "word": " ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠭ ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪᠤ ᠶᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠪᠤ ᠡᠵᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠋᠌᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠋ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠯ᠎", "flag": {} },
+                { "state": "1", "shape": " ", "word": "ᠡᠨ᠍᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "123 ", "word": "123᠎ᠤ", "flag": {} },
+                { "state": "1", "shape": "a1a", "word": "a᠎1᠎a", "flag": {} },
+                { "state": "1", "shape": "1&1", "word": "1&᠎1", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠴᠢᠭ᠎ᠨᠤᠭᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠴᠢᠭ᠎ᠨᠦᠭᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠᠭᠲᠠ᠎ᠪᠢᠴᠢᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠢᠴᠢᠭ᠎ᠠᠭᠲᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠠᠪᠤ᠎᠊᠊᠊᠊᠊᠊᠊᠊ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠡᠵᠢ᠎᠊᠊᠊᠊᠊᠊ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠷ᠎᠊᠊᠊᠊᠊᠊᠊ᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠭᠰᠢ᠎᠊᠊᠊᠊᠊᠊᠊ᠶᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠨ᠎᠊᠊᠊᠊᠊᠊᠊ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠨ᠎᠊᠊᠊᠊᠊᠊᠊ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠷ᠎᠊᠊᠊᠊᠊᠊᠊᠊ᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠷ᠎᠊᠊᠊᠊᠊ᠤᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠷ᠎᠊᠊᠊᠊᠊᠊᠊᠊ᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠷ᠎᠊᠊᠊᠊᠊ᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠷ᠎᠊᠊᠊᠊᠊᠊᠊᠊ᠲᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠷ᠎᠊᠊᠊᠊᠊ᠲᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠷ᠎᠊᠊᠊᠊᠊᠊᠊᠊ᠲᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠷ᠎᠊᠊᠊᠊᠊ᠲᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠷ᠎᠊᠊᠊᠊᠊᠊᠊᠊ᠶᠦᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠷ᠎᠊᠊᠊᠊᠊ᠶᠤᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠷ᠎᠊᠊᠊᠊᠊᠊᠊᠊ᠡᠴᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠷ᠎᠊᠊᠊᠊᠊ᠠᠴᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠠ᠎᠊᠊᠊᠊᠊ᠶᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠷ᠎᠊᠊᠊᠊ᠢᠶᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠷ᠎᠊᠊᠊᠊ᠢᠶᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠷ᠎᠊᠊᠊᠊ᠢᠶᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠬᠡᠷ᠎᠊᠊᠊᠊ᠢᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠯ᠎᠊᠊᠊᠊᠊᠊᠊ᠲᠠᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠯ᠎᠊᠊᠊᠊᠊᠊᠊ᠯᠤᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠷ᠎᠊᠊᠊᠊᠊᠊ᠯᠦᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠠᠯ᠎᠊᠊᠊᠊᠊᠊᠊ᠨᠤᠭᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭᠡᠷ᠎᠊᠊᠊᠊᠊᠊ᠨᠦᠭᠦᠳ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠮ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠯ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠱ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠼ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠽ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠿ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "   ", "word": "ᠠᠯᠢ᠎ᠶᠢ᠎ᠨᠢ᠎ᠴᠦ", "flag": {} },
+                { "state": "1", "shape": "   ", "word": "ᠪᠠᠭᠰᠢ᠎ᠶᠢᠨ᠎ᠢᠶᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "   ", "word": "ᠭᠡᠷ᠎ᠦᠨ᠎ᠢᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "   ", "word": "ᠪᠠᠭᠱᠢ᠎ᠶᠢᠨ᠎ᠳᠠᠭᠠᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠡ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠡ᠌", "flag": {} },
+
+
+                { "state": "1", "shape": "", "word": "ᠠᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠠᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠠ᠋ᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠠ᠌ᠴᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠠᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠠ᠋ᠴᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠠ᠌ᠴᠠ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠶᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠢ᠋ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠢ᠌ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠢ᠍ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠌ᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠌ᠢ᠋ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠌ᠢ᠌ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠌ᠢ᠍ᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠶᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠢ᠋ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠢ᠌ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠢ᠍ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠌ᠢᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠌ᠢ᠋ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠌ᠢ᠌ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠌ᠢ᠍ᠨ", "flag": {} },
+
+
+                { "state": "1", "shape": "", "word": "ᠢᠶᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠌ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠍ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠌ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠍ᠠᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠢᠶᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠌ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠍ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠌ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠍ᠠᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠢᠶᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠋ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠌ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠍ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠋ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠌ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠍ᠡᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠢᠶᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠋ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠌ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠍ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠋ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠌ᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠍ᠡᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠢᠶᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠋ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠌ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠍ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠋ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠌ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠍ᠠᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠢᠶᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠋ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠌ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠍ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠋ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠌ᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠍ᠠᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠢᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠋ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠌ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢᠶ᠍ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠋ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠌ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠢ᠋ᠶ᠍ᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠢᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠋ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠌ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢᠶ᠍ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠋ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠌ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠢ᠋ᠶ᠍ᠡᠨ", "flag": {} },
+
+
+                { "state": "1", "shape": "", "word": "ᠤᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠋ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠌ᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠤᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠤ᠋ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠤ᠌ᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠋ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠌ᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠦ᠋ᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠦ᠌ᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠋ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠌ᠳ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠤᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠤ᠋ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠤ᠌ᠳ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠋ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠌ᠳ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠦ᠋ᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠦ᠌ᠳ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠶᠦᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦ᠋ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦ᠌ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦ᠍ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦ᠋ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦ᠌ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦ᠍ᠭᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠶᠦᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶᠦ᠋ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶᠦ᠌ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶᠦ᠍ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦ᠋ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦ᠌ᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦ᠍ᠭᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠯᠦᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠯᠦᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠯᠦ᠋ᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠯᠦ᠌ᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠯᠦ᠍ᠭᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠯᠦᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠯᠦ᠋ᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠯᠦ᠌ᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠯᠦ᠍ᠭᠡ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠨᠦᠭᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠨᠦᠭᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠨᠦ᠋ᠭᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠨᠦ᠌ᠬᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠨᠦ᠍ᠭᠦᠳ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠨᠦᠭᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠨᠦ᠋ᠭᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠨᠦ᠌ᠬᠦᠳ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠨᠦ᠍ᠭᠦᠳ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠶᠦᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦ᠋ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦ᠌ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦ᠍ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦ᠋ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦ᠌ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦ᠍ᠮ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠶᠦᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶᠦ᠋ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶᠦ᠌ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶᠦ᠍ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦ᠋ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦ᠌ᠮ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦ᠍ᠮ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠶᠦᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦ᠋ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦ᠌ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶᠦ᠍ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦ᠋ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦ᠌ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠶ᠋ᠦ᠍ᠮᠰᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠶᠦᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶᠦ᠋ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶᠦ᠌ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶᠦ᠍ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦ᠋ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦ᠌ᠮᠰᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠶ᠋ᠦ᠍ᠮᠰᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠠᠭᠠᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠠᠭᠠᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠠᠭᠠᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠡᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠡᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠡᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠡᠭᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠡᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠡᠭᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠡᠭᠡᠨ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤ᠌", "flag": {} },
+
+
+                { "state": "1", "shape": "", "word": " ᠳᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": " ᠳᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": " ᠳᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤ᠌", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": " ᠳᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": " ᠳᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": " ᠳᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠠᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠠᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠠᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠠᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠠᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠠᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠠᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠠᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠠᠭ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠠᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠠᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠠᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠠᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠠᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠠᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠠᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠠᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠠᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠠᠭ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠡᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠡᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠡᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠡᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠡᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠡᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠡᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠡᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠡᠭ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠡᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠡᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠡᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠡᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠡᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠡᠭ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠡᠭ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠡᠭ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠡᠭ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠡᠭ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤ᠌ᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠤ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠤ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤ᠌ᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ᠍ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠍ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠍ᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠦ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠦ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠦ᠍ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠍ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠋ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠌ᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠍ᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤ᠌ᠨᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠤ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠤ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤ᠌ᠨᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ᠍ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠍ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠍ᠨᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠦ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠦ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠦ᠍ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠍ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠋ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠌ᠨᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠍ᠨᠢ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠤᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤ᠋ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠤ᠌ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤ᠋ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠤ᠌ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤ᠋ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠤ᠌ᠭᠠᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠤᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠤ᠋ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠤ᠌ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤ᠋ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠤ᠌ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤ᠋ᠭᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠤ᠌ᠭᠠᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠳᠦᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ᠋ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ᠌ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳᠦ᠍ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠋ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠌ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠋ᠦ᠍ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠋ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠌ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠳ᠌ᠦ᠍ᠭᠡᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠳᠦᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠦ᠋ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠦ᠌ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳᠦ᠍ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠋ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠌ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠋ᠦ᠍ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠋ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠌ᠭᠡᠷ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠳ᠌ᠦ᠍ᠭᠡᠷ", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠤ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": " ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": " ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠤᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠋ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠌ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠌ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠌ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠍ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠍ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠍ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠤ᠍ᠤ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "᠎ᠤᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠋ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠌ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠌ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠌ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠍ᠤ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠍ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠍ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠤ᠍ᠤ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠦᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠌ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠦ᠍ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "᠎ᠦᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠌ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠦ᠍ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "ᠪᠦᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠌ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᠪᠦ᠍ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠌ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "", "word": "᠎ᠪᠦ᠍ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "36: ", "word": "ᠭ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "36: ", "word": "ᠭ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "36: ", "word": "ᠱ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "36: ", "word": "ᠢᠷᠡᠬ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "36: ", "word": "ᠢᠷᠡᠱ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠱ᠌᠋ᠢᠯᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠱ᠍᠋ᠢᠯᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠱ᠋᠋᠋ᠢᠯᠦᠭ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠠᠨ᠌᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠠᠨ᠌᠋᠌ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠠᠨ᠌᠋᠌᠍ᠠᠷ", "flag": {} },
+
+                { "state": "1", "shape": "37:  ", "word": "ᠠᠪᠤ᠎ᠶᠢᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "37:  ", "word": "ᠠᠪᠤ᠎ᠶᠢ᠋ᠨ", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠠᠲ᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠠᠲ᠋᠋ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠠᠲ᠋᠋᠌ᠠᠷ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠠᠲ᠋᠋᠌᠍ᠠᠷ", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "᠎ᠶᠢᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠶᠢᠨ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠶᠢᠨ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "᠎ᠢᠶᠠᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠢᠶᠠᠨ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠢᠶᠠᠨ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "᠎ᠢᠶᠡᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠢᠶᠡᠨ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠢᠶᠡᠨ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "᠎ᠤᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠤᠨ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠤᠨ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "᠎ᠦᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠦᠨ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠦᠨ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "᠎ᠳᠠᠭᠠᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠳᠠᠭᠠᠨ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠳᠠᠭᠠᠨ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "᠎ᠳᠡᠭ᠌ᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠳᠡᠭ᠌ᠡᠨ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠳᠡᠭ᠌ᠡᠨ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠳᠡᠭ᠌ᠡᠨ᠍", "flag": {} },
+
+               { "state": "1", "shape": "37: ", "word": "᠎ᠤᠳ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠤᠳ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠤᠳ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "᠎ᠦᠳ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠦᠳ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "᠎ᠦᠳ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠋ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠋ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠋ᠠ᠍", "flag": {} },
+
+                { "state": "1", "shape": "39: ", "word": "ᠪ᠍ᠢ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠪ᠍ᠢ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠤ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠧ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠪ᠍ᠧ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠶᠠᠪ᠍ᠢ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠶᠠᠪ᠍ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠧ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠪ᠍ᠧ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠡ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠡ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠧ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠋ᠧ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠡ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠡ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠧ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠭ᠋ᠧ᠍", "flag": {} },
+
+
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠡ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠡ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠠᠭ᠋ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠡ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠡ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠢ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠧ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬ᠌ᠧ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠡ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠡ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠢ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠶᠡᠬ᠌ᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠧ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠨ᠋ᠧ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠢ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠧ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠰ᠍ᠧ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠬᠠᠳ᠋ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠢ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠧ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠳ᠋ᠧ᠍", "flag": {} },
+
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠠ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠠ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠠ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠠ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠢ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠢ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠤ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠤ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠤ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠤ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠧ", "flag": {} },
+                { "state": "1", "shape": "37: ", "word": "ᠬᠠᠷ᠍ᠧ᠍", "flag": {} },
+
+                { "state": "1", "shape": "38: ", "word": "᠎ᠶᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠶ᠌ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠶ᠍ᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠶᠢ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠶᠣ᠋", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠶᠣ᠌", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠶᠣ᠍", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠶ᠌ᠣ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳ᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠦ᠍", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠠ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠢ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠳᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠪᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠪᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠯᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "᠎ᠯᠦ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠠᠪ᠊ᠣᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": " ᠠᠪ᠊ᠠᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠠᠪ᠊ᠢᠬᠤ", "flag": {} },
+                { "state": "1", "shape": "39: ", "word": "ᠪ᠊ᠦᠲᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠊ᠠᠲᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠊ᠢᠲᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠌ᠦᠳᠦᠨ ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠌ᠠᠲᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "38: ", "word": "ᠪ᠌ᠢᠲᠦᠨ", "flag": {} },
+
+                { "state": "1", "shape": "41: ", "word": "ᠲᠠᠨ ᠠ", "flag": {} },
+                { "state": "1", "shape": "41: ", "word": "ᠲᠠᠨ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "41: ", "word": "ᠲᠠᠨ᠌᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "41: ", "word": "ᠲᠠᠨ᠌ ᠠ", "flag": {} },
+                { "state": "1", "shape": "41: ", "word": "ᠲᠠᠨ᠋ ᠠ", "flag": {} },
+
+                { "state": "1", "shape": "42: ", "word": "ᠬᠥ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠥ᠍", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "42: ", "word": "ᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠥ᠍", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠦ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠦ᠍", "flag": {} },
+
+
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠬᠥ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠬᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠬᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠬᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠬᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠬᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠬᠦ᠍", "flag": {} },
+
+
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠭᠥ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠭᠥ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠭᠥ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠭᠥ᠍", "flag": {} },
+
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠭᠦ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠭᠦ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠭᠦ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠪᠠᠭᠦ᠍", "flag": {} },
+
+                { "state": "1", "shape": "42: ", "word": "ᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠡ᠍", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠡ᠍", "flag": {} },
+
+                { "state": "1", "shape": "42: ", "word": "ᠬᠡᠬᠡ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠡᠬᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠡᠬᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠬᠡᠬᠡ᠍", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠡᠭᠡ", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠡᠭᠡ᠋", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠡᠭᠡ᠌", "flag": {} },
+                { "state": "1", "shape": "42: ", "word": "ᠭᠡᠭᠡ᠍", "flag": {} },
+                { "state": "1", "shape": "43: ", "word": "ᠠᠷᠠᠳ ᠲᠦᠮᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "43: ", "word": "ᠲᠦᠮᠡᠨ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "᠊᠊ᠭᠭᠦᠯ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "᠊᠊ᠮᠮᠦᠯ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "᠊ᠬᠦᠮᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "᠊ᠮᠦᠰᠦ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "ᠭᠭᠭᠦᠯ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "ᠭᠬᠢᠷ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "ᠭᠭ᠊ᠭᠦᠯ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "ᠭ᠊ᠬᠢᠷ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "ᠪᠪᠪᠪᠦᠮᠨ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "᠊ᠪᠪᠦᠮᠨ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "ᠭᠭᠭᠪᠦᠮᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "ᠭ᠊ᠪᠦᠨ", "flag": {} },
+                { "state": "1", "shape": "44: ", "word": "ᠪ᠊ᠪᠦᠮᠨ", "flag": {} },
+                { "state": "1", "shape": "45: ", "word": "ᠬᠦᠬᠡᠬᠣᠲᠠ", "flag": {} },
+                { "state": "1", "shape": "45: ", "word": "ᠡᠭᠡᠨᠢᠭᠲᠡ", "flag": {} },
+                { "state": "1", "shape": "45: ", "word": "ᠡᠭᠡᠨᠢᠭᠲᠠ", "flag": {} },
+
+                { "state": "1", "shape": "46: ", "word": "ᠬ᠌᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "46: ", "word": "ᠨᠦᠬ᠌᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "46: ", "word": "ᠬ᠋᠋᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "46: ", "word": "ᠨᠦᠬ᠋᠋᠋ᠦ", "flag": {} },
+
+                { "state": "1", "shape": "47:  ", "word": "ᠭᠡᠷ᠎ᠦᠭᠡᠢ", "flag": {} },
+                { "state": "1", "shape": "47: ", "word": "ᠭᠡᠷ ᠦᠭᠡᠢ", "flag": {} },
+
+                { "state": "1", "shape": "48: ", "word": "ᠨᠦᠬ᠍ᠦ", "flag": {} },
+                {"state": "1", "shape": "48: ", "word": "ᠨᠦᠬ᠍᠌ᠦ", "flag": {}},
+                {"state": "1", "shape": "48: ", "word": "ᠨᠦᠬ᠋ᠦ", "flag": {}},
+                {"state": "1", "shape": "48: ", "word": "ᠨᠦᠬ᠋᠌ᠦ", "flag": {}},
+
+                { "state": "1", "shape": "48: ", "word": "ᠬ᠋᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "48: ", "word": "ᠬ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "48: ", "word": "ᠬ᠍᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "48: ", "word": "ᠬ᠍ᠦ", "flag": {} },
+
+                { "state": "1", "shape": "48: ", "word": "ᠨᠦᠬ᠋᠌ᠦᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "48: ", "word": "ᠨᠦᠬ᠌᠌ᠦᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "48: ", "word": "ᠨᠦᠬ᠍᠌ᠦᠬᠦ", "flag": {} },
+                { "state": "1", "shape": "48: ", "word": "ᠨᠦᠬ᠋᠋᠌ᠦᠬᠦ", "flag": {} },
+
+                { "state": "1", "shape": "49: ", "word": "ᠪᠠᠭ᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "49: ", "word": "ᠪᠠᠭ᠋᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "49: ", "word": "ᠪᠠᠭ᠌᠎ᠠ", "flag": {} },
+                { "state": "1", "shape": "49: ", "word": "ᠪᠠᠭ᠍᠎ᠠ", "flag": {} },
+
+                { "state": "1", "shape": "50: ", "word": "ᠨᠦᠭ᠍ᠦ", "flag": {} },
+                { "state": "1", "shape": "50: ", "word": "ᠨᠦᠭ᠍᠌ᠦ", "flag": {} },
+                { "state": "1", "shape": "50: ", "word": "ᠨᠦᠭ᠋ᠦ", "flag": {} },
+                { "state": "1", "shape": "50: ", "word": "ᠨᠦᠭ᠋᠌ᠦ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢇ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢇ", "flag": {} }
+
+            ]
+        }
+        ,
+        {
+            "ruleindex": "AAD20",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢇ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAD21",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢇ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢇ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢇᠢ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢇ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢇᢇᢇ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢇ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢇᢇ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢇ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAM21",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢑᢦᢇ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢇ᠌", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAM31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢊᢇ", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "AAM32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡛᢇ᠌", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "AAM40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢇ᠍", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAM41",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢑᢇ᠍", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AID10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢈ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AID11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢈ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AIS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢈ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AIS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢈᢈ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AIZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢈ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AIZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢇᢈᢈ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AIM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢈ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AIM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢇᢈ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AKAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢉ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AKAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "ᢉ", "word": "ᢉ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AKAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢉ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AKAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢉᠰᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᢉᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AKAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢉ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AKAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢉᠢᢉᢉᠢ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᢉᠢᢉᠢᢉᠢ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AKAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢉ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AKAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢉᠢᢉᠢᢉ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANGAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢊ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANGAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢊ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANGAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢊ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANGAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢊᢇ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᢊᢊᢊ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANGAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢊ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANGAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢊᢊᢊ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANGAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢊ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANGAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢊᢊ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATSAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢋ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATSAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢋ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATSAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢋ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATSAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢋᢋ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATSAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢋ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATSAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢋᢋᢋ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATSAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢋ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATSAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢋᢋ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢌ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢌ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢌ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢌᢌ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢌ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢌᢌᢌ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢌ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢌᢌ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTHAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢍ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTHAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢍ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢍ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTHAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢍᢍ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢍ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTHAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢍᢍᢍ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢍ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATTHAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢍᢍ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADDAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢎ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADDAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢎ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADDAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢎ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADDAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢎᢎ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADDAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢎ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADDAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢎᢎᢎ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADDAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢎ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADDAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢎᢎ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANNAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢏ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANNAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢏ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANNAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢏ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANNAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢏᢏ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANNAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢏ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANNAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢏᢏᢏ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANNAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢏ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANNAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢏᢏ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢐ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢐ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢐ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢐᢐ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢐ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢐᢐᢐ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢐ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ATAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢐᢐ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢑ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢑ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢑ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢑᢑ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢑ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢑᢑᢑ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢑ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢑᢑ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢒ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢒ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒᠠ", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᢒᢑᠠ᠋", "flag": {} }
+            ]
+        },
+        {
+            "ruleindex": "APAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢒ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢒᠠᢒᠠᢒᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢒ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢒᢒ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APHAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢓ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APHAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢓ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢓ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APHAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢓᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢓ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APHAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢓᠠᢓᠠᢓᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢓ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "APHAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢓᢓᢓ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ASSAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "ᢔ", "word": "ᢔ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ASSAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "ᢔ", "word": "ᢔ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ASSAS10",
+            "rulewords": [
+                { "state": "1", "shape": "ᢔ", "word": "ᢔ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ASSAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢔᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ASSAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "ᢔ", "word": "᠊ᢔ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ASSAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢔᠠᢔᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ASSAM10",
+            "rulewords": [
+                { "state": "1", "shape": "ᢔ", "word": "᠊ᢔ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ASSAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢔᢔ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZHAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "ᢕ", "word": "ᢕ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZHAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "ᢕ", "word": "ᢕ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "ᢕ", "word": "ᢕ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZHAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢕᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "ᢕ", "word": "᠊ᢕ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZHAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢕᢕᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "ᢕ", "word": "᠊ᢕ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZHAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢕᢕ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢖ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢖ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢖ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢖᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢖ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢖᢖᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢖ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AZAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢖᢖ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAHD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢗ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAHD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢗ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAHS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢗ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAHS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢗᢗᢗᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAHZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢗ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAHZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢗᢗᢗᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAHM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢗ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AAHM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢗᢗᢗ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHUD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢦ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHUD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢦ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHUS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢦ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHUS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢦᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHUZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢦ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHUZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡛᢦᢇ᠋", "flag": {} },
+                { "state": "1", "shape": "", "word": "ᢌᢦᢇ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHUM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢦ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHUM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢦᢦ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHYD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢧ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHYD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢧ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHYS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢧ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHYS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢧᢧ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHYZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢧ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHYZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢧᢧᢧ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHYM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢧ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AHYM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢧᢧ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AJAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡓ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AJAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡓ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AJAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡓ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AJAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡓᡓᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AJAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡓ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AJAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡓᡓᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AJAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡓ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AJAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡓᡓ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AGAAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡘ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AGAAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡘ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AGAAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡘ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AGAAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡘᠠ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AGAAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡘ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AGAAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡘᠠᡘᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AGAAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡘ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "AGAAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡘᠠᡘ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANIAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡛ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANIAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡛ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANIAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡛ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANIAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡛᡛᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANIAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡛ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANIAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡛᡛᡛᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANIAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡛ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ANIAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡛᡛ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADZAD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡜ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADZAD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡜ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADZAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡜ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADZAS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡜᡜᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADZAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡜ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADZAZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡜᡜᠠ᠋", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADZAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡜ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADZAM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᡜᡜ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAGD10",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢩ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAGD11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢩ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAGS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢩ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAGS11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢩᢒᢇ᠍", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAGZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢩ᠊", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAGZ11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢊᢒᢩᢇ᠍", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAGM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢩ", "flag": {} }
+
+            ]
+        },
+        {
+            "ruleindex": "ADAGM11",
+            "rulewords": [
+
+                { "state": "1", "shape": "", "word": "ᢊᢒᢩ", "flag": {} }
+
+            ]
+        }
+    ]
+};
