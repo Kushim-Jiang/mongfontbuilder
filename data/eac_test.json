@@ -1,7 +1,4 @@
-//定义变量
-if (typeof (all_char_rulewords) === "undefined") { var all_char_rulewords = {}; };
-//初始化数据
-all_char_rulewords = {
+{
     "updateversion": "2021.11.28.01",
     "rulelist": [
         {
@@ -2545,7 +2542,7 @@ all_char_rulewords = {
                 { "state": "1", "shape": "", "word": "ᠲᠧᠬᠨᠢᠭ", "flag": {} },
                 { "state": "1", "shape": "", "word": "ᠲᠧᠬᠨᠢᠭᠴᠦᠦᠯ", "flag": {} }
             ]
-        }, 
+        },
         {
             "ruleindex": "MHZ33",
             "rulewords": [
@@ -8672,4 +8669,4 @@ all_char_rulewords = {
             ]
         }
     ]
-};
+}
