@@ -17,5 +17,9 @@
   "isort.args": [
     "--profile",
     "black"
-  ]
+  ],
+  "[yaml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
 }
