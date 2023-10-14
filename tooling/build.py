@@ -1,7 +1,9 @@
 import argparse
+import re
+from dataclasses import dataclass
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing import cast
+from typing import Literal, cast
 
 import yaml
 from fontmake.font_project import FontProject
@@ -13,26 +15,34 @@ from glyphsLib.builder import UFOBuilder
 from glyphsLib.parser import load
 from ufoLib2.objects import Component, Font, Glyph, Info
 
+parser = argparse.ArgumentParser()
+parser.add_argument("font", type=Path)
+parser.add_argument(
+    "--glyph-name-mapping",
+    type=Path,
+    help="A maping from source glyph names to UTN glyph names, in YAML format.",
+)
+parser.add_argument("--family-name")
+parser.add_argument("--output-dir", type=Path)
+parser.add_argument("--debug", action="store_true")
+
 tooling_dir = Path(__file__).parent
 repo_dir = tooling_dir / ".."
-
 data_dir = repo_dir / "data"
+glyphs_dir = data_dir / "glyphs"
 otl_dir = tooling_dir / "otl"
-glyph_dir = data_dir / "glyphs.yaml"
-nominal_dir = data_dir / "nominal.yaml"
+
+
+LEFT_SPACING = 40
+RIGHT_SPACING = 100
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("font", type=Path)
-    parser.add_argument("--glyph-name-mapping", type=Path)
-    parser.add_argument("--family-name")
-    parser.add_argument("--output-dir", type=Path)
-    parser.add_argument("--debug", type=bool, default=False)
-
     args = parser.parse_args()
     font_path: Path = args.font
     glyph_name_mapping_path: Path | None = args.glyph_name_mapping
+    family_name: str | None = args.family_name
+    output_dir: Path | None = args.output_dir
 
     assert font_path.suffix in {".ufo", ".glyphs", ".glyphspackage"}
     if font_path.suffix == ".ufo":
@@ -41,37 +51,58 @@ def main():
         builder = UFOBuilder(load(font_path))
         (ufo,) = builder.masters
 
-    glyph_mapping: dict[str, str | None] = {}
+    glyph_name_mapping: dict[str, str] = {}
     if glyph_name_mapping_path:
         with glyph_name_mapping_path.open() as f:
-            glyph_mapping = yaml.safe_load(f)
+            data: dict[str, str | None | Literal[False]] = yaml.safe_load(f)
+            for source_name, utn_name in data.items():
+                glyph_name_mapping[source_name] = utn_name or source_name
 
-    construct_glyph_set(ufo, glyph_mapping)
+    construct_glyph_set(ufo, glyph_name_mapping)
 
-    # ufo.save(Path.cwd() / "res.ufo")
     build(
         ufo=ufo,
-        family_name=args.family_name,
-        output_dir=args.output_dir,
+        family_name=family_name,
+        output_dir=output_dir,
         debug=args.debug,
     )
 
 
+@dataclass
+class UTNGlyphName(str):
+    uni_name: str | None
+    written_units: list[str]
+    joining_position: str | None  # isol | init | medi | fina
+
+    def __init__(self, name: str):
+        parts = name.split(".")
+        if len(parts) == 1:
+            self.uni_name, self.written_units, self.joining_position = parts[0], [], None
+            return
+
+        if len(parts) == 3:
+            self.uni_name = parts[0]
+            written_units_part, self.joining_position = parts[1:]
+        else:  # 2
+            self.uni_name = None
+            written_units_part, self.joining_position = parts
+        self.written_units = re.findall("[A-Z][a-z0-9]*", written_units_part)
+
+    def code_point(self) -> int | None:
+        if self.uni_name:
+            return int(self.uni_name.removeprefix("uni"), 16)
+        else:
+            return None
+
+    def code_point_agnostic(self) -> str:
+        return ".".join(i for i in ["".join(self.written_units), self.joining_position] if i)
+
+
 def get_units(glyph_name: str | None):
-    if glyph_name is None:
+    if not glyph_name or "._" in glyph_name:
         return None
-    if "_" in glyph_name:
-        return None
-    glyph_names = glyph_name.split(".")
-    if len(glyph_names) == 2:
-        return ".".join(glyph_names)
-    if len(glyph_names) == 3:
-        return ".".join(glyph_names[1:])
-    return None
-
-
-def get_cp(glyph_name: str):
-    return int(glyph_name[3:], 16)
+    else:
+        return UTNGlyphName(glyph_name).code_point_agnostic()
 
 
 def quote_glyph(old_glyphs: list[Glyph | int], new_glyph: Glyph):
@@ -84,61 +115,79 @@ def quote_glyph(old_glyphs: list[Glyph | int], new_glyph: Glyph):
             new_glyph.width += glyph.width
 
 
-def construct_glyph_set(ufo: Font, glyph_mapping: dict[str, str | None]):
-    # add __
+def construct_glyph_set(ufo: Font, glyph_name_mapping: dict[str, str]):
+    # FIXME: currently any glyphs not specified in the expected glyph set are skipped, eg, digits and punctuation marks.
+
+    # prefix existing glyph names with "__", to skip them and isolate them from constructed glyph names
     for glyph_name in [*ufo.keys()]:
         for component in ufo[glyph_name].components:
             component.baseGlyph = "__" + component.baseGlyph
         ufo.renameGlyph(glyph_name, "__" + glyph_name)
         ufo["__" + glyph_name].unicode = None
-    glyph_mapping = {"__" + k: v for k, v in glyph_mapping.items()}
-    ufo.lib["public.skipExportGlyphs"] = [glyph.name for glyph in ufo]
+    ufo.lib["public.skipExportGlyphs"] = sorted(ufo.keys())
+
+    glyph_name_mapping = {"__" + k: v for k, v in glyph_name_mapping.items()}
 
     glyph = ufo.newGlyph(".notdef")
     quote_glyph([ufo["__.notdef"]], glyph)
-    ufo.glyphOrder = [".notdef"]
+    glyph_order = [".notdef"]
 
-    with glyph_dir.open() as f:
-        expected_glyph_names: dict[str, dict[str, None]] = yaml.safe_load(f)
+    # Multiple source names may map to the same UTN name:
+    utn_name_to_source_names = dict[str, list[str]]()
+    for source_name, utn_name in glyph_name_mapping.items():
+        utn_name_to_source_names.setdefault(utn_name, []).append(source_name)
 
-    exact_mapping = {
-        expected_name: [
-            glyph_name
-            for glyph_name in glyph_mapping
-            if glyph_mapping.get(glyph_name) == expected_name
-        ]
-        for expected_name in {*glyph_mapping.values()}
-    }
-    unit_mapping = {
-        expected_name: [
-            mapped_glyph
-            for glyph_name in exact_mapping
-            for mapped_glyph in exact_mapping.get(glyph_name, [])
-            if get_units(glyph_name) == expected_name
-        ]
-        for expected_name in set(get_units(glyph_name) for glyph_name in exact_mapping) - {None}
-    }
+    # Multiple UTN names may share the same code-point-agnostic name:
+    cp_agnostic_name_to_source_names = dict[str, list[str]]()
+    for utn_name, source_names in utn_name_to_source_names.items():
+        if "._" in utn_name:
+            continue
+        cp_agnostic_name = UTNGlyphName(utn_name).code_point_agnostic()
+        cp_agnostic_name_to_source_names.setdefault(cp_agnostic_name, []).extend(source_names)
 
-    # parse presentation glyphs
-    for glyph_name in expected_glyph_names.get("presentation", {}):
+    # Load data files:
+
+    with (data_dir / "representative-glyphs.yaml").open() as f:
+        nominal_mapping: dict[str, str] = yaml.safe_load(f)
+
+    expected_glyph_names = dict[str, dict[str, None]]()
+    for path in glyphs_dir.glob("*.yaml"):
+        with path.open() as f:
+            expected_glyph_names[path.stem] = yaml.safe_load(f)
+
+    # nominal glyphs
+    for glyph_name, written_units in nominal_mapping.items():
         glyph = ufo.newGlyph(glyph_name)
-        exact_glyphs = exact_mapping.get(glyph_name, [])
-        unit_glyphs = unit_mapping.get(get_units(glyph_name), [])
-        if len(exact_glyphs):
-            ref_glyph = ufo[exact_glyphs[0]]
+        cmap_glyphs = [
+            glyph for glyph in ufo if glyph.unicode == UTNGlyphName(glyph_name).code_point()
+        ]
+        if len(cmap_glyphs):
+            ref_glyph = cmap_glyphs[0]
             quote_glyph([ref_glyph], glyph)
-        elif len(unit_glyphs):
-            ref_glyph = ufo[unit_glyphs[0]]
+        else:
+            quote_glyph(
+                [LEFT_SPACING, ufo[glyph_name + "." + written_units], RIGHT_SPACING],
+                glyph,
+            )
+        glyph.unicode = UTNGlyphName(glyph_name).code_point()
+        glyph_order.append(glyph_name)
+
+    # variant glyphs
+    for glyph_name in expected_glyph_names["variants"]:
+        glyph = ufo.newGlyph(glyph_name)
+        if source_names := utn_name_to_source_names.get(glyph_name, []):
+            ref_glyph = ufo[source_names[0]]
+            quote_glyph([ref_glyph], glyph)
+        elif source_names := cp_agnostic_name_to_source_names.get(get_units(glyph_name) or "", []):
+            ref_glyph = ufo[source_names[0]]
             quote_glyph([ref_glyph], glyph)
         elif "_" not in glyph_name:
             print(f"we don't have {glyph_name}")
         glyph.unicode = None
-        ufo.glyphOrder += [glyph_name]
+        glyph_order.append(glyph_name)
 
-    LEFT_SPACING = 40
-    RIGHT_SPACING = 100
-    for glyph_name in expected_glyph_names.get("presentation", {}):
-        if "_" in glyph_name:
+    for glyph_name in expected_glyph_names["variants"]:  # depends on the loop above
+        if "._" in glyph_name:
             if glyph_name.endswith("isol"):
                 quote_glyph([LEFT_SPACING, ufo[glyph_name[:-6]], RIGHT_SPACING], ufo[glyph_name])
             elif glyph_name.endswith("init"):
@@ -146,41 +195,22 @@ def construct_glyph_set(ufo: Font, glyph_mapping: dict[str, str | None]):
             elif glyph_name.endswith("fina"):
                 quote_glyph([ufo[glyph_name[:-6]], RIGHT_SPACING], ufo[glyph_name])
 
-    # parse nominal glyphs
-    with nominal_dir.open() as f:
-        nominal_mapping = yaml.safe_load(f)
-    for glyph_name in expected_glyph_names.get("nominal", {}):
+    # ligatures and format controls
+    for glyph_name in expected_glyph_names["ligatures"] | expected_glyph_names["format-controls"]:
         glyph = ufo.newGlyph(glyph_name)
-        cmap_glyphs = [glyph for glyph in ufo if glyph.unicode == get_cp(glyph_name)]
-        if len(cmap_glyphs):
-            ref_glyph = cmap_glyphs[0]
-            quote_glyph([ref_glyph], glyph)
-        else:
-            quote_glyph(
-                [LEFT_SPACING, ufo[glyph_name + "." + nominal_mapping[glyph_name]], RIGHT_SPACING],
-                glyph,
-            )
-        glyph.unicode = get_cp(glyph_name)
-        ufo.glyphOrder += [glyph_name]
-
-    # parse ligature and control glyphs
-    ligature_glyphs: dict[str, None] = expected_glyph_names.get("ligature", {})
-    control_glyphs: dict[str, None] = expected_glyph_names.get("control", {})
-
-    for glyph_name in [*ligature_glyphs, *control_glyphs]:
-        glyph = ufo.newGlyph(glyph_name)
-        exact_glyphs = exact_mapping.get(glyph_name, [])
-        if len(exact_glyphs):
-            ref_glyph = ufo[exact_glyphs[0]]
+        if source_names := utn_name_to_source_names.get(glyph_name, []):
+            ref_glyph = ufo[source_names[0]]
             quote_glyph([ref_glyph], glyph)
         else:
             print(f"we don't have {glyph_name}")
-        ufo.glyphOrder += [glyph_name]
+        glyph_order.append(glyph_name)
 
-    # parse empty glyphs
-    for glyph_name in expected_glyph_names.get("empty", {}):
+    # empty glyphs
+    for glyph_name in expected_glyph_names["empty"]:
         glyph = ufo.newGlyph(glyph_name)
-        ufo.glyphOrder += [glyph_name]
+        glyph_order.append(glyph_name)
+
+    ufo.glyphOrder = glyph_order
 
 
 def build(
