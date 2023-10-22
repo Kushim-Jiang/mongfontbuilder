@@ -155,23 +155,6 @@ def construct_glyph_set(ufo: Font, glyph_name_mapping: dict[str, str]):
         with path.open() as f:
             expected_glyph_names[path.stem] = yaml.safe_load(f)
 
-    # nominal glyphs
-    for glyph_name, written_units in nominal_mapping.items():
-        glyph = ufo.newGlyph(glyph_name)
-        cmap_glyphs = [
-            glyph for glyph in ufo if glyph.unicode == UTNGlyphName(glyph_name).code_point()
-        ]
-        if len(cmap_glyphs):
-            ref_glyph = cmap_glyphs[0]
-            quote_glyph([ref_glyph], glyph)
-        else:
-            quote_glyph(
-                [LEFT_SPACING, ufo[glyph_name + "." + written_units], RIGHT_SPACING],
-                glyph,
-            )
-        glyph.unicode = UTNGlyphName(glyph_name).code_point()
-        glyph_order.append(glyph_name)
-
     # variant glyphs
     for glyph_name in expected_glyph_names["variants"]:
         glyph = ufo.newGlyph(glyph_name)
@@ -194,6 +177,23 @@ def construct_glyph_set(ufo: Font, glyph_name_mapping: dict[str, str]):
                 quote_glyph([LEFT_SPACING, ufo[glyph_name[:-6]]], ufo[glyph_name])
             elif glyph_name.endswith("fina"):
                 quote_glyph([ufo[glyph_name[:-6]], RIGHT_SPACING], ufo[glyph_name])
+
+    # nominal glyphs
+    for glyph_name, written_units in nominal_mapping.items():
+        glyph = ufo.newGlyph(glyph_name)
+        cmap_glyphs = [
+            glyph for glyph in ufo if glyph.unicode == UTNGlyphName(glyph_name).code_point()
+        ]
+        if len(cmap_glyphs):
+            ref_glyph = cmap_glyphs[0]
+            quote_glyph([ref_glyph], glyph)
+        else:
+            quote_glyph(
+                [LEFT_SPACING, ufo[glyph_name + "." + written_units], RIGHT_SPACING],
+                glyph,
+            )
+        glyph.unicode = UTNGlyphName(glyph_name).code_point()
+        glyph_order.append(glyph_name)
 
     # ligatures and format controls
     for glyph_name in expected_glyph_names["ligatures"] | expected_glyph_names["format-controls"]:
