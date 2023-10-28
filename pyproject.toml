@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "kushim-mongolian-utn"
-version = "0.0.0"
+name = "mongFontBuilder"
+version = "0.0.1"
 description = ""
 authors = [
     "Kushim Jiang <kushim_jiang@outlook.com>",
