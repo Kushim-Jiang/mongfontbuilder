@@ -1,15 +1,26 @@
 import re
+from collections.abc import Iterable
 from dataclasses import dataclass
 from importlib import resources
 
 import yaml
+from fontTools.feaLib.ast import FeatureFile
 from fontTools.feaLib.parser import Parser
 from fontTools.misc.transform import Identity
 from ufoLib2.objects import Component, Font, Glyph
 
 _files = resources.files(__package__)
 
-featureFile = Parser(featurefile=_files / "otl" / "main.fea").parse()
+
+def makeFeatureFile(availableGlyphs: Iterable[str] = []) -> FeatureFile:
+    """
+    Specify `availableGlyphs` to validate the glyph set against the feature file’s requirement.
+    """
+
+    return Parser(
+        featurefile=_files / "otl" / "main.fea",
+        glyphNames=availableGlyphs,
+    ).parse()
 
 
 @dataclass

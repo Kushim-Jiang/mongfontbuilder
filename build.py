@@ -11,7 +11,7 @@ from glyphsLib.builder import UFOBuilder
 from glyphsLib.parser import load
 from ufoLib2.objects import Font, Info
 
-from mongFontBuilder import constructGlyphSet, featureFile
+from mongFontBuilder import constructGlyphSet, makeFeatureFile
 
 parser = argparse.ArgumentParser()
 parser.add_argument("font", type=Path)
@@ -75,7 +75,7 @@ def build(
         ufo.info = Info()  # drop all existing info data
     ufo.info.familyName = family_name
 
-    ufo.features.text = featureFile.asFea()
+    ufo.features.text = makeFeatureFile(availableGlyphs=ufo.keys()).asFea()
 
     with TemporaryDirectory() as temp_dir:
         FontProject().run_from_ufos(
