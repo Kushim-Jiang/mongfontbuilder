@@ -8,7 +8,7 @@ authors = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 fontmake = "^3.7.1"
 PyYaml = "^6.0.1"
 
