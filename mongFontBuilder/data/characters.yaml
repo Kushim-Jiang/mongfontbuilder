@@ -1,0 +1,354 @@
+0x1820: # ᠠ MONGOLIAN LETTER A
+  variants:
+    isol:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+    init:
+      fvs1: 2
+      fvs2: 1
+    medi:
+      fvs1: 2
+    fina:
+      fvs1: 2
+      fvs2: 1
+
+0x1821: # ᠡ MONGOLIAN LETTER E
+  variants:
+    isol:
+      fvs1: 2
+      fvs2: 1
+    init:
+      fvs1: 2
+    medi:
+    fina:
+      fvs1: 2
+      fvs2: 1
+
+0x1822: # ᠢ MONGOLIAN LETTER I
+  variants:
+    isol:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+    init:
+      fvs1: 2
+      fvs2: 1
+    medi:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+    fina:
+
+0x1823: # ᠣ MONGOLIAN LETTER O
+  variants:
+    isol:
+    init:
+    medi:
+      fvs1: 2
+    fina:
+      fvs1: 2
+      fvs2: 1
+
+0x1824: # ᠤ MONGOLIAN LETTER U
+  variants:
+    isol:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+    init:
+      fvs1: 2
+      fvs2: 1
+    medi:
+      fvs1: 2
+    fina:
+      fvs1: 2
+      fvs2: 1
+
+0x1825: # ᠥ MONGOLIAN LETTER OE
+  variants:
+    isol:
+      fvs1: 2
+    init:
+    medi:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+    fina:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+
+0x1826: # ᠦ MONGOLIAN LETTER UE
+  variants:
+    isol:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 4
+    init:
+      fvs1: 2
+      fvs2: 1
+    medi:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+    fina:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+
+0x1827: # ᠧ MONGOLIAN LETTER EE
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x1828: # ᠨ MONGOLIAN LETTER NA
+  variants:
+    isol:
+      fvs1: 2
+    init:
+      fvs1: 2
+    medi:
+      fvs1: 2
+      fvs2: 1
+    fina:
+      fvs1: 2
+      fvs2: 1
+
+0x1829: # ᠩ MONGOLIAN LETTER ANG
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x182A: # ᠪ MONGOLIAN LETTER BA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+      fvs1: 2
+
+0x182B: # ᠫ MONGOLIAN LETTER PA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x182C: # ᠬ MONGOLIAN LETTER QA
+  variants:
+    isol:
+      fvs1: 2
+      fvs2: 3
+      fvs4: 4
+    init:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+      fvs4: 4
+    medi:
+      default: 3
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+      fvs4: 4
+    fina:
+      fvs1: 2
+
+0x182D: # ᠭ MONGOLIAN LETTER GA
+  variants:
+    isol:
+      fvs1: 2
+      fvs2: 3
+      fvs4: 4
+    init:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+      fvs4: 4
+    medi:
+      default: 3
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+      fvs4: 4
+    fina:
+      default: 2
+      fvs1: 1
+      fvs2: 2
+      fvs3: 3
+
+0x182E: # ᠮ MONGOLIAN LETTER MA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x182F: # ᠯ MONGOLIAN LETTER LA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x1830: # ᠰ MONGOLIAN LETTER SA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+      fvs1: 2
+
+0x1831: # ᠱ MONGOLIAN LETTER SHA
+  variants:
+    isol:
+      fvs1: 2
+    init:
+      fvs1: 2
+      fvs2: 1
+    medi:
+      fvs1: 2
+      fvs2: 1
+    fina:
+
+0x1832: # ᠲ MONGOLIAN LETTER TA
+  variants:
+    isol:
+    init:
+    medi:
+      fvs1: 2
+      fvs2: 1
+    fina:
+
+0x1833: # ᠳ MONGOLIAN LETTER DA
+  variants:
+    isol:
+      fvs1: 2
+    init:
+      fvs1: 2
+      fvs2: 1
+    medi:
+      fvs1: 2
+      fvs2: 1
+    fina:
+      fvs1: 2
+
+0x1834: # ᠴ MONGOLIAN LETTER CHA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x1835: # ᠵ MONGOLIAN LETTER JA
+  variants:
+    isol:
+      fvs1: 2
+    init:
+    medi:
+    fina:
+      fvs1: 2
+
+0x1836: # ᠶ MONGOLIAN LETTER YA
+  variants:
+    isol:
+      fvs1: 2
+    init:
+      fvs1: 2
+      fvs2: 1
+    medi:
+      fvs1: 2
+      fvs2: 3
+      fvs3: 1
+    fina:
+
+0x1837: # ᠷ MONGOLIAN LETTER RA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x1838: # ᠸ MONGOLIAN LETTER WA
+  variants:
+    isol:
+    init:
+    medi:
+      fvs1: 2
+    fina:
+      fvs1: 2
+
+0x1839: # ᠹ MONGOLIAN LETTER FA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x183A: # ᠺ MONGOLIAN LETTER KA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x183B: # ᠻ MONGOLIAN LETTER KHA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x183C: # ᠼ MONGOLIAN LETTER TSA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x183D: # ᠽ MONGOLIAN LETTER ZA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x183E: # ᠾ MONGOLIAN LETTER HAA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x183F: # ᠿ MONGOLIAN LETTER ZRA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x1840: # ᡀ MONGOLIAN LETTER LHA
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x1841: # ᡁ MONGOLIAN LETTER ZHI
+  variants:
+    isol:
+    init:
+    medi:
+    fina:
+
+0x1842: # ᡂ MONGOLIAN LETTER CHI
+  variants:
+    isol:
+    init:
+    medi:
+    fina:

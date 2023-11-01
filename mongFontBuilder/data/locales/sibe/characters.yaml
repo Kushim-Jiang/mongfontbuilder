@@ -1,133 +1,170 @@
-- cp: 0x1820 # ᠠ MONGOLIAN LETTER A
-  id: "a"
-  presentation_forms:
+0x1820: # ᠠ MONGOLIAN LETTER A
+  id: .a
+  variants:
     isol:
       - written_units: [.A, .A]
-        fvs: 3
+        gb_index: [GB/T 36641-2018, 0x1820, sibe a isolated form]
+        eac_index: SAD1
     init:
       - written_units: [.A, .A]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1820, sibe a initial form]
+        eac_index: SAS1
     medi:
       - written_units: [.A]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1820, sibe a medial form]
+        eac_index: SAZ1
     fina:
       - written_units: [.A]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1820, sibe a final form]
+        eac_index: SAM1
       - written_units: [.Aa]
-        fvs: 1
+        eac_index: SAM2
 
-- cp: 0x185D # ᡝ MONGOLIAN LETTER SIBE E
-  id: "e"
-  presentation_forms:
+0x185D: # ᡝ MONGOLIAN LETTER SIBE E
+  id: .e
+  variants:
     isol:
       - written_units: [.A]
+        eac_index: SED1
     init:
       - written_units: [.A]
+        eac_index: SES1
     medi:
       - written_units: [.Ah]
-        fvs: 2
+        eac_index: SEZ1
       - written_units: [.A]
-        fvs: 1
+        eac_index: SEZ2
     fina:
       - written_units: [.Ah]
-        fvs: 4
+        eac_index: SEM1
       - written_units: [.A]
-        fvs: 1
+        eac_index: SEM2
       - written_units: [.At]
-        fvs: 2
+        eac_index: SEM3
       - written_units: [.Aa]
-        fvs: 3
+        eac_index: SEM4
 
-- cp: 0x185E # ᡞ MONGOLIAN LETTER SIBE I
-  id: "i"
-  presentation_forms:
+0x185E: # ᡞ MONGOLIAN LETTER SIBE I
+  id: .i
+  variants:
     isol:
       - written_units: [.A, .I]
-        fvs: 2
+        eac_index: SID1
       - written_units: [.I]
-        fvs: 1
     init:
       - written_units: [.A, .I]
+        eac_index: SIS1
     medi:
       - written_units: [.I]
-        fvs: 3
+        eac_index: SIZ1
       - written_units: [.A, .I]
-        fvs: 2
+        eac_index: SIZ2
     fina:
       - written_units: [.I]
-        fvs: 3
+        eac_index: SIM1
       - written_units: [.I2]
-        fvs: 1
+        eac_index: SIM2
       - written_units: [.A, .I]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1834, sibe cha second final form]
+        eac_index: SIM3
 
-- cp: 0x185F # ᡟ MONGOLIAN LETTER SIBE IY
-  id: "ii"
-  transcription: "ï"
-  presentation_forms:
+0x185F: # ᡟ MONGOLIAN LETTER SIBE IY
+  id: .ii
+  transcription: .ï
+  variants:
     isol:
       - written_units: [.Ai.medi]
+        eac_index: SIYD1
     init:
       - written_units: [.Ai.medi]
+        eac_index: SIYS1
     medi:
       - written_units: [.Ai]
+        gb_index: [GB/T 36641-2018, 0x185F, sibe iy medial form]
+        eac_index: SIYZ1
     fina:
       - written_units: [.Ai]
+        gb_index: [GB/T 36641-2018, 0x185F, sibe iy final form]
+        eac_index: SIYM1
 
-- cp: 0x1823 # ᠣ MONGOLIAN LETTER O
-  id: "o"
-  presentation_forms:
+0x1823: # ᠣ MONGOLIAN LETTER O
+  id: .o
+  variants:
     isol:
       - written_units: [.A, .O]
+        gb_index: [GB/T 36641-2018, 0x1823, sibe o isolated form]
+        eac_index: SOD1
     init:
       - written_units: [.A, .O]
+        gb_index: [GB/T 36641-2018, 0x1823, sibe o initial form]
+        eac_index: SOS1
     medi:
       - written_units: [.O]
+        gb_index: [GB/T 36641-2018, 0x1823, sibe o medial form]
+        eac_index: SOZ1
     fina:
       - written_units: [.U]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1823, sibe o first final form]
+        eac_index: SOM1
       - written_units: [.O]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1823, sibe o second final form]
+        eac_index: SOM2
 
-- cp: 0x1860 # ᡠ MONGOLIAN LETTER SIBE UE
-  id: "u"
-  presentation_forms:
+0x1860: # ᡠ MONGOLIAN LETTER SIBE UE
+  id: .u
+  variants:
     isol:
       - written_units: [.A, .Oh]
+        gb_index: [GB/T 36641-2018, 0x1860, sibe ue isolated form]
+        eac_index: SUED1
     init:
       - written_units: [.A, .Oh]
+        gb_index: [GB/T 36641-2018, 0x1860, sibe ue initial form]
+        eac_index: SUES1
     medi:
       - written_units: [.Oh]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1860, sibe ue first medial form]
+        eac_index: SUEZ1
       - written_units: [.O]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1860, sibe ue second medial form]
+        eac_index: SUEZ2
     fina:
       - written_units: [.Uh]
-        fvs: 4
+        gb_index: [GB/T 36641-2018, 0x1860, sibe ue first final form]
+        eac_index: SUEM1
       - written_units: [.U]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1860, sibe ue second final form]
+        eac_index: SUEM2
       - written_units: [.Oh]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1860, sibe ue third final form]
+        eac_index: SUEM3
       - written_units: [.O]
-        fvs: 3
+        gb_index: [GB/T 36641-2018, 0x1860, sibe ue fourth final form]
+        eac_index: SUEM4
 
-- cp: 0x1861 # ᡡ MONGOLIAN LETTER SIBE U
-  id: "ue"
-  transcription: "ü"
-  presentation_forms:
+0x1861: # ᡡ MONGOLIAN LETTER SIBE U
+  id: .ue
+  transcription: .ü
+  variants:
     isol:
       - written_units: [.A, .Ue]
+        eac_index: SUD1
     init:
       - written_units: [.A, .O, .I]
+        eac_index: SUS1
     medi:
       - written_units: [.O, .I]
+        gb_index: [GB/T 36641-2018, 0x1861, sibe u medial form]
+        eac_index: SUZ1
     fina:
       - written_units: [.Ue]
+        gb_index: [GB/T 36641-2018, 0x1861, sibe u final form]
+        eac_index: SUM1
 
-- cp: 0x1807 # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
-  id: "sbm"
-  transcription: "Ɂ"
-  presentation_forms:
+0x1807: # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
+  id: .sbm
+  transcription: .Ɂ
+  variants:
     isol:
       - written_units: [.A.medi]
     init:
@@ -137,398 +174,551 @@
     fina:
       - written_units: [.A.medi]
 
-- cp: 0x1828 # ᠨ MONGOLIAN LETTER NA
-  id: "n"
-  presentation_forms:
+0x1828: # ᠨ MONGOLIAN LETTER NA
+  id: .n
+  variants:
     isol:
       - written_units: [.N.init]
+        fabricated: y
+        eac_index: SNAD1
     init:
       - written_units: [.N]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1828, sibe na initial form]
+        eac_index: SNAS1
     medi:
       - written_units: [.A]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1828, sibe na first medial form]
+        eac_index: SNAZ1
       - written_units: [.N]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1828, sibe na second medial form]
+        eac_index: SNAZ2
     fina:
       - written_units: [.A]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1828, sibe na first final form]
+        eac_index: SNAM1
       - written_units: [.N2]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1828, sibe na second final form]
+        eac_index: SNAM2
 
-- cp: 0x1862 # ᡢ MONGOLIAN LETTER SIBE ANG
-  id: "ng"
-  transcription: "ŋ"
-  presentation_forms:
+0x1862: # ᡢ MONGOLIAN LETTER SIBE ANG
+  id: .ng
+  transcription: .ŋ
+  variants:
     isol:
       - written_units: [.A.medi, .G.medi]
+        eac_index: SANGD1
     init:
       - written_units: [.A.medi, .G.medi]
+        eac_index: SANGS1
     medi:
       - written_units: [.A, .G]
+        gb_index: [GB/T 36641-2018, 0x1862, sibe ang medial form]
+        eac_index: SANGZ1
     fina:
       - written_units: [.A, .G3]
+        gb_index: [GB/T 36641-2018, 0x1862, sibe ang final form]
+        eac_index: SANGM1
 
-- cp: 0x1863 # ᡣ MONGOLIAN LETTER SIBE KA
-  id: "k"
-  presentation_forms:
+0x1863: # ᡣ MONGOLIAN LETTER SIBE KA
+  id: .k
+  variants:
     isol:
       - written_units: [.H.init]
+        eac_index: SKAD1
       - written_units: [.G.init]
-        fvs: 1
+        eac_index: SKAD2
       - written_units: [.Gx.init]
-        fvs: 2
+        eac_index: SKAD3
     init:
       - written_units: [.H]
-        fvs: 3
+        eac_index: SKAS1
       - written_units: [.G]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1863, sibe ka initial form]
+        eac_index: SKAS2
       - written_units: [.Gx]
-        fvs: 2
+        eac_index: SKAS3
     medi:
       - written_units: [.H]
-        fvs: 3
+        eac_index: SKAZ1
       - written_units: [.Nx]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1863, sibe ka medial form]
+        eac_index: SKAZ2
       - written_units: [.G]
-        fvs: 2
+        eac_index: SKAZ3
       - written_units: [.Gx]
-        fvs: 4
+        eac_index: SKAZ4
     fina:
       - written_units: [.Nx]
+        gb_index: [GB/T 36641-2018, 0x1863, sibe ka final form]
+        eac_index: SKAM1
       - written_units: [.G4]
-        fvs: 1
+        eac_index: SKAM2
       - written_units: [.Gx]
-        fvs: 2
+        eac_index: SKAM3
 
-- cp: 0x1864 # ᡤ MONGOLIAN LETTER SIBE GA
-  id: "g"
-  presentation_forms:
+0x1864: # ᡤ MONGOLIAN LETTER SIBE GA
+  id: .g
+  variants:
     isol:
       - written_units: [.Hh.init]
+        eac_index: SGAD1
       - written_units: [.Gh.init]
-        fvs: 1
+        eac_index: SGAD2
     init:
       - written_units: [.Hh]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1864, sibe ga initial form]
+        eac_index: SGAS1
       - written_units: [.Gh]
-        fvs: 1
+        eac_index: SGAS2
     medi:
       - written_units: [.Hh]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1864, sibe ga medial form]
+        eac_index: SGAZ1
       - written_units: [.Gh]
-        fvs: 1
+        eac_index: SGAZ2
     fina:
       - written_units: [.Hh.medi]
+        eac_index: SGAM1
 
-- cp: 0x1865 # ᡥ MONGOLIAN LETTER SIBE HA
-  id: "h"
-  presentation_forms:
+0x1865: # ᡥ MONGOLIAN LETTER SIBE HA
+  id: .h
+  variants:
     isol:
       - written_units: [.Hc.init]
+        eac_index: SHAD1
       - written_units: [.Gc.init]
-        fvs: 1
+        eac_index: SHAD2
     init:
       - written_units: [.Hc]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1865, sibe ha initial form]
+        eac_index: SHAS1
       - written_units: [.Gc]
-        fvs: 1
+        eac_index: SHAS2
     medi:
       - written_units: [.Hc]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1865, sibe ha medial form]
+        eac_index: SHAZ1
       - written_units: [.Gc]
-        fvs: 1
+        eac_index: SHAZ2
     fina:
       - written_units: [.Hc.medi]
+        eac_index: SHAM1
 
-- cp: 0x182A # ᠪ MONGOLIAN LETTER BA
-  id: "b"
-  presentation_forms:
+0x182A: # ᠪ MONGOLIAN LETTER BA
+  id: .b
+  variants:
     isol:
       - written_units: [.B.init]
+        eac_index: SBAD1
     init:
       - written_units: [.B]
+        gb_index: [GB/T 36641-2018, 0x182A, sibe ba initial form]
+        eac_index: SBAS1
     medi:
       - written_units: [.B]
+        gb_index: [GB/T 36641-2018, 0x182A, sibe ba medial form]
+        eac_index: SBAZ1
     fina:
       - written_units: [.B]
+        gb_index: [GB/T 36641-2018, 0x182A, sibe ba final form]
+        eac_index: SBAM1
 
-- cp: 0x1866 # ᡦ MONGOLIAN LETTER SIBE PA
-  id: "p"
-  presentation_forms:
+0x1866: # ᡦ MONGOLIAN LETTER SIBE PA
+  id: .p
+  variants:
     isol:
       - written_units: [.Pb.init]
+        eac_index: SPAD1
     init:
       - written_units: [.Pb]
+        gb_index: [GB/T 36641-2018, 0x1866, sibe pa initial form]
+        eac_index: SPAS1
     medi:
       - written_units: [.Pb]
+        gb_index: [GB/T 36641-2018, 0x1866, sibe pa medial form]
+        eac_index: SPAZ1
     fina:
       - written_units: [.Pb.medi]
+        eac_index: SPAM1
 
-- cp: 0x1830 # ᠰ MONGOLIAN LETTER SA
-  id: "s"
-  presentation_forms:
+0x1830: # ᠰ MONGOLIAN LETTER SA
+  id: .s
+  variants:
     isol:
       - written_units: [.S.init]
+        eac_index: SSAD1
     init:
       - written_units: [.S]
+        gb_index: [GB/T 36641-2018, 0x1830, sibe sa initial form]
+        eac_index: SSAS1
     medi:
       - written_units: [.S]
+        gb_index: [GB/T 36641-2018, 0x1830, sibe sa medial form]
+        eac_index: SSAZ1
     fina:
       - written_units: [.S]
+        gb_index: [GB/T 36641-2018, 0x1830, sibe sa final form]
+        eac_index: SSAM1
 
-- cp: 0x1867 # ᡧ MONGOLIAN LETTER SIBE SHA
-  id: "sh"
-  transcription: "ś"
-  presentation_forms:
+0x1867: # ᡧ MONGOLIAN LETTER SIBE SHA
+  id: .sh
+  transcription: .ś
+  variants:
     isol:
       - written_units: [.Sp.init]
+        eac_index: SSHAD1
     init:
       - written_units: [.Sp]
+        gb_index: [GB/T 36641-2018, 0x1867, sibe sha initial form]
+        eac_index: SSHAS1
     medi:
       - written_units: [.Sp]
+        gb_index: [GB/T 36641-2018, 0x1867, sibe sha medial form]
+        eac_index: SSHAZ1
     fina:
       - written_units: [.Sp]
+        eac_index: SSHAM1
 
-- cp: 0x1868 # ᡨ MONGOLIAN LETTER SIBE TA
-  id: "t"
-  presentation_forms:
+0x1868: # ᡨ MONGOLIAN LETTER SIBE TA
+  id: .t
+  variants:
     isol:
       - written_units: [.Tb.init]
+        eac_index: STAD1
       - written_units: [.T.init]
-        fvs: 1
+        eac_index: STAD2
     init:
       - written_units: [.Tb]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1868, sibe ta first initial form]
+        eac_index: STAS1
       - written_units: [.T]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1868, sibe ta second initial form]
+        eac_index: STAS2
     medi:
       - written_units: [.Db]
-        fvs: 3
+        gb_index: [GB/T 36641-2018, 0x1868, sibe ta first medial form]
+        eac_index: STAZ1
       - written_units: [.D]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1868, sibe ta second medial form]
+        eac_index: STAZ2
       - written_units: [.Dd]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1868, sibe ta third medial form]
+        eac_index: STAZ3
     fina:
       - written_units: [.Dd]
+        gb_index: [GB/T 36641-2018, 0x1868, sibe ta first final form]
+        eac_index: STAM1
 
-- cp: 0x1869 # ᡩ MONGOLIAN LETTER SIBE DA
-  id: "d"
-  presentation_forms:
+0x1869: # ᡩ MONGOLIAN LETTER SIBE DA
+  id: .d
+  variants:
     isol:
       - written_units: [.Th.init]
+        eac_index: SDAD1
       - written_units: [.Tt.init]
-        fvs: 1
+        eac_index: SDAD2
     init:
       - written_units: [.Th]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1869, sibe da first initial form]
+        eac_index: SDAS1
       - written_units: [.Tt]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1869, sibe da second initial form]
+        eac_index: SDAS2
     medi:
       - written_units: [.Dh]
-        fvs: 2
+        gb_index: [GB/T 36641-2018, 0x1869, sibe da first medial form]
+        eac_index: SDAZ2
       - written_units: [.Dt]
-        fvs: 1
+        gb_index: [GB/T 36641-2018, 0x1869, sibe da second medial form]
+        eac_index: SDAZ1
     fina:
       - written_units: [.Dh.medi]
 
-- cp: 0x182F # ᠯ MONGOLIAN LETTER LA
-  id: "l"
-  presentation_forms:
+0x182F: # ᠯ MONGOLIAN LETTER LA
+  id: .l
+  variants:
     isol:
       - written_units: [.L.init]
+        eac_index: SLAD1
     init:
       - written_units: [.L]
+        gb_index: [GB/T 36641-2018, 0x182F, sibe la initial form]
+        eac_index: SLAS1
     medi:
       - written_units: [.L]
+        gb_index: [GB/T 36641-2018, 0x182F, sibe la medial form]
+        eac_index: SLAZ1
     fina:
       - written_units: [.L]
+        gb_index: [GB/T 36641-2018, 0x182F, sibe la final form]
+        eac_index: SLAM1
 
-- cp: 0x182E # ᠮ MONGOLIAN LETTER MA
-  id: "m"
-  presentation_forms:
+0x182E: # ᠮ MONGOLIAN LETTER MA
+  id: .m
+  variants:
     isol:
       - written_units: [.M.init]
+        eac_index: SMAD1
     init:
       - written_units: [.M]
+        gb_index: [GB/T 36641-2018, 0x182E, sibe ma initial form]
+        eac_index: SMAS1
     medi:
       - written_units: [.M]
+        gb_index: [GB/T 36641-2018, 0x182E, sibe ma medial form]
+        eac_index: SMAZ1
     fina:
       - written_units: [.M]
+        gb_index: [GB/T 36641-2018, 0x182E, sibe ma final form]
+        eac_index: SMAM1
 
-- cp: 0x1834 # ᠴ MONGOLIAN LETTER CHA
-  id: "ch"
-  transcription: "ć"
-  presentation_forms:
+0x1834: # ᠴ MONGOLIAN LETTER CHA
+  id: .ch
+  transcription: .ć
+  variants:
     isol:
       - written_units: [.Ch.init]
+        eac_index: SCHAD1
     init:
       - written_units: [.Ch]
+        gb_index: [GB/T 36641-2018, 0x1834, sibe cha initial form]
+        eac_index: SCHAS1
     medi:
       - written_units: [.Ch]
+        gb_index: [GB/T 36641-2018, 0x1834, sibe cha medial form]
+        eac_index: SCHAZ1
     fina:
       - written_units: [.Ch.medi]
+        eac_index: SCHAM1
 
-- cp: 0x186A # ᡪ MONGOLIAN LETTER SIBE JA
-  id: "j"
-  presentation_forms:
+0x186A: # ᡪ MONGOLIAN LETTER SIBE JA
+  id: .j
+  variants:
     isol:
       - written_units: [.I.init]
+        eac_index: SJAD1
     init:
       - written_units: [.I]
+        gb_index: [GB/T 36641-2018, 0x186A, sibe ja initial form]
+        eac_index: SJAS1
     medi:
       - written_units: [.J2]
+        gb_index: [GB/T 36641-2018, 0x186A, sibe ja medial form]
+        eac_index: SJAZ1
     fina:
       - written_units: [.J2.medi]
+        eac_index: SJAM1
 
-- cp: 0x1836 # ᠶ MONGOLIAN LETTER YA
-  id: "y"
-  presentation_forms:
+0x1836: # ᠶ MONGOLIAN LETTER YA
+  id: .y
+  variants:
     isol:
       - written_units: [.Y.init]
+        eac_index: SYAD1
     init:
       - written_units: [.Y]
-        fvs: 2
+        eac_index: SYAS1
     medi:
       - written_units: [.Y]
-        fvs: 3
+        eac_index: SYAZ1
     fina:
       - written_units: [.Y.medi]
+        eac_index: SYAM1
 
-- cp: 0x1837 # ᠷ MONGOLIAN LETTER RA
-  id: "r"
-  presentation_forms:
+0x1837: # ᠷ MONGOLIAN LETTER RA
+  id: .r
+  variants:
     isol:
       - written_units: [.R.init]
+        eac_index: SRAD1
     init:
       - written_units: [.R]
+        eac_index: SRAS1
     medi:
       - written_units: [.R]
+        eac_index: SRAZ1
     fina:
       - written_units: [.R]
+        eac_index: SRAM1
 
-- cp: 0x186B # ᡫ MONGOLIAN LETTER SIBE FA
-  id: "f"
-  presentation_forms:
+0x186B: # ᡫ MONGOLIAN LETTER SIBE FA
+  id: .f
+  variants:
     isol:
       - written_units: [.V.init]
+        eac_index: SFAD1
     init:
       - written_units: [.V]
+        gb_index: [GB/T 36641-2018, 0x186B, sibe fa initial form]
+        eac_index: SFAS1
     medi:
       - written_units: [.V]
+        gb_index: [GB/T 36641-2018, 0x186B, sibe fa medial form]
+        eac_index: SFAZ1
     fina:
       - written_units: [.V.medi]
+        eac_index: SFAM1
 
-- cp: 0x1838 # ᠸ MONGOLIAN LETTER WA
-  id: "w"
-  presentation_forms:
+0x1838: # ᠸ MONGOLIAN LETTER WA
+  id: .w
+  variants:
     isol:
       - written_units: [.W.init]
+        eac_index: SFAD1
     init:
       - written_units: [.W]
+        eac_index: SFAS1
     medi:
       - written_units: [.W]
+        eac_index: SFAZ1
     fina:
       - written_units: [.W]
+        eac_index: SFAM1
 
-- cp: 0x183A # ᠺ MONGOLIAN LETTER KA
-  id: "kh"
-  transcription: "ḳ"
-  presentation_forms:
+0x183A: # ᠺ MONGOLIAN LETTER KA
+  id: .kh
+  transcription: .ḳ
+  variants:
     isol:
       - written_units: [.K2.init]
+        eac_index: SKAAD1
     init:
       - written_units: [.K2]
+        eac_index: SKAAS1
     medi:
       - written_units: [.K2]
+        eac_index: SKAAZ1
     fina:
       - written_units: [.K2.medi]
+        eac_index: SKAAM1
 
-- cp: 0x186C # ᡬ MONGOLIAN LETTER SIBE GAA
-  id: "gh"
-  transcription: "ġ"
-  presentation_forms:
+0x186C: # ᡬ MONGOLIAN LETTER SIBE GAA
+  id: .gh
+  transcription: .ġ
+  variants:
     isol:
       - written_units: [.Kh.init]
+        eac_index: SGAAD1
     init:
       - written_units: [.Kh]
+        gb_index: [GB/T 36641-2018, 0x186C, sibe gaa initial form]
+        eac_index: SGAAS1
     medi:
       - written_units: [.Kh]
+        gb_index: [GB/T 36641-2018, 0x186C, sibe gaa medial form]
+        eac_index: SGAAZ1
     fina:
       - written_units: [.Kh.medi]
+        eac_index: SGAAM1
 
-- cp: 0x186D # ᡭ MONGOLIAN LETTER SIBE HAA
-  id: "hh"
-  transcription: "ħ"
-  presentation_forms:
+0x186D: # ᡭ MONGOLIAN LETTER SIBE HAA
+  id: .hh
+  transcription: .ħ
+  variants:
     isol:
       - written_units: [.Kc.init]
+        eac_index: SHAAD1
     init:
       - written_units: [.Kc]
+        gb_index: [GB/T 36641-2018, 0x186D, sibe haa initial form]
+        eac_index: SHAAS1
     medi:
       - written_units: [.Kc]
+        gb_index: [GB/T 36641-2018, 0x186D, sibe haa medial form]
+        eac_index: SHAAZ1
     fina:
       - written_units: [.Kc.medi]
+        eac_index: SHAAM1
 
-- cp: 0x186E # ᡮ MONGOLIAN LETTER SIBE TSA
-  id: "c"
-  presentation_forms:
+0x186E: # ᡮ MONGOLIAN LETTER SIBE TSA
+  id: .c
+  variants:
     isol:
       - written_units: [.Cs.init]
+        eac_index: STSAD1
     init:
       - written_units: [.Cs]
+        gb_index: [GB/T 36641-2018, 0x186E, sibe tsa initial form]
+        eac_index: STSAS1
     medi:
       - written_units: [.Cs]
+        gb_index: [GB/T 36641-2018, 0x186E, sibe tsa medial form]
+        eac_index: STSAZ1
     fina:
       - written_units: [.Cs.medi]
+        eac_index: STSAM1
 
-- cp: 0x186F # ᡯ MONGOLIAN LETTER SIBE ZA
-  id: "z"
-  presentation_forms:
+0x186F: # ᡯ MONGOLIAN LETTER SIBE ZA
+  id: .z
+  variants:
     isol:
       - written_units: [.Zs.init]
+        eac_index: SZAD1
     init:
       - written_units: [.Zs]
+        gb_index: [GB/T 36641-2018, 0x186F, sibe za first initial form]
+        eac_index: SZAS1
     medi:
       - written_units: [.Zs]
+        gb_index: [GB/T 36641-2018, 0x186F, sibe za first medial form]
+        eac_index: SZAZ1
     fina:
       - written_units: [.Zs]
+        eac_index: SZAM1
 
-- cp: 0x1870 # ᡰ MONGOLIAN LETTER SIBE RAA
-  id: "rh"
-  transcription: "ř"
-  presentation_forms:
+0x1870: # ᡰ MONGOLIAN LETTER SIBE RAA
+  id: .rh
+  transcription: .ř
+  variants:
     isol:
       - written_units: [.Rr.init]
+        eac_index: SRAD1
     init:
       - written_units: [.Rr]
+        gb_index: [GB/T 36641-2018, 0x1870, sibe raa initial form]
+        eac_index: SRAS1
     medi:
       - written_units: [.Rr]
+        gb_index: [GB/T 36641-2018, 0x1870, sibe raa medial form]
+        eac_index: SRAZ1
     fina:
       - written_units: [.Rr.medi]
+        eac_index: SRAM1
 
-- cp: 0x1871 # ᡱ MONGOLIAN LETTER SIBE CHA
-  id: "cr"
-  transcription: "č"
-  presentation_forms:
+0x1871: # ᡱ MONGOLIAN LETTER SIBE CHA
+  id: .cr
+  transcription: .č
+  variants:
     isol:
       - written_units: [.Cc.init]
+        eac_index: SCHAD1
     init:
       - written_units: [.Cc]
+        gb_index: [GB/T 36641-2018, 0x1871, sibe cha initial form]
+        eac_index: SCHAS1
     medi:
       - written_units: [.Cc]
+        gb_index: [GB/T 36641-2018, 0x1871, sibe cha medial form]
+        eac_index: SCHAZ1
     fina:
       - written_units: [.Cc.medi]
+        eac_index: SCHAM1
 
-- cp: 0x1872 # ᡲ MONGOLIAN LETTER SIBE ZHA
-  id: "zr"
-  transcription: "ž"
-  presentation_forms:
+0x1872: # ᡲ MONGOLIAN LETTER SIBE ZHA
+  id: .zr
+  transcription: .ž
+  variants:
     isol:
       - written_units: [.Ic.init]
+        eac_index: SZHAD1
     init:
       - written_units: [.Ic]
+        gb_index: [GB/T 36641-2018, 0x1872, sibe zha initial form]
+        eac_index: SZHAS1
     medi:
       - written_units: [.Ic]
+        gb_index: [GB/T 36641-2018, 0x1872, sibe zha medial form]
+        eac_index: SZHAZ1
     fina:
       - written_units: [.Ic.medi]
+        eac_index: SZHAM1
