@@ -11,7 +11,7 @@ from glyphsLib.builder import UFOBuilder
 from glyphsLib.parser import load
 from ufoLib2.objects import Font, Info
 
-from mongFontBuilder import constructGlyphSet, makeFeatureFile
+from mongfontbuilder import constructGlyphSet, makeFeatureFile
 
 parser = argparse.ArgumentParser()
 parser.add_argument("font", type=Path)
