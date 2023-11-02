@@ -74,9 +74,11 @@
   variants:
     isol:
       - written_units: [.Ai.medi]
+        fabricated:
         eac_index: SIYD1
     init:
       - written_units: [.Ai.medi]
+        fabricated:
         eac_index: SIYS1
     medi:
       - written_units: [.Ai]
@@ -167,19 +169,22 @@
   variants:
     isol:
       - written_units: [.A.medi]
+        fabricated:
     init:
       - written_units: [.A.medi]
+        fabricated:
     medi:
       - written_units: [.A]
     fina:
       - written_units: [.A.medi]
+        fabricated:
 
 0x1828: # ᠨ MONGOLIAN LETTER NA
   id: .n
   variants:
     isol:
       - written_units: [.N.init]
-        fabricated: y
+        fabricated:
         eac_index: SNAD1
     init:
       - written_units: [.N]
@@ -196,7 +201,7 @@
       - written_units: [.A]
         gb_index: [GB/T 36641-2018, 0x1828, sibe na first final form]
         eac_index: SNAM1
-      - written_units: [.N2]
+      - written_units: [.N]
         gb_index: [GB/T 36641-2018, 0x1828, sibe na second final form]
         eac_index: SNAM2
 
@@ -224,10 +229,13 @@
   variants:
     isol:
       - written_units: [.H.init]
+        fabricated:
         eac_index: SKAD1
       - written_units: [.G.init]
+        fabricated:
         eac_index: SKAD2
       - written_units: [.Gx.init]
+        fabricated:
         eac_index: SKAD3
     init:
       - written_units: [.H]
@@ -261,8 +269,10 @@
   variants:
     isol:
       - written_units: [.Hh.init]
+        fabricated:
         eac_index: SGAD1
       - written_units: [.Gh.init]
+        fabricated:
         eac_index: SGAD2
     init:
       - written_units: [.Hh]
@@ -279,14 +289,17 @@
     fina:
       - written_units: [.Hh.medi]
         eac_index: SGAM1
+        fabricated:
 
 0x1865: # ᡥ MONGOLIAN LETTER SIBE HA
   id: .h
   variants:
     isol:
       - written_units: [.Hc.init]
+        fabricated:
         eac_index: SHAD1
       - written_units: [.Gc.init]
+        fabricated:
         eac_index: SHAD2
     init:
       - written_units: [.Hc]
@@ -302,6 +315,7 @@
         eac_index: SHAZ2
     fina:
       - written_units: [.Hc.medi]
+        fabricated:
         eac_index: SHAM1
 
 0x182A: # ᠪ MONGOLIAN LETTER BA
@@ -309,6 +323,7 @@
   variants:
     isol:
       - written_units: [.B.init]
+        fabricated:
         eac_index: SBAD1
     init:
       - written_units: [.B]
@@ -328,6 +343,7 @@
   variants:
     isol:
       - written_units: [.Pb.init]
+        fabricated:
         eac_index: SPAD1
     init:
       - written_units: [.Pb]
@@ -339,6 +355,7 @@
         eac_index: SPAZ1
     fina:
       - written_units: [.Pb.medi]
+        fabricated:
         eac_index: SPAM1
 
 0x1830: # ᠰ MONGOLIAN LETTER SA
@@ -366,6 +383,7 @@
   variants:
     isol:
       - written_units: [.Sp.init]
+        fabricated:
         eac_index: SSHAD1
     init:
       - written_units: [.Sp]
@@ -384,8 +402,10 @@
   variants:
     isol:
       - written_units: [.Tb.init]
+        fabricated:
         eac_index: STAD1
       - written_units: [.T.init]
+        fabricated:
         eac_index: STAD2
     init:
       - written_units: [.Tb]
@@ -414,8 +434,10 @@
   variants:
     isol:
       - written_units: [.Th.init]
+        fabricated:
         eac_index: SDAD1
       - written_units: [.Tt.init]
+        fabricated:
         eac_index: SDAD2
     init:
       - written_units: [.Th]
@@ -433,12 +455,14 @@
         eac_index: SDAZ1
     fina:
       - written_units: [.Dh.medi]
+        fabricated:
 
 0x182F: # ᠯ MONGOLIAN LETTER LA
   id: .l
   variants:
     isol:
       - written_units: [.L.init]
+        fabricated:
         eac_index: SLAD1
     init:
       - written_units: [.L]
@@ -458,6 +482,7 @@
   variants:
     isol:
       - written_units: [.M.init]
+        fabricated:
         eac_index: SMAD1
     init:
       - written_units: [.M]
@@ -478,6 +503,7 @@
   variants:
     isol:
       - written_units: [.Ch.init]
+        fabricated:
         eac_index: SCHAD1
     init:
       - written_units: [.Ch]
@@ -489,6 +515,7 @@
         eac_index: SCHAZ1
     fina:
       - written_units: [.Ch.medi]
+        fabricated:
         eac_index: SCHAM1
 
 0x186A: # ᡪ MONGOLIAN LETTER SIBE JA
@@ -496,6 +523,7 @@
   variants:
     isol:
       - written_units: [.I.init]
+        fabricated:
         eac_index: SJAD1
     init:
       - written_units: [.I]
@@ -507,6 +535,7 @@
         eac_index: SJAZ1
     fina:
       - written_units: [.J2.medi]
+        fabricated:
         eac_index: SJAM1
 
 0x1836: # ᠶ MONGOLIAN LETTER YA
@@ -514,6 +543,7 @@
   variants:
     isol:
       - written_units: [.Y.init]
+        fabricated:
         eac_index: SYAD1
     init:
       - written_units: [.Y]
@@ -523,6 +553,7 @@
         eac_index: SYAZ1
     fina:
       - written_units: [.Y.medi]
+        fabricated:
         eac_index: SYAM1
 
 0x1837: # ᠷ MONGOLIAN LETTER RA
@@ -530,6 +561,7 @@
   variants:
     isol:
       - written_units: [.R.init]
+        fabricated:
         eac_index: SRAD1
     init:
       - written_units: [.R]
@@ -546,6 +578,7 @@
   variants:
     isol:
       - written_units: [.V.init]
+        fabricated:
         eac_index: SFAD1
     init:
       - written_units: [.V]
@@ -557,6 +590,7 @@
         eac_index: SFAZ1
     fina:
       - written_units: [.V.medi]
+        fabricated:
         eac_index: SFAM1
 
 0x1838: # ᠸ MONGOLIAN LETTER WA
@@ -564,6 +598,7 @@
   variants:
     isol:
       - written_units: [.W.init]
+        fabricated:
         eac_index: SFAD1
     init:
       - written_units: [.W]
@@ -581,6 +616,7 @@
   variants:
     isol:
       - written_units: [.K2.init]
+        fabricated:
         eac_index: SKAAD1
     init:
       - written_units: [.K2]
@@ -590,6 +626,7 @@
         eac_index: SKAAZ1
     fina:
       - written_units: [.K2.medi]
+        fabricated:
         eac_index: SKAAM1
 
 0x186C: # ᡬ MONGOLIAN LETTER SIBE GAA
@@ -598,6 +635,7 @@
   variants:
     isol:
       - written_units: [.Kh.init]
+        fabricated:
         eac_index: SGAAD1
     init:
       - written_units: [.Kh]
@@ -609,6 +647,7 @@
         eac_index: SGAAZ1
     fina:
       - written_units: [.Kh.medi]
+        fabricated:
         eac_index: SGAAM1
 
 0x186D: # ᡭ MONGOLIAN LETTER SIBE HAA
@@ -617,6 +656,7 @@
   variants:
     isol:
       - written_units: [.Kc.init]
+        fabricated:
         eac_index: SHAAD1
     init:
       - written_units: [.Kc]
@@ -628,6 +668,7 @@
         eac_index: SHAAZ1
     fina:
       - written_units: [.Kc.medi]
+        fabricated:
         eac_index: SHAAM1
 
 0x186E: # ᡮ MONGOLIAN LETTER SIBE TSA
@@ -635,6 +676,7 @@
   variants:
     isol:
       - written_units: [.Cs.init]
+        fabricated:
         eac_index: STSAD1
     init:
       - written_units: [.Cs]
@@ -646,6 +688,7 @@
         eac_index: STSAZ1
     fina:
       - written_units: [.Cs.medi]
+        fabricated:
         eac_index: STSAM1
 
 0x186F: # ᡯ MONGOLIAN LETTER SIBE ZA
@@ -653,6 +696,7 @@
   variants:
     isol:
       - written_units: [.Zs.init]
+        fabricated:
         eac_index: SZAD1
     init:
       - written_units: [.Zs]
@@ -672,6 +716,7 @@
   variants:
     isol:
       - written_units: [.Rr.init]
+        fabricated:
         eac_index: SRAD1
     init:
       - written_units: [.Rr]
@@ -683,6 +728,7 @@
         eac_index: SRAZ1
     fina:
       - written_units: [.Rr.medi]
+        fabricated:
         eac_index: SRAM1
 
 0x1871: # ᡱ MONGOLIAN LETTER SIBE CHA
@@ -691,6 +737,7 @@
   variants:
     isol:
       - written_units: [.Cc.init]
+        fabricated:
         eac_index: SCHAD1
     init:
       - written_units: [.Cc]
@@ -702,6 +749,7 @@
         eac_index: SCHAZ1
     fina:
       - written_units: [.Cc.medi]
+        fabricated:
         eac_index: SCHAM1
 
 0x1872: # ᡲ MONGOLIAN LETTER SIBE ZHA
@@ -710,6 +758,7 @@
   variants:
     isol:
       - written_units: [.Ic.init]
+        fabricated:
         eac_index: SZHAD1
     init:
       - written_units: [.Ic]
@@ -721,4 +770,5 @@
         eac_index: SZHAZ1
     fina:
       - written_units: [.Ic.medi]
+        fabricated:
         eac_index: SZHAM1

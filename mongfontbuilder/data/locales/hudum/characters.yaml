@@ -265,11 +265,11 @@
   variants:
     isol:
       - written_units: [.N.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C2, na first isolated form]
         eac_index: MND1
       - written_units: [.A.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x0007, na second isolated form]
         eac_index: MND2
     init:
@@ -300,12 +300,12 @@
   variants:
     isol:
       - written_units: [.A.medi, .G.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C3, ang isolated form]
         eac_index: XND1
     init:
       - written_units: [.A.medi, .G.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C3, ang initial form]
         eac_index: XNS1
     medi:
@@ -322,7 +322,7 @@
   variants:
     isol:
       - written_units: [.B.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C4, ba isolated form]
         eac_index: MBD1
     init:
@@ -346,7 +346,7 @@
   variants:
     isol:
       - written_units: [.P.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C6, pa isolated form]
         eac_index: MPD1
     init:
@@ -367,19 +367,19 @@
   variants:
     isol:
       - written_units: [.H.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C7, qa first isolated form]
         eac_index: MHD1
       - written_units: [.Hx.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C8, qa second isolated form]
         eac_index: MHD2
       - written_units: [.G.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x001E, qa third isolated form]
         eac_index: MHD3
       - written_units: [.Gx.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x001B, qa fourth isolated form]
         eac_index: MHD4
     init:
@@ -421,19 +421,19 @@
   variants:
     isol:
       - written_units: [.Hx.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C8, ga first isolated form]
         eac_index: MGD1
       - written_units: [.H.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C7, ga second isolated form]
         eac_index: MGD2
       - written_units: [.G.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x001E, ga third isolated form]
         eac_index: MGD3
       - written_units: [.Gx.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x001B, ga fourth isolated form]
         eac_index: MGD4
     init:
@@ -478,7 +478,7 @@
   variants:
     isol:
       - written_units: [.M.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C9, ma isolated form]
         eac_index: MMD1
     init:
@@ -499,7 +499,7 @@
   variants:
     isol:
       - written_units: [.L.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00CA, la isolated form]
         eac_index: MLD1
     init:
@@ -520,7 +520,7 @@
   variants:
     isol:
       - written_units: [.S.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00CB, sa isolated form]
         eac_index: MSD1
     init:
@@ -545,11 +545,11 @@
   variants:
     isol:
       - written_units: [.Sh.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00CC, sha first isolated form]
         eac_index: MXD1
       - written_units: [.S.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00CB, sha second isolated form]
         eac_index: MXD2
     init:
@@ -576,7 +576,7 @@
   variants:
     isol:
       - written_units: [.T.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00CD, ta isolated form]
         eac_index: MTD1
     init:
@@ -600,11 +600,11 @@
   variants:
     isol:
       - written_units: [.D.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00CE, da first isolated form]
         eac_index: MDD1
       - written_units: [.T.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00CD, da second isolated form]
         eac_index: MDD2
     init:
@@ -635,7 +635,7 @@
   variants:
     isol:
       - written_units: [.Ch.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x002F, cha isolated form]
         eac_index: MQD1
     init:
@@ -656,7 +656,7 @@
   variants:
     isol:
       - written_units: [.I.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00B7, ja first isolated form]
         eac_index: MJD1
       - written_units: [.I]
@@ -683,11 +683,11 @@
   variants:
     isol:
       - written_units: [.Y.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00CF, ya first isolated form]
         eac_index: MYD1
       - written_units: [.I.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00B7, ya second isolated form]
         eac_index: MYD2
     init:
@@ -717,7 +717,7 @@
   variants:
     isol:
       - written_units: [.R.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D0, ra isolated form]
         eac_index: MRD1
     init:
@@ -738,7 +738,7 @@
   variants:
     isol:
       - written_units: [.W.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00C1, wa isolated form]
         eac_index: XWD1
     init:
@@ -765,7 +765,7 @@
   variants:
     isol:
       - written_units: [.F.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D1, fa isolated form]
         eac_index: XFD1
     init:
@@ -787,7 +787,7 @@
   variants:
     isol:
       - written_units: [.K2.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D2, ka isolated form]
         eac_index: MKD1
     init:
@@ -808,7 +808,7 @@
   variants:
     isol:
       - written_units: [.K.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D3, kha isolated form]
         eac_index: XKD1
     init:
@@ -829,7 +829,7 @@
   variants:
     isol:
       - written_units: [.C.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x0037, tsa isolated form]
         eac_index: XCD1
     init:
@@ -850,7 +850,7 @@
   variants:
     isol:
       - written_units: [.Z.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x0039, za isolated form]
         eac_index: MZD1
     init:
@@ -872,7 +872,7 @@
   variants:
     isol:
       - written_units: [.A.init, .Hr.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D4, haa isolated form]
         eac_index: XHD1
     init:
@@ -894,7 +894,7 @@
   variants:
     isol:
       - written_units: [.Rh.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D6, zra isolated form]
         eac_index: XRD1
     init:
@@ -916,7 +916,7 @@
   variants:
     isol:
       - written_units: [.L.init, .Hr.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D7, lha isolated form]
         eac_index: XLD1
     init:
@@ -929,7 +929,7 @@
         eac_index: XLZ1
     fina:
       - written_units: [.L.medi, .Hr.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x003D, lha final form]
         eac_index: XLM1
 
@@ -939,7 +939,7 @@
   variants:
     isol:
       - written_units: [.Zr.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D5, zhi isolated form]
         eac_index: XZD1
     init:
@@ -948,12 +948,12 @@
         eac_index: XZS1
     medi:
       - written_units: [.Zr.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D5, zhi medial form]
         eac_index: XZZ1
     fina:
       - written_units: [.Zr.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D5, zhi final form]
         eac_index: XZM1
 
@@ -963,7 +963,7 @@
   variants:
     isol:
       - written_units: [.Cr.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D8, chi isolated form]
         eac_index: XQD1
     init:
@@ -972,11 +972,11 @@
         eac_index: XQS1
     medi:
       - written_units: [.Cr.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D8, chi medial form]
         eac_index: XQZ1
     fina:
       - written_units: [.Cr.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 25914-xxxx, 0x00D8, chi final form]
         eac_index: XQM1

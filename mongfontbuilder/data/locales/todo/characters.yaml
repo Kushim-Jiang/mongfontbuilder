@@ -203,12 +203,12 @@
   variants:
     isol:
       - written_units: [.Lv]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1843, todo long vowel sign isolated form]
         eac_index: TLVSD1
     init:
       - written_units: [.Lv]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1843, todo long vowel sign initial form]
         eac_index: TLVSS1
     medi:
@@ -225,7 +225,7 @@
   variants:
     isol:
       - written_units: [.N.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1828, na isolated form]
         eac_index: TNAD1
     init:
@@ -254,12 +254,12 @@
   variants:
     isol:
       - written_units: [.A.init, .G.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1829, ang isolated form]
         eac_index: TANGD1
     init:
       - written_units: [.A.init, .G.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1829, ang initial form]
         eac_index: TANGS1
     medi:
@@ -276,7 +276,7 @@
   variants:
     isol:
       - written_units: [.B.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x182A, ba isolated form]
         eac_index: TBAD1
     init:
@@ -317,11 +317,11 @@
   variants:
     isol:
       - written_units: [.Hx2.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x184D, todo qa isolated form]
         eac_index: TQAD1
       - written_units: [.K.init]
-        fabricated: y
+        fabricated:
         eac_index: TQAD2
     init:
       - written_units: [.Hx2]
@@ -347,11 +347,11 @@
   variants:
     isol:
       - written_units: [.Hb.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x184E, todo ga masculine isolated form]
         eac_index: TGAD1
       - written_units: [.G.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1889, todo ga feminine isolated form]
         eac_index: TGAD2
     init:
@@ -379,7 +379,7 @@
   variants:
     isol:
       - written_units: [.M.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x182E, todo ma isolated form]
         eac_index: TMAD1
     init:
@@ -400,7 +400,7 @@
   variants:
     isol:
       - written_units: [.L.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x182F, la isolated form]
         eac_index: TLAD1
     init:
@@ -421,7 +421,7 @@
   variants:
     isol:
       - written_units: [.S.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1830, sa isolated form]
         eac_index: TSAD1
     init:
@@ -443,7 +443,7 @@
   variants:
     isol:
       - written_units: [.Sh.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1831, sha isolated form]
         eac_index: TSHAD1
     init:
@@ -456,7 +456,7 @@
         eac_index: TSHAZ1
     fina:
       - written_units: [.Sh]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x0029, sha final form]
         eac_index: TSHAM1
 
@@ -465,7 +465,7 @@
   variants:
     isol:
       - written_units: [.Tp.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1850, todo ta isolated form]
         eac_index: TTAD1
     init:
@@ -486,7 +486,7 @@
   variants:
     isol:
       - written_units: [.Dp.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1851, todo da isolated form]
         eac_index: TDAD1
     init:
@@ -508,7 +508,7 @@
   variants:
     isol:
       - written_units: [.Jb.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1852, todo cha isolated form]
         eac_index: TCHAD1
     init:
@@ -529,7 +529,7 @@
   variants:
     isol:
       - written_units: [.Cp.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1853, todo ja isolated form]
         eac_index: TJAD1
     init:
@@ -550,7 +550,7 @@
   variants:
     isol:
       - written_units: [.Ch.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1834, dza isolated form]
         eac_index: TZAD1
     init:
@@ -563,7 +563,7 @@
         eac_index: TZAZ1
     fina:
       - written_units: [.Ch]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x0030, dza final form]
         eac_index: TZAM1
 
@@ -572,7 +572,7 @@
   variants:
     isol:
       - written_units: [.J.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1854, todo tsa isolated form]
         eac_index: TTSAD1
     init:
@@ -593,9 +593,11 @@
   variants:
     isol:
       - written_units: [.I.init]
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1855, todo ya isolated form]
         eac_index: TYAD1
       - written_units: [.Y.init]
+        fabricated:
         eac_index: TYAD2
     init:
       - written_units: [.I]
@@ -621,7 +623,7 @@
   variants:
     isol:
       - written_units: [.R.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1837, ra isolated form]
         eac_index: TRAD1
     init:
@@ -642,7 +644,7 @@
   variants:
     isol:
       - written_units: [.Wb.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1856, todo wa isolated form]
         eac_index: TWAD1
     init:
@@ -667,7 +669,7 @@
   variants:
     isol:
       - written_units: [.W.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1838, fa isolated form]
         eac_index: TFAD1
     init:
@@ -689,7 +691,7 @@
   variants:
     isol:
       - written_units: [.Kp.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1857, todo ka isolated form]
         eac_index: TEKAD1
     init:
@@ -711,7 +713,7 @@
   variants:
     isol:
       - written_units: [.Gp.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1858, todo gaa isolated form]
         eac_index: TGAAD1
     init:
@@ -723,8 +725,8 @@
         gb_index: [GB/T 36649-2018, 0x1858, todo gaa medial form]
         eac_index: TGAAZ1
     fina:
-      - written_units: [.Gp]
-        fabricated: y
+      - written_units: [.Gp.medi]
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1858, todo gaa final form]
         eac_index: TGAAM1
 
@@ -734,7 +736,7 @@
   variants:
     isol:
       - written_units: [.A.init, .Hr.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x183E, todo haa isolated form]
         eac_index: THAAD1
     init:
@@ -760,7 +762,7 @@
   variants:
     isol:
       - written_units: [.B.init, .Yp.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x185A, todo jia isolated form]
         eac_index: TAKAD1
     init:
@@ -773,7 +775,7 @@
         eac_index: TAKAZ1
     fina:
       - written_units: [.B.medi, .Yp.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x185A, todo jia final form]
         eac_index: TAKAM1
 
@@ -783,7 +785,7 @@
   variants:
     isol:
       - written_units: [.Ny.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x185B, todo nia isolated form]
         eac_index: TANAD1
     init:
@@ -796,7 +798,7 @@
         eac_index: TANAZ1
     fina:
       - written_units: [.Ny.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x185B, todo nia final form]
         eac_index: TANAM1
 
@@ -806,7 +808,7 @@
   variants:
     isol:
       - written_units: [.Zz.init]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x185C, todo dza isolated form]
         eac_index: TADZAD1
     init:
@@ -828,7 +830,7 @@
   variants:
     isol:
       - written_units: [.L.init, .Hr.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x1840, lha isolated form]
         eac_index: TLHAD1
     init:
@@ -841,6 +843,6 @@
         eac_index: TLHAZ1
     fina:
       - written_units: [.L.medi, .Hr.medi]
-        fabricated: y
+        fabricated:
         gb_index: [GB/T 36649-2018, 0x003D, lha final form]
         eac_index: TLHAM1
