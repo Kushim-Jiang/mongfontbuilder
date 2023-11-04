@@ -25,6 +25,10 @@ def makeFeatureFile(availableGlyphs: Iterable[str] = []) -> FeatureFile:
 
 @dataclass
 class UTNGlyphName(str):
+    """
+    Besides the graphical .joining_position, there’s also a joining position in terms of shaping logic that may appear in a glyph name. For example, uni1828.N.init._isol is an isol glyph in terms of shaping, but graphically it’s actually N.init.
+    """
+
     uni_name: str | None
     written_units: list[str]
     joining_position: str | None  # isol | init | medi | fina

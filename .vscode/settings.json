@@ -21,5 +21,6 @@
   "[yaml]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
+  "python.analysis.autoImportCompletions": true
 }
