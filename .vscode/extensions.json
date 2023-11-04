@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "be5invis.opentype-feature-file-support",
+    "esbenp.prettier-vscode",
     "ms-python.black-formatter",
     "ms-python.python",
     "redhat.vscode-yaml",
