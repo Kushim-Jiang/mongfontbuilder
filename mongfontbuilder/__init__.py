@@ -10,15 +10,18 @@ from fontTools.misc.transform import Identity
 from ufoLib2.objects import Component, Font, Glyph
 
 _files = resources.files(__package__)
+dataDir = _files / "data"
+otlDir = _files / "otl"
 
 
-def makeFeatureFile(availableGlyphs: Iterable[str] = []) -> FeatureFile:
+def makeFeatureFile(availableGlyphs: Iterable[str] = set()) -> FeatureFile:
     """
     Specify `availableGlyphs` to validate the glyph set against the feature file’s requirement.
+    An empty set is ignored by `Parser`.
     """
 
     return Parser(
-        featurefile=_files / "otl" / "main.fea",
+        featurefile=otlDir / "main.fea",
         glyphNames=availableGlyphs,
     ).parse()
 
@@ -91,11 +94,11 @@ def constructGlyphSet(
 
     # Load data files:
 
-    with (_files / "data" / "representative-glyphs.yaml").open() as f:
+    with (dataDir / "representative-glyphs.yaml").open() as f:
         nominal_mapping: dict[str, str] = yaml.safe_load(f)
 
     expected_glyph_names = dict[str, dict[str, None]]()
-    with resources.as_file(_files / "data" / "glyphs") as directory:
+    with resources.as_file(dataDir / "glyphs") as directory:
         for path in directory.glob("*.yaml"):
             with path.open() as f:
                 expected_glyph_names[path.stem] = yaml.safe_load(f)

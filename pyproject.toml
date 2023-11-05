@@ -11,6 +11,7 @@ authors = [
 python = "^3.10"
 fontmake = "^3.7.1"
 PyYaml = "^6.0.1"
+unicodedata2 = "^15.1.0"
 
 [build-system]
 requires = ["poetry-core"]
