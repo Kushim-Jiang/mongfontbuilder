@@ -10,7 +10,7 @@ npm run dev -- --open
 
 ## Building
 
-To update the production build at ../docs for GitHub Pages:
+To create the production build:
 
 ```bash
 npm run build
