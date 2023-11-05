@@ -1,8 +1,13 @@
+from pathlib import Path
 from typing import Literal
 
 from fontTools import unicodedata
 
 from mongfontbuilder import dataDir, yaml
+
+repoDir = Path(__file__).parent
+tempDir = repoDir / "temp"
+tempDir.mkdir(exist_ok=True)
 
 with (dataDir / "characters.yaml").open() as f:
     data = yaml.safe_load(f)
@@ -33,5 +38,5 @@ for cp, cpData in sorted(data.items()):
     assert not variantsData
     assert not cpData
 
-with (dataDir / "output.yaml").open("w") as f:
+with (tempDir / "output.yaml").open("w") as f:
     yaml.dump(charToData, f, allow_unicode=True, sort_keys=False)
