@@ -1,0 +1,48 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "utn"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "be5invis.opentype-feature-file-support",
+      "esbenp.prettier-vscode",
+      "ms-python.black-formatter",
+      "ms-python.python",
+      "redhat.vscode-yaml",
+      "tamasfe.even-better-toml"
+    ]
+  },
+  "settings": {
+    "files.trimTrailingWhitespace": true,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.exclude": {
+      "utn/.svelte-kit": true,
+      "utn/node_modules": true
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[yaml]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[svelte]": {
+      "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+      }
+    },
+    "black-formatter.args": ["--line-length", "100"],
+    "isort.args": ["--profile", "black"]
+  }
+}
