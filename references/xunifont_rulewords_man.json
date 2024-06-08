@@ -1,0 +1,3755 @@
+{
+    "updateversion": "2020.05.01.01",
+    "rulelist": [
+        {
+            "ruleindex": "MAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠮᠠᠯᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᠮᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠠ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠮᠠᠯᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᠯᠠᠨᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠮᠠᠯᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᠯᠠᠨᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩᠠᠪᠠ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡳᠵᡳᠮᠪᠠ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩᠠᠪᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡳᠵᡳᠮᠪᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠮᠠᠯᠠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᠯᠠᠨᠠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MED10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MED11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MES10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MES11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᡝᠯᡝᠮᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᠮᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡝ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝᠯᡝᠮᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠨᡝᠨᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩᡝᠩᡤ᠋ᡝ᠌ᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨ᠋ᡝᡨᡝᠯᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠠ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩᡝᠩᡤᡝᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨ᠋ᡝᡩᡝᠯᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠯᡝ᠋ᠨᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡠᠯᡝ᠋ᡝ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝᠯᡝᠮᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠨᡝᠨᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠌ᡝ᠋ᠪᡝ᠋ᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠺᡝ᠋ᠪᡝ᠋᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠌ᡝ᠋ᠪᡝ᠋ᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠺᡝᠪᡝ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝᠯᡝᠮᡝ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠨᡝᠨᡝ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡝ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠣᠮᡠᠪᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᠨᡝᡦᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥᡝᡵᡴ᠌ᡝ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡳᠰᡥᡠᠨᡩᡝ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡝ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥᡝᡵᡴ᠌ᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MEM42",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᡳᠰᡥᡠᠨᡩᡝ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠨᠣᠮᡠᠪᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᠨᡝᡦᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MID10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MID11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡳ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡳᠯᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡳᠨᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡳ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᡝᠮᡳᠯᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠮᡳᠨᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡳ᠍ᠯᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᡳ᠍ᠮᡝᡵᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡳ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡳᠯᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᡳᠮᡝᡵᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᡝᠮᡳ᠌ᠯᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠮᡳ᠌ᠨᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡳᠯᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠮᡳᠨᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM12",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᠴᡠᠮᠴᡠᠮᠪᡳ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᠠᠮᡧᠠᠮᠪᡳ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡳ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴᡠᠮᠴᡠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᠠᠮᡧᠠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡴ᠍ᡳ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠮᡳᠨᡳ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡳ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM31",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠴᡠᠮᠴᡠᠮᠪᡳ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᠠᠮᡧᠠᠮᠪᡳ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡳ᠋᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIM41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠᡳ᠋᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MOD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣᠮᠣᠯᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠣᠮᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠣ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOZ11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᠣᠮᠣᠯᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠨᠣᠮᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶᡝᡵᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᠣᠯᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣᠮᠣᠯᠪᠣ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠣᠮᡦᠣ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠣ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣᠮᠣᠯᠪᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠣᠮᡦᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MOM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶᡝᡵᠣ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᠣᠯᠣ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MUED10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUED11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUES10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUES11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠᠯᠠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡠᠮᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡠ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠᡵᡠᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠨᠣᠮᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᡠᡥᡠ᠌ᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨᡝᡥᡝᡤᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠣ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᡠᡥᡠᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨᡝᡥᡝᡤᡠᠨ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣᠨᡠ᠋ᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠣᠮᡠ᠋ᠯᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠠᠨᠵᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᠴᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠋ᠣᠨᡩᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᠣᠯᠪᡠ᠋᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠋ᠣᠨᡩᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᠣᠯᡩᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠠᠨᠵᡠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᠴᡠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡠ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶ᠋ᠮᠪᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠣᡵᠣᡦᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠠᠨᠵᡠ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᠴᡠ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡠ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠣᡤᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠵᠣᠩᡤᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUEM42",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠠᠨᠵᡠ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᠴᡠ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MUD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡡ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡡᠯᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡡᡵᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡡ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡴᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠰᠠᡳ᠌ᠶᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MUM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡴᡡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MNAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᡝᠨᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠨᠣᠮᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠠᠨᠵᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᠨᠴᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠᠨ᠌ᡳᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡦᡳᠮᡦᡳᠨ᠌ᠠᠪᡳ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠋᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠᠨᡳᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡦᡳᠮᡦᡳᠨᠠᠪᡳ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠠᠨ᠋ᠵᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᠨ᠋ᠴᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝᡶᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡶᠠᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠵᡠᠴᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡩᠠᠴᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠨ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNAM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᡠᠴᡠᠨ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡩᠠᠴᡠᠨ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᡶᠨ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡶᠠᡥᠨ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MANGD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MANGD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MANGS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MANGS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠩᠩᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MANGZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MANGZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠩᡤᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᠩᡤᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MANGM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MANGM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡯᠮᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠩᠩᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MKAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAD30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAD31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᠯᡴᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴᠣᡳ᠌ᠠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ᠍ᡳᠯᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴ᠍ᡠᠮᡳᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᡳᠯᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴᡠᠮᡳᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᡝᠯᡴᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴ᠋ᠣᡳ᠌ᠠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAS30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAS31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ᠌ᡝᡳ᠌ᡴᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴ᠋᠋ᡝᡴᡝᡵᡝᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡴ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᠠᡴᡡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴᠠᡴᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡴ᠍ᡠᠮᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᡴ᠍ᡠᠮᡳᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡴ᠋᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡴᡠᠮᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᡴᡠᠮᡳᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᠠᡴ᠋ᡡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴᠠᡴ᠋ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ23",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᠠᡴ᠋ᡨᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡳᡴ᠋ᡨᠠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᡝᡳ᠌ᡴᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴᡝᡴᡝᡵᡝᠮᠪᡳ᠍", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᡝᡳ᠌ᡴᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠰᠠᡳ᠌ᠶᡠᡴᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ40",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡴ᠋᠋᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAZ41",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᡝᡳᡴ᠋᠋ᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠰᠠᡳ᠌ᠶᡡᡴ᠋᠋ᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡴ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᡠᠮᡳᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAM12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡡᡵᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᡳ᠌ᠮᡝᡵᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡴ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡡᡵᡝᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᡳ᠌ᠮᡝᡵᡝᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAM22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᡴ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᡠᠮᡳᡴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAM30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡴ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAM31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᠠᡴᡨᡴ᠌", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MGAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤᠠᠰᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡤᠣᠴᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤᡳ᠌ᠶᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡤ᠌ᡳᠮᡳᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤᡳᡳᠶᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡤᡳᠮᡳᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤᡝᠰᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡤᡠᠴᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡤ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠩᡤᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡶᠠᡶ᠋ᡠᡤᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᠠᡤ᠋ᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᡤ᠋ᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡤ᠋᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᠠᡤᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᡤᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠩᡤ᠋ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡶᠠᡶ᠋ᡠᡤ᠋ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨᡝᡥᡝᡤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥᠠᡥᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡥᠠᠰᡥᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥ᠌ᡳᠮᡳᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡥ᠌ᡳᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥᡳᠮᡳᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡥᡳᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥᡝᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡥᡝᠰᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡥ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦᠠᠮᡦᠠᡥᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡤᠠᠰᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠᠨᡳᡥ᠌ᡝᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡶᡡᡥ᠌ᡳᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡥ᠋᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᠠᠨᡳᡥᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡶᡡᡥᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦᠠᠮᡦᠠᡥ᠋ᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡥᠠᠰᠠᡥ᠋ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡥ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡥᡥᡥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MBAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪᡝᠶᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠪᠠᠨᡳᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨᠠᠪᠠᠯᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴᡝᡴᡝᡵᡝᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠠᠪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡴᡝᠪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MPAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MPAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MPAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MPAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦᠠᠮᡦᠠᡥᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡦᡳᠶᠠᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MPAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MPAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦᠠᠮᡦᠠᡥᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡦᡳᠮᡦᡳᠨᠠᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MPAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡦ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MPAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦᡦᡦᡦ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠠᡦ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MSAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠰᠠᡳ᠌ᠶᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠰᡳᠨᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠰ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡤᠠᠰᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡠᠮᡝᠰᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡦᡳᠶᠠᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠣᡵᠣᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MSHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡧᠣᠯᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᡠᠮᡳᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡧ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡧᠣᡧᠣᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᠠᠮᡧᠠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡧᡧᡧᡧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MTAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MTAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨᡝᡥᡝᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨᡠᠮᡳᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨ᠌ᠠᠣᡩᡝᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨ᠌ᠣᡨᡨᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨᠠᠣᡩᠠᠨᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨᠣᡨᡩᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨ᠋ᡝᡥᡝᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨ᠋ᡠᠮᡳᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡨ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝᡨᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠰᡳᠨᡨᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨᠠᡨ᠍ᠠᠯᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨ᠌ᠠᠣᡨ᠍ᠠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡨ᠋᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡨᠠᡨᠠᠯᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨ᠌ᠠᠣᡨᠠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝᡨ᠋ᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠰᡳᡨ᠋ᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAZ30",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡨ᠌᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAZ31",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩᠠᡵᡨ᠌ᡨᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡦᠠᠮᡦᡨ᠌ᡨᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAZ32",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠᡨ᠌ᠠᡨᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡨᡠᡨ᠌ᠠᡨᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᠠᡴᡨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠣᡵᠣᡨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MDAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩᠠᠪᠠᠯᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡩᠠᠴᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠌ᡝᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡩ᠌ᡠᡵᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠋ᡳᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡩ᠋ᡡᡵᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡩ᠋ᠠᠪᠠᠯᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡩ᠋ᠠᠴᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡩ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᡨᡝᠣᡩᠠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡩᡝᠨᡩᠨᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAZ12",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᡩᠠᡵᠠᡩ᠌ᠠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡠᠯᠠᡩ᠌ᠠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡩ᠋᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAZ21",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᡩᠠᡵᠠᡩᡝᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡠᠯᠠᡩᡝᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAZ22",
+            "rulewords": [
+                { "state": "1", "shape": "  ", "word": "ᡨᡝᠣᡩ᠋ᠠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡩᡝᠨᡩ᠋ᠠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᡠᠴᡠᡩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡩᠠᡵᡩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MLAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯᡝᠯᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠯᠠᠮᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠯ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡴᠯᡴᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡧᠣᠯᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠯᠯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MMAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MMAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MMAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MMAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᡳᠨᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠮᠠᠨᠵᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MMAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠮ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MMAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡝᠯᡝᠮᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᠮᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MMAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MMAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠮᠮᠮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MCHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴᡠᠮᠴᡠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴᡠᠮᠴᡠᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡠᠴᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠴᠴᠴᠴᠴᠴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡠᠴ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MJAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᡳᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠵᡠᠴᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠵ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡳᠵᡳᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠣᡳᠵᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠵ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠵᠵᠵᠵᠵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠣᠯᠵ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MYAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MYAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MYAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MYAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶᡝᡵᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": " ", "word": "ᠶᠣᠣᠨᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MYAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MYAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠᠶᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠰᠠᡳ᠌ᠶᡡᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MYAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MYAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠶᠶᠶᠶᠶᠶᠶᠶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠰᠠᠶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MKAAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺᠺᠺ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺᠺᠺ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MKAAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠺᠺᠺ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MGAAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡬ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡬ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡬ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡬᡬᡬ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡬ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡬᡬᡬᡬ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡬ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGAAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡬᡬᡬ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MHAAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡭ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡭ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡭ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡭᡭᡭ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡭ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡭᡭᡭ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡭ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHAAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡭᡭᡭ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MRAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡵᡵᡵᡵᡵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣᡵᠣᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠶᡝᡵᡠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠯᠠᡵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠯᡳᡵ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MWAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MWAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MWAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MWAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸᠮᠵᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠸᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MWAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MWAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶᠠᠸᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡠᡶᠸᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MWAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᠸ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MWAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸᠸᠸᠸ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MTSAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTSAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTSAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTSAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡮᡟᡟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡮᠣᠣᡮᠣᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTSAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡮ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTSAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡮᠣᠣᡮᠣᠣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTSAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTSAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡮᠣᠣᡮ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MZAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡯᡝᠩᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡯᠮᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡯ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡯᡯᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡧᡳᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡯᡝᠩᡯ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MRAAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡰᡰᡰᡰᡰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡰᡰᡰᡰᡰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MRAAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡰᡰᡰᡰᡰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MCHAAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡱ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡱ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡱ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡱᡳᠮᡳᠩ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡱ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡱᡱᡱᡱᡱ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡱ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCHAAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡱᡱᡱᡱᡱ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MZHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡷᡳᠯᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡷᡷᡷᡷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MZHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡷᡷᡷᡷ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MIYD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIYD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIYS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIYS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡟᡟᡟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIYZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIYZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡮᡟᡟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIYM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MIYM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡮᡟᡟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MFAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶᠠᡥᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡶᠠᠸᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAS12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶ᠌ᡳᠨᡨᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡶ᠌ᡳᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸᡳᠨᡨᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠸᡳᠮᠪᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAS22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶ᠋ᠠᡥᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡶ᠋ᠠᡶᡠᠨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡶ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠᡶᡶ᠋ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᡶᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        }, {
+            "ruleindex": "MFAZ12",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣᡵᡶ᠌ᠣᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠶᠣᡶ᠌ᠣᠨᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠸ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠣᡵᡶᠣᠰ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᠶᡠᡶᠣᠨᡳ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAZ22",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡠᡶᡶ᠋ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } },
+                { "state": "1", "shape": "", "word": "ᡝᡶ᠋ᡝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᡶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MFAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡶᡶᡶᡶᡶᡶᡶ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNRGD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNRGD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNRGS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊᠊᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNRGS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊᠊᠊ᡵᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNRGZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊᠊᠊᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNRGZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᠨᠠᡵ᠊᠊᠊᠊ᠠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNRGM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊᠊᠊᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNRGM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᡵᠠ᠊᠊᠊᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢇ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢇ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢇ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢇᢇ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢇ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢇᢇᢇ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢇ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢇᢇ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢇ᠋ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAAM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢇᢇᢇ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MAID10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢈ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAID11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢈ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAIS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢈ᠊ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAIS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢈᢈᢈ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAIZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢈ᠊", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAIZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢈᢈᢈ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAIM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢈ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAIM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢈᢈᢈ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MNNAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢏ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNNAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢏ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNNAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢏ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNNAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢏᢏᢏ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNNAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢏ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNNAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢏᢏᢏ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNNAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢏ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNNAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢏᢏᢏ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MAPAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAPAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAPAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAPAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒᢒᢒ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAPAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAPAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒᢒᢒ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAPAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAPAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢒᢒᢒ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MGHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢚ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢚ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢚ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢚᢚᢚ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢚ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢚᢚᢚ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢚ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MGHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢚᢚᢚ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MNGAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢛ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNGAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢛ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNGAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢛ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNGAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢛᢛᢛ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNGAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢛ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNGAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢛᢛᢛ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNGAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢛ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MNGAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢛᢛᢛ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MCAD10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᢜ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCAD11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᢜ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢜᢜᢜ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCAS11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᢜ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCAZ10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "᠊ᢜ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢜᢜᢜ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCAM10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "᠊ᢜ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢜᢜᢜ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MJHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢝᢝᢝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢝᢝᢝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢝ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MJHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢝᢝᢝ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MTTAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢞ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTTAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢞ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTTAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢞ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTTAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢞᢞᢞ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTTAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢞ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTTAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢞᢞᢞ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTTAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢞ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MTTAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢞᢞᢞ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MDDHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDDHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDDHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDDHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢟᢟᢟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDDHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "᠊ᢟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDDHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᢟᢟᢟ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDDHAM10",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "᠊ᢟ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDDHAM11",
+            "rulewords": [
+                { "state": "1", "shape": " ", "word": "ᢟᢟᢟ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MATAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠᢠᢠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ᠋ᢠ᠋ᢠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠᢠᢠ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ᠋ᢠ᠋ᢠ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠᢠᢠ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ᠋ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MATAM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢠ᠋ᢠ᠋ᢠ᠋ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MDHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡᢡᢡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡ᠋ᢡ᠋ᢡ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡᢡᢡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢡ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡ᠋ᢡ᠋ᢡ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢡ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡᢡᢡ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢡ᠋ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MDHAM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢡ᠋ᢡ᠋ᢡ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MSSAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢢ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSSAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢢ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSSAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢢ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSSAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢢᢢᢢ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSSAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢢ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSSAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢢᢢᢢ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSSAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢢ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MSSAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢢᢢᢢ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MCYAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢣ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCYAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢣ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCYAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCYAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢣᢣᢣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCYAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCYAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢣᢣᢣ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCYAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢣ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MCYAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢣᢣᢣ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MAZHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAD20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAD21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤᢤᢤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAS20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAS21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤ᠋ᢤ᠋ᢤ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤᢤᢤ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAZ20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢤ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAZ21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤ᠋ᢤ᠋ᢤ᠋", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢤ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤᢤᢤ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAM20",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢤ᠋ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZHAM21",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢤ᠋ᢤ᠋ᢤ᠋ ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MAZAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        }, {
+            "ruleindex": "MAZAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢥᢥᢥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢥᢥᢥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MAZAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢥᢥᢥ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MBHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢨᢨᢨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢨᢨᢨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MBHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢨᢨᢨ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MLHAD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLHAD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLHAS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLHAS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢪᢪᢪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLHAZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLHAZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢪᢪᢪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLHAM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "᠊ᢪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MLHAM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢪᢪᢪ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+
+        {
+            "ruleindex": "MHYD10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHYD11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHYS10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHYS11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢧᢧᢧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHYZ10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHYZ11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢧᢧᢧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHYM10",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        },
+        {
+            "ruleindex": "MHYM11",
+            "rulewords": [
+                { "state": "1", "shape": "", "word": "ᢧᢧᢧ", "flag": { "imucs": 0, "mcrsft": 0, "delehi": 0, "mnksft": 0, "mgyzybaiti": 0, "mgyzyhawang": 0 } }
+            ]
+        }
+    ]
+}
