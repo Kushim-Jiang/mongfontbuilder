@@ -50,10 +50,10 @@
 
 # uni1824
 0xE28B: uni1824.AO.isol # 
-# uni1824.U.isol
+0xF0001: uni1824.U.isol # 󰀁
 0xE351: uni1824.Ux.isol # 
 0xE28C: uni1824.AO.init # 
-# uni1824.O.init
+0xF0000: uni1824.O.init # 󰀀
 0xE291: uni1824.O.medi # 
 0xE292: uni1824.O.medi.post_bowed # 
 0xE290: uni1824.AO.medi # 
@@ -166,11 +166,11 @@
 0xE2E2: 0xE2E5 # 
 0xE2E3: uni182D.G.init.pre_A # 
 0xE2E6: uni182D.G.init.pre_O # 
+0xE2EF: uni182D.G.init # 
 # uni182D.Gx.init
 0xE2EB: uni182D.G.medi.pre_A # 
 0xE2ED: uni182D.G.medi.pre_O # 
-0xE2EF: uni182D.G.medi # 
-0xE2F0: 0xE2EF # 
+0xE2F0: uni182D.G.medi # 
 0xE2EE: uni182D.H.medi # 
 0xE2EA: uni182D.Hx.medi # 
 0xE2EC: 0xE2EA # 
@@ -316,19 +316,24 @@
 
 # uni1841
 0xE34E: uni1841.Zr.init # 
+0xF0002: uni1841.Zr.medi # 󰀂
 
 # uni1842
 0xE34F: uni1842.Cr.init # 
+0xF0003: uni1842.Cr.medi # 󰀃
 
 # uni1843
+0xF0010: uni1843.Lv.isol # 󰀐
+0xF0011: uni1843.Lv.init # 󰀑
 0xE3AE: uni1843.Lv.medi # 
+0xF0012: uni1843.Lv.fina # 󰀒
 
 # uni1844
 0xE365: uni1844.AE.isol # 
-# 0xE365: uni1844.AE.init
+0xF0009: uni1844.AE.init # 󰀉
 0xE36B: uni1844.E.medi # 
 0xE36C: uni1844.AE.medi # 
-# 0xE36B: uni1844.E.fina
+0xF000A: uni1844.E.fina # 󰀊
 
 # uni1845
 0xE366: uni1845.AI3.isol # 
@@ -390,9 +395,11 @@
 0xE388: uni184B.B2.fina # 
 
 # uni184C
-0xE389: uni184C.Pp.init # 
+0xF000D: uni184C.Pp.init.pre_A # 󰀍
+0xF000E: uni184C.Pp.init.pre_O # 󰀎
 0xE47C: uni184C.Pp.medi.pre_A # 
 0xE47D: uni184C.Pp.medi.pre_O # 
+0xE389: uni184C.Pp.medi # 
 0xE38A: uni184C.Pp.fina # 
 
 # uni184D
@@ -418,27 +425,27 @@
 
 # uni1850
 0xE398: uni1850.Tp.init # 
-# uni1850.Tp.medi
+0xF0004: uni1850.Tp.medi # 󰀄
 0xE399: uni1850.Tp.fina # 
 
 # uni1851
 0xE39A: uni1851.Dp.init # 
-# uni1851.Dp.medi
-# uni1851.Dp.fina
+0xF0005: uni1851.Dp.medi # 󰀅
+0xF0006: uni1851.Dp.fina # 󰀆
 
 # uni1852
 0xE39B: uni1852.Jb.init # 
-# uni1852.Jb.medi
+0xF0007: uni1852.Jb.medi # 󰀇
 0xE39C: uni1852.Jb.fina # 
 
 # uni1853
 0xE39D: uni1853.Cp.init # 
-# uni1853.Cp.medi
+0xF0008: uni1853.Cp.medi # 󰀈
 0xE39E: uni1853.Cp.fina # 
 
 # uni1854
 0xE39F: uni1854.J.init # 
-# uni1854.J.medi
+0xF000B: uni1854.J.medi # 󰀋
 0xE3A0: uni1854.J.fina # 
 
 # uni1855
@@ -450,7 +457,7 @@
 
 # uni1856
 0xE3A2: uni1856.Wb.init # 
-# uni1856.Wb.medi
+0xF000F: uni1856.Wb.medi # 󰀏
 # uni1856.O.medi
 0xE3A3: uni1856.Wb.fina # 
 # uni1856.U.fina
@@ -465,6 +472,7 @@
 0xE3A6: uni1858.Gp.init # 
 0xE483: uni1858.Gp.init.pre_A # 
 0xE484: uni1858.Gp.init.pre_O # 
+0xF000C: uni1858.Gp.medi.pre_A # 󰀌
 0xE467: uni1858.Gp.fina # 
 
 # uni1859
@@ -876,28 +884,42 @@
 # unknown
 0xE474: # 
 0xE493: # 
+0xE499: uni1878.Cx.init # 
+0xE49A: ML.medi # 
+0xE49B: LL.medi # 
+0xE49C: MM.medi # 
 
-0xE402: uni1880.Anusvara # 
-0xE403: uni1880.Anusvara2 # 
-0xE404: uni1881.Visarga # 
-0xE405: uni1881.Visarga2 # 
-0xE406: uni1882.Damaru # 
-0xE407: uni1883.Ubadama # 
-0xE408: uni1884.Invubadama # 
-0xE409: uni1885.Baluda # 
-0xE40A: uni1886.Tribaluda # 
-0xE464: uni18A9.Dagalga # 
+# nominal glyphs
+0xE402: uni1880.Anusvara.nomi # 
+0xE403: uni1880.Anusvara2.nomi # 
+0xE404: uni1881.Visarga.nomi # 
+0xE405: uni1881.Visarga2.nomi # 
+0xE406: uni1882.Damaru.nomi # 
+0xE407: uni1883.Ubadama.nomi # 
+0xE408: uni1884.Invubadama.nomi # 
 
-0xE354: uni180B.Fvs1 # 
-0xE355: uni180C.Fvs2 # 
-0xE356: uni180D.Fvs3 # 
-0xE357: uni180E.Full # 
-0xE358: uni202F.Nnbsp # 
-0xE359: uni200D.Zwj # 
-0xE35A: uni200C.Zwnj # 
-0xE363: uni180E.Half # 
+0xE354: uni180B.Fvs1.nomi # 
+0xE355: uni180C.Fvs2.nomi # 
+0xE356: uni180D.Fvs3.nomi # 
+0xE4AA: uni180F.Fvs4.nomi # 
+0xE357: uni180E.Wide.nomi # 
+0xE358: uni202F.Nnbsp.nomi # 
+0xE359: uni200D.Zwj.nomi # 
+0xE35A: uni200C.Zwnj.nomi # 
+0xE498: uni180E.Mvs.nomi # 
+0xE363: uni180E.Narrow.nomi # 
 0xE364: # 
 
+0x20: uni0020.Widespace.nomi
+0xE4AB: uni180E.Narrowspace.nomi # 
+0xE23E: uni180A.Nirugu.medi # 
+
+# marks
+0xE409: uni1885.Baluda.mark # 
+0xE40A: uni1886.Tribaluda.mark # 
+0xE464: uni18A9.Dagalga.mark # 
+
+# parts and components
 0xE35B: uni1828.N.part # 
 0xE35C: uni182D.Hx.part # 
 0xE35D: uni182E.M.part # 
@@ -920,5 +942,22 @@
 0xE473: # 
 0xE495: # 
 
-0xE394: # 
-0xE3B0: # 
+0xE49D: # 
+0xE49E: # 
+0xE49F: # 
+0xE4A0: # 
+
+0xE234: uni1800.Birga.nomi # 
+0xE23F: u11660.Birga2.nomi # 
+0xE4A1: u11664.Birga3.nomi # 
+0xE241: u11662.Birga4.nomi # 
+0xE242: u11663.Birga5.nomi # 
+0xE240: u11661.Robirga.nomi # 
+0xE4A2: u11665.Robirga2.nomi # 
+0xE4A3: u11666.Robirga3.nomi # 
+0xE4A4: u11667.Invbirga.nomi # 
+0xE4A5: u11668.Invbirga2.nomi # 
+0xE4A6: u11669.Swibirga.nomi # 
+0xE4A7: u1166A.Swibirga2.nomi # 
+0xE4A8: u1166B.Swibirga3.nomi # 
+0xE4A9: u1166C.Swibirga4.nomi # 

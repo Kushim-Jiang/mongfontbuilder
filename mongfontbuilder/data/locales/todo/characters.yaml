@@ -232,8 +232,6 @@
       - written_units: [.N]
         gb_index: [GB/T 36649-2018, 0x1828, na initial form]
         eac_index: TNAS1
-      - written_units: [.N2]
-        gb_index: [GB/T 36649-2018, 0x0016, na medial separate form]
     medi:
       - written_units: [.A]
         gb_index: [GB/T 36649-2018, 0x0005, na first medial form]

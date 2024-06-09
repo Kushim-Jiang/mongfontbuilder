@@ -202,12 +202,9 @@
         fabricated: [hud]
     init:
       - written_units: [.N]
-        fvs: 2
         nominal:
       - written_units: [.A]
         fvs: 1
-      - written_units: [.N2]
-        fvs: 3
     medi:
       - written_units: [.A]
         fvs: 2
@@ -1576,3 +1573,35 @@
       - written_units: [.Jc.medi]
         fabricated: [man]
         nominal:
+
+# other characters
+
+0x180A:
+  id: .nirugu
+
+0x180B:
+  id: .fvs1
+
+0x180C:
+  id: .fvs2
+
+0x180D:
+  id: .fvs3
+
+0x180F:
+  id: .fvs4
+
+0x180E:
+  id: .mvs
+
+0x202F:
+  id: .nnbsp
+
+0x200C:
+  id: .zwnj
+
+0x200D:
+  id: .zwj
+
+0x20:
+  id: .space

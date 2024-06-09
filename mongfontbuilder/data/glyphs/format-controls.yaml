@@ -1,13 +1,13 @@
-fvs1:
-fvs2:
-fvs3:
-fvs4:
-lvs.ignored:
-mvs:
-mvs.narrow:
-mvs.nominal:
-mvs.wide:
-nirugu:
-nnbsp:
-zwj:
-zwnj:
+fvs1: uni180B.Fvs1.nomi
+fvs2: uni180C.Fvs2.nomi
+fvs3: uni180D.Fvs3.nomi
+fvs4: uni180F.Fvs4.nomi
+lvs.ignored: uni1843.Lv.mark
+mvs: uni180E.Mvs.nomi
+mvs.narrow: uni180E.Narrowspace.nomi
+mvs.nominal: uni180E.Wide.nomi
+mvs.wide: uni180E.Widespace.nomi
+nirugu: uni180A.Nirugu.medi
+nnbsp: uni202F.Nnbsp.nomi
+zwj: uni200D.Zwj.nomi
+zwnj: uni200C.Zwnj.nomi

@@ -1,20 +1,20 @@
 # numerals
-uni1810:
-uni1811:
-uni1812:
-uni1813:
-uni1814:
-uni1815:
-uni1816:
-uni1817:
-uni1818:
-uni1819:
+uni1810: uni1810.Zero.nomi
+uni1811: uni1811.One.nomi
+uni1812: uni1812.Two.nomi
+uni1813: uni1813.Three.nomi
+uni1814: uni1814.Four.nomi
+uni1815: uni1815.Five.nomi
+uni1816: uni1816.Six.nomi
+uni1817: uni1817.Seven.nomi
+uni1818: uni1818.Eight.nomi
+uni1819: uni1819.Nine.nomi
 
 # signs
-uni1880:
-uni1880.fvs1:
-uni1881:
-uni1881.fvs1:
-uni1882:
-uni1883:
-uni1884:
+uni1880: uni1880.Anusvara.nomi
+uni1880.fvs1: uni1880.Anusvara2.nomi
+uni1881: uni1881.Visarga.nomi
+uni1881.fvs1: uni1881.Visarga2.nomi
+uni1882: uni1882.Damaru.nomi
+uni1883: uni1883.Ubadama.nomi
+uni1884: uni1884.Invubadama.nomi

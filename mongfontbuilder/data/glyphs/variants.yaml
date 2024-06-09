@@ -71,7 +71,6 @@ uni1828.N.init._isol:
 uni1828.A.init._isol:
 uni1828.N.init:
 uni1828.A.init:
-uni1828.N2.init:
 uni1828.A.medi:
 uni1828.N.medi:
 uni1828.A.fina:
@@ -679,5 +678,6 @@ uni18AA.Lc.init._isol:
 uni18AA.Lc.init:
 uni18AA.Lc.medi:
 uni18AA.Lc.medi._fina:
+N.init.mvs:
 N.fina.mvs:
 Hx.fina.mvs:
