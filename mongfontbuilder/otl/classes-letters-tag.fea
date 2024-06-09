@@ -39,7 +39,7 @@
 @lvs-tod.fina = [uni1843.Lv.fina];
 @lvs-tod = [@lvs-tod.isol @lvs-tod.init @lvs-tod.medi @lvs-tod.fina lvs.ignored];
 @n-tod.isol = [uni1828.N.init._isol];
-@n-tod.init = [uni1828.N.init uni1828.N2.init];
+@n-tod.init = [uni1828.N.init];
 @n-tod.medi = [uni1828.A.medi uni1828.N.medi];
 @n-tod.fina = [uni1828.A.fina];
 @n-tod = [@n-tod.isol @n-tod.init @n-tod.medi @n-tod.fina];
@@ -208,9 +208,9 @@
 @trh-tag.medi = [uni188D.Cr2.medi];
 @trh-tag.fina = [uni188D.Cr2.medi._fina];
 @trh-tag = [@trh-tag.isol @trh-tag.init @trh-tag.medi @trh-tag.fina];
-@dr-tag.isol = [uni188E.Ds.init._isol];
-@dr-tag.init = [uni188E.Ds.init];
-@dr-tag.medi = [uni188E.Ds.medi];
+@dr-tag.isol = [uni188E.Ds.init._isol uni188E.Ds2.init._isol];
+@dr-tag.init = [uni188E.Ds.init uni188E.Ds2.init];
+@dr-tag.medi = [uni188E.Ds.medi uni188E.Ds2.medi];
 @dr-tag.fina = [uni188E.Ds.fina];
 @dr-tag = [@dr-tag.isol @dr-tag.init @dr-tag.medi @dr-tag.fina];
 @nr-tag.isol = [uni188F.Wn.init._isol];

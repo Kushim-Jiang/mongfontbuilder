@@ -173,10 +173,10 @@
 @zr-man.medi = [uni1877.Jc.medi];
 @zr-man.fina = [uni1877.Jc.medi._fina];
 @zr-man = [@zr-man.isol @zr-man.init @zr-man.medi @zr-man.fina];
-@aa-mag.isol = [uni1887.AAl.isol];
+@aa-mag.isol = [uni1887.AAw.isol];
 @aa-mag.init = [uni1887.AA.init];
 @aa-mag.medi = [uni1887.A.medi];
-@aa-mag.fina = [uni1887.Al.fina];
+@aa-mag.fina = [uni1887.Aw.fina];
 @aa-mag = [@aa-mag.isol @aa-mag.init @aa-mag.medi @aa-mag.fina];
 @gh-mag.isol = [uni189A.Hy.init._isol];
 @gh-mag.init = [uni189A.Hy.init];
@@ -243,9 +243,9 @@
 @cr-mag.medi = [uni18A3.Jq.medi];
 @cr-mag.fina = [uni18A3.Jq.fina];
 @cr-mag = [@cr-mag.isol @cr-mag.init @cr-mag.medi @cr-mag.fina];
-@zh-mag.isol = [uni18A4.St.init._isol];
-@zh-mag.init = [uni18A4.St.init];
-@zh-mag.medi = [uni18A4.St.medi];
+@zh-mag.isol = [uni18A4.St.init._isol uni18A4.St2.init._isol];
+@zh-mag.init = [uni18A4.St.init uni18A4.St2.init];
+@zh-mag.medi = [uni18A4.St.medi uni18A4.St2.medi];
 @zh-mag.fina = [uni18A4.St.fina];
 @zh-mag = [@zh-mag.isol @zh-mag.init @zh-mag.medi @zh-mag.fina];
 @z-mag.isol = [uni18A5.Sc.init._isol];

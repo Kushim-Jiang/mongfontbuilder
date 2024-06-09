@@ -688,12 +688,12 @@
 0xE401: uni1877.Jc.medi # 
 
 # uni1887
-0xE40B: uni1887.AAl.isol # 
+0xE40B: uni1887.AAw.isol # 
 # uni1887.AA.init
 # uni1887.A.medi
-0xE40D: uni1887.Al.fina # 
+0xE40D: uni1887.Aw.fina # 
 0xE352: 0xE40D # 
-0xE411: uni1887.Al.fina.post_bowed # 
+0xE411: uni1887.Aw.fina.post_bowed # 
 0xE410: 0xE411 # 
 0xE40E: uni1887.A2.fina # 
 

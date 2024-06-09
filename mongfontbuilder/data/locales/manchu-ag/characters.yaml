@@ -21,13 +21,13 @@
   transcription: "āₘ"
   presentation_forms:
     isol:
-      - written_units: [.A, .Al]
+      - written_units: [.A, .Aw]
     init:
       - written_units: [.A, .A]
     medi:
       - written_units: [.A]
     fina:
-      - written_units: [.Al]
+      - written_units: [.Aw]
 
 - cp: 0x185D # ᡝ MONGOLIAN LETTER SIBE E
   id: "e"

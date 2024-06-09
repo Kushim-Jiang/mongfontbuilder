@@ -3,11 +3,10 @@ include(classes-letters.fea);
 include(classes-categories.fea);
 
 table GDEF {
-    GlyphClassDef [nirugu @fvs.nominal @msc zwnj zwj zwj.ignored], , [nirugu.ignored @fvs.ignored @fvs.effective zwnj.ignored masculine feminine], ;
+    GlyphClassDef [nirugu @fvs.nominal @msc zwnj zwj zwj.ignored], , [nirugu.ignored @fvs.ignored @fvs.effective lvs.ignored zwnj.ignored baluda tribaluda dagalga masculine feminine], ;
 } GDEF;
 
 languagesystem DFLT dflt;
-languagesystem hani dflt;
 languagesystem mong dflt;
 
 # IIa. Cursive script: Initiation of cursive positions
@@ -36,13 +35,26 @@ feature rclt {
     include(lookups-tags.fea);
 } rclt;
 
-# # IB.1: Vertical forms of punctuation marks
-# include(lookups-punctuation.fea);
-# feature rlig {
-#     lookup Ib.punctuation.ligature;
-# } rlig;
+feature calt {
+    include(lookups-tags.fea);
+} calt;
 
-# feature vert {
-#     lookup Ib.punctuation.vertical;
-# } vert;
+# IB.1: Vertical forms of punctuation marks
+include(lookups-punctuation.fea);
+feature vert {
+    lookup Ib.punctuation.vertical;
+} vert;
 
+feature rlig {
+    lookup Ib.punctuation.ligature;
+} rlig;
+
+feature vpal {
+    lookup Ib.punctuation.propotional;
+} vpal;
+
+# IB.2: Optional treatments
+include(lookups-marks.fea);
+feature mark {
+    lookup Ib.marks.posit;
+} mark;
