@@ -1,6 +1,6 @@
-- cp: 0x1820 # ᠠ MONGOLIAN LETTER A
-  id: "a"
-  presentation_forms:
+0x1820: # ᠠ MONGOLIAN LETTER A
+  id: .a
+  variants:
     isol:
       - written_units: [.A, .A]
         fvs: 3
@@ -19,9 +19,9 @@
       - written_units: [.Aa]
         fvs: 1
 
-- cp: 0x1844 # ᡄ MONGOLIAN LETTER TODO E
-  id: "e"
-  presentation_forms:
+0x1844: # ᡄ MONGOLIAN LETTER TODO E
+  id: .e
+  variants:
     isol:
       - written_units: [.A, .E]
     init:
@@ -33,9 +33,9 @@
     fina:
       - written_units: [.E]
 
-- cp: 0x1845 # ᡅ MONGOLIAN LETTER TODO I
-  id: "i"
-  presentation_forms:
+0x1845: # ᡅ MONGOLIAN LETTER TODO I
+  id: .i
+  variants:
     isol:
       - written_units: [.A, .I3]
     init:
@@ -55,9 +55,9 @@
       - written_units: [.Ip]
         fvs: 1
 
-- cp: 0x1846 # ᡆ MONGOLIAN LETTER TODO O
-  id: "o"
-  presentation_forms:
+0x1846: # ᡆ MONGOLIAN LETTER TODO O
+  id: .o
+  variants:
     isol:
       - written_units: [.A, .Ob]
     init:
@@ -69,10 +69,10 @@
     fina:
       - written_units: [.Ob]
 
-- cp: 0x1849 # ᡉ MONGOLIAN LETTER TODO UE
-  id: "ue"
-  transcription: "ü"
-  presentation_forms:
+0x1849: # ᡉ MONGOLIAN LETTER TODO UE
+  id: .ue
+  transcription: .ü
+  variants:
     isol:
       - written_units: [.A, .U]
       - written_units: [.A, .O]
@@ -89,10 +89,10 @@
       - written_units: [.O]
         fvs: 1
 
-- cp: 0x1843 # ᡃ MONGOLIAN LETTER TODO LONG VOWEL SIGN
-  id: "lvs"
-  transcription: "ƚ"
-  presentation_forms:
+0x1843: # ᡃ MONGOLIAN LETTER TODO LONG VOWEL SIGN
+  id: .lvs
+  transcription: .ƚ
+  variants:
     isol:
       - written_units: [.Lv]
     init:
@@ -102,10 +102,10 @@
     fina:
       - written_units: [.Lv]
 
-- cp: 0x183A # ᠺ MONGOLIAN LETTER KA
-  id: "kTag"
-  transcription: "kₜ"
-  presentation_forms:
+0x183A: # ᠺ MONGOLIAN LETTER KA
+  id: .kTag
+  transcription: .kₜ
+  variants:
     isol:
       - written_units: [.K2.init]
     init:
@@ -115,10 +115,23 @@
     fina:
       - written_units: [.K2.medi]
 
-- cp: 0x183B # ᠻ MONGOLIAN LETTER KHA
-  id: "khTag"
-  transcription: "kʰₜ"
-  presentation_forms:
+0x183E: # ᠾ MONGOLIAN LETTER HAA
+  id: .hTag
+  transcription: .hₜ
+  variants:
+    isol:
+      - written_units: [.A.init, .Hr.init]
+    init:
+      - written_units: [.A, .Hr]
+    medi:
+      - written_units: [.Hr]
+    fina:
+      - written_units: [.Hr]
+
+0x183B: # ᠻ MONGOLIAN LETTER KHA
+  id: .khTag
+  transcription: .kʰₜ
+  variants:
     isol:
       - written_units: [.K.init]
     init:
@@ -128,10 +141,10 @@
     fina:
       - written_units: [.K.medi]
 
-- cp: 0x1889 # ᢉ MONGOLIAN LETTER ALI GALI KA
-  id: "gTag"
-  transcription: "gₜ"
-  presentation_forms:
+0x1889: # ᢉ MONGOLIAN LETTER ALI GALI KA
+  id: .gTag
+  transcription: .gₜ
+  variants:
     isol:
       - written_units: [.G.init]
     init:
@@ -141,9 +154,9 @@
     fina:
       - written_units: [.G.medi]
 
-- cp: 0x184E # ᡎ MONGOLIAN LETTER TODO GA
-  id: "g"
-  presentation_forms:
+0x184E: # ᡎ MONGOLIAN LETTER TODO GA
+  id: .g
+  variants:
     isol:
       - written_units: [.Hb.init]
       - written_units: [.G.init]
@@ -165,10 +178,10 @@
     fina:
       - written_units: [.Hp]
 
-- cp: 0x184A # ᡊ MONGOLIAN LETTER TODO ANG
-  id: "ng"
-  transcription: "ŋ"
-  presentation_forms:
+0x184A: # ᡊ MONGOLIAN LETTER TODO ANG
+  id: .ng
+  transcription: .ŋ
+  variants:
     isol:
       - written_units: [.A.init, .G.medi]
     init:
@@ -178,10 +191,10 @@
     fina:
       - written_units: [.A, .G2]
 
-- cp: 0x188A # ᢊ MONGOLIAN LETTER ALI GALI NGA
-  id: "ngTag"
-  transcription: "ŋₜ"
-  presentation_forms:
+0x188A: # ᢊ MONGOLIAN LETTER ALI GALI NGA
+  id: .ngTag
+  transcription: .ŋₜ
+  variants:
     isol:
       - written_units: [.N.init, .G.medi]
     init:
@@ -191,9 +204,9 @@
     fina:
       - written_units: [.N.medi, .G.medi]
 
-- cp: 0x1853 # ᡓ MONGOLIAN LETTER TODO JA
-  id: "j"
-  presentation_forms:
+0x1853: # ᡓ MONGOLIAN LETTER TODO JA
+  id: .j
+  variants:
     isol:
       - written_units: [.Cp.init]
     init:
@@ -203,10 +216,10 @@
     fina:
       - written_units: [.Cp.medi]
 
-- cp: 0x183C # ᠼ MONGOLIAN LETTER TSA
-  id: "chTag"
-  transcription: "cʰₜ"
-  presentation_forms:
+0x183C: # ᠼ MONGOLIAN LETTER TSA
+  id: .chTag
+  transcription: .cʰₜ
+  variants:
     isol:
       - written_units: [.C.init]
     init:
@@ -216,10 +229,10 @@
     fina:
       - written_units: [.C.medi]
 
-- cp: 0x185C # ᡜ MONGOLIAN LETTER TODO DZA
-  id: "jTag"
-  transcription: "jₜ"
-  presentation_forms:
+0x185C: # ᡜ MONGOLIAN LETTER TODO DZA
+  id: .jTag
+  transcription: .jₜ
+  variants:
     isol:
       - written_units: [.Zc.init]
     init:
@@ -229,10 +242,10 @@
     fina:
       - written_units: [.Zc]
 
-- cp: 0x185B # ᡛ MONGOLIAN LETTER TODO NIA
-  id: "ny"
-  transcription: "ñ"
-  presentation_forms:
+0x185B: # ᡛ MONGOLIAN LETTER TODO NIA
+  id: .ny
+  transcription: .ñ
+  variants:
     isol:
       - written_units: [.Ny.init]
     init:
@@ -242,10 +255,10 @@
     fina:
       - written_units: [.Ny.medi]
 
-- cp: 0x188C # ᢌ MONGOLIAN LETTER ALI GALI TTA
-  id: "trTag"
-  transcription: "ṭₜ"
-  presentation_forms:
+0x188C: # ᢌ MONGOLIAN LETTER ALI GALI TTA
+  id: .trTag
+  transcription: .ṭₜ
+  variants:
     isol:
       - written_units: [.Zr.init]
     init:
@@ -255,10 +268,10 @@
     fina:
       - written_units: [.Zr.medi]
 
-- cp: 0x188D # ᢍ MONGOLIAN LETTER ALI GALI TTHA
-  id: "trhTag"
-  transcription: "ṭʰₜ"
-  presentation_forms:
+0x188D: # ᢍ MONGOLIAN LETTER ALI GALI TTHA
+  id: .trhTag
+  transcription: .ṭʰₜ
+  variants:
     isol:
       - written_units: [.Cr2.init]
     init:
@@ -268,10 +281,10 @@
     fina:
       - written_units: [.Cr2.medi]
 
-- cp: 0x188E # ᢎ MONGOLIAN LETTER ALI GALI DDA
-  id: "drTag"
-  transcription: "ḍₜ"
-  presentation_forms:
+0x188E: # ᢎ MONGOLIAN LETTER ALI GALI DDA
+  id: .drTag
+  transcription: .ḍₜ
+  variants:
     isol:
       - written_units: [.Ds2.init]
         fvs: 1
@@ -284,10 +297,10 @@
     fina:
       - written_units: [.Ds]
 
-- cp: 0x188F # ᢏ MONGOLIAN LETTER ALI GALI NNA
-  id: "nrTag"
-  transcription: "ṇₜ"
-  presentation_forms:
+0x188F: # ᢏ MONGOLIAN LETTER ALI GALI NNA
+  id: .nrTag
+  transcription: .ṇₜ
+  variants:
     isol:
       - written_units: [.Wn.init]
     init:
@@ -297,10 +310,10 @@
     fina:
       - written_units: [.Wn.medi]
 
-- cp: 0x1890 # ᢐ MONGOLIAN LETTER ALI GALI TA
-  id: "tTag"
-  transcription: "tₜ"
-  presentation_forms:
+0x1890: # ᢐ MONGOLIAN LETTER ALI GALI TA
+  id: .tTag
+  transcription: .tₜ
+  variants:
     isol:
       - written_units: [.Dv.init]
     init:
@@ -310,9 +323,9 @@
     fina:
       - written_units: [.Dv]
 
-- cp: 0x1850 # ᡐ MONGOLIAN LETTER TODO TA
-  id: "t"
-  presentation_forms:
+0x1850: # ᡐ MONGOLIAN LETTER TODO TA
+  id: .t
+  variants:
     isol:
       - written_units: [.Tp.init]
     init:
@@ -322,9 +335,9 @@
     fina:
       - written_units: [.Tp.medi]
 
-- cp: 0x1851 # ᡑ MONGOLIAN LETTER TODO DA
-  id: "d"
-  presentation_forms:
+0x1851: # ᡑ MONGOLIAN LETTER TODO DA
+  id: .d
+  variants:
     isol:
       - written_units: [.Dp.init]
     init:
@@ -334,9 +347,9 @@
     fina:
       - written_units: [.Dp.medi]
 
-- cp: 0x1828 # ᠨ MONGOLIAN LETTER NA
-  id: "n"
-  presentation_forms:
+0x1828: # ᠨ MONGOLIAN LETTER NA
+  id: .n
+  variants:
     isol:
       - written_units: [.N.init]
     init:
@@ -351,10 +364,10 @@
       - written_units: [.A]
         fvs: 2
 
-- cp: 0x1892 # ᢒ MONGOLIAN LETTER ALI GALI PA
-  id: "pTag"
-  transcription: "pₜ"
-  presentation_forms:
+0x1892: # ᢒ MONGOLIAN LETTER ALI GALI PA
+  id: .pTag
+  transcription: .pₜ
+  variants:
     isol:
       - written_units: [.Bh.init]
         fvs: 1
@@ -367,9 +380,9 @@
     fina:
       - written_units: [.Bh.medi]
 
-- cp: 0x184C # ᡌ MONGOLIAN LETTER TODO PA
-  id: "p"
-  presentation_forms:
+0x184C: # ᡌ MONGOLIAN LETTER TODO PA
+  id: .p
+  variants:
     isol:
       - written_units: [.Ph.init]
         fvs: 1
@@ -382,9 +395,9 @@
     fina:
       - written_units: [.Ph.medi]
 
-- cp: 0x184B # ᡋ MONGOLIAN LETTER TODO BA
-  id: "b"
-  presentation_forms:
+0x184B: # ᡋ MONGOLIAN LETTER TODO BA
+  id: .b
+  variants:
     isol:
       - written_units: [.B.init]
     init:
@@ -394,9 +407,9 @@
     fina:
       - written_units: [.B2]
 
-- cp: 0x184F # ᡏ MONGOLIAN LETTER TODO MA
-  id: "m"
-  presentation_forms:
+0x184F: # ᡏ MONGOLIAN LETTER TODO MA
+  id: .m
+  variants:
     isol:
       - written_units: [.M.init]
     init:
@@ -406,9 +419,9 @@
     fina:
       - written_units: [.M2]
 
-- cp: 0x1855 # ᡕ MONGOLIAN LETTER TODO YA
-  id: "y"
-  presentation_forms:
+0x1855: # ᡕ MONGOLIAN LETTER TODO YA
+  id: .y
+  variants:
     isol:
       - written_units: [.I.init]
     init:
@@ -418,10 +431,10 @@
     fina:
       - written_units: [.I.medi]
 
-- cp: 0x18A7 # ᢧ MONGOLIAN LETTER ALI GALI HALF YA
-  id: "yTag"
-  transcription: "yₜ"
-  presentation_forms:
+0x18A7: # ᢧ MONGOLIAN LETTER ALI GALI HALF YA
+  id: .yTag
+  transcription: .yₜ
+  variants:
     isol:
       - written_units: [.Yp.medi]
     init:
@@ -433,9 +446,9 @@
       - written_units: [.Ir]
         fvs: 1
 
-- cp: 0x1837 # ᠷ MONGOLIAN LETTER RA
-  id: "r"
-  presentation_forms:
+0x1837: # ᠷ MONGOLIAN LETTER RA
+  id: .r
+  variants:
     isol:
       - written_units: [.R.init]
     init:
@@ -445,9 +458,9 @@
     fina:
       - written_units: [.R]
 
-- cp: 0x182F # ᠯ MONGOLIAN LETTER LA
-  id: "l"
-  presentation_forms:
+0x182F: # ᠯ MONGOLIAN LETTER LA
+  id: .l
+  variants:
     isol:
       - written_units: [.L.init]
     init:
@@ -457,9 +470,9 @@
     fina:
       - written_units: [.L]
 
-- cp: 0x1856 # ᡖ MONGOLIAN LETTER TODO WA
-  id: "w"
-  presentation_forms:
+0x1856: # ᡖ MONGOLIAN LETTER TODO WA
+  id: .w
+  variants:
     isol:
       - written_units: [.Wb.init]
     init:
@@ -469,10 +482,10 @@
     fina:
       - written_units: [.Wb.medi]
 
-- cp: 0x18A6 # ᢦ MONGOLIAN LETTER ALI GALI HALF U
-  id: "waTag"
-  transcription: "w̄ₜ"
-  presentation_forms:
+0x18A6: # ᢦ MONGOLIAN LETTER ALI GALI HALF U
+  id: .waTag
+  transcription: .w̄ₜ
+  variants:
     isol:
       - written_units: [.Wp.fina]
     init:
@@ -482,10 +495,10 @@
     fina:
       - written_units: [.Wp]
 
-- cp: 0x1831 # ᠱ MONGOLIAN LETTER SHA
-  id: "sh"
-  transcription: "ś"
-  presentation_forms:
+0x1831: # ᠱ MONGOLIAN LETTER SHA
+  id: .sh
+  transcription: .ś
+  variants:
     isol:
       - written_units: [.Sh.init]
     init:
@@ -497,10 +510,10 @@
     fina:
       - written_units: [.Sh]
 
-- cp: 0x1894 # ᢔ MONGOLIAN LETTER ALI GALI SSA
-  id: "shTag"
-  transcription: "ṣₜ"
-  presentation_forms:
+0x1894: # ᢔ MONGOLIAN LETTER ALI GALI SSA
+  id: .shTag
+  transcription: .ṣₜ
+  variants:
     isol:
       - written_units: [.Sx.init]
     init:
@@ -510,9 +523,9 @@
     fina:
       - written_units: [.Sx.medi]
 
-- cp: 0x1830 # ᠰ MONGOLIAN LETTER SA
-  id: "s"
-  presentation_forms:
+0x1830: # ᠰ MONGOLIAN LETTER SA
+  id: .s
+  variants:
     isol:
       - written_units: [.S.init]
     init:
@@ -522,10 +535,10 @@
     fina:
       - written_units: [.S]
 
-- cp: 0x1859 # ᡙ MONGOLIAN LETTER TODO HAA
-  id: "hh"
-  transcription: "ħ"
-  presentation_forms:
+0x1859: # ᡙ MONGOLIAN LETTER TODO HAA
+  id: .hh
+  transcription: .ħ
+  variants:
     isol:
       - written_units: [.A.init, .Hr.medi]
     init:
@@ -535,9 +548,9 @@
     fina:
       - written_units: [.A, .Hr]
 
-- cp: 0x1854 # ᡔ MONGOLIAN LETTER TODO TSA
-  id: "c"
-  presentation_forms:
+0x1854: # ᡔ MONGOLIAN LETTER TODO TSA
+  id: .c
+  variants:
     isol:
       - written_units: [.J.init]
     init:
@@ -547,9 +560,9 @@
     fina:
       - written_units: [.J.medi]
 
-- cp: 0x1834 # ᠴ MONGOLIAN LETTER CHA
-  id: "z"
-  presentation_forms:
+0x1834: # ᠴ MONGOLIAN LETTER CHA
+  id: .z
+  variants:
     isol:
       - written_units: [.Ch.init]
     init:
@@ -559,10 +572,10 @@
     fina:
       - written_units: [.Ch.medi]
 
-- cp: 0x1899 # ᢙ MONGOLIAN LETTER TODO ALI GALI ZHA
-  id: "zhTag"
-  transcription: "žₜ"
-  presentation_forms:
+0x1899: # ᢙ MONGOLIAN LETTER TODO ALI GALI ZHA
+  id: .zhTag
+  transcription: .žₜ
+  variants:
     isol:
       - written_units: [.Rz.init]
     init:
@@ -572,10 +585,10 @@
     fina:
       - written_units: [.Rz.medi]
 
-- cp: 0x1896 # ᢖ MONGOLIAN LETTER ALI GALI ZA
-  id: "zTag"
-  transcription: "zₜ"
-  presentation_forms:
+0x1896: # ᢖ MONGOLIAN LETTER ALI GALI ZA
+  id: .zTag
+  transcription: .zₜ
+  variants:
     isol:
       - written_units: [.Zz.init]
     init:
@@ -585,10 +598,10 @@
     fina:
       - written_units: [.Zz.medi]
 
-- cp: 0x1897 # ᢗ MONGOLIAN LETTER ALI GALI AH
-  id: "qTag"
-  transcription: "ʔₜ"
-  presentation_forms:
+0x1897: # ᢗ MONGOLIAN LETTER ALI GALI AH
+  id: .qTag
+  transcription: .ʔₜ
+  variants:
     isol:
       - written_units: [.Q.init]
     init:
@@ -598,10 +611,10 @@
     fina:
       - written_units: [.Q.medi]
 
-- cp: 0x1840 # ᡀ MONGOLIAN LETTER LHA
-  id: "lh"
-  transcription: "ł"
-  presentation_forms:
+0x1840: # ᡀ MONGOLIAN LETTER LHA
+  id: .lh
+  transcription: .ł
+  variants:
     isol:
       - written_units: [.L.init, .Hr.medi]
     init:

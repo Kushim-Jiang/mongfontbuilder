@@ -51,13 +51,18 @@ def parse_glyphs(word: str, font: Path = font_path) -> str:
         utn_name = UTNGlyphName(name.replace("._", "@").replace(".mvs", "@mvs"))
         written_units += get_units(utn_name)
 
-    written_units = written_units.replace("RightLeft", "")
+    written_units = (
+        written_units.replace("RightLeft", "")
+        .replace("RightBaludaLeft", "Baluda")
+        .replace("RightTribaludaLeft", "Tribaluda")
+    )
     return (
         " ".join(UTNGlyphName(f".{written_units}.").written_units)
-        .replace("Nirugu", "-")
+        .replace("Nirugu", "Ni")
         .replace("Left", "<")
         .replace("Right", ">")
-        .replace("Widespace", "_")
+        .replace("Widespace", "-")
+        .replace("Narrowspace", "_")
     )
 
 
@@ -75,10 +80,11 @@ def parse_menksoft(shape: str) -> str:
     written_units = written_units.replace("RightLeft", "")
     return (
         " ".join(UTNGlyphName(f".{written_units}.").written_units)
-        .replace("Nirugu", "-")
+        .replace("Nirugu", "Ni")
         .replace("Left", "<")
         .replace("Right", ">")
-        .replace("Widespace", "_")
+        .replace("Widespace", "-")
+        .replace("Narrowspace", "_")
     )
 
 

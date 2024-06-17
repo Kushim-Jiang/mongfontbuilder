@@ -17,9 +17,12 @@ def _load(path: Path) -> dict:
 def load_char_data():
     char_paths = {
         "hud": "locales/hudum/characters.yaml",
+        "hag": "locales/hudum-ag/characters.yaml",
         "tod": "locales/todo/characters.yaml",
+        "tag": "locales/todo-ag/characters.yaml",
         "sib": "locales/sibe/characters.yaml",
         "man": "locales/manchu/characters.yaml",
+        "mag": "locales/manchu-ag/characters.yaml",
         "other": "characters.yaml",
     }
 

@@ -1,3 +1,21 @@
-from mongfonttester import eac_test
+from mongfonttester import core_test, eac_test
+from mongfonttester.test import parse_code
 
-eac_test.eac_test("hud")
+
+def test_core():
+    for writing_system in core_test.writing_systems:
+        core_test.core_test(writing_system)
+
+
+def test_input(writing_system: str):
+    while True:
+        chars = input("input: ")
+        print(parse_code(chars, writing_system))
+        print(eac_test.parse_glyphs(chars))
+
+
+def test_eac(writing_system: str):
+    eac_test.eac_test(writing_system)
+
+
+test_core()

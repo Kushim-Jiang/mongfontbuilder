@@ -1,0 +1,322 @@
+# Sanskrit syllabaries
+
+pu1-a-1	a fvs1 space a fvs1 mvs a	A - A _ Aa
+pu1-a-2	iHag space iHag iHag space ue fvs1 space o ue	A I4 - A I I4 - A U - A O U
+pu1-a-3	r iHag space r iHag iHag space l iHag space l iHag iHag	R I4 - R I I4 - L I4 - L I I4
+pu1-a-4	ee space ee ee space o w a space o w w a	A W - A W W - A O W A - A O W W A
+
+pu1-ka-1	kHag a space kHag a mvs a	G Aa - G Aa _ Aa
+pu1-ka-2	kHag iHag space kHag iHag iHag space kHag ue fvs2 space kHag o ue	G I - G I I4 - G O - G O U
+pu1-ka-3	kHag a r iHag space kHag a r iHag iHag	G A R I4 - G A R I I4
+pu1-ka-4	kHag a l iHag space kHag a l iHag iHag	G A L I4 - G A L I I4
+pu1-ka-5	kHag ee space kHag ee ee space kHag o w a space kHag o w w a	G W - G W W - G O W A - G O W W A
+
+pu1-kha-1	k a space k a mvs a	K Aa - K Aa _ Aa
+pu1-kha-2	k iHag space k iHag iHag space k ue fvs2 space k o ue	K I - K I I4 - K O - K O U
+pu1-kha-3	k a r iHag space k a r iHag iHag	K A R I4 - K A R I I4
+pu1-kha-4	k a l iHag space k a l iHag iHag	K A L I4 - K A L I I4
+pu1-kha-5	k ee space k ee ee space k o w a space k o w w a	K W - K W W - K O W A - K O W W A
+
+pu1-ga-1	k2 a space k2 a mvs a	K2 Aa - K2 Aa _ Aa
+pu1-ga-2	k2 iHag space k2 iHag iHag space k2 ue fvs2 space k2 o ue	K2 I - K2 I I4 - K2 O - K2 O U
+pu1-ga-3	k2 a r iHag space k2 a r iHag iHag	K2 A R I4 - K2 A R I I4
+pu1-ga-4	k2 a l iHag space k2 a l iHag iHag	K2 A L I4 - K2 A L I I4
+pu1-ga-5	k2 ee space k2 ee ee space k2 o w a space k2 o w w a	K2 W - K2 W W - K2 O W A - K2 O W W A
+
+pu1-gha-1	k2 hh a fvs1 space k2 hh a fvs1 mvs a	K2 Hr Aa - K2 Hr Aa _ Aa
+pu1-gha-2	k2 hh iHag space k2 hh iHag iHag	K2 Hr I4 - K2 Hr I I4
+pu1-gha-3	k2 hh ue space k2 hh o ue	K2 Hr U - K2 Hr O U
+pu1-gha-4	k2 hh a r iHag space k2 hh a r iHag iHag	K2 Hr A R I4 - K2 Hr A R I I4
+pu1-gha-5	k2 hh a l iHag space k2 hh a l iHag iHag	K2 Hr A L I4 - K2 Hr A L I I4
+pu1-gha-6	k2 hh ee space k2 hh ee ee	K2 Hr W - K2 Hr W W
+pu1-gha-7	k2 hh o w a space k2 hh o w w a	K2 Hr O W A - K2 Hr O W W A
+
+pu1-ṅa-1	ngHag a fvs1 space ngHag a fvs1 mvs a	N G Aa - N G Aa _ Aa
+pu1-ṅa-2	ngHag iHag space ngHag iHag iHag space ngHag ue fvs3 space ngHag o ue	N G I4 - N G I I4 - N G U - N G O U
+pu1-ṅa-3	ngHag r iHag space ngHag r iHag iHag	N G R I4 - N G R I I4
+pu1-ṅa-4	ngHag l iHag space ngHag l iHag iHag	N G L I4 - N G L I I4
+pu1-ṅa-5	ngHag ee space ngHag ee ee space ngHag o w a space ngHag o w w a	N G W - N G W W - N G O W A - N G O W W A
+
+pu1-ca-1	cHag a fvs1 space cHag a fvs1 mvs a	Zc Aa - Zc Aa _ Aa
+pu1-ca-2	cHag iHag space cHag iHag iHag space cHag ue fvs3 space cHag o ue	Zc I4 - Zc I I4 - Zc U - Zc O U
+pu1-ca-3	cHag a r iHag space cHag a r iHag iHag	Zc A R I4 - Zc A R I I4
+pu1-ca-4	cHag a l iHag space cHag a l iHag iHag	Zc A L I4 - Zc A L I I4
+pu1-ca-5	cHag ee space cHag ee ee space cHag o w a space cHag o w w a	Zc W - Zc W W - Zc O W A - Zc O W W A
+
+pu1-cha-1	c a fvs1 space c a fvs1 mvs a	C Aa - C Aa _ Aa
+pu1-cha-2	c iHag space c iHag iHag space c ue fvs3 space c o ue	C I4 - C I I4 - C U - C O U
+pu1-cha-3	c a r iHag space c a r iHag iHag	C A R I4 - C A R I I4
+pu1-cha-4	c a l iHag space c a l iHag iHag	C A L I4 - C A L I I4
+pu1-cha-5	c ee space c ee ee space c o w a space c o w w a	C W - C W W - C O W A - C O W W A
+
+pu1-ja-1	zHag a fvs1 space zHag a fvs1 mvs a	Zz Aa - Zz Aa _ Aa
+pu1-ja-2	zHag iHag space zHag iHag iHag space zHag ue fvs3 space zHag o ue	Zz I4 - Zz I I4 - Zz U - Zz O U
+pu1-ja-3	zHag a r iHag space zHag a r iHag iHag	Zz A R I4 - Zz A R I I4
+pu1-ja-4	zHag a l iHag space zHag a l iHag iHag	Zz A L I4 - Zz A L I I4
+pu1-ja-5	zHag ee space zHag ee ee space zHag o w a space zHag o w w a	Zz W - Zz W W - Zz O W A - Zz O W W A
+
+pu1-jha-1	zHag hh a fvs1 space zHag hh a fvs1 mvs a	Zz Hr Aa - Zz Hr Aa _ Aa
+pu1-jha-2	zHag hh iHag space zHag hh iHag iHag	Zz Hr I4 - Zz Hr I I4
+pu1-jha-3	zHag hh ue space zHag hh o ue	Zz Hr U - Zz Hr O U
+pu1-jha-4	zHag hh a r iHag space zHag hh a r iHag iHag	Zz Hr A R I4 - Zz Hr A R I I4
+pu1-jha-5	zHag hh a l iHag space zHag hh a l iHag iHag	Zz Hr A L I4 - Zz Hr A L I I4
+pu1-jha-6	zHag hh ee space zHag hh ee ee	Zz Hr W - Zz Hr W W
+pu1-jha-7	zHag hh o w a space zHag hh o w w a	Zz Hr O W A - Zz Hr O W W A
+
+pu1-ña-1	nyHag a fvs1 space nyHag a fvs1 mvs a	Ny Aa - Ny Aa _ Aa
+pu1-ña-2	nyHag iHag space nyHag iHag iHag space nyHag ue fvs3 space nyHag o ue	Ny I4 - Ny I I4 - Ny U - Ny O U
+pu1-ña-3	nyHag a r iHag space nyHag a r iHag iHag	Ny A R I4 - Ny A R I I4
+pu1-ña-4	nyHag a l iHag space nyHag a l iHag iHag	Ny A L I4 - Ny A L I I4
+pu1-ña-5	nyHag ee space nyHag ee ee space nyHag o w a space nyHag o w w a	Ny W - Ny W W - Ny O W A - Ny O W W A
+
+pu1-ṭa-1	trHag a fvs1 space trHag a fvs1 mvs a	Zr Aa - Zr Aa _ Aa
+pu1-ṭa-2	trHag iHag space trHag iHag iHag space trHag ue fvs3 space trHag o ue	Zr I4 - Zr I I4 - Zr U - Zr O U
+pu1-ṭa-3	trHag a r iHag space trHag a r iHag iHag	Zr A R I4 - Zr A R I I4
+pu1-ṭa-4	trHag a l iHag space trHag a l iHag iHag	Zr A L I4 - Zr A L I I4
+pu1-ṭa-5	trHag ee space trHag ee ee space trHag o w a space trHag o w w a	Zr W - Zr W W - Zr O W A - Zr O W W A
+
+pu1-ṭha-1	trhHag a fvs1 space trhHag a fvs1 mvs a	Cr2 Aa - Cr2 Aa _ Aa
+pu1-ṭha-2	trhHag iHag space trhHag iHag iHag space trhHag ue fvs3 space trhHag o ue	Cr2 I4 - Cr2 I I4 - Cr2 U - Cr2 O U
+pu1-ṭha-3	trhHag a r iHag space trhHag a r iHag iHag	Cr2 A R I4 - Cr2 A R I I4
+pu1-ṭha-4	trhHag a l iHag space trhHag a l iHag iHag	Cr2 A L I4 - Cr2 A L I I4
+pu1-ṭha-5	trhHag ee space trhHag ee ee space trhHag o w a space trhHag o w w a	Cr2 W - Cr2 W W - Cr2 O W A - Cr2 O W W A
+
+pu1-ḍa-1	drHag a fvs1 space drHag a fvs1 mvs a	Ds Aa - Ds Aa _ Aa
+pu1-ḍa-2	drHag iHag space drHag iHag iHag space drHag ue fvs3 space drHag o ue	Ds I4 - Ds I I4 - Ds U - Ds O U
+pu1-ḍa-3	drHag a r iHag space drHag a r iHag iHag	Ds A R I4 - Ds A R I I4
+pu1-ḍa-4	drHag a l iHag space drHag a l iHag iHag	Ds A L I4 - Ds A L I I4
+pu1-ḍa-5	drHag ee space drHag ee ee space drHag o w a space drHag o w w a	Ds W - Ds W W - Ds O W A - Ds O W W A
+
+pu1-ḍha-1	drHag hh a fvs1 space drHag hh a fvs1 mvs a	Ds Hr Aa - Ds Hr Aa _ Aa
+pu1-ḍha-2	drHag hh iHag space drHag hh iHag iHag	Ds Hr I4 - Ds Hr I I4
+pu1-ḍha-3	drHag hh ue space drHag hh o ue	Ds Hr U - Ds Hr O U
+pu1-ḍha-4	drHag hh a r iHag space drHag hh a r iHag iHag	Ds Hr A R I4 - Ds Hr A R I I4
+pu1-ḍha-5	drHag hh a l iHag space drHag hh a l iHag iHag	Ds Hr A L I4 - Ds Hr A L I I4
+pu1-ḍha-6	drHag hh ee space drHag hh ee ee	Ds Hr W - Ds Hr W W
+pu1-ḍha-7	drHag hh o w a space drHag hh o w w a	Ds Hr O W A - Ds Hr O W W A
+
+pu1-ṇa-1	nrHag a fvs1 space nrHag a fvs1 mvs a	Wn Aa - Wn Aa _ Aa
+pu1-ṇa-2	nrHag iHag space nrHag iHag iHag space nrHag ue fvs3 space nrHag o ue	Wn I4 - Wn I I4 - Wn U - Wn O U
+pu1-ṇa-3	nrHag a r iHag space nrHag a r iHag iHag	Wn A R I4 - Wn A R I I4
+pu1-ṇa-4	nrHag a l iHag space nrHag a l iHag iHag	Wn A L I4 - Wn A L I I4
+pu1-ṇa-5	nrHag ee space nrHag ee ee space nrHag o w a space nrHag o w w a	Wn W - Wn W W - Wn O W A - Wn O W W A
+
+pu1-ta-1	tHag a fvs1 space tHag a fvs1 mvs a	Dv Aa - Dv Aa _ Aa
+pu1-ta-2	tHag iHag space tHag iHag iHag space tHag ue fvs3 space tHag o ue	Dv I4 - Dv I I4 - Dv U - Dv O U
+pu1-ta-3	tHag a r iHag space tHag a r iHag iHag	Dv A R I4 - Dv A R I I4
+pu1-ta-4	tHag a l iHag space tHag a l iHag iHag	Dv A L I4 - Dv A L I I4
+pu1-ta-5	tHag ee space tHag ee ee space tHag o w a space tHag o w w a	Dv W - Dv W W - Dv O W A - Dv O W W A
+
+pu1-tha-1	thHag a fvs1 space thHag a fvs1 mvs a	Tp Aa - Tp Aa _ Aa
+pu1-tha-2	thHag iHag space thHag iHag iHag space thHag ue fvs3 space thHag o ue	Tp I4 - Tp I I4 - Tp U - Tp O U
+pu1-tha-3	thHag a r iHag space thHag a r iHag iHag	Tp A R I4 - Tp A R I I4
+pu1-tha-4	thHag a l iHag space thHag a l iHag iHag	Tp A L I4 - Tp A L I I4
+pu1-tha-5	thHag ee space thHag ee ee space thHag o w a space thHag o w w a	Tp W - Tp W W - Tp O W A - Tp O W W A
+
+pu1-da-1	dHag a fvs1 space dHag a fvs1 mvs a	Dq Aa - Dq Aa _ Aa
+pu1-da-2	dHag iHag space dHag iHag iHag space dHag ue fvs3 space dHag o ue	Dq I4 - Dq I I4 - Dq U - Dq O U
+pu1-da-3	dHag a r iHag space dHag a r iHag iHag	Dq A R I4 - Dq A R I I4
+pu1-da-4	dHag a l iHag space dHag a l iHag iHag	Dq A L I4 - Dq A L I I4
+pu1-da-5	dHag ee space dHag ee ee space dHag o w a space dHag o w w a	Dq W - Dq W W - Dq O W A - Dq O W W A
+
+pu1-dha-1	dHag hh a fvs1 space dHag hh a fvs1 mvs a	Dq Hr Aa - Dq Hr Aa _ Aa
+pu1-dha-2	dHag hh iHag space dHag hh iHag iHag	Dq Hr I4 - Dq Hr I I4
+pu1-dha-3	dHag hh ue space dHag hh o ue	Dq Hr U - Dq Hr O U
+pu1-dha-4	dHag hh a r iHag space dHag hh a r iHag iHag	Dq Hr A R I4 - Dq Hr A R I I4
+pu1-dha-5	dHag hh a l iHag space dHag hh a l iHag iHag	Dq Hr A L I4 - Dq Hr A L I I4
+pu1-dha-6	dHag hh ee space dHag hh ee ee	Dq Hr W - Dq Hr W W
+pu1-dha-7	dHag hh o w a space dHag hh o w w a	Dq Hr O W A - Dq Hr O W W A
+
+pu1-na-1	n a fvs1 space n a fvs1 mvs a	N Aa - N Aa _ Aa
+pu1-na-2	n iHag space n iHag iHag space n ue fvs3 space n o ue	N I4 - N I I4 - N U - N O U
+pu1-na-3	n a r iHag space n a r iHag iHag	N A R I4 - N A R I I4
+pu1-na-4	n a l iHag space n a l iHag iHag	N A L I4 - N A L I I4
+pu1-na-5	n ee space n ee ee space n o w a space n o w w a	N W - N W W - N O W A - N O W W A
+
+pu1-pa-1	pHag a space pHag a mvs a	Bg Aa - Bg Aa _ Aa
+pu1-pa-2	pHag iHag space pHag iHag iHag space pHag ue fvs2 space pHag o ue	Bg I - Bg I I4 - Bg O - Bg O U
+pu1-pa-3	pHag a r iHag space pHag a r iHag iHag	Bg A R I4 - Bg A R I I4
+pu1-pa-4	pHag a l iHag space pHag a l iHag iHag	Bg A L I4 - Bg A L I I4
+pu1-pa-5	pHag ee space pHag ee ee space pHag o w a space pHag o w w a	Bg W - Bg W W - Bg O W A - Bg O W W A
+
+pu1-pha-1	phHag a space phHag a mvs a	Pg Aa - Pg Aa _ Aa
+pu1-pha-2	phHag iHag space phHag iHag iHag space phHag ue fvs2 space phHag o ue	Pg I - Pg I I4 - Pg O - Pg O U
+pu1-pha-3	phHag a r iHag space phHag a r iHag iHag	Pg A R I4 - Pg A R I I4
+pu1-pha-4	phHag a l iHag space phHag a l iHag iHag	Pg A L I4 - Pg A L I I4
+pu1-pha-5	phHag ee space phHag ee ee space phHag o w a space phHag o w w a	Pg W - Pg W W - Pg O W A - Pg O W W A
+
+pu1-ba-1	b a space b a mvs a	B Aa - B Aa _ Aa
+pu1-ba-2	b iHag space b iHag iHag space b ue fvs2 space b o ue	B I - B I I4 - B O - B O U
+pu1-ba-3	b a r iHag space b a r iHag iHag	B A R I4 - B A R I I4
+pu1-ba-4	b a l iHag space b a l iHag iHag	B A L I4 - B A L I I4
+pu1-ba-5	b ee space b ee ee space b o w a space b o w w a	B W - B W W - B O W A - B O W W A
+
+pu1-bha-1	b hh a fvs1 space b hh a fvs1 mvs a	B Hr Aa - B Hr Aa _ Aa
+pu1-bha-2	b hh iHag space b hh iHag iHag	B Hr I4 - B Hr I I4
+pu1-bha-3	b hh ue space b hh o ue	B Hr U - B Hr O U
+pu1-bha-4	b hh a r iHag space b hh a r iHag iHag	B Hr A R I4 - B Hr A R I I4
+pu1-bha-5	b hh a l iHag space b hh a l iHag iHag	B Hr A L I4 - B Hr A L I I4
+pu1-bha-6	b hh ee space b hh ee ee	B Hr W - B Hr W W
+pu1-bha-7	b hh o w a space b hh o w w a	B Hr O W A - B Hr O W W A
+
+pu1-ma-1	mHag a fvs1 space mHag a fvs1 mvs a	M Aa - M Aa _ Aa
+pu1-ma-2	mHag iHag space mHag iHag iHag space mHag ue fvs3 space mHag o ue	M I4 - M I I4 - M U - M O U
+pu1-ma-3	mHag a r iHag space mHag a r iHag iHag	M A R I4 - M A R I I4
+pu1-ma-4	mHag a l iHag space mHag a l iHag iHag	M A L I4 - M A L I I4
+pu1-ma-5	mHag ee space mHag ee ee space mHag o w a space mHag o w w a	M W - M W W - M O W A - M O W W A
+
+pu1-ya-1	yHag a fvs1 space yHag a fvs1 mvs a	I Aa - I Aa _ Aa
+pu1-ya-2	yHag iHag space yHag iHag iHag space yHag ue fvs3 space yHag o ue	I I4 - I I I4 - I U - I O U
+pu1-ya-3	yHag a r iHag space yHag a r iHag iHag	I A R I4 - I A R I I4
+pu1-ya-4	yHag a l iHag space yHag a l iHag iHag	I A L I4 - I A L I I4
+pu1-ya-5	yHag ee space yHag ee ee space yHag o w a space yHag o w w a	I W - I W W - I O W A - I O W W A
+
+pu1-ra-1	r a fvs1 space r a fvs1 mvs a	R Aa - R Aa _ Aa
+pu1-ra-2	r iHag space r iHag iHag space r ue fvs3 space r o ue	R I4 - R I I4 - R U - R O U
+pu1-ra-3	r a r iHag space r a r iHag iHag	R A R I4 - R A R I I4
+pu1-ra-4	r a l iHag space r a l iHag iHag	R A L I4 - R A L I I4
+pu1-ra-5	r ee space r ee ee space r o w a space r o w w a	R W - R W W - R O W A - R O W W A
+
+pu1-la-1	l a fvs1 space l a fvs1 mvs a	L Aa - L Aa _ Aa
+pu1-la-2	l iHag space l iHag iHag space l ue fvs3 space l o ue	L I4 - L I I4 - L U - L O U
+pu1-la-3	l a r iHag space l a r iHag iHag	L A R I4 - L A R I I4
+pu1-la-4	l a l iHag space l a l iHag iHag	L A L I4 - L A L I I4
+pu1-la-5	l ee space l ee ee space l o w a space l o w w a	L W - L W W - L O W A - L O W W A
+
+pu1-va-1	w a fvs1 space w a fvs1 mvs a	W Aa - W Aa _ Aa
+pu1-va-2	w iHag space w iHag iHag space w ue fvs3 space w o ue	W I4 - W I I4 - W U - W O U
+pu1-va-3	w a r iHag space w a r iHag iHag	W A R I4 - W A R I I4
+pu1-va-4	w a l iHag space w a l iHag iHag	W A L I4 - W A L I I4
+pu1-va-5	w ee space w ee ee space w o w a space w o w w a	W W - W W W - W O W A - W O W W A
+
+pu1-śa-1	sh a fvs1 space sh a fvs1 mvs a	Sh Aa - Sh Aa _ Aa
+pu1-śa-2	sh iHag space sh iHag iHag space sh ue fvs3 space sh o ue	Sh I4 - Sh I I4 - Sh U - Sh O U
+pu1-śa-3	sh a r iHag space sh a r iHag iHag	Sh A R I4 - Sh A R I I4
+pu1-śa-4	sh a l iHag space sh a l iHag iHag	Sh A L I4 - Sh A L I I4
+pu1-śa-5	sh ee space sh ee ee space sh o w a space sh o w w a	Sh W - Sh W W - Sh O W A - Sh O W W A
+
+pu1-ṣa-1	shHag a fvs1 space shHag a fvs1 mvs a	Sx Aa - Sx Aa _ Aa
+pu1-ṣa-2	shHag iHag space shHag iHag iHag space shHag ue fvs3 space shHag o ue	Sx I4 - Sx I I4 - Sx U - Sx O U
+pu1-ṣa-3	shHag a r iHag space shHag a r iHag iHag	Sx A R I4 - Sx A R I I4
+pu1-ṣa-4	shHag a l iHag space shHag a l iHag iHag	Sx A L I4 - Sx A L I I4
+pu1-ṣa-5	shHag ee space shHag ee ee space shHag o w a space shHag o w w a	Sx W - Sx W W - Sx O W A - Sx O W W A
+
+pu1-sa-1	s a fvs1 space s a fvs1 mvs a	S Aa - S Aa _ Aa
+pu1-sa-2	s iHag space s iHag iHag space s ue fvs3 space s o ue	S I4 - S I I4 - S U - S O U
+pu1-sa-3	s a r iHag space s a r iHag iHag	S A R I4 - S A R I I4
+pu1-sa-4	s a l iHag space s a l iHag iHag	S A L I4 - S A L I I4
+pu1-sa-5	s ee space s ee ee space s o w a space s o w w a	S W - S W W - S O W A - S O W W A
+
+pu1-ha-1	hHag a fvs1 space hHag a fvs1 mvs a	A Hr Aa - A Hr Aa _ Aa
+pu1-ha-2	hHag iHag space hHag iHag iHag space hHag ue fvs3 space hHag o ue	A Hr I4 - A Hr I I4 - A Hr U - A Hr O U
+pu1-ha-3	hHag a r iHag space hHag a r iHag iHag	A Hr A R I4 - A Hr A R I I4
+pu1-ha-4	hHag a l iHag space hHag a l iHag iHag	A Hr A L I4 - A Hr A L I I4
+pu1-ha-5	hHag ee space hHag ee ee space hHag o w a space hHag o w w a	A Hr W - A Hr W W - A Hr O W A - A Hr O W W A
+
+pu1-kṣa-1	kHag shHag a fvs1 space kHag shHag a fvs1 mvs a	G Sx Aa - G Sx Aa _ Aa
+pu1-kṣa-2	kHag shHag iHag space kHag shHag iHag iHag	G Sx I4 - G Sx I I4
+pu1-kṣa-3	kHag shHag ue space kHag shHag o ue	G Sx U - G Sx O U
+pu1-kṣa-4	kHag shHag a r iHag space kHag shHag a r iHag iHag	G Sx A R I4 - G Sx A R I I4
+pu1-kṣa-5	kHag shHag a l iHag space kHag shHag a l iHag iHag	G Sx A L I4 - G Sx A L I I4
+pu1-kṣa-6	kHag shHag ee space kHag shHag ee ee	G Sx W - G Sx W W
+pu1-kṣa-7	kHag shHag o w a space kHag shHag o w w a	G Sx O W A - G Sx O W W A
+
+# bowed class: kHag, k, k2, pHag, phHag, b
+# h class: k2 hh, zHag hh, drHag hh, dHag hh, b hh, kHag shHag
+# nonbowed class: cHag, c, zHag, nyHag, trHag, trhHag, drHag, nrHag, tHag, thHag, dHag, n, mHag, yHag, r, l, w, sh, shHag, s, hHag
+# other: a, ngHag
+
+pu2-bowed	pHag iHag mvs a space pHag r mvs a space pHag l a space pHag waHag aHag	Bg I _ Aa - Bg R _ Aa - Bg L A - Bg O A2
+pu2-h	drHag hh iHag mvs a space drHag hh r mvs a space drHag hh l a space drHag hh waHag aHag	Ds Hr I4 _ Aa - Ds Hr R _ Aa - Ds Hr L A - Ds Hr Wp A2
+pu2-nonbowed	cHag iHag mvs a space cHag r mvs a space cHag l a space cHag waHag aHag	Zc I4 _ Aa - Zc R _ Aa - Zc L A - Zc Wp A2
+pu2-other	ngHag iHag mvs a space ngHag r mvs a space ngHag l a space ngHag waHag aHag	N G I4 _ Aa - N G R _ Aa - N G L A - N G Wp A2
+
+pu3-bowed	kHag kHag a space k k a space pHag pHag a space phHag phHag a	G G Aa - K K Aa - Bg Bg Aa - Pg Pg Aa
+pu3-h	k2 hh k2 hh a fvs1 space z hh z hh a fvs1 space drHag hh drHag hh a fvs1	K2 Hr K2 Hr Aa - Z Hr Z Hr Aa - Ds Hr Ds Hr Aa
+pu3-nonbowed	cHag cHag a fvs1 space c c a fvs1 space z z a fvs1 space trHag trHag a fvs1	Zc Zc Aa - C C Aa - Z Z Aa - Zr Zr Aa
+pu3-other	ngHag ngHag a fvs1	N G N G Aa
+
+pu4-1	ngHag kHag a space ngHag k a space ngHag k2 a space ngHag k2 hh a fvs1	N G G Aa - N G K Aa - N G K2 Aa - N G K2 Hr Aa
+pu4-2	nyHag cHag a fvs1 space nyHag c a fvs1 space nyHag z a fvs1 space nyHag z hh a fvs1	Ny Zc Aa - Ny C Aa - Ny Z Aa - Ny Z Hr Aa
+pu4-3	nrHag trHag a fvs1 space nrHag trhHag a fvs1 space nrHag drHag a fvs1 space nrHag drHag hh a fvs1	Wn Zr Aa - Wn Cr2 Aa - Wn Ds Aa - Wn Ds Hr Aa
+pu4-4	n tHag a fvs1 space n thHag a fvs1 space n dHag a fvs1 space n dHag hh a fvs1	N Dv Aa - N Tp Aa - N Dq Aa - N Dq Hr Aa
+pu4-5	mHag pHag a space mHag phHag a space mHag b a space mHag b hh a fvs1	M Bg Aa - M Pg Aa - M B Aa - M B Hr Aa
+
+pu5-bowed	l k2 a space sh k2 a space shHag k2 a space s k2 a	L K2 Aa - Sh K2 Aa - Sx K2 Aa - S K2 Aa
+pu5-h	l k2 hh a fvs1 space sh k2 hh a fvs1 space shHag k2 hh a fvs1 space s k2 hh a fvs1	L K2 Hr Aa - Sh K2 Hr Aa - Sx K2 Hr Aa - S K2 Hr Aa
+pu5-nonbowed	l cHag a fvs1 space sh cHag a fvs1 space shHag cHag a fvs1 space s cHag a fvs1	L Zc Aa - Sh Zc Aa - Sx Zc Aa - S Zc Aa
+pu5-other	l ngHag a fvs1 space sh ngHag a fvs1 space shHag ngHag a fvs1 space s ngHag a fvs1	L N G Aa - Sh N G Aa - Sx N G Aa - S N G Aa
+
+pu6-1	r kHag a space r k a space r k2 a space r k2 hh a fvs1 space r ngHag a fvs1	R G Aa - R K Aa - R K2 Aa - R K2 Hr Aa - R N G Aa
+pu6-2	r cHag a fvs1 space r c a fvs1 space r z a fvs1 space r z hh a fvs1 space r nyHag a fvs1	R Zc Aa - R C Aa - R Z Aa - R Z Hr Aa - R Ny Aa
+pu6-3	r trHag a fvs1 space r trhHag a fvs1 space r drHag a fvs1 space r drHag hh a fvs1 space r nrHag a fvs1	R Zr Aa - R Cr2 Aa - R Ds Aa - R Ds Hr Aa - R Wn Aa
+pu6-4	r tHag a fvs1 space r thHag a fvs1 space r dHag a fvs1 space r dHag hh a fvs1 space r n a fvs1	R Dv Aa - R Tp Aa - R Dq Aa - R Dq Hr Aa - R N Aa
+pu6-5	r pHag a space r phHag a space r b a space r b hh a fvs1 space r mHag a fvs1	R Bg Aa - R Pg Aa - R B Aa - R B Hr Aa - R M Aa
+pu6-6	r yHag a fvs1 space r r a fvs1 space r l a fvs1 space r w a fvs1	R I Aa - R R Aa - R L Aa - R W Aa
+pu6-7	r sh a fvs1 space r shHag a fvs1 space r s a fvs1 space r hHag a fvs1 space r kHag shHag a fvs1	R Sh Aa - R Sx Aa - R S Aa - R A Hr Aa - R G Sx Aa
+
+pu7	kHag baluda o w a space kHag tribaluda o w w a	G O Baluda W A - G O Tribaluda W W A
+pu8	damaru kHag a space damaru k a	Damaru G Aa - Damaru K Aa
+pu9	invubadama pHag a space ubadama pHag a space invubadama phHag a space ubadama phHag a	Invubadama Bg Aa - Ubadama Bg Aa - Invubadama Pg Aa - Ubadama Pg Aa
+
+pu10-1	z nyHag a fvs1 space kHag s a space kHag o o	Z Ny Aa - G S A - G O U
+pu10-2	anusvara z l o w a space sh r iHag iHag space hHag r iHag iHag	Anusvara Z L O W A - Sh R I I4 - A Hr R I I4
+pu10-3	anusvara b hh r o ue mvs a space tHag yHag ue space b yHag ue	Anusvara B Hr R O U _ Aa - Dv I U - B I U
+pu10-4	s yHag ue space dHag yHag ue space z yHag ue space kHag shHag yHag ue	S I U - Dq I U - Z I U - G Sx I U
+pu10-5	anusvara s a mHag a r a yHag ue space anusvara tHag a s a r a yHag ue space anusvara tHag a l a hHag a fvs1 mvs a	Anusvara S A M A R A I U - Anusvara Dv A S A R A I U - Anusvara Dv A L A A Hr Aa _ Aa
+pu10-6	kHag a k a k2 a k2 hh a ngHag a fvs1 space cHag a c a z a z hh a nyHag a fvs1	G A K A K2 A K2 Hr A N G Aa - Zc A C A Z A Z Hr A Ny Aa
+pu10-7	trHag a trhHag a drHag a drHag hh a nrHag a fvs1 space tHag a thHag a dHag a dHag hh a n a fvs1	Zr A Cr2 A Ds A Ds Hr A Wn Aa - Dv A Tp A Dq A Dq Hr A N Aa
+pu10-8	pHag a phHag a b a b hh a mHag a fvs1 space yHag a r a l a w a fvs1 space sh a shHag a s a hHag a fvs1	Bg A Pg A B A B Hr A M Aa - I A R A L A W Aa - Sh A Sx A S A A Hr Aa
+pu10-9	anusvara kHag shHag a mHag a r a yHag ue space anusvara hHag a kHag shHag a mHag a l a w a r a yHag a fvs1	Anusvara G Sx A M A R A I U - Anusvara A Hr A G Sx A M A L A W A R A I Aa
+pu10-10	anusvara hHag a kHag shHag a mHag a l a w a r a iHag mvs a	Anusvara A Hr A G Sx A M A L A W A R A I4 _ Aa
+
+pu11-bowed	kHag a n space kHag iHag n space kHag ue n space kHag ee n space kHag o n	G A A - G I A - G O I A - G W A - G O A
+pu11-h	k2 hh a n space k2 hh iHag n space k2 hh ue n space k2 hh ee n space k2 hh o n	K2 Hr A A - K2 Hr I A - K2 Hr O I A - K2 Hr W A - K2 Hr O A
+pu11-nonbowed	cHag a n space cHag iHag n space cHag ue n space cHag ee n space cHag o n	Zc A A - Zc I A - Zc O I A - Zc W A - Zc O A
+pu11-a	a n space iHag n space ue n space ee n space o n	A A A - A I A - A O I A - A W A - A O A
+pu11-nga	ngHag a n space ngHag iHag n space ngHag ue n space ngHag ee n space ngHag o n	N G A A - N G I A - N G O I A - N G W A - N G O A
+
+pu12-bowed	kHag a ng space kHag iHag ng space kHag ue ng space kHag ee ng space kHag o ng	G A A G - G I A G - G O I A G - G W A G - G O A G
+pu12-h	k2 hh a ng space k2 hh iHag ng space k2 hh ue ng space k2 hh ee ng space k2 hh o ng	K2 Hr A A G - K2 Hr I A G - K2 Hr O I A G - K2 Hr W A G - K2 Hr O A G
+pu12-nonbowed	cHag a ng space cHag iHag ng space cHag ue ng space cHag ee ng space cHag o ng	Zc A A G - Zc I A G - Zc O I A G - Zc W A G - Zc O A G
+pu12-a	a ng space iHag ng space ue ng space ee ng space o ng	A A A G - A I A G - A O I A G - A W A G - A O A G
+pu12-nga	ngHag a ng space ngHag iHag ng space ngHag ue ng space ngHag ee ng space ngHag o ng	N G A A G - N G I A G - N G O I A G - N G W A G - N G O A G
+
+# Tibetan syllabaries
+
+pu1-1	kHag a space k a space k2 a space ngHag a fvs1	G Aa - K Aa - K2 Aa - N G Aa
+pu1-2	crHag a fvs1 space ch a fvs1 space yHag a fvs1 space nyHag a fvs1	J Aa - Ch Aa - I Aa - Ny Aa
+pu1-3	tHag a fvs1 space thHag a fvs1 space dHag a fvs1 space n a fvs1	Dv Aa - Tp Aa - Dq Aa - N Aa
+pu1-4	pHag a space phHag a space b a space mHag a fvs1	Bg Aa - Pg Aa - B Aa - M Aa
+pu1-5	cHag a fvs1 space c a fvs1 space z a fvs1 space w a fvs1	Zc Aa - C Aa - Z Aa - W Aa
+pu1-6	zrHag a fvs1 space zHag a fvs1 space qHag a fvs1 space yHag a fvs1 space r a fvs1 space l a fvs1	Rh2 Aa - Zz Aa - Q Aa - I Aa - R Aa - L Aa
+pu1-7	sh a fvs1 space s a fvs1 space hHag a fvs1 space a fvs1	Sh Aa - S Aa - A Hr Aa - A
+
+pu2	crHag a fvs1 space crHag iHag space crHag ue fvs3 space crHag ee space crHag o w a	J Aa - J I4 - J U - J W - J O W A
+pu3	crHag a n space crHag iHag n space crHag ue n space crHag ee n space crHag o n	J A A - J I A - J O I A - J W A - J O A
+pu4	crHag a ng space crHag iHag ng space crHag ue ng space crHag ee ng space crHag o ng	J A A G - J I A G - J O I A G - J W A G - J O A G
+
+pu5-ka	kHag a s space kHag iHag s space kHag ue s space kHag ee s space kHag o s	G A S - G I S - G O I S - G W S - G O S
+pu5-a	a s space iHag s space ue s space ee s space o s	A A S - A I S - A O I S - A W S - A O S
+
+pu6-ka	kHag iHag mvs a space kHag yHag iHag space kHag yHag ue space kHag yHag ee space kHag yHag o fvs1	G I _ Aa - G I I4 - G I U - G I W - G I O
+pu6-ma	mHag iHag mvs a space mHag yHag iHag space mHag yHag ue space mHag yHag ee space mHag yHag o fvs1	M I4 _ Aa - M I I4 - M I U - M I W - M I O
+
+pu7-ka	kHag yHag a n space kHag yHag iHag n space kHag iHag ue fvs1 n space kHag iHag ee n space kHag iHag o n	G I A A - G I I A - G I O I A - G I W A - G I O A
+pu7-ma	mHag yHag a n space mHag yHag iHag n space mHag iHag ue fvs1 n space mHag iHag ee n space mHag iHag o n	M I A A - M I I A - M I O I A - M I W A - M I O A
+
+pu8-ka	kHag yHag a ng space kHag yHag iHag ng space kHag iHag ue fvs1 ng space kHag iHag ee ng space kHag iHag o ng	G I A A G - G I I A G - G I O I A G - G I W A G - G I O A G
+pu8-ma	mHag yHag a ng space mHag yHag iHag ng space mHag iHag ue fvs1 ng space mHag iHag ee ng space mHag iHag o ng	M I A A G - M I I A G - M I O I A G - M I W A G - M I O A G
+
+pu9-ka	kHag yHag a s space kHag yHag iHag s space kHag iHag ue fvs1 s space kHag iHag ee s space kHag iHag o s	G I A S - G I I S - G I O I S - G I W S - G I O S
+pu9-ma	mHag yHag a s space mHag yHag iHag s space mHag iHag ue fvs1 s space mHag iHag ee s space mHag iHag o s	M I A S - M I I S - M I O I S - M I W S - M I O S
+
+pu10-1	k2 zrHag a fvs1 space k2 zrHag iHag space k2 zrHag ue space k2 zrHag ee space k2 zrHag o fvs1	K2 Rh2 Aa - K2 Rh2 I4 - K2 Rh2 U - K2 Rh2 W - K2 Rh2 O
+pu10-2	k2 zrHag a n space k2 zrHag iHag n space k2 zrHag ue fvs1 n space k2 zrHag ee n space k2 zrHag o n	K2 Rh2 A A - K2 Rh2 I A - K2 Rh2 O I A - K2 Rh2 W A - K2 Rh2 O A
+pu10-3	k2 zrHag a ng space k2 zrHag iHag ng space k2 zrHag ue fvs1 ng space k2 zrHag ee ng space k2 zrHag o ng	K2 Rh2 A A G - K2 Rh2 I A G - K2 Rh2 O I A G - K2 Rh2 W A G - K2 Rh2 O A G
+pu10-4	k2 zrHag a s space k2 zrHag iHag s space k2 zrHag ue fvs1 s space k2 zrHag ee s space k2 zrHag o s	K2 Rh2 A S - K2 Rh2 I S - K2 Rh2 O I S - K2 Rh2 W S - K2 Rh2 O S
+
+pu11	dHag b a space dHag b iHag mvs a space z l a fvs1	Dq B Aa - Dq B I _ Aa - Z L Aa
+pu12	kHag r mvs a space k r mvs a space k2 r mvs a space dHag r mvs a	G R _ Aa - K R _ Aa - K2 R _ Aa - Dq R _ Aa
+pu13	r kHag a space kHag iHag waHag aHag	R G Aa - G I Wp A2
+pu14	l hHag a fvs1	L A Hr Aa
