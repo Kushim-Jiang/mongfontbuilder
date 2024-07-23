@@ -3,21 +3,15 @@
   variants:
     isol:
       - written_units: [.A, .A]
-        fvs: 3
       - written_units: [.A]
-        fvs: 1
     init:
       - written_units: [.A, .A]
-        fvs: 2
     medi:
       - written_units: [.A]
       - written_units: [.A, .A]
-        fvs: 1
     fina:
       - written_units: [.A]
-        fvs: 2
       - written_units: [.Aa]
-        fvs: 1
 
 0x1844: # ᡄ MONGOLIAN LETTER TODO E
   id: .e
@@ -29,7 +23,6 @@
     medi:
       - written_units: [.E]
       - written_units: [.A, .E]
-        fvs: 1
     fina:
       - written_units: [.E]
 
@@ -41,19 +34,13 @@
     init:
       - written_units: [.A, .Ip]
       - written_units: [.A, .I]
-        fvs: 1
     medi:
       - written_units: [.Ip]
-        fvs: 2
       - written_units: [.A, .Ip]
-        fvs: 1
       - written_units: [.I]
-        fvs: 3
     fina:
       - written_units: [.I3]
-        fvs: 2
       - written_units: [.Ip]
-        fvs: 1
 
 0x1846: # ᡆ MONGOLIAN LETTER TODO O
   id: .o
@@ -65,7 +52,6 @@
     medi:
       - written_units: [.Ob]
       - written_units: [.A, .Ob]
-        fvs: 1
     fina:
       - written_units: [.Ob]
 
@@ -76,18 +62,14 @@
     isol:
       - written_units: [.A, .U]
       - written_units: [.A, .O]
-        fvs: 1
     init:
       - written_units: [.A, .O]
     medi:
       - written_units: [.O]
       - written_units: [.A, .O]
-        fvs: 1
     fina:
       - written_units: [.U]
-        fvs: 2
       - written_units: [.O]
-        fvs: 1
 
 0x1843: # ᡃ MONGOLIAN LETTER TODO LONG VOWEL SIGN
   id: .lvs
@@ -160,21 +142,14 @@
     isol:
       - written_units: [.Hb.init]
       - written_units: [.G.init]
-        fvs: 1
     init:
       - written_units: [.Hb]
-        fvs: 2
       - written_units: [.G]
-        fvs: 1
       - written_units: [.Hp]
-        fvs: 3
     medi:
       - written_units: [.Hb]
-        fvs: 3
       - written_units: [.Hp]
-        fvs: 1
       - written_units: [.G]
-        fvs: 2
     fina:
       - written_units: [.Hp]
 
@@ -287,13 +262,10 @@
   variants:
     isol:
       - written_units: [.Ds2.init]
-        fvs: 1
     init:
       - written_units: [.Ds2]
-        fvs: 1
     medi:
       - written_units: [.Ds2]
-        fvs: 1
     fina:
       - written_units: [.Ds]
 
@@ -354,15 +326,11 @@
       - written_units: [.N.init]
     init:
       - written_units: [.N]
-        fvs: 2
     medi:
       - written_units: [.A]
-        fvs: 2
       - written_units: [.N]
-        fvs: 1
     fina:
       - written_units: [.A]
-        fvs: 2
 
 0x1892: # ᢒ MONGOLIAN LETTER ALI GALI PA
   id: .pTag
@@ -370,13 +338,10 @@
   variants:
     isol:
       - written_units: [.Bh.init]
-        fvs: 1
     init:
       - written_units: [.Bh]
-        fvs: 1
     medi:
       - written_units: [.Bh]
-        fvs: 1
     fina:
       - written_units: [.Bh.medi]
 
@@ -385,13 +350,10 @@
   variants:
     isol:
       - written_units: [.Ph.init]
-        fvs: 1
     init:
       - written_units: [.Ph]
-        fvs: 1
     medi:
       - written_units: [.Ph]
-        fvs: 1
     fina:
       - written_units: [.Ph.medi]
 
@@ -444,7 +406,6 @@
     fina:
       - written_units: [.Yp]
       - written_units: [.Ir]
-        fvs: 1
 
 0x1837: # ᠷ MONGOLIAN LETTER RA
   id: .r
@@ -503,10 +464,8 @@
       - written_units: [.Sh.init]
     init:
       - written_units: [.Sh]
-        fvs: 2
     medi:
       - written_units: [.Sh]
-        fvs: 2
     fina:
       - written_units: [.Sh]
 

@@ -3,23 +3,16 @@
   variants:
     isol:
       - written_units: [.A, .A]
-        fvs: 3
       - written_units: [.A]
-        fvs: 1
       - written_units: [.Aa]
-        fvs: 2
     init:
       - written_units: [.A, .A]
-        fvs: 2
       - written_units: [.A]
-        fvs: 1
     medi:
       - written_units: [.A]
     fina:
       - written_units: [.A]
-        fvs: 2
       - written_units: [.Aa]
-        fvs: 1
 
 0x1887: # ᢇ MONGOLIAN LETTER ALI GALI A
   id: .aHag
@@ -54,28 +47,18 @@
     isol:
       - written_units: [.A, .Ue]
       - written_units: [.A, .U]
-        fvs: 1
       - written_units: [.U]
-        fvs: 2
       - written_units: [.Ux]
-        fvs: 3
     init:
       - written_units: [.A, .O, .I]
-        fvs: 2
       - written_units: [.O]
-        fvs: 1
     medi:
       - written_units: [.O]
-        fvs: 3
       - written_units: [.O, .I]
-        fvs: 1
     fina:
       - written_units: [.U]
-        fvs: 3
       - written_units: [.Ue]
-        fvs: 1
       - written_units: [.O]
-        fvs: 2
 0x1827: # ᠧ MONGOLIAN LETTER EE
   id: .ee
   transcription: .é
@@ -99,12 +82,9 @@
     medi:
       - written_units: [.O]
       - written_units: [.A, .O]
-        fvs: 1
     fina:
       - written_units: [.U]
-        fvs: 2
       - written_units: [.O]
-        fvs: 1
 
 0x1889: # ᢉ MONGOLIAN LETTER ALI GALI KA
   id: .kHag
@@ -144,7 +124,6 @@
     fina:
       - written_units: [.K2]
       - written_units: [.K2, .Vi]
-        fvs: 1
 
 0x183E: # ᠾ MONGOLIAN LETTER HAA
   id: .hh
@@ -333,15 +312,11 @@
       - written_units: [.N.init]
     init:
       - written_units: [.N]
-        fvs: 2
     medi:
       - written_units: [.A]
-        fvs: 2
       - written_units: [.N]
-        fvs: 1
     fina:
       - written_units: [.A]
-        fvs: 2
 
 0x1892: # ᢒ MONGOLIAN LETTER ALI GALI PA
   id: .pHag
@@ -381,7 +356,6 @@
     fina:
       - written_units: [.B]
       - written_units: [.B2]
-        fvs: 1
 
 0x184F: # ᡏ MONGOLIAN LETTER TODO MA
   id: .mHag
@@ -466,10 +440,8 @@
       - written_units: [.Sh.init]
     init:
       - written_units: [.Sh]
-        fvs: 2
     medi:
       - written_units: [.Sh]
-        fvs: 2
     fina:
       - written_units: [.Sh]
 
@@ -508,9 +480,7 @@
       - written_units: [.A, .Hr]
     medi:
       - written_units: [.A, .Hr]
-        fvs: 2
       - written_units: [.Hr]
-        fvs: 1
     fina:
       - written_units: [.Hr]
 

@@ -3,18 +3,13 @@
   variants:
     isol:
       - written_units: [.A, .A]
-        fvs: 3
     init:
       - written_units: [.A, .A]
-        fvs: 2
     medi:
       - written_units: [.A]
-        fvs: 1
     fina:
       - written_units: [.A]
-        fvs: 2
       - written_units: [.Aa]
-        fvs: 1
 
 0x1887: # ᢇ MONGOLIAN LETTER ALI GALI A
   id: .aaMag
@@ -38,43 +33,29 @@
       - written_units: [.A]
     medi:
       - written_units: [.Ah]
-        fvs: 2
       - written_units: [.A]
-        fvs: 1
     fina:
       - written_units: [.Ah]
-        fvs: 4
       - written_units: [.A]
-        fvs: 1
       - written_units: [.At]
-        fvs: 2
       - written_units: [.Aa]
-        fvs: 3
 
 0x1873: # ᡳ MONGOLIAN LETTER MANCHU I
   id: .i
   variants:
     isol:
       - written_units: [.A, .I]
-        fvs: 2
       - written_units: [.I]
-        fvs: 1
     init:
       - written_units: [.A, .I]
     medi:
       - written_units: [.I]
-        fvs: 3
       - written_units: [.I, .I]
-        fvs: 2
     fina:
       - written_units: [.I]
-        fvs: 3
       - written_units: [.I2]
-        fvs: 1
       - written_units: [.Iy]
-        fvs: 2
       - written_units: [.A, .I]
-        fvs: 4
 
 0x185F: # ᡟ MONGOLIAN LETTER SIBE IY
   id: .ii
@@ -100,9 +81,7 @@
       - written_units: [.O]
     fina:
       - written_units: [.U]
-        fvs: 2
       - written_units: [.O]
-        fvs: 1
 
 0x1860: # ᡠ MONGOLIAN LETTER SIBE UE
   id: .u
@@ -113,18 +92,12 @@
       - written_units: [.A, .Oh]
     medi:
       - written_units: [.Oh]
-        fvs: 2
       - written_units: [.O]
-        fvs: 1
     fina:
       - written_units: [.Uh]
-        fvs: 4
       - written_units: [.U]
-        fvs: 1
       - written_units: [.Oh]
-        fvs: 2
       - written_units: [.O]
-        fvs: 3
 
 0x1861: # ᡡ MONGOLIAN LETTER SIBE U
   id: .ue
@@ -171,17 +144,12 @@
     isol:
       - written_units: [.Hh.init]
       - written_units: [.Gh.init]
-        fvs: 1
     init:
       - written_units: [.Hh]
-        fvs: 2
       - written_units: [.Gh]
-        fvs: 1
     medi:
       - written_units: [.Hh]
-        fvs: 2
       - written_units: [.Gh]
-        fvs: 1
     fina:
       - written_units: [.Hh.medi]
 
@@ -191,32 +159,20 @@
     isol:
       - written_units: [.H.init]
       - written_units: [.G.init]
-        fvs: 1
       - written_units: [.Gx.init]
-        fvs: 2
     init:
       - written_units: [.H]
-        fvs: 3
       - written_units: [.G]
-        fvs: 1
       - written_units: [.Gx]
-        fvs: 2
     medi:
       - written_units: [.H]
-        fvs: 3
       - written_units: [.Hx]
-        fvs: 1
       - written_units: [.G]
-        fvs: 2
       - written_units: [.Gx]
-        fvs: 4
     fina:
       - written_units: [.Hx]
-        fvs: 3
       - written_units: [.G4]
-        fvs: 1
       - written_units: [.Gx]
-        fvs: 2
 
 0x189A: # ᢚ MONGOLIAN LETTER MANCHU ALI GALI GHA
   id: .ghMag
@@ -229,7 +185,6 @@
     medi:
       - written_units: [.Hy]
       - written_units: [.Hy2]
-        fvs: 1
     fina:
       - written_units: [.Hy.medi]
 
@@ -381,17 +336,12 @@
     isol:
       - written_units: [.Dr.init]
       - written_units: [.Dy.init]
-        fvs: 1
     init:
       - written_units: [.Dr]
-        fvs: 2
       - written_units: [.Dy]
-        fvs: 1
     medi:
       - written_units: [.Dr]
-        fvs: 2
       - written_units: [.Dy]
-        fvs: 1
     fina:
       - written_units: [.Dr]
 
@@ -401,19 +351,13 @@
     isol:
       - written_units: [.Tb.init]
       - written_units: [.T.init]
-        fvs: 1
     init:
       - written_units: [.Tb]
-        fvs: 2
       - written_units: [.T]
-        fvs: 1
     medi:
       - written_units: [.Db]
-        fvs: 3
       - written_units: [.D]
-        fvs: 1
       - written_units: [.Dd]
-        fvs: 2
     fina:
       - written_units: [.Dd]
 
@@ -423,17 +367,12 @@
     isol:
       - written_units: [.Th.init]
       - written_units: [.Tt.init]
-        fvs: 1
     init:
       - written_units: [.Th]
-        fvs: 2
       - written_units: [.Tt]
-        fvs: 1
     medi:
       - written_units: [.Dh]
-        fvs: 2
       - written_units: [.Dt]
-        fvs: 1
     fina:
       - written_units: [.Dh.medi]
 
@@ -444,17 +383,12 @@
     isol:
       - written_units: [.Tx.init]
       - written_units: [.Ts.init]
-        fvs: 1
     init:
       - written_units: [.Tx]
-        fvs: 2
       - written_units: [.Ts]
-        fvs: 1
     medi:
       - written_units: [.Dx]
-        fvs: 2
       - written_units: [.Ds]
-        fvs: 1
     fina:
       - written_units: [.Dx.medi]
 
@@ -465,19 +399,13 @@
       - written_units: [.N.init]
     init:
       - written_units: [.N]
-        fvs: 2
       - written_units: [.A]
-        fvs: 1
     medi:
       - written_units: [.A]
-        fvs: 2
       - written_units: [.N]
-        fvs: 1
     fina:
       - written_units: [.A]
-        fvs: 2
       - written_units: [.N2]
-        fvs: 1
 
 0x1892: # ᢒ MONGOLIAN LETTER ALI GALI PA
   id: .pMag
@@ -548,10 +476,8 @@
       - written_units: [.Y.init]
     init:
       - written_units: [.Y]
-        fvs: 2
     medi:
       - written_units: [.Y]
-        fvs: 3
     fina:
       - written_units: [.Y.medi]
 
@@ -561,15 +487,12 @@
     isol:
       - written_units: [.R.init]
       - written_units: [.R3.init]
-        fvs: 1
     init:
       - written_units: [.R]
       - written_units: [.R3]
-        fvs: 1
     medi:
       - written_units: [.R]
       - written_units: [.R3]
-        fvs: 1
     fina:
       - written_units: [.R2]
 
@@ -579,11 +502,9 @@
     isol:
       - written_units: [.L.init]
       - written_units: [.L2]
-        fvs: 1
     init:
       - written_units: [.L]
       - written_units: [.L2]
-        fvs: 1
     medi:
       - written_units: [.L]
     fina:
@@ -645,17 +566,12 @@
     isol:
       - written_units: [.Hc.init]
       - written_units: [.Gc.init]
-        fvs: 1
     init:
       - written_units: [.Hc]
-        fvs: 2
       - written_units: [.Gc]
-        fvs: 1
     medi:
       - written_units: [.Hc]
-        fvs: 2
       - written_units: [.Gc]
-        fvs: 1
     fina:
       - written_units: [.Hc.medi]
 

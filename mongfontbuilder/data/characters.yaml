@@ -767,9 +767,9 @@
     medi:
       - written_units: [.Ot]
       - written_units: [.O]
-        fvs: 2
-      - written_units: [.A, .Ot]
         fvs: 1
+      - written_units: [.A, .Ot]
+        fvs: 2
     fina:
       - written_units: [.Ot]
       - written_units: [.O]
