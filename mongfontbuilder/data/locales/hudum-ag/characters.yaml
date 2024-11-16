@@ -3,16 +3,22 @@
   variants:
     isol:
       - written_units: [.A, .A]
+        conditions: [.default]
       - written_units: [.A]
       - written_units: [.Aa]
+        conditions: [.chachlag]
     init:
       - written_units: [.A, .A]
+        conditions: [.default]
       - written_units: [.A]
     medi:
       - written_units: [.A]
+        conditions: [.default]
     fina:
       - written_units: [.A]
+        conditions: [.default]
       - written_units: [.Aa]
+        conditions: [.post_bowed]
 
 0x1887: # ᢇ MONGOLIAN LETTER ALI GALI A
   id: .aHag
@@ -20,12 +26,16 @@
   variants:
     isol:
       - written_units: [.A2.fina]
+        conditions: [.default]
     init:
       - written_units: [.A2.fina]
+        conditions: [.default]
     medi:
       - written_units: [.A2.fina]
+        conditions: [.default]
     fina:
       - written_units: [.A2]
+        conditions: [.default, .post_wa]
 
 0x1888: # ᢈ MONGOLIAN LETTER ALI GALI I
   id: .iHag
@@ -33,12 +43,16 @@
   variants:
     isol:
       - written_units: [.A, .I4]
+        conditions: [.default]
     init:
       - written_units: [.A, .I]
+        conditions: [.default]
     medi:
       - written_units: [.I]
+        conditions: [.default]
     fina:
       - written_units: [.I4]
+        conditions: [.default]
 
 0x1826: # ᠦ MONGOLIAN LETTER UE
   id: .ue
@@ -46,45 +60,56 @@
   variants:
     isol:
       - written_units: [.A, .Ue]
+        conditions: [.default]
       - written_units: [.A, .U]
-      - written_units: [.U]
-      - written_units: [.Ux]
     init:
       - written_units: [.A, .O, .I]
-      - written_units: [.O]
+        conditions: [.default]
     medi:
       - written_units: [.O]
+        conditions: [.default]
       - written_units: [.O, .I]
+        conditions: [.marked]
     fina:
       - written_units: [.U]
-      - written_units: [.Ue]
+        conditions: [.default]
       - written_units: [.O]
+        conditions: [.post_bowed]
+
 0x1827: # ᠧ MONGOLIAN LETTER EE
   id: .ee
   transcription: .é
   variants:
     isol:
       - written_units: [.A, .W]
+        conditions: [.default]
     init:
       - written_units: [.A, .W]
+        conditions: [.default]
     medi:
       - written_units: [.W]
+        conditions: [.default]
     fina:
       - written_units: [.W]
+        conditions: [.default]
 
 0x1823: # ᠣ MONGOLIAN LETTER O
   id: .o
   variants:
     isol:
       - written_units: [.A, .O]
+        conditions: [.default]
     init:
       - written_units: [.A, .O]
+        conditions: [.default]
     medi:
       - written_units: [.O]
-      - written_units: [.A, .O]
+        conditions: [.default]
     fina:
       - written_units: [.U]
+        conditions: [.default]
       - written_units: [.O]
+        conditions: [.post_bowed]
 
 0x1889: # ᢉ MONGOLIAN LETTER ALI GALI KA
   id: .kHag
@@ -92,24 +117,32 @@
   variants:
     isol:
       - written_units: [.G.init]
+        conditions: [.default]
     init:
       - written_units: [.G]
+        conditions: [.default]
     medi:
       - written_units: [.G]
+        conditions: [.default]
     fina:
       - written_units: [.G, .Vi]
+        conditions: [.default]
 
 0x183B: # ᠻ MONGOLIAN LETTER KHA
   id: .k
   variants:
     isol:
       - written_units: [.K.init]
+        conditions: [.default]
     init:
       - written_units: [.K]
+        conditions: [.default]
     medi:
       - written_units: [.K]
+        conditions: [.default]
     fina:
       - written_units: [.K]
+        conditions: [.default]
 
 0x183A: # ᠺ MONGOLIAN LETTER KA
   id: .k2
@@ -117,12 +150,16 @@
   variants:
     isol:
       - written_units: [.K2.init]
+        conditions: [.default]
     init:
       - written_units: [.K2]
+        conditions: [.default]
     medi:
       - written_units: [.K2]
+        conditions: [.default]
     fina:
       - written_units: [.K2]
+        conditions: [.default]
       - written_units: [.K2, .Vi]
 
 0x183E: # ᠾ MONGOLIAN LETTER HAA
@@ -131,12 +168,16 @@
   variants:
     isol:
       - written_units: [.A.init, .Hr.init]
+        conditions: [.default]
     init:
       - written_units: [.A, .Hr]
+        conditions: [.default]
     medi:
       - written_units: [.Hr]
+        conditions: [.default]
     fina:
       - written_units: [.Hr]
+        conditions: [.default]
 
 0x1829: # ᠩ MONGOLIAN LETTER ANG
   id: .ng
@@ -144,12 +185,16 @@
   variants:
     isol:
       - written_units: [.A.medi, .G.medi]
+        conditions: [.default]
     init:
       - written_units: [.A.medi, .G.medi]
+        conditions: [.default]
     medi:
       - written_units: [.A, .G]
+        conditions: [.default]
     fina:
       - written_units: [.A, .G]
+        conditions: [.default]
 
 0x188A: # ᢊ MONGOLIAN LETTER ALI GALI NGA
   id: .ngHag
@@ -157,12 +202,16 @@
   variants:
     isol:
       - written_units: [.N.init, .G.medi]
+        conditions: [.default]
     init:
       - written_units: [.N, .G]
+        conditions: [.default]
     medi:
       - written_units: [.N, .G]
+        conditions: [.default]
     fina:
       - written_units: [.N, .G4]
+        conditions: [.default]
 
 0x188B: # ᢋ MONGOLIAN LETTER ALI GALI CA
   id: .cHag
@@ -170,36 +219,48 @@
   variants:
     isol:
       - written_units: [.Zc.init]
+        conditions: [.default]
     init:
       - written_units: [.Zc]
+        conditions: [.default]
     medi:
       - written_units: [.Zc]
+        conditions: [.default]
     fina:
       - written_units: [.Zc]
+        conditions: [.default]
 
 0x183C: # ᠼ MONGOLIAN LETTER TSA
   id: .c
   variants:
     isol:
       - written_units: [.C.init]
+        conditions: [.default]
     init:
       - written_units: [.C]
+        conditions: [.default]
     medi:
       - written_units: [.C]
+        conditions: [.default]
     fina:
       - written_units: [.C]
+        conditions: [.default]
 
 0x183D: # ᠽ MONGOLIAN LETTER ZA
   id: .z
   variants:
     isol:
       - written_units: [.Z.init]
+        conditions: [.default]
     init:
       - written_units: [.Z]
+        conditions: [.default]
     medi:
       - written_units: [.Z]
+        conditions: [.default]
     fina:
       - written_units: [.Z]
+        conditions: [.default]
 
 0x185B: # ᡛ MONGOLIAN LETTER TODO NIA
   id: .nyHag
@@ -207,12 +268,16 @@
   variants:
     isol:
       - written_units: [.Ny.init]
+        conditions: [.default]
     init:
       - written_units: [.Ny]
+        conditions: [.default]
     medi:
       - written_units: [.Ny]
+        conditions: [.default]
     fina:
       - written_units: [.Ny]
+        conditions: [.default]
 
 0x188C: # ᢌ MONGOLIAN LETTER ALI GALI TTA
   id: .trHag
@@ -220,12 +285,16 @@
   variants:
     isol:
       - written_units: [.Zr.init]
+        conditions: [.default]
     init:
       - written_units: [.Zr]
+        conditions: [.default]
     medi:
       - written_units: [.Zr]
+        conditions: [.default]
     fina:
       - written_units: [.Zr]
+        conditions: [.default]
 
 0x188D: # ᢍ MONGOLIAN LETTER ALI GALI TTHA
   id: .trhHag
@@ -233,12 +302,16 @@
   variants:
     isol:
       - written_units: [.Cr2.init]
+        conditions: [.default]
     init:
       - written_units: [.Cr2]
+        conditions: [.default]
     medi:
       - written_units: [.Cr2]
+        conditions: [.default]
     fina:
       - written_units: [.Cr2.medi]
+        conditions: [.default]
 
 0x188E: # ᢎ MONGOLIAN LETTER ALI GALI DDA
   id: .drHag
@@ -246,12 +319,16 @@
   variants:
     isol:
       - written_units: [.Ds.init]
+        conditions: [.default]
     init:
       - written_units: [.Ds]
+        conditions: [.default]
     medi:
       - written_units: [.Ds]
+        conditions: [.default]
     fina:
       - written_units: [.Ds]
+        conditions: [.default]
 
 0x188F: # ᢏ MONGOLIAN LETTER ALI GALI NNA
   id: .nrHag
@@ -259,12 +336,16 @@
   variants:
     isol:
       - written_units: [.Wn.init]
+        conditions: [.default]
     init:
       - written_units: [.Wn]
+        conditions: [.default]
     medi:
       - written_units: [.Wn]
+        conditions: [.default]
     fina:
       - written_units: [.Wn]
+        conditions: [.default]
 
 0x1890: # ᢐ MONGOLIAN LETTER ALI GALI TA
   id: .tHag
@@ -272,12 +353,16 @@
   variants:
     isol:
       - written_units: [.Dv.init]
+        conditions: [.default]
     init:
       - written_units: [.Dv]
+        conditions: [.default]
     medi:
       - written_units: [.Dv]
+        conditions: [.default]
     fina:
       - written_units: [.Dv]
+        conditions: [.default]
 
 0x1850: # ᡐ MONGOLIAN LETTER TODO TA
   id: .thHag
@@ -285,12 +370,16 @@
   variants:
     isol:
       - written_units: [.Tp.init]
+        conditions: [.default]
     init:
       - written_units: [.Tp]
+        conditions: [.default]
     medi:
       - written_units: [.Tp]
+        conditions: [.default]
     fina:
       - written_units: [.Tp]
+        conditions: [.default]
 
 0x1891: # ᢑ MONGOLIAN LETTER ALI GALI DA
   id: .dHag
@@ -298,25 +387,33 @@
   variants:
     isol:
       - written_units: [.Dq.init]
+        conditions: [.default]
     init:
       - written_units: [.Dq]
+        conditions: [.default]
     medi:
       - written_units: [.Dq]
+        conditions: [.default]
     fina:
       - written_units: [.Dq]
+        conditions: [.default]
 
 0x1828: # ᠨ MONGOLIAN LETTER NA
   id: .n
   variants:
     isol:
       - written_units: [.N.init]
+        conditions: [.default]
     init:
       - written_units: [.N]
+        conditions: [.default]
     medi:
       - written_units: [.A]
+        conditions: [.default]
       - written_units: [.N]
     fina:
       - written_units: [.A]
+        conditions: [.default]
 
 0x1892: # ᢒ MONGOLIAN LETTER ALI GALI PA
   id: .pHag
@@ -324,12 +421,16 @@
   variants:
     isol:
       - written_units: [.Bg.init]
+        conditions: [.default]
     init:
       - written_units: [.Bg]
+        conditions: [.default]
     medi:
       - written_units: [.Bg]
+        conditions: [.default]
     fina:
       - written_units: [.Bg]
+        conditions: [.default]
 
 0x1893: # ᢓ MONGOLIAN LETTER ALI GALI PHA
   id: .phHag
@@ -337,24 +438,32 @@
   variants:
     isol:
       - written_units: [.Pg.init]
+        conditions: [.default]
     init:
       - written_units: [.Pg]
+        conditions: [.default]
     medi:
       - written_units: [.Pg]
+        conditions: [.default]
     fina:
       - written_units: [.Pg]
+        conditions: [.default]
 
 0x182A: # ᠪ MONGOLIAN LETTER BA
   id: .b
   variants:
     isol:
       - written_units: [.B.init]
+        conditions: [.default]
     init:
       - written_units: [.B]
+        conditions: [.default]
     medi:
       - written_units: [.B]
+        conditions: [.default]
     fina:
       - written_units: [.B]
+        conditions: [.default]
       - written_units: [.B2]
 
 0x184F: # ᡏ MONGOLIAN LETTER TODO MA
@@ -363,12 +472,16 @@
   variants:
     isol:
       - written_units: [.M.init]
+        conditions: [.default]
     init:
       - written_units: [.M]
+        conditions: [.default]
     medi:
       - written_units: [.M]
+        conditions: [.default]
     fina:
       - written_units: [.M2]
+        conditions: [.default]
 
 0x1855: # ᡕ MONGOLIAN LETTER TODO YA
   id: .yHag
@@ -376,48 +489,64 @@
   variants:
     isol:
       - written_units: [.I.init]
+        conditions: [.default]
     init:
       - written_units: [.I]
+        conditions: [.default]
     medi:
       - written_units: [.I]
+        conditions: [.default]
     fina:
       - written_units: [.I4]
+        conditions: [.default]
 
 0x1837: # ᠷ MONGOLIAN LETTER RA
   id: .r
   variants:
     isol:
       - written_units: [.R.init]
+        conditions: [.default]
     init:
       - written_units: [.R]
+        conditions: [.default]
     medi:
       - written_units: [.R]
+        conditions: [.default]
     fina:
       - written_units: [.R]
+        conditions: [.default]
 
 0x182F: # ᠯ MONGOLIAN LETTER LA
   id: .l
   variants:
     isol:
       - written_units: [.L.init]
+        conditions: [.default]
     init:
       - written_units: [.L]
+        conditions: [.default]
     medi:
       - written_units: [.L]
+        conditions: [.default]
     fina:
       - written_units: [.L]
+        conditions: [.default]
 
 0x1838: # ᠸ MONGOLIAN LETTER WA
   id: .w
   variants:
     isol:
       - written_units: [.W.init]
+        conditions: [.default]
     init:
       - written_units: [.W]
+        conditions: [.default]
     medi:
       - written_units: [.W]
+        conditions: [.default]
     fina:
       - written_units: [.W]
+        conditions: [.default]
 
 0x18A6: # ᢦ MONGOLIAN LETTER ALI GALI HALF U
   id: .waHag
@@ -425,12 +554,16 @@
   variants:
     isol:
       - written_units: [.Wp.medi]
+        conditions: [.default]
     init:
       - written_units: [.Wp.medi]
+        conditions: [.default]
     medi:
       - written_units: [.Wp]
+        conditions: [.default]
     fina:
       - written_units: [.Wp.medi]
+        conditions: [.default]
 
 0x1831: # ᠱ MONGOLIAN LETTER SHA
   id: .sh
@@ -438,12 +571,16 @@
   variants:
     isol:
       - written_units: [.Sh.init]
+        conditions: [.default]
     init:
       - written_units: [.Sh]
+        conditions: [.default]
     medi:
       - written_units: [.Sh]
+        conditions: [.default]
     fina:
       - written_units: [.Sh]
+        conditions: [.default]
 
 0x1894: # ᢔ MONGOLIAN LETTER ALI GALI SSA
   id: .shHag
@@ -451,24 +588,32 @@
   variants:
     isol:
       - written_units: [.Sx.init]
+        conditions: [.default]
     init:
       - written_units: [.Sx]
+        conditions: [.default]
     medi:
       - written_units: [.Sx]
+        conditions: [.default]
     fina:
       - written_units: [.Sx]
+        conditions: [.default]
 
 0x1830: # ᠰ MONGOLIAN LETTER SA
   id: .s
   variants:
     isol:
       - written_units: [.S.init]
+        conditions: [.default]
     init:
       - written_units: [.S]
+        conditions: [.default]
     medi:
       - written_units: [.S]
+        conditions: [.default]
     fina:
       - written_units: [.S]
+        conditions: [.default]
 
 0x1859: # ᡙ MONGOLIAN LETTER TODO HAA
   id: .hHag
@@ -476,13 +621,17 @@
   variants:
     isol:
       - written_units: [.A.init, .Hr.medi]
+        conditions: [.default]
     init:
       - written_units: [.A, .Hr]
+        conditions: [.default]
     medi:
       - written_units: [.A, .Hr]
+        conditions: [.default]
       - written_units: [.Hr]
     fina:
       - written_units: [.Hr]
+        conditions: [.default]
 
 0x1854: # ᡔ MONGOLIAN LETTER TODO TSA
   id: .crHag
@@ -490,12 +639,16 @@
   variants:
     isol:
       - written_units: [.J.init]
+        conditions: [.default]
     init:
       - written_units: [.J]
+        conditions: [.default]
     medi:
       - written_units: [.J]
+        conditions: [.default]
     fina:
       - written_units: [.J]
+        conditions: [.default]
 
 0x1834: # ᠴ MONGOLIAN LETTER CHA
   id: .ch
@@ -503,12 +656,16 @@
   variants:
     isol:
       - written_units: [.Ch.init]
+        conditions: [.default]
     init:
       - written_units: [.Ch]
+        conditions: [.default]
     medi:
       - written_units: [.Ch]
+        conditions: [.default]
     fina:
       - written_units: [.Ch]
+        conditions: [.default]
 
 0x1895: # ᢕ MONGOLIAN LETTER ALI GALI ZHA
   id: .zrHag
@@ -516,12 +673,16 @@
   variants:
     isol:
       - written_units: [.Rh2.init]
+        conditions: [.default]
     init:
       - written_units: [.Rh2]
+        conditions: [.default]
     medi:
       - written_units: [.Rh2]
+        conditions: [.default]
     fina:
       - written_units: [.Rh2]
+        conditions: [.default]
 
 0x1896: # ᢖ MONGOLIAN LETTER ALI GALI ZA
   id: .zHag
@@ -529,12 +690,16 @@
   variants:
     isol:
       - written_units: [.Zz.init]
+        conditions: [.default]
     init:
       - written_units: [.Zz]
+        conditions: [.default]
     medi:
       - written_units: [.Zz]
+        conditions: [.default]
     fina:
       - written_units: [.Zz]
+        conditions: [.default]
 
 0x1897: # ᢗ MONGOLIAN LETTER ALI GALI AH
   id: .qHag
@@ -542,12 +707,16 @@
   variants:
     isol:
       - written_units: [.Q.init]
+        conditions: [.default]
     init:
       - written_units: [.Q]
+        conditions: [.default]
     medi:
       - written_units: [.Q]
+        conditions: [.default]
     fina:
       - written_units: [.Q.medi]
+        conditions: [.default]
 
 0x1840: # ᡀ MONGOLIAN LETTER LHA
   id: .lh
@@ -555,12 +724,16 @@
   variants:
     isol:
       - written_units: [.L.init, .Hr.medi]
+        conditions: [.default]
     init:
       - written_units: [.L, .Hr]
+        conditions: [.default]
     medi:
       - written_units: [.L, .Hr]
+        conditions: [.default]
     fina:
       - written_units: [.L.medi, .Hr.medi]
+        conditions: [.default]
 
 0x1880: # ᢀ MONGOLIAN LETTER ALI GALI ANUSVARA ONE
   id: .anusvara

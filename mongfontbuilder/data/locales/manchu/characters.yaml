@@ -5,20 +5,25 @@
       - written_units: [.A, .A]
         gb_index: [GB/T 36645-2018, 0x1820, manchu a isolated form]
         eac_index: MAD1
+        conditions: [.default]
     init:
       - written_units: [.A, .A]
         gb_index: [GB/T 36645-2018, 0x0004, manchu a initial form]
         eac_index: MAS1
+        conditions: [.default]
     medi:
       - written_units: [.A]
         gb_index: [GB/T 36645-2018, 0x0005, manchu a medial form]
         eac_index: MAZ1
+        conditions: [.default]
     fina:
       - written_units: [.A]
         gb_index: [GB/T 36645-2018, 0x0008, manchu a final form]
         eac_index: MAM1
+        conditions: [.default]
       - written_units: [.Aa]
         eac_index: MAM2
+        conditions: [.post_bowed]
 
 0x185D: # ᡝ MONGOLIAN LETTER SIBE E
   id: .e
@@ -27,28 +32,36 @@
       - written_units: [.A]
         gb_index: [GB/T 36645-2018, 0x1821, manchu e isolated form]
         eac_index: MED1
+        conditions: [.default]
     init:
       - written_units: [.A]
         gb_index: [GB/T 36645-2018, 0x0007, manchu e initial form]
         eac_index: MES1
+        conditions: [.default]
     medi:
       - written_units: [.Ah]
         gb_index: [GB/T 36645-2018, 0x0060, manchu e first medial form]
         eac_index: MEZ1
+        conditions: [.default]
       - written_units: [.A]
         gb_index: [GB/T 36645-2018, 0x0005, manchu e second medial form]
         eac_index: MEZ2
+        conditions: [.feminine]
     fina:
       - written_units: [.Ah]
         gb_index: [GB/T 36645-2018, 0x185D, manchu e first final form]
         eac_index: MEM1
+        conditions: [.default]
       - written_units: [.A]
         gb_index: [GB/T 36645-2018, 0x0008, manchu e second final form]
         eac_index: MEM2
+        conditions: [.feminine]
       - written_units: [.At]
         eac_index: MEM3
+        conditions: [.post_bowed]
       - written_units: [.Aa]
         eac_index: MEM4
+        conditions: [.post_bowed]
 
 0x1873: # ᡳ MONGOLIAN LETTER MANCHU I
   id: .i
@@ -57,31 +70,35 @@
       - written_units: [.A, .I]
         gb_index: [GB/T 36645-2018, 0x1822, manchu i isolated form]
         eac_index: MID1
+        conditions: [.default]
       - written_units: [.I]
-        note: for particle
+        conditions: [.particle]
     init:
       - written_units: [.A, .I]
         gb_index: [GB/T 36645-2018, 0x000A, manchu i initial form]
         eac_index: MIS1
+        conditions: [.default]
     medi:
       - written_units: [.I]
         gb_index: [GB/T 36645-2018, 0x1835, manchu i first medial form]
         eac_index: MIZ1
-      # - written_units: [.A, .I]
-      #   gb_index: [GB/T 36645-2018, 0x185E, manchu i second medial form]
+        conditions: [.default]
       - written_units: [.I, .I]
         gb_index: [GB/T 36645-2018, 0x1873, manchu i third medial form]
         eac_index: MIZ2
+        conditions: [.devsger]
     fina:
       - written_units: [.I]
         gb_index: [GB/T 36645-2018, 0x000B, manchu i first final form]
         eac_index: MIM1
+        conditions: [.default]
       - written_units: [.I2]
         gb_index: [GB/T 36645-2018, 0x0062, manchu i second final form]
         eac_index: MIM2
       - written_units: [.Iy]
         gb_index: [GB/T 36645-2018, 0x0063, manchu i third final form]
         eac_index: MIM3
+        conditions: [.marked]
       - written_units: [.A, .I]
         gb_index: [GB/T 36645-2018, 0x0303, manchu i fourth final form]
         eac_index: MIM4
@@ -94,18 +111,22 @@
       - written_units: [.Ai.medi]
         fabricated:
         eac_index: MIYD1
+        conditions: [.default]
     init:
       - written_units: [.Ai.medi]
         fabricated:
         eac_index: MIYS1
+        conditions: [.default]
     medi:
       - written_units: [.Ai]
         gb_index: [GB/T 36645-2018, 0x185F, manchu iy medial form]
         eac_index: MIYZ1
+        conditions: [.default]
     fina:
       - written_units: [.Ai]
         gb_index: [GB/T 36645-2018, 0x0064, manchu iy final form]
         eac_index: MIYM1
+        conditions: [.default]
 
 0x1823: # ᠣ MONGOLIAN LETTER O
   id: .o
@@ -114,21 +135,26 @@
       - written_units: [.A, .O]
         gb_index: [GB/T 36645-2018, 0x1823, manchu o isolated form]
         eac_index: MOD1
+        conditions: [.default]
     init:
       - written_units: [.A, .O]
         gb_index: [GB/T 36645-2018, 0x1824, manchu o initial form]
         eac_index: MOS1
+        conditions: [.default]
     medi:
       - written_units: [.O]
         gb_index: [GB/T 36645-2018, 0x000C, manchu o medial form]
         eac_index: MOZ1
+        conditions: [.default]
     fina:
       - written_units: [.U]
         gb_index: [GB/T 36645-2018, 0x000E, manchu o first final form]
         eac_index: MOM1
+        conditions: [.default]
       - written_units: [.O]
         gb_index: [GB/T 36645-2018, 0x000F, manchu o second final form]
         eac_index: MOM2
+        conditions: [.marked, .post_bowed]
 
 0x1860: # ᡠ MONGOLIAN LETTER SIBE UE
   id: .u
@@ -137,30 +163,38 @@
       - written_units: [.A, .Oh]
         gb_index: [GB/T 36645-2018, 0x1860, manchu ue isolated form]
         eac_index: MUED1
+        conditions: [.default]
     init:
       - written_units: [.A, .Oh]
         gb_index: [GB/T 36645-2018, 0x0065, manchu ue initial form]
         eac_index: MUES1
+        conditions: [.default]
     medi:
       - written_units: [.Oh]
         gb_index: [GB/T 36645-2018, 0x0066, manchu ue first medial form]
         eac_index: MUEZ1
+        conditions: [.default]
       - written_units: [.O]
         gb_index: [GB/T 36645-2018, 0x000C, manchu ue second medial form]
         eac_index: MUEZ2
+        conditions: [.feminine]
     fina:
       - written_units: [.Uh]
         gb_index: [GB/T 36645-2018, 0x0067, manchu ue first final form]
         eac_index: MUEM1
+        conditions: [.default]
       - written_units: [.U]
         gb_index: [GB/T 36645-2018, 0x000E, manchu ue second final form]
         eac_index: MUEM2
+        conditions: [.feminine]
       - written_units: [.Oh]
         gb_index: [GB/T 36645-2018, 0x0068, manchu ue third final form]
         eac_index: MUEM3
+        conditions: [.marked, .post_bowed]
       - written_units: [.O]
         gb_index: [GB/T 36645-2018, 0x000F, manchu ue fourth final form]
         eac_index: MUEM4
+        conditions: [.feminine, .post_bowed]
 
 0x1861: # ᡡ MONGOLIAN LETTER SIBE U
   id: .ue
@@ -170,18 +204,22 @@
       - written_units: [.A, .Ue]
         gb_index: [GB/T 36645-2018, 0x1825, manchu u isolated form]
         eac_index: MUD1
+        conditions: [.default]
     init:
       - written_units: [.A, .O, .I]
         gb_index: [GB/T 36645-2018, 0x1826, manchu u initial form]
         eac_index: MUS1
+        conditions: [.default]
     medi:
       - written_units: [.O, .I]
         gb_index: [GB/T 36645-2018, 0x1861, manchu u medial form]
         eac_index: MUZ1
+        conditions: [.default]
     fina:
       - written_units: [.Ue]
         gb_index: [GB/T 36645-2018, 0x0011, manchu u final form]
         eac_index: MUM1
+        conditions: [.default]
 
 0x1807: # ᠇ MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER
   id: .sbm
@@ -190,15 +228,19 @@
     isol:
       - written_units: [.A.medi]
         fabricated:
+        conditions: [.default]
     init:
       - written_units: [.A.medi]
         fabricated:
+        conditions: [.default]
     medi:
       - written_units: [.A]
         gb_index: [GB/T 36645-2018, 0x1807, sibe syllable boundary]
+        conditions: [.default]
     fina:
       - written_units: [.A.medi]
         fabricated:
+        conditions: [.default]
 
 0x1828: # ᠨ MONGOLIAN LETTER NA
   id: .n
@@ -207,21 +249,26 @@
       - written_units: [.N.init]
         fabricated:
         eac_index: MNAD1
+        conditions: [.default]
     init:
       - written_units: [.N]
         gb_index: [GB/T 36645-2018, 0x1828, manchu na initial form]
         eac_index: MNAS1
+        conditions: [.default]
     medi:
       - written_units: [.A]
         gb_index: [GB/T 36645-2018, 0x0005, manchu na first medial form]
         eac_index: MNAZ1
+        conditions: [.default, .devsger]
       - written_units: [.N]
         gb_index: [GB/T 36645-2018, 0x0014, manchu na second medial form]
         eac_index: MNAZ2
+        conditions: [.onset]
     fina:
       - written_units: [.A]
         gb_index: [GB/T 36645-2018, 0x0008, manchu na first final form]
         eac_index: MNAM1
+        conditions: [.default]
       - written_units: [.N]
         gb_index: [GB/T 36645-2018, 0x0015, manchu na second final form]
         eac_index: MNAM2
@@ -234,18 +281,22 @@
       - written_units: [.A.medi, .G.medi]
         fabricated:
         eac_index: MANGD1
+        conditions: [.default]
     init:
       - written_units: [.A.medi, .G.medi]
         fabricated:
         eac_index: MANGS1
+        conditions: [.default]
     medi:
       - written_units: [.A, .G]
         gb_index: [GB/T 36645-2018, 0x1829, manchu ang first medial form]
         eac_index: MANGZ1
+        conditions: [.default]
     fina:
       - written_units: [.A, .G]
         gb_index: [GB/T 36645-2018, 0x0017, manchu ang final form]
         eac_index: MANGM1
+        conditions: [.default]
 
 0x1874: # ᡴ MONGOLIAN LETTER MANCHU KA
   id: .k
@@ -254,6 +305,7 @@
       - written_units: [.H.init]
         fabricated:
         eac_index: MKAD1
+        conditions: [.default]
       - written_units: [.G.init]
         fabricated:
         eac_index: MKAD2
@@ -264,9 +316,11 @@
       - written_units: [.H]
         gb_index: [GB/T 36645-2018, 0x182C, manchu ka first initial form]
         eac_index: MKAS1
+        conditions: [.default, .masculine_onset]
       - written_units: [.G]
         gb_index: [GB/T 36645-2018, 0x1889, manchu ka second initial form]
         eac_index: MKAS2
+        conditions: [.feminine]
       - written_units: [.Gx]
         gb_index: [GB/T 36645-2018, 0x001B, manchu ka third initial form]
         eac_index: MKAS3
@@ -274,12 +328,15 @@
       - written_units: [.H]
         gb_index: [GB/T 36645-2018, 0x0006, manchu ka first medial form]
         eac_index: MKAZ1
+        conditions: [.default, .masculine_onset]
       - written_units: [.Hx]
         gb_index: [GB/T 36645-2018, 0x001C, manchu ka second medial form]
         eac_index: MKAZ2
+        conditions: [.masculine_devsger]
       - written_units: [.G]
         gb_index: [GB/T 36645-2018, 0x001E, manchu ka third medial form]
         eac_index: MKAZ3
+        conditions: [.feminine]
       - written_units: [.Gx]
         gb_index: [GB/T 36645-2018, 0x0079, manchu ka fourth medial form]
         eac_index: MKAZ4
@@ -287,9 +344,11 @@
       - written_units: [.Hx]
         gb_index: [GB/T 36645-2018, 0x1874, manchu ka first final form]
         eac_index: MKAM1
+        conditions: [.default, .masculine_devsger]
       - written_units: [.G4]
         gb_index: [GB/T 36645-2018, 0x007A, manchu ka second final form]
         eac_index: MKAM2
+        conditions: [.feminine]
       - written_units: [.Gx]
         gb_index: [GB/T 36645-2018, 0x007B, manchu ka third final form]
         eac_index: MKAM3
@@ -301,6 +360,7 @@
       - written_units: [.Hh.init]
         fabricated:
         eac_index: MGAD1
+        conditions: [.default]
       - written_units: [.Gh.init]
         fabricated:
         eac_index: MGAD2
@@ -308,20 +368,25 @@
       - written_units: [.Hh]
         gb_index: [GB/T 36645-2018, 0x1864, manchu ga first initial form]
         eac_index: MGAS1
+        conditions: [.default, .masculine_onset]
       - written_units: [.Gh]
         gb_index: [GB/T 36645-2018, 0x006B, manchu ga second initial form]
         eac_index: MGAS2
+        conditions: [.feminine]
     medi:
       - written_units: [.Hh]
         gb_index: [GB/T 36645-2018, 0x006A, manchu ga first medial form]
         eac_index: MGAZ1
+        conditions: [.default, .masculine_onset]
       - written_units: [.Gh]
         gb_index: [GB/T 36645-2018, 0x030D, manchu ga second medial form]
         eac_index: MGAZ2
+        conditions: [.feminine]
     fina:
       - written_units: [.Hh.medi]
         fabricated:
         eac_index: MGAM1
+        conditions: [.default]
 
 0x1865: # ᡥ MONGOLIAN LETTER SIBE HA
   id: .h
@@ -330,6 +395,7 @@
       - written_units: [.Hc.init]
         fabricated:
         eac_index: MHAD1
+        conditions: [.default]
       - written_units: [.Gc.init]
         fabricated:
         eac_index: MHAD2
@@ -337,20 +403,25 @@
       - written_units: [.Hc]
         gb_index: [GB/T 36645-2018, 0x1865, manchu ha first initial form]
         eac_index: MHAS1
+        conditions: [.default, .masculine_onset]
       - written_units: [.Gc]
         gb_index: [GB/T 36645-2018, 0x006D, manchu ha second initial form]
         eac_index: MHAS2
+        conditions: [.feminine]
     medi:
       - written_units: [.Hc]
         gb_index: [GB/T 36645-2018, 0x006C, manchu ha first medial form]
         eac_index: MHAZ1
+        conditions: [.default, .masculine_onset]
       - written_units: [.Gc]
         gb_index: [GB/T 36645-2018, 0x030E, manchu ha second medial form]
         eac_index: MHAZ2
+        conditions: [.feminine]
     fina:
       - written_units: [.Hc.medi]
         fabricated:
         eac_index: MHAM1
+        conditions: [.default]
 
 0x182A: # ᠪ MONGOLIAN LETTER BA
   id: .b
@@ -359,18 +430,22 @@
       - written_units: [.B.init]
         fabricated:
         eac_index: MBAD1
+        conditions: [.default]
     init:
       - written_units: [.B]
         gb_index: [GB/T 36645-2018, 0x182A, manchu ba initial form]
         eac_index: MBAS1
+        conditions: [.default]
     medi:
       - written_units: [.B]
         gb_index: [GB/T 36645-2018, 0x182A, manchu ba medial form]
         eac_index: MBAZ1
+        conditions: [.default]
     fina:
       - written_units: [.B]
         gb_index: [GB/T 36645-2018, 0x0018, manchu ba final form]
         eac_index: MBAM1
+        conditions: [.default]
 
 0x1866: # ᡦ MONGOLIAN LETTER SIBE PA
   id: .p
@@ -379,18 +454,22 @@
       - written_units: [.Pb.init]
         fabricated:
         eac_index: MPAD1
+        conditions: [.default]
     init:
       - written_units: [.Pb]
         gb_index: [GB/T 36645-2018, 0x1866, manchu pa first initial form]
         eac_index: MPAS1
+        conditions: [.default]
     medi:
       - written_units: [.Pb]
         gb_index: [GB/T 36645-2018, 0x1866, manchu pa first medial form]
         eac_index: MPAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Pb.medi]
         fabricated:
         eac_index: MPAM1
+        conditions: [.default]
 
 0x1830: # ᠰ MONGOLIAN LETTER SA
   id: .s
@@ -399,18 +478,22 @@
       - written_units: [.S.init]
         fabricated:
         eac_index: MSAD1
+        conditions: [.default]
     init:
       - written_units: [.S]
         gb_index: [GB/T 36645-2018, 0x1830, manchu sa initial form]
         eac_index: MSAS1
+        conditions: [.default]
     medi:
       - written_units: [.S]
         gb_index: [GB/T 36645-2018, 0x0024, manchu sa medial form]
         eac_index: MSAZ1
+        conditions: [.default]
     fina:
       - written_units: [.S]
         gb_index: [GB/T 36645-2018, 0x0025, manchu sa first final form]
         eac_index: MSAM1
+        conditions: [.default]
 
 0x1867: # ᡧ MONGOLIAN LETTER SIBE SHA
   id: .sh
@@ -420,18 +503,22 @@
       - written_units: [.Sp.init]
         fabricated:
         eac_index: MSHAD1
+        conditions: [.default]
     init:
       - written_units: [.Sp]
         gb_index: [GB/T 36645-2018, 0x1867, manchu sha initial form]
         eac_index: MSHAS1
+        conditions: [.default]
     medi:
       - written_units: [.Sp]
         gb_index: [GB/T 36645-2018, 0x006E, manchu sha medial form]
         eac_index: MSHAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Sp]
         gb_index: [GB/T 36645-2018, 0x006F, manchu sha final form]
         eac_index: MSHAM1
+        conditions: [.default]
 
 0x1868: # ᡨ MONGOLIAN LETTER SIBE TA
   id: .t
@@ -440,6 +527,7 @@
       - written_units: [.Tb.init]
         fabricated:
         eac_index: MTAD1
+        conditions: [.default]
       - written_units: [.T.init]
         fabricated:
         eac_index: MTAD2
@@ -447,23 +535,29 @@
       - written_units: [.Tb]
         gb_index: [GB/T 36645-2018, 0x1868, manchu ta first initial form]
         eac_index: MTAS1
+        conditions: [.default, .feminine]
       - written_units: [.T]
         gb_index: [GB/T 36645-2018, 0x1832, manchu ta second initial form]
         eac_index: MTAS2
+        conditions: [.masculine_onset]
     medi:
       - written_units: [.Db]
         gb_index: [GB/T 36645-2018, 0x0070, manchu ta first medial form]
         eac_index: MTAZ1
+        conditions: [.default, .feminine]
       - written_units: [.D]
         gb_index: [GB/T 36645-2018, 0x1833, manchu ta second medial form]
         eac_index: MTAZ2
+        conditions: [.masculine_onset]
       - written_units: [.Dd]
         gb_index: [GB/T 36645-2018, 0x002C, manchu ta third medial form]
         eac_index: MTAZ3
+        conditions: [.devsger]
     fina:
       - written_units: [.Dd]
         gb_index: [GB/T 36645-2018, 0x002D, manchu ta final form]
         eac_index: MTAM1
+        conditions: [.default]
 
 0x1869: # ᡩ MONGOLIAN LETTER SIBE DA
   id: .d
@@ -472,6 +566,7 @@
       - written_units: [.Th.init]
         fabricated:
         eac_index: MDAD1
+        conditions: [.default]
       - written_units: [.Tt.init]
         fabricated:
         eac_index: MDAD2
@@ -479,20 +574,25 @@
       - written_units: [.Th]
         gb_index: [GB/T 36645-2018, 0x1869, manchu da first initial form]
         eac_index: MDAS1
+        conditions: [.default, .masculine_onset]
       - written_units: [.Tt]
         gb_index: [GB/T 36645-2018, 0x0071, manchu da second initial form]
         eac_index: MDAS2
+        conditions: [.feminine]
     medi:
       - written_units: [.Dh]
         gb_index: [GB/T 36645-2018, 0x0072, manchu da first medial form]
         eac_index: MDAZ1
+        conditions: [.default, .masculine_onset]
       - written_units: [.Dt]
         gb_index: [GB/T 36645-2018, 0x0073, manchu da second medial form]
         eac_index: MDAZ2
+        conditions: [.feminine]
     fina:
       - written_units: [.Dh.medi]
         fabricated:
         eac_index: MDAM1
+        conditions: [.default]
 
 0x182F: # ᠯ MONGOLIAN LETTER LA
   id: .l
@@ -501,18 +601,22 @@
       - written_units: [.L.init]
         fabricated:
         eac_index: MLAD1
+        conditions: [.default]
     init:
       - written_units: [.L]
         gb_index: [GB/T 36645-2018, 0x182F, manchu la initial form]
         eac_index: MLAS1
+        conditions: [.default]
     medi:
       - written_units: [.L]
         gb_index: [GB/T 36645-2018, 0x0022, manchu la medial form]
         eac_index: MLAZ1
+        conditions: [.default]
     fina:
       - written_units: [.L]
         gb_index: [GB/T 36645-2018, 0x0023, manchu la final form]
         eac_index: MLAM1
+        conditions: [.default]
 
 0x182E: # ᠮ MONGOLIAN LETTER MA
   id: .m
@@ -521,18 +625,22 @@
       - written_units: [.M.init]
         fabricated:
         eac_index: MMAD1
+        conditions: [.default]
     init:
       - written_units: [.M]
         gb_index: [GB/T 36645-2018, 0x182E, manchu ma initial form]
         eac_index: MMAS1
+        conditions: [.default]
     medi:
       - written_units: [.M]
         gb_index: [GB/T 36645-2018, 0x0020, manchu ma medial form]
         eac_index: MMAZ1
+        conditions: [.default]
     fina:
       - written_units: [.M]
         gb_index: [GB/T 36645-2018, 0x0021, manchu ma final form]
         eac_index: MMAM1
+        conditions: [.default]
 
 0x1834: # ᠴ MONGOLIAN LETTER CHA
   id: .ch
@@ -542,18 +650,22 @@
       - written_units: [.Ch.init]
         fabricated:
         eac_index: MCHAD1
+        conditions: [.default]
     init:
       - written_units: [.Ch]
         gb_index: [GB/T 36645-2018, 0x1834, manchu cha initial form]
         eac_index: MCHAS1
+        conditions: [.default]
     medi:
       - written_units: [.Ch]
         gb_index: [GB/T 36645-2018, 0x002F, manchu cha medial form]
         eac_index: MCHAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Ch.medi]
         fabricated:
         eac_index: MCHAM1
+        conditions: [.default]
 
 0x1835: # ᠵ MONGOLIAN LETTER JA
   id: .j
@@ -562,18 +674,22 @@
       - written_units: [.I.init]
         fabricated:
         eac_index: MJAD1
+        conditions: [.default]
     init:
       - written_units: [.I]
         gb_index: [GB/T 36645-2018, 0x1835, manchu ja initial form]
         eac_index: MJAS1
+        conditions: [.default]
     medi:
       - written_units: [.J]
         gb_index: [GB/T 36645-2018, 0x0031, manchu ja medial form]
         eac_index: MJAZ1
+        conditions: [.default]
     fina:
       - written_units: [.J.medi]
         fabricated:
         eac_index: MJAM1
+        conditions: [.default]
 
 0x1836: # ᠶ MONGOLIAN LETTER YA
   id: .y
@@ -582,18 +698,22 @@
       - written_units: [.Y.init]
         fabricated:
         eac_index: MYAD1
+        conditions: [.default]
     init:
       - written_units: [.Y]
         gb_index: [GB/T 36645-2018, 0x1836, manchu ya initial form]
         eac_index: MYAS1
+        conditions: [.default]
     medi:
       - written_units: [.Y]
         gb_index: [GB/T 36645-2018, 0x1836, manchu ya medial form]
         eac_index: MYAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Y.medi]
         fabricated:
         eac_index: MYAM1
+        conditions: [.default]
 
 0x1875: # ᡵ MONGOLIAN LETTER MANCHU RA
   id: .r
@@ -602,18 +722,22 @@
       - written_units: [.R.init]
         fabricated:
         eac_index: MRAD1
+        conditions: [.default]
     init:
       - written_units: [.R]
         gb_index: [GB/T 36645-2018, 0x1837, manchu ra initial form]
         eac_index: MRAS1
+        conditions: [.default]
     medi:
       - written_units: [.R]
         gb_index: [GB/T 36645-2018, 0x1837, manchu ra medial form]
         eac_index: MRAZ1
+        conditions: [.default]
     fina:
       - written_units: [.R2]
         gb_index: [GB/T 36645-2018, 0x1875, manchu ra final form]
         eac_index: MRAM1
+        conditions: [.default]
 
 0x1876: # ᡶ MONGOLIAN LETTER MANCHU FA
   id: .f
@@ -622,27 +746,34 @@
       - written_units: [.V.init]
         fabricated:
         eac_index: MFAD1
+        conditions: [.default]
       - written_units: [.W.init]
         fabricated:
         eac_index: MFAD2
+        conditions: [.default]
     init:
       - written_units: [.V]
         gb_index: [GB/T 36645-2018, 0x186B, manchu fa first initial form]
         eac_index: MFAS1
+        conditions: [.default]
       - written_units: [.W]
         gb_index: [GB/T 36645-2018, 0x1838, manchu fa second initial form]
         eac_index: MFAS2
+        conditions: [.marked]
     medi:
       - written_units: [.V]
         gb_index: [GB/T 36645-2018, 0x1876, manchu fa first medial form]
         eac_index: MFAZ1
+        conditions: [.default]
       - written_units: [.W]
         gb_index: [GB/T 36645-2018, 0x1838, manchu fa second medial form]
         eac_index: MFAZ2
+        conditions: [.marked]
     fina:
       - written_units: [.V.medi]
         fabricated:
         eac_index: MFAM1
+        conditions: [.default]
 
 0x1838: # ᠸ MONGOLIAN LETTER WA
   id: .w
@@ -650,17 +781,21 @@
     isol:
       - written_units: [.W.init]
         eac_index: MWAD1
+        conditions: [.default]
     init:
       - written_units: [.W]
         gb_index: [GB/T 36645-2018, 0x1838, manchu wa initial form]
         eac_index: MWAS1
+        conditions: [.default]
     medi:
       - written_units: [.W]
         gb_index: [GB/T 36645-2018, 0x1838, manchu wa medial form]
         eac_index: MWAZ1
+        conditions: [.default]
     fina:
       - written_units: [.W]
         eac_index: MWAM1
+        conditions: [.default]
 
 0x183A: # ᠺ MONGOLIAN LETTER KA
   id: .kh
@@ -670,18 +805,22 @@
       - written_units: [.K2.init]
         fabricated:
         eac_index: MKAAD1
+        conditions: [.default]
     init:
       - written_units: [.K2]
         gb_index: [GB/T 36645-2018, 0x183A, manchu ka initial form]
         eac_index: MKAAS1
+        conditions: [.default]
     medi:
       - written_units: [.K2]
         gb_index: [GB/T 36645-2018, 0x183A, manchu ka medial form]
         eac_index: MKAAZ1
+        conditions: [.default]
     fina:
       - written_units: [.K2.medi]
         fabricated:
         eac_index: MKAAM1
+        conditions: [.default]
 
 0x186C: # ᡬ MONGOLIAN LETTER SIBE GAA
   id: .gh
@@ -691,18 +830,22 @@
       - written_units: [.Kh.init]
         fabricated:
         eac_index: MGAAD1
+        conditions: [.default]
     init:
       - written_units: [.Kh]
         gb_index: [GB/T 36645-2018, 0x186C, manchu gaa initial form]
         eac_index: MGAAS1
+        conditions: [.default]
     medi:
       - written_units: [.Kh]
         gb_index: [GB/T 36645-2018, 0x186C, manchu gaa medial form]
         eac_index: MGAAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Kh.medi]
         fabricated:
         eac_index: MGAAM1
+        conditions: [.default]
 
 0x186D: # ᡭ MONGOLIAN LETTER SIBE HAA
   id: .hh
@@ -712,18 +855,22 @@
       - written_units: [.Kc.init]
         fabricated:
         eac_index: MHAAD1
+        conditions: [.default]
     init:
       - written_units: [.Kc]
         gb_index: [GB/T 36645-2018, 0x186D, manchu haa initial form]
         eac_index: MHAAS1
+        conditions: [.default]
     medi:
       - written_units: [.Kc]
         gb_index: [GB/T 36645-2018, 0x186D, manchu haa medial form]
         eac_index: MHAAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Kc.medi]
         fabricated:
         eac_index: MHAAM1
+        conditions: [.default]
 
 0x186E: # ᡮ MONGOLIAN LETTER SIBE TSA
   id: .c
@@ -732,18 +879,22 @@
       - written_units: [.Cs.init]
         fabricated:
         eac_index: MTSAD1
+        conditions: [.default]
     init:
       - written_units: [.Cs]
         gb_index: [GB/T 36645-2018, 0x186E, manchu tsa initial form]
         eac_index: MTSAS1
+        conditions: [.default]
     medi:
       - written_units: [.Cs]
         gb_index: [GB/T 36645-2018, 0x0074, manchu tsa medial form]
         eac_index: MTSAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Cs.medi]
         fabricated:
         eac_index: MTSAM1
+        conditions: [.default]
 
 0x186F: # ᡯ MONGOLIAN LETTER SIBE ZA
   id: .z
@@ -752,17 +903,21 @@
       - written_units: [.Zs.init]
         fabricated:
         eac_index: MZAD1
+        conditions: [.default]
     init:
       - written_units: [.Zs]
         gb_index: [GB/T 36645-2018, 0x186F, manchu za first initial form]
         eac_index: MZAS1
+        conditions: [.default]
     medi:
       - written_units: [.Zs]
         gb_index: [GB/T 36645-2018, 0x0076, manchu za first medial form]
         eac_index: MZAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Zs]
         eac_index: MZAM1
+        conditions: [.default]
 
 0x1870: # ᡰ MONGOLIAN LETTER SIBE RAA
   id: .rh
@@ -772,18 +927,22 @@
       - written_units: [.Rr.init]
         fabricated:
         eac_index: MRAAD1
+        conditions: [.default]
     init:
       - written_units: [.Rr]
         gb_index: [GB/T 36645-2018, 0x1870, manchu raa initial form]
         eac_index: MRAAS1
+        conditions: [.default]
     medi:
       - written_units: [.Rr]
         gb_index: [GB/T 36645-2018, 0x1870, manchu raa medial form]
         eac_index: MRAAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Rr.medi]
         fabricated:
         eac_index: MRAAM1
+        conditions: [.default]
 
 0x1871: # ᡱ MONGOLIAN LETTER SIBE CHA
   id: .cr
@@ -793,18 +952,22 @@
       - written_units: [.Cc.init]
         fabricated:
         eac_index: MCHAAD1
+        conditions: [.default]
     init:
       - written_units: [.Cc]
         gb_index: [GB/T 36645-2018, 0x1871, manchu cha initial form]
         eac_index: MCHAAS1
+        conditions: [.default]
     medi:
       - written_units: [.Cc]
         gb_index: [GB/T 36645-2018, 0x0078, manchu cha medial form]
         eac_index: MCHAAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Cc.medi]
         fabricated:
         eac_index: MCHAAM1
+        conditions: [.default]
 
 0x1877: # ᡷ MONGOLIAN LETTER MANCHU ZHA
   id: .zr
@@ -814,15 +977,19 @@
       - written_units: [.Ic.init]
         fabricated:
         eac_index: MZHAD1
+        conditions: [.default]
     init:
       - written_units: [.Ic]
         gb_index: [GB/T 36645-2018, 0x1877, manchu zha initial form]
         eac_index: MZHAS1
+        conditions: [.default]
     medi:
       - written_units: [.Jc]
         gb_index: [GB/T 36645-2018, 0x007C, manchu zha medial form]
         eac_index: MZHAZ1
+        conditions: [.default]
     fina:
       - written_units: [.Jc.medi]
         fabricated:
         eac_index: MZHAM1
+        conditions: [.default]
