@@ -6,9 +6,6 @@
     },
     {
       "path": "site"
-    },
-    {
-      "path": "utn"
     }
   ],
   "extensions": {
@@ -26,6 +23,10 @@
     "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "files.exclude": {
+      ".svelte-kit": true,
+      "node_modules": true
+    },
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[yaml]": {
