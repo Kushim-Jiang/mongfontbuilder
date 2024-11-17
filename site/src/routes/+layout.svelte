@@ -46,7 +46,7 @@
 <slot />
 
 <footer>
-  <p>Copyright © 2024 Kushim Jiang and Unicode, Inc. All Rights Reserved. The Unicode Consortium and Kushim Jiang make no expressed or implied warranty of any kind, and assume no liability for errors or omissions. No liability is assumed for incidental and consequential damages in connection with or arising out of the use of the information or programs contained or accompanying this technical note. The Unicode <a href="https://www.unicode.org/copyright.html">Terms of Use</a> apply.</p>
+  <p>Copyright © {new Date().getUTCFullYear()} Kushim Jiang and Unicode, Inc. All Rights Reserved. The Unicode Consortium and Kushim Jiang make no expressed or implied warranty of any kind, and assume no liability for errors or omissions. No liability is assumed for incidental and consequential damages in connection with or arising out of the use of the information or programs contained or accompanying this technical note. The Unicode <a href="https://www.unicode.org/copyright.html">Terms of Use</a> apply.</p>
 
   <p>Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the United States and other countries.</p>
 </footer>
@@ -58,6 +58,15 @@
       line-height: 1.25;
       font-family: ui-sans-serif, sans-serif;
       max-width: 50em;
+      padding: 0 1em;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    [lang="zh"] {
+      color: gray;
     }
   }
 </style>
