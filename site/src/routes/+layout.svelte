@@ -1,4 +1,6 @@
 <script>
+  let { children } = $props();
+
   const version = 4;
 
   const base = "https://www.unicode.org/notes/tn57/";
@@ -43,7 +45,7 @@
 
 <p>For information on Unicode Technical Notes including criteria for acceptance, see <a href="https://www.unicode.org/notes/">https://www.unicode.org/notes/</a>.</p>
 
-<slot />
+{@render children()}
 
 <footer>
   <p>Copyright © {new Date().getUTCFullYear()} Kushim Jiang and Unicode, Inc. All Rights Reserved. The Unicode Consortium and Kushim Jiang make no expressed or implied warranty of any kind, and assume no liability for errors or omissions. No liability is assumed for incidental and consequential damages in connection with or arising out of the use of the information or programs contained or accompanying this technical note. The Unicode <a href="https://www.unicode.org/copyright.html">Terms of Use</a> apply.</p>
