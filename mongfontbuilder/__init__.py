@@ -9,7 +9,7 @@ from fontTools.feaLib.parser import Parser
 from fontTools.misc.transform import Identity
 from ufoLib2.objects import Component, Font, Glyph
 
-_files = resources.files(__package__)
+_files = resources.files(__package__ or "")
 dataDir = _files / "data"
 otlDir = _files / "otl"
 
