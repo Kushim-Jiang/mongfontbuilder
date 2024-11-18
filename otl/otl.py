@@ -1,9 +1,19 @@
 from tptq.feacomposer import FeaComposer
 
+requiredWritingSystems = {"hud"}
 
-c = FeaComposer()
+assert requiredWritingSystems
 
-required_writing_systems = {"hud"}
+languageSystems = {"mong": set()}
+if "hud" in requiredWritingSystems or "hag" in requiredWritingSystems:
+    languageSystems["mong"].add("MNG")
+if "tod" in requiredWritingSystems or "tag" in requiredWritingSystems:
+    languageSystems["mong"].add("TOD")
+if "sib" in requiredWritingSystems:
+    languageSystems["mong"].add("SIB")
+if "man" in requiredWritingSystems or "mag" in requiredWritingSystems:
+    languageSystems["mong"].add("MCH")
+c = FeaComposer(languageSystems)
 
 ### glyph class definition for letters
 
@@ -11,16 +21,16 @@ required_writing_systems = {"hud"}
 
 ### cursive joining
 
-default_forms = {
+defaultForms = {
     "isol": {"uni1820": "uni1820.AA.isol"},
     "init": {"uni1820": "uni1820.AA.init"},
     "medi": {"uni1820": "uni1820.A.medi"},
     "fina": {"uni1820": "uni1820.A.fina"},
 }
-for joining_form in ["isol", "init", "medi", "fina"]:
-    with c.Lookup(feature=joining_form, name=f"IIa.{joining_form}"):
-        for nominal_glyph, default_glyph in default_forms.get(joining_form).items():
-            c.sub(nominal_glyph, default_glyph)
+for joiningForm in ["isol", "init", "medi", "fina"]:
+    with c.Lookup(feature=joiningForm, name=f"IIa.{joiningForm}"):
+        for nominalGlyph, defaultGlyph in defaultForms.get(joiningForm).items():
+            c.sub(nominalGlyph, defaultGlyph)
 
 ### rclt
 
@@ -34,7 +44,7 @@ for joining_form in ["isol", "init", "medi", "fina"]:
 
 # III.4: Graphemic - Devsger
 
-# III.5: Graphemic - Postbowed
+# III.5: Graphemic - Post bowed
 
 # III.6: Uncaptured - FVS
 
@@ -54,7 +64,7 @@ for joining_form in ["isol", "init", "medi", "fina"]:
 
 ### vpal
 
-# Ib: propotional punctuation
+# Ib: proportional punctuation
 
 ### mark
 
