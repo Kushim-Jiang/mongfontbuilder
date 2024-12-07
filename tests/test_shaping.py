@@ -1,5 +1,4 @@
-from mongfonttester import core_test, eac_test
-from mongfonttester.test import parse_code
+from utils import core_test, eac_test, parse_code
 
 
 def test_core():
@@ -18,4 +17,5 @@ def test_eac(writing_system: str):
     eac_test.eac_test(writing_system)
 
 
-test_core()
+if __name__ == "__main__":
+    test_core()

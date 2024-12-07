@@ -1,17 +1,12 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from pathlib import Path
+from importlib.resources import files
 
 import yaml
 
-DATA_DIR = Path(__file__).parent.parent / "mongfontbuilder" / "data"
-
-
-@dataclass
-class Script:
-    code: str
-    characters: dict[str, Character]
+code = "Mong"
+characters: dict[int, Character]
 
 
 @dataclass
@@ -68,11 +63,10 @@ def _validate_case(case: str, /) -> str:
         raise Exception(f""""{case}" is not a valid case literal""")
 
 
-mongolian = Script(
-    code="Mong",
-    characters={
-        char.cp: char
-        for k, v in yaml.safe_load((DATA_DIR / "characters.yaml").read_text(encoding="utf-8")).items()
-        if (char := Character.from_data(k, v))
-    },
-)
+path = files(__package__ or "") / "data" / "characters.yaml"
+
+characters = {}
+with path.open(encoding="utf-8") as f:
+    for k, v in yaml.safe_load(f).items():
+        if char := Character.from_data(k, v):
+            characters[char.cp] = char

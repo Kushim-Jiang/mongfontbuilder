@@ -6,6 +6,7 @@ authors = [
     "Kushim Jiang <kushim_jiang@outlook.com>",
     "Liang Hai <lianghai@gmail.com>",
 ]
+packages = [{ include = "mongfontbuilder", from = "lib" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"

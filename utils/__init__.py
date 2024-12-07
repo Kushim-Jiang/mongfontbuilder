@@ -3,8 +3,11 @@ from pathlib import Path
 
 import uharfbuzz
 import yaml
-
 from mongfontbuilder import UTNGlyphName
+
+packageDir = Path(__file__).parent
+repo = packageDir / ".."
+dataDir = repo / "lib" / "mongfontbuilder" / "data"
 
 
 def _load(path: Path) -> dict:
@@ -28,7 +31,7 @@ def load_char_data():
 
     char_data = {}
     for key, relative_path in char_paths.items():
-        char_data[key] = _load(data_path / relative_path)
+        char_data[key] = _load(dataDir / relative_path)
     return char_data
 
 
@@ -41,12 +44,10 @@ def load_glyph_data():
 
     glyph_data = {}
     for key, relative_path in glyph_paths.items():
-        glyph_data[key] = _load(data_path / relative_path)
+        glyph_data[key] = _load(dataDir / relative_path)
     return glyph_data
 
 
-dir_path = Path(__file__).parent.parent
-data_path = dir_path / "mongfontbuilder" / "data"
 char_yaml = load_char_data()
 char_json = load_glyph_data()
 
@@ -94,9 +95,7 @@ def get_units(utn_name: UTNGlyphName) -> str:
 
 def init_to_medi(written_units: str, units: list[str]) -> str:
     for unit in units:
-        written_units = written_units.replace(
-            f"{unit}RightLeftSelectRight", f"Left{unit}Right"
-        )
+        written_units = written_units.replace(f"{unit}RightLeftSelectRight", f"Left{unit}Right")
     return written_units
 
 

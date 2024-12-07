@@ -2,41 +2,26 @@ import json
 from pathlib import Path
 
 import yaml
-
 from mongfontbuilder import UTNGlyphName
-from mongfonttester.test import char_json, get_units, parse_code, shape_text, test
+
+from . import char_json, dataDir, get_units, parse_code, repo, shape_text, test
+
+with (dataDir / "menksoft.yaml").open(encoding="utf-8") as f:
+    menk_yaml = yaml.safe_load(f)
 
 
-def _load(path: Path) -> dict:
-    with path.open(encoding="utf-8") as f:
-        if path.suffix == ".json":
-            return json.load(f)
-        return yaml.load(f, yaml.FullLoader)
-
-
-def _load_rule_json(dir_path: Path, filenames: dict[str, str]) -> dict:
-    return {
-        name: _load(dir_path / "references" / filename)
-        for name, filename in filenames.items()
-    }
-
-
-dir_path = Path(__file__).parent.parent
-font_path = dir_path / "temp" / "DraftNew-Regular.otf"
-
-menk_path = dir_path / "mongfontbuilder" / "data" / "menksoft.yaml"
-menk_yaml = _load(menk_path)
-
-rule_filenames = {
-    "hud": "xunifont_rulewords_mon.json",
-    "tod": "xunifont_rulewords_todo.json",
-    "sib": "xunifont_rulewords_sibe.json",
-    "man": "xunifont_rulewords_man.json",
+rule_json = {
+    k: json.loads((repo / "references" / v).read_text(encoding="utf-8"))
+    for k, v in {
+        "hud": "xunifont_rulewords_mon.json",
+        "tod": "xunifont_rulewords_todo.json",
+        "sib": "xunifont_rulewords_sibe.json",
+        "man": "xunifont_rulewords_man.json",
+    }.items()
 }
-rule_json = _load_rule_json(dir_path, rule_filenames)
 
 
-def parse_glyphs(word: str, font: Path = font_path) -> str:
+def parse_glyphs(word: str, font: Path = repo / "temp" / "DraftNew-Regular.otf") -> str:
     glyph_names = [glyph.get("glyph_name") for glyph in shape_text(word, font)]
     written_units = ""
 

@@ -29,7 +29,7 @@ defaultForms = {
 }
 for joiningForm in ["isol", "init", "medi", "fina"]:
     with c.Lookup(feature=joiningForm, name=f"IIa.{joiningForm}"):
-        for nominalGlyph, defaultGlyph in defaultForms.get(joiningForm).items():
+        for nominalGlyph, defaultGlyph in defaultForms.get(joiningForm, {}).items():
             c.sub(nominalGlyph, defaultGlyph)
 
 ### rclt

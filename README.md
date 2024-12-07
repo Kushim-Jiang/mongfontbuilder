@@ -8,7 +8,7 @@
 
   - Private repo.
   - **Mongolian Font Builder**: `mongfontbuilder/`. Building fonts by glyph set and static OTL.
-  - **Mongolian Font Tester**: `mongfonttester/`. Testing OTL by .tsv test files.
+  - **Mongolian Font Tester**: `tests/`. Testing OTL by .tsv test files.
   - **UTN #57** (website in Svelte): `site/`.
 
 - [Kushim-Jiang / mongolian-private](https://github.com/kushim-jiang/mongolian-private)

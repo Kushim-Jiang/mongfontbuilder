@@ -6,28 +6,21 @@ from pathlib import Path
 import ufoLib2
 from ufo2ft import compileTTF
 
-from mongfonttester.eac_test import parse_glyphs
-from mongfonttester.test import parse_code, char_yaml, test
+from . import char_yaml, parse_code, repo, test
+from .eac_test import parse_glyphs
 
 
-def _load(path: Path) -> dict:
+def _load(path: Path) -> list[list[str]]:
     with path.open(encoding="utf-8") as f:
         reader = csv.reader(f, delimiter="\t")
         return [line for line in reader if line and not line[0].startswith("#")]
-
-
-def _load_rule_json(dir_path: Path) -> dict:
-    return {
-        name: _load(dir_path / "mongfonttester" / "data" / f"{name}-core.tsv")
-        for name in writing_systems
-    }
 
 
 dir_path = Path(__file__).parent.parent
 font_path = dir_path / "temp" / "DraftNew-Regular.otf"
 
 writing_systems = ["hud", "hag", "tod", "tag", "sib", "man", "mag"]
-rule_tsv = _load_rule_json(dir_path)
+rule_tsv = {name: _load(repo / "utils" / "data" / f"{name}-core.tsv") for name in writing_systems}
 
 
 def create_ufo(glyph_list: list[str], otl: str):
