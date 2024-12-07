@@ -1,3 +1,9 @@
+// Execute from the site directory to update /mongfontbuilder/data.json:
+//   npx vite-node --script data.ts
+
+import { fileURLToPath } from "url";
+import { writeFile } from "fs/promises";
+
 export type JoiningPosition = (typeof joiningPositions)[number];
 export const joiningPositions = ["isol", "init", "medi", "fina"] as const;
 
@@ -154,3 +160,11 @@ export const categories = {
     "cr",
   ],
 } satisfies Record<string, LetterID[]>;
+
+if (process.argv[1] == fileURLToPath(import.meta.url)) {
+  const data = { joiningPositions, writtenUnits, letters, categories };
+  await writeFile(
+    "../mongfontbuilder/data.json",
+    JSON.stringify(data, undefined, 2),
+  );
+}
