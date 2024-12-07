@@ -164,7 +164,7 @@ export const categories = {
 if (process.argv[1] == fileURLToPath(import.meta.url)) {
   const data = { joiningPositions, writtenUnits, letters, categories };
   await writeFile(
-    "../mongfontbuilder/data.json",
+    "../lib/mongfontbuilder/data.json",
     JSON.stringify(data, undefined, 2),
   );
 }

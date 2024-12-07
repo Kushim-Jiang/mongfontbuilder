@@ -5,17 +5,19 @@
       "path": "."
     },
     {
-      "path": "site"
+      "path": "docs"
     }
   ],
   "extensions": {
     "recommendations": [
+      "astro-build.astro-vscode",
       "be5invis.opentype-feature-file-support",
       "esbenp.prettier-vscode",
       "ms-python.black-formatter",
       "ms-python.python",
       "redhat.vscode-yaml",
-      "tamasfe.even-better-toml"
+      "tamasfe.even-better-toml",
+      "unifiedjs.vscode-mdx"
     ]
   },
   "settings": {
@@ -24,6 +26,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.exclude": {
+      ".astro": true,
       ".svelte-kit": true,
       "node_modules": true
     },
