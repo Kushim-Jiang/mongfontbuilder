@@ -4,6 +4,9 @@
 import { fileURLToPath } from "node:url";
 import { writeFile } from "node:fs/promises";
 
+// @ts-ignore
+import Names from "@unicode/unicode-16.0.0/Names";
+
 export type JoiningPosition = (typeof joiningPositions)[number];
 export const joiningPositions = ["isol", "init", "medi", "fina"] as const;
 
