@@ -114,7 +114,10 @@ for locale, gbNumber in {
 normalizedData = {}
 for cp, value in sorted(newData.items()):
     normalizedData[unicodedata.name(chr(cp))] = value
-    value["alias"] = {k: v.removeprefix(".") for k, v in value["alias"].items() if v}
+    alias = {k: v.removeprefix(".") for k, v in value["alias"].items() if v}
+    if len({*alias.values()}) == 1:
+        alias, *_ = alias.values()
+    value["alias"] = alias
     if variants := value.get("variants"):
         for position in joiningPositions:
             for variant in variants[position]:
