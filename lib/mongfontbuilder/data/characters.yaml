@@ -602,7 +602,7 @@
 0x183E: # ᠾ MONGOLIAN LETTER HAA
   variants:
     isol:
-      - written_units: [.A.init, .Hr.init]
+      - written_units: [.A.init, .Hr.medi]
         fabricated: [hud]
     init:
       - written_units: [.A, .Hr]

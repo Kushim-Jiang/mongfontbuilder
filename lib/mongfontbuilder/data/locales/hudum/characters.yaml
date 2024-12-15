@@ -1027,7 +1027,7 @@
   transcription: .ħ
   variants:
     isol:
-      - written_units: [.A.init, .Hr.init]
+      - written_units: [.A.init, .Hr.medi]
         fabricated:
         gb_index: [GB/T 25914-2023, 0x00D4, haa isolated form]
         eac_index: XHD1

@@ -167,7 +167,7 @@
   transcription: .ħ
   variants:
     isol:
-      - written_units: [.A.init, .Hr.init]
+      - written_units: [.A.init, .Hr.medi]
         conditions: [.default]
     init:
       - written_units: [.A, .Hr]
