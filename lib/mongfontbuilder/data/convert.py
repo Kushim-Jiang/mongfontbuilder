@@ -17,19 +17,15 @@ for cp, value in data.items():
     variants = value.pop("variants", None)
     assert not value, value
 
-    newValue = {
-        "alias": {"": id},
-        "representativeGlyph": None,
-    }
+    newValue = {"alias": {"": id}}
     newData[cp] = newValue
 
     if variants:
         newVariants = {}
-        newValue["variants"] = newVariants
+        newVariants["representative"] = None
         for position in joiningPositions:
             for variant in variants.pop(position):
                 newVariant = {}
-                newVariants.setdefault(position, []).append(newVariant)
                 newVariant["written"] = variant.pop("written_units")
                 fvs = None
                 try:
@@ -44,12 +40,14 @@ for cp, value in data.items():
                     pass
                 else:
                     assert nominal is None
-                    newValue["representativeGlyph"] = [position]
+                    newVariants["representative"] = [position]
                     if fvs:
-                        newValue["representativeGlyph"].append(fvs)
+                        newVariants["representative"].append(fvs)
                 _ = variant.pop("fabricated", None)
                 assert not variant, variant
+                newVariants.setdefault(position, []).append(newVariant)
         assert not variants, variants
+        newValue["variants"] = newVariants
 
 for locale, gbNumber in {
     "hudum": "GB/T 25914-2023",
@@ -71,15 +69,12 @@ for locale, gbNumber in {
 
         newValue = newData.get(cp)
         if not newValue:
-            newValue = {
-                "alias": {},
-                "representativeGlyph": None,
-            }
+            newValue = {"alias": {}}
             newData[cp] = newValue
         newValue["alias"][locale] = id
 
         if variants:
-            newVariants = newValue.setdefault("variants", {})
+            newVariants = newValue.setdefault("variants", {"representative": None})
             for position in joiningPositions:
                 for variant in variants.pop(position):
                     written = variant.pop("written_units")
