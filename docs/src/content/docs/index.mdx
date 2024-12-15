@@ -7,26 +7,42 @@ sidebar:
 
 ## Introduction
 
-The ISO/IEC 10646 and the Unicode Standard have supported Mongolian script for about twenty years, with the [code charts](https://www.unicode.org/reports/tr54/) defining the basic information about characters and their variants. However, due to the lack of written, complete, and standardized shaping rules at the time, there was no consensus on how these characters should be presented. Since then, various vendors have been striving to define the functions of these characters, while users have been troubled by the incompatibilities between vendors and the insufficient support for Mongolian script on major platforms.
+The ISO/IEC 10646 and the Unicode Standard have supported Mongolian script for about twenty years, with the code charts (see [UTR \#54](https://www.unicode.org/reports/tr54/)) defining the basic information about characters and their variants. However, due to the lack of written, complete, and standardized shaping rules at the time, there was no consensus on how these characters should be presented. Since then, various vendors have been striving to define the functions of these characters, while users have been troubled by the incompatibilities between vendors and the insufficient support for Mongolian script on major platforms.
 
-Experts have been dedicated to improving the character set of the Mongolian script, clarifying the shaping rules and the function of each character, and proposing numerous modifications and supplements. The step-by-step shaping system for Hudum can be found in [L2/19–368](https://www.unicode.org/L2/L2019/19368-draft-utn-mongolian.pdf"), while the shaping requirements for Hudum, Todo, Sibe, and Manchu scripts is detailed in [Research on Mongolian Encodings](http://rule.mongoltoli.cn/). Recently, with the release of GB/T 25914—2023 [[GB25914](#GB25914)], the shaping requirements for Hudum and Hudum Ali Gali have been established as the Chinese national standard.
+Experts have been dedicated to improving the character set of the Mongolian script, clarifying the shaping rules and the function of each character, and proposing numerous modifications and supplements. Among them, the following work has been instrumental in forming this document:
 
-This document demonstrates and proposes a system of text representation and text shaping rules for Mongolian script. For text representation, this document will list the characters and their variants for letters and marks used in each writing system; for text shaping, this document will provide step-by-step shaping rules, detailing the behavior of each step and the presentation conditions of each variant.
+- [L2/19–368 ‘Text representation and shaping specification of the Mongolian script’](https://www.unicode.org/L2/L2019/19368-draft-utn-mongolian.pdf). This document provides a complete structure for text representation and text shaping of the Hudum writing system, a naming system for phonetic letters and written units, and a framework for the step-by-step shaping process. There is also the [tooling chain](https://github.com/lianghai/mongolian) associated with this document.
+
+- [GB/T 25914—2023 ‘Information technology — Traditional Mongolian nominal characters, presentation characters and use rules of controlling characters’](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=BD6429DE5A7FC782FAAE13938A07166E). This recently released China national standard formally defines the relationship between the characters and glyphs of Hudum and Hudum Ali Gali, and specifies the presentation conditions for all the glyphs. The presentation conditions for each glyph are expressed as character strings, requiring that when matched with these expressions, the character selects the corresponding glyph.
+
+- [Research on Mongolian Encodings](https://web.archive.org/web/20220203040523/http://rule.mongoltoli.cn/). This site explains the presentation conditions for each glyph in the national standard [GB/T 25914—2023](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=BD6429DE5A7FC782FAAE13938A07166E) (with explanations for other writing systems in draft form) in natural language and provides a comprehensive and complete test dataset.
+
+Inspired by the above work, this document demonstrates and proposes a system of text representation and text shaping rules for Mongolian script. For the text representation, this document will list the characters and their variants for letters and marks used in each writing system; for the text shaping, this document will provide step-by-step shaping rules, detailing the behavior of each step and the presentation conditions of each variant.
 
 The specifications provided in this document are oriented towards the first three layers of a five-layer system of text processing techniques, i.e.:
 
-- The code charts of the Unicode Standard and ISO/IEC 10646 specify the code points, names, with annotation about characters and character sequences.
-  - The characters specified in this document correspond to the characters in the [code charts](https://www.unicode.org/reports/tr54/).
-- The Unicode Standard and its various supplementary standards further provide the characters with additional behavioral specifications, including character properties (general category, cursive joining type, etc.) and algorithms (normalization, collation, line breaking, text segmentation, bidirectional, vertical text layout, etc.), thus specifying the association of characters with glyphs and showing how this association is affected by factors such as character properties, contextual environment and localization.
-  - This document describes the association of Mongolian characters with glyphs, thus its content is closely related to the elements of this layer.
-- The text shaping engine and the font project file implement the rules for associating characters and glyphs as glyph images in the design space, substitution and positioning relations between glyph images, and text shaping operations performed by the text shaping engine.
-  - Based on specific design decisions, there is freedom in constructing glyph image sets and writing shaping rules, so this document cannot directly specify the framework of glyph image sets and shaping rules that each font project file should contain. However, the step-by-step shaping rules provided in this document can directly correspond to the shaping rules in the font project file, and therefore can provide a reference for the construction and conversion of the font project files.
-- The typesetting application invokes the text shaping engine with the font files to render the glyph images in the typeset pages.
-- Devices such as monitors and printers convert typeset pages into physical objects.
+- **Character Layer**. The code charts of the Unicode Standard and ISO/IEC 10646 specify the code points, names, with annotation about characters and character sequences.
+
+  The characters specified in this document correspond to the characters in the code charts (see [UTR \#54](https://www.unicode.org/reports/tr54/)).
+
+- **Glyph Layer**. The Unicode Standard and its various supplementary standards further provide the characters with additional behavioral specifications, including character properties (general category, cursive joining type, etc.) and algorithms (normalization, collation, line breaking, text segmentation, bidirectional, vertical text layout, etc.), thus specifying the association of characters with glyphs and showing how this association is affected by factors such as character properties, contextual environment and localization.
+
+  This document describes the association of Mongolian characters with glyphs, thus its content is closely related to the elements of this layer.
+
+- **Glyph Image Layer**. The text shaping engine and the font project file implement the rules for associating characters and glyphs as glyph images in the design space, substitution and positioning relations between glyph images, and text shaping operations performed by the text shaping engine.
+
+  Based on specific design decisions, there is freedom in constructing glyph image sets and writing shaping rules, so this document cannot directly specify the framework of glyph image sets and shaping rules that each font project file should contain. However, the step-by-step shaping rules provided in this document can directly correspond to the shaping rules in the font project file, and therefore can provide a reference for the construction and conversion of the font project files.
+
+- **Typesetting Layer**. The typesetting application invokes the text shaping engine with the font files to render the glyph images in the typeset pages.
+
+- **Physical Layer**. Devices such as monitors and printers convert typeset pages into physical objects.
 
 The rule system provided in this document has the following features:
 
 - Retain the phonetic encoding principle of the existing model. Characters are defined in terms of the phonemes of the written language as recorded by each writing system. Each character contains variants that represent the written forms corresponding to the phoneme of that written language under specific phonemic analysis. Therefore, the model does not inherit the written unit analysis of Old Uyghur script, Sogdian script, and so on.
+
 - Supplement the requirements of national standards on the basis of orthographic shaping. The basic shaping rules are constructed for each writing system based on the orthographic analysis. And the shaping rules are extended according to the requirements of national standards while ensuring no coupling. This makes it possible to explicitly indicate which steps derive from the additional requirements of the national standards in the step-by-step shaping rules.
+
 - Provides font test tools and font generation tools. This document maintains and provides information on Mongolian characters and glyphs, text shaping rules, test sets and font test tools, and font generation tools based on a given set of glyph images and correspondence data. In addition, this document introduces how to use the above information and tools.
+
 - Formally define modular, hierarchical, unambiguous and prioritized text shaping rules. Flat shaping rules partition the contextual environment in which each character is placed into multiple parts and specify the glyphs corresponding to the characters in each part of the environment. Such a specification is not conducive to understanding and writing shaping rules, and thus to font production. Effectively defined step-by-step text shaping rules facilitate the writing of shaping rules with consistent and strict behavior during font production.

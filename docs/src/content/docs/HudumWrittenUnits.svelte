@@ -3,11 +3,6 @@
   import Glyph from "../../components/Glyph.svelte";
 </script>
 
-<Glyph written="A" position="isol" />
-<Glyph written="A" position="init" />
-<Glyph written="A" position="medi" />
-<Glyph written="A" position="fina" />
-
 <table>
   <thead>
     <tr>

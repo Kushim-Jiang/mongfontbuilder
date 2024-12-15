@@ -18,66 +18,17 @@ The character attribute information and text shaping rules of Mongolian script p
 
 The characters included in each writing system of the Mongolian script can be categorized into Mongolian-specific characters and characters shared with other scripts.
 
-<table>
-  <tbody>
-    <tr>
-      <th>Script</th>
-      <th>Type of characters</th>
-      <th>Character examples</th>
-      <th>Note</th>
-    </tr>
-    <tr>
-      <td rowspan="4">General</td>
-      <td>Space</td>
-      <td>space</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Punctuation</td>
-      <td>middle dot, …</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Format controls</td>
-      <td>ZWJ, ZWNJ, …</td>
-      <td>participate in shaping</td>
-    </tr>
-    <tr>
-      <td>Digits</td>
-      <td>digit one, …</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td rowspan="4">Mongolian</td>
-      <td>Punctuation</td>
-      <td>birga, …</td>
-      <td>less used now</td>
-    </tr>
-    <tr>
-      <td>Format controls</td>
-      <td>nirugu, FVS, …</td>
-      <td>participate in shaping</td>
-    </tr>
-    <tr>
-      <td>Digits</td>
-      <td>digit one, …</td>
-      <td>less used now</td>
-    </tr>
-    <tr>
-      <td>Phonetic letters</td>
-      <td>
-        letter <i>a</i>, …
-      </td>
-      <td>participate in shaping</td>
-    </tr>
-    <tr>
-      <td>CJK</td>
-      <td>Punctuation</td>
-      <td>question mark, …</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Script    | Type of characters | Examples                 | Note                   |
+| :-------- | :----------------- | :----------------------- | :--------------------- |
+| General   | Space              | space                    |                        |
+| General   | Punctuation        | middle dot, ...          |                        |
+| General   | Format controls    | ZWJ, ZWNJ, ...           | participate in shaping |
+| General   | Digits             | digit one, ...           |                        |
+| Mongolian | Punctuation        | birga, ...               | less used now          |
+| Mongolian | Format controls    | FVS, MVS, ...            | participate in shaping |
+| Mongolian | Digits             | Mongolian digit one, ... | less used now          |
+| Mongolian | Phonetic letters   | Mongolian letter a, ...  | participate in shaping |
+| CJK       | Punctuation        | question mark, ...       |                        |
 
 ### Phonetic letters and written units
 
@@ -87,6 +38,67 @@ These writing systems, with the characteristics of both abjad and alphabet, resu
 
 The specification used in this manual is based on the phonemic model, in which the characters correspond to the phonemes of the written language as recorded in the writing systems, with some compromises to maintain relative stability with the existing system. For example, the final <Mong written="Ï" /> in Manchu records the phoneme /ɹ̩/, is the same as the phonetic letter _ï_, but because it corresponds to ⟨i⟩ rather than ⟨y⟩ in the Möllendorff transcription, it is treated as corresponding to the phonetic letter _i_ rather than _ï_. This analysis is inherited in this specification.
 
-#### Multi-to-one and one-to-multi confusion
+**Multi-to-one and one-to-multi confusion**. Since the writing units and the phonemes do not have a one-to-one correspondence, the phenomenon of the same phoneme corresponding to more than one written unit and the same written unit corresponding to more than one phoneme may occur. For example, in Hudum, the phonemic letter _n_ is usually written as <Mong written="N" /> when it appears as an onset and as <Mong written="A" /> when it appears as a coda (except for loanwords such as <Mong written="SWK2OIND" />); and the grapheme sequence <Mong written="AORDU" /> may correspond to _ordo_ “palace”, _urtu_ “long”, and _urdu_ “south”.
 
-Since the writing units and the phonemes do not have a one-to-one correspondence, the phenomenon of the same phoneme corresponding to more than one written unit and the same written unit corresponding to more than one phoneme may occur. For example, in Hudum, the phonemic letter _n_ is usually written as <Mong written="N" /> when it appears as an onset and as <Mong written="A" /> when it appears as a coda (except for loanwords such as <Mong written="SWK2OIND" />); and the grapheme sequence <Mong written="AORDU" /> may correspond to _ordo_ “palace”, _urtu_ “long”, and _urdu_ “south”.
+### Format controls
+
+**Zero Width Non-Joiner (ZWNJ), Zero Width Joiner (ZWJ), and Nirugu**. U+200C and U+200D are Unicode’s standard cursive joining controls. Note that ZWJ also breaks interaction (such as ligation) between two consecutive characters since it is treated as an invisible character. U+180A is a Mongolian-specific character that behaves exactly like ZWJ but is visible as a piece of stem stroke. ZWNJ and ZWJ should not be accessible to the average user on common keyboard layouts, as everyday text does not require these characters.
+
+The visible character nirugu should be used to cause joining in everyday text. A common use case is to end a patronymic abbreviation that is the initial syllable body (i.e., an optional onset plus the first vowel) or just the initial consonant letter of the father’s name.
+
+**Vowel Separator (MVS) and Narrow No-Break Space (NNBSP)**. MVS is a Mongolian-specific format control for requesting the chachlag variation. It is transcribed as ‘·’ (a middle dot). NNBSP is a whitespace and format control used to represent and present particles. It is transcribed as ‘–’ (an en-dash). Use of the NNBSP is discouraged in preference for the MVS, as it sometimes produces anomalous shaping in various contexts.
+
+**Free Variation Selector (FVS)**. FVS’s are Mongolian-specific format controls. They are applied to follow certain characters to request the forms not captured by the predictive shaping rules.
+
+### Numbers and Punctuation
+
+The document does not contain specifications for numbers, punctuation, damaru, ubadama, and so on; these will be added in subsequent versions.
+
+## Shaping process
+
+The Mongolian text shaping process is based on the well-implemented technology foundation for general scripts and cursive scripts, while an additional phase of Mongolian-specific shaping steps is inserted into the ordinary shaping process required by cursive scripts. The minimal shaping process consists of a number of steps as shown below.
+
+| Shaping phase           | Shaping step                            |
+| :---------------------- | :-------------------------------------- |
+| Ia. General             | Basic character-to-glyph mapping        |
+| IIa. Cursive script     | Initiation of cursive positions         |
+| III. Mongolian-specific | Phonetic: Chachlag                      |
+| III. Mongolian-specific | Phonetic: Syllabic                      |
+| III. Mongolian-specific | Phonetic: Particle                      |
+| III. Mongolian-specific | Graphemic: Devsger                      |
+| III. Mongolian-specific | Graphemic: Post-bowed                   |
+| III. Mongolian-specific | Uncaptured: FVS-selected                |
+| IIb. Cursive script     | Variation involving bowed written units |
+| IIb. Cursive script     | Cleanup of format controls              |
+| IIb. Cursive script     | Optional treatments                     |
+| Ib. General             | Vertical forms of punctuation marks     |
+| Ib. General             | Optional treatments                     |
+
+### General shaping phases
+
+These are the basic mechanisms in fonts that apply to all scripts.
+
+The basic character-to-glyph mapping (phase Ia) is typically controlled by the TrueType/OpenType table cmap. The Unicode representative glyphs can be used here as the default glyph mappings for phonetic letters, but these representative glyphs are essentially irrelevant to the final rendering.
+
+Vertical forms of punctuation marks (phase Ib) are critical to the proper setting of Mongolian text, but are not part of the complex shaping between letters and format controls.
+
+### Cursive script shaping phases
+
+On top of the general shaping mechanisms, complex scripts require additional shaping phases to be inserted after the basic character-to-glyph mapping and before typographical treatments. In particular, cursive scripts all undergo the cursive joining mechanism.
+
+**Cursive joining**. Written forms exhibit the cursive joining mechanism (phase IIa). Both sides of a written form can either be joined to an adjacent written form or not, with up to four different states. Or, more abstractly, each written form is in one of the four cursive positions:
+
+- Isolated, abbreviated as ‘isol’: not joined forward (above, in Mongolian), not joined backward (below, in Mongolian);
+- Initial, abbreviated as ‘init’: not joined forward, joined backward;
+- Medial, abbreviated as ‘medi’: joined forward, joined backward;
+- Final, abbreviated as ‘fina’: joined forward, not joined backward.
+
+Cursive positions are irrelevant to word boundaries, although they are usually consistent with word-wise positions in Mongolian because cursive joining breaks within a word are limited in the writing system.
+
+**Implementation**. The nominal glyph of each phonetic letter will be mapped to the default glyph of that letter at a given cursive position.
+
+**Graphemic variation after bowed written units**. Before the sub-written-unit variation, bowed written units may first cause a vowel to change its form.
+
+### Mongolian-specific shaping phases
+
+Phase III consists of a series of steps for Mongolian-specific shaping requirements, and within each step there may be more than one set of non-overlapping rules, each for a different group of letters. Forms not captured by the predictive conditions are requested with an FVS.
