@@ -8,7 +8,6 @@ export default defineConfig({
     svelte(),
     starlight({
       title: "UTN #57",
-      customCss: ["./src/custom.css"],
       social: {
         github: "https://github.com/Kushim-Jiang/mongolian-utn",
       },
