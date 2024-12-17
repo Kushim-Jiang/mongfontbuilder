@@ -7,7 +7,8 @@
 
   let { written, position }: Props = $props();
 
-  import { letters, type JoiningPosition } from "../../data";
+  import type { JoiningPosition } from "../../../data";
+  import { letters } from "../../../data/letters";
 
   let text = $derived.by(() => {
     for (const { cp, variants } of Object.values(letters)) {

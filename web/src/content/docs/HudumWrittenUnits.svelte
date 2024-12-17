@@ -1,5 +1,6 @@
 <script>
-  import { joiningPositions, writtenUnits } from "../../../data";
+  import { joiningPositions } from "../../../../data";
+  import { writtenUnits } from "../../../../data/writtenUnits";
   import Glyph from "../../components/Glyph.svelte";
 </script>
 

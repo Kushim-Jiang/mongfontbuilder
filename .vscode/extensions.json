@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "be5invis.opentype-feature-file-support",
+    "esbenp.prettier-vscode",
+    "ms-python.black-formatter",
+    "ms-python.python",
+    "redhat.vscode-yaml",
+    "tamasfe.even-better-toml",
+    "unifiedjs.vscode-mdx"
+  ]
+}

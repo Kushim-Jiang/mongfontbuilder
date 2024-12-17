@@ -3,6 +3,8 @@ import starlight from "@astrojs/starlight";
 import svelte from "@astrojs/svelte";
 
 export default defineConfig({
+  srcDir: "./web/src",
+  publicDir: "./web/public",
   trailingSlash: "always",
   integrations: [
     svelte(),

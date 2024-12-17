@@ -1,4 +1,7 @@
 __pycache__
 .DS_Store
+/.astro
+/dist
+/node_modules
 /temp
 Thumbs.db

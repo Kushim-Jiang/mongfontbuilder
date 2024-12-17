@@ -1,51 +1,9 @@
-// Execute from the site directory to update /mongfontbuilder/data.json:
-//   npx vite-node --script data.ts
-
-import { fileURLToPath } from "node:url";
-import { writeFile } from "node:fs/promises";
-
 // @ts-ignore
 import Names from "@unicode/unicode-16.0.0/Names";
 
-export type JoiningPosition = (typeof joiningPositions)[number];
-export const joiningPositions = ["isol", "init", "medi", "fina"] as const;
+import type { JoiningPosition } from ".";
+import type { WrittenUnitID } from "./writtenUnits";
 
-export type WrittenUnitID = keyof typeof writtenUnits;
-type WrittenUnit = Partial<Record<JoiningPosition, WrittenUnitVariant>>;
-export type WrittenUnitVariant = {
-  archaic?: true;
-};
-
-export const writtenUnits = {
-  A: {
-    isol: {},
-    init: {},
-    medi: {},
-    fina: {},
-  },
-  Aa: {
-    isol: {},
-    fina: {},
-  },
-  I: {
-    isol: {},
-    init: {},
-    medi: {},
-    fina: {},
-  },
-  Ix: {
-    isol: {
-      archaic: true,
-    },
-  },
-  N: {
-    init: {},
-    medi: {},
-    fina: {},
-  },
-} satisfies Record<string, WrittenUnit>;
-
-type LetterID = keyof typeof letters;
 type Letter = {
   cp: number;
   variants: Record<JoiningPosition, LetterVariant[]>;
@@ -55,6 +13,7 @@ type LetterVariant = {
   fvs?: 1 | 2 | 3 | 4;
   representativeGlyph?: true;
 };
+export type LetterID = keyof typeof letters;
 
 export const letters = {
   a: {
@@ -421,46 +380,3 @@ export const letters = {
     },
   },
 } satisfies Record<string, Letter>;
-
-export const categories = {
-  masculineVowel: ["a", "o", "u"],
-  feminineVowel: ["e", "ee", "oe", "ue"],
-  neuterVowel: ["i"],
-  consonant: [
-    "n",
-    "ng",
-    "b",
-    "p",
-    "h",
-    "g",
-    "m",
-    "l",
-    "s",
-    "sh",
-    "t",
-    "d",
-    "ch",
-    "j",
-    "y",
-    "r",
-    "w",
-    "f",
-    "k2",
-    "k",
-    "c",
-    "z",
-    "hh",
-    "rh",
-    "lh",
-    "zr",
-    "cr",
-  ],
-} satisfies Record<string, LetterID[]>;
-
-if (process.argv[1] == fileURLToPath(import.meta.url)) {
-  const data = { joiningPositions, writtenUnits, letters, categories };
-  await writeFile(
-    "../lib/mongfontbuilder/data.json",
-    JSON.stringify(data, undefined, 2),
-  );
-}
