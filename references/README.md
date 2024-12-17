@@ -1,6 +1,10 @@
 # External references
 
-- xunifont_rulewords_mon.json: Converted to JSON from http://rule.mongoltoli.cn/ruletest/xunifont_rulewords_mon.js, referenced in the EAC test suite: [Test Report For Mongolian Fonts (Mongolian)](http://rule.mongoltoli.cn/ruletest-mon.php).
-- xunifont_rulewords_todo.json: Converted to JSON from http://rule.mongoltoli.cn/ruletest/xunifont_rulewords_todo.js, referenced in the EAC test suite: [Test Report For Mongolian Fonts (Todo)](http://rule.mongoltoli.cn/ruletest-todo.php).
-- xunifont_rulewords_sibe.json: Converted to JSON from http://rule.mongoltoli.cn/ruletest/xunifont_rulewords_sibe.js, referenced in the EAC test suite: [Test Report For Mongolian Fonts (Sibe)](http://rule.mongoltoli.cn/ruletest-sibe.php).
-- xunifont_rulewords_man.json: Converted to JSON from http://rule.mongoltoli.cn/ruletest/xunifont_rulewords_man.js, referenced in the EAC test suite: [Test Report For Mongolian Fonts (Manchu)](http://rule.mongoltoli.cn/ruletest-man.php).
+- xunifont_rulewords_mon.json
+  - Extracted from a [data file](http://rule.mongoltoli.cn/ruletest/xunifont_rulewords_mon.js) of the [EAC Hudum test suite](http://rule.mongoltoli.cn/ruletest-mon.php).
+- xunifont_rulewords_todo.json
+  - Extracted from a [data file](http://rule.mongoltoli.cn/ruletest/xunifont_rulewords_todo.js) of the [EAC Todo test suite](http://rule.mongoltoli.cn/ruletest-todo.php).
+- xunifont_rulewords_sibe.json
+  - Extracted from a [data file](http://rule.mongoltoli.cn/ruletest/xunifont_rulewords_sibe.js) of the [EAC Sibe test suite](http://rule.mongoltoli.cn/ruletest-sibe.php).
+- xunifont_rulewords_man.json
+  - Extracted from a [data file](http://rule.mongoltoli.cn/ruletest/xunifont_rulewords_man.js) of the [EAC Manchu test suite](http://rule.mongoltoli.cn/ruletest-man.php).
