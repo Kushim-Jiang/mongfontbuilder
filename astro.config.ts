@@ -17,6 +17,7 @@ export default defineConfig({
         baseUrl:
           "https://github.com/Kushim-Jiang/mongolian-utn/edit/main/docs/",
       },
+      customCss: ["@fontsource/noto-sans-mongolian/mongolian.css"],
     }),
   ],
 });
