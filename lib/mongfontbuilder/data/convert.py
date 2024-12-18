@@ -8,7 +8,7 @@ dir = Path(__file__).parent
 
 joiningPositions = ["isol", "init", "medi", "fina"]
 
-with (dir / "characters.yaml").open() as f:
+with (dir / "characters.yaml").open(encoding="utf-8") as f:
     data = yaml.safe_load(f)
 
 newData = {}
@@ -58,7 +58,7 @@ for locale, gbNumber in {
     "manchu-ag": None,
     "sibe": "GB/T 36641-2018",
 }.items():
-    with (dir / "locales" / locale / "characters.yaml").open() as f:
+    with (dir / "locales" / locale / "characters.yaml").open(encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
     for cp, value in data.items():

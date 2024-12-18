@@ -1574,6 +1574,463 @@
         fabricated: [man]
         nominal:
 
+0x1887: # ᢇ MONGOLIAN LETTER ALI GALI A
+  variants:
+    isol:
+      - written_units: [.A, .Aw]
+        nominal:
+        fabricated: [hag]
+    init:
+      - written_units: [.A, .A]
+        fabricated: [hag]
+    medi:
+      - written_units: [.A]
+        fabricated: [hag]
+    fina:
+      - written_units: [.Aw]
+      - written_units: [.A2]
+        fvs: 1
+
+0x1888: # ᢈ MONGOLIAN LETTER ALI GALI I
+  variants:
+    isol:
+      - written_units: [.A, .I4]
+        nominal:
+    init:
+      - written_units: [.A, .I]
+    medi:
+      - written_units: [.I]
+    fina:
+      - written_units: [.I4]
+
+0x1889: # ᢉ MONGOLIAN LETTER ALI GALI KA
+  variants:
+    isol:
+      - written_units: [.G.init]
+    init:
+      - written_units: [.G]
+        nominal:
+    medi:
+      - written_units: [.G]
+    fina:
+      - written_units: [.G, .Vi]
+        fabricated: [tag]
+
+0x188A: # ᢊ MONGOLIAN LETTER ALI GALI NGA
+  variants:
+    isol:
+      - written_units: [.N.init, .G.medi]
+    init:
+      - written_units: [.N, .G]
+        nominal:
+    medi:
+      - written_units: [.N, .G]
+    fina:
+      - written_units: [.N, .G4]
+        fabricated: [tag]
+
+0x188B: # ᢋ MONGOLIAN LETTER ALI GALI CA
+  id: .cHag
+  variants:
+    isol:
+      - written_units: [.Zc.init]
+    init:
+      - written_units: [.Zc]
+        nominal:
+    medi:
+      - written_units: [.Zc]
+    fina:
+      - written_units: [.Zc]
+
+0x188C: # ᢌ MONGOLIAN LETTER ALI GALI TTA
+  variants:
+    isol:
+      - written_units: [.Zr.init]
+    init:
+      - written_units: [.Zr]
+        nominal:
+    medi:
+      - written_units: [.Zr]
+    fina:
+      - written_units: [.Zr]
+        fabricated: [tag]
+
+0x188D: # ᢍ MONGOLIAN LETTER ALI GALI TTHA
+  variants:
+    isol:
+      - written_units: [.Cr2.init]
+    init:
+      - written_units: [.Cr2]
+        nominal:
+    medi:
+      - written_units: [.Cr2]
+    fina:
+      - written_units: [.Cr2.medi]
+
+0x188E: # ᢎ MONGOLIAN LETTER ALI GALI DDA
+  variants:
+    isol:
+      - written_units: [.Ds.init]
+      - written_units: [.Ds2.init]
+        fvs: 1
+    init:
+      - written_units: [.Ds]
+        nominal:
+      - written_units: [.Ds2]
+        fvs: 1
+    medi:
+      - written_units: [.Ds]
+      - written_units: [.Ds2]
+        fvs: 1
+    fina:
+      - written_units: [.Ds]
+        fabricated: [tag]
+
+0x188F: # ᢏ MONGOLIAN LETTER ALI GALI NNA
+  variants:
+    isol:
+      - written_units: [.Wn.init]
+    init:
+      - written_units: [.Wn]
+        nominal:
+    medi:
+      - written_units: [.Wn]
+    fina:
+      - written_units: [.Wn]
+        fabricated: [tag]
+
+0x1890: # ᢐ MONGOLIAN LETTER ALI GALI TA
+  variants:
+    isol:
+      - written_units: [.Dv.init]
+    init:
+      - written_units: [.Dv]
+        nominal:
+    medi:
+      - written_units: [.Dv]
+    fina:
+      - written_units: [.Dv]
+
+0x1891: # ᢑ MONGOLIAN LETTER ALI GALI DA
+  variants:
+    isol:
+      - written_units: [.Dq.init]
+    init:
+      - written_units: [.Dq]
+        nominal:
+    medi:
+      - written_units: [.Dq]
+    fina:
+      - written_units: [.Dq]
+
+0x1892: # ᢒ MONGOLIAN LETTER ALI GALI PA
+  variants:
+    isol:
+      - written_units: [.Bg.init]
+      - written_units: [.Bh.init]
+        fvs: 1
+    init:
+      - written_units: [.Bg]
+        nominal:
+      - written_units: [.Bh]
+        fvs: 1
+    medi:
+      - written_units: [.Bg]
+      - written_units: [.Bh]
+        fvs: 1
+    fina:
+      - written_units: [.Bg]
+        fabricated: [tag]
+
+0x1893: # ᢓ MONGOLIAN LETTER ALI GALI PHA
+  variants:
+    isol:
+      - written_units: [.Pg.init]
+    init:
+      - written_units: [.Pg]
+        nominal:
+    medi:
+      - written_units: [.Pg]
+    fina:
+      - written_units: [.Pg]
+
+0x1894: # ᢔ MONGOLIAN LETTER ALI GALI SSA
+  variants:
+    isol:
+      - written_units: [.Sx.init]
+    init:
+      - written_units: [.Sx]
+        nominal:
+    medi:
+      - written_units: [.Sx]
+    fina:
+      - written_units: [.Sx]
+        fabricated: [tag]
+
+0x1895: # ᢕ MONGOLIAN LETTER ALI GALI ZHA
+  variants:
+    isol:
+      - written_units: [.Rh2.init]
+    init:
+      - written_units: [.Rh2]
+        nominal:
+    medi:
+      - written_units: [.Rh2]
+    fina:
+      - written_units: [.Rh2]
+
+0x1896: # ᢖ MONGOLIAN LETTER ALI GALI ZA
+  variants:
+    isol:
+      - written_units: [.Zz.init]
+    init:
+      - written_units: [.Zz]
+        nominal:
+    medi:
+      - written_units: [.Zz]
+    fina:
+      - written_units: [.Zz]
+        fabricated: [tag]
+
+0x1897: # ᢗ MONGOLIAN LETTER ALI GALI AH
+  variants:
+    isol:
+      - written_units: [.Q.init]
+    init:
+      - written_units: [.Q]
+        nominal:
+    medi:
+      - written_units: [.Q]
+    fina:
+      - written_units: [.Q.medi]
+
+0x1899: # ᢙ MONGOLIAN LETTER TODO ALI GALI ZHA
+  variants:
+    isol:
+      - written_units: [.Rz.init]
+    init:
+      - written_units: [.Rz]
+        nominal:
+    medi:
+      - written_units: [.Rz]
+    fina:
+      - written_units: [.Rz.medi]
+
+0x189A: # ᢚ MONGOLIAN LETTER MANCHU ALI GALI GHA
+  variants:
+    isol:
+      - written_units: [.Hy.init]
+    init:
+      - written_units: [.Hy]
+        nominal:
+    medi:
+      - written_units: [.Hy]
+      - written_units: [.Hy2]
+        fvs: 1
+    fina:
+      - written_units: [.Hy.medi]
+
+0x189B: # ᢛ MONGOLIAN LETTER MANCHU ALI GALI NGA
+  variants:
+    isol:
+      - written_units: [.Nb.init]
+    init:
+      - written_units: [.Nb]
+        nominal:
+    medi:
+      - written_units: [.Nb]
+    fina:
+      - written_units: [.Nb.medi]
+
+0x189C: # ᢜ MONGOLIAN LETTER MANCHU ALI GALI CA
+  variants:
+    isol:
+      - written_units: [.Ct.init]
+    init:
+      - written_units: [.Ct]
+        nominal:
+    medi:
+      - written_units: [.Ct]
+    fina:
+      - written_units: [.Ct.medi]
+
+0x189D: # ᢝ MONGOLIAN LETTER MANCHU ALI GALI JHA
+  variants:
+    isol:
+      - written_units: [.Zt.init]
+    init:
+      - written_units: [.Zt]
+        nominal:
+    medi:
+      - written_units: [.Zt]
+    fina:
+      - written_units: [.Zt.medi]
+
+0x189E: # ᢞ MONGOLIAN LETTER MANCHU ALI GALI TTA
+  variants:
+    isol:
+      - written_units: [.It.init]
+    init:
+      - written_units: [.It]
+        nominal:
+    medi:
+      - written_units: [.Jt]
+    fina:
+      - written_units: [.Jt]
+
+0x189F: # ᢟ MONGOLIAN LETTER MANCHU ALI GALI DDHA
+  variants:
+    isol:
+      - written_units: [.Ih.init]
+    init:
+      - written_units: [.Ih]
+        nominal:
+    medi:
+      - written_units: [.Jh]
+    fina:
+      - written_units: [.Jh]
+
+0x18A0: # ᢠ MONGOLIAN LETTER MANCHU ALI GALI TA
+  variants:
+    isol:
+      - written_units: [.Dr.init]
+      - written_units: [.Dy.init]
+        fvs: 1
+    init:
+      - written_units: [.Dr]
+        nominal:
+        fvs: 2
+      - written_units: [.Dy]
+        fvs: 1
+    medi:
+      - written_units: [.Dr]
+        fvs: 2
+      - written_units: [.Dy]
+        fvs: 1
+    fina:
+      - written_units: [.Dr]
+
+0x18A1: # ᢡ MONGOLIAN LETTER MANCHU ALI GALI TA
+  variants:
+    isol:
+      - written_units: [.Tx.init]
+      - written_units: [.Ts.init]
+        fvs: 1
+    init:
+      - written_units: [.Tx]
+        nominal:
+        fvs: 2
+      - written_units: [.Ts]
+        fvs: 1
+    medi:
+      - written_units: [.Dx]
+        fvs: 2
+      - written_units: [.Ds]
+        fvs: 1
+    fina:
+      - written_units: [.Dx.medi]
+
+0x18A2: # ᢢ MONGOLIAN LETTER MANCHU ALI GALI SSA
+  variants:
+    isol:
+      - written_units: [.Sx.init]
+    init:
+      - written_units: [.Sx]
+        nominal:
+    medi:
+      - written_units: [.Sx]
+    fina:
+      - written_units: [.Sx]
+
+0x18A3: # ᢣ MONGOLIAN LETTER MANCHU ALI GALI CYA
+  variants:
+    isol:
+      - written_units: [.Iq.init]
+    init:
+      - written_units: [.Iq]
+        nominal:
+    medi:
+      - written_units: [.Jq]
+    fina:
+      - written_units: [.Jq]
+
+0x18A4: # ᢤ MONGOLIAN LETTER MANCHU ALI GALI ZHA
+  variants:
+    isol:
+      - written_units: [.St.init]
+    init:
+      - written_units: [.St]
+        nominal:
+    medi:
+      - written_units: [.St]
+    fina:
+      - written_units: [.St]
+
+0x18A5: # ᢥ MONGOLIAN LETTER MANCHU ALI GALI ZA
+  variants:
+    isol:
+      - written_units: [.Sc.init]
+    init:
+      - written_units: [.Sc]
+        nominal:
+    medi:
+      - written_units: [.Sc]
+    fina:
+      - written_units: [.Sc]
+
+0x18A6: # ᢦ MONGOLIAN LETTER ALI GALI HALF U
+  variants:
+    isol:
+      - written_units: [.Wp.medi]
+        fabricated: [tag]
+    init:
+      - written_units: [.Wp.medi]
+        fabricated: [tag]
+    medi:
+      - written_units: [.Wp]
+        nominal:
+        fabricated: [tag]
+    fina:
+      - written_units: [.Wp]
+
+0x18A7: # ᢧ MONGOLIAN LETTER ALI GALI HALF YA
+  variants:
+    isol:
+      - written_units: [.Yp.medi]
+    init:
+      - written_units: [.Yp.medi]
+    medi:
+      - written_units: [.Yp]
+        nominal:
+    fina:
+      - written_units: [.Yp]
+      - written_units: [.Ir]
+        fvs: 1
+
+0x18A8: # ᢨ MONGOLIAN LETTER MANCHU ALI GALI BHA
+  variants:
+    isol:
+      - written_units: [.Bc.init]
+    init:
+      - written_units: [.Bc]
+        nominal:
+    medi:
+      - written_units: [.Bc]
+    fina:
+      - written_units: [.Bc.medi]
+
+0x18AA: # ᢪ MONGOLIAN LETTER MANCHU ALI GALI LHA
+  variants:
+    isol:
+      - written_units: [.Lc.init]
+    init:
+      - written_units: [.Lc]
+        nominal:
+    medi:
+      - written_units: [.Lc]
+    fina:
+      - written_units: [.Lc.medi]
+
 # other characters
 
 0x180A:

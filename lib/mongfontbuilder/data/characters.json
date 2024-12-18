@@ -12927,15 +12927,17 @@
       "manchu-ag": "aaMag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "isol"
+      ],
       "isol": [
         {
           "written": [
-            "A2",
-            "fina"
+            "A",
+            "Aw"
           ],
           "locales": {
-            "hudum-ag": {
+            "manchu-ag": {
               "conditions": [
                 "default"
               ]
@@ -12944,11 +12946,11 @@
         },
         {
           "written": [
-            "A",
-            "Aw"
+            "A2",
+            "fina"
           ],
           "locales": {
-            "manchu-ag": {
+            "hudum-ag": {
               "conditions": [
                 "default"
               ]
@@ -12959,19 +12961,6 @@
       "init": [
         {
           "written": [
-            "A2",
-            "fina"
-          ],
-          "locales": {
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
-        },
-        {
-          "written": [
             "A",
             "A"
           ],
@@ -12982,9 +12971,7 @@
               ]
             }
           }
-        }
-      ],
-      "medi": [
+        },
         {
           "written": [
             "A2",
@@ -12997,7 +12984,9 @@
               ]
             }
           }
-        },
+        }
+      ],
+      "medi": [
         {
           "written": [
             "A"
@@ -13009,22 +12998,22 @@
               ]
             }
           }
-        }
-      ],
-      "fina": [
+        },
         {
           "written": [
-            "A2"
+            "A2",
+            "fina"
           ],
           "locales": {
             "hudum-ag": {
               "conditions": [
-                "default",
-                "post_wa"
+                "default"
               ]
             }
           }
-        },
+        }
+      ],
+      "fina": [
         {
           "written": [
             "Aw"
@@ -13036,6 +13025,20 @@
               ]
             }
           }
+        },
+        {
+          "written": [
+            "A2"
+          ],
+          "fvs": 1,
+          "locales": {
+            "hudum-ag": {
+              "conditions": [
+                "default",
+                "post_wa"
+              ]
+            }
+          }
         }
       ]
     }
@@ -13043,7 +13046,9 @@
   "MONGOLIAN LETTER ALI GALI I": {
     "alias": "iHag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "isol"
+      ],
       "isol": [
         {
           "written": [
@@ -13110,7 +13115,9 @@
       "todo-ag": "gTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13205,7 +13212,9 @@
       "todo-ag": "ngTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13301,7 +13310,9 @@
   "MONGOLIAN LETTER ALI GALI CA": {
     "alias": "cHag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13367,7 +13378,9 @@
       "todo-ag": "trTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13461,7 +13474,9 @@
       "todo-ag": "trhTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13548,7 +13563,9 @@
       "todo-ag": "drTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13568,6 +13585,7 @@
             "Ds2",
             "init"
           ],
+          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13594,6 +13612,7 @@
           "written": [
             "Ds2"
           ],
+          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13620,6 +13639,7 @@
           "written": [
             "Ds2"
           ],
+          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13657,7 +13677,9 @@
       "manchu-ag": "nrMag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13771,7 +13793,9 @@
       "todo-ag": "tTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13854,7 +13878,9 @@
   "MONGOLIAN LETTER ALI GALI DA": {
     "alias": "dHag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13921,7 +13947,9 @@
       "manchu-ag": "pMag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -13946,6 +13974,7 @@
             "Bh",
             "init"
           ],
+          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13977,6 +14006,7 @@
           "written": [
             "Bh"
           ],
+          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -14008,6 +14038,7 @@
           "written": [
             "Bh"
           ],
+          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -14054,7 +14085,9 @@
   "MONGOLIAN LETTER ALI GALI PHA": {
     "alias": "phHag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14120,7 +14153,9 @@
       "todo-ag": "shTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14211,7 +14246,9 @@
   "MONGOLIAN LETTER ALI GALI ZHA": {
     "alias": "zrHag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14277,7 +14314,9 @@
       "todo-ag": "zTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14371,7 +14410,9 @@
       "todo-ag": "qTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14455,7 +14496,9 @@
   "MONGOLIAN LETTER TODO ALI GALI ZHA": {
     "alias": "zhTag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14519,7 +14562,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI GHA": {
     "alias": "ghMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14566,6 +14611,7 @@
           "written": [
             "Hy2"
           ],
+          "fvs": 1,
           "locales": {
             "manchu-ag": {}
           }
@@ -14591,7 +14637,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI NGA": {
     "alias": "ngMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14655,7 +14703,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI CA": {
     "alias": "cMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14719,7 +14769,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI JHA": {
     "alias": "jhMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14783,7 +14835,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI TTA": {
     "alias": "trMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14846,7 +14900,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI DDHA": {
     "alias": "drhMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -14909,7 +14965,10 @@
   "MONGOLIAN LETTER MANCHU ALI GALI TA": {
     "alias": "tMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init",
+        2
+      ],
       "isol": [
         {
           "written": [
@@ -14929,6 +14988,7 @@
             "Dy",
             "init"
           ],
+          "fvs": 1,
           "locales": {
             "manchu-ag": {}
           }
@@ -14939,6 +14999,7 @@
           "written": [
             "Dr"
           ],
+          "fvs": 2,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14952,6 +15013,7 @@
           "written": [
             "Dy"
           ],
+          "fvs": 1,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14966,6 +15028,7 @@
           "written": [
             "Dr"
           ],
+          "fvs": 2,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14979,6 +15042,7 @@
           "written": [
             "Dy"
           ],
+          "fvs": 1,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -15007,7 +15071,10 @@
   "MONGOLIAN LETTER MANCHU ALI GALI DHA": {
     "alias": "dhMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init",
+        2
+      ],
       "isol": [
         {
           "written": [
@@ -15027,6 +15094,7 @@
             "Ts",
             "init"
           ],
+          "fvs": 1,
           "locales": {
             "manchu-ag": {}
           }
@@ -15037,6 +15105,7 @@
           "written": [
             "Tx"
           ],
+          "fvs": 2,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -15050,6 +15119,7 @@
           "written": [
             "Ts"
           ],
+          "fvs": 1,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -15064,6 +15134,7 @@
           "written": [
             "Dx"
           ],
+          "fvs": 2,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -15077,6 +15148,7 @@
           "written": [
             "Ds"
           ],
+          "fvs": 1,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -15106,7 +15178,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI SSA": {
     "alias": "shMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -15169,7 +15243,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI CYA": {
     "alias": "crMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -15232,7 +15308,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI ZHA": {
     "alias": "zhMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -15295,7 +15373,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI ZA": {
     "alias": "zMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -15361,7 +15441,9 @@
       "todo-ag": "waTag"
     },
     "variants": {
-      "representative": null,
+      "representative": [
+        "medi"
+      ],
       "isol": [
         {
           "written": [
@@ -15448,11 +15530,10 @@
       "fina": [
         {
           "written": [
-            "Wp",
-            "medi"
+            "Wp"
           ],
           "locales": {
-            "hudum-ag": {
+            "todo-ag": {
               "conditions": [
                 "default"
               ]
@@ -15461,10 +15542,11 @@
         },
         {
           "written": [
-            "Wp"
+            "Wp",
+            "medi"
           ],
           "locales": {
-            "todo-ag": {
+            "hudum-ag": {
               "conditions": [
                 "default"
               ]
@@ -15477,7 +15559,9 @@
   "MONGOLIAN LETTER ALI GALI HALF YA": {
     "alias": "yTag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "medi"
+      ],
       "isol": [
         {
           "written": [
@@ -15539,6 +15623,7 @@
           "written": [
             "Ir"
           ],
+          "fvs": 1,
           "locales": {
             "todo-ag": {}
           }
@@ -15549,7 +15634,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI BHA": {
     "alias": "bhMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
@@ -15613,7 +15700,9 @@
   "MONGOLIAN LETTER MANCHU ALI GALI LHA": {
     "alias": "lhMag",
     "variants": {
-      "representative": null,
+      "representative": [
+        "init"
+      ],
       "isol": [
         {
           "written": [
