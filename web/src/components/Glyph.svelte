@@ -21,10 +21,10 @@
                 text += ["\u{180B}", "\u{180C}", "\u{180D}", "\u{180F}"][fvs - 1];
               }
               if (position == "init" || position == "medi") {
-                text += "\u{180A}";
+                text += "\u{200D}";
               }
               if (position == "medi" || position == "fina") {
-                text = "\u{180A}" + text; // ZWJ may be segmented into a separate OTL run
+                text = "\u{200D}" + text; // ZWJ may be segmented into a separate OTL run
               }
               return text;
             }
@@ -35,4 +35,10 @@
   });
 </script>
 
-{text}
+<span>{text}</span>
+
+<style>
+  span {
+    font-family: "Noto Sans Mongolian";
+  }
+</style>
