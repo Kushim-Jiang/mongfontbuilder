@@ -8,7 +8,7 @@ mvs.narrow: uni180E.Narrowspace.nomi
 mvs.nominal: uni180E.Wide.nomi
 mvs.wide: uni180E.Widespace.nomi
 nirugu: uni180A.Nirugu.medi
-nirugu.extend: uni180A.Nirugu.medi
+nirugu.extend:
 nnbsp: uni202F.Nnbsp.nomi
 zwj: uni200D.Zwj.nomi
 zwnj: uni200C.Zwnj.nomi

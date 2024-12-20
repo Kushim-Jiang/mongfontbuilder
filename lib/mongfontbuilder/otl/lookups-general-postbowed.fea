@@ -31,7 +31,8 @@ lookup III.eac.a_e_o_u_oe_ue.post_bowed {
     # o/u/oe/ue
     sub [@hud.bowed.B.init @hud.bowed.K.init] @fvs [@oe-hud.fina @ue-hud.fina]' lookup condition.hud.marked;
     sub [@g-hud @h-hud] [@fvs1 @fvs3] [@o-hud.fina @u-hud.fina @oe-hud.fina @ue-hud.fina]' lookup condition.eac.fina;
-    sub [@g-hud.medi @h-hud.medi] [@fvs2 @fvs4] [@o-hud.fina @u-hud.fina @oe-hud.fina @ue-hud.fina]' lookup condition.hud.post_bowed;
+    sub [@g-hud.medi @h-hud.medi] [@fvs2 @fvs4] [@o-hud.fina @u-hud.fina]' lookup condition.eac.fina;
+    sub [@g-hud.medi @h-hud.medi] [@fvs2 @fvs4] [@oe-hud.fina @ue-hud.fina]' lookup condition.hud.post_bowed;
     sub [@g-hud.init @h-hud.init] [@fvs2 @fvs4] [@o-hud.fina @u-hud.fina]' lookup condition.eac.fina;
     sub [@g-hud.init @h-hud.init] [@fvs2 @fvs4] [@oe-hud.fina @ue-hud.fina]' lookup condition.hud.marked;
     lookupflag 0;
