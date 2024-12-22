@@ -453,9 +453,6 @@
       - written_units: [.Ch]
     fina:
       - written_units: [.Ch]
-        fabricated: [tod]
-      - written_units: [.Ch.medi]
-        fabricated: [sib, man]
 
 0x1835: # ᠵ MONGOLIAN LETTER JA
   variants:
@@ -473,8 +470,6 @@
       - written_units: [.J]
       - written_units: [.I]
         fvs: 1
-      - written_units: [.J.medi]
-        fabricated: [man]
 
 0x1836: # ᠶ MONGOLIAN LETTER YA
   variants:
@@ -499,8 +494,6 @@
         fvs: 2
     fina:
       - written_units: [.I]
-      - written_units: [.Y.medi]
-        fabricated: [sib, man]
 
 0x1837: # ᠷ MONGOLIAN LETTER RA
   variants:
@@ -557,8 +550,6 @@
       - written_units: [.K2]
     fina:
       - written_units: [.K2]
-      - written_units: [.K2.medi]
-        fabricated: [sib, man]
 
 0x183B: # ᠻ MONGOLIAN LETTER KHA
   variants:
