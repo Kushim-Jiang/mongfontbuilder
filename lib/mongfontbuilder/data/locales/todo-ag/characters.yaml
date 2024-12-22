@@ -272,7 +272,7 @@
         conditions: [.default]
 
 0x185C: # ᡜ MONGOLIAN LETTER TODO DZA
-  id: .jTag
+  id: .zr
   transcription: .jₜ
   variants:
     isol:
