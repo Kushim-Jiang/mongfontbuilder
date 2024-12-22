@@ -11,14 +11,17 @@ joiningPositions = ["isol", "init", "medi", "fina"]
 with (dir / "characters.yaml").open(encoding="utf-8") as f:
     data = yaml.safe_load(f)
 
-newData = {}
+cpToAliases = {}
+cpToVariants = {}
 for cp, value in data.items():
     id = value.pop("id", None)
     variants = value.pop("variants", None)
     assert not value, value
 
-    newValue = {"alias": {"": id}}
-    newData[cp] = newValue
+    aliases = {}
+    cpToAliases[cp] = aliases
+    if id:
+        aliases[""] = id.removeprefix(".")
 
     if variants:
         newVariants = {}
@@ -38,18 +41,25 @@ for cp, value in data.items():
                 assert not variant, variant
                 newVariants.setdefault(position, []).append(newVariant)
         assert not variants, variants
-        newValue["variants"] = newVariants
+        cpToVariants[cp] = newVariants
 
-for locale, gbNumber in {
+folderToGBNumber = {
     "hudum": "GB/T 25914-2023",
-    "hudum-ag": None,
     "todo": "GB/T 36649-2018",
-    "todo-ag": None,
     "manchu": "GB/T 36645-2018",
-    "manchu-ag": None,
     "sibe": "GB/T 36641-2018",
+}
+
+for folder, locale in {
+    "hudum": "MNG",
+    "hudum-ag": "MNGx",
+    "todo": "TOD",
+    "todo-ag": "TODx",
+    "sibe": "SIB",
+    "manchu": "MCH",
+    "manchu-ag": "MCHx",
 }.items():
-    with (dir / "locales" / locale / "characters.yaml").open(encoding="utf-8") as f:
+    with (dir / "locales" / folder / "characters.yaml").open(encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
     for cp, value in data.items():
@@ -58,11 +68,19 @@ for locale, gbNumber in {
         _ = value.pop("transcription", None)
         assert not value, value
 
-        newValue = newData[cp]
-        newValue["alias"][locale] = id
+        aliases = cpToAliases[cp]
+        alias = id.removeprefix(".")
+        if locale.endswith("x"):  # Ali Gali
+            parentLocale = locale.removesuffix("x")
+            if existing := aliases.get(parentLocale):
+                assert alias == existing
+            else:
+                aliases[parentLocale] = alias
+        else:
+            aliases[locale] = alias
 
         if variants:
-            newVariants = newValue["variants"]
+            newVariants = cpToVariants[cp]
             for position in joiningPositions:
                 for variant in variants.pop(position):
                     localeData = {}
@@ -83,7 +101,7 @@ for locale, gbNumber in {
                     if conditions := variant.pop("conditions", None):
                         localeData["conditions"] = [i.removeprefix(".") for i in conditions]
                     if gb := variant.pop("gb_index", None):
-                        assert gb.pop(0) == gbNumber
+                        assert gb.pop(0) == folderToGBNumber[folder]
                         cp, name = gb
                         localeData["gb"] = f"{cp:04X} {name}"
                     if eac := variant.pop("eac_index", None):
@@ -112,25 +130,23 @@ def normalizeWritten(written: list[str]) -> list[str]:
     return written
 
 
-normalizedData = {}
-for cp, value in sorted(newData.items()):
-    name = unicodedata.name(chr(cp))
-    normalizedData[name] = value
-    alias = {k: v.removeprefix(".") for k, v in value["alias"].items() if v}
-    if len({*alias.values()}) == 1:
-        alias, *_ = alias.values()
-    value["alias"] = alias
-    if variants := value.get("variants"):
-        for position in joiningPositions:
-            fvsToVariant = dict[str, dict]()
-            for variant in variants[position]:
-                key = str(variant.pop("fvs", 0))
-                assert key not in fvsToVariant, (name, position, fvsToVariant, key)
-                fvsToVariant[key] = variant
-                variant["written"] = normalizeWritten(variant["written"])
-                for locale, localeData in variant["locales"].items():
-                    if written := localeData.get("written"):
-                        localeData["written"] = normalizeWritten(written)
-            variants[position] = dict(sorted(fvsToVariant.items()))
+filenameToNormalizedData = {
+    "aliases.json": {unicodedata.name(chr(k)): v for k, v in sorted(cpToAliases.items())},
+    "variants.json": {},
+}
+for cp, variants in sorted(cpToVariants.items()):
+    for position in joiningPositions:
+        fvsToVariant = dict[str, dict]()
+        for variant in variants[position]:
+            key = str(variant.pop("fvs", 0))
+            assert key not in fvsToVariant
+            fvsToVariant[key] = variant
+            variant["written"] = normalizeWritten(variant["written"])
+            for locale, localeData in variant["locales"].items():
+                if written := localeData.get("written"):
+                    localeData["written"] = normalizeWritten(written)
+        variants[position] = dict(sorted(fvsToVariant.items()))
+    filenameToNormalizedData["variants.json"][unicodedata.name(chr(cp))] = variants
 
-(dir / "characters.json").write_text(json.dumps(normalizedData, indent=2))
+for filename, normalizedData in filenameToNormalizedData.items():
+    (dir / filename).write_text(json.dumps(normalizedData, indent=2))

@@ -1,0 +1,505 @@
+{
+  "SPACE": {
+    "": "space"
+  },
+  "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER": {
+    "SIB": "sbm",
+    "MCH": "sbm"
+  },
+  "MONGOLIAN NIRUGU": {
+    "": "nirugu"
+  },
+  "MONGOLIAN FREE VARIATION SELECTOR ONE": {
+    "": "fvs1"
+  },
+  "MONGOLIAN FREE VARIATION SELECTOR TWO": {
+    "": "fvs2"
+  },
+  "MONGOLIAN FREE VARIATION SELECTOR THREE": {
+    "": "fvs3"
+  },
+  "MONGOLIAN VOWEL SEPARATOR": {
+    "": "mvs"
+  },
+  "MONGOLIAN FREE VARIATION SELECTOR FOUR": {
+    "": "fvs4"
+  },
+  "MONGOLIAN LETTER A": {
+    "MNG": "a",
+    "TOD": "a",
+    "SIB": "a",
+    "MCH": "a"
+  },
+  "MONGOLIAN LETTER E": {
+    "MNG": "e"
+  },
+  "MONGOLIAN LETTER I": {
+    "MNG": "i"
+  },
+  "MONGOLIAN LETTER O": {
+    "MNG": "o",
+    "SIB": "o",
+    "MCH": "o"
+  },
+  "MONGOLIAN LETTER U": {
+    "MNG": "u"
+  },
+  "MONGOLIAN LETTER OE": {
+    "MNG": "oe"
+  },
+  "MONGOLIAN LETTER UE": {
+    "MNG": "ue"
+  },
+  "MONGOLIAN LETTER EE": {
+    "MNG": "ee"
+  },
+  "MONGOLIAN LETTER NA": {
+    "MNG": "n",
+    "TOD": "n",
+    "SIB": "n",
+    "MCH": "n"
+  },
+  "MONGOLIAN LETTER ANG": {
+    "MNG": "ng",
+    "MCH": "ng"
+  },
+  "MONGOLIAN LETTER BA": {
+    "MNG": "b",
+    "SIB": "b",
+    "MCH": "b"
+  },
+  "MONGOLIAN LETTER PA": {
+    "MNG": "p"
+  },
+  "MONGOLIAN LETTER QA": {
+    "MNG": "h"
+  },
+  "MONGOLIAN LETTER GA": {
+    "MNG": "g"
+  },
+  "MONGOLIAN LETTER MA": {
+    "MNG": "m",
+    "SIB": "m",
+    "MCH": "m"
+  },
+  "MONGOLIAN LETTER LA": {
+    "MNG": "l",
+    "TOD": "l",
+    "SIB": "l",
+    "MCH": "l"
+  },
+  "MONGOLIAN LETTER SA": {
+    "MNG": "s",
+    "TOD": "s",
+    "SIB": "s",
+    "MCH": "s"
+  },
+  "MONGOLIAN LETTER SHA": {
+    "MNG": "sh",
+    "TOD": "sh"
+  },
+  "MONGOLIAN LETTER TA": {
+    "MNG": "t"
+  },
+  "MONGOLIAN LETTER DA": {
+    "MNG": "d"
+  },
+  "MONGOLIAN LETTER CHA": {
+    "MNG": "ch",
+    "TOD": "z",
+    "SIB": "ch",
+    "MCH": "ch"
+  },
+  "MONGOLIAN LETTER JA": {
+    "MNG": "j",
+    "MCH": "j"
+  },
+  "MONGOLIAN LETTER YA": {
+    "MNG": "y",
+    "SIB": "y",
+    "MCH": "y"
+  },
+  "MONGOLIAN LETTER RA": {
+    "MNG": "r",
+    "TOD": "r",
+    "SIB": "r"
+  },
+  "MONGOLIAN LETTER WA": {
+    "MNG": "w",
+    "TOD": "f",
+    "SIB": "w",
+    "MCH": "w"
+  },
+  "MONGOLIAN LETTER FA": {
+    "MNG": "f"
+  },
+  "MONGOLIAN LETTER KA": {
+    "MNG": "k2",
+    "TOD": "kTag",
+    "SIB": "kh",
+    "MCH": "kh"
+  },
+  "MONGOLIAN LETTER KHA": {
+    "MNG": "k",
+    "TOD": "khTag"
+  },
+  "MONGOLIAN LETTER TSA": {
+    "MNG": "c",
+    "TOD": "chTag"
+  },
+  "MONGOLIAN LETTER ZA": {
+    "MNG": "z"
+  },
+  "MONGOLIAN LETTER HAA": {
+    "MNG": "hh",
+    "TOD": "hTag"
+  },
+  "MONGOLIAN LETTER ZRA": {
+    "MNG": "rh"
+  },
+  "MONGOLIAN LETTER LHA": {
+    "MNG": "lh",
+    "TOD": "lh"
+  },
+  "MONGOLIAN LETTER ZHI": {
+    "MNG": "zr"
+  },
+  "MONGOLIAN LETTER CHI": {
+    "MNG": "cr"
+  },
+  "MONGOLIAN LETTER TODO LONG VOWEL SIGN": {
+    "TOD": "lvs"
+  },
+  "MONGOLIAN LETTER TODO E": {
+    "TOD": "e"
+  },
+  "MONGOLIAN LETTER TODO I": {
+    "TOD": "i"
+  },
+  "MONGOLIAN LETTER TODO O": {
+    "TOD": "o"
+  },
+  "MONGOLIAN LETTER TODO U": {
+    "TOD": "u"
+  },
+  "MONGOLIAN LETTER TODO OE": {
+    "TOD": "oe"
+  },
+  "MONGOLIAN LETTER TODO UE": {
+    "TOD": "ue"
+  },
+  "MONGOLIAN LETTER TODO ANG": {
+    "TOD": "ng"
+  },
+  "MONGOLIAN LETTER TODO BA": {
+    "TOD": "b"
+  },
+  "MONGOLIAN LETTER TODO PA": {
+    "TOD": "p"
+  },
+  "MONGOLIAN LETTER TODO QA": {
+    "TOD": "h"
+  },
+  "MONGOLIAN LETTER TODO GA": {
+    "TOD": "g"
+  },
+  "MONGOLIAN LETTER TODO MA": {
+    "MNG": "mHag",
+    "TOD": "m"
+  },
+  "MONGOLIAN LETTER TODO TA": {
+    "MNG": "thHag",
+    "TOD": "t"
+  },
+  "MONGOLIAN LETTER TODO DA": {
+    "TOD": "d"
+  },
+  "MONGOLIAN LETTER TODO CHA": {
+    "TOD": "ch"
+  },
+  "MONGOLIAN LETTER TODO JA": {
+    "TOD": "j"
+  },
+  "MONGOLIAN LETTER TODO TSA": {
+    "MNG": "crHag",
+    "TOD": "c"
+  },
+  "MONGOLIAN LETTER TODO YA": {
+    "MNG": "yHag",
+    "TOD": "y"
+  },
+  "MONGOLIAN LETTER TODO WA": {
+    "TOD": "w"
+  },
+  "MONGOLIAN LETTER TODO KA": {
+    "TOD": "kh"
+  },
+  "MONGOLIAN LETTER TODO GAA": {
+    "TOD": "gh"
+  },
+  "MONGOLIAN LETTER TODO HAA": {
+    "MNG": "hHag",
+    "TOD": "hh"
+  },
+  "MONGOLIAN LETTER TODO JIA": {
+    "TOD": "jy"
+  },
+  "MONGOLIAN LETTER TODO NIA": {
+    "MNG": "nyHag",
+    "TOD": "ny"
+  },
+  "MONGOLIAN LETTER TODO DZA": {
+    "TOD": "zr"
+  },
+  "MONGOLIAN LETTER SIBE E": {
+    "SIB": "e",
+    "MCH": "e"
+  },
+  "MONGOLIAN LETTER SIBE I": {
+    "SIB": "i"
+  },
+  "MONGOLIAN LETTER SIBE IY": {
+    "SIB": "ii",
+    "MCH": "ii"
+  },
+  "MONGOLIAN LETTER SIBE UE": {
+    "SIB": "u",
+    "MCH": "u"
+  },
+  "MONGOLIAN LETTER SIBE U": {
+    "SIB": "ue",
+    "MCH": "ue"
+  },
+  "MONGOLIAN LETTER SIBE ANG": {
+    "SIB": "ng"
+  },
+  "MONGOLIAN LETTER SIBE KA": {
+    "SIB": "k"
+  },
+  "MONGOLIAN LETTER SIBE GA": {
+    "SIB": "g",
+    "MCH": "g"
+  },
+  "MONGOLIAN LETTER SIBE HA": {
+    "SIB": "h",
+    "MCH": "h"
+  },
+  "MONGOLIAN LETTER SIBE PA": {
+    "SIB": "p",
+    "MCH": "p"
+  },
+  "MONGOLIAN LETTER SIBE SHA": {
+    "SIB": "sh",
+    "MCH": "sh"
+  },
+  "MONGOLIAN LETTER SIBE TA": {
+    "SIB": "t",
+    "MCH": "t"
+  },
+  "MONGOLIAN LETTER SIBE DA": {
+    "SIB": "d",
+    "MCH": "d"
+  },
+  "MONGOLIAN LETTER SIBE JA": {
+    "SIB": "j"
+  },
+  "MONGOLIAN LETTER SIBE FA": {
+    "SIB": "f"
+  },
+  "MONGOLIAN LETTER SIBE GAA": {
+    "SIB": "gh",
+    "MCH": "gh"
+  },
+  "MONGOLIAN LETTER SIBE HAA": {
+    "SIB": "hh",
+    "MCH": "hh"
+  },
+  "MONGOLIAN LETTER SIBE TSA": {
+    "SIB": "c",
+    "MCH": "c"
+  },
+  "MONGOLIAN LETTER SIBE ZA": {
+    "SIB": "z",
+    "MCH": "z"
+  },
+  "MONGOLIAN LETTER SIBE RAA": {
+    "SIB": "rh",
+    "MCH": "rh"
+  },
+  "MONGOLIAN LETTER SIBE CHA": {
+    "SIB": "cr",
+    "MCH": "cr"
+  },
+  "MONGOLIAN LETTER SIBE ZHA": {
+    "SIB": "zr"
+  },
+  "MONGOLIAN LETTER MANCHU I": {
+    "MCH": "i"
+  },
+  "MONGOLIAN LETTER MANCHU KA": {
+    "MCH": "k"
+  },
+  "MONGOLIAN LETTER MANCHU RA": {
+    "MCH": "r"
+  },
+  "MONGOLIAN LETTER MANCHU FA": {
+    "MCH": "f"
+  },
+  "MONGOLIAN LETTER MANCHU ZHA": {
+    "MCH": "zr"
+  },
+  "MONGOLIAN LETTER ALI GALI ANUSVARA ONE": {
+    "MNG": "anusvara",
+    "MCH": "anusvara"
+  },
+  "MONGOLIAN LETTER ALI GALI VISARGA ONE": {
+    "MNG": "visarga",
+    "MCH": "visarga"
+  },
+  "MONGOLIAN LETTER ALI GALI DAMARU": {
+    "MNG": "damaru",
+    "MCH": "damaru"
+  },
+  "MONGOLIAN LETTER ALI GALI UBADAMA": {
+    "MNG": "ubadama",
+    "MCH": "ubadama"
+  },
+  "MONGOLIAN LETTER ALI GALI INVERTED UBADAMA": {
+    "MNG": "invubadama",
+    "MCH": "invubadama"
+  },
+  "MONGOLIAN LETTER ALI GALI BALUDA": {
+    "MNG": "baluda",
+    "MCH": "baluda"
+  },
+  "MONGOLIAN LETTER ALI GALI THREE BALUDA": {
+    "MNG": "tribaluda",
+    "MCH": "tribaluda"
+  },
+  "MONGOLIAN LETTER ALI GALI A": {
+    "MNG": "aHag",
+    "MCH": "aaMag"
+  },
+  "MONGOLIAN LETTER ALI GALI I": {
+    "MNG": "iHag"
+  },
+  "MONGOLIAN LETTER ALI GALI KA": {
+    "MNG": "kHag",
+    "TOD": "gTag"
+  },
+  "MONGOLIAN LETTER ALI GALI NGA": {
+    "MNG": "ngHag",
+    "TOD": "ngTag"
+  },
+  "MONGOLIAN LETTER ALI GALI CA": {
+    "MNG": "cHag"
+  },
+  "MONGOLIAN LETTER ALI GALI TTA": {
+    "MNG": "trHag",
+    "TOD": "trTag"
+  },
+  "MONGOLIAN LETTER ALI GALI TTHA": {
+    "MNG": "trhHag",
+    "TOD": "trhTag"
+  },
+  "MONGOLIAN LETTER ALI GALI DDA": {
+    "MNG": "drHag",
+    "TOD": "drTag"
+  },
+  "MONGOLIAN LETTER ALI GALI NNA": {
+    "MNG": "nrHag",
+    "TOD": "nrTag",
+    "MCH": "nrMag"
+  },
+  "MONGOLIAN LETTER ALI GALI TA": {
+    "MNG": "tHag",
+    "TOD": "tTag"
+  },
+  "MONGOLIAN LETTER ALI GALI DA": {
+    "MNG": "dHag"
+  },
+  "MONGOLIAN LETTER ALI GALI PA": {
+    "MNG": "pHag",
+    "TOD": "pTag",
+    "MCH": "pMag"
+  },
+  "MONGOLIAN LETTER ALI GALI PHA": {
+    "MNG": "phHag"
+  },
+  "MONGOLIAN LETTER ALI GALI SSA": {
+    "MNG": "shHag",
+    "TOD": "shTag"
+  },
+  "MONGOLIAN LETTER ALI GALI ZHA": {
+    "MNG": "zrHag"
+  },
+  "MONGOLIAN LETTER ALI GALI ZA": {
+    "MNG": "zHag",
+    "TOD": "zTag"
+  },
+  "MONGOLIAN LETTER ALI GALI AH": {
+    "MNG": "qHag",
+    "TOD": "qTag"
+  },
+  "MONGOLIAN LETTER TODO ALI GALI ZHA": {
+    "TOD": "zhTag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI GHA": {
+    "MCH": "ghMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI NGA": {
+    "MCH": "ngMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI CA": {
+    "MCH": "cMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI JHA": {
+    "MCH": "jhMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI TTA": {
+    "MCH": "trMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI DDHA": {
+    "MCH": "drhMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI TA": {
+    "MCH": "tMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI DHA": {
+    "MCH": "dhMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI SSA": {
+    "MCH": "shMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI CYA": {
+    "MCH": "crMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI ZHA": {
+    "MCH": "zhMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI ZA": {
+    "MCH": "zMag"
+  },
+  "MONGOLIAN LETTER ALI GALI HALF U": {
+    "MNG": "waHag",
+    "TOD": "waTag"
+  },
+  "MONGOLIAN LETTER ALI GALI HALF YA": {
+    "TOD": "yTag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI BHA": {
+    "MCH": "bhMag"
+  },
+  "MONGOLIAN LETTER MANCHU ALI GALI LHA": {
+    "MCH": "lhMag"
+  },
+  "ZERO WIDTH NON-JOINER": {
+    "": "zwnj"
+  },
+  "ZERO WIDTH JOINER": {
+    "": "zwj"
+  },
+  "NARROW NO-BREAK SPACE": {
+    "": "nnbsp"
+  }
+}
