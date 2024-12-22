@@ -131,7 +131,6 @@ for cp, value in sorted(newData.items()):
                 for locale, localeData in variant["locales"].items():
                     if written := localeData.get("written"):
                         localeData["written"] = normalizeWritten(written)
-            # variants[position] = dict(sorted(fvsToVariant.items()))
-            variants[position] = fvsToVariant
+            variants[position] = dict(sorted(fvsToVariant.items()))
 
 (dir / "characters.json").write_text(json.dumps(normalizedData, indent=2))

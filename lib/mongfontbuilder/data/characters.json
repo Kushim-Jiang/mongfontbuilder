@@ -136,6 +136,47 @@
     "alias": "a",
     "variants": {
       "isol": {
+        "1": {
+          "written": [
+            "A"
+          ],
+          "locales": {
+            "hudum": {
+              "gb": "00B3 a second isolated form",
+              "eac": "MAD2"
+            },
+            "hudum-ag": {},
+            "todo": {
+              "conditions": [
+                "chachlag",
+                "particle"
+              ],
+              "gb": "1821 a second isolated form",
+              "eac": "TAD2"
+            },
+            "todo-ag": {}
+          }
+        },
+        "2": {
+          "written": [
+            "Aa"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "chachlag",
+                "particle"
+              ],
+              "gb": "00B4 a third isolated form",
+              "eac": "MAD3"
+            },
+            "hudum-ag": {
+              "conditions": [
+                "chachlag"
+              ]
+            }
+          }
+        },
         "3": {
           "written": [
             "A",
@@ -186,50 +227,24 @@
               "eac": "SAD1"
             }
           }
-        },
+        }
+      },
+      "init": {
         "1": {
           "written": [
             "A"
           ],
           "locales": {
             "hudum": {
-              "gb": "00B3 a second isolated form",
-              "eac": "MAD2"
-            },
-            "hudum-ag": {},
-            "todo": {
               "conditions": [
-                "chachlag",
                 "particle"
               ],
-              "gb": "1821 a second isolated form",
-              "eac": "TAD2"
+              "gb": "0007 a first initial form",
+              "eac": "MAS2"
             },
-            "todo-ag": {}
+            "hudum-ag": {}
           }
         },
-        "2": {
-          "written": [
-            "Aa"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "chachlag",
-                "particle"
-              ],
-              "gb": "00B4 a third isolated form",
-              "eac": "MAD3"
-            },
-            "hudum-ag": {
-              "conditions": [
-                "chachlag"
-              ]
-            }
-          }
-        }
-      },
-      "init": {
         "2": {
           "written": [
             "A",
@@ -279,21 +294,6 @@
               "gb": "1820 sibe a initial form",
               "eac": "SAS1"
             }
-          }
-        },
-        "1": {
-          "written": [
-            "A"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "particle"
-              ],
-              "gb": "0007 a first initial form",
-              "eac": "MAS2"
-            },
-            "hudum-ag": {}
           }
         }
       },
@@ -367,53 +367,6 @@
         }
       },
       "fina": {
-        "2": {
-          "written": [
-            "A"
-          ],
-          "locales": {
-            "hudum": {
-              "gb": "0008 a first final form",
-              "eac": "MAM1"
-            },
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            },
-            "todo": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "0008 a first final form",
-              "eac": "TAM1"
-            },
-            "todo-ag": {
-              "conditions": [
-                "default"
-              ]
-            },
-            "manchu": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "0008 manchu a final form",
-              "eac": "MAM1"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "default"
-              ]
-            },
-            "sibe": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "1820 sibe a final form",
-              "eac": "SAM1"
-            }
-          }
-        },
         "1": {
           "written": [
             "Aa"
@@ -461,6 +414,53 @@
               "eac": "SAM2"
             }
           }
+        },
+        "2": {
+          "written": [
+            "A"
+          ],
+          "locales": {
+            "hudum": {
+              "gb": "0008 a first final form",
+              "eac": "MAM1"
+            },
+            "hudum-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
+            "todo": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "0008 a first final form",
+              "eac": "TAM1"
+            },
+            "todo-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
+            "manchu": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "0008 manchu a final form",
+              "eac": "MAM1"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "1820 sibe a final form",
+              "eac": "SAM1"
+            }
+          }
         }
       }
     }
@@ -469,20 +469,6 @@
     "alias": "e",
     "variants": {
       "isol": {
-        "2": {
-          "written": [
-            "A"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "00B3 e first isolated form",
-              "eac": "MED1"
-            }
-          }
-        },
         "1": {
           "written": [
             "Aa"
@@ -495,6 +481,20 @@
               ],
               "gb": "00B4 e second isolated form",
               "eac": "MED2"
+            }
+          }
+        },
+        "2": {
+          "written": [
+            "A"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "00B3 e first isolated form",
+              "eac": "MED1"
             }
           }
         }
@@ -544,20 +544,6 @@
         }
       },
       "fina": {
-        "2": {
-          "written": [
-            "A"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "0008 e first final form",
-              "eac": "MEM1"
-            }
-          }
-        },
         "1": {
           "written": [
             "Aa"
@@ -571,6 +557,20 @@
               "eac": "MEM2"
             }
           }
+        },
+        "2": {
+          "written": [
+            "A"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "0008 e first final form",
+              "eac": "MEM1"
+            }
+          }
         }
       }
     }
@@ -579,21 +579,6 @@
     "alias": "i",
     "variants": {
       "isol": {
-        "3": {
-          "written": [
-            "A",
-            "I"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "00B5 i first isolated form",
-              "eac": "MID1"
-            }
-          }
-        },
         "1": {
           "written": [
             "I"
@@ -618,9 +603,38 @@
               "eac": "MID3"
             }
           }
+        },
+        "3": {
+          "written": [
+            "A",
+            "I"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "00B5 i first isolated form",
+              "eac": "MID1"
+            }
+          }
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "I"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "particle"
+              ],
+              "gb": "00B7 i second initial form",
+              "eac": "MIS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "A",
@@ -635,37 +649,9 @@
               "eac": "MIS1"
             }
           }
-        },
-        "1": {
-          "written": [
-            "I"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "particle"
-              ],
-              "gb": "00B7 i second initial form",
-              "eac": "MIS2"
-            }
-          }
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "I"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "00B7 i first medial form",
-              "eac": "MIZ1"
-            }
-          }
-        },
         "1": {
           "written": [
             "A",
@@ -690,6 +676,20 @@
               ],
               "gb": "00B9 i third medial form",
               "eac": "MIZ3"
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "I"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "00B7 i first medial form",
+              "eac": "MIZ1"
             }
           }
         }
@@ -850,44 +850,6 @@
         }
       },
       "fina": {
-        "2": {
-          "written": [
-            "U"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "000E o first final form",
-              "eac": "MWM1"
-            },
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            },
-            "manchu": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "000E manchu o first final form",
-              "eac": "MOM1"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "default"
-              ]
-            },
-            "sibe": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "1823 sibe o first final form",
-              "eac": "SOM1"
-            }
-          }
-        },
         "1": {
           "written": [
             "O"
@@ -929,6 +891,44 @@
               "eac": "SOM2"
             }
           }
+        },
+        "2": {
+          "written": [
+            "U"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "000E o first final form",
+              "eac": "MWM1"
+            },
+            "hudum-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
+            "manchu": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "000E manchu o first final form",
+              "eac": "MOM1"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "1823 sibe o first final form",
+              "eac": "SOM1"
+            }
+          }
         }
       }
     }
@@ -937,21 +937,6 @@
     "alias": "u",
     "variants": {
       "isol": {
-        "3": {
-          "written": [
-            "A",
-            "O"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "00BA u first isolated form",
-              "eac": "MVD1"
-            }
-          }
-        },
         "1": {
           "written": [
             "U"
@@ -976,9 +961,38 @@
               "eac": "MVD3"
             }
           }
+        },
+        "3": {
+          "written": [
+            "A",
+            "O"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "00BA u first isolated form",
+              "eac": "MVD1"
+            }
+          }
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "O"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "particle"
+              ],
+              "gb": "000F u second initial form",
+              "eac": "MVS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "A",
@@ -991,20 +1005,6 @@
               ],
               "gb": "00BA u first initial form",
               "eac": "MVS1"
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "O"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "particle"
-              ],
-              "gb": "000F u second initial form",
-              "eac": "MVS2"
             }
           }
         }
@@ -1038,21 +1038,6 @@
         }
       },
       "fina": {
-        "2": {
-          "written": [
-            "U"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default",
-                "particle"
-              ],
-              "gb": "000E u first final form",
-              "eac": "MVM1"
-            }
-          }
-        },
         "1": {
           "written": [
             "O"
@@ -1065,6 +1050,21 @@
               ],
               "gb": "000F u second final form",
               "eac": "MVM2"
+            }
+          }
+        },
+        "2": {
+          "written": [
+            "U"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default",
+                "particle"
+              ],
+              "gb": "000E u first final form",
+              "eac": "MVM1"
             }
           }
         }
@@ -1122,20 +1122,6 @@
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "O"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "000F oe first medial form",
-              "eac": "MOZ1"
-            }
-          }
-        },
         "1": {
           "written": [
             "O",
@@ -1163,23 +1149,23 @@
               "eac": "MOZ3"
             }
           }
-        }
-      },
-      "fina": {
+        },
         "3": {
           "written": [
-            "U"
+            "O"
           ],
           "locales": {
             "hudum": {
               "conditions": [
                 "default"
               ],
-              "gb": "000E oe first final form",
-              "eac": "MOM1"
+              "gb": "000F oe first medial form",
+              "eac": "MOZ1"
             }
           }
-        },
+        }
+      },
+      "fina": {
         "1": {
           "written": [
             "Ue"
@@ -1205,6 +1191,20 @@
               ],
               "gb": "000F oe third final form",
               "eac": "MOM3"
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "U"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "000E oe first final form",
+              "eac": "MOM1"
             }
           }
         }
@@ -1275,6 +1275,20 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "O"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "particle"
+              ],
+              "gb": "000F ue second initial form",
+              "eac": "MUS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "A",
@@ -1295,43 +1309,9 @@
               ]
             }
           }
-        },
-        "1": {
-          "written": [
-            "O"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "particle"
-              ],
-              "gb": "000F ue second initial form",
-              "eac": "MUS2"
-            }
-          }
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "O"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default",
-                "particle"
-              ],
-              "gb": "000F ue first medial form",
-              "eac": "MUZ1"
-            },
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
-        },
         "1": {
           "written": [
             "O",
@@ -1364,12 +1344,10 @@
               "eac": "MUZ3"
             }
           }
-        }
-      },
-      "fina": {
+        },
         "3": {
           "written": [
-            "U"
+            "O"
           ],
           "locales": {
             "hudum": {
@@ -1377,8 +1355,8 @@
                 "default",
                 "particle"
               ],
-              "gb": "000E ue first final form",
-              "eac": "MUM1"
+              "gb": "000F ue first medial form",
+              "eac": "MUZ1"
             },
             "hudum-ag": {
               "conditions": [
@@ -1386,7 +1364,9 @@
               ]
             }
           }
-        },
+        }
+      },
+      "fina": {
         "1": {
           "written": [
             "Ue"
@@ -1416,6 +1396,26 @@
             "hudum-ag": {
               "conditions": [
                 "post_bowed"
+              ]
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "U"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default",
+                "particle"
+              ],
+              "gb": "000E ue first final form",
+              "eac": "MUM1"
+            },
+            "hudum-ag": {
+              "conditions": [
+                "default"
               ]
             }
           }
@@ -1650,6 +1650,52 @@
         }
       },
       "medi": {
+        "1": {
+          "written": [
+            "N"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "onset"
+              ],
+              "gb": "0014 na second medial form",
+              "eac": "MNZ2"
+            },
+            "hudum-ag": {},
+            "todo": {
+              "conditions": [
+                "onset"
+              ],
+              "gb": "0014 na second medial form",
+              "eac": "TNAZ2"
+            },
+            "todo-ag": {
+              "conditions": [
+                "onset"
+              ]
+            },
+            "manchu": {
+              "conditions": [
+                "onset"
+              ],
+              "gb": "0014 manchu na second medial form",
+              "eac": "MNAZ2"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "onset"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "onset"
+              ],
+              "gb": "1828 sibe na second medial form",
+              "eac": "SNAZ2"
+            }
+          }
+        },
         "2": {
           "written": [
             "A"
@@ -1705,7 +1751,9 @@
               "eac": "SNAZ1"
             }
           }
-        },
+        }
+      },
+      "fina": {
         "1": {
           "written": [
             "N"
@@ -1713,47 +1761,22 @@
           "locales": {
             "hudum": {
               "conditions": [
-                "onset"
+                "chachlag_onset"
               ],
-              "gb": "0014 na second medial form",
-              "eac": "MNZ2"
-            },
-            "hudum-ag": {},
-            "todo": {
-              "conditions": [
-                "onset"
-              ],
-              "gb": "0014 na second medial form",
-              "eac": "TNAZ2"
-            },
-            "todo-ag": {
-              "conditions": [
-                "onset"
-              ]
+              "gb": "0015 na second final form",
+              "eac": "MNM2"
             },
             "manchu": {
-              "conditions": [
-                "onset"
-              ],
-              "gb": "0014 manchu na second medial form",
-              "eac": "MNAZ2"
+              "gb": "0015 manchu na second final form",
+              "eac": "MNAM2"
             },
-            "manchu-ag": {
-              "conditions": [
-                "onset"
-              ]
-            },
+            "manchu-ag": {},
             "sibe": {
-              "conditions": [
-                "onset"
-              ],
-              "gb": "1828 sibe na second medial form",
-              "eac": "SNAZ2"
+              "gb": "1828 sibe na second final form",
+              "eac": "SNAM2"
             }
           }
-        }
-      },
-      "fina": {
+        },
         "2": {
           "written": [
             "A"
@@ -1802,29 +1825,6 @@
               ],
               "gb": "1828 sibe na first final form",
               "eac": "SNAM1"
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "N"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "chachlag_onset"
-              ],
-              "gb": "0015 na second final form",
-              "eac": "MNM2"
-            },
-            "manchu": {
-              "gb": "0015 manchu na second final form",
-              "eac": "MNAM2"
-            },
-            "manchu-ag": {},
-            "sibe": {
-              "gb": "1828 sibe na second final form",
-              "eac": "SNAM2"
             }
           }
         }
@@ -2275,21 +2275,6 @@
         }
       },
       "init": {
-        "3": {
-          "written": [
-            "H"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default",
-                "masculine_onset"
-              ],
-              "gb": "00C7 qa first initial form",
-              "eac": "MHS1"
-            }
-          }
-        },
         "1": {
           "written": [
             "Hx"
@@ -2315,6 +2300,21 @@
             }
           }
         },
+        "3": {
+          "written": [
+            "H"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default",
+                "masculine_onset"
+              ],
+              "gb": "00C7 qa first initial form",
+              "eac": "MHS1"
+            }
+          }
+        },
         "4": {
           "written": [
             "Gx"
@@ -2328,22 +2328,6 @@
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "H"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default",
-                "chachlag_onset",
-                "masculine_devsger"
-              ],
-              "gb": "0006 qa first medial form",
-              "eac": "MHZ1"
-            }
-          }
-        },
         "1": {
           "written": [
             "Hx"
@@ -2363,6 +2347,22 @@
             "hudum": {
               "gb": "001E qa third medial form",
               "eac": "MHZ3"
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "H"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default",
+                "chachlag_onset",
+                "masculine_devsger"
+              ],
+              "gb": "0006 qa first medial form",
+              "eac": "MHZ1"
             }
           }
         },
@@ -2461,21 +2461,6 @@
         }
       },
       "init": {
-        "3": {
-          "written": [
-            "Hx"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default",
-                "masculine_onset"
-              ],
-              "gb": "00C8 ga first initial form",
-              "eac": "MGS1"
-            }
-          }
-        },
         "1": {
           "written": [
             "H"
@@ -2501,6 +2486,21 @@
             }
           }
         },
+        "3": {
+          "written": [
+            "Hx"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default",
+                "masculine_onset"
+              ],
+              "gb": "00C8 ga first initial form",
+              "eac": "MGS1"
+            }
+          }
+        },
         "4": {
           "written": [
             "Gx"
@@ -2514,21 +2514,6 @@
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "H"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "masculine_devsger",
-                "dotless"
-              ],
-              "gb": "0006 ga first medial form",
-              "eac": "MGZ1"
-            }
-          }
-        },
         "1": {
           "written": [
             "Hx"
@@ -2555,6 +2540,21 @@
               ],
               "gb": "001E ga third medial form",
               "eac": "MGZ3"
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "H"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "masculine_devsger",
+                "dotless"
+              ],
+              "gb": "0006 ga first medial form",
+              "eac": "MGZ1"
             }
           }
         },
@@ -3248,6 +3248,20 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "S"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "dotless"
+              ],
+              "gb": "00CB sha second initial form",
+              "eac": "MXS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "Sh"
@@ -3278,7 +3292,9 @@
               ]
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
             "S"
@@ -3288,13 +3304,11 @@
               "conditions": [
                 "dotless"
               ],
-              "gb": "00CB sha second initial form",
-              "eac": "MXS2"
+              "gb": "0024 sha second medial form",
+              "eac": "MXZ2"
             }
           }
-        }
-      },
-      "medi": {
+        },
         "2": {
           "written": [
             "Sh"
@@ -3323,20 +3337,6 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "S"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "dotless"
-              ],
-              "gb": "0024 sha second medial form",
-              "eac": "MXZ2"
             }
           }
         }
@@ -3413,20 +3413,6 @@
         }
       },
       "medi": {
-        "2": {
-          "written": [
-            "D"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "00CE ta first medial form",
-              "eac": "MTZ1"
-            }
-          }
-        },
         "1": {
           "written": [
             "T"
@@ -3438,6 +3424,20 @@
               ],
               "gb": "00CD ta second medial form",
               "eac": "MTZ2"
+            }
+          }
+        },
+        "2": {
+          "written": [
+            "D"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "00CE ta first medial form",
+              "eac": "MTZ1"
             }
           }
         }
@@ -3493,21 +3493,6 @@
         }
       },
       "init": {
-        "2": {
-          "written": [
-            "T"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "default",
-                "onset"
-              ],
-              "gb": "00CD da first initial form",
-              "eac": "MDS1"
-            }
-          }
-        },
         "1": {
           "written": [
             "D"
@@ -3522,9 +3507,38 @@
               "eac": "MDS2"
             }
           }
+        },
+        "2": {
+          "written": [
+            "T"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "default",
+                "onset"
+              ],
+              "gb": "00CD da first initial form",
+              "eac": "MDS1"
+            }
+          }
         }
       },
       "medi": {
+        "1": {
+          "written": [
+            "D"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "onset"
+              ],
+              "gb": "00CE da second medial form",
+              "eac": "MDZ2"
+            }
+          }
+        },
         "2": {
           "written": [
             "Dd"
@@ -3537,20 +3551,6 @@
               ],
               "gb": "002C da first medial form",
               "eac": "MDZ1"
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "D"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "onset"
-              ],
-              "gb": "00CE da second medial form",
-              "eac": "MDZ2"
             }
           }
         }
@@ -4012,6 +4012,20 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "I"
+          ],
+          "locales": {
+            "hudum": {
+              "conditions": [
+                "particle"
+              ],
+              "gb": "00B7 ya second initial form",
+              "eac": "MYS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "Y"
@@ -4043,7 +4057,9 @@
               "eac": "SYAS1"
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
             "I"
@@ -4053,13 +4069,23 @@
               "conditions": [
                 "particle"
               ],
-              "gb": "00B7 ya second initial form",
-              "eac": "MYS2"
+              "gb": "00B7 ya second medial form",
+              "eac": "MYZ2"
             }
           }
-        }
-      },
-      "medi": {
+        },
+        "2": {
+          "written": [
+            "I",
+            "I"
+          ],
+          "locales": {
+            "hudum": {
+              "gb": "00B9 ya third medial form",
+              "eac": "MYZ3"
+            }
+          }
+        },
         "3": {
           "written": [
             "Y"
@@ -4089,32 +4115,6 @@
                 "default"
               ],
               "eac": "SYAZ1"
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "I"
-          ],
-          "locales": {
-            "hudum": {
-              "conditions": [
-                "particle"
-              ],
-              "gb": "00B7 ya second medial form",
-              "eac": "MYZ2"
-            }
-          }
-        },
-        "2": {
-          "written": [
-            "I",
-            "I"
-          ],
-          "locales": {
-            "hudum": {
-              "gb": "00B9 ya third medial form",
-              "eac": "MYZ3"
             }
           }
         }
@@ -5873,6 +5873,22 @@
         }
       },
       "medi": {
+        "1": {
+          "written": [
+            "A",
+            "Ip"
+          ],
+          "locales": {
+            "todo": {
+              "conditions": [
+                "devsger"
+              ],
+              "gb": "0043 todo i first medial form",
+              "eac": "TIZ2"
+            },
+            "todo-ag": {}
+          }
+        },
         "2": {
           "written": [
             "Ip"
@@ -5892,22 +5908,6 @@
             }
           }
         },
-        "1": {
-          "written": [
-            "A",
-            "Ip"
-          ],
-          "locales": {
-            "todo": {
-              "conditions": [
-                "devsger"
-              ],
-              "gb": "0043 todo i first medial form",
-              "eac": "TIZ2"
-            },
-            "todo-ag": {}
-          }
-        },
         "3": {
           "written": [
             "I"
@@ -5921,6 +5921,23 @@
         }
       },
       "fina": {
+        "1": {
+          "written": [
+            "Ip"
+          ],
+          "locales": {
+            "todo": {
+              "conditions": [
+                "post_bowed"
+              ]
+            },
+            "todo-ag": {
+              "conditions": [
+                "post_bowed"
+              ]
+            }
+          }
+        },
         "2": {
           "written": [
             "I3"
@@ -5936,23 +5953,6 @@
             "todo-ag": {
               "conditions": [
                 "default"
-              ]
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "Ip"
-          ],
-          "locales": {
-            "todo": {
-              "conditions": [
-                "post_bowed"
-              ]
-            },
-            "todo-ag": {
-              "conditions": [
-                "post_bowed"
               ]
             }
           }
@@ -6114,20 +6114,6 @@
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "Op"
-          ],
-          "locales": {
-            "todo": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "004B todo u first medial form",
-              "eac": "TUZ1"
-            }
-          }
-        },
         "1": {
           "written": [
             "A",
@@ -6153,23 +6139,23 @@
               "eac": "TUZ3"
             }
           }
-        }
-      },
-      "fina": {
+        },
         "3": {
           "written": [
-            "Up"
+            "Op"
           ],
           "locales": {
             "todo": {
               "conditions": [
                 "default"
               ],
-              "gb": "004D todo u first final form",
-              "eac": "TUM1"
+              "gb": "004B todo u first medial form",
+              "eac": "TUZ1"
             }
           }
-        },
+        }
+      },
+      "fina": {
         "1": {
           "written": [
             "U"
@@ -6194,6 +6180,20 @@
                 "post_bowed"
               ],
               "eac": "TUM3"
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "Up"
+          ],
+          "locales": {
+            "todo": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "004D todo u first final form",
+              "eac": "TUM1"
             }
           }
         }
@@ -6398,6 +6398,24 @@
         }
       },
       "fina": {
+        "1": {
+          "written": [
+            "O"
+          ],
+          "locales": {
+            "todo": {
+              "conditions": [
+                "post_bowed"
+              ],
+              "eac": "TUEM2"
+            },
+            "todo-ag": {
+              "conditions": [
+                "post_bowed"
+              ]
+            }
+          }
+        },
         "2": {
           "written": [
             "U"
@@ -6413,24 +6431,6 @@
             "todo-ag": {
               "conditions": [
                 "default"
-              ]
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "O"
-          ],
-          "locales": {
-            "todo": {
-              "conditions": [
-                "post_bowed"
-              ],
-              "eac": "TUEM2"
-            },
-            "todo-ag": {
-              "conditions": [
-                "post_bowed"
               ]
             }
           }
@@ -6759,6 +6759,20 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "K"
+          ],
+          "locales": {
+            "todo": {
+              "conditions": [
+                "feminine"
+              ],
+              "gb": "183B todo qa feminine initial form",
+              "eac": "TQAS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "Hx2"
@@ -6773,7 +6787,9 @@
               "eac": "TQAS1"
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
             "K"
@@ -6783,13 +6799,11 @@
               "conditions": [
                 "feminine"
               ],
-              "gb": "183B todo qa feminine initial form",
-              "eac": "TQAS2"
+              "gb": "183B todo qa feminine medial form",
+              "eac": "TQAZ2"
             }
           }
-        }
-      },
-      "medi": {
+        },
         "2": {
           "written": [
             "Hx"
@@ -6802,20 +6816,6 @@
               ],
               "gb": "001C todo qa medial form with dots",
               "eac": "TQAZ1"
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "K"
-          ],
-          "locales": {
-            "todo": {
-              "conditions": [
-                "feminine"
-              ],
-              "gb": "183B todo qa feminine medial form",
-              "eac": "TQAZ2"
             }
           }
         }
@@ -6877,6 +6877,24 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "G"
+          ],
+          "locales": {
+            "todo": {
+              "conditions": [
+                "feminine"
+              ],
+              "eac": "TGAS2"
+            },
+            "todo-ag": {
+              "conditions": [
+                "feminine"
+              ]
+            }
+          }
+        },
         "2": {
           "written": [
             "Hb"
@@ -6897,48 +6915,9 @@
               ]
             }
           }
-        },
-        "1": {
-          "written": [
-            "G"
-          ],
-          "locales": {
-            "todo": {
-              "conditions": [
-                "feminine"
-              ],
-              "eac": "TGAS2"
-            },
-            "todo-ag": {
-              "conditions": [
-                "feminine"
-              ]
-            }
-          }
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "Hb"
-          ],
-          "locales": {
-            "todo": {
-              "conditions": [
-                "default",
-                "masculine_onset"
-              ],
-              "gb": "0053 todo ga first medial form",
-              "eac": "TGAZ1"
-            },
-            "todo-ag": {
-              "conditions": [
-                "default",
-                "masculine_onset"
-              ]
-            }
-          }
-        },
         "1": {
           "written": [
             "Hp"
@@ -6972,6 +6951,27 @@
             "todo-ag": {
               "conditions": [
                 "feminine"
+              ]
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "Hb"
+          ],
+          "locales": {
+            "todo": {
+              "conditions": [
+                "default",
+                "masculine_onset"
+              ],
+              "gb": "0053 todo ga first medial form",
+              "eac": "TGAZ1"
+            },
+            "todo-ag": {
+              "conditions": [
+                "default",
+                "masculine_onset"
               ]
             }
           }
@@ -8495,31 +8495,6 @@
         }
       },
       "medi": {
-        "2": {
-          "written": [
-            "Ah"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "0060 manchu e first medial form",
-              "eac": "MEZ1"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "default"
-              ]
-            },
-            "sibe": {
-              "conditions": [
-                "default"
-              ],
-              "eac": "SEZ1"
-            }
-          }
-        },
         "1": {
           "written": [
             "A"
@@ -8544,10 +8519,8 @@
               "eac": "SEZ2"
             }
           }
-        }
-      },
-      "fina": {
-        "4": {
+        },
+        "2": {
           "written": [
             "Ah"
           ],
@@ -8556,8 +8529,8 @@
               "conditions": [
                 "default"
               ],
-              "gb": "185D manchu e first final form",
-              "eac": "MEM1"
+              "gb": "0060 manchu e first medial form",
+              "eac": "MEZ1"
             },
             "manchu-ag": {
               "conditions": [
@@ -8568,10 +8541,12 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SEM1"
+              "eac": "SEZ1"
             }
           }
-        },
+        }
+      },
+      "fina": {
         "1": {
           "written": [
             "A"
@@ -8644,6 +8619,31 @@
               "eac": "SEM4"
             }
           }
+        },
+        "4": {
+          "written": [
+            "Ah"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "185D manchu e first final form",
+              "eac": "MEM1"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "default"
+              ],
+              "eac": "SEM1"
+            }
+          }
         }
       }
     }
@@ -8652,6 +8652,18 @@
     "alias": "i",
     "variants": {
       "isol": {
+        "1": {
+          "written": [
+            "I"
+          ],
+          "locales": {
+            "sibe": {
+              "conditions": [
+                "particle"
+              ]
+            }
+          }
+        },
         "2": {
           "written": [
             "A",
@@ -8663,18 +8675,6 @@
                 "default"
               ],
               "eac": "SID1"
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "I"
-          ],
-          "locales": {
-            "sibe": {
-              "conditions": [
-                "particle"
-              ]
             }
           }
         }
@@ -8696,19 +8696,6 @@
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "I"
-          ],
-          "locales": {
-            "sibe": {
-              "conditions": [
-                "default"
-              ],
-              "eac": "SIZ1"
-            }
-          }
-        },
         "2": {
           "written": [
             "A",
@@ -8722,9 +8709,7 @@
               "eac": "SIZ2"
             }
           }
-        }
-      },
-      "fina": {
+        },
         "3": {
           "written": [
             "I"
@@ -8734,10 +8719,12 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SIM1"
+              "eac": "SIZ1"
             }
           }
-        },
+        }
+      },
+      "fina": {
         "1": {
           "written": [
             "I2"
@@ -8760,6 +8747,19 @@
             "sibe": {
               "gb": "1834 sibe cha second final form",
               "eac": "SIM3"
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "I"
+          ],
+          "locales": {
+            "sibe": {
+              "conditions": [
+                "default"
+              ],
+              "eac": "SIM1"
             }
           }
         }
@@ -8943,32 +8943,6 @@
         }
       },
       "medi": {
-        "2": {
-          "written": [
-            "Oh"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "0066 manchu ue first medial form",
-              "eac": "MUEZ1"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "default"
-              ]
-            },
-            "sibe": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "1860 sibe ue first medial form",
-              "eac": "SUEZ1"
-            }
-          }
-        },
         "1": {
           "written": [
             "O"
@@ -8994,20 +8968,18 @@
               "eac": "SUEZ2"
             }
           }
-        }
-      },
-      "fina": {
-        "4": {
+        },
+        "2": {
           "written": [
-            "Uh"
+            "Oh"
           ],
           "locales": {
             "manchu": {
               "conditions": [
                 "default"
               ],
-              "gb": "0067 manchu ue first final form",
-              "eac": "MUEM1"
+              "gb": "0066 manchu ue first medial form",
+              "eac": "MUEZ1"
             },
             "manchu-ag": {
               "conditions": [
@@ -9018,11 +8990,13 @@
               "conditions": [
                 "default"
               ],
-              "gb": "1860 sibe ue first final form",
-              "eac": "SUEM1"
+              "gb": "1860 sibe ue first medial form",
+              "eac": "SUEZ1"
             }
           }
-        },
+        }
+      },
+      "fina": {
         "1": {
           "written": [
             "U"
@@ -9104,6 +9078,32 @@
               ],
               "gb": "1860 sibe ue fourth final form",
               "eac": "SUEM4"
+            }
+          }
+        },
+        "4": {
+          "written": [
+            "Uh"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "0067 manchu ue first final form",
+              "eac": "MUEM1"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "1860 sibe ue first final form",
+              "eac": "SUEM1"
             }
           }
         }
@@ -9344,20 +9344,6 @@
         }
       },
       "init": {
-        "3": {
-          "written": [
-            "H"
-          ],
-          "locales": {
-            "sibe": {
-              "conditions": [
-                "default",
-                "masculine_onset"
-              ],
-              "eac": "SKAS1"
-            }
-          }
-        },
         "1": {
           "written": [
             "G"
@@ -9381,9 +9367,7 @@
               "eac": "SKAS3"
             }
           }
-        }
-      },
-      "medi": {
+        },
         "3": {
           "written": [
             "H"
@@ -9394,10 +9378,12 @@
                 "default",
                 "masculine_onset"
               ],
-              "eac": "SKAZ1"
+              "eac": "SKAS1"
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
             "Nx"
@@ -9422,6 +9408,20 @@
                 "feminine"
               ],
               "eac": "SKAZ3"
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "H"
+          ],
+          "locales": {
+            "sibe": {
+              "conditions": [
+                "default",
+                "masculine_onset"
+              ],
+              "eac": "SKAZ1"
             }
           }
         },
@@ -9520,6 +9520,31 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "Gh"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "feminine"
+              ],
+              "gb": "006B manchu ga second initial form",
+              "eac": "MGAS2"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "feminine"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "feminine"
+              ],
+              "eac": "SGAS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "Hh"
@@ -9548,7 +9573,9 @@
               "eac": "SGAS1"
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
             "Gh"
@@ -9558,8 +9585,8 @@
               "conditions": [
                 "feminine"
               ],
-              "gb": "006B manchu ga second initial form",
-              "eac": "MGAS2"
+              "gb": "030D manchu ga second medial form",
+              "eac": "MGAZ2"
             },
             "manchu-ag": {
               "conditions": [
@@ -9570,12 +9597,10 @@
               "conditions": [
                 "feminine"
               ],
-              "eac": "SGAS2"
+              "eac": "SGAZ2"
             }
           }
-        }
-      },
-      "medi": {
+        },
         "2": {
           "written": [
             "Hh"
@@ -9602,31 +9627,6 @@
               ],
               "gb": "1864 sibe ga medial form",
               "eac": "SGAZ1"
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "Gh"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "feminine"
-              ],
-              "gb": "030D manchu ga second medial form",
-              "eac": "MGAZ2"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "feminine"
-              ]
-            },
-            "sibe": {
-              "conditions": [
-                "feminine"
-              ],
-              "eac": "SGAZ2"
             }
           }
         }
@@ -9706,6 +9706,31 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "Gc"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "feminine"
+              ],
+              "gb": "006D manchu ha second initial form",
+              "eac": "MHAS2"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "feminine"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "feminine"
+              ],
+              "eac": "SHAS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "Hc"
@@ -9734,7 +9759,9 @@
               "eac": "SHAS1"
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
             "Gc"
@@ -9744,8 +9771,8 @@
               "conditions": [
                 "feminine"
               ],
-              "gb": "006D manchu ha second initial form",
-              "eac": "MHAS2"
+              "gb": "030E manchu ha second medial form",
+              "eac": "MHAZ2"
             },
             "manchu-ag": {
               "conditions": [
@@ -9756,12 +9783,10 @@
               "conditions": [
                 "feminine"
               ],
-              "eac": "SHAS2"
+              "eac": "SHAZ2"
             }
           }
-        }
-      },
-      "medi": {
+        },
         "2": {
           "written": [
             "Hc"
@@ -9788,31 +9813,6 @@
               ],
               "gb": "1865 sibe ha medial form",
               "eac": "SHAZ1"
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "Gc"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "feminine"
-              ],
-              "gb": "030E manchu ha second medial form",
-              "eac": "MHAZ2"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "feminine"
-              ]
-            },
-            "sibe": {
-              "conditions": [
-                "feminine"
-              ],
-              "eac": "SHAZ2"
             }
           }
         }
@@ -10122,6 +10122,32 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "T"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "masculine_onset"
+              ],
+              "gb": "1832 manchu ta second initial form",
+              "eac": "MTAS2"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "masculine_onset"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "masculine_onset"
+              ],
+              "gb": "1868 sibe ta second initial form",
+              "eac": "STAS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "Tb"
@@ -10150,64 +10176,9 @@
               "eac": "STAS1"
             }
           }
-        },
-        "1": {
-          "written": [
-            "T"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "masculine_onset"
-              ],
-              "gb": "1832 manchu ta second initial form",
-              "eac": "MTAS2"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "masculine_onset"
-              ]
-            },
-            "sibe": {
-              "conditions": [
-                "masculine_onset"
-              ],
-              "gb": "1868 sibe ta second initial form",
-              "eac": "STAS2"
-            }
-          }
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "Db"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "default",
-                "feminine"
-              ],
-              "gb": "0070 manchu ta first medial form",
-              "eac": "MTAZ1"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "default",
-                "feminine"
-              ]
-            },
-            "sibe": {
-              "conditions": [
-                "default",
-                "feminine"
-              ],
-              "gb": "1868 sibe ta first medial form",
-              "eac": "STAZ1"
-            }
-          }
-        },
         "1": {
           "written": [
             "D"
@@ -10257,6 +10228,35 @@
               ],
               "gb": "1868 sibe ta third medial form",
               "eac": "STAZ3"
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "Db"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "default",
+                "feminine"
+              ],
+              "gb": "0070 manchu ta first medial form",
+              "eac": "MTAZ1"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "default",
+                "feminine"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "default",
+                "feminine"
+              ],
+              "gb": "1868 sibe ta first medial form",
+              "eac": "STAZ1"
             }
           }
         }
@@ -10337,6 +10337,32 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "Tt"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "feminine"
+              ],
+              "gb": "0071 manchu da second initial form",
+              "eac": "MDAS2"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "feminine"
+              ]
+            },
+            "sibe": {
+              "conditions": [
+                "feminine"
+              ],
+              "gb": "1869 sibe da second initial form",
+              "eac": "SDAS2"
+            }
+          }
+        },
         "2": {
           "written": [
             "Th"
@@ -10365,18 +10391,20 @@
               "eac": "SDAS1"
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
-            "Tt"
+            "Dt"
           ],
           "locales": {
             "manchu": {
               "conditions": [
                 "feminine"
               ],
-              "gb": "0071 manchu da second initial form",
-              "eac": "MDAS2"
+              "gb": "0073 manchu da second medial form",
+              "eac": "MDAZ2"
             },
             "manchu-ag": {
               "conditions": [
@@ -10385,15 +10413,13 @@
             },
             "sibe": {
               "conditions": [
-                "feminine"
+                "default"
               ],
-              "gb": "1869 sibe da second initial form",
-              "eac": "SDAS2"
+              "gb": "1869 sibe da second medial form",
+              "eac": "SDAZ1"
             }
           }
-        }
-      },
-      "medi": {
+        },
         "2": {
           "written": [
             "Dh"
@@ -10420,32 +10446,6 @@
               ],
               "gb": "1869 sibe da first medial form",
               "eac": "SDAZ2"
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "Dt"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "feminine"
-              ],
-              "gb": "0073 manchu da second medial form",
-              "eac": "MDAZ2"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "feminine"
-              ]
-            },
-            "sibe": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "1869 sibe da second medial form",
-              "eac": "SDAZ1"
             }
           }
         }
@@ -11342,6 +11342,18 @@
     "alias": "i",
     "variants": {
       "isol": {
+        "1": {
+          "written": [
+            "I"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "particle"
+              ]
+            }
+          }
+        },
         "2": {
           "written": [
             "A",
@@ -11358,18 +11370,6 @@
             "manchu-ag": {
               "conditions": [
                 "default"
-              ]
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "I"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "particle"
               ]
             }
           }
@@ -11398,25 +11398,6 @@
         }
       },
       "medi": {
-        "3": {
-          "written": [
-            "I"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "1835 manchu i first medial form",
-              "eac": "MIZ1"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
-        },
         "2": {
           "written": [
             "I",
@@ -11436,9 +11417,7 @@
               ]
             }
           }
-        }
-      },
-      "fina": {
+        },
         "3": {
           "written": [
             "I"
@@ -11448,8 +11427,8 @@
               "conditions": [
                 "default"
               ],
-              "gb": "000B manchu i first final form",
-              "eac": "MIM1"
+              "gb": "1835 manchu i first medial form",
+              "eac": "MIZ1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11457,7 +11436,9 @@
               ]
             }
           }
-        },
+        }
+      },
+      "fina": {
         "1": {
           "written": [
             "I2"
@@ -11485,6 +11466,25 @@
             "manchu-ag": {
               "conditions": [
                 "marked"
+              ]
+            }
+          }
+        },
+        "3": {
+          "written": [
+            "I"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "000B manchu i first final form",
+              "eac": "MIM1"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "default"
               ]
             }
           }
@@ -11554,27 +11554,6 @@
         }
       },
       "init": {
-        "3": {
-          "written": [
-            "H"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "default",
-                "masculine_onset"
-              ],
-              "gb": "182C manchu ka first initial form",
-              "eac": "MKAS1"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "default",
-                "masculine_onset"
-              ]
-            }
-          }
-        },
         "1": {
           "written": [
             "G"
@@ -11605,9 +11584,7 @@
             },
             "manchu-ag": {}
           }
-        }
-      },
-      "medi": {
+        },
         "3": {
           "written": [
             "H"
@@ -11618,8 +11595,8 @@
                 "default",
                 "masculine_onset"
               ],
-              "gb": "0006 manchu ka first medial form",
-              "eac": "MKAZ1"
+              "gb": "182C manchu ka first initial form",
+              "eac": "MKAS1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11628,7 +11605,9 @@
               ]
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
             "Hx"
@@ -11667,6 +11646,27 @@
             }
           }
         },
+        "3": {
+          "written": [
+            "H"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "default",
+                "masculine_onset"
+              ],
+              "gb": "0006 manchu ka first medial form",
+              "eac": "MKAZ1"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "default",
+                "masculine_onset"
+              ]
+            }
+          }
+        },
         "4": {
           "written": [
             "Gx"
@@ -11681,27 +11681,6 @@
         }
       },
       "fina": {
-        "3": {
-          "written": [
-            "Hx"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "default",
-                "masculine_devsger"
-              ],
-              "gb": "1874 manchu ka first final form",
-              "eac": "MKAM1"
-            },
-            "manchu-ag": {
-              "conditions": [
-                "default",
-                "masculine_devsger"
-              ]
-            }
-          }
-        },
         "1": {
           "written": [
             "G4"
@@ -11731,6 +11710,27 @@
               "eac": "MKAM3"
             },
             "manchu-ag": {}
+          }
+        },
+        "3": {
+          "written": [
+            "Hx"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "default",
+                "masculine_devsger"
+              ],
+              "gb": "1874 manchu ka first final form",
+              "eac": "MKAM1"
+            },
+            "manchu-ag": {
+              "conditions": [
+                "default",
+                "masculine_devsger"
+              ]
+            }
           }
         }
       }
@@ -11859,20 +11859,6 @@
         }
       },
       "init": {
-        "2": {
-          "written": [
-            "V"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "default"
-              ],
-              "gb": "186B manchu fa first initial form",
-              "eac": "MFAS1"
-            }
-          }
-        },
         "1": {
           "written": [
             "W"
@@ -11886,9 +11872,7 @@
               "eac": "MFAS2"
             }
           }
-        }
-      },
-      "medi": {
+        },
         "2": {
           "written": [
             "V"
@@ -11898,11 +11882,13 @@
               "conditions": [
                 "default"
               ],
-              "gb": "1876 manchu fa first medial form",
-              "eac": "MFAZ1"
+              "gb": "186B manchu fa first initial form",
+              "eac": "MFAS1"
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
             "W"
@@ -11914,6 +11900,20 @@
               ],
               "gb": "1838 manchu fa second medial form",
               "eac": "MFAZ2"
+            }
+          }
+        },
+        "2": {
+          "written": [
+            "V"
+          ],
+          "locales": {
+            "manchu": {
+              "conditions": [
+                "default"
+              ],
+              "gb": "1876 manchu fa first medial form",
+              "eac": "MFAZ1"
             }
           }
         }
@@ -13998,6 +13998,18 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "Dy"
+          ],
+          "locales": {
+            "manchu-ag": {
+              "conditions": [
+                "feminine"
+              ]
+            }
+          }
+        },
         "2": {
           "written": [
             "Dr"
@@ -14007,24 +14019,24 @@
               "conditions": [
                 "default",
                 "masculine_onset"
-              ]
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "Dy"
-          ],
-          "locales": {
-            "manchu-ag": {
-              "conditions": [
-                "feminine"
               ]
             }
           }
         }
       },
       "medi": {
+        "1": {
+          "written": [
+            "Dy"
+          ],
+          "locales": {
+            "manchu-ag": {
+              "conditions": [
+                "feminine"
+              ]
+            }
+          }
+        },
         "2": {
           "written": [
             "Dr"
@@ -14034,18 +14046,6 @@
               "conditions": [
                 "default",
                 "masculine_onset"
-              ]
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "Dy"
-          ],
-          "locales": {
-            "manchu-ag": {
-              "conditions": [
-                "feminine"
               ]
             }
           }
@@ -14095,6 +14095,18 @@
         }
       },
       "init": {
+        "1": {
+          "written": [
+            "Ts"
+          ],
+          "locales": {
+            "manchu-ag": {
+              "conditions": [
+                "feminine"
+              ]
+            }
+          }
+        },
         "2": {
           "written": [
             "Tx"
@@ -14107,10 +14119,12 @@
               ]
             }
           }
-        },
+        }
+      },
+      "medi": {
         "1": {
           "written": [
-            "Ts"
+            "Ds"
           ],
           "locales": {
             "manchu-ag": {
@@ -14119,9 +14133,7 @@
               ]
             }
           }
-        }
-      },
-      "medi": {
+        },
         "2": {
           "written": [
             "Dx"
@@ -14131,18 +14143,6 @@
               "conditions": [
                 "default",
                 "masculine_onset"
-              ]
-            }
-          }
-        },
-        "1": {
-          "written": [
-            "Ds"
-          ],
-          "locales": {
-            "manchu-ag": {
-              "conditions": [
-                "feminine"
               ]
             }
           }
