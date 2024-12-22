@@ -5,8 +5,8 @@
   "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER": {
     "alias": "sbm",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "medi"
@@ -17,35 +17,11 @@
                 "default"
               ]
             },
-            "sibe": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
-        },
-        {
-          "written": [
-            "A2",
-            "medi"
-          ],
-          "locales": {
             "manchu-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
-        }
-      ],
-      "init": [
-        {
-          "written": [
-            "A",
-            "medi"
-          ],
-          "locales": {
-            "manchu": {
+              "written": [
+                "A2",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
@@ -56,22 +32,38 @@
               ]
             }
           }
-        },
-        {
+        }
+      },
+      "init": {
+        "0": {
           "written": [
-            "A2"
+            "A",
+            "medi"
           ],
           "locales": {
+            "manchu": {
+              "conditions": [
+                "default"
+              ]
+            },
             "manchu-ag": {
+              "written": [
+                "A2"
+              ],
+              "conditions": [
+                "default"
+              ]
+            },
+            "sibe": {
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "A"
           ],
@@ -94,9 +86,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "A",
             "medi"
@@ -119,7 +111,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN NIRUGU": {
@@ -143,13 +135,12 @@
   "MONGOLIAN LETTER A": {
     "alias": "a",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "3": {
           "written": [
             "A",
             "A"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -196,11 +187,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00B3 a second isolated form",
@@ -218,11 +208,10 @@
             "todo-ag": {}
           }
         },
-        {
+        "2": {
           "written": [
             "Aa"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -239,14 +228,13 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "A",
             "A"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -293,11 +281,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -309,9 +296,9 @@
             "hudum-ag": {}
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "A"
           ],
@@ -361,12 +348,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "A"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "0006 a second medial form",
@@ -379,13 +365,12 @@
             "todo-ag": {}
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "2": {
           "written": [
             "A"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "gb": "0008 a first final form",
@@ -429,11 +414,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Aa"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -478,18 +462,17 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER E": {
     "alias": "e",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "2": {
           "written": [
             "A"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -500,11 +483,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Aa"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -516,9 +498,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A"
           ],
@@ -532,12 +514,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "A"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "0004 e second initial form",
@@ -545,9 +526,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "A"
           ],
@@ -561,13 +542,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "2": {
           "written": [
             "A"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -578,11 +558,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Aa"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -593,19 +572,18 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER I": {
     "alias": "i",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "3": {
           "written": [
             "A",
             "I"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -616,11 +594,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -631,11 +608,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Ix"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "gb": "00B6 i third isolated form",
@@ -643,14 +619,13 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "A",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -661,11 +636,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -676,13 +650,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "I"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -693,12 +666,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00B8 i second medial form",
@@ -706,12 +678,11 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "I",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -722,9 +693,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "I"
           ],
@@ -738,14 +709,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER O": {
     "alias": "o",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "O"
@@ -784,9 +755,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "O"
@@ -825,9 +796,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "O"
           ],
@@ -865,12 +836,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "000D o second medial form",
@@ -878,13 +848,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "2": {
           "written": [
             "U"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -919,11 +888,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -962,19 +930,18 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER U": {
     "alias": "u",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "3": {
           "written": [
             "A",
             "O"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -985,11 +952,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "U"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1000,11 +966,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Ux"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "gb": "00BB u third isolated form",
@@ -1012,14 +977,13 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "A",
             "O"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1030,11 +994,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1045,9 +1008,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "O"
           ],
@@ -1061,12 +1024,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "000D u second medial form",
@@ -1074,13 +1036,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "2": {
           "written": [
             "U"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1092,11 +1053,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1108,14 +1068,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER OE": {
     "alias": "oe",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Ue"
@@ -1130,12 +1090,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "U"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00BD oe second isolated form",
@@ -1143,9 +1102,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "O",
@@ -1161,13 +1120,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "O"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1178,12 +1136,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O",
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1194,13 +1151,12 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "A",
             "O",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "gb": "0010 oe third medial form",
@@ -1208,13 +1164,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "3": {
           "written": [
             "U"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1225,11 +1180,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ue"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1240,11 +1194,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "O"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1255,14 +1208,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER UE": {
     "alias": "ue",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Ue"
@@ -1282,12 +1235,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "U"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00BD ue second isolated form",
@@ -1296,11 +1248,10 @@
             "hudum-ag": {}
           }
         },
-        {
+        "2": {
           "written": [
             "U"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1311,11 +1262,10 @@
             }
           }
         },
-        {
+        "3": {
           "written": [
             "Ux"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "gb": "00BB ue fourth isolated form",
@@ -1323,15 +1273,14 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "A",
             "O",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1347,11 +1296,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1362,13 +1310,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "O"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1385,12 +1332,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O",
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1406,13 +1352,12 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "A",
             "O",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "gb": "0010 ue third medial form",
@@ -1420,13 +1365,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "3": {
           "written": [
             "U"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1443,11 +1387,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ue"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1458,11 +1401,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "O"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1478,14 +1420,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER EE": {
     "alias": "ee",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "W"
@@ -1505,9 +1447,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "W"
@@ -1527,9 +1469,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "W"
           ],
@@ -1548,9 +1490,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "W"
           ],
@@ -1569,14 +1511,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER NA": {
     "alias": "n",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "N",
             "init"
@@ -1625,12 +1567,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "0007 na second isolated form",
@@ -1638,9 +1579,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "N"
           ],
@@ -1690,11 +1631,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "0007 na second initial form",
@@ -1707,26 +1647,13 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "N2"
-          ],
-          "locales": {
-            "todo": {
-              "conditions": [
-                "particle"
-              ]
-            }
-          }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "A"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1779,11 +1706,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "N"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1826,13 +1752,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "2": {
           "written": [
             "A"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1880,11 +1805,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "N"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -1897,28 +1821,21 @@
               "gb": "0015 manchu na second final form",
               "eac": "MNAM2"
             },
+            "manchu-ag": {},
             "sibe": {
               "gb": "1828 sibe na second final form",
               "eac": "SNAM2"
             }
           }
-        },
-        {
-          "written": [
-            "N2"
-          ],
-          "locales": {
-            "manchu-ag": {}
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ANG": {
     "alias": "ng",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "G",
@@ -1950,9 +1867,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "G",
@@ -1984,9 +1901,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "A",
             "G"
@@ -2018,9 +1935,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "A",
             "G"
@@ -2052,14 +1969,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER BA": {
     "alias": "b",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "B",
             "init"
@@ -2096,9 +2013,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "B"
           ],
@@ -2136,9 +2053,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "B"
           ],
@@ -2176,9 +2093,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "B"
           ],
@@ -2216,11 +2133,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "B2"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00C5 ba second final form",
@@ -2229,14 +2145,14 @@
             "hudum-ag": {}
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER PA": {
     "alias": "p",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "P",
             "init"
@@ -2251,9 +2167,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "P"
           ],
@@ -2267,9 +2183,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "P"
           ],
@@ -2283,9 +2199,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "P"
           ],
@@ -2299,14 +2215,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER QA": {
     "alias": "h",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "H",
             "init"
@@ -2321,12 +2237,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Hx",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00C8 qa second isolated form",
@@ -2334,12 +2249,11 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G",
             "init"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "gb": "001E qa third isolated form",
@@ -2347,12 +2261,11 @@
             }
           }
         },
-        {
+        "4": {
           "written": [
             "Gx",
             "init"
           ],
-          "fvs": 4,
           "locales": {
             "hudum": {
               "gb": "001B qa fourth isolated form",
@@ -2360,13 +2273,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "3": {
           "written": [
             "H"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2378,11 +2290,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Hx"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00C8 qa second initial form",
@@ -2390,11 +2301,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2405,11 +2315,10 @@
             }
           }
         },
-        {
+        "4": {
           "written": [
             "Gx"
           ],
-          "fvs": 4,
           "locales": {
             "hudum": {
               "gb": "001B qa fourth initial form",
@@ -2417,13 +2326,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "H"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2436,11 +2344,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Hx"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "001C qa second medial form",
@@ -2448,11 +2355,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "gb": "001E qa third medial form",
@@ -2460,11 +2366,10 @@
             }
           }
         },
-        {
+        "4": {
           "written": [
             "Gx"
           ],
-          "fvs": 4,
           "locales": {
             "hudum": {
               "gb": "001B qa fourth medial form",
@@ -2472,9 +2377,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "H"
           ],
@@ -2485,11 +2390,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Hx"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "001D qa second final form",
@@ -2497,14 +2401,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER GA": {
     "alias": "g",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Hx",
             "init"
@@ -2519,12 +2423,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "H",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00C7 ga second isolated form",
@@ -2532,12 +2435,11 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G",
             "init"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "gb": "001E ga third isolated form",
@@ -2545,12 +2447,11 @@
             }
           }
         },
-        {
+        "4": {
           "written": [
             "Gx",
             "init"
           ],
-          "fvs": 4,
           "locales": {
             "hudum": {
               "gb": "001B ga fourth isolated form",
@@ -2558,13 +2459,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "3": {
           "written": [
             "Hx"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2576,11 +2476,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "H"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00C7 ga second initial form",
@@ -2588,11 +2487,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2603,11 +2501,10 @@
             }
           }
         },
-        {
+        "4": {
           "written": [
             "Gx"
           ],
-          "fvs": 4,
           "locales": {
             "hudum": {
               "gb": "001B ga fourth initial form",
@@ -2615,13 +2512,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "H"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2633,11 +2529,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Hx"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2648,11 +2543,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2664,11 +2558,10 @@
             }
           }
         },
-        {
+        "4": {
           "written": [
             "Gx"
           ],
-          "fvs": 4,
           "locales": {
             "hudum": {
               "gb": "001B ga fourth medial form",
@@ -2676,13 +2569,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "1": {
           "written": [
             "H"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2695,11 +2587,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2711,11 +2602,10 @@
             }
           }
         },
-        {
+        "3": {
           "written": [
             "Hx"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -2726,14 +2616,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MA": {
     "alias": "m",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "M",
             "init"
@@ -2765,9 +2655,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "M"
           ],
@@ -2800,9 +2690,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "M"
           ],
@@ -2835,9 +2725,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "M"
           ],
@@ -2870,14 +2760,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER LA": {
     "alias": "l",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "L",
             "init"
@@ -2925,18 +2815,10 @@
               "eac": "SLAD1"
             }
           }
-        },
-        {
-          "written": [
-            "L2"
-          ],
-          "locales": {
-            "manchu-ag": {}
-          }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "L"
           ],
@@ -2985,18 +2867,10 @@
               "eac": "SLAS1"
             }
           }
-        },
-        {
-          "written": [
-            "L2"
-          ],
-          "locales": {
-            "manchu-ag": {}
-          }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "L"
           ],
@@ -3046,9 +2920,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "L"
           ],
@@ -3098,14 +2972,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SA": {
     "alias": "s",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "S",
             "init"
@@ -3154,9 +3028,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "S"
           ],
@@ -3206,9 +3080,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "S"
           ],
@@ -3258,9 +3132,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "S"
           ],
@@ -3310,38 +3184,25 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Sz"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "0026 sa second final form",
               "eac": "MSM2"
             }
           }
-        },
-        {
-          "written": [
-            "S3"
-          ],
-          "locales": {
-            "manchu-ag": {
-              "conditions": [
-                "devsger"
-              ]
-            }
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SHA": {
     "alias": "sh",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Sh",
             "init"
@@ -3373,12 +3234,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "S",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00CB sha second isolated form",
@@ -3386,13 +3246,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Sh"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3420,11 +3279,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "S"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3435,13 +3293,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Sh"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3469,11 +3326,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "S"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3484,9 +3340,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Sh"
           ],
@@ -3517,14 +3373,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TA": {
     "alias": "t",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "T",
             "init"
@@ -3539,9 +3395,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "T"
           ],
@@ -3555,13 +3411,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "D"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3572,11 +3427,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "T"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3587,9 +3441,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "T"
           ],
@@ -3603,14 +3457,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER DA": {
     "alias": "d",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "D",
             "init"
@@ -3625,12 +3479,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "T",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00CD da second isolated form",
@@ -3638,13 +3491,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "T"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3656,11 +3508,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "D"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3672,13 +3523,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Dd"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3690,11 +3540,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "D"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -3705,9 +3554,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Dd"
           ],
@@ -3721,11 +3570,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "D"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "002E da second final form",
@@ -3733,7 +3581,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER CHA": {
@@ -3747,8 +3595,8 @@
       "sibe": "ch"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Ch",
             "init"
@@ -3797,9 +3645,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Ch"
           ],
@@ -3849,9 +3697,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Ch"
           ],
@@ -3901,9 +3749,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Ch"
           ],
@@ -3927,31 +3775,35 @@
               "gb": "0030 dza final form",
               "eac": "TZAM1"
             },
-            "manchu-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
-        },
-        {
-          "written": [
-            "Ch",
-            "medi"
-          ],
-          "locales": {
             "todo-ag": {
+              "written": [
+                "Ch",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             },
             "manchu": {
+              "written": [
+                "Ch",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ],
               "eac": "MCHAM1"
             },
+            "manchu-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
             "sibe": {
+              "written": [
+                "Ch",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ],
@@ -3959,14 +3811,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER JA": {
     "alias": "j",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "I",
             "init"
@@ -3992,11 +3844,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -4007,9 +3858,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "I"
           ],
@@ -4035,9 +3886,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "J"
           ],
@@ -4063,9 +3914,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "J"
           ],
@@ -4077,6 +3928,16 @@
               "gb": "0032 ja first final form",
               "eac": "MJM1"
             },
+            "manchu": {
+              "written": [
+                "J",
+                "medi"
+              ],
+              "conditions": [
+                "default"
+              ],
+              "eac": "MJAM1"
+            },
             "manchu-ag": {
               "conditions": [
                 "default"
@@ -4084,11 +3945,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -4098,29 +3958,15 @@
               "eac": "MJM2"
             }
           }
-        },
-        {
-          "written": [
-            "J",
-            "medi"
-          ],
-          "locales": {
-            "manchu": {
-              "conditions": [
-                "default"
-              ],
-              "eac": "MJAM1"
-            }
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER YA": {
     "alias": "y",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Y",
             "init"
@@ -4152,12 +3998,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "00B7 ya second isolated form",
@@ -4165,13 +4010,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Y"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "conditions": [
@@ -4200,11 +4044,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -4215,13 +4058,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "Y"
           ],
-          "fvs": 3,
           "locales": {
             "hudum": {
               "conditions": [
@@ -4250,11 +4092,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -4265,12 +4106,11 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "I",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "hudum": {
               "gb": "00B9 ya third medial form",
@@ -4278,9 +4118,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "I"
           ],
@@ -4291,27 +4131,31 @@
               ],
               "gb": "000B ya final form",
               "eac": "MYM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Y",
-            "medi"
-          ],
-          "locales": {
+            },
             "manchu": {
+              "written": [
+                "Y",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ],
               "eac": "MYAM1"
             },
             "manchu-ag": {
+              "written": [
+                "Y",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             },
             "sibe": {
+              "written": [
+                "Y",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ],
@@ -4319,14 +4163,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER RA": {
     "alias": "r",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "R",
             "init"
@@ -4364,9 +4208,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "R"
           ],
@@ -4403,9 +4247,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "R"
           ],
@@ -4442,9 +4286,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "R"
           ],
@@ -4481,7 +4325,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER WA": {
@@ -4494,8 +4338,8 @@
       "sibe": "w"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "W",
             "init"
@@ -4539,9 +4383,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "W"
           ],
@@ -4585,9 +4429,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "W"
           ],
@@ -4631,11 +4475,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "gb": "000F wa second medial form",
@@ -4643,9 +4486,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "W"
           ],
@@ -4688,11 +4531,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "U"
           ],
-          "fvs": 1,
           "locales": {
             "hudum": {
               "conditions": [
@@ -4703,14 +4545,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER FA": {
     "alias": "f",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "F",
             "init"
@@ -4725,9 +4567,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "F"
           ],
@@ -4741,9 +4583,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "F"
           ],
@@ -4757,9 +4599,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "F"
           ],
@@ -4773,7 +4615,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER KA": {
@@ -4786,8 +4628,8 @@
       "sibe": "kh"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "K2",
             "init"
@@ -4829,9 +4671,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "K2"
           ],
@@ -4873,9 +4715,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "K2"
           ],
@@ -4917,9 +4759,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "K2"
           ],
@@ -4935,49 +4777,48 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "K2",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "K2",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             },
             "manchu": {
+              "written": [
+                "K2",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ],
               "eac": "MKAAM1"
             },
             "manchu-ag": {
+              "written": [
+                "K2",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             },
             "sibe": {
+              "written": [
+                "K2",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ],
               "eac": "SKAAM1"
             }
           }
-        },
-        {
-          "written": [
-            "K2",
-            "Vi"
-          ],
-          "locales": {
-            "hudum-ag": {}
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER KHA": {
@@ -4987,8 +4828,8 @@
       "todo-ag": "khTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "K",
             "init"
@@ -5013,9 +4854,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "K"
           ],
@@ -5039,9 +4880,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "K"
           ],
@@ -5065,9 +4906,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "K"
           ],
@@ -5083,23 +4924,19 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "K",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "K",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TSA": {
@@ -5109,8 +4946,8 @@
       "todo-ag": "chTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "C",
             "init"
@@ -5135,9 +4972,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "C"
           ],
@@ -5161,9 +4998,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "C"
           ],
@@ -5187,9 +5024,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "C"
           ],
@@ -5205,30 +5042,26 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "C",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "C",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ZA": {
     "alias": "z",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Z",
             "init"
@@ -5248,9 +5081,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Z"
           ],
@@ -5269,9 +5102,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Z"
           ],
@@ -5290,9 +5123,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Z"
           ],
@@ -5311,7 +5144,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER HAA": {
@@ -5321,8 +5154,8 @@
       "todo-ag": "hTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Hr",
@@ -5348,9 +5181,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "Hr"
@@ -5375,9 +5208,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Hr"
           ],
@@ -5401,9 +5234,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Hr"
           ],
@@ -5427,14 +5260,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ZRA": {
     "alias": "rh",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Rh",
             "init"
@@ -5449,9 +5282,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Rh"
           ],
@@ -5465,9 +5298,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Rh"
           ],
@@ -5481,9 +5314,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Rh"
           ],
@@ -5497,14 +5330,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER LHA": {
     "alias": "lh",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "L",
             "Hr",
@@ -5537,9 +5370,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "L",
             "Hr"
@@ -5571,9 +5404,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "L",
             "Hr"
@@ -5605,9 +5438,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "L",
             "Hr",
@@ -5640,14 +5473,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ZHI": {
     "alias": "zr",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Zr",
             "init"
@@ -5662,9 +5495,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Zr"
           ],
@@ -5678,9 +5511,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Zr",
             "init"
@@ -5695,9 +5528,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Zr",
             "init"
@@ -5712,14 +5545,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER CHI": {
     "alias": "cr",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Cr",
             "init"
@@ -5734,9 +5567,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Cr"
           ],
@@ -5750,9 +5583,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Cr",
             "init"
@@ -5767,9 +5600,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Cr",
             "init"
@@ -5784,14 +5617,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO LONG VOWEL SIGN": {
     "alias": "lvs",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Lv"
           ],
@@ -5810,9 +5643,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Lv"
           ],
@@ -5831,9 +5664,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Lv"
           ],
@@ -5852,9 +5685,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Lv"
           ],
@@ -5873,14 +5706,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO E": {
     "alias": "e",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "E"
@@ -5900,9 +5733,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "E"
@@ -5922,9 +5755,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "E"
           ],
@@ -5943,12 +5776,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "E"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "0040 todo e second medial form",
@@ -5957,9 +5789,9 @@
             "todo-ag": {}
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "E"
           ],
@@ -5978,14 +5810,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO I": {
     "alias": "i",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "I3"
@@ -6005,9 +5837,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "Ip"
@@ -6027,12 +5859,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "000A todo i second initial form"
@@ -6040,13 +5871,12 @@
             "todo-ag": {}
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Ip"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "conditions": [
@@ -6062,12 +5892,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "Ip"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "conditions": [
@@ -6079,11 +5908,10 @@
             "todo-ag": {}
           }
         },
-        {
+        "3": {
           "written": [
             "I"
           ],
-          "fvs": 3,
           "locales": {
             "todo": {
               "gb": "1855 todo i third medial form"
@@ -6091,13 +5919,12 @@
             "todo-ag": {}
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "2": {
           "written": [
             "I3"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "conditions": [
@@ -6113,11 +5940,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ip"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "conditions": [
@@ -6131,14 +5957,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO O": {
     "alias": "o",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Ob"
@@ -6158,9 +5984,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "Ob"
@@ -6180,9 +6006,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Ob"
           ],
@@ -6201,12 +6027,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "Ob"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "0047 todo o second medial form",
@@ -6215,9 +6040,9 @@
             "todo-ag": {}
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Ob"
           ],
@@ -6236,14 +6061,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO U": {
     "alias": "u",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Up"
@@ -6258,12 +6083,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "Op"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "0049 todo u second isolated form",
@@ -6271,9 +6095,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "Op"
@@ -6288,13 +6112,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "Op"
           ],
-          "fvs": 3,
           "locales": {
             "todo": {
               "conditions": [
@@ -6305,12 +6128,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "Op"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "004C todo u third medial form",
@@ -6318,11 +6140,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "O"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "conditions": [
@@ -6333,13 +6154,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "3": {
           "written": [
             "Up"
           ],
-          "fvs": 3,
           "locales": {
             "todo": {
               "conditions": [
@@ -6350,11 +6170,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "U"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "conditions": [
@@ -6365,11 +6184,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Op"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "conditions": [
@@ -6379,14 +6197,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO OE": {
     "alias": "oe",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Ot"
@@ -6401,9 +6219,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "Ot"
@@ -6418,9 +6236,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Ot"
           ],
@@ -6434,23 +6252,21 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "0046 todo oe second medial form"
             }
           }
         },
-        {
+        "2": {
           "written": [
             "A",
             "Ot"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "gb": "0050 todo oe third medial form",
@@ -6458,9 +6274,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Ot"
           ],
@@ -6474,25 +6290,24 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "0048 todo oe second final form"
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO UE": {
     "alias": "ue",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "U"
@@ -6512,12 +6327,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "1823 todo ue second isolated form",
@@ -6526,9 +6340,9 @@
             "todo-ag": {}
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "O"
@@ -6548,9 +6362,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "O"
           ],
@@ -6569,12 +6383,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A",
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "000D todo ue second medial form",
@@ -6583,13 +6396,12 @@
             "todo-ag": {}
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "2": {
           "written": [
             "U"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "conditions": [
@@ -6605,11 +6417,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "conditions": [
@@ -6624,14 +6435,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO ANG": {
     "alias": "ng",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "G",
@@ -6652,9 +6463,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "G",
@@ -6675,9 +6486,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "A",
             "G"
@@ -6697,9 +6508,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "A",
             "G2"
@@ -6719,14 +6530,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO BA": {
     "alias": "b",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "B",
             "init"
@@ -6746,9 +6557,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "B"
           ],
@@ -6767,9 +6578,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "B"
           ],
@@ -6788,9 +6599,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "B2"
           ],
@@ -6809,14 +6620,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO PA": {
     "alias": "p",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Pp",
             "init"
@@ -6828,25 +6639,21 @@
               ],
               "gb": "184C todo pa isolated form",
               "eac": "TPAD1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Ph",
-            "init"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Ph",
+                "init"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Pp"
           ],
@@ -6857,24 +6664,20 @@
               ],
               "gb": "184C todo pa initial form",
               "eac": "TPAS1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Ph"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Ph"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Pp"
           ],
@@ -6885,24 +6688,20 @@
               ],
               "gb": "184C todo pa medial form",
               "eac": "TPAZ1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Ph"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Ph"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Pp"
           ],
@@ -6913,30 +6712,26 @@
               ],
               "gb": "0052 todo pa final form",
               "eac": "TPAM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Ph",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Ph",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO QA": {
     "alias": "h",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Hx2",
             "init"
@@ -6951,25 +6746,23 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "K",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "eac": "TQAD2"
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Hx2"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "conditions": [
@@ -6981,11 +6774,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "K"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "conditions": [
@@ -6996,13 +6788,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Hx"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "conditions": [
@@ -7014,11 +6805,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "K"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "conditions": [
@@ -7029,9 +6819,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "K"
           ],
@@ -7045,14 +6835,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO GA": {
     "alias": "g",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Hb",
             "init"
@@ -7072,12 +6862,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "G",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "1889 todo ga feminine isolated form",
@@ -7086,13 +6875,12 @@
             "todo-ag": {}
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Hb"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "conditions": [
@@ -7110,11 +6898,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "G"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "conditions": [
@@ -7128,22 +6915,13 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "Hp"
-          ],
-          "locales": {
-            "todo-ag": {}
-          }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "Hb"
           ],
-          "fvs": 3,
           "locales": {
             "todo": {
               "conditions": [
@@ -7161,11 +6939,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Hp"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "conditions": [
@@ -7181,11 +6958,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G"
           ],
-          "fvs": 2,
           "locales": {
             "todo": {
               "conditions": [
@@ -7200,9 +6976,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Hp"
           ],
@@ -7221,7 +6997,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO MA": {
@@ -7231,8 +7007,8 @@
       "todo-ag": "m"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "M",
             "init"
@@ -7257,9 +7033,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "M"
           ],
@@ -7283,9 +7059,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "M"
           ],
@@ -7309,9 +7085,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "M2"
           ],
@@ -7335,7 +7111,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO TA": {
@@ -7345,8 +7121,8 @@
       "todo-ag": "t"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Tp",
             "init"
@@ -7371,9 +7147,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Tp"
           ],
@@ -7397,9 +7173,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Tp"
           ],
@@ -7423,9 +7199,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Tp"
           ],
@@ -7441,30 +7217,26 @@
               ],
               "gb": "0056 todo ta final form",
               "eac": "TTAM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Tp",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Tp",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO DA": {
     "alias": "d",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Dp",
             "init"
@@ -7484,9 +7256,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Dp"
           ],
@@ -7505,9 +7277,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Dp"
           ],
@@ -7526,9 +7298,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Dp"
           ],
@@ -7539,30 +7311,26 @@
               ],
               "gb": "0311 todo da final form",
               "eac": "TDAM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Dp",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Dp",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO CHA": {
     "alias": "ch",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Jb",
             "init"
@@ -7577,9 +7345,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Jb"
           ],
@@ -7593,9 +7361,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Jb"
           ],
@@ -7609,9 +7377,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Jb"
           ],
@@ -7625,14 +7393,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO JA": {
     "alias": "j",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Cp",
             "init"
@@ -7652,9 +7420,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Cp"
           ],
@@ -7673,9 +7441,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Cp"
           ],
@@ -7694,9 +7462,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Cp"
           ],
@@ -7707,23 +7475,19 @@
               ],
               "gb": "005A todo ja final form",
               "eac": "TJAM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Cp",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Cp",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO TSA": {
@@ -7733,8 +7497,8 @@
       "todo-ag": "c"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "J",
             "init"
@@ -7759,9 +7523,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "J"
           ],
@@ -7785,9 +7549,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "J"
           ],
@@ -7811,9 +7575,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "J"
           ],
@@ -7829,23 +7593,19 @@
               ],
               "gb": "0032 todo tsa final form",
               "eac": "TTSAM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "J",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "J",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO YA": {
@@ -7855,8 +7615,8 @@
       "todo-ag": "y"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "I",
             "init"
@@ -7881,21 +7641,20 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Y",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "eac": "TYAD2"
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "I"
           ],
@@ -7919,11 +7678,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Y"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "1836 todo ya second initial form",
@@ -7931,9 +7689,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "I"
           ],
@@ -7957,11 +7715,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Y"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "1836 todo ya second medial form",
@@ -7969,55 +7726,47 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "I3"
           ],
           "locales": {
+            "hudum-ag": {
+              "written": [
+                "I4"
+              ],
+              "conditions": [
+                "default"
+              ]
+            },
             "todo": {
               "conditions": [
                 "default"
               ],
               "gb": "0044 todo ya final form",
               "eac": "TYAM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "I4"
-          ],
-          "locales": {
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
-        },
-        {
-          "written": [
-            "I",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "I",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO WA": {
     "alias": "w",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Wb",
             "init"
@@ -8037,9 +7786,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Wb"
           ],
@@ -8058,9 +7807,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Wb"
           ],
@@ -8079,20 +7828,19 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "todo": {
               "gb": "000C todo wa second medial form"
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Wb"
           ],
@@ -8103,41 +7851,36 @@
               ],
               "gb": "005B todo wa first final form",
               "eac": "TWAM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "U"
-          ],
-          "fvs": 1,
-          "locales": {
-            "todo": {
-              "gb": "000E todo wa second final form"
-            }
-          }
-        },
-        {
-          "written": [
-            "Wb",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Wb",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
+        },
+        "1": {
+          "written": [
+            "U"
+          ],
+          "locales": {
+            "todo": {
+              "gb": "000E todo wa second final form"
+            }
+          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO KA": {
     "alias": "kh",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Kp",
             "init"
@@ -8152,9 +7895,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Kp"
           ],
@@ -8168,9 +7911,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Kp"
           ],
@@ -8184,9 +7927,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Kp"
           ],
@@ -8200,14 +7943,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO GAA": {
     "alias": "gh",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Gp",
             "init"
@@ -8222,9 +7965,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Gp"
           ],
@@ -8238,9 +7981,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Gp"
           ],
@@ -8254,9 +7997,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Gp",
             "medi"
@@ -8271,7 +8014,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO HAA": {
@@ -8281,8 +8024,8 @@
       "todo-ag": "hh"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Hr",
@@ -8308,9 +8051,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "Hr"
@@ -8335,9 +8078,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "A",
             "Hr"
@@ -8361,23 +8104,23 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "Hr"
-          ],
-          "locales": {
-            "hudum-ag": {}
-          }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "A",
             "Hr"
           ],
           "locales": {
+            "hudum-ag": {
+              "written": [
+                "Hr"
+              ],
+              "conditions": [
+                "default"
+              ]
+            },
             "todo": {
               "conditions": [
                 "default"
@@ -8391,27 +8134,15 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "Hr"
-          ],
-          "locales": {
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO JIA": {
     "alias": "jy",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "B",
             "Yp",
@@ -8427,9 +8158,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "B",
             "Yp"
@@ -8444,9 +8175,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "B",
             "Yp"
@@ -8461,9 +8192,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "B",
             "Yp",
@@ -8479,7 +8210,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO NIA": {
@@ -8489,8 +8220,8 @@
       "todo-ag": "ny"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Ny",
             "init"
@@ -8515,9 +8246,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Ny"
           ],
@@ -8541,9 +8272,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Ny"
           ],
@@ -8567,14 +8298,22 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Ny",
             "medi"
           ],
           "locales": {
+            "hudum-ag": {
+              "written": [
+                "Ny"
+              ],
+              "conditions": [
+                "default"
+              ]
+            },
             "todo": {
               "conditions": [
                 "default"
@@ -8588,20 +8327,8 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "Ny"
-          ],
-          "locales": {
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO DZA": {
@@ -8610,8 +8337,8 @@
       "todo-ag": "jTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Zz",
             "init"
@@ -8623,25 +8350,21 @@
               ],
               "gb": "185C todo dza isolated form",
               "eac": "TADZAD1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Zc",
-            "init"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Zc",
+                "init"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Zz"
           ],
@@ -8652,24 +8375,20 @@
               ],
               "gb": "185C todo dza first initial form",
               "eac": "TADZAS1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Zc"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Zc"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Zz"
           ],
@@ -8680,24 +8399,20 @@
               ],
               "gb": "005E todo dza first medial form",
               "eac": "TADZAZ1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Zc"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Zc"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Zz"
           ],
@@ -8708,29 +8423,25 @@
               ],
               "gb": "005F todo dza first final form",
               "eac": "TADZAM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Zc"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Zc"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE E": {
     "alias": "e",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A"
           ],
@@ -8755,9 +8466,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A"
           ],
@@ -8782,13 +8493,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Ah"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -8810,11 +8520,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -8836,13 +8545,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "4": {
           "written": [
             "Ah"
           ],
-          "fvs": 4,
           "locales": {
             "manchu": {
               "conditions": [
@@ -8864,11 +8572,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -8890,11 +8597,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "At"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -8915,11 +8621,10 @@
             }
           }
         },
-        {
+        "3": {
           "written": [
             "Aa"
           ],
-          "fvs": 3,
           "locales": {
             "manchu": {
               "conditions": [
@@ -8940,19 +8645,18 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE I": {
     "alias": "i",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "2": {
           "written": [
             "A",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "sibe": {
               "conditions": [
@@ -8962,11 +8666,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "sibe": {
               "conditions": [
@@ -8975,9 +8678,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "I"
@@ -8991,13 +8694,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "I"
           ],
-          "fvs": 3,
           "locales": {
             "sibe": {
               "conditions": [
@@ -9007,12 +8709,11 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "A",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "sibe": {
               "conditions": [
@@ -9022,13 +8723,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "3": {
           "written": [
             "I"
           ],
-          "fvs": 3,
           "locales": {
             "sibe": {
               "conditions": [
@@ -9038,11 +8738,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I2"
           ],
-          "fvs": 1,
           "locales": {
             "sibe": {
               "conditions": [
@@ -9052,12 +8751,11 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "A",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "sibe": {
               "gb": "1834 sibe cha second final form",
@@ -9065,14 +8763,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE IY": {
     "alias": "ii",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Ai",
             "medi"
@@ -9097,9 +8795,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Ai",
             "medi"
@@ -9124,9 +8822,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Ai"
           ],
@@ -9152,9 +8850,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Ai"
           ],
@@ -9180,14 +8878,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE UE": {
     "alias": "u",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Oh"
@@ -9214,9 +8912,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "Oh"
@@ -9243,13 +8941,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Oh"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9272,11 +8969,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "O"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9299,13 +8995,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "4": {
           "written": [
             "Uh"
           ],
-          "fvs": 4,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9328,11 +9023,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "U"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9355,11 +9049,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Oh"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9385,11 +9078,10 @@
             }
           }
         },
-        {
+        "3": {
           "written": [
             "O"
           ],
-          "fvs": 3,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9415,14 +9107,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE U": {
     "alias": "ue",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Ue"
@@ -9448,9 +9140,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "O",
@@ -9477,9 +9169,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "O",
             "I"
@@ -9506,9 +9198,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Ue"
           ],
@@ -9534,14 +9226,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE ANG": {
     "alias": "ng",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "G",
@@ -9556,9 +9248,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "G",
@@ -9573,9 +9265,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "A",
             "G"
@@ -9590,9 +9282,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "A",
             "G3"
@@ -9607,14 +9299,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE KA": {
     "alias": "k",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "H",
             "init"
@@ -9628,37 +9320,34 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "G",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "sibe": {
               "eac": "SKAD2"
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Gx",
             "init"
           ],
-          "fvs": 2,
           "locales": {
             "sibe": {
               "eac": "SKAD3"
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "3": {
           "written": [
             "H"
           ],
-          "fvs": 3,
           "locales": {
             "sibe": {
               "conditions": [
@@ -9669,11 +9358,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "G"
           ],
-          "fvs": 1,
           "locales": {
             "sibe": {
               "conditions": [
@@ -9684,24 +9372,22 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Gx"
           ],
-          "fvs": 2,
           "locales": {
             "sibe": {
               "eac": "SKAS3"
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "H"
           ],
-          "fvs": 3,
           "locales": {
             "sibe": {
               "conditions": [
@@ -9712,11 +9398,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Nx"
           ],
-          "fvs": 1,
           "locales": {
             "sibe": {
               "conditions": [
@@ -9727,11 +9412,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G"
           ],
-          "fvs": 2,
           "locales": {
             "sibe": {
               "conditions": [
@@ -9741,20 +9425,19 @@
             }
           }
         },
-        {
+        "4": {
           "written": [
             "Gx"
           ],
-          "fvs": 4,
           "locales": {
             "sibe": {
               "eac": "SKAZ4"
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Nx"
           ],
@@ -9768,36 +9451,34 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "G4"
           ],
-          "fvs": 1,
           "locales": {
             "sibe": {
               "eac": "SKAM2"
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Gx"
           ],
-          "fvs": 2,
           "locales": {
             "sibe": {
               "eac": "SKAM3"
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE GA": {
     "alias": "g",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Hh",
             "init"
@@ -9822,12 +9503,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Gh",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "eac": "MGAD2"
@@ -9838,13 +9518,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Hh"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9870,11 +9549,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Gh"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9896,13 +9574,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Hh"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9928,11 +9605,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Gh"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -9954,9 +9630,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Hh",
             "medi"
@@ -9981,14 +9657,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE HA": {
     "alias": "h",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Hc",
             "init"
@@ -10013,12 +9689,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Gc",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "eac": "MHAD2"
@@ -10029,13 +9704,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Hc"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10061,11 +9735,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Gc"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10087,13 +9760,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Hc"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10119,11 +9791,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Gc"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10145,9 +9816,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Hc",
             "medi"
@@ -10172,14 +9843,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE PA": {
     "alias": "p",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Pb",
             "init"
@@ -10204,9 +9875,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Pb"
           ],
@@ -10232,9 +9903,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Pb"
           ],
@@ -10260,9 +9931,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Pb",
             "medi"
@@ -10287,14 +9958,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE SHA": {
     "alias": "sh",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Sp",
             "init"
@@ -10319,9 +9990,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Sp"
           ],
@@ -10347,9 +10018,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Sp"
           ],
@@ -10375,9 +10046,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Sp"
           ],
@@ -10402,14 +10073,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE TA": {
     "alias": "t",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Tb",
             "init"
@@ -10434,12 +10105,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "T",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "eac": "MTAD2"
@@ -10450,13 +10120,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Tb"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10482,11 +10151,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "T"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10509,13 +10177,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "Db"
           ],
-          "fvs": 3,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10541,11 +10208,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "D"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10568,11 +10234,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Dd"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10595,9 +10260,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Dd"
           ],
@@ -10623,14 +10288,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE DA": {
     "alias": "d",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Th",
             "init"
@@ -10655,12 +10320,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Tt",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "eac": "MDAD2"
@@ -10671,13 +10335,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Th"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10703,11 +10366,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Tt"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10730,13 +10392,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Dh"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10762,11 +10423,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Dt"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -10789,9 +10449,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Dh",
             "medi"
@@ -10816,14 +10476,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE JA": {
     "alias": "j",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "I",
             "init"
@@ -10837,9 +10497,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "I"
           ],
@@ -10853,9 +10513,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "J2"
           ],
@@ -10869,9 +10529,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "J2",
             "medi"
@@ -10885,14 +10545,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE FA": {
     "alias": "f",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "V",
             "init"
@@ -10906,9 +10566,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "V"
           ],
@@ -10922,9 +10582,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "V"
           ],
@@ -10938,9 +10598,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "V",
             "medi"
@@ -10954,14 +10614,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE GAA": {
     "alias": "gh",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Kh",
             "init"
@@ -10986,9 +10646,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Kh"
           ],
@@ -11014,9 +10674,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Kh"
           ],
@@ -11042,9 +10702,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Kh",
             "medi"
@@ -11069,14 +10729,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE HAA": {
     "alias": "hh",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Kc",
             "init"
@@ -11096,9 +10756,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Kc"
           ],
@@ -11119,9 +10779,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Kc"
           ],
@@ -11142,9 +10802,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Kc",
             "medi"
@@ -11164,14 +10824,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE TSA": {
     "alias": "c",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Cs",
             "init"
@@ -11196,9 +10856,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Cs"
           ],
@@ -11224,9 +10884,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Cs"
           ],
@@ -11252,9 +10912,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Cs",
             "medi"
@@ -11279,14 +10939,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE ZA": {
     "alias": "z",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Zs",
             "init"
@@ -11311,9 +10971,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Zs"
           ],
@@ -11339,9 +10999,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Zs"
           ],
@@ -11367,9 +11027,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Zs"
           ],
@@ -11393,14 +11053,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE RAA": {
     "alias": "rh",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Rr",
             "init"
@@ -11420,9 +11080,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Rr"
           ],
@@ -11443,9 +11103,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Rr"
           ],
@@ -11466,9 +11126,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Rr",
             "medi"
@@ -11488,14 +11148,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE CHA": {
     "alias": "cr",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Cc",
             "init"
@@ -11520,9 +11180,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Cc"
           ],
@@ -11548,9 +11208,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Cc"
           ],
@@ -11576,9 +11236,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Cc",
             "medi"
@@ -11590,6 +11250,14 @@
               ],
               "eac": "MCHAAM1"
             },
+            "manchu-ag": {
+              "written": [
+                "Cc"
+              ],
+              "conditions": [
+                "default"
+              ]
+            },
             "sibe": {
               "conditions": [
                 "default"
@@ -11597,27 +11265,15 @@
               "eac": "SCHAM1"
             }
           }
-        },
-        {
-          "written": [
-            "Cc"
-          ],
-          "locales": {
-            "manchu-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER SIBE ZHA": {
     "alias": "zr",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Ic",
             "init"
@@ -11631,9 +11287,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Ic"
           ],
@@ -11647,9 +11303,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Ic"
           ],
@@ -11663,9 +11319,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Ic",
             "medi"
@@ -11679,19 +11335,18 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU I": {
     "alias": "i",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "2": {
           "written": [
             "A",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -11707,11 +11362,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -11720,9 +11374,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "I"
@@ -11742,13 +11396,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "I"
           ],
-          "fvs": 3,
           "locales": {
             "manchu": {
               "conditions": [
@@ -11764,12 +11417,11 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "I",
             "I"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -11785,13 +11437,12 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "3": {
           "written": [
             "I"
           ],
-          "fvs": 3,
           "locales": {
             "manchu": {
               "conditions": [
@@ -11807,11 +11458,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "I2"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "gb": "0062 manchu i second final form",
@@ -11820,11 +11470,10 @@
             "manchu-ag": {}
           }
         },
-        {
+        "2": {
           "written": [
             "Iy"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -11840,12 +11489,11 @@
             }
           }
         },
-        {
+        "4": {
           "written": [
             "A",
             "I"
           ],
-          "fvs": 4,
           "locales": {
             "manchu": {
               "gb": "0303 manchu i fourth final form",
@@ -11854,14 +11502,14 @@
             "manchu-ag": {}
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU KA": {
     "alias": "k",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "H",
             "init"
@@ -11880,12 +11528,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "G",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "eac": "MKAD2"
@@ -11893,12 +11540,11 @@
             "manchu-ag": {}
           }
         },
-        {
+        "2": {
           "written": [
             "Gx",
             "init"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "eac": "MKAD3"
@@ -11906,13 +11552,12 @@
             "manchu-ag": {}
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "3": {
           "written": [
             "H"
           ],
-          "fvs": 3,
           "locales": {
             "manchu": {
               "conditions": [
@@ -11930,11 +11575,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "G"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -11950,11 +11594,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Gx"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "gb": "001B manchu ka third initial form",
@@ -11963,13 +11606,12 @@
             "manchu-ag": {}
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "3": {
           "written": [
             "H"
           ],
-          "fvs": 3,
           "locales": {
             "manchu": {
               "conditions": [
@@ -11987,11 +11629,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Hx"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -12007,11 +11648,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "G"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -12027,11 +11667,10 @@
             }
           }
         },
-        {
+        "4": {
           "written": [
             "Gx"
           ],
-          "fvs": 4,
           "locales": {
             "manchu": {
               "gb": "0079 manchu ka fourth medial form",
@@ -12040,13 +11679,12 @@
             "manchu-ag": {}
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "3": {
           "written": [
             "Hx"
           ],
-          "fvs": 3,
           "locales": {
             "manchu": {
               "conditions": [
@@ -12064,11 +11702,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "G4"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -12084,11 +11721,10 @@
             }
           }
         },
-        {
+        "2": {
           "written": [
             "Gx"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "gb": "007B manchu ka third final form",
@@ -12097,14 +11733,14 @@
             "manchu-ag": {}
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU RA": {
     "alias": "r",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "R",
             "init"
@@ -12122,19 +11758,10 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "R3",
-            "init"
-          ],
-          "locales": {
-            "manchu-ag": {}
-          }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "R"
           ],
@@ -12152,18 +11779,10 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "R3"
-          ],
-          "locales": {
-            "manchu-ag": {}
-          }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "R"
           ],
@@ -12181,18 +11800,10 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "R3"
-          ],
-          "locales": {
-            "manchu-ag": {}
-          }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "R2"
           ],
@@ -12211,14 +11822,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU FA": {
     "alias": "f",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "V",
             "init"
@@ -12232,12 +11843,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "W",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -12247,13 +11857,12 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "V"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -12264,11 +11873,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "W"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -12279,13 +11887,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "V"
           ],
-          "fvs": 2,
           "locales": {
             "manchu": {
               "conditions": [
@@ -12296,11 +11903,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "W"
           ],
-          "fvs": 1,
           "locales": {
             "manchu": {
               "conditions": [
@@ -12311,9 +11917,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "V",
             "medi"
@@ -12327,14 +11933,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ZHA": {
     "alias": "zr",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Ic",
             "init"
@@ -12353,9 +11959,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Ic"
           ],
@@ -12374,9 +11980,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Jc"
           ],
@@ -12395,9 +12001,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Jc",
             "medi"
@@ -12408,22 +12014,18 @@
                 "default"
               ],
               "eac": "MZHAM1"
-            }
-          }
-        },
-        {
-          "written": [
-            "Jc"
-          ],
-          "locales": {
+            },
             "manchu-ag": {
+              "written": [
+                "Jc"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI ANUSVARA ONE": {
@@ -12453,91 +12055,79 @@
       "manchu-ag": "aaMag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "Aw"
           ],
           "locales": {
+            "hudum-ag": {
+              "written": [
+                "A2",
+                "fina"
+              ],
+              "conditions": [
+                "default"
+              ]
+            },
             "manchu-ag": {
               "conditions": [
                 "default"
               ]
             }
           }
-        },
-        {
-          "written": [
-            "A2",
-            "fina"
-          ],
-          "locales": {
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "A"
           ],
           "locales": {
+            "hudum-ag": {
+              "written": [
+                "A2",
+                "fina"
+              ],
+              "conditions": [
+                "default"
+              ]
+            },
             "manchu-ag": {
               "conditions": [
                 "default"
               ]
             }
           }
-        },
-        {
-          "written": [
-            "A2",
-            "fina"
-          ],
-          "locales": {
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "A"
           ],
           "locales": {
+            "hudum-ag": {
+              "written": [
+                "A2",
+                "fina"
+              ],
+              "conditions": [
+                "default"
+              ]
+            },
             "manchu-ag": {
               "conditions": [
                 "default"
               ]
             }
           }
-        },
-        {
-          "written": [
-            "A2",
-            "fina"
-          ],
-          "locales": {
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Aw"
           ],
@@ -12549,11 +12139,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "A2"
           ],
-          "fvs": 1,
           "locales": {
             "hudum-ag": {
               "conditions": [
@@ -12563,14 +12152,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI I": {
     "alias": "iHag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "A",
             "I4"
@@ -12583,9 +12172,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "A",
             "I"
@@ -12598,9 +12187,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "I"
           ],
@@ -12612,9 +12201,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "I4"
           ],
@@ -12626,7 +12215,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI KA": {
@@ -12635,8 +12224,8 @@
       "todo-ag": "gTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "G",
             "init"
@@ -12654,9 +12243,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "G"
           ],
@@ -12673,9 +12262,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "G"
           ],
@@ -12692,9 +12281,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "G",
             "Vi"
@@ -12704,23 +12293,19 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "G",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "G",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI NGA": {
@@ -12729,8 +12314,8 @@
       "todo-ag": "ngTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "N",
             "G",
@@ -12749,9 +12334,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "N",
             "G"
@@ -12769,9 +12354,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "N",
             "G"
@@ -12789,9 +12374,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "N",
             "G4"
@@ -12801,31 +12386,27 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "N",
-            "G",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "N",
+                "G",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI CA": {
     "alias": "cHag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Zc",
             "init"
@@ -12838,9 +12419,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Zc"
           ],
@@ -12852,9 +12433,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Zc"
           ],
@@ -12866,9 +12447,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Zc"
           ],
@@ -12880,7 +12461,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI TTA": {
@@ -12889,8 +12470,8 @@
       "todo-ag": "trTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Zr",
             "init"
@@ -12908,9 +12489,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Zr"
           ],
@@ -12927,9 +12508,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Zr"
           ],
@@ -12946,9 +12527,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Zr"
           ],
@@ -12957,23 +12538,19 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "Zr",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Zr",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI TTHA": {
@@ -12982,8 +12559,8 @@
       "todo-ag": "trhTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Cr2",
             "init"
@@ -13001,9 +12578,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Cr2"
           ],
@@ -13020,9 +12597,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Cr2"
           ],
@@ -13039,9 +12616,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Cr2",
             "medi"
@@ -13059,7 +12636,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI DDA": {
@@ -13068,8 +12645,8 @@
       "todo-ag": "drTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Ds",
             "init"
@@ -13082,12 +12659,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ds2",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13096,9 +12672,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Ds"
           ],
@@ -13110,11 +12686,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ds2"
           ],
-          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13123,9 +12698,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Ds"
           ],
@@ -13137,11 +12712,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ds2"
           ],
-          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13150,9 +12724,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Ds"
           ],
@@ -13169,7 +12743,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI NNA": {
@@ -13179,8 +12753,8 @@
       "manchu-ag": "nrMag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Wn",
             "init"
@@ -13203,9 +12777,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Wn"
           ],
@@ -13227,9 +12801,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Wn"
           ],
@@ -13251,14 +12825,23 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Wn"
           ],
           "locales": {
             "hudum-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
+            "todo-ag": {
+              "written": [
+                "Wn",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
@@ -13269,21 +12852,8 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "Wn",
-            "medi"
-          ],
-          "locales": {
-            "todo-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI TA": {
@@ -13292,8 +12862,8 @@
       "todo-ag": "tTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Dv",
             "init"
@@ -13311,9 +12881,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Dv"
           ],
@@ -13330,9 +12900,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Dv"
           ],
@@ -13349,9 +12919,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Dv"
           ],
@@ -13368,14 +12938,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI DA": {
     "alias": "dHag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Dq",
             "init"
@@ -13388,9 +12958,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Dq"
           ],
@@ -13402,9 +12972,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Dq"
           ],
@@ -13416,9 +12986,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Dq"
           ],
@@ -13430,7 +13000,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI PA": {
@@ -13440,8 +13010,8 @@
       "manchu-ag": "pMag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Bg",
             "init"
@@ -13459,12 +13029,11 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Bh",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13473,9 +13042,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Bg"
           ],
@@ -13492,11 +13061,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Bh"
           ],
-          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13505,9 +13073,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Bg"
           ],
@@ -13524,11 +13092,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Bh"
           ],
-          "fvs": 1,
           "locales": {
             "todo-ag": {
               "conditions": [
@@ -13537,14 +13104,23 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Bg"
           ],
           "locales": {
             "hudum-ag": {
+              "conditions": [
+                "default"
+              ]
+            },
+            "todo-ag": {
+              "written": [
+                "Bh",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
@@ -13555,28 +13131,15 @@
               ]
             }
           }
-        },
-        {
-          "written": [
-            "Bh",
-            "medi"
-          ],
-          "locales": {
-            "todo-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI PHA": {
     "alias": "phHag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Pg",
             "init"
@@ -13589,9 +13152,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Pg"
           ],
@@ -13603,9 +13166,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Pg"
           ],
@@ -13617,9 +13180,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Pg"
           ],
@@ -13631,7 +13194,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI SSA": {
@@ -13640,8 +13203,8 @@
       "todo-ag": "shTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Sx",
             "init"
@@ -13659,9 +13222,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Sx"
           ],
@@ -13678,9 +13241,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Sx"
           ],
@@ -13697,9 +13260,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Sx"
           ],
@@ -13708,30 +13271,26 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "Sx",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Sx",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI ZHA": {
     "alias": "zrHag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Rh2",
             "init"
@@ -13744,9 +13303,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Rh2"
           ],
@@ -13758,9 +13317,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Rh2"
           ],
@@ -13772,9 +13331,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Rh2"
           ],
@@ -13786,7 +13345,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI ZA": {
@@ -13795,8 +13354,8 @@
       "todo-ag": "zTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Zz",
             "init"
@@ -13814,9 +13373,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Zz"
           ],
@@ -13833,9 +13392,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Zz"
           ],
@@ -13852,9 +13411,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Zz"
           ],
@@ -13863,23 +13422,19 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "Zz",
-            "medi"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Zz",
+                "medi"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI AH": {
@@ -13888,8 +13443,8 @@
       "todo-ag": "qTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Q",
             "init"
@@ -13907,9 +13462,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Q"
           ],
@@ -13926,9 +13481,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Q"
           ],
@@ -13945,9 +13500,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Q",
             "medi"
@@ -13965,14 +13520,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER TODO ALI GALI ZHA": {
     "alias": "zhTag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Rz",
             "init"
@@ -13985,9 +13540,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Rz"
           ],
@@ -13999,9 +13554,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Rz"
           ],
@@ -14013,9 +13568,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Rz",
             "medi"
@@ -14028,14 +13583,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI GHA": {
     "alias": "ghMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Hy",
             "init"
@@ -14048,9 +13603,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Hy"
           ],
@@ -14062,9 +13617,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Hy"
           ],
@@ -14076,18 +13631,17 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Hy2"
           ],
-          "fvs": 1,
           "locales": {
             "manchu-ag": {}
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Hy",
             "medi"
@@ -14100,14 +13654,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI NGA": {
     "alias": "ngMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Nb",
             "init"
@@ -14120,9 +13674,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Nb"
           ],
@@ -14134,9 +13688,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Nb"
           ],
@@ -14148,9 +13702,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Nb",
             "medi"
@@ -14163,14 +13717,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI CA": {
     "alias": "cMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Ct",
             "init"
@@ -14183,9 +13737,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Ct"
           ],
@@ -14197,9 +13751,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Ct"
           ],
@@ -14211,9 +13765,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Ct",
             "medi"
@@ -14226,14 +13780,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI JHA": {
     "alias": "jhMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Zt",
             "init"
@@ -14246,9 +13800,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Zt"
           ],
@@ -14260,9 +13814,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Zt"
           ],
@@ -14274,9 +13828,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Zt",
             "medi"
@@ -14289,14 +13843,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI TTA": {
     "alias": "trMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "It",
             "init"
@@ -14309,9 +13863,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "It"
           ],
@@ -14323,9 +13877,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Jt"
           ],
@@ -14337,9 +13891,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Jt"
           ],
@@ -14351,14 +13905,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI DDHA": {
     "alias": "drhMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Ih",
             "init"
@@ -14371,9 +13925,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Ih"
           ],
@@ -14385,9 +13939,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Jh"
           ],
@@ -14399,9 +13953,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Jh"
           ],
@@ -14413,14 +13967,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI TA": {
     "alias": "tMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Dr",
             "init"
@@ -14433,23 +13987,21 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Dy",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "manchu-ag": {}
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Dr"
           ],
-          "fvs": 2,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14459,11 +14011,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Dy"
           ],
-          "fvs": 1,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14472,13 +14023,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Dr"
           ],
-          "fvs": 2,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14488,11 +14038,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Dy"
           ],
-          "fvs": 1,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14501,9 +14050,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Dr"
           ],
@@ -14515,14 +14064,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI DHA": {
     "alias": "dhMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Tx",
             "init"
@@ -14535,23 +14084,21 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ts",
             "init"
           ],
-          "fvs": 1,
           "locales": {
             "manchu-ag": {}
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "2": {
           "written": [
             "Tx"
           ],
-          "fvs": 2,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14561,11 +14108,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ts"
           ],
-          "fvs": 1,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14574,13 +14120,12 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "2": {
           "written": [
             "Dx"
           ],
-          "fvs": 2,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14590,11 +14135,10 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ds"
           ],
-          "fvs": 1,
           "locales": {
             "manchu-ag": {
               "conditions": [
@@ -14603,9 +14147,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Dx",
             "medi"
@@ -14618,14 +14162,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI SSA": {
     "alias": "shMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Sx",
             "init"
@@ -14638,9 +14182,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Sx"
           ],
@@ -14652,9 +14196,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Sx"
           ],
@@ -14666,9 +14210,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Sx"
           ],
@@ -14680,14 +14224,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI CYA": {
     "alias": "crMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Iq",
             "init"
@@ -14700,9 +14244,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Iq"
           ],
@@ -14714,9 +14258,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Jq"
           ],
@@ -14728,9 +14272,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Jq"
           ],
@@ -14742,14 +14286,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI ZHA": {
     "alias": "zhMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "St",
             "init"
@@ -14762,9 +14306,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "St"
           ],
@@ -14776,9 +14320,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "St"
           ],
@@ -14790,9 +14334,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "St"
           ],
@@ -14804,14 +14348,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI ZA": {
     "alias": "zMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Sc",
             "init"
@@ -14824,9 +14368,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Sc"
           ],
@@ -14838,9 +14382,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Sc"
           ],
@@ -14852,9 +14396,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Sc"
           ],
@@ -14866,7 +14410,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI HALF U": {
@@ -14875,8 +14419,8 @@
       "todo-ag": "waTag"
     },
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Wp",
             "medi"
@@ -14886,25 +14430,21 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "Wp",
-            "fina"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Wp",
+                "fina"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Wp",
             "medi"
@@ -14914,25 +14454,21 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "Wp",
-            "fina"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Wp",
+                "fina"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Wp"
           ],
@@ -14941,57 +14477,49 @@
               "conditions": [
                 "default"
               ]
-            }
-          }
-        },
-        {
-          "written": [
-            "Wp",
-            "fina"
-          ],
-          "locales": {
+            },
             "todo-ag": {
+              "written": [
+                "Wp",
+                "fina"
+              ],
               "conditions": [
                 "default"
               ]
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Wp"
           ],
           "locales": {
+            "hudum-ag": {
+              "written": [
+                "Wp",
+                "medi"
+              ],
+              "conditions": [
+                "default"
+              ]
+            },
             "todo-ag": {
               "conditions": [
                 "default"
               ]
             }
           }
-        },
-        {
-          "written": [
-            "Wp",
-            "medi"
-          ],
-          "locales": {
-            "hudum-ag": {
-              "conditions": [
-                "default"
-              ]
-            }
-          }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER ALI GALI HALF YA": {
     "alias": "yTag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Yp",
             "medi"
@@ -15004,9 +14532,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Yp",
             "medi"
@@ -15019,9 +14547,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Yp"
           ],
@@ -15033,9 +14561,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Yp"
           ],
@@ -15047,23 +14575,22 @@
             }
           }
         },
-        {
+        "1": {
           "written": [
             "Ir"
           ],
-          "fvs": 1,
           "locales": {
             "todo-ag": {}
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI BHA": {
     "alias": "bhMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Bc",
             "init"
@@ -15076,9 +14603,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Bc"
           ],
@@ -15090,9 +14617,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Bc"
           ],
@@ -15104,9 +14631,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Bc",
             "medi"
@@ -15119,14 +14646,14 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "MONGOLIAN LETTER MANCHU ALI GALI LHA": {
     "alias": "lhMag",
     "variants": {
-      "isol": [
-        {
+      "isol": {
+        "0": {
           "written": [
             "Lc",
             "init"
@@ -15139,9 +14666,9 @@
             }
           }
         }
-      ],
-      "init": [
-        {
+      },
+      "init": {
+        "0": {
           "written": [
             "Lc"
           ],
@@ -15153,9 +14680,9 @@
             }
           }
         }
-      ],
-      "medi": [
-        {
+      },
+      "medi": {
+        "0": {
           "written": [
             "Lc"
           ],
@@ -15167,9 +14694,9 @@
             }
           }
         }
-      ],
-      "fina": [
-        {
+      },
+      "fina": {
+        "0": {
           "written": [
             "Lc",
             "medi"
@@ -15182,7 +14709,7 @@
             }
           }
         }
-      ]
+      }
     }
   },
   "ZERO WIDTH NON-JOINER": {
