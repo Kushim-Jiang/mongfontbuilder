@@ -192,6 +192,7 @@
       - written_units: [.G]
         conditions: [.feminine]
       - written_units: [.Hp]
+        localizing: 2
     medi:
       - written_units: [.Hb]
         conditions: [.default, .masculine_onset]
