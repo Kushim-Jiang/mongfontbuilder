@@ -5,9 +5,6 @@
   "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER": {
     "alias": "sbm",
     "variants": {
-      "representative": [
-        "medi"
-      ],
       "isol": [
         {
           "written": [
@@ -146,10 +143,6 @@
   "MONGOLIAN LETTER A": {
     "alias": "a",
     "variants": {
-      "representative": [
-        "isol",
-        3
-      ],
       "isol": [
         {
           "written": [
@@ -491,10 +484,6 @@
   "MONGOLIAN LETTER E": {
     "alias": "e",
     "variants": {
-      "representative": [
-        "isol",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -610,10 +599,6 @@
   "MONGOLIAN LETTER I": {
     "alias": "i",
     "variants": {
-      "representative": [
-        "isol",
-        3
-      ],
       "isol": [
         {
           "written": [
@@ -759,9 +744,6 @@
   "MONGOLIAN LETTER O": {
     "alias": "o",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -986,10 +968,6 @@
   "MONGOLIAN LETTER U": {
     "alias": "u",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -1136,9 +1114,6 @@
   "MONGOLIAN LETTER OE": {
     "alias": "oe",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -1286,10 +1261,6 @@
   "MONGOLIAN LETTER UE": {
     "alias": "ue",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -1513,9 +1484,6 @@
   "MONGOLIAN LETTER EE": {
     "alias": "ee",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -1607,9 +1575,6 @@
   "MONGOLIAN LETTER NA": {
     "alias": "n",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -1952,9 +1917,6 @@
   "MONGOLIAN LETTER ANG": {
     "alias": "ng",
     "variants": {
-      "representative": [
-        "medi"
-      ],
       "isol": [
         {
           "written": [
@@ -2096,9 +2058,6 @@
   "MONGOLIAN LETTER BA": {
     "alias": "b",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -2276,9 +2235,6 @@
   "MONGOLIAN LETTER PA": {
     "alias": "p",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -2349,10 +2305,6 @@
   "MONGOLIAN LETTER QA": {
     "alias": "h",
     "variants": {
-      "representative": [
-        "init",
-        3
-      ],
       "isol": [
         {
           "written": [
@@ -2551,10 +2503,6 @@
   "MONGOLIAN LETTER GA": {
     "alias": "g",
     "variants": {
-      "representative": [
-        "init",
-        3
-      ],
       "isol": [
         {
           "written": [
@@ -2784,9 +2732,6 @@
   "MONGOLIAN LETTER MA": {
     "alias": "m",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -2931,9 +2876,6 @@
   "MONGOLIAN LETTER LA": {
     "alias": "l",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -3162,9 +3104,6 @@
   "MONGOLIAN LETTER SA": {
     "alias": "s",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -3401,10 +3340,6 @@
   "MONGOLIAN LETTER SHA": {
     "alias": "sh",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -3588,9 +3523,6 @@
   "MONGOLIAN LETTER TA": {
     "alias": "t",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -3677,10 +3609,6 @@
   "MONGOLIAN LETTER DA": {
     "alias": "d",
     "variants": {
-      "representative": [
-        "init",
-        1
-      ],
       "isol": [
         {
           "written": [
@@ -3819,9 +3747,6 @@
       "sibe": "ch"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -4040,9 +3965,6 @@
   "MONGOLIAN LETTER JA": {
     "alias": "j",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -4197,10 +4119,6 @@
   "MONGOLIAN LETTER YA": {
     "alias": "y",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -4407,9 +4325,6 @@
   "MONGOLIAN LETTER RA": {
     "alias": "r",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -4579,9 +4494,6 @@
       "sibe": "w"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -4797,9 +4709,6 @@
   "MONGOLIAN LETTER FA": {
     "alias": "f",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -4877,9 +4786,6 @@
       "sibe": "kh"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -5081,9 +4987,6 @@
       "todo-ag": "khTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -5206,9 +5109,6 @@
       "todo-ag": "chTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -5327,9 +5227,6 @@
   "MONGOLIAN LETTER ZA": {
     "alias": "z",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -5424,9 +5321,6 @@
       "todo-ag": "hTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -5539,9 +5433,6 @@
   "MONGOLIAN LETTER ZRA": {
     "alias": "rh",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -5612,9 +5503,6 @@
   "MONGOLIAN LETTER LHA": {
     "alias": "lh",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -5758,9 +5646,6 @@
   "MONGOLIAN LETTER ZHI": {
     "alias": "zr",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -5833,9 +5718,6 @@
   "MONGOLIAN LETTER CHI": {
     "alias": "cr",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -5908,9 +5790,6 @@
   "MONGOLIAN LETTER TODO LONG VOWEL SIGN": {
     "alias": "lvs",
     "variants": {
-      "representative": [
-        "medi"
-      ],
       "isol": [
         {
           "written": [
@@ -6000,9 +5879,6 @@
   "MONGOLIAN LETTER TODO E": {
     "alias": "e",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -6108,9 +5984,6 @@
   "MONGOLIAN LETTER TODO I": {
     "alias": "i",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -6264,9 +6137,6 @@
   "MONGOLIAN LETTER TODO O": {
     "alias": "o",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -6372,9 +6242,6 @@
   "MONGOLIAN LETTER TODO U": {
     "alias": "u",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -6518,9 +6385,6 @@
   "MONGOLIAN LETTER TODO OE": {
     "alias": "oe",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -6627,9 +6491,6 @@
   "MONGOLIAN LETTER TODO UE": {
     "alias": "ue",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -6769,9 +6630,6 @@
   "MONGOLIAN LETTER TODO ANG": {
     "alias": "ng",
     "variants": {
-      "representative": [
-        "fina"
-      ],
       "isol": [
         {
           "written": [
@@ -6867,9 +6725,6 @@
   "MONGOLIAN LETTER TODO BA": {
     "alias": "b",
     "variants": {
-      "representative": [
-        "fina"
-      ],
       "isol": [
         {
           "written": [
@@ -6960,9 +6815,6 @@
   "MONGOLIAN LETTER TODO PA": {
     "alias": "p",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -7083,10 +6935,6 @@
   "MONGOLIAN LETTER TODO QA": {
     "alias": "h",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -7203,10 +7051,6 @@
   "MONGOLIAN LETTER TODO GA": {
     "alias": "g",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -7387,9 +7231,6 @@
       "todo-ag": "m"
     },
     "variants": {
-      "representative": [
-        "fina"
-      ],
       "isol": [
         {
           "written": [
@@ -7504,9 +7345,6 @@
       "todo-ag": "t"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -7625,9 +7463,6 @@
   "MONGOLIAN LETTER TODO DA": {
     "alias": "d",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -7726,9 +7561,6 @@
   "MONGOLIAN LETTER TODO CHA": {
     "alias": "ch",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -7799,9 +7631,6 @@
   "MONGOLIAN LETTER TODO JA": {
     "alias": "j",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -7904,9 +7733,6 @@
       "todo-ag": "c"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -8029,9 +7855,6 @@
       "todo-ag": "y"
     },
     "variants": {
-      "representative": [
-        "medi"
-      ],
       "isol": [
         {
           "written": [
@@ -8193,9 +8016,6 @@
   "MONGOLIAN LETTER TODO WA": {
     "alias": "w",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -8316,9 +8136,6 @@
   "MONGOLIAN LETTER TODO KA": {
     "alias": "kh",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -8389,9 +8206,6 @@
   "MONGOLIAN LETTER TODO GAA": {
     "alias": "gh",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -8467,9 +8281,6 @@
       "todo-ag": "hh"
     },
     "variants": {
-      "representative": [
-        "fina"
-      ],
       "isol": [
         {
           "written": [
@@ -8599,9 +8410,6 @@
   "MONGOLIAN LETTER TODO JIA": {
     "alias": "jy",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -8681,9 +8489,6 @@
       "todo-ag": "ny"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -8805,9 +8610,6 @@
       "todo-ag": "jTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -8927,10 +8729,6 @@
   "MONGOLIAN LETTER SIBE E": {
     "alias": "e",
     "variants": {
-      "representative": [
-        "fina",
-        4
-      ],
       "isol": [
         {
           "written": [
@@ -9148,10 +8946,6 @@
   "MONGOLIAN LETTER SIBE I": {
     "alias": "i",
     "variants": {
-      "representative": [
-        "medi",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -9277,9 +9071,6 @@
   "MONGOLIAN LETTER SIBE IY": {
     "alias": "ii",
     "variants": {
-      "representative": [
-        "medi"
-      ],
       "isol": [
         {
           "written": [
@@ -9395,9 +9186,6 @@
   "MONGOLIAN LETTER SIBE UE": {
     "alias": "u",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -9633,9 +9421,6 @@
   "MONGOLIAN LETTER SIBE U": {
     "alias": "ue",
     "variants": {
-      "representative": [
-        "medi"
-      ],
       "isol": [
         {
           "written": [
@@ -9755,9 +9540,6 @@
   "MONGOLIAN LETTER SIBE ANG": {
     "alias": "ng",
     "variants": {
-      "representative": [
-        "fina"
-      ],
       "isol": [
         {
           "written": [
@@ -9831,9 +9613,6 @@
   "MONGOLIAN LETTER SIBE KA": {
     "alias": "k",
     "variants": {
-      "representative": [
-        "fina"
-      ],
       "isol": [
         {
           "written": [
@@ -10017,10 +9796,6 @@
   "MONGOLIAN LETTER SIBE GA": {
     "alias": "g",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -10212,10 +9987,6 @@
   "MONGOLIAN LETTER SIBE HA": {
     "alias": "h",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -10407,9 +10178,6 @@
   "MONGOLIAN LETTER SIBE PA": {
     "alias": "p",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -10525,9 +10293,6 @@
   "MONGOLIAN LETTER SIBE SHA": {
     "alias": "sh",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -10643,10 +10408,6 @@
   "MONGOLIAN LETTER SIBE TA": {
     "alias": "t",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -10868,10 +10629,6 @@
   "MONGOLIAN LETTER SIBE DA": {
     "alias": "d",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -11065,9 +10822,6 @@
   "MONGOLIAN LETTER SIBE JA": {
     "alias": "j",
     "variants": {
-      "representative": [
-        "medi"
-      ],
       "isol": [
         {
           "written": [
@@ -11137,9 +10891,6 @@
   "MONGOLIAN LETTER SIBE FA": {
     "alias": "f",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -11209,9 +10960,6 @@
   "MONGOLIAN LETTER SIBE GAA": {
     "alias": "gh",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -11327,9 +11075,6 @@
   "MONGOLIAN LETTER SIBE HAA": {
     "alias": "hh",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -11425,9 +11170,6 @@
   "MONGOLIAN LETTER SIBE TSA": {
     "alias": "c",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -11543,9 +11285,6 @@
   "MONGOLIAN LETTER SIBE ZA": {
     "alias": "z",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -11660,9 +11399,6 @@
   "MONGOLIAN LETTER SIBE RAA": {
     "alias": "rh",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -11758,9 +11494,6 @@
   "MONGOLIAN LETTER SIBE CHA": {
     "alias": "cr",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -11883,9 +11616,6 @@
   "MONGOLIAN LETTER SIBE ZHA": {
     "alias": "zr",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -11955,10 +11685,6 @@
   "MONGOLIAN LETTER MANCHU I": {
     "alias": "i",
     "variants": {
-      "representative": [
-        "medi",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -12134,10 +11860,6 @@
   "MONGOLIAN LETTER MANCHU KA": {
     "alias": "k",
     "variants": {
-      "representative": [
-        "fina",
-        3
-      ],
       "isol": [
         {
           "written": [
@@ -12381,9 +12103,6 @@
   "MONGOLIAN LETTER MANCHU RA": {
     "alias": "r",
     "variants": {
-      "representative": [
-        "fina"
-      ],
       "isol": [
         {
           "written": [
@@ -12498,10 +12217,6 @@
   "MONGOLIAN LETTER MANCHU FA": {
     "alias": "f",
     "variants": {
-      "representative": [
-        "medi",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -12618,9 +12333,6 @@
   "MONGOLIAN LETTER MANCHU ZHA": {
     "alias": "zr",
     "variants": {
-      "representative": [
-        "fina"
-      ],
       "isol": [
         {
           "written": [
@@ -12741,9 +12453,6 @@
       "manchu-ag": "aaMag"
     },
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -12860,9 +12569,6 @@
   "MONGOLIAN LETTER ALI GALI I": {
     "alias": "iHag",
     "variants": {
-      "representative": [
-        "isol"
-      ],
       "isol": [
         {
           "written": [
@@ -12929,9 +12635,6 @@
       "todo-ag": "gTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13026,9 +12729,6 @@
       "todo-ag": "ngTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13124,9 +12824,6 @@
   "MONGOLIAN LETTER ALI GALI CA": {
     "alias": "cHag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13192,9 +12889,6 @@
       "todo-ag": "trTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13288,9 +12982,6 @@
       "todo-ag": "trhTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13377,9 +13068,6 @@
       "todo-ag": "drTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13491,9 +13179,6 @@
       "manchu-ag": "nrMag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13607,9 +13292,6 @@
       "todo-ag": "tTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13692,9 +13374,6 @@
   "MONGOLIAN LETTER ALI GALI DA": {
     "alias": "dHag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13761,9 +13440,6 @@
       "manchu-ag": "pMag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13899,9 +13575,6 @@
   "MONGOLIAN LETTER ALI GALI PHA": {
     "alias": "phHag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -13967,9 +13640,6 @@
       "todo-ag": "shTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14060,9 +13730,6 @@
   "MONGOLIAN LETTER ALI GALI ZHA": {
     "alias": "zrHag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14128,9 +13795,6 @@
       "todo-ag": "zTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14224,9 +13888,6 @@
       "todo-ag": "qTag"
     },
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14310,9 +13971,6 @@
   "MONGOLIAN LETTER TODO ALI GALI ZHA": {
     "alias": "zhTag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14376,9 +14034,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI GHA": {
     "alias": "ghMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14451,9 +14106,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI NGA": {
     "alias": "ngMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14517,9 +14169,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI CA": {
     "alias": "cMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14583,9 +14232,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI JHA": {
     "alias": "jhMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14649,9 +14295,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI TTA": {
     "alias": "trMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14714,9 +14357,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI DDHA": {
     "alias": "drhMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -14779,10 +14419,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI TA": {
     "alias": "tMag",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -14885,10 +14521,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI DHA": {
     "alias": "dhMag",
     "variants": {
-      "representative": [
-        "init",
-        2
-      ],
       "isol": [
         {
           "written": [
@@ -14992,9 +14624,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI SSA": {
     "alias": "shMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -15057,9 +14686,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI CYA": {
     "alias": "crMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -15122,9 +14748,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI ZHA": {
     "alias": "zhMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -15187,9 +14810,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI ZA": {
     "alias": "zMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -15255,9 +14875,6 @@
       "todo-ag": "waTag"
     },
     "variants": {
-      "representative": [
-        "medi"
-      ],
       "isol": [
         {
           "written": [
@@ -15373,9 +14990,6 @@
   "MONGOLIAN LETTER ALI GALI HALF YA": {
     "alias": "yTag",
     "variants": {
-      "representative": [
-        "medi"
-      ],
       "isol": [
         {
           "written": [
@@ -15448,9 +15062,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI BHA": {
     "alias": "bhMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [
@@ -15514,9 +15125,6 @@
   "MONGOLIAN LETTER MANCHU ALI GALI LHA": {
     "alias": "lhMag",
     "variants": {
-      "representative": [
-        "init"
-      ],
       "isol": [
         {
           "written": [

@@ -22,7 +22,6 @@ for cp, value in data.items():
 
     if variants:
         newVariants = {}
-        newVariants["representative"] = None
         for position in joiningPositions:
             for variant in variants.pop(position):
                 newVariant = {}
@@ -34,15 +33,7 @@ for cp, value in data.items():
                     pass
                 else:
                     newVariant["fvs"] = fvs
-                try:
-                    nominal = variant.pop("nominal")
-                except KeyError:
-                    pass
-                else:
-                    assert nominal is None
-                    newVariants["representative"] = [position]
-                    if fvs:
-                        newVariants["representative"].append(fvs)
+                _ = variant.pop("nominal", None)
                 _ = variant.pop("fabricated", None)
                 assert not variant, variant
                 newVariants.setdefault(position, []).append(newVariant)
@@ -74,7 +65,7 @@ for locale, gbNumber in {
         newValue["alias"][locale] = id
 
         if variants:
-            newVariants = newValue.setdefault("variants", {"representative": None})
+            newVariants = newValue.setdefault("variants", {})
             for position in joiningPositions:
                 for variant in variants.pop(position):
                     written = variant.pop("written_units")
@@ -108,7 +99,6 @@ for cp, value in sorted(newData.items()):
         alias, *_ = alias.values()
     value["alias"] = alias
     if variants := value.get("variants"):
-        assert variants["representative"]
         for position in joiningPositions:
             for variant in variants[position]:
                 written = [i.removeprefix(".") for i in variant["written"]]
