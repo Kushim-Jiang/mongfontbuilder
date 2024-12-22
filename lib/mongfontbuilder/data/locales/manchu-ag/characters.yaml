@@ -549,7 +549,7 @@
     fina:
       - written_units: [.A]
         conditions: [.default]
-      - written_units: [.N2]
+      - written_units: [.N]
 
 0x1892: # ᢒ MONGOLIAN LETTER ALI GALI PA
   id: .pMag
