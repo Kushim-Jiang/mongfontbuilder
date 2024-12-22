@@ -18,14 +18,12 @@
             "manchu": {
               "conditions": [
                 "default"
-              ],
-              "fabricated": true
+              ]
             },
             "sibe": {
               "conditions": [
                 "default"
-              ],
-              "fabricated": true
+              ]
             }
           }
         },
@@ -53,14 +51,12 @@
             "manchu": {
               "conditions": [
                 "default"
-              ],
-              "fabricated": true
+              ]
             },
             "sibe": {
               "conditions": [
                 "default"
-              ],
-              "fabricated": true
+              ]
             }
           }
         },
@@ -112,8 +108,7 @@
             "manchu": {
               "conditions": [
                 "default"
-              ],
-              "fabricated": true
+              ]
             },
             "manchu-ag": {
               "conditions": [
@@ -123,8 +118,7 @@
             "sibe": {
               "conditions": [
                 "default"
-              ],
-              "fabricated": true
+              ]
             }
           }
         }
@@ -1628,8 +1622,7 @@
                 "default"
               ],
               "gb": "00C2 na first isolated form",
-              "eac": "MND1",
-              "fabricated": true
+              "eac": "MND1"
             },
             "hudum-ag": {
               "conditions": [
@@ -1641,8 +1634,7 @@
                 "default"
               ],
               "gb": "1828 na isolated form",
-              "eac": "TNAD1",
-              "fabricated": true
+              "eac": "TNAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -1653,8 +1645,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MNAD1",
-              "fabricated": true
+              "eac": "MNAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -1665,8 +1656,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SNAD1",
-              "fabricated": true
+              "eac": "SNAD1"
             }
           }
         },
@@ -1679,8 +1669,7 @@
           "locales": {
             "hudum": {
               "gb": "0007 na second isolated form",
-              "eac": "MND2",
-              "fabricated": true
+              "eac": "MND2"
             }
           }
         }
@@ -1979,8 +1968,7 @@
                 "default"
               ],
               "gb": "00C3 ang isolated form",
-              "eac": "XND1",
-              "fabricated": true
+              "eac": "XND1"
             },
             "hudum-ag": {
               "conditions": [
@@ -1991,8 +1979,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MANGD1",
-              "fabricated": true
+              "eac": "MANGD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -2015,8 +2002,7 @@
                 "default"
               ],
               "gb": "00C3 ang initial form",
-              "eac": "XNS1",
-              "fabricated": true
+              "eac": "XNS1"
             },
             "hudum-ag": {
               "conditions": [
@@ -2027,8 +2013,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MANGS1",
-              "fabricated": true
+              "eac": "MANGS1"
             },
             "manchu-ag": {
               "conditions": [
@@ -2126,8 +2111,7 @@
                 "default"
               ],
               "gb": "00C4 ba isolated form",
-              "eac": "MBD1",
-              "fabricated": true
+              "eac": "MBD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -2138,8 +2122,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MBAD1",
-              "fabricated": true
+              "eac": "MBAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -2150,8 +2133,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SBAD1",
-              "fabricated": true
+              "eac": "SBAD1"
             }
           }
         }
@@ -2309,8 +2291,7 @@
                 "default"
               ],
               "gb": "00C6 pa isolated form",
-              "eac": "MPD1",
-              "fabricated": true
+              "eac": "MPD1"
             }
           }
         }
@@ -2384,8 +2365,7 @@
                 "default"
               ],
               "gb": "00C7 qa first isolated form",
-              "eac": "MHD1",
-              "fabricated": true
+              "eac": "MHD1"
             }
           }
         },
@@ -2398,8 +2378,7 @@
           "locales": {
             "hudum": {
               "gb": "00C8 qa second isolated form",
-              "eac": "MHD2",
-              "fabricated": true
+              "eac": "MHD2"
             }
           }
         },
@@ -2412,8 +2391,7 @@
           "locales": {
             "hudum": {
               "gb": "001E qa third isolated form",
-              "eac": "MHD3",
-              "fabricated": true
+              "eac": "MHD3"
             }
           }
         },
@@ -2426,8 +2404,7 @@
           "locales": {
             "hudum": {
               "gb": "001B qa fourth isolated form",
-              "eac": "MHD4",
-              "fabricated": true
+              "eac": "MHD4"
             }
           }
         }
@@ -2590,8 +2567,7 @@
                 "default"
               ],
               "gb": "00C8 ga first isolated form",
-              "eac": "MGD1",
-              "fabricated": true
+              "eac": "MGD1"
             }
           }
         },
@@ -2604,8 +2580,7 @@
           "locales": {
             "hudum": {
               "gb": "00C7 ga second isolated form",
-              "eac": "MGD2",
-              "fabricated": true
+              "eac": "MGD2"
             }
           }
         },
@@ -2618,8 +2593,7 @@
           "locales": {
             "hudum": {
               "gb": "001E ga third isolated form",
-              "eac": "MGD3",
-              "fabricated": true
+              "eac": "MGD3"
             }
           }
         },
@@ -2632,8 +2606,7 @@
           "locales": {
             "hudum": {
               "gb": "001B ga fourth isolated form",
-              "eac": "MGD4",
-              "fabricated": true
+              "eac": "MGD4"
             }
           }
         }
@@ -2826,15 +2799,13 @@
                 "default"
               ],
               "gb": "00C9 ma isolated form",
-              "eac": "MMD1",
-              "fabricated": true
+              "eac": "MMD1"
             },
             "manchu": {
               "conditions": [
                 "default"
               ],
-              "eac": "MMAD1",
-              "fabricated": true
+              "eac": "MMAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -2845,8 +2816,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SMAD1",
-              "fabricated": true
+              "eac": "SMAD1"
             }
           }
         }
@@ -2976,8 +2946,7 @@
                 "default"
               ],
               "gb": "00CA la isolated form",
-              "eac": "MLD1",
-              "fabricated": true
+              "eac": "MLD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -2989,8 +2958,7 @@
                 "default"
               ],
               "gb": "182F la isolated form",
-              "eac": "TLAD1",
-              "fabricated": true
+              "eac": "TLAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -3001,8 +2969,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MLAD1",
-              "fabricated": true
+              "eac": "MLAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -3013,8 +2980,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SLAD1",
-              "fabricated": true
+              "eac": "SLAD1"
             }
           }
         },
@@ -3211,8 +3177,7 @@
                 "default"
               ],
               "gb": "00CB sa isolated form",
-              "eac": "MSD1",
-              "fabricated": true
+              "eac": "MSD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -3224,8 +3189,7 @@
                 "default"
               ],
               "gb": "1830 sa isolated form",
-              "eac": "TSAD1",
-              "fabricated": true
+              "eac": "TSAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -3236,8 +3200,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MSAD1",
-              "fabricated": true
+              "eac": "MSAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -3454,8 +3417,7 @@
                 "default"
               ],
               "gb": "00CC sha first isolated form",
-              "eac": "MXD1",
-              "fabricated": true
+              "eac": "MXD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -3467,8 +3429,7 @@
                 "default"
               ],
               "gb": "1831 sha isolated form",
-              "eac": "TSHAD1",
-              "fabricated": true
+              "eac": "TSHAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -3486,8 +3447,7 @@
           "locales": {
             "hudum": {
               "gb": "00CB sha second isolated form",
-              "eac": "MXD2",
-              "fabricated": true
+              "eac": "MXD2"
             }
           }
         }
@@ -3613,8 +3573,7 @@
                 "default"
               ],
               "gb": "0029 sha final form",
-              "eac": "TSHAM1",
-              "fabricated": true
+              "eac": "TSHAM1"
             },
             "todo-ag": {
               "conditions": [
@@ -3644,8 +3603,7 @@
                 "default"
               ],
               "gb": "00CD ta isolated form",
-              "eac": "MTD1",
-              "fabricated": true
+              "eac": "MTD1"
             }
           }
         }
@@ -3735,8 +3693,7 @@
                 "default"
               ],
               "gb": "00CE da first isolated form",
-              "eac": "MDD1",
-              "fabricated": true
+              "eac": "MDD1"
             }
           }
         },
@@ -3749,8 +3706,7 @@
           "locales": {
             "hudum": {
               "gb": "00CD da second isolated form",
-              "eac": "MDD2",
-              "fabricated": true
+              "eac": "MDD2"
             }
           }
         }
@@ -3878,8 +3834,7 @@
                 "default"
               ],
               "gb": "002F cha isolated form",
-              "eac": "MQD1",
-              "fabricated": true
+              "eac": "MQD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -3891,8 +3846,7 @@
                 "default"
               ],
               "gb": "1834 dza isolated form",
-              "eac": "TZAD1",
-              "fabricated": true
+              "eac": "TZAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -3903,8 +3857,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MCHAD1",
-              "fabricated": true
+              "eac": "MCHAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -3915,8 +3868,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SCHAD1",
-              "fabricated": true
+              "eac": "SCHAD1"
             }
           }
         }
@@ -4048,8 +4000,7 @@
                 "default"
               ],
               "gb": "0030 dza final form",
-              "eac": "TZAM1",
-              "fabricated": true
+              "eac": "TZAM1"
             },
             "manchu-ag": {
               "conditions": [
@@ -4073,15 +4024,13 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MCHAM1",
-              "fabricated": true
+              "eac": "MCHAM1"
             },
             "sibe": {
               "conditions": [
                 "default"
               ],
-              "eac": "SCHAM1",
-              "fabricated": true
+              "eac": "SCHAM1"
             }
           }
         }
@@ -4106,15 +4055,13 @@
                 "default"
               ],
               "gb": "00B7 ja first isolated form",
-              "eac": "MJD1",
-              "fabricated": true
+              "eac": "MJD1"
             },
             "manchu": {
               "conditions": [
                 "default"
               ],
-              "eac": "MJAD1",
-              "fabricated": true
+              "eac": "MJAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -4240,8 +4187,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MJAM1",
-              "fabricated": true
+              "eac": "MJAM1"
             }
           }
         }
@@ -4267,15 +4213,13 @@
                 "default"
               ],
               "gb": "00CF ya first isolated form",
-              "eac": "MYD1",
-              "fabricated": true
+              "eac": "MYD1"
             },
             "manchu": {
               "conditions": [
                 "default"
               ],
-              "eac": "MYAD1",
-              "fabricated": true
+              "eac": "MYAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -4286,8 +4230,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SYAD1",
-              "fabricated": true
+              "eac": "SYAD1"
             }
           }
         },
@@ -4300,8 +4243,7 @@
           "locales": {
             "hudum": {
               "gb": "00B7 ya second isolated form",
-              "eac": "MYD2",
-              "fabricated": true
+              "eac": "MYD2"
             }
           }
         }
@@ -4444,8 +4386,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MYAM1",
-              "fabricated": true
+              "eac": "MYAM1"
             },
             "manchu-ag": {
               "conditions": [
@@ -4456,8 +4397,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SYAM1",
-              "fabricated": true
+              "eac": "SYAM1"
             }
           }
         }
@@ -4482,8 +4422,7 @@
                 "default"
               ],
               "gb": "00D0 ra isolated form",
-              "eac": "MRD1",
-              "fabricated": true
+              "eac": "MRD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -4495,8 +4434,7 @@
                 "default"
               ],
               "gb": "1837 ra isolated form",
-              "eac": "TRAD1",
-              "fabricated": true
+              "eac": "TRAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -4507,8 +4445,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SRAD1",
-              "fabricated": true
+              "eac": "SRAD1"
             }
           }
         }
@@ -4657,8 +4594,7 @@
                 "default"
               ],
               "gb": "00C1 wa isolated form",
-              "eac": "XWD1",
-              "fabricated": true
+              "eac": "XWD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -4670,8 +4606,7 @@
                 "default"
               ],
               "gb": "1838 fa isolated form",
-              "eac": "TFAD1",
-              "fabricated": true
+              "eac": "TFAD1"
             },
             "manchu": {
               "conditions": [
@@ -4688,8 +4623,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SFAD1",
-              "fabricated": true
+              "eac": "SFAD1"
             }
           }
         }
@@ -4878,8 +4812,7 @@
                 "default"
               ],
               "gb": "00D1 fa isolated form",
-              "eac": "XFD1",
-              "fabricated": true
+              "eac": "XFD1"
             }
           }
         }
@@ -4959,8 +4892,7 @@
                 "default"
               ],
               "gb": "00D2 ka isolated form",
-              "eac": "MKD1",
-              "fabricated": true
+              "eac": "MKD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -4976,8 +4908,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MKAAD1",
-              "fabricated": true
+              "eac": "MKAAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -4988,8 +4919,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SKAAD1",
-              "fabricated": true
+              "eac": "SKAAD1"
             }
           }
         }
@@ -5117,8 +5047,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MKAAM1",
-              "fabricated": true
+              "eac": "MKAAM1"
             },
             "manchu-ag": {
               "conditions": [
@@ -5129,8 +5058,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SKAAM1",
-              "fabricated": true
+              "eac": "SKAAM1"
             }
           }
         },
@@ -5168,8 +5096,7 @@
                 "default"
               ],
               "gb": "00D3 kha isolated form",
-              "eac": "XKD1",
-              "fabricated": true
+              "eac": "XKD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -5294,8 +5221,7 @@
                 "default"
               ],
               "gb": "0037 tsa isolated form",
-              "eac": "XCD1",
-              "fabricated": true
+              "eac": "XCD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -5416,8 +5342,7 @@
                 "default"
               ],
               "gb": "0039 za isolated form",
-              "eac": "MZD1",
-              "fabricated": true
+              "eac": "MZD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -5515,8 +5440,7 @@
                 "default"
               ],
               "gb": "00D4 haa isolated form",
-              "eac": "XHD1",
-              "fabricated": true
+              "eac": "XHD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -5630,8 +5554,7 @@
                 "default"
               ],
               "gb": "00D6 zra isolated form",
-              "eac": "XRD1",
-              "fabricated": true
+              "eac": "XRD1"
             }
           }
         }
@@ -5705,8 +5628,7 @@
                 "default"
               ],
               "gb": "00D7 lha isolated form",
-              "eac": "XLD1",
-              "fabricated": true
+              "eac": "XLD1"
             },
             "hudum-ag": {
               "conditions": [
@@ -5718,8 +5640,7 @@
                 "default"
               ],
               "gb": "1840 lha isolated form",
-              "eac": "TLHAD1",
-              "fabricated": true
+              "eac": "TLHAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -5810,8 +5731,7 @@
                 "default"
               ],
               "gb": "003D lha final form",
-              "eac": "XLM1",
-              "fabricated": true
+              "eac": "XLM1"
             },
             "hudum-ag": {
               "conditions": [
@@ -5823,8 +5743,7 @@
                 "default"
               ],
               "gb": "003D lha final form",
-              "eac": "TLHAM1",
-              "fabricated": true
+              "eac": "TLHAM1"
             },
             "todo-ag": {
               "conditions": [
@@ -5854,8 +5773,7 @@
                 "default"
               ],
               "gb": "00D5 zhi isolated form",
-              "eac": "XZD1",
-              "fabricated": true
+              "eac": "XZD1"
             }
           }
         }
@@ -5888,8 +5806,7 @@
                 "default"
               ],
               "gb": "00D5 zhi medial form",
-              "eac": "XZZ1",
-              "fabricated": true
+              "eac": "XZZ1"
             }
           }
         }
@@ -5906,8 +5823,7 @@
                 "default"
               ],
               "gb": "00D5 zhi final form",
-              "eac": "XZM1",
-              "fabricated": true
+              "eac": "XZM1"
             }
           }
         }
@@ -5932,8 +5848,7 @@
                 "default"
               ],
               "gb": "00D8 chi isolated form",
-              "eac": "XQD1",
-              "fabricated": true
+              "eac": "XQD1"
             }
           }
         }
@@ -5966,8 +5881,7 @@
                 "default"
               ],
               "gb": "00D8 chi medial form",
-              "eac": "XQZ1",
-              "fabricated": true
+              "eac": "XQZ1"
             }
           }
         }
@@ -5984,8 +5898,7 @@
                 "default"
               ],
               "gb": "00D8 chi final form",
-              "eac": "XQM1",
-              "fabricated": true
+              "eac": "XQM1"
             }
           }
         }
@@ -6009,8 +5922,7 @@
                 "default"
               ],
               "gb": "1843 todo long vowel sign isolated form",
-              "eac": "TLVSD1",
-              "fabricated": true
+              "eac": "TLVSD1"
             },
             "todo-ag": {
               "conditions": [
@@ -6031,8 +5943,7 @@
                 "default"
               ],
               "gb": "1843 todo long vowel sign initial form",
-              "eac": "TLVSS1",
-              "fabricated": true
+              "eac": "TLVSS1"
             },
             "todo-ag": {
               "conditions": [
@@ -6874,8 +6785,7 @@
                 "default"
               ],
               "gb": "1829 ang isolated form",
-              "eac": "TANGD1",
-              "fabricated": true
+              "eac": "TANGD1"
             },
             "todo-ag": {
               "conditions": [
@@ -6898,8 +6808,7 @@
                 "default"
               ],
               "gb": "1829 ang initial form",
-              "eac": "TANGS1",
-              "fabricated": true
+              "eac": "TANGS1"
             },
             "todo-ag": {
               "conditions": [
@@ -6973,8 +6882,7 @@
                 "default"
               ],
               "gb": "182A ba isolated form",
-              "eac": "TBAD1",
-              "fabricated": true
+              "eac": "TBAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -7191,8 +7099,7 @@
                 "default"
               ],
               "gb": "184D todo qa isolated form",
-              "eac": "TQAD1",
-              "fabricated": true
+              "eac": "TQAD1"
             }
           }
         },
@@ -7204,8 +7111,7 @@
           "fvs": 1,
           "locales": {
             "todo": {
-              "eac": "TQAD2",
-              "fabricated": true
+              "eac": "TQAD2"
             }
           }
         }
@@ -7313,8 +7219,7 @@
                 "default"
               ],
               "gb": "184E todo ga masculine isolated form",
-              "eac": "TGAD1",
-              "fabricated": true
+              "eac": "TGAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -7332,8 +7237,7 @@
           "locales": {
             "todo": {
               "gb": "1889 todo ga feminine isolated form",
-              "eac": "TGAD2",
-              "fabricated": true
+              "eac": "TGAD2"
             },
             "todo-ag": {}
           }
@@ -7503,8 +7407,7 @@
                 "default"
               ],
               "gb": "182E todo ma isolated form",
-              "eac": "TMAD1",
-              "fabricated": true
+              "eac": "TMAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -7621,8 +7524,7 @@
                 "default"
               ],
               "gb": "1850 todo ta isolated form",
-              "eac": "TTAD1",
-              "fabricated": true
+              "eac": "TTAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -7738,8 +7640,7 @@
                 "default"
               ],
               "gb": "1851 todo da isolated form",
-              "eac": "TDAD1",
-              "fabricated": true
+              "eac": "TDAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -7840,8 +7741,7 @@
                 "default"
               ],
               "gb": "1852 todo cha isolated form",
-              "eac": "TCHAD1",
-              "fabricated": true
+              "eac": "TCHAD1"
             }
           }
         }
@@ -7914,8 +7814,7 @@
                 "default"
               ],
               "gb": "1853 todo ja isolated form",
-              "eac": "TJAD1",
-              "fabricated": true
+              "eac": "TJAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -8025,8 +7924,7 @@
                 "default"
               ],
               "gb": "1854 todo tsa isolated form",
-              "eac": "TTSAD1",
-              "fabricated": true
+              "eac": "TTSAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -8151,8 +8049,7 @@
                 "default"
               ],
               "gb": "1855 todo ya isolated form",
-              "eac": "TYAD1",
-              "fabricated": true
+              "eac": "TYAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -8169,8 +8066,7 @@
           "fvs": 1,
           "locales": {
             "todo": {
-              "eac": "TYAD2",
-              "fabricated": true
+              "eac": "TYAD2"
             }
           }
         }
@@ -8312,8 +8208,7 @@
                 "default"
               ],
               "gb": "1856 todo wa isolated form",
-              "eac": "TWAD1",
-              "fabricated": true
+              "eac": "TWAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -8436,8 +8331,7 @@
                 "default"
               ],
               "gb": "1857 todo ka isolated form",
-              "eac": "TEKAD1",
-              "fabricated": true
+              "eac": "TEKAD1"
             }
           }
         }
@@ -8510,8 +8404,7 @@
                 "default"
               ],
               "gb": "1858 todo gaa isolated form",
-              "eac": "TGAAD1",
-              "fabricated": true
+              "eac": "TGAAD1"
             }
           }
         }
@@ -8560,8 +8453,7 @@
                 "default"
               ],
               "gb": "1858 todo gaa final form",
-              "eac": "TGAAM1",
-              "fabricated": true
+              "eac": "TGAAM1"
             }
           }
         }
@@ -8596,8 +8488,7 @@
                 "default"
               ],
               "gb": "183E todo haa isolated form",
-              "eac": "THAAD1",
-              "fabricated": true
+              "eac": "THAAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -8724,8 +8615,7 @@
                 "default"
               ],
               "gb": "185A todo jia isolated form",
-              "eac": "TAKAD1",
-              "fabricated": true
+              "eac": "TAKAD1"
             }
           }
         }
@@ -8777,8 +8667,7 @@
                 "default"
               ],
               "gb": "185A todo jia final form",
-              "eac": "TAKAM1",
-              "fabricated": true
+              "eac": "TAKAM1"
             }
           }
         }
@@ -8812,8 +8701,7 @@
                 "default"
               ],
               "gb": "185B todo nia isolated form",
-              "eac": "TANAD1",
-              "fabricated": true
+              "eac": "TANAD1"
             },
             "todo-ag": {
               "conditions": [
@@ -8887,8 +8775,7 @@
                 "default"
               ],
               "gb": "185B todo nia final form",
-              "eac": "TANAM1",
-              "fabricated": true
+              "eac": "TANAM1"
             },
             "todo-ag": {
               "conditions": [
@@ -8933,8 +8820,7 @@
                 "default"
               ],
               "gb": "185C todo dza isolated form",
-              "eac": "TADZAD1",
-              "fabricated": true
+              "eac": "TADZAD1"
             }
           }
         },
@@ -9405,8 +9291,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MIYD1",
-              "fabricated": true
+              "eac": "MIYD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -9417,8 +9302,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SIYD1",
-              "fabricated": true
+              "eac": "SIYD1"
             }
           }
         }
@@ -9434,8 +9318,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MIYS1",
-              "fabricated": true
+              "eac": "MIYS1"
             },
             "manchu-ag": {
               "conditions": [
@@ -9446,8 +9329,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SIYS1",
-              "fabricated": true
+              "eac": "SIYS1"
             }
           }
         }
@@ -9963,8 +9845,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SKAD1",
-              "fabricated": true
+              "eac": "SKAD1"
             }
           }
         },
@@ -9976,8 +9857,7 @@
           "fvs": 1,
           "locales": {
             "sibe": {
-              "eac": "SKAD2",
-              "fabricated": true
+              "eac": "SKAD2"
             }
           }
         },
@@ -9989,8 +9869,7 @@
           "fvs": 2,
           "locales": {
             "sibe": {
-              "eac": "SKAD3",
-              "fabricated": true
+              "eac": "SKAD3"
             }
           }
         }
@@ -10153,8 +10032,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MGAD1",
-              "fabricated": true
+              "eac": "MGAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -10165,8 +10043,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SGAD1",
-              "fabricated": true
+              "eac": "SGAD1"
             }
           }
         },
@@ -10178,13 +10055,11 @@
           "fvs": 1,
           "locales": {
             "manchu": {
-              "eac": "MGAD2",
-              "fabricated": true
+              "eac": "MGAD2"
             },
             "manchu-ag": {},
             "sibe": {
-              "eac": "SGAD2",
-              "fabricated": true
+              "eac": "SGAD2"
             }
           }
         }
@@ -10316,8 +10191,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MGAM1",
-              "fabricated": true
+              "eac": "MGAM1"
             },
             "manchu-ag": {
               "conditions": [
@@ -10328,8 +10202,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SGAM1",
-              "fabricated": true
+              "eac": "SGAM1"
             }
           }
         }
@@ -10354,8 +10227,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MHAD1",
-              "fabricated": true
+              "eac": "MHAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -10366,8 +10238,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SHAD1",
-              "fabricated": true
+              "eac": "SHAD1"
             }
           }
         },
@@ -10379,13 +10250,11 @@
           "fvs": 1,
           "locales": {
             "manchu": {
-              "eac": "MHAD2",
-              "fabricated": true
+              "eac": "MHAD2"
             },
             "manchu-ag": {},
             "sibe": {
-              "eac": "SHAD2",
-              "fabricated": true
+              "eac": "SHAD2"
             }
           }
         }
@@ -10517,8 +10386,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MHAM1",
-              "fabricated": true
+              "eac": "MHAM1"
             },
             "manchu-ag": {
               "conditions": [
@@ -10529,8 +10397,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SHAM1",
-              "fabricated": true
+              "eac": "SHAM1"
             }
           }
         }
@@ -10554,8 +10421,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MPAD1",
-              "fabricated": true
+              "eac": "MPAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -10566,8 +10432,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SPAD1",
-              "fabricated": true
+              "eac": "SPAD1"
             }
           }
         }
@@ -10639,8 +10504,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MPAM1",
-              "fabricated": true
+              "eac": "MPAM1"
             },
             "manchu-ag": {
               "conditions": [
@@ -10651,8 +10515,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SPAM1",
-              "fabricated": true
+              "eac": "SPAM1"
             }
           }
         }
@@ -10676,8 +10539,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MSHAD1",
-              "fabricated": true
+              "eac": "MSHAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -10688,8 +10550,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SSHAD1",
-              "fabricated": true
+              "eac": "SSHAD1"
             }
           }
         }
@@ -10797,8 +10658,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MTAD1",
-              "fabricated": true
+              "eac": "MTAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -10809,8 +10669,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "STAD1",
-              "fabricated": true
+              "eac": "STAD1"
             }
           }
         },
@@ -10822,13 +10681,11 @@
           "fvs": 1,
           "locales": {
             "manchu": {
-              "eac": "MTAD2",
-              "fabricated": true
+              "eac": "MTAD2"
             },
             "manchu-ag": {},
             "sibe": {
-              "eac": "STAD2",
-              "fabricated": true
+              "eac": "STAD2"
             }
           }
         }
@@ -11026,8 +10883,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MDAD1",
-              "fabricated": true
+              "eac": "MDAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11038,8 +10894,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SDAD1",
-              "fabricated": true
+              "eac": "SDAD1"
             }
           }
         },
@@ -11051,13 +10906,11 @@
           "fvs": 1,
           "locales": {
             "manchu": {
-              "eac": "MDAD2",
-              "fabricated": true
+              "eac": "MDAD2"
             },
             "manchu-ag": {},
             "sibe": {
-              "eac": "SDAD2",
-              "fabricated": true
+              "eac": "SDAD2"
             }
           }
         }
@@ -11191,8 +11044,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MDAM1",
-              "fabricated": true
+              "eac": "MDAM1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11203,8 +11055,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SDAM1",
-              "fabricated": true
+              "eac": "SDAM1"
             }
           }
         }
@@ -11228,8 +11079,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SJAD1",
-              "fabricated": true
+              "eac": "SJAD1"
             }
           }
         }
@@ -11277,8 +11127,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SJAM1",
-              "fabricated": true
+              "eac": "SJAM1"
             }
           }
         }
@@ -11302,8 +11151,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SFAD1",
-              "fabricated": true
+              "eac": "SFAD1"
             }
           }
         }
@@ -11351,8 +11199,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SFAM1",
-              "fabricated": true
+              "eac": "SFAM1"
             }
           }
         }
@@ -11376,8 +11223,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MGAAD1",
-              "fabricated": true
+              "eac": "MGAAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11388,8 +11234,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SGAAD1",
-              "fabricated": true
+              "eac": "SGAAD1"
             }
           }
         }
@@ -11461,8 +11306,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MGAAM1",
-              "fabricated": true
+              "eac": "MGAAM1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11473,8 +11317,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SGAAM1",
-              "fabricated": true
+              "eac": "SGAAM1"
             }
           }
         }
@@ -11498,15 +11341,13 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MHAAD1",
-              "fabricated": true
+              "eac": "MHAAD1"
             },
             "sibe": {
               "conditions": [
                 "default"
               ],
-              "eac": "SHAAD1",
-              "fabricated": true
+              "eac": "SHAAD1"
             }
           }
         }
@@ -11568,15 +11409,13 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MHAAM1",
-              "fabricated": true
+              "eac": "MHAAM1"
             },
             "sibe": {
               "conditions": [
                 "default"
               ],
-              "eac": "SHAAM1",
-              "fabricated": true
+              "eac": "SHAAM1"
             }
           }
         }
@@ -11600,8 +11439,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MTSAD1",
-              "fabricated": true
+              "eac": "MTSAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11612,8 +11450,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "STSAD1",
-              "fabricated": true
+              "eac": "STSAD1"
             }
           }
         }
@@ -11685,8 +11522,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MTSAM1",
-              "fabricated": true
+              "eac": "MTSAM1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11697,8 +11533,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "STSAM1",
-              "fabricated": true
+              "eac": "STSAM1"
             }
           }
         }
@@ -11722,8 +11557,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MZAD1",
-              "fabricated": true
+              "eac": "MZAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11734,8 +11568,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SZAD1",
-              "fabricated": true
+              "eac": "SZAD1"
             }
           }
         }
@@ -11841,15 +11674,13 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MRAAD1",
-              "fabricated": true
+              "eac": "MRAAD1"
             },
             "sibe": {
               "conditions": [
                 "default"
               ],
-              "eac": "SRAD1",
-              "fabricated": true
+              "eac": "SRAD1"
             }
           }
         }
@@ -11911,15 +11742,13 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MRAAM1",
-              "fabricated": true
+              "eac": "MRAAM1"
             },
             "sibe": {
               "conditions": [
                 "default"
               ],
-              "eac": "SRAM1",
-              "fabricated": true
+              "eac": "SRAM1"
             }
           }
         }
@@ -11943,8 +11772,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MCHAAD1",
-              "fabricated": true
+              "eac": "MCHAAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -11955,8 +11783,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SCHAD1",
-              "fabricated": true
+              "eac": "SCHAD1"
             }
           }
         }
@@ -12028,15 +11855,13 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MCHAAM1",
-              "fabricated": true
+              "eac": "MCHAAM1"
             },
             "sibe": {
               "conditions": [
                 "default"
               ],
-              "eac": "SCHAM1",
-              "fabricated": true
+              "eac": "SCHAM1"
             }
           }
         },
@@ -12072,8 +11897,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SZHAD1",
-              "fabricated": true
+              "eac": "SZHAD1"
             }
           }
         }
@@ -12121,8 +11945,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "SZHAM1",
-              "fabricated": true
+              "eac": "SZHAM1"
             }
           }
         }
@@ -12326,8 +12149,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MKAD1",
-              "fabricated": true
+              "eac": "MKAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -12344,8 +12166,7 @@
           "fvs": 1,
           "locales": {
             "manchu": {
-              "eac": "MKAD2",
-              "fabricated": true
+              "eac": "MKAD2"
             },
             "manchu-ag": {}
           }
@@ -12358,8 +12179,7 @@
           "fvs": 2,
           "locales": {
             "manchu": {
-              "eac": "MKAD3",
-              "fabricated": true
+              "eac": "MKAD3"
             },
             "manchu-ag": {}
           }
@@ -12575,8 +12395,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MRAD1",
-              "fabricated": true
+              "eac": "MRAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -12694,8 +12513,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MFAD1",
-              "fabricated": true
+              "eac": "MFAD1"
             }
           }
         },
@@ -12710,8 +12528,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MFAD2",
-              "fabricated": true
+              "eac": "MFAD2"
             }
           }
         }
@@ -12791,8 +12608,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MFAM1",
-              "fabricated": true
+              "eac": "MFAM1"
             }
           }
         }
@@ -12816,8 +12632,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MZHAD1",
-              "fabricated": true
+              "eac": "MZHAD1"
             },
             "manchu-ag": {
               "conditions": [
@@ -12880,8 +12695,7 @@
               "conditions": [
                 "default"
               ],
-              "eac": "MZHAM1",
-              "fabricated": true
+              "eac": "MZHAM1"
             }
           }
         },

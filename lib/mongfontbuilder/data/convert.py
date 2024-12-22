@@ -96,13 +96,7 @@ for locale, gbNumber in {
                         localeData["gb"] = f"{cp:04X} {name}"
                     if eac := variant.pop("eac_index", None):
                         localeData["eac"] = eac
-                    try:
-                        fabricated = variant.pop("fabricated")
-                    except KeyError:
-                        pass
-                    else:
-                        assert fabricated is None
-                        localeData["fabricated"] = True
+                    _ = variant.pop("fabricated", None)
                     assert not variant, variant
             assert not variants, variants
 
@@ -114,6 +108,7 @@ for cp, value in sorted(newData.items()):
         alias, *_ = alias.values()
     value["alias"] = alias
     if variants := value.get("variants"):
+        assert variants["representative"]
         for position in joiningPositions:
             for variant in variants[position]:
                 written = [i.removeprefix(".") for i in variant["written"]]
