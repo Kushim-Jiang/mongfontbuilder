@@ -209,10 +209,10 @@
   transcription: .ŋ
   variants:
     isol:
-      - written_units: [.A.init, .G.medi]
+      - written_units: [.A.medi, .G.medi]
         conditions: [.default]
     init:
-      - written_units: [.A.init, .G.medi]
+      - written_units: [.A.medi, .G.medi]
         conditions: [.default]
     medi:
       - written_units: [.A, .G]

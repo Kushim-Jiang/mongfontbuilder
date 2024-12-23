@@ -788,10 +788,10 @@
 0x184A: # ᡊ MONGOLIAN LETTER TODO ANG
   variants:
     isol:
-      - written_units: [.A.init, .G.medi]
+      - written_units: [.A.medi, .G.medi]
         fabricated: [tod]
     init:
-      - written_units: [.A.init, .G.medi]
+      - written_units: [.A.medi, .G.medi]
         fabricated: [tod]
     medi:
       - written_units: [.A, .G]

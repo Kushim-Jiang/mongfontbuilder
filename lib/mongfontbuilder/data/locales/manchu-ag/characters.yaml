@@ -864,7 +864,7 @@
   transcription: .Ɂ
   variants:
     isol:
-      - written_units: [.A2.medi]
+      - written_units: [.A2.init]
         conditions: [.default]
     init:
       - written_units: [.A2]

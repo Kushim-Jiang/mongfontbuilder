@@ -297,13 +297,13 @@
   transcription: .ŋ
   variants:
     isol:
-      - written_units: [.A.init, .G.medi]
+      - written_units: [.A.medi, .G.medi]
         fabricated:
         gb_index: [GB/T 36649-2018, 0x1829, ang isolated form]
         eac_index: TANGD1
         conditions: [.default]
     init:
-      - written_units: [.A.init, .G.medi]
+      - written_units: [.A.medi, .G.medi]
         fabricated:
         gb_index: [GB/T 36649-2018, 0x1829, ang initial form]
         eac_index: TANGS1
