@@ -3,8 +3,9 @@
     "isol": {
       "0": {
         "written": [
-          "A",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -19,8 +20,9 @@
           },
           "MCHx": {
             "written": [
-              "A2",
-              "medi"
+              "init",
+              0,
+              "MCHx"
             ],
             "conditions": [
               "default"
@@ -32,8 +34,9 @@
     "init": {
       "0": {
         "written": [
-          "A",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -85,8 +88,9 @@
     "fina": {
       "0": {
         "written": [
-          "A",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -1470,8 +1474,9 @@
     "isol": {
       "0": {
         "written": [
-          "N",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -1519,8 +1524,9 @@
       },
       "1": {
         "written": [
-          "A",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MNG": {
@@ -1784,9 +1790,9 @@
     "isol": {
       "0": {
         "written": [
-          "A",
-          "G",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -1818,9 +1824,9 @@
     "init": {
       "0": {
         "written": [
-          "A",
-          "G",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -1922,8 +1928,9 @@
     "isol": {
       "0": {
         "written": [
-          "B",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2095,8 +2102,9 @@
     "isol": {
       "0": {
         "written": [
-          "P",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2162,8 +2170,9 @@
     "isol": {
       "0": {
         "written": [
-          "H",
-          "init"
+          "init",
+          3,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2177,8 +2186,9 @@
       },
       "1": {
         "written": [
-          "Hx",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2189,8 +2199,9 @@
       },
       "2": {
         "written": [
-          "G",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2201,8 +2212,9 @@
       },
       "4": {
         "written": [
-          "Gx",
-          "init"
+          "init",
+          4,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2345,8 +2357,9 @@
     "isol": {
       "0": {
         "written": [
-          "Hx",
-          "init"
+          "init",
+          3,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2360,8 +2373,9 @@
       },
       "1": {
         "written": [
-          "H",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2372,8 +2386,9 @@
       },
       "2": {
         "written": [
-          "G",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2384,8 +2399,9 @@
       },
       "4": {
         "written": [
-          "Gx",
-          "init"
+          "init",
+          4,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2557,8 +2573,9 @@
     "isol": {
       "0": {
         "written": [
-          "M",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2698,8 +2715,9 @@
     "isol": {
       "0": {
         "written": [
-          "L",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -2907,8 +2925,9 @@
     "isol": {
       "0": {
         "written": [
-          "S",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -3127,8 +3146,9 @@
     "isol": {
       "0": {
         "written": [
-          "Sh",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "MNG": {
@@ -3159,8 +3179,9 @@
       },
       "1": {
         "written": [
-          "S",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MNG": {
@@ -3302,8 +3323,9 @@
     "isol": {
       "0": {
         "written": [
-          "T",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -3383,8 +3405,9 @@
     "isol": {
       "0": {
         "written": [
-          "D",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MNG": {
@@ -3398,8 +3421,9 @@
       },
       "1": {
         "written": [
-          "T",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "MNG": {
@@ -3504,8 +3528,9 @@
     "isol": {
       "0": {
         "written": [
-          "Ch",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -3683,8 +3708,9 @@
           },
           "TODx": {
             "written": [
-              "Ch",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -3692,8 +3718,9 @@
           },
           "SIB": {
             "written": [
-              "Ch",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -3702,8 +3729,9 @@
           },
           "MCH": {
             "written": [
-              "Ch",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -3723,8 +3751,9 @@
     "isol": {
       "0": {
         "written": [
-          "I",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -3833,8 +3862,9 @@
           },
           "MCH": {
             "written": [
-              "J",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -3868,8 +3898,9 @@
     "isol": {
       "0": {
         "written": [
-          "Y",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "MNG": {
@@ -3900,8 +3931,9 @@
       },
       "1": {
         "written": [
-          "I",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MNG": {
@@ -4034,8 +4066,9 @@
           },
           "SIB": {
             "written": [
-              "Y",
-              "medi"
+              "medi",
+              3,
+              null
             ],
             "conditions": [
               "default"
@@ -4044,8 +4077,9 @@
           },
           "MCH": {
             "written": [
-              "Y",
-              "medi"
+              "medi",
+              3,
+              null
             ],
             "conditions": [
               "default"
@@ -4054,8 +4088,9 @@
           },
           "MCHx": {
             "written": [
-              "Y",
-              "medi"
+              "medi",
+              3,
+              null
             ],
             "conditions": [
               "default"
@@ -4069,8 +4104,9 @@
     "isol": {
       "0": {
         "written": [
-          "R",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -4228,8 +4264,9 @@
     "isol": {
       "0": {
         "written": [
-          "W",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -4438,8 +4475,9 @@
     "isol": {
       "0": {
         "written": [
-          "F",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -4505,8 +4543,9 @@
     "isol": {
       "0": {
         "written": [
-          "K2",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -4654,8 +4693,9 @@
           },
           "TODx": {
             "written": [
-              "K2",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -4663,8 +4703,9 @@
           },
           "SIB": {
             "written": [
-              "K2",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -4673,8 +4714,9 @@
           },
           "MCH": {
             "written": [
-              "K2",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -4683,8 +4725,9 @@
           },
           "MCHx": {
             "written": [
-              "K2",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -4698,8 +4741,9 @@
     "isol": {
       "0": {
         "written": [
-          "K",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -4794,8 +4838,9 @@
           },
           "TODx": {
             "written": [
-              "K",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -4809,8 +4854,9 @@
     "isol": {
       "0": {
         "written": [
-          "C",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -4905,8 +4951,9 @@
           },
           "TODx": {
             "written": [
-              "C",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -4920,8 +4967,9 @@
     "isol": {
       "0": {
         "written": [
-          "Z",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5007,9 +5055,9 @@
     "isol": {
       "0": {
         "written": [
-          "A",
-          "Hr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5116,8 +5164,9 @@
     "isol": {
       "0": {
         "written": [
-          "Rh",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5183,9 +5232,9 @@
     "isol": {
       "0": {
         "written": [
-          "L",
-          "Hr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5286,9 +5335,9 @@
     "fina": {
       "0": {
         "written": [
-          "L",
-          "Hr",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5323,8 +5372,9 @@
     "isol": {
       "0": {
         "written": [
-          "Zr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5356,8 +5406,9 @@
     "medi": {
       "0": {
         "written": [
-          "Zr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5373,8 +5424,9 @@
     "fina": {
       "0": {
         "written": [
-          "Zr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5392,8 +5444,9 @@
     "isol": {
       "0": {
         "written": [
-          "Cr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5425,8 +5478,9 @@
     "medi": {
       "0": {
         "written": [
-          "Cr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -5442,8 +5496,9 @@
     "fina": {
       "0": {
         "written": [
-          "Cr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNG": {
@@ -6258,9 +6313,9 @@
     "isol": {
       "0": {
         "written": [
-          "A",
-          "G",
-          "init"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -6281,9 +6336,9 @@
     "init": {
       "0": {
         "written": [
-          "A",
-          "G",
-          "init"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -6350,8 +6405,9 @@
     "isol": {
       "0": {
         "written": [
-          "B",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -6437,8 +6493,9 @@
     "isol": {
       "0": {
         "written": [
-          "Pp",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -6450,8 +6507,9 @@
           },
           "TODx": {
             "written": [
-              "Ph",
-              "init"
+              "init",
+              0,
+              "TODx"
             ],
             "conditions": [
               "default"
@@ -6523,8 +6581,9 @@
           },
           "TODx": {
             "written": [
-              "Ph",
-              "medi"
+              "medi",
+              0,
+              "TODx"
             ],
             "conditions": [
               "default"
@@ -6538,8 +6597,9 @@
     "isol": {
       "0": {
         "written": [
-          "Hx2",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "TOD": {
@@ -6553,8 +6613,9 @@
       },
       "1": {
         "written": [
-          "K",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "TOD": {
@@ -6646,8 +6707,9 @@
     "isol": {
       "0": {
         "written": [
-          "Hb",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "TOD": {
@@ -6666,8 +6728,9 @@
       },
       "1": {
         "written": [
-          "G",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "TOD": {
@@ -6805,8 +6868,9 @@
     "isol": {
       "0": {
         "written": [
-          "M",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -6912,8 +6976,9 @@
     "isol": {
       "0": {
         "written": [
-          "Tp",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -7008,8 +7073,9 @@
           },
           "TODx": {
             "written": [
-              "Tp",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -7023,8 +7089,9 @@
     "isol": {
       "0": {
         "written": [
-          "Dp",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7099,8 +7166,9 @@
           },
           "TODx": {
             "written": [
-              "Dp",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -7114,8 +7182,9 @@
     "isol": {
       "0": {
         "written": [
-          "Jb",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7181,8 +7250,9 @@
     "isol": {
       "0": {
         "written": [
-          "Cp",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7257,8 +7327,9 @@
           },
           "TODx": {
             "written": [
-              "Cp",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -7272,8 +7343,9 @@
     "isol": {
       "0": {
         "written": [
-          "J",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -7368,8 +7440,9 @@
           },
           "TODx": {
             "written": [
-              "J",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -7383,8 +7456,9 @@
     "isol": {
       "0": {
         "written": [
-          "I",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -7408,8 +7482,9 @@
       },
       "1": {
         "written": [
-          "Y",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7515,8 +7590,9 @@
           },
           "TODx": {
             "written": [
-              "I",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -7530,8 +7606,9 @@
     "isol": {
       "0": {
         "written": [
-          "Wb",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7616,8 +7693,9 @@
           },
           "TODx": {
             "written": [
-              "Wb",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -7641,8 +7719,9 @@
     "isol": {
       "0": {
         "written": [
-          "Kp",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7708,8 +7787,9 @@
     "isol": {
       "0": {
         "written": [
-          "Gp",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7757,8 +7837,9 @@
     "fina": {
       "0": {
         "written": [
-          "Gp",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7776,9 +7857,9 @@
     "isol": {
       "0": {
         "written": [
-          "A",
-          "Hr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -7890,9 +7971,9 @@
     "isol": {
       "0": {
         "written": [
-          "B",
-          "Yp",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7942,9 +8023,9 @@
     "fina": {
       "0": {
         "written": [
-          "B",
-          "Yp",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -7962,8 +8043,9 @@
     "isol": {
       "0": {
         "written": [
-          "Ny",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -8041,8 +8123,9 @@
     "fina": {
       "0": {
         "written": [
-          "Ny",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -8073,8 +8156,9 @@
     "isol": {
       "0": {
         "written": [
-          "Zz",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TOD": {
@@ -8086,8 +8170,9 @@
           },
           "TODx": {
             "written": [
-              "Zc",
-              "init"
+              "init",
+              0,
+              "TODx"
             ],
             "conditions": [
               "default"
@@ -8496,8 +8581,9 @@
     "isol": {
       "0": {
         "written": [
-          "Ai",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -8523,8 +8609,9 @@
     "init": {
       "0": {
         "written": [
-          "Ai",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -8950,9 +9037,9 @@
     "isol": {
       "0": {
         "written": [
-          "A",
-          "G",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -8967,9 +9054,9 @@
     "init": {
       "0": {
         "written": [
-          "A",
-          "G",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9020,8 +9107,9 @@
     "isol": {
       "0": {
         "written": [
-          "H",
-          "init"
+          "init",
+          3,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9034,8 +9122,9 @@
       },
       "1": {
         "written": [
-          "G",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9045,8 +9134,9 @@
       },
       "2": {
         "written": [
-          "Gx",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9189,8 +9279,9 @@
     "isol": {
       "0": {
         "written": [
-          "Hh",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9214,8 +9305,9 @@
       },
       "1": {
         "written": [
-          "Gh",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9343,8 +9435,9 @@
     "fina": {
       "0": {
         "written": [
-          "Hh",
-          "medi"
+          "medi",
+          2,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9372,8 +9465,9 @@
     "isol": {
       "0": {
         "written": [
-          "Hc",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9397,8 +9491,9 @@
       },
       "1": {
         "written": [
-          "Gc",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9526,8 +9621,9 @@
     "fina": {
       "0": {
         "written": [
-          "Hc",
-          "medi"
+          "medi",
+          2,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9555,8 +9651,9 @@
     "isol": {
       "0": {
         "written": [
-          "Pb",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9638,8 +9735,9 @@
     "fina": {
       "0": {
         "written": [
-          "Pb",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9667,8 +9765,9 @@
     "isol": {
       "0": {
         "written": [
-          "Sp",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9779,8 +9878,9 @@
     "isol": {
       "0": {
         "written": [
-          "Tb",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9804,8 +9904,9 @@
       },
       "1": {
         "written": [
-          "T",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "SIB": {
@@ -9991,8 +10092,9 @@
     "isol": {
       "0": {
         "written": [
-          "Th",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10016,8 +10118,9 @@
       },
       "1": {
         "written": [
-          "Tt",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10147,8 +10250,9 @@
     "fina": {
       "0": {
         "written": [
-          "Dh",
-          "medi"
+          "medi",
+          2,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10176,8 +10280,9 @@
     "isol": {
       "0": {
         "written": [
-          "I",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10224,8 +10329,9 @@
     "fina": {
       "0": {
         "written": [
-          "J2",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10242,8 +10348,9 @@
     "isol": {
       "0": {
         "written": [
-          "V",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10290,8 +10397,9 @@
     "fina": {
       "0": {
         "written": [
-          "V",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10308,8 +10416,9 @@
     "isol": {
       "0": {
         "written": [
-          "Kh",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10391,8 +10500,9 @@
     "fina": {
       "0": {
         "written": [
-          "Kh",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10420,8 +10530,9 @@
     "isol": {
       "0": {
         "written": [
-          "Kc",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10488,8 +10599,9 @@
     "fina": {
       "0": {
         "written": [
-          "Kc",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10512,8 +10624,9 @@
     "isol": {
       "0": {
         "written": [
-          "Cs",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10595,8 +10708,9 @@
     "fina": {
       "0": {
         "written": [
-          "Cs",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10624,8 +10738,9 @@
     "isol": {
       "0": {
         "written": [
-          "Zs",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10735,8 +10850,9 @@
     "isol": {
       "0": {
         "written": [
-          "Rr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10803,8 +10919,9 @@
     "fina": {
       "0": {
         "written": [
-          "Rr",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10827,8 +10944,9 @@
     "isol": {
       "0": {
         "written": [
-          "Cc",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10910,8 +11028,9 @@
     "fina": {
       "0": {
         "written": [
-          "Cc",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10942,8 +11061,9 @@
     "isol": {
       "0": {
         "written": [
-          "Ic",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -10990,8 +11110,9 @@
     "fina": {
       "0": {
         "written": [
-          "Ic",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "SIB": {
@@ -11172,8 +11293,9 @@
     "isol": {
       "0": {
         "written": [
-          "H",
-          "init"
+          "init",
+          3,
+          null
         ],
         "locales": {
           "MCH": {
@@ -11191,8 +11313,9 @@
       },
       "1": {
         "written": [
-          "G",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MCH": {
@@ -11203,8 +11326,9 @@
       },
       "2": {
         "written": [
-          "Gx",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "MCH": {
@@ -11400,8 +11524,9 @@
     "isol": {
       "0": {
         "written": [
-          "R",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCH": {
@@ -11486,8 +11611,9 @@
     "isol": {
       "0": {
         "written": [
-          "V",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "MCH": {
@@ -11500,8 +11626,9 @@
       },
       "1": {
         "written": [
-          "W",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MCH": {
@@ -11576,8 +11703,9 @@
     "fina": {
       "0": {
         "written": [
-          "V",
-          "medi"
+          "medi",
+          2,
+          null
         ],
         "locales": {
           "MCH": {
@@ -11594,8 +11722,9 @@
     "isol": {
       "0": {
         "written": [
-          "Ic",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCH": {
@@ -11657,8 +11786,9 @@
     "fina": {
       "0": {
         "written": [
-          "Jc",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MCH": {
@@ -11689,8 +11819,9 @@
         "locales": {
           "MNGx": {
             "written": [
-              "A2",
-              "fina"
+              "fina",
+              1,
+              null
             ],
             "conditions": [
               "default"
@@ -11713,8 +11844,9 @@
         "locales": {
           "MNGx": {
             "written": [
-              "A2",
-              "fina"
+              "fina",
+              1,
+              null
             ],
             "conditions": [
               "default"
@@ -11736,8 +11868,9 @@
         "locales": {
           "MNGx": {
             "written": [
-              "A2",
-              "fina"
+              "fina",
+              1,
+              null
             ],
             "conditions": [
               "default"
@@ -11843,8 +11976,9 @@
     "isol": {
       "0": {
         "written": [
-          "G",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -11912,8 +12046,9 @@
           },
           "TODx": {
             "written": [
-              "G",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -11927,9 +12062,9 @@
     "isol": {
       "0": {
         "written": [
-          "N",
-          "G",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -11999,9 +12134,9 @@
           },
           "TODx": {
             "written": [
-              "N",
-              "G",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -12015,8 +12150,9 @@
     "isol": {
       "0": {
         "written": [
-          "Zc",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12074,8 +12210,9 @@
     "isol": {
       "0": {
         "written": [
-          "Zr",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12142,8 +12279,9 @@
           },
           "TODx": {
             "written": [
-              "Zr",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -12157,8 +12295,9 @@
     "isol": {
       "0": {
         "written": [
-          "Cr2",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12215,8 +12354,9 @@
     "fina": {
       "0": {
         "written": [
-          "Cr2",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12237,8 +12377,9 @@
     "isol": {
       "0": {
         "written": [
-          "Ds",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12250,8 +12391,9 @@
       },
       "1": {
         "written": [
-          "Ds2",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "TODx": {
@@ -12338,8 +12480,9 @@
     "isol": {
       "0": {
         "written": [
-          "Wn",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12421,8 +12564,9 @@
           },
           "TODx": {
             "written": [
-              "Wn",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -12441,8 +12585,9 @@
     "isol": {
       "0": {
         "written": [
-          "Dv",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12520,8 +12665,9 @@
     "isol": {
       "0": {
         "written": [
-          "Dq",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12579,8 +12725,9 @@
     "isol": {
       "0": {
         "written": [
-          "Bg",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12597,8 +12744,9 @@
       },
       "1": {
         "written": [
-          "Bh",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "TODx": {
@@ -12684,8 +12832,9 @@
           },
           "TODx": {
             "written": [
-              "Bh",
-              "medi"
+              "medi",
+              1,
+              null
             ],
             "conditions": [
               "default"
@@ -12704,8 +12853,9 @@
     "isol": {
       "0": {
         "written": [
-          "Pg",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12763,8 +12913,9 @@
     "isol": {
       "0": {
         "written": [
-          "Sx",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12831,8 +12982,9 @@
           },
           "TODx": {
             "written": [
-              "Sx",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -12846,8 +12998,9 @@
     "isol": {
       "0": {
         "written": [
-          "Rh2",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12905,8 +13058,9 @@
     "isol": {
       "0": {
         "written": [
-          "Zz",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -12973,8 +13127,9 @@
           },
           "TODx": {
             "written": [
-              "Zz",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -12988,8 +13143,9 @@
     "isol": {
       "0": {
         "written": [
-          "Q",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -13046,8 +13202,9 @@
     "fina": {
       "0": {
         "written": [
-          "Q",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -13068,8 +13225,9 @@
     "isol": {
       "0": {
         "written": [
-          "Rz",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "TODx": {
@@ -13111,8 +13269,9 @@
     "fina": {
       "0": {
         "written": [
-          "Rz",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "TODx": {
@@ -13128,8 +13287,9 @@
     "isol": {
       "0": {
         "written": [
-          "Hy",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13179,8 +13339,9 @@
     "fina": {
       "0": {
         "written": [
-          "Hy",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13196,8 +13357,9 @@
     "isol": {
       "0": {
         "written": [
-          "Nb",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13239,8 +13401,9 @@
     "fina": {
       "0": {
         "written": [
-          "Nb",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13256,8 +13419,9 @@
     "isol": {
       "0": {
         "written": [
-          "Ct",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13299,8 +13463,9 @@
     "fina": {
       "0": {
         "written": [
-          "Ct",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13316,8 +13481,9 @@
     "isol": {
       "0": {
         "written": [
-          "Zt",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13359,8 +13525,9 @@
     "fina": {
       "0": {
         "written": [
-          "Zt",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13376,8 +13543,9 @@
     "isol": {
       "0": {
         "written": [
-          "It",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13435,8 +13603,9 @@
     "isol": {
       "0": {
         "written": [
-          "Ih",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13494,8 +13663,9 @@
     "isol": {
       "0": {
         "written": [
-          "Dr",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13507,8 +13677,9 @@
       },
       "1": {
         "written": [
-          "Dy",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MCHx": {}
@@ -13588,8 +13759,9 @@
     "isol": {
       "0": {
         "written": [
-          "Tx",
-          "init"
+          "init",
+          2,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13601,8 +13773,9 @@
       },
       "1": {
         "written": [
-          "Ts",
-          "init"
+          "init",
+          1,
+          null
         ],
         "locales": {
           "MCHx": {}
@@ -13666,8 +13839,9 @@
     "fina": {
       "0": {
         "written": [
-          "Dx",
-          "medi"
+          "medi",
+          2,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13683,8 +13857,9 @@
     "isol": {
       "0": {
         "written": [
-          "Sx",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13742,8 +13917,9 @@
     "isol": {
       "0": {
         "written": [
-          "Iq",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13801,8 +13977,9 @@
     "isol": {
       "0": {
         "written": [
-          "St",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13860,8 +14037,9 @@
     "isol": {
       "0": {
         "written": [
-          "Sc",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -13919,8 +14097,9 @@
     "isol": {
       "0": {
         "written": [
-          "Wp",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -13930,8 +14109,9 @@
           },
           "TODx": {
             "written": [
-              "Wp",
-              "fina"
+              "fina",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -13943,8 +14123,9 @@
     "init": {
       "0": {
         "written": [
-          "Wp",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MNGx": {
@@ -13954,8 +14135,9 @@
           },
           "TODx": {
             "written": [
-              "Wp",
-              "fina"
+              "fina",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -13977,8 +14159,9 @@
           },
           "TODx": {
             "written": [
-              "Wp",
-              "fina"
+              "fina",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -13995,8 +14178,9 @@
         "locales": {
           "MNGx": {
             "written": [
-              "Wp",
-              "medi"
+              "medi",
+              0,
+              null
             ],
             "conditions": [
               "default"
@@ -14015,8 +14199,9 @@
     "isol": {
       "0": {
         "written": [
-          "Yp",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "TODx": {
@@ -14030,8 +14215,9 @@
     "init": {
       "0": {
         "written": [
-          "Yp",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "TODx": {
@@ -14083,8 +14269,9 @@
     "isol": {
       "0": {
         "written": [
-          "Bc",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -14126,8 +14313,9 @@
     "fina": {
       "0": {
         "written": [
-          "Bc",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -14143,8 +14331,9 @@
     "isol": {
       "0": {
         "written": [
-          "Lc",
-          "init"
+          "init",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {
@@ -14186,8 +14375,9 @@
     "fina": {
       "0": {
         "written": [
-          "Lc",
-          "medi"
+          "medi",
+          0,
+          null
         ],
         "locales": {
           "MCHx": {

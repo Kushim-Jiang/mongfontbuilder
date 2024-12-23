@@ -28,18 +28,14 @@ for cp, value in data.items():
         for position in joiningPositions:
             for variant in variants.pop(position):
                 newVariant = {}
-                newVariant["written"] = variant.pop("written_units")
-                fvs = None
-                try:
-                    fvs = variant.pop("fvs")
-                except KeyError:
-                    pass
-                else:
-                    newVariant["fvs"] = fvs
+                newVariant["written"] = [i.removeprefix(".") for i in variant.pop("written_units")]
+                fvsKey = str(variant.pop("fvs", 0))
                 _ = variant.pop("nominal", None)
                 _ = variant.pop("fabricated", None)
                 assert not variant, variant
-                newVariants.setdefault(position, []).append(newVariant)
+                fvsToVariant = newVariants.setdefault(position, {})
+                assert fvsKey not in fvsToVariant
+                fvsToVariant[fvsKey] = newVariant
         assert not variants, variants
         cpToVariants[cp] = newVariants
 
@@ -84,19 +80,16 @@ for folder, locale in {
             for position in joiningPositions:
                 for variant in variants.pop(position):
                     localeData = {}
-                    newVariantsOnPosition = newVariants.get(position, [])
-                    written = variant.pop("written_units")
+                    fvsToVariant = newVariants[position]
+                    written = [i.removeprefix(".") for i in variant.pop("written_units")]
                     try:
                         newVariant = next(
-                            i for i in newVariantsOnPosition if i["written"] == written
+                            i for i in fvsToVariant.values() if i["written"] == written
                         )
                     except StopIteration:
-                        localizingTarget = variant.pop("localizing", 0)
-                        newVariant = next(
-                            i for i in newVariantsOnPosition if i.get("fvs", 0) == localizingTarget
-                        )
+                        fvsKey = str(variant.pop("localization_source", 0))
+                        newVariant = fvsToVariant[fvsKey]
                         localeData["written"] = written
-
                     newVariant.setdefault("locales", {}).setdefault(locale, localeData)
                     if conditions := variant.pop("conditions", None):
                         localeData["conditions"] = [i.removeprefix(".") for i in conditions]
@@ -111,23 +104,29 @@ for folder, locale in {
             assert not variants, variants
 
 
-def normalizeWritten(written: list[str]) -> list[str]:
-    written = [i.removeprefix(".") for i in written]
-    if "." in written[0]:
-        [*written], [position, *trailingPositions] = zip(*[i.split(".") for i in written])
-        for trailingPosition in trailingPositions:
-            position = {
-                "init": {
-                    "medi": "init",
-                    "fina": "isol",
-                },
-                "medi": {
-                    "medi": "medi",
-                    "fina": "fina",
-                },
-            }[position][trailingPosition]
-        written.append(position)
-    return written
+def makeFallbackReference(
+    written: list[str], variants: dict, locale: str | None
+) -> tuple[str, int, str | None]:
+    [*written], [position, *trailingPositions] = zip(*[i.split(".") for i in written])
+    for trailingPosition in trailingPositions:
+        position = {
+            "init": {
+                "medi": "init",
+                "fina": "isol",
+            },
+            "medi": {
+                "medi": "medi",
+                "fina": "fina",
+            },
+        }[position][trailingPosition]
+    for fvs, variant in variants[position].items():
+        if variant["written"] == written:
+            return position, int(fvs), None
+        if locale:
+            if variant["locales"].get(locale, {}).get("written") == written:
+                return position, int(fvs), locale
+    else:
+        raise StopIteration(written, position, variants[position])
 
 
 filenameToNormalizedData = {
@@ -136,16 +135,15 @@ filenameToNormalizedData = {
 }
 for cp, variants in sorted(cpToVariants.items()):
     for position in joiningPositions:
-        fvsToVariant = dict[str, dict]()
-        for variant in variants[position]:
-            key = str(variant.pop("fvs", 0))
-            assert key not in fvsToVariant
-            fvsToVariant[key] = variant
-            variant["written"] = normalizeWritten(variant["written"])
+        for variant in variants[position].values():
+            written = variant["written"]
+            if "." in written[0]:
+                variant["written"] = makeFallbackReference(written, variants, None)
             for locale, localeData in variant["locales"].items():
                 if written := localeData.get("written"):
-                    localeData["written"] = normalizeWritten(written)
-        variants[position] = dict(sorted(fvsToVariant.items()))
+                    if "." in written[0]:
+                        localeData["written"] = makeFallbackReference(written, variants, locale)
+        variants[position] = dict(sorted(variants[position].items()))
     filenameToNormalizedData["variants.json"][unicodedata.name(chr(cp))] = variants
 
 for filename, normalizedData in filenameToNormalizedData.items():
