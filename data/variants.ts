@@ -1,7 +1,7 @@
 import type { LocaleID, Condition } from "./locales";
 import type { JoiningPosition, WrittenUnitID } from "./writtenUnits";
 
-type FVS = 0 | 1 | 2 | 3 | 4;
+export type FVS = 0 | 1 | 2 | 3 | 4;
 type VariantReference = [JoiningPosition, FVS, LocaleID | null];
 type Variant = {
   written: WrittenUnitID[] | VariantReference;

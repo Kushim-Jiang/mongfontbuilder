@@ -1,6 +1,6 @@
 <script>
   import { joiningPositions, writtenUnits } from "../../../../data/writtenUnits";
-  import Glyph from "../../components/Glyph.svelte";
+  import WrittenUnitVariant from "../../components/WrittenUnitVariant.svelte";
 </script>
 
 <table>
@@ -22,7 +22,7 @@
         {#each joiningPositions as position}
           <td>
             {#if position in positions}
-              <Glyph written={[id]} {position} />
+              <WrittenUnitVariant {id} {position} />
             {/if}
           </td>
         {/each}

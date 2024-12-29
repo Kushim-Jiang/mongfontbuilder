@@ -1,28 +1,31 @@
 <script lang="ts">
   import type { LocaleID } from "../../../../data/locales";
   import { aliases } from "../../../../data/aliases";
-  import { joiningPositions, type JoiningPosition, type WrittenUnitID } from "../../../../data/writtenUnits";
-  import { variants } from "../../../../data/variants";
-  import Glyph from "../../components/Glyph.svelte";
+  import { joiningPositions, type JoiningPosition } from "../../../../data/writtenUnits";
+  import { variants, type FVS } from "../../../../data/variants";
+
+  import LetterVariant from "../../components/LetterVariant.svelte";
   import { nameToCP, hexFromCP } from "../../components/utils";
 
   const locale: LocaleID = "MNG";
 
-  const charNameToPositionToWrittenUnits = new Map<string, Map<JoiningPosition, WrittenUnitID[]>>();
+  const charNameToPositionToFVSes = new Map<string, Map<JoiningPosition, FVS[]>>();
   for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
     for (const position of joiningPositions) {
       for (const [fvs, variant] of Object.entries(positionToFVSToVariant[position])) {
         const variantLocaleData = variant.locales[locale];
         if (variantLocaleData) {
-          let positionToWrittenUnits = charNameToPositionToWrittenUnits.get(charName);
-          if (!positionToWrittenUnits) {
-            positionToWrittenUnits = new Map();
-            charNameToPositionToWrittenUnits.set(charName, positionToWrittenUnits);
+          let positionToFVSes = charNameToPositionToFVSes.get(charName);
+          if (!positionToFVSes) {
+            positionToFVSes = new Map();
+            charNameToPositionToFVSes.set(charName, positionToFVSes);
           }
-          if (joiningPositions.includes(variant.written[0] as any)) {
-            continue;
+          let fvses = positionToFVSes.get(position);
+          if (!fvses) {
+            fvses = [];
+            positionToFVSes.set(position, fvses);
           }
-          positionToWrittenUnits.set(position, variant.written as WrittenUnitID[]);
+          fvses.push(Number(fvs) as FVS);
         }
       }
     }
@@ -43,12 +46,20 @@
     </tr>
   </thead>
   <tbody>
-    {#each Object.entries(variants) as [charName, positionToFVSToVariant]}
+    {#each charNameToPositionToFVSes as [charName, positionToFVSes]}
+      {@const alias = aliases[charName]}
       <tr>
         <td title={charName}>{hexFromCP(nameToCP.get(charName)!)}</td>
-        <td>{aliases[charName][locale]}</td>
-        {#each joiningPositions as position}
-          <td> </td>
+        <td>{typeof alias == "object" ? alias[locale] : alias}</td>
+        {#each positionToFVSes as [position, fvses]}
+          <td>
+            {#each fvses as fvs, index}
+              {#if index}
+                <br />
+              {/if}
+              <LetterVariant {charName} {position} {fvs} />
+            {/each}
+          </td>
         {/each}
       </tr>
     {/each}
