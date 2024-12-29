@@ -46,6 +46,7 @@ folderToGBNumber = {
     "sibe": "GB/T 36641-2018",
 }
 
+localeToConditions = dict[str, set[str]]()
 localeToCategoryToLetters = dict[str, dict[str, list[str]]]()
 for folder, locale in {
     "hudum": "MNG",
@@ -59,10 +60,8 @@ for folder, locale in {
     with (dir / "locales" / folder / "categorization.yaml").open(encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
-    categoryToLetters = localeToCategoryToLetters.setdefault(locale.removesuffix("x"), {})
+    categoryToLetters = localeToCategoryToLetters.setdefault(locale, {})
     for key, value in data["letter"].items():
-        if locale.endswith("x"):
-            key = "aliGali" + key.capitalize()
         if isinstance(value, list):
             categoryToLetters[key] = [i.removeprefix(".") for i in value]
         else:
@@ -108,6 +107,9 @@ for folder, locale in {
                     newVariant.setdefault("locales", {}).setdefault(locale, localeData)
                     if conditions := variant.pop("conditions", None):
                         localeData["conditions"] = [i.removeprefix(".") for i in conditions]
+                        localeToConditions.setdefault(locale, set()).update(
+                            localeData["conditions"]
+                        )
                     if gb := variant.pop("gb_index", None):
                         assert gb.pop(0) == folderToGBNumber[folder]
                         cp, name = gb
@@ -121,7 +123,9 @@ for folder, locale in {
 for locale, categoryToLetters in localeToCategoryToLetters.items():
     for letters in categoryToLetters.values():
         for letter in letters:
-            _ = next(k for k, v in cpToAliases.items() if v.get(locale) == letter)  # Validate
+            _ = next(  # Validate existence of alias
+                k for k, v in cpToAliases.items() if v.get(locale.removesuffix("x")) == letter
+            )
 
 
 def makeFallbackReference(
@@ -151,9 +155,15 @@ def makeFallbackReference(
 
 filenameToNormalizedData = {
     "aliases.json": {unicodedata.name(chr(k)): v for k, v in sorted(cpToAliases.items())},
-    "categories.json": localeToCategoryToLetters,
+    "locales.json": {},
     "variants.json": {},
 }
+for locale, conditions in localeToConditions.items():
+    filenameToNormalizedData["locales.json"][locale] = {
+        "conditions": sorted(conditions),
+        "categories": localeToCategoryToLetters[locale],
+    }
+
 for cp, variants in sorted(cpToVariants.items()):
     for position in joiningPositions:
         for variant in variants[position].values():
