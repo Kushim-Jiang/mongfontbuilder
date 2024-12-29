@@ -1,6 +1,5 @@
 <script>
-  import { joiningPositions } from "../../../../data";
-  import { writtenUnits } from "../../../../data/writtenUnits";
+  import { joiningPositions, writtenUnits } from "../../../../data/writtenUnits";
   import Glyph from "../../components/Glyph.svelte";
 </script>
 
@@ -12,12 +11,14 @@
     </tr>
   </thead>
   <tbody>
-    {#each Object.keys(writtenUnits) as id}
+    {#each Object.entries(writtenUnits) as [id, positions]}
       <tr>
         <td>{id}</td>
         {#each joiningPositions as position}
           <td>
-            <Glyph written={id} {position} />
+            {#if position in positions}
+              <Glyph written={[id]} {position} />
+            {/if}
           </td>
         {/each}
       </tr>
