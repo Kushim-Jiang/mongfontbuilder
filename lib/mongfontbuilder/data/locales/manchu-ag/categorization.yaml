@@ -1,8 +1,0 @@
-letter:
-  vowel:
-    masculine: [.a, .o, .ue]
-    feminine: [.e, .u]
-    neuter: [.i]
-    other: [.aaMag, .ii]
-
-  consonant: [.gh, .kh, .g, .k, .ghMag, .ngMag, .ng, .cMag, .c, .z, .jhMag, .trMag, .cr, .zr, .drhMag, .nrMag, .tMag, .t, .d, .n, .pMag, .p, .b, .bhMag, .m, .y, .r, .l, .w, .sh, .shMag, .s, .h, .crMag, .ch, .j, .zhMag, .zMag, .sbm, .lhMag]

@@ -1,3 +1,0 @@
-letter:
-  vowel: [.a, .aHag, .iHag, .ue, .ee, .o]
-  consonant: [.kHag, .k2, .ng, .ngHag, .cHag, .c, .z, .nyHag, .trHag, .trhHag, .drHag, .nrHag, .tHag, .thHag, .dHag, .n, .pHag, .phHag, .b, .mHag, .yHag, .r, .l, .w, .waHag, .sh, .shHag, .s, .hHag, .crHag, .ch, .zrHag, .zHag, .qHag, .lh]
