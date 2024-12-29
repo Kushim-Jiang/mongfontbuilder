@@ -1,0 +1,339 @@
+{
+  "MNG": {
+    "vowelMasculine": [
+      "a",
+      "o",
+      "u"
+    ],
+    "vowelFeminine": [
+      "e",
+      "ee",
+      "oe",
+      "ue"
+    ],
+    "vowelNeuter": [
+      "i"
+    ],
+    "consonant": [
+      "n",
+      "ng",
+      "b",
+      "p",
+      "h",
+      "g",
+      "m",
+      "l",
+      "s",
+      "sh",
+      "t",
+      "d",
+      "ch",
+      "j",
+      "y",
+      "r",
+      "w",
+      "f",
+      "k2",
+      "k",
+      "c",
+      "z",
+      "hh",
+      "rh",
+      "lh",
+      "zr",
+      "cr"
+    ],
+    "aliGaliVowel": [
+      "a",
+      "aHag",
+      "iHag",
+      "ue",
+      "ee",
+      "o"
+    ],
+    "aliGaliConsonant": [
+      "kHag",
+      "k2",
+      "ng",
+      "ngHag",
+      "cHag",
+      "c",
+      "z",
+      "nyHag",
+      "trHag",
+      "trhHag",
+      "drHag",
+      "nrHag",
+      "tHag",
+      "thHag",
+      "dHag",
+      "n",
+      "pHag",
+      "phHag",
+      "b",
+      "mHag",
+      "yHag",
+      "r",
+      "l",
+      "w",
+      "waHag",
+      "sh",
+      "shHag",
+      "s",
+      "hHag",
+      "crHag",
+      "ch",
+      "zrHag",
+      "zHag",
+      "qHag",
+      "lh"
+    ]
+  },
+  "TOD": {
+    "vowelMasculine": [
+      "a",
+      "o",
+      "u"
+    ],
+    "vowelFeminine": [
+      "e",
+      "oe",
+      "ue"
+    ],
+    "vowelNeuter": [
+      "i"
+    ],
+    "consonant": [
+      "n",
+      "ng",
+      "b",
+      "p",
+      "h",
+      "g",
+      "m",
+      "l",
+      "s",
+      "sh",
+      "t",
+      "d",
+      "ch",
+      "j",
+      "z",
+      "c",
+      "y",
+      "r",
+      "w",
+      "f",
+      "kh",
+      "gh",
+      "hh",
+      "jy",
+      "ny",
+      "zr",
+      "lh"
+    ],
+    "aliGaliVowelMasculine": [
+      "a",
+      "o"
+    ],
+    "aliGaliVowelFeminine": [
+      "e",
+      "ue"
+    ],
+    "aliGaliVowelNeuter": [
+      "i"
+    ],
+    "aliGaliConsonant": [
+      "kTag",
+      "khTag",
+      "gTag",
+      "g",
+      "ng",
+      "ngTag",
+      "j",
+      "chTag",
+      "zr",
+      "ny",
+      "trTag",
+      "trhTag",
+      "drTag",
+      "nrTag",
+      "tTag",
+      "t",
+      "d",
+      "n",
+      "pTag",
+      "p",
+      "b",
+      "m",
+      "y",
+      "yTag",
+      "r",
+      "l",
+      "w",
+      "waTag",
+      "sh",
+      "shTag",
+      "s",
+      "hh",
+      "c",
+      "z",
+      "zhTag",
+      "zTag",
+      "qTag",
+      "lh"
+    ]
+  },
+  "SIB": {
+    "vowelMasculine": [
+      "a",
+      "o",
+      "ue"
+    ],
+    "vowelFeminine": [
+      "e",
+      "u"
+    ],
+    "vowelNeuter": [
+      "i"
+    ],
+    "vowelOther": [
+      "ii"
+    ],
+    "consonant": [
+      "sbm",
+      "n",
+      "ng",
+      "k",
+      "g",
+      "h",
+      "b",
+      "p",
+      "s",
+      "sh",
+      "t",
+      "d",
+      "l",
+      "m",
+      "ch",
+      "j",
+      "y",
+      "r",
+      "f",
+      "w",
+      "kh",
+      "gh",
+      "hh",
+      "c",
+      "z",
+      "rh",
+      "cr",
+      "zr"
+    ]
+  },
+  "MCH": {
+    "vowelMasculine": [
+      "a",
+      "o",
+      "ue"
+    ],
+    "vowelFeminine": [
+      "e",
+      "u"
+    ],
+    "vowelNeuter": [
+      "i"
+    ],
+    "vowelOther": [
+      "ii"
+    ],
+    "consonant": [
+      "sbm",
+      "n",
+      "ng",
+      "k",
+      "g",
+      "h",
+      "b",
+      "p",
+      "s",
+      "sh",
+      "t",
+      "d",
+      "l",
+      "m",
+      "ch",
+      "j",
+      "y",
+      "r",
+      "f",
+      "w",
+      "kh",
+      "gh",
+      "hh",
+      "c",
+      "z",
+      "rh",
+      "cr",
+      "zr"
+    ],
+    "aliGaliVowelMasculine": [
+      "a",
+      "o",
+      "ue"
+    ],
+    "aliGaliVowelFeminine": [
+      "e",
+      "u"
+    ],
+    "aliGaliVowelNeuter": [
+      "i"
+    ],
+    "aliGaliVowelOther": [
+      "aaMag",
+      "ii"
+    ],
+    "aliGaliConsonant": [
+      "gh",
+      "kh",
+      "g",
+      "k",
+      "ghMag",
+      "ngMag",
+      "ng",
+      "cMag",
+      "c",
+      "z",
+      "jhMag",
+      "trMag",
+      "cr",
+      "zr",
+      "drhMag",
+      "nrMag",
+      "tMag",
+      "t",
+      "d",
+      "n",
+      "pMag",
+      "p",
+      "b",
+      "bhMag",
+      "m",
+      "y",
+      "r",
+      "l",
+      "w",
+      "sh",
+      "shMag",
+      "s",
+      "h",
+      "crMag",
+      "ch",
+      "j",
+      "zhMag",
+      "zMag",
+      "sbm",
+      "lhMag"
+    ]
+  }
+}

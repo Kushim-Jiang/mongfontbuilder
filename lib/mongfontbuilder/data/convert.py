@@ -46,6 +46,7 @@ folderToGBNumber = {
     "sibe": "GB/T 36641-2018",
 }
 
+localeToCategoryToLetters = dict[str, dict[str, list[str]]]()
 for folder, locale in {
     "hudum": "MNG",
     "hudum-ag": "MNGx",
@@ -55,6 +56,20 @@ for folder, locale in {
     "manchu": "MCH",
     "manchu-ag": "MCHx",
 }.items():
+    with (dir / "locales" / folder / "categorization.yaml").open(encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+
+    categoryToLetters = localeToCategoryToLetters.setdefault(locale.removesuffix("x"), {})
+    for key, value in data["letter"].items():
+        if locale.endswith("x"):
+            key = "aliGali" + key.capitalize()
+        if isinstance(value, list):
+            categoryToLetters[key] = [i.removeprefix(".") for i in value]
+        else:
+            categoryToLetters.update(
+                (key + k.capitalize(), [i.removeprefix(".") for i in v]) for k, v in value.items()
+            )
+
     with (dir / "locales" / folder / "characters.yaml").open(encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
@@ -103,6 +118,11 @@ for folder, locale in {
                     assert not variant, variant
             assert not variants, variants
 
+for locale, categoryToLetters in localeToCategoryToLetters.items():
+    for letters in categoryToLetters.values():
+        for letter in letters:
+            _ = next(k for k, v in cpToAliases.items() if v.get(locale) == letter)  # Validate
+
 
 def makeFallbackReference(
     written: list[str], variants: dict, locale: str | None
@@ -131,6 +151,7 @@ def makeFallbackReference(
 
 filenameToNormalizedData = {
     "aliases.json": {unicodedata.name(chr(k)): v for k, v in sorted(cpToAliases.items())},
+    "categories.json": localeToCategoryToLetters,
     "variants.json": {},
 }
 for cp, variants in sorted(cpToVariants.items()):
