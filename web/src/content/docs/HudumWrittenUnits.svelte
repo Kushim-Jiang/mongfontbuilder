@@ -6,8 +6,13 @@
 <table>
   <thead>
     <tr>
-      <th>Written unit</th>
-      <th colspan="4">Positional forms: {joiningPositions.join(", ")}</th>
+      <th rowspan="2">Written unit</th>
+      <th colspan="4">Positional forms</th>
+    </tr>
+    <tr>
+      {#each joiningPositions as position}
+        <th>{position}</th>
+      {/each}
     </tr>
   </thead>
   <tbody>

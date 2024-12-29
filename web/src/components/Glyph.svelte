@@ -1,11 +1,3 @@
-<script module>
-  // @ts-ignore
-  import _Names from "@unicode/unicode-16.0.0/Names";
-
-  const Names: Map<number, string> = _Names;
-  const nameToCP = new Map([...Names].filter(([_, v]) => !v.startsWith("<")).map(([k, v]) => [v, k]));
-</script>
-
 <script lang="ts">
   interface Props {
     written: string[];
@@ -16,15 +8,16 @@
 
   import { joiningPositions, type JoiningPosition } from "../../../data/writtenUnits";
   import { variants } from "../../../data/variants";
+  import { nameToCP } from "./utils";
 
   let text = $derived.by(() => {
-    for (const [name, positionToFVSToVariant] of Object.entries(variants)) {
+    for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
       for (const [fvs, { written: _written }] of Object.entries(positionToFVSToVariant[position])) {
         if (joiningPositions.includes(_written[0] as any)) {
           continue;
         }
         if (_written.length == written.length && _written.every((e, i) => e == written[i])) {
-          let text = String.fromCodePoint(nameToCP.get(name)!);
+          let text = String.fromCodePoint(nameToCP.get(charName)!);
           if (fvs != "0") {
             text += ["\u{180B}", "\u{180C}", "\u{180D}", "\u{180F}"][Number(fvs) - 1];
           }
