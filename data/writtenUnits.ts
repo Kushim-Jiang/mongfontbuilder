@@ -1,4 +1,5 @@
-import type { JoiningPosition } from ".";
+export const joiningPositions = ["isol", "init", "medi", "fina"] as const;
+export type JoiningPosition = (typeof joiningPositions)[number];
 
 type WrittenUnit = Partial<Record<JoiningPosition, WrittenUnitVariant>>;
 type WrittenUnitVariant = {
@@ -159,6 +160,12 @@ export const writtenUnits = {
   G: {
     init: {},
     medi: {},
+    fina: {},
+  },
+  G2: {
+    fina: {},
+  },
+  G3: {
     fina: {},
   },
   Gc: {
@@ -516,6 +523,9 @@ export const writtenUnits = {
   V: {
     init: {},
     medi: {},
+  },
+  Vi: {
+    fina: {},
   },
   W: {
     init: {},

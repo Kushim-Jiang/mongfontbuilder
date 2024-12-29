@@ -1,15 +1,20 @@
-// Execute from this directory to export to and update mongfontbuilder:
-//   npx vite-node --script export.ts
+// Update data of mongfontbuilder: npx vite-node --script data/export.ts
 
 import { writeFile } from "node:fs/promises";
 
-import { joiningPositions } from ".";
+import { locales } from "./locales";
+import { aliases } from "./aliases";
 import { writtenUnits } from "./writtenUnits";
-import { letters } from "./letters";
-import { categories } from "./categories";
+import { variants } from "./variants";
 
-const data = { joiningPositions, writtenUnits, letters, categories };
-await writeFile(
-  "../lib/mongfontbuilder/data.json",
-  JSON.stringify(data, undefined, 2),
-);
+for (const [name, data] of Object.entries({
+  locales,
+  aliases,
+  writtenUnits,
+  variants,
+})) {
+  await writeFile(
+    `lib/mongfontbuilder/data/${name}.json`,
+    JSON.stringify(data, undefined, 2),
+  );
+}
