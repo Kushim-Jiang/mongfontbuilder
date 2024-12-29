@@ -70,7 +70,9 @@ export const locales = {
       vowel: ["a", "aHag", "iHag", "ue", "ee", "o"],
       consonant: [
         "kHag",
+        "k",
         "k2",
+        "hh",
         "ng",
         "ngHag",
         "cHag",
@@ -122,6 +124,7 @@ export const locales = {
       vowelMasculine: ["a", "o", "u"],
       vowelFeminine: ["e", "oe", "ue"],
       vowelNeuter: ["i"],
+      vowelOther: ["lvs"],
       consonant: [
         "n",
         "ng",
@@ -166,9 +169,11 @@ export const locales = {
       vowelMasculine: ["a", "o"],
       vowelFeminine: ["e", "ue"],
       vowelNeuter: ["i"],
+      vowelOther: ["lvs"],
       consonant: [
         "kTag",
         "khTag",
+        "hTag",
         "gTag",
         "g",
         "ng",
@@ -341,6 +346,7 @@ export const locales = {
         "tMag",
         "t",
         "d",
+        "dhMag",
         "n",
         "pMag",
         "p",

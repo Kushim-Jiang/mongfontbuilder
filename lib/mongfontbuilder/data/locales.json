@@ -80,7 +80,9 @@
       ],
       "consonant": [
         "kHag",
+        "k",
         "k2",
+        "hh",
         "ng",
         "ngHag",
         "cHag",
@@ -142,6 +144,9 @@
       "vowelNeuter": [
         "i"
       ],
+      "vowelOther": [
+        "lvs"
+      ],
       "consonant": [
         "n",
         "ng",
@@ -194,9 +199,13 @@
       "vowelNeuter": [
         "i"
       ],
+      "vowelOther": [
+        "lvs"
+      ],
       "consonant": [
         "kTag",
         "khTag",
+        "hTag",
         "gTag",
         "g",
         "ng",
@@ -403,6 +412,7 @@
         "tMag",
         "t",
         "d",
+        "dhMag",
         "n",
         "pMag",
         "p",
