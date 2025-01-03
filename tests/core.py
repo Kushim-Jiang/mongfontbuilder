@@ -9,17 +9,16 @@ import ufoLib2
 from fontTools import unicodedata
 from mongfontbuilder.data import aliases
 from ufo2ft import compileTTF
+from utils import parse_code, parse_glyphs, test, writingSystemToLocaleID
 
-sys.path.append(str(Path(__file__).parent / ".."))
-import tests
-from tests import parse_code, parse_glyphs, test, writingSystemToLocaleID
+import data
 
 
 def main() -> None:
     _, font = sys.argv
 
     for writingSystem in writingSystemToLocaleID:
-        path = files(tests) / "data" / f"core-{writingSystem}.tsv"
+        path = files(data) / f"core-{writingSystem}.tsv"
         with path.open(encoding="utf-8") as f:
             rules = [i for i in csv.reader(f, delimiter="\t") if i and not i[0].startswith("#")]
 

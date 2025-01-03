@@ -5,17 +5,16 @@ from pathlib import Path
 
 import yaml
 from mongfontbuilder import UTNGlyphName
+from utils import get_units, parse_code, parse_glyphs, test, writingSystemToLocaleID
 
-sys.path.append(str(Path(__file__).parent / ".."))
-import tests
-from tests import get_units, parse_code, parse_glyphs, test, writingSystemToLocaleID
+import data
 
 
 def main() -> None:
     _, font = sys.argv
 
     for writingSystem in writingSystemToLocaleID:
-        path = files(tests) / "data" / f"eac-{writingSystem}.json"
+        path = files(data) / f"eac-{writingSystem}.json"
         if not path.is_file():
             continue
         with path.open(encoding="utf-8") as f:
@@ -34,7 +33,7 @@ def main() -> None:
                 )
 
 
-path = files(tests) / "data" / "menksoft.yaml"
+path = files(data) / "menksoft.yaml"
 with path.open(encoding="utf-8") as f:
     menksoftData: dict[int, str | int | None] = yaml.safe_load(f)
 

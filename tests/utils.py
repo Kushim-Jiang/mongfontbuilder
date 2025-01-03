@@ -7,8 +7,6 @@ from fontTools import unicodedata
 from mongfontbuilder import UTNGlyphName
 from mongfontbuilder.data import LocaleID, aliases
 
-repo = Path(__file__).parent / ".."
-
 writingSystemToLocaleID: dict[str, LocaleID] = {
     "hud": "MNG",
     "hag": "MNGx",
@@ -67,7 +65,7 @@ def test(codes: str, index: str, result: str, goal: str):
         print(f"res:  {result}\ngoal: {goal}\n=====")
 
 
-def parse_glyphs(text: str, font: Path = repo / "temp" / "DraftNew-Regular.otf") -> str:
+def parse_glyphs(text: str, font: Path) -> str:
     from uharfbuzz import Blob, Buffer, Face, Font, shape  # type: ignore
 
     hbFont = Font(Face(Blob.from_file_path(font)))
