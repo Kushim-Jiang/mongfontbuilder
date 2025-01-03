@@ -6,8 +6,9 @@
 
   let { id, position }: Props = $props();
 
-  import { joiningPositions, type JoiningPosition, type WrittenUnitID } from "../../../data/writtenUnits";
+  import { type WrittenUnitID } from "../../../data/writtenUnits";
   import { variants, type FVS } from "../../../data/variants";
+  import { joiningPositions, type JoiningPosition } from "../../../data/misc";
 
   import LetterVariant from "./LetterVariant.svelte";
 

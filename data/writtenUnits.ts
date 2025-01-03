@@ -1,11 +1,11 @@
-export const joiningPositions = ["isol", "init", "medi", "fina"] as const;
-export type JoiningPosition = (typeof joiningPositions)[number];
+import type { JoiningPosition } from "./misc";
+
+export type WrittenUnitID = keyof typeof writtenUnits;
 
 type WrittenUnit = Partial<Record<JoiningPosition, WrittenUnitVariant>>;
 type WrittenUnitVariant = {
   archaic?: true;
 };
-export type WrittenUnitID = keyof typeof writtenUnits;
 
 export const writtenUnits = {
   A: {

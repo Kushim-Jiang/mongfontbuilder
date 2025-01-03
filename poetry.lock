@@ -46,6 +46,32 @@ fonttools = ">=4.0.2"
 pyclipper = ">=1.1.0.post1"
 
 [[package]]
+name = "cattrs"
+version = "24.1.2"
+description = "Composable complex class support for attrs and dataclasses."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "cattrs-24.1.2-py3-none-any.whl", hash = "sha256:67c7495b760168d931a10233f979b28dc04daf853b30752246f4f8471c6d68d0"},
+    {file = "cattrs-24.1.2.tar.gz", hash = "sha256:8028cfe1ff5382df59dd36474a86e02d817b06eaf8af84555441bac915d2ef85"},
+]
+
+[package.dependencies]
+attrs = ">=23.1.0"
+exceptiongroup = {version = ">=1.1.1", markers = "python_version < \"3.11\""}
+typing-extensions = {version = ">=4.1.0,<4.6.3 || >4.6.3", markers = "python_version < \"3.11\""}
+
+[package.extras]
+bson = ["pymongo (>=4.4.0)"]
+cbor2 = ["cbor2 (>=5.4.6)"]
+msgpack = ["msgpack (>=1.0.5)"]
+msgspec = ["msgspec (>=0.18.5)"]
+orjson = ["orjson (>=3.9.2)"]
+pyyaml = ["pyyaml (>=6.0)"]
+tomlkit = ["tomlkit (>=0.11.8)"]
+ujson = ["ujson (>=5.7.0)"]
+
+[[package]]
 name = "cffsubr"
 version = "0.3.0"
 description = "Standalone CFF subroutinizer based on the AFDKO tx tool"
@@ -744,6 +770,17 @@ files = [
 fonttools = ">=4.43.0,<5.0.0"
 
 [[package]]
+name = "typing-extensions"
+version = "4.12.2"
+description = "Backported and Experimental Type Hints for Python 3.8+"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"},
+    {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},
+]
+
+[[package]]
 name = "ufo2ft"
 version = "3.3.1"
 description = "A bridge between UFOs and FontTools."
@@ -929,4 +966,4 @@ testing = ["coverage", "pytest", "pytest-randomly", "pytest-xdist"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "995b59b2c186b3cc85156ba79925a59aedd0e00c1204379f300ad35a3a87f6fb"
+content-hash = "cfc020d364d85d9669c028eb8e05e0d49a4669b34b84a16e4936ef69a3831598"

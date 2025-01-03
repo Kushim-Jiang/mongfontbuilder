@@ -1,10 +1,10 @@
+export type LocaleID = keyof typeof locales;
+export type Condition = (typeof locales)[LocaleID]["conditions"][number];
+
 type Locale = {
   conditions: string[];
   categories: Record<string, string[]>;
 };
-
-export type LocaleID = keyof typeof locales;
-export type Condition = (typeof locales)[LocaleID]["conditions"][number];
 
 export const locales = {
   MNG: {

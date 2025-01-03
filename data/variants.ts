@@ -1,21 +1,24 @@
 import type { LocaleID, Condition } from "./locales";
-import type { JoiningPosition, WrittenUnitID } from "./writtenUnits";
+import type { WrittenUnitID } from "./writtenUnits";
+import type { CharacterName, JoiningPosition } from "./misc";
 
 export type FVS = 0 | 1 | 2 | 3 | 4;
-type VariantReference = [JoiningPosition, FVS, LocaleID | null];
+
 type Variant = {
-  written: WrittenUnitID[] | VariantReference;
+  written: Written;
   locales: Partial<Record<LocaleID, VariantLocaleData>>;
 };
 type VariantLocaleData = {
-  written?: WrittenUnitID[] | VariantReference;
+  written?: Written;
   conditions?: Condition[];
   gb?: string;
   eac?: string;
 };
+type Written = WrittenUnitID[] | VariantReference;
+type VariantReference = [JoiningPosition, FVS, LocaleID | null];
 
 export const variants: Record<
-  string,
+  CharacterName,
   Record<JoiningPosition, Partial<Record<FVS, Variant>>>
 > = {
   "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER": {
