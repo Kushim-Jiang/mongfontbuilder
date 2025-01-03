@@ -7,8 +7,8 @@
 
   let { charName, position, fvs }: Props = $props();
 
-  import type { JoiningPosition } from "../../../data/misc";
-  import type { FVS } from "../../../data/variants";
+  import type { JoiningPosition } from "../data/misc";
+  import type { FVS } from "../data/variants";
 
   import { nameToCP } from "./utils";
 

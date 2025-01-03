@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { LocaleID } from "../../../../data/locales";
-  import { aliases } from "../../../../data/aliases";
-  import { joiningPositions, type JoiningPosition } from "../../../../data/misc";
-  import { variants, type FVS } from "../../../../data/variants";
+  import type { LocaleID } from "../data/locales";
+  import { aliases } from "../data/aliases";
+  import { joiningPositions, type JoiningPosition } from "../data/misc";
+  import { variants, type FVS } from "../data/variants";
 
-  import LetterVariant from "../../components/LetterVariant.svelte";
-  import { nameToCP, hexFromCP } from "../../components/utils";
+  import LetterVariant from "./LetterVariant.svelte";
+  import { nameToCP, hexFromCP } from "./utils";
 
   const locale: LocaleID = "MNG";
 

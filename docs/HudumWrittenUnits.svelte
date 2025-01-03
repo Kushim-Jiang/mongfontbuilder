@@ -1,7 +1,8 @@
 <script>
-  import { writtenUnits } from "../../../../data/writtenUnits";
-  import { joiningPositions } from "../../../../data/misc";
-  import WrittenUnitVariant from "../../components/WrittenUnitVariant.svelte";
+  import { writtenUnits } from "../data/writtenUnits";
+  import { joiningPositions } from "../data/misc";
+
+  import WrittenUnitVariant from "./WrittenUnitVariant.svelte";
 </script>
 
 <table>
