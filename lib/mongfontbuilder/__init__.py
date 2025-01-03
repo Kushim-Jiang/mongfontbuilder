@@ -3,6 +3,7 @@ from collections.abc import Iterable
 from dataclasses import dataclass
 from importlib.resources import files
 
+import yaml
 from fontTools.feaLib.ast import FeatureFile
 from fontTools.feaLib.parser import Parser
 from fontTools.misc.transform import Identity
@@ -17,7 +18,7 @@ def makeFeatureFile(availableGlyphs: Iterable[str] = ()) -> FeatureFile:
 
     assert __package__
     path = files(__package__) / "otl" / "main.fea"
-    with path.open() as f:
+    with path.open(encoding="utf-8") as f:
         return Parser(featurefile=f, glyphNames=availableGlyphs).parse()
 
 
@@ -90,7 +91,15 @@ def constructGlyphSet(
     # Load data files:
 
     nominal_mapping = dict[str, str]()  # FIXME
-    expected_glyph_names = dict[str, dict[str, None]]()  # FIXME
+
+    expected_glyph_names = dict[str, dict[str, None]]()
+    assert __package__
+    dir = files(__package__) / "data" / "glyphs"
+    suffix = ".yaml"
+    for path in dir.iterdir():
+        if path.name.endswith(suffix):
+            with path.open(encoding="utf-8") as f:
+                expected_glyph_names[path.name.removesuffix(suffix)] = yaml.safe_load(f)
 
     # variant glyphs
     for glyph_name in expected_glyph_names["variants"]:

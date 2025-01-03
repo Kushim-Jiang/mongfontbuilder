@@ -9,9 +9,8 @@ from fontTools.ttLib import TTFont
 from fontTools.ttLib.tables._n_a_m_e import table__n_a_m_e
 from glyphsLib.builder import UFOBuilder
 from glyphsLib.parser import load
-from ufoLib2.objects import Font, Info
-
 from mongfontbuilder import constructGlyphSet, makeFeatureFile
+from ufoLib2.objects import Font, Info
 
 parser = argparse.ArgumentParser()
 parser.add_argument("font", type=Path)
@@ -25,7 +24,7 @@ parser.add_argument("--output-dir", type=Path)
 parser.add_argument("--debug", action="store_true")
 
 
-def main():
+def main() -> None:
     args = parser.parse_args()
     font_path: Path = args.font
     glyph_name_mapping_path: Path | None = args.glyph_name_mapping
@@ -41,7 +40,7 @@ def main():
 
     glyph_name_mapping: dict[str, str] = {}
     if glyph_name_mapping_path:
-        with glyph_name_mapping_path.open() as f:
+        with glyph_name_mapping_path.open(encoding="utf-8") as f:
             data: dict[str, str | None | Literal[False]] = yaml.safe_load(f)
             for source_name, utn_name in data.items():
                 glyph_name_mapping[source_name] = utn_name or source_name
