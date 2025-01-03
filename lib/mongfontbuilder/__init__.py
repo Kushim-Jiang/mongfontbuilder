@@ -1,29 +1,24 @@
 import re
 from collections.abc import Iterable
 from dataclasses import dataclass
-from importlib import resources
+from importlib.resources import files
 
-import yaml
 from fontTools.feaLib.ast import FeatureFile
 from fontTools.feaLib.parser import Parser
 from fontTools.misc.transform import Identity
 from ufoLib2.objects import Component, Font, Glyph
 
-_files = resources.files(__package__ or "")
-dataDir = _files / "data"
-otlDir = _files / "otl"
 
-
-def makeFeatureFile(availableGlyphs: Iterable[str] = set()) -> FeatureFile:
+def makeFeatureFile(availableGlyphs: Iterable[str] = ()) -> FeatureFile:
     """
     Specify `availableGlyphs` to validate the glyph set against the feature file’s requirement.
     An empty set is ignored by `Parser`.
     """
 
-    return Parser(
-        featurefile=otlDir / "main.fea",
-        glyphNames=availableGlyphs,
-    ).parse()
+    assert __package__
+    path = files(__package__) / "otl" / "main.fea"
+    with path.open() as f:
+        return Parser(featurefile=f, glyphNames=availableGlyphs).parse()
 
 
 @dataclass
@@ -94,14 +89,8 @@ def constructGlyphSet(
 
     # Load data files:
 
-    with (dataDir / "representative-glyphs.yaml").open() as f:
-        nominal_mapping: dict[str, str] = yaml.safe_load(f)
-
-    expected_glyph_names = dict[str, dict[str, None]]()
-    with resources.as_file(dataDir / "glyphs") as directory:
-        for path in directory.glob("*.yaml"):
-            with path.open() as f:
-                expected_glyph_names[path.stem] = yaml.safe_load(f)
+    nominal_mapping = dict[str, str]()  # FIXME
+    expected_glyph_names = dict[str, dict[str, None]]()  # FIXME
 
     # variant glyphs
     for glyph_name in expected_glyph_names["variants"]:
