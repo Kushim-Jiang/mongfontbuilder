@@ -1,3 +1,5 @@
-from mongfontbuilder import VariantName
+from mongfontbuilder import GlyphIdentity
 
-print(VariantName.parse("u0020_u0021.AaB2S.init._medi"))
+a = GlyphIdentity.parse("u1820.A.init")
+print(repr(a))
+b = GlyphIdentity.parse("u1820.A.init")
