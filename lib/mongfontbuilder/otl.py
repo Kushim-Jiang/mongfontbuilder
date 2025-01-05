@@ -1,73 +1,68 @@
 from tptq.feacomposer import FeaComposer
 
-requiredWritingSystems = {"hud"}
+from .data import LocaleID
 
-assert requiredWritingSystems
 
-languageSystems = {"mong": set()}
-if "hud" in requiredWritingSystems or "hag" in requiredWritingSystems:
-    languageSystems["mong"].add("MNG")
-if "tod" in requiredWritingSystems or "tag" in requiredWritingSystems:
-    languageSystems["mong"].add("TOD")
-if "sib" in requiredWritingSystems:
-    languageSystems["mong"].add("SIB")
-if "man" in requiredWritingSystems or "mag" in requiredWritingSystems:
-    languageSystems["mong"].add("MCH")
-c = FeaComposer(languageSystems)
+def compose(locales: list[LocaleID]) -> FeaComposer:
+    c = FeaComposer(
+        languageSystems={
+            "mong": {"dflt"} | {i.removesuffix("x") for i in locales},
+        }
+    )
 
-### glyph class definition for letters
+    ### glyph class definition for letters
 
-### glyph class definition for categories
+    ### glyph class definition for categories
 
-### cursive joining
+    ### cursive joining
 
-defaultForms = {
-    "isol": {"uni1820": "uni1820.AA.isol"},
-    "init": {"uni1820": "uni1820.AA.init"},
-    "medi": {"uni1820": "uni1820.A.medi"},
-    "fina": {"uni1820": "uni1820.A.fina"},
-}
-for joiningForm in ["isol", "init", "medi", "fina"]:
-    with c.Lookup(feature=joiningForm, name=f"IIa.{joiningForm}"):
-        for nominalGlyph, defaultGlyph in defaultForms.get(joiningForm, {}).items():
-            c.sub(nominalGlyph, defaultGlyph)
+    defaultForms = {
+        "isol": {"uni1820": "uni1820.AA.isol"},
+        "init": {"uni1820": "uni1820.AA.init"},
+        "medi": {"uni1820": "uni1820.A.medi"},
+        "fina": {"uni1820": "uni1820.A.fina"},
+    }
+    for joiningForm in ["isol", "init", "medi", "fina"]:
+        with c.Lookup(feature=joiningForm, name=f"IIa.{joiningForm}"):
+            for nominalGlyph, defaultGlyph in defaultForms.get(joiningForm, {}).items():
+                c.sub(nominalGlyph, defaultGlyph)
 
-### rclt
+    ### rclt
 
-# control character: preprocessing
+    # control character: preprocessing
 
-# III.1: Phonetic - Chachlag
+    # III.1: Phonetic - Chachlag
 
-# III.2: Phonetic - Syllabic
+    # III.2: Phonetic - Syllabic
 
-# III.3: Phonetic - Particle
+    # III.3: Phonetic - Particle
 
-# III.4: Graphemic - Devsger
+    # III.4: Graphemic - Devsger
 
-# III.5: Graphemic - Post bowed
+    # III.5: Graphemic - Post bowed
 
-# III.6: Uncaptured - FVS
+    # III.6: Uncaptured - FVS
 
-# IIb.1: ligature
+    # IIb.1: ligature
 
-# IIb.2: cleanup of format controls
+    # IIb.2: cleanup of format controls
 
-# IIb.3: optional treatments
+    # IIb.3: optional treatments
 
-### vert
+    ### vert
 
-# Ib: vertical punctuation
+    # Ib: vertical punctuation
 
-### rlig
+    ### rlig
 
-# Ib: punctuation ligature
+    # Ib: punctuation ligature
 
-### vpal
+    ### vpal
 
-# Ib: proportional punctuation
+    # Ib: proportional punctuation
 
-### mark
+    ### mark
 
-# Ib: marks position
+    # Ib: marks position
 
-print(c.code())
+    return c

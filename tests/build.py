@@ -46,6 +46,7 @@ def main() -> None:
                 glyph_name_mapping[source_name] = utn_name or source_name
 
     constructGlyphSet(ufo, glyph_name_mapping)
+    ufo.features.text = makeFeatureFile(availableGlyphs=ufo.keys()).asFea()
 
     build(
         ufo=ufo,
@@ -73,8 +74,6 @@ def build(
     if not keep_info:
         ufo.info = Info()  # drop all existing info data
     ufo.info.familyName = family_name
-
-    ufo.features.text = makeFeatureFile(availableGlyphs=ufo.keys()).asFea()
 
     with TemporaryDirectory() as temp_dir:
         FontProject().run_from_ufos(
