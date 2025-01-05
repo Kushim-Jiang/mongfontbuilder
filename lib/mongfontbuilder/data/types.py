@@ -1,11 +1,10 @@
 from dataclasses import dataclass, field
-from typing import Literal, get_args
 
 from cattrs import register_structure_hook
 
+from .constants import JoiningPosition, joiningPositions
+
 WrittenUnitID = str
-JoiningPosition = Literal["isol", "init", "medi", "fina"]
-joiningPositions: tuple[JoiningPosition] = get_args(JoiningPosition)
 
 
 @dataclass

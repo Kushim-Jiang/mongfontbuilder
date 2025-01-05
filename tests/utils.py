@@ -1,10 +1,11 @@
+import re
+from dataclasses import dataclass
 from importlib.resources import files
 from pathlib import Path
 
 import mongfontbuilder
 import yaml
 from fontTools import unicodedata
-from mongfontbuilder import UTNGlyphName
 from mongfontbuilder.data import LocaleID, aliases
 
 writingSystemToLocaleID: dict[str, LocaleID] = {
@@ -22,6 +23,40 @@ for filename in ["marks.yaml", "format-controls.yaml", "bases.yaml"]:
     path = files(mongfontbuilder) / "data" / "glyphs" / filename
     with path.open(encoding="utf-8") as f:
         glyphNameMapping.update(yaml.safe_load(f))
+
+
+@dataclass
+class UTNGlyphName(str):
+    """
+    Besides the graphical .joining_position, there’s also a joining position in terms of shaping logic that may appear in a glyph name. For example, uni1828.N.init._isol is an isol glyph in terms of shaping, but graphically it’s actually N.init.
+    """
+
+    uni_name: str | None
+    written_units: list[str]
+    joining_position: str | None  # isol | init | medi | fina
+
+    def __init__(self, name: str):
+        parts = name.split(".")
+        if len(parts) == 1:
+            self.uni_name, self.written_units, self.joining_position = parts[0], [], None
+            return
+
+        if len(parts) == 3:
+            self.uni_name = parts[0]
+            written_units_part, self.joining_position = parts[1:]
+        else:  # 2
+            self.uni_name = None
+            written_units_part, self.joining_position = parts
+        self.written_units = re.findall("[A-Z][a-z0-9]*", written_units_part)
+
+    def code_point(self) -> int | None:
+        if self.uni_name:
+            return int(self.uni_name.removeprefix("uni"), 16)
+        else:
+            return None
+
+    def code_point_agnostic(self) -> str:
+        return ".".join(i for i in ["".join(self.written_units), self.joining_position] if i)
 
 
 def get_units(utn_name: UTNGlyphName) -> str:

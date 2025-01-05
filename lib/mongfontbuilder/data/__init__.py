@@ -1,13 +1,13 @@
 import json
-from importlib.resources import open_text
+from importlib.resources import files
 
 from cattrs import structure
 
+from .constants import JoiningPosition
 from .types import (
     FVS,
     Alias,
     CharacterName,
-    JoiningPosition,
     Locale,
     LocaleID,
     Variant,
@@ -16,26 +16,27 @@ from .types import (
 )
 
 assert __package__
+dir = files(__package__)
 
-with open_text(__package__, "writtenUnits.json") as f:
+with (dir / "writtenUnits.json").open(encoding="utf-8") as f:
     writtenUnits = structure(
         json.load(f),
         dict[WrittenUnitID, dict[JoiningPosition, WrittenUnitVariant]],
     )
 
-with open_text(__package__, "locales.json") as f:
+with (dir / "locales.json").open(encoding="utf-8") as f:
     locales = structure(
         json.load(f),
         dict[LocaleID, Locale],
     )
 
-with open_text(__package__, "aliases.json") as f:
+with (dir / "aliases.json").open(encoding="utf-8") as f:
     aliases = structure(
         json.load(f),
         dict[CharacterName, Alias],
     )
 
-with open_text(__package__, "variants.json") as f:
+with (dir / "variants.json").open(encoding="utf-8") as f:
     variants = structure(
         json.load(f),
         dict[CharacterName, dict[JoiningPosition, dict[FVS, Variant]]],

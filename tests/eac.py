@@ -4,8 +4,14 @@ from importlib.resources import files
 from pathlib import Path
 
 import yaml
-from mongfontbuilder import UTNGlyphName
-from utils import get_units, parse_code, parse_glyphs, test, writingSystemToLocaleID
+from utils import (
+    UTNGlyphName,
+    get_units,
+    parse_code,
+    parse_glyphs,
+    test,
+    writingSystemToLocaleID,
+)
 
 import data
 

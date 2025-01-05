@@ -9,7 +9,7 @@ from fontTools.ttLib import TTFont
 from fontTools.ttLib.tables._n_a_m_e import table__n_a_m_e
 from glyphsLib.builder import UFOBuilder
 from glyphsLib.parser import load
-from mongfontbuilder import constructGlyphSet, makeFeatureFile
+from mongfontbuilder import constructFont
 from ufoLib2.objects import Font, Info
 
 parser = argparse.ArgumentParser()
@@ -45,8 +45,7 @@ def main() -> None:
             for source_name, utn_name in data.items():
                 glyph_name_mapping[source_name] = utn_name or source_name
 
-    constructGlyphSet(ufo, glyph_name_mapping)
-    ufo.features.text = makeFeatureFile(availableGlyphs=ufo.keys()).asFea()
+    constructFont(ufo)
 
     build(
         ufo=ufo,
