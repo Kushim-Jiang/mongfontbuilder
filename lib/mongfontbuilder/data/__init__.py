@@ -3,7 +3,7 @@ from importlib.resources import files
 
 from cattrs import structure
 
-from .constants import JoiningPosition
+from .misc import JoiningPosition
 from .types import (
     FVS,
     Alias,

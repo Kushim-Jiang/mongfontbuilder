@@ -69,11 +69,11 @@ class GlyphIdentity:
             suffix = self.suffixes[0]
             if suffix in pseudoPositionSuffixes:
                 position = suffix.removeprefix("_")
-                assert position in data.constants.joiningPositions
+                assert position in data.misc.joiningPositions
                 return position
 
 
-pseudoPositionSuffixes = ["_" + i for i in data.constants.joiningPositions]
+pseudoPositionSuffixes = ["_" + i for i in data.misc.joiningPositions]
 
 
 def constructGlyphSet(font: Font, initPadding: float = 40, finaPadding: float = 100) -> None:

@@ -1,8 +1,9 @@
 from dataclasses import dataclass, field
+from typing import Literal
 
 from cattrs import register_structure_hook
 
-from .constants import JoiningPosition, joiningPositions
+from .misc import JoiningPosition, joiningPositions
 
 WrittenUnitID = str
 
@@ -12,7 +13,7 @@ class WrittenUnitVariant:
     archaic: bool = False
 
 
-LocaleID = str
+LocaleID = Literal["MNG", "MNGx", "TOD", "TODx", "SIB", "MCH", "MCHx"]
 Condition = str
 
 
