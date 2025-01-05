@@ -787,13 +787,13 @@ files = [
 
 [[package]]
 name = "tptq-feacomposer"
-version = "1.2.0"
+version = "1.3.0"
 description = "A feaLib wrapper for composing FEA code in Python"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "tptq_feacomposer-1.2.0-py3-none-any.whl", hash = "sha256:dcc1f4cec70cfd841643f50b2cf522d1974a476ff8ffd9f47f032bae71aece76"},
-    {file = "tptq_feacomposer-1.2.0.tar.gz", hash = "sha256:3aa64cd05400a1b582b08653f1da8fc58341653f7a110c12de12a94dc9c2f452"},
+    {file = "tptq_feacomposer-1.3.0-py3-none-any.whl", hash = "sha256:0e76a1fa6307f1dbc406aee1cfe98e85dfb8cf89ea63428c28f41f2b1c46a4eb"},
+    {file = "tptq_feacomposer-1.3.0.tar.gz", hash = "sha256:d11dad6ddfde46a66f919ae94d7d3344977061a1a570edebee7431ebcc4b5f6e"},
 ]
 
 [package.dependencies]
@@ -996,4 +996,4 @@ testing = ["coverage", "pytest", "pytest-randomly", "pytest-xdist"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "cfc020d364d85d9669c028eb8e05e0d49a4669b34b84a16e4936ef69a3831598"
+content-hash = "edf9f1629b8e8cefe87f27923b67ceba036ef80302098d73fe56fe5fd1bf5da7"

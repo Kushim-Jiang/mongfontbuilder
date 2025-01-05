@@ -4,7 +4,7 @@ from mongfontbuilder.otl import compose
 
 def main() -> None:
     composer = compose(locales=[*locales.keys()])
-    print(composer.code())
+    print(composer.asFeatureFile())
 
 
 if __name__ == "__main__":
