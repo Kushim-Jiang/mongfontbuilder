@@ -126,24 +126,24 @@ export const aliases: Record<CharacterName, Alias> = {
   },
   "MONGOLIAN LETTER KA": {
     MNG: "k2",
-    TOD: "kTag",
+    TOD: "kX",
     SIB: "kh",
     MCH: "kh",
   },
   "MONGOLIAN LETTER KHA": {
     MNG: "k",
-    TOD: "khTag",
+    TOD: "khX",
   },
   "MONGOLIAN LETTER TSA": {
     MNG: "c",
-    TOD: "chTag",
+    TOD: "chX",
   },
   "MONGOLIAN LETTER ZA": {
     MNG: "z",
   },
   "MONGOLIAN LETTER HAA": {
     MNG: "hh",
-    TOD: "hTag",
+    TOD: "hX",
   },
   "MONGOLIAN LETTER ZRA": {
     MNG: "rh",
@@ -195,11 +195,11 @@ export const aliases: Record<CharacterName, Alias> = {
     TOD: "g",
   },
   "MONGOLIAN LETTER TODO MA": {
-    MNG: "mHag",
+    MNG: "mX",
     TOD: "m",
   },
   "MONGOLIAN LETTER TODO TA": {
-    MNG: "thHag",
+    MNG: "thX",
     TOD: "t",
   },
   "MONGOLIAN LETTER TODO DA": {
@@ -212,11 +212,11 @@ export const aliases: Record<CharacterName, Alias> = {
     TOD: "j",
   },
   "MONGOLIAN LETTER TODO TSA": {
-    MNG: "crHag",
+    MNG: "crX",
     TOD: "c",
   },
   "MONGOLIAN LETTER TODO YA": {
-    MNG: "yHag",
+    MNG: "yX",
     TOD: "y",
   },
   "MONGOLIAN LETTER TODO WA": {
@@ -229,14 +229,14 @@ export const aliases: Record<CharacterName, Alias> = {
     TOD: "gh",
   },
   "MONGOLIAN LETTER TODO HAA": {
-    MNG: "hHag",
+    MNG: "hX",
     TOD: "hh",
   },
   "MONGOLIAN LETTER TODO JIA": {
     TOD: "jy",
   },
   "MONGOLIAN LETTER TODO NIA": {
-    MNG: "nyHag",
+    MNG: "nyX",
     TOD: "ny",
   },
   "MONGOLIAN LETTER TODO DZA": {
@@ -368,121 +368,121 @@ export const aliases: Record<CharacterName, Alias> = {
     MCH: "tribaluda",
   },
   "MONGOLIAN LETTER ALI GALI A": {
-    MNG: "aHag",
-    MCH: "aaMag",
+    MNG: "aX",
+    MCH: "aaX",
   },
   "MONGOLIAN LETTER ALI GALI I": {
-    MNG: "iHag",
+    MNG: "iX",
   },
   "MONGOLIAN LETTER ALI GALI KA": {
-    MNG: "kHag",
-    TOD: "gTag",
+    MNG: "kX",
+    TOD: "gX",
   },
   "MONGOLIAN LETTER ALI GALI NGA": {
-    MNG: "ngHag",
-    TOD: "ngTag",
+    MNG: "ngX",
+    TOD: "ngX",
   },
   "MONGOLIAN LETTER ALI GALI CA": {
-    MNG: "cHag",
+    MNG: "cX",
   },
   "MONGOLIAN LETTER ALI GALI TTA": {
-    MNG: "trHag",
-    TOD: "trTag",
+    MNG: "trX",
+    TOD: "trX",
   },
   "MONGOLIAN LETTER ALI GALI TTHA": {
-    MNG: "trhHag",
-    TOD: "trhTag",
+    MNG: "trhX",
+    TOD: "trhX",
   },
   "MONGOLIAN LETTER ALI GALI DDA": {
-    MNG: "drHag",
-    TOD: "drTag",
+    MNG: "drX",
+    TOD: "drX",
   },
   "MONGOLIAN LETTER ALI GALI NNA": {
-    MNG: "nrHag",
-    TOD: "nrTag",
-    MCH: "nrMag",
+    MNG: "nrX",
+    TOD: "nrX",
+    MCH: "nrX",
   },
   "MONGOLIAN LETTER ALI GALI TA": {
-    MNG: "tHag",
-    TOD: "tTag",
+    MNG: "tX",
+    TOD: "tX",
   },
   "MONGOLIAN LETTER ALI GALI DA": {
-    MNG: "dHag",
+    MNG: "dX",
   },
   "MONGOLIAN LETTER ALI GALI PA": {
-    MNG: "pHag",
-    TOD: "pTag",
-    MCH: "pMag",
+    MNG: "pX",
+    TOD: "pX",
+    MCH: "pX",
   },
   "MONGOLIAN LETTER ALI GALI PHA": {
-    MNG: "phHag",
+    MNG: "phX",
   },
   "MONGOLIAN LETTER ALI GALI SSA": {
-    MNG: "shHag",
-    TOD: "shTag",
+    MNG: "shX",
+    TOD: "shX",
   },
   "MONGOLIAN LETTER ALI GALI ZHA": {
-    MNG: "zrHag",
+    MNG: "zrX",
   },
   "MONGOLIAN LETTER ALI GALI ZA": {
-    MNG: "zHag",
-    TOD: "zTag",
+    MNG: "zX",
+    TOD: "zX",
   },
   "MONGOLIAN LETTER ALI GALI AH": {
-    MNG: "qHag",
-    TOD: "qTag",
+    MNG: "qX",
+    TOD: "qX",
   },
   "MONGOLIAN LETTER TODO ALI GALI ZHA": {
-    TOD: "zhTag",
+    TOD: "zhX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI GHA": {
-    MCH: "ghMag",
+    MCH: "ghX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI NGA": {
-    MCH: "ngMag",
+    MCH: "ngX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI CA": {
-    MCH: "cMag",
+    MCH: "cX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI JHA": {
-    MCH: "jhMag",
+    MCH: "jhX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI TTA": {
-    MCH: "trMag",
+    MCH: "trX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI DDHA": {
-    MCH: "drhMag",
+    MCH: "drhX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI TA": {
-    MCH: "tMag",
+    MCH: "tX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI DHA": {
-    MCH: "dhMag",
+    MCH: "dhX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI SSA": {
-    MCH: "shMag",
+    MCH: "shX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI CYA": {
-    MCH: "crMag",
+    MCH: "crX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI ZHA": {
-    MCH: "zhMag",
+    MCH: "zhX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI ZA": {
-    MCH: "zMag",
+    MCH: "zX",
   },
   "MONGOLIAN LETTER ALI GALI HALF U": {
-    MNG: "waHag",
-    TOD: "waTag",
+    MNG: "waX",
+    TOD: "waX",
   },
   "MONGOLIAN LETTER ALI GALI HALF YA": {
-    TOD: "yTag",
+    TOD: "yX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI BHA": {
-    MCH: "bhMag",
+    MCH: "bhX",
   },
   "MONGOLIAN LETTER MANCHU ALI GALI LHA": {
-    MCH: "lhMag",
+    MCH: "lhX",
   },
   "ZERO WIDTH NON-JOINER": "zwnj",
   "ZERO WIDTH JOINER": "zwj",
