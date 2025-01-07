@@ -25,7 +25,7 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
     for joiningForm in ["isol", "init", "medi", "fina"]:
         with c.Lookup(feature=joiningForm, name=f"IIa.{joiningForm}"):
             for nominalGlyph, defaultGlyph in defaultForms.get(joiningForm, {}).items():
-                c.sub(nominalGlyph, defaultGlyph)
+                c.sub(nominalGlyph, by=defaultGlyph)
 
     ### rclt
 
