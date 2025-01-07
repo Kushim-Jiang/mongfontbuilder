@@ -15,7 +15,11 @@ type VariantLocaleData = {
   eac?: string;
 };
 type Written = WrittenUnitID[] | VariantReference;
-type VariantReference = [JoiningPosition, FVS, LocaleID | null];
+type VariantReference = [
+  position: JoiningPosition,
+  fvs: FVS,
+  locale?: LocaleID,
+];
 
 export const variants: Record<
   CharacterName,
@@ -24,7 +28,7 @@ export const variants: Record<
   "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER": {
     isol: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -41,7 +45,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -75,7 +79,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -1054,7 +1058,7 @@ export const variants: Record<
   "MONGOLIAN LETTER NA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -1086,7 +1090,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MNG: {
             gb: "0007 na second isolated form",
@@ -1270,7 +1274,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ANG": {
     isol: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -1292,7 +1296,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -1362,7 +1366,7 @@ export const variants: Record<
   "MONGOLIAN LETTER BA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -1484,7 +1488,7 @@ export const variants: Record<
   "MONGOLIAN LETTER PA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -1534,7 +1538,7 @@ export const variants: Record<
   "MONGOLIAN LETTER QA": {
     isol: {
       "0": {
-        written: ["init", 3, null],
+        written: ["init", 3],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -1544,7 +1548,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MNG: {
             gb: "00C8 qa second isolated form",
@@ -1553,7 +1557,7 @@ export const variants: Record<
         },
       },
       "2": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           MNG: {
             gb: "001E qa third isolated form",
@@ -1562,7 +1566,7 @@ export const variants: Record<
         },
       },
       "4": {
-        written: ["init", 4, null],
+        written: ["init", 4],
         locales: {
           MNG: {
             gb: "001B qa fourth isolated form",
@@ -1674,7 +1678,7 @@ export const variants: Record<
   "MONGOLIAN LETTER GA": {
     isol: {
       "0": {
-        written: ["init", 3, null],
+        written: ["init", 3],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -1684,7 +1688,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MNG: {
             gb: "00C7 ga second isolated form",
@@ -1693,7 +1697,7 @@ export const variants: Record<
         },
       },
       "2": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           MNG: {
             gb: "001E ga third isolated form",
@@ -1702,7 +1706,7 @@ export const variants: Record<
         },
       },
       "4": {
-        written: ["init", 4, null],
+        written: ["init", 4],
         locales: {
           MNG: {
             gb: "001B ga fourth isolated form",
@@ -1828,7 +1832,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -1928,7 +1932,7 @@ export const variants: Record<
   "MONGOLIAN LETTER LA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -2072,7 +2076,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -2225,7 +2229,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SHA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -2246,7 +2250,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MNG: {
             gb: "00CB sha second isolated form",
@@ -2348,7 +2352,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -2408,7 +2412,7 @@ export const variants: Record<
   "MONGOLIAN LETTER DA": {
     isol: {
       "0": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -2418,7 +2422,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           MNG: {
             gb: "00CD da second isolated form",
@@ -2496,7 +2500,7 @@ export const variants: Record<
   "MONGOLIAN LETTER CHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -2618,16 +2622,16 @@ export const variants: Record<
             eac: "TZAM1",
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
           SIB: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
             eac: "SCHAM1",
           },
           MCH: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
             eac: "MCHAM1",
           },
@@ -2641,7 +2645,7 @@ export const variants: Record<
   "MONGOLIAN LETTER JA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -2718,7 +2722,7 @@ export const variants: Record<
             eac: "MJM1",
           },
           MCH: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
             eac: "MJAM1",
           },
@@ -2742,7 +2746,7 @@ export const variants: Record<
   "MONGOLIAN LETTER YA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -2763,7 +2767,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MNG: {
             gb: "00B7 ya second isolated form",
@@ -2859,17 +2863,17 @@ export const variants: Record<
             eac: "MYM1",
           },
           SIB: {
-            written: ["medi", 3, null],
+            written: ["medi", 3],
             conditions: ["default"],
             eac: "SYAM1",
           },
           MCH: {
-            written: ["medi", 3, null],
+            written: ["medi", 3],
             conditions: ["default"],
             eac: "MYAM1",
           },
           MCHx: {
-            written: ["medi", 3, null],
+            written: ["medi", 3],
             conditions: ["default"],
           },
         },
@@ -2879,7 +2883,7 @@ export const variants: Record<
   "MONGOLIAN LETTER RA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -2989,7 +2993,7 @@ export const variants: Record<
   "MONGOLIAN LETTER WA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3136,7 +3140,7 @@ export const variants: Record<
   "MONGOLIAN LETTER FA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3186,7 +3190,7 @@ export const variants: Record<
   "MONGOLIAN LETTER KA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3286,21 +3290,21 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
           SIB: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
             eac: "SKAAM1",
           },
           MCH: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
             eac: "MKAAM1",
           },
           MCHx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -3310,7 +3314,7 @@ export const variants: Record<
   "MONGOLIAN LETTER KHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3375,7 +3379,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -3385,7 +3389,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TSA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3450,7 +3454,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -3460,7 +3464,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ZA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3522,7 +3526,7 @@ export const variants: Record<
   "MONGOLIAN LETTER HAA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3596,7 +3600,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ZRA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3646,7 +3650,7 @@ export const variants: Record<
   "MONGOLIAN LETTER LHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3715,7 +3719,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3740,7 +3744,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ZHI": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3764,7 +3768,7 @@ export const variants: Record<
     },
     medi: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3776,7 +3780,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3790,7 +3794,7 @@ export const variants: Record<
   "MONGOLIAN LETTER CHI": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3814,7 +3818,7 @@ export const variants: Record<
     },
     medi: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -3826,7 +3830,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNG: {
             conditions: ["default"],
@@ -4414,7 +4418,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO ANG": {
     isol: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -4429,7 +4433,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -4476,7 +4480,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO BA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -4538,7 +4542,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO PA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -4604,7 +4608,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO QA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -4614,7 +4618,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           TOD: {
             eac: "TQAD2",
@@ -4682,7 +4686,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO GA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -4695,7 +4699,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           TOD: {
             gb: "1889 todo ga feminine isolated form",
@@ -4791,7 +4795,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO MA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -4865,7 +4869,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO TA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -4930,7 +4934,7 @@ export const variants: Record<
             eac: "TTAM1",
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -4940,7 +4944,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO DA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -4993,7 +4997,7 @@ export const variants: Record<
             eac: "TDAM1",
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -5003,7 +5007,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO CHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -5053,7 +5057,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO JA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -5106,7 +5110,7 @@ export const variants: Record<
             eac: "TJAM1",
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -5116,7 +5120,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO TSA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -5181,7 +5185,7 @@ export const variants: Record<
             eac: "TTSAM1",
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -5191,7 +5195,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO YA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -5207,7 +5211,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           TOD: {
             eac: "TYAD2",
@@ -5283,7 +5287,7 @@ export const variants: Record<
             eac: "TYAM1",
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -5293,7 +5297,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO WA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -5354,7 +5358,7 @@ export const variants: Record<
             eac: "TWAM1",
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -5372,7 +5376,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO KA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -5422,7 +5426,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO GAA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -5458,7 +5462,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -5472,7 +5476,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO HAA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -5547,7 +5551,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO JIA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -5583,7 +5587,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -5597,7 +5601,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO NIA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -5651,7 +5655,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MNGx: {
             written: ["Ny"],
@@ -5672,7 +5676,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO DZA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TOD: {
             conditions: ["default"],
@@ -5963,7 +5967,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE IY": {
     isol: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -5981,7 +5985,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6275,7 +6279,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE ANG": {
     isol: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6286,7 +6290,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6323,7 +6327,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE KA": {
     isol: {
       "0": {
-        written: ["init", 3, null],
+        written: ["init", 3],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6332,7 +6336,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           SIB: {
             eac: "SKAD2",
@@ -6340,7 +6344,7 @@ export const variants: Record<
         },
       },
       "2": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           SIB: {
             eac: "SKAD3",
@@ -6447,7 +6451,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE GA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6463,7 +6467,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           SIB: {
             eac: "SGAD2",
@@ -6551,7 +6555,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 2, null],
+        written: ["medi", 2],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6571,7 +6575,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE HA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6587,7 +6591,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           SIB: {
             eac: "SHAD2",
@@ -6675,7 +6679,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 2, null],
+        written: ["medi", 2],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6695,7 +6699,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE PA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6753,7 +6757,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6773,7 +6777,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE SHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6852,7 +6856,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE TA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -6868,7 +6872,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           SIB: {
             eac: "STAD2",
@@ -6998,7 +7002,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE DA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7014,7 +7018,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           SIB: {
             eac: "SDAD2",
@@ -7104,7 +7108,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 2, null],
+        written: ["medi", 2],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7124,7 +7128,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE JA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7159,7 +7163,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7172,7 +7176,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE FA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7207,7 +7211,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7220,7 +7224,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE GAA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7278,7 +7282,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7298,7 +7302,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE HAA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7347,7 +7351,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7364,7 +7368,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE TSA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7422,7 +7426,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7442,7 +7446,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE ZA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7520,7 +7524,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE RAA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7569,7 +7573,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7586,7 +7590,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE CHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7644,7 +7648,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7665,7 +7669,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE ZHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7700,7 +7704,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           SIB: {
             conditions: ["default"],
@@ -7829,7 +7833,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU KA": {
     isol: {
       "0": {
-        written: ["init", 3, null],
+        written: ["init", 3],
         locales: {
           MCH: {
             conditions: ["default"],
@@ -7841,7 +7845,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MCH: {
             eac: "MKAD2",
@@ -7850,7 +7854,7 @@ export const variants: Record<
         },
       },
       "2": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           MCH: {
             eac: "MKAD3",
@@ -7990,7 +7994,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU RA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCH: {
             conditions: ["default"],
@@ -8051,7 +8055,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU FA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           MCH: {
             conditions: ["default"],
@@ -8060,7 +8064,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MCH: {
             conditions: ["default"],
@@ -8115,7 +8119,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 2, null],
+        written: ["medi", 2],
         locales: {
           MCH: {
             conditions: ["default"],
@@ -8128,7 +8132,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ZHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCH: {
             conditions: ["default"],
@@ -8172,7 +8176,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MCH: {
             conditions: ["default"],
@@ -8192,7 +8196,7 @@ export const variants: Record<
         written: ["A", "Aw"],
         locales: {
           MNGx: {
-            written: ["fina", 1, null],
+            written: ["fina", 1],
             conditions: ["default"],
           },
           MCHx: {
@@ -8206,7 +8210,7 @@ export const variants: Record<
         written: ["A", "A"],
         locales: {
           MNGx: {
-            written: ["fina", 1, null],
+            written: ["fina", 1],
             conditions: ["default"],
           },
           MCHx: {
@@ -8220,7 +8224,7 @@ export const variants: Record<
         written: ["A"],
         locales: {
           MNGx: {
-            written: ["fina", 1, null],
+            written: ["fina", 1],
             conditions: ["default"],
           },
           MCHx: {
@@ -8293,7 +8297,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI KA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8338,7 +8342,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -8348,7 +8352,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI NGA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8393,7 +8397,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -8403,7 +8407,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI CA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8445,7 +8449,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI TTA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8490,7 +8494,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -8500,7 +8504,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI TTHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8539,7 +8543,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8554,7 +8558,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI DDA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8562,7 +8566,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           TODx: {
             conditions: ["default"],
@@ -8623,7 +8627,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI NNA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8677,7 +8681,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
           MCHx: {
@@ -8690,7 +8694,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI TA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8744,7 +8748,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI DA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8786,7 +8790,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI PA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8797,7 +8801,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           TODx: {
             conditions: ["default"],
@@ -8855,7 +8859,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 1, null],
+            written: ["medi", 1],
             conditions: ["default"],
           },
           MCHx: {
@@ -8868,7 +8872,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI PHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8910,7 +8914,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI SSA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -8955,7 +8959,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -8965,7 +8969,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI ZHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -9007,7 +9011,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI ZA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -9052,7 +9056,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
         },
@@ -9062,7 +9066,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI AH": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -9101,7 +9105,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
@@ -9116,7 +9120,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO ALI GALI ZHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           TODx: {
             conditions: ["default"],
@@ -9146,7 +9150,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           TODx: {
             conditions: ["default"],
@@ -9158,7 +9162,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI GHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9194,7 +9198,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9206,7 +9210,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI NGA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9236,7 +9240,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9248,7 +9252,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI CA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9278,7 +9282,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9290,7 +9294,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI JHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9320,7 +9324,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9332,7 +9336,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI TTA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9374,7 +9378,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI DDHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9416,7 +9420,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI TA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9424,7 +9428,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MCHx: {},
         },
@@ -9480,7 +9484,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI DHA": {
     isol: {
       "0": {
-        written: ["init", 2, null],
+        written: ["init", 2],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9488,7 +9492,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1, null],
+        written: ["init", 1],
         locales: {
           MCHx: {},
         },
@@ -9532,7 +9536,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 2, null],
+        written: ["medi", 2],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9544,7 +9548,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI SSA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9586,7 +9590,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI CYA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9628,7 +9632,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI ZHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9670,7 +9674,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI ZA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9712,13 +9716,13 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI HALF U": {
     isol: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
           },
           TODx: {
-            written: ["fina", 0, null],
+            written: ["fina", 0],
             conditions: ["default"],
           },
         },
@@ -9726,13 +9730,13 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MNGx: {
             conditions: ["default"],
           },
           TODx: {
-            written: ["fina", 0, null],
+            written: ["fina", 0],
             conditions: ["default"],
           },
         },
@@ -9746,7 +9750,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
-            written: ["fina", 0, null],
+            written: ["fina", 0],
             conditions: ["default"],
           },
         },
@@ -9757,7 +9761,7 @@ export const variants: Record<
         written: ["Wp"],
         locales: {
           MNGx: {
-            written: ["medi", 0, null],
+            written: ["medi", 0],
             conditions: ["default"],
           },
           TODx: {
@@ -9770,7 +9774,7 @@ export const variants: Record<
   "MONGOLIAN LETTER ALI GALI HALF YA": {
     isol: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           TODx: {
             conditions: ["default"],
@@ -9780,7 +9784,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           TODx: {
             conditions: ["default"],
@@ -9818,7 +9822,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI BHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9848,7 +9852,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9860,7 +9864,7 @@ export const variants: Record<
   "MONGOLIAN LETTER MANCHU ALI GALI LHA": {
     isol: {
       "0": {
-        written: ["init", 0, null],
+        written: ["init", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
@@ -9890,7 +9894,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0, null],
+        written: ["medi", 0],
         locales: {
           MCHx: {
             conditions: ["default"],
