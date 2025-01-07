@@ -1,16 +1,56 @@
+from mongfontbuilder.data.types import FVS, Variant, VariantReference
 from tptq.feacomposer import FeaComposer
 
-from .data import LocaleID
+from .data import LocaleID, aliases, locales, variants
+from .data.misc import JoiningPosition, joiningPositions
 
 
-def compose(locales: list[LocaleID]) -> FeaComposer:
+def _getCharacterByAlias(locale: LocaleID, alias: str):
+    for character, localeToAlias in aliases.items():
+        if isinstance(localeToAlias, str):
+            if alias == localeToAlias:
+                return character
+        else:
+            if locale.removesuffix("x") in localeToAlias:
+                if alias == localeToAlias[locale.removesuffix("x")]:
+                    return character
+    raise ValueError(f"no alias {alias} found in {locale}")
+
+
+def _getWrittenUnits(
+    written: list[str] | VariantReference,
+    joiningPositionToVariants: dict[JoiningPosition, dict[FVS, Variant]],
+):
+    if isinstance(written, list):
+        return "".join(written)
+    else:
+        variant = joiningPositionToVariants[written.position][written.fvs]
+        return "".join(variant.written)
+
+
+def compose(requiredLocales: list[LocaleID]) -> FeaComposer:
     c = FeaComposer(
         languageSystems={
-            "mong": {"dflt"} | {i.removesuffix("x") for i in locales},
+            "mong": {"dflt"} | {i.removesuffix("x") for i in requiredLocales},
         }
     )
 
     ### glyph class definition for letters
+    for locale in requiredLocales:
+        letterAliases = [alias for aliases in locales[locale].categories.values() for alias in aliases]
+        for alias in letterAliases:
+            for joiningPosition in joiningPositions:
+                c.namedGlyphClass(
+                    f"{alias}-{locale}.{joiningPosition}",
+                    [
+                        f"{alias}-{locale}.{_getWrittenUnits(variantInfo.written, variants[_getCharacterByAlias(locale, alias)])}.{joiningPosition}"
+                        for variantInfo in variants[_getCharacterByAlias(locale, alias)][joiningPosition].values()
+                    ],
+                )
+            c.namedGlyphClass(
+                f"{alias}-{locale}",
+                [f"@{alias}-{locale}.{position}" for position in joiningPositions],
+            )
 
     ### glyph class definition for categories
 
