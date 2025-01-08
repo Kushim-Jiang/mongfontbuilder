@@ -2322,6 +2322,9 @@
         ],
         "locales": {
           "MNG": {
+            "conditions": [
+              "default"
+            ],
             "gb": "001A qa first final form",
             "eac": "MHM1"
           }
@@ -3479,6 +3482,7 @@
         "locales": {
           "MNG": {
             "conditions": [
+              "default",
               "devsger"
             ],
             "gb": "002D da first final form",

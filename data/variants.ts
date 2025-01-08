@@ -1659,6 +1659,7 @@ export const variants: Record<
         written: ["H"],
         locales: {
           MNG: {
+            conditions: ["default"],
             gb: "001A qa first final form",
             eac: "MHM1",
           },
@@ -2480,7 +2481,7 @@ export const variants: Record<
         written: ["Dd"],
         locales: {
           MNG: {
-            conditions: ["devsger"],
+            conditions: ["default", "devsger"],
             gb: "002D da first final form",
             eac: "MDM1",
           },
