@@ -25,7 +25,12 @@
   "python.analysis.typeCheckingMode": "basic",
   "black-formatter.args": ["--line-length", "100"],
   "isort.args": ["--profile", "black"],
-  "python.testing.pytestArgs": ["tests"],
+  "python.testing.pytestArgs": [
+    "--doctest-modules",
+    "--doctest-report",
+    "ndiff",
+    "lib"
+  ],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true
 }

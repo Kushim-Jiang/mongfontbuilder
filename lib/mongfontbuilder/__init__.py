@@ -34,35 +34,45 @@ def makeFeatureFile(availableGlyphs: Iterable[str] = ()) -> FeatureFile:
 
 
 @dataclass
-class GlyphIdentity:
+class GlyphDescriptor:
     codePoints: list[int]
     writtenUnits: list[WrittenUnitID]
     joiningPosition: JoiningPosition
     suffixes: list[str]
 
     @classmethod
-    def parse(cls, name: str) -> GlyphIdentity:
-        x, y, joiningPosition, *suffixes = name.split(".")
+    def parse(cls, name: str) -> GlyphDescriptor:
+        """
+        >>> GlyphDescriptor.parse('u1820.A.init')
+        GlyphDescriptor(codePoints=[6176], writtenUnits=['A'], joiningPosition='init', suffixes=[])
+        >>> GlyphDescriptor.parse('_A.init')
+        GlyphDescriptor(codePoints=[], writtenUnits=['A'], joiningPosition='init', suffixes=[])
+        """
+
+        x, y, joiningPosition, *suffixes = (
+            "." + name.removeprefix("_")  # _A.init
+            if name.startswith("_")
+            else name  # u1820.A.init
+        ).split(".")
         writtenUnits = re.sub(r"[A-Z]", lambda x: " " + x[0], y).removeprefix(" ").split(" ")
         assert writtenUnits and all(i in data.writtenUnits for i in writtenUnits), name
         assert joiningPosition in data.types.joiningPositions, name
-        return cls(
-            codePoints=[] if x == "_" else [int(i.removeprefix("u"), 16) for i in x.split("_")],
+        instance = cls(
+            codePoints=[int(i.removeprefix("u"), 16) for i in x.split("_")] if x else [],
             writtenUnits=writtenUnits,
             joiningPosition=joiningPosition,
             suffixes=suffixes,
         )
+        assert str(instance) == name
+        return instance
 
     def __str__(self) -> str:
         assert self.writtenUnits, self
-        return ".".join(
-            [
-                "_".join(f"u{i:04X}" for i in self.codePoints) or "_",
-                "".join(self.writtenUnits),
-                self.joiningPosition,
-                *self.suffixes,
-            ]
-        )
+        if self.codePoints:
+            name = "_".join(f"u{i:04X}" for i in self.codePoints) + "."
+        else:
+            name = "_"
+        return name + ".".join(["".join(self.writtenUnits), self.joiningPosition, *self.suffixes])
 
     def pseudoPosition(self) -> JoiningPosition | None:
         if self.suffixes:
@@ -77,22 +87,22 @@ pseudoPositionSuffixes = ["_" + i for i in data.misc.joiningPositions]
 
 
 def constructGlyphSet(font: Font, initPadding: float = 40, finaPadding: float = 100) -> None:
-    existingNameToIdentity = dict[str, GlyphIdentity]()
+    sources = list[GlyphDescriptor]()
     for name in font.keys():
         try:
-            existingIdentity = GlyphIdentity.parse(name)
+            target = GlyphDescriptor.parse(name)
         except:
             continue
-        existingNameToIdentity[name] = existingIdentity
+        sources.append(target)
 
-    def composeGlyph(name: str, members: list[str | float]) -> Glyph:
+    def composeGlyph(name: str, members: list[Glyph | float]) -> Glyph:
         glyph = font.newGlyph(name)
         for member in members:
-            if isinstance(member, str):
+            if isinstance(member, Glyph):
                 component = Component(name)
                 component.move((glyph.width, 0))
                 glyph.components.append(component)
-                glyph.width += font[member].width
+                glyph.width += member.width
             else:
                 glyph.width += member
         return glyph
@@ -116,23 +126,22 @@ def constructGlyphSet(font: Font, initPadding: float = 40, finaPadding: float = 
         if glyph is not None:
             glyph.unicode = None
             continue
-
-        identity = GlyphIdentity.parse(name)
-        idealIdentity = replace(identity, codePoints=[], suffixes=[])
-        for existingName, existingIdentity in existingNameToIdentity.items():
-            if existingIdentity == idealIdentity:
+        target = GlyphDescriptor.parse(name)
+        idealSource = replace(target, codePoints=[], suffixes=[])
+        for source in sources:
+            if source == idealSource:
                 break
         else:
-            for existingName, existingIdentity in existingNameToIdentity.items():
-                if replace(existingIdentity, codePoints=[]) == idealIdentity:
+            for source in sources:
+                if replace(source, codePoints=[]) == idealSource:
                     break
             else:
-                raise StopIteration(idealIdentity)
+                raise StopIteration(idealSource)
         composeGlyph(
             name,
             [
-                initPadding if identity.pseudoPosition() in ["isol", "init"] else 0,
-                existingName,
-                finaPadding if identity.pseudoPosition() in ["isol", "fina"] else 0,
+                initPadding if target.pseudoPosition() in ["isol", "init"] else 0,
+                font[str(source)],
+                finaPadding if target.pseudoPosition() in ["isol", "fina"] else 0,
             ],
         )
