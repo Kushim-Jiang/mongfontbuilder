@@ -396,6 +396,9 @@
         ],
         "locales": {
           "MNG": {
+            "conditions": [
+              "default"
+            ],
             "gb": "0008 a first final form",
             "eac": "MAM1"
           },
@@ -10091,7 +10094,7 @@
         "locales": {
           "SIB": {
             "conditions": [
-              "default"
+              "feminine"
             ],
             "gb": "1869 sibe da second medial form",
             "eac": "SDAZ1"
@@ -11501,9 +11504,6 @@
         ],
         "locales": {
           "MCH": {
-            "conditions": [
-              "default"
-            ],
             "eac": "MFAD2"
           }
         }

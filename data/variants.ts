@@ -294,6 +294,7 @@ export const variants: Record<
         written: ["A"],
         locales: {
           MNG: {
+            conditions: ["default"],
             gb: "0008 a first final form",
             eac: "MAM1",
           },
@@ -7074,7 +7075,7 @@ export const variants: Record<
         written: ["Dt"],
         locales: {
           SIB: {
-            conditions: ["default"],
+            conditions: ["feminine"],
             gb: "1869 sibe da second medial form",
             eac: "SDAZ1",
           },
@@ -8068,7 +8069,6 @@ export const variants: Record<
         written: ["init", 1],
         locales: {
           MCH: {
-            conditions: ["default"],
             eac: "MFAD2",
           },
         },

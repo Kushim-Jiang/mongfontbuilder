@@ -2,7 +2,7 @@
 
 import { writeFile } from "node:fs/promises";
 
-import { locales, type LocaleID } from "./locales";
+import { locales, type LocaleID, type Condition } from "./locales";
 import { aliases, type LocaleNamespace } from "./aliases";
 import { writtenUnits } from "./writtenUnits";
 import { variants } from "./variants";
@@ -19,10 +19,11 @@ for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
   if (typeof localeToAlias == "string") {
     continue;
   }
-  for (const locale of Object.keys(locales)) {
+  for (const locale of Object.keys(locales) as LocaleID[]) {
     const localeNamespace = (
       locale.endsWith("x") ? locale.slice(0, -1) : locale
     ) as LocaleNamespace;
+
     for (const fvsToVariant of Object.values(positionToFVSToVariant)) {
       for (const variant of Object.values(fvsToVariant)) {
         if (locale in variant.locales) {
@@ -41,6 +42,28 @@ for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
             );
           }
           break;
+        }
+      }
+    }
+
+    for (const [position, fvsToVariant] of Object.entries(
+      positionToFVSToVariant,
+    )) {
+      const fvsToConditions = new Map<string, Condition[]>();
+      for (const [fvs, variant] of Object.entries(fvsToVariant)) {
+        const conditions = variant.locales[locale]?.conditions;
+        if (conditions) {
+          fvsToConditions.set(fvs, conditions);
+        }
+      }
+      if (fvsToConditions.size) {
+        const defaults = [...fvsToConditions].filter(([_, v]) =>
+          v.includes("default"),
+        );
+        if (defaults.length != 1) {
+          throw Error("unique default variant undefined for locale", {
+            cause: { charName, position, locale, defaults },
+          });
         }
       }
     }
