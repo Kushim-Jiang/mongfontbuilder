@@ -1,7 +1,7 @@
-import type { LocaleID } from "./locales";
 import type { CharacterName } from "./misc";
 
-type Alias = string | Partial<Record<LocaleID, string>>;
+export type LocaleNamespace = "MNG" | "TOD" | "SIB" | "MCH";
+type Alias = string | Partial<Record<LocaleNamespace, string>>;
 
 export const aliases: Record<CharacterName, Alias> = {
   SPACE: "space",

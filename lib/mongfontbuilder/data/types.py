@@ -11,7 +11,8 @@ Condition = str
 CharacterName = str
 FVS = int
 
-Alias = str | dict[LocaleID, str]
+LocaleNamespace = Literal["MNG", "TOD", "SIB", "MCH"]
+Alias = str | dict[LocaleNamespace, str]
 register_structure_hook(Alias, lambda x, _: x)
 
 
