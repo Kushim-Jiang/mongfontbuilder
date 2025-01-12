@@ -3,7 +3,7 @@ from mongfontbuilder.otl import compose
 
 
 def main() -> None:
-    composer = compose(requiredLocales=[*locales.keys()])
+    composer = compose(locales=[*locales.keys()])
     print(composer.asFeatureFile())
 
 

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import re
 from collections.abc import Iterable
-from dataclasses import dataclass, replace
+from dataclasses import dataclass, field, replace
 from importlib.resources import files
 
 import yaml
@@ -14,6 +14,7 @@ from ufoLib2.objects import Component, Font, Glyph
 import data
 
 from .data import JoiningPosition, WrittenUnitID
+from .data.types import CharacterName, Variant
 
 
 def constructFont(font: Font) -> None:
@@ -36,43 +37,57 @@ def makeFeatureFile(availableGlyphs: Iterable[str] = ()) -> FeatureFile:
 @dataclass
 class GlyphDescriptor:
     codePoints: list[int]
-    writtenUnits: list[WrittenUnitID]
-    joiningPosition: JoiningPosition
-    suffixes: list[str]
+    units: list[WrittenUnitID]
+    position: JoiningPosition
+    suffixes: list[str] = field(default_factory=list)
 
     @classmethod
     def parse(cls, name: str) -> GlyphDescriptor:
         """
         >>> GlyphDescriptor.parse('u1820.A.init')
-        GlyphDescriptor(codePoints=[6176], writtenUnits=['A'], joiningPosition='init', suffixes=[])
+        GlyphDescriptor(codePoints=[6176], units=['A'], position='init', suffixes=[])
         >>> GlyphDescriptor.parse('_A.init')
-        GlyphDescriptor(codePoints=[], writtenUnits=['A'], joiningPosition='init', suffixes=[])
+        GlyphDescriptor(codePoints=[], units=['A'], position='init', suffixes=[])
         """
 
-        x, y, joiningPosition, *suffixes = (
+        x, y, position, *suffixes = (
             "." + name.removeprefix("_")  # _A.init
             if name.startswith("_")
             else name  # u1820.A.init
         ).split(".")
-        writtenUnits = re.sub(r"[A-Z]", lambda x: " " + x[0], y).removeprefix(" ").split(" ")
-        assert writtenUnits and all(i in data.writtenUnits for i in writtenUnits), name
-        assert joiningPosition in data.types.joiningPositions, name
+        units = re.sub(r"[A-Z]", lambda x: " " + x[0], y).removeprefix(" ").split(" ")
+        assert units and all(i in data.writtenUnits for i in units), name
+        assert position in data.types.joiningPositions, name
         instance = cls(
             codePoints=[int(i.removeprefix("u"), 16) for i in x.split("_")] if x else [],
-            writtenUnits=writtenUnits,
-            joiningPosition=joiningPosition,
+            units=units,
+            position=position,
             suffixes=suffixes,
         )
         assert str(instance) == name
         return instance
 
+    @classmethod
+    def fromData(
+        cls, charName: CharacterName, position: JoiningPosition, variant: Variant
+    ) -> GlyphDescriptor:
+        from .data import normalizedWritten
+
+        units, writtenPosition = normalizedWritten(variant.written, data.variants[charName])
+        return cls(
+            [ord(unicodedata.lookup(charName))],
+            units,
+            writtenPosition or position,
+            ["_" + position] if writtenPosition else [],
+        )
+
     def __str__(self) -> str:
-        assert self.writtenUnits, self
+        assert self.units, self
         if self.codePoints:
-            name = "_".join(f"u{i:04X}" for i in self.codePoints) + "."
+            name = "_".join(uNameFromCodePoint(i) for i in self.codePoints) + "."
         else:
             name = "_"
-        return name + ".".join(["".join(self.writtenUnits), self.joiningPosition, *self.suffixes])
+        return name + ".".join(["".join(self.units), self.position, *self.suffixes])
 
     def pseudoPosition(self) -> JoiningPosition | None:
         if self.suffixes:
@@ -81,6 +96,10 @@ class GlyphDescriptor:
                 position = suffix.removeprefix("_")
                 assert position in data.misc.joiningPositions
                 return position
+
+
+def uNameFromCodePoint(codePoint: int) -> str:
+    return f"u{codePoint:04X}"
 
 
 pseudoPositionSuffixes = ["_" + i for i in data.misc.joiningPositions]
@@ -109,7 +128,7 @@ def constructGlyphSet(font: Font, initPadding: float = 40, finaPadding: float = 
 
     for charName in data.variants:
         codePoint = ord(unicodedata.lookup(charName))
-        glyph = composeGlyph(f"u{codePoint:04X}", [])  # FIXME
+        glyph = composeGlyph(uNameFromCodePoint(codePoint), [])  # FIXME
         glyph.unicode = codePoint
 
     categoryToExpectedGlyphs = dict[str, list[str]]()

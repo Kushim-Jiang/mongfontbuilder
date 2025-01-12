@@ -1,118 +1,54 @@
+import logging
+import re
+
+from fontTools import unicodedata
+from fontTools.feaLib import ast
 from tptq.feacomposer import FeaComposer
 
-from .data import LocaleID, locales, variants
+from . import GlyphDescriptor, data, uNameFromCodePoint
 from .data.misc import joiningPositions
+from .data.types import LocaleID
 from .utils import (
     getAliasesByLocale,
     getCharNameByAlias,
     getDefaultVariant,
-    getUniNameByCharName,
-    getWrittenUnits,
-    removeSuffix,
+    namespaceFromLocale,
 )
 
 
-def compose(requiredLocales: list[LocaleID]) -> FeaComposer:
+def compose(locales: list[LocaleID]) -> FeaComposer:
     c = FeaComposer(
         languageSystems={
-            "mong": {"dflt"} | {i.removesuffix("x") for i in requiredLocales},
+            "mong": {"dflt"} | {namespaceFromLocale(i) for i in locales},
         }
     )
 
-    ### glyph class definition for letters
-    for locale in requiredLocales:
-        for letterAlias in getAliasesByLocale(locale):
-            for joiningPosition in joiningPositions:
-                c.namedGlyphClass(
-                    f"{letterAlias}-{removeSuffix(locale)}.{joiningPosition}",
-                    [
-                        f"{getUniNameByCharName(getCharNameByAlias(locale, letterAlias))}.{getWrittenUnits(variantInfo.written, variants[getCharNameByAlias(locale, letterAlias)])}.{joiningPosition}"
-                        for variantInfo in variants[getCharNameByAlias(locale, letterAlias)][
-                            joiningPosition
-                        ].values()
-                    ],
-                )
-            c.namedGlyphClass(
-                f"{letterAlias}-{removeSuffix(locale)}",
-                [
-                    f"@{letterAlias}-{removeSuffix(locale)}.{position}"
-                    for position in joiningPositions
-                ],
-            )
-
-    ### glyph class definition for categories
-    for locale in requiredLocales:
-        for category in locales[locale].categories.keys():
-            c.namedGlyphClass(
-                f"{locale}.{category}",
-                [
-                    f"@{value}-{removeSuffix(locale)}"
-                    for value in locales[locale].categories[category]
-                ],
-            )
-
-    # @MNG.consonantInit
-    # @MNG.consonantMedi
-    # @MNG.vowel
-    # @MNG.vowelMedi
-    # @MNG.vowelFina
-    # @MNGx.consonantInit
-    # @MNGx.consonantMedi
-    # @MNGx.vowel
-    # @TOD.consonantInit
-    # @TOD.consonantMedi
-    # @TOD.consonantFina
-    # @TOD.vowel
-    # @TOD.vowelInit
-    # @TOD.vowelMedi
-    # @TOD.vowelFina
-    # @TODx.consonantInit
-    # @TODx.consonantMedi
-    # @TODx.vowel
-    # @TODx.vowelInit
-    # @TODx.vowelMedi
-    # @SIB.consonantInit
-    # @SIB.vowel
-    # @MCH.consonantInit
-    # @MCH.vowel
-    # @MCHx.consonantInit
-    # @MCHx.vowel
-
-    c.namedGlyphClass("msc", ["mvs", "mvs.narrow", "mvs.wide", "mvs.nominal", "nnbsp"])
-    c.namedGlyphClass("msc.effective", ["mvs.narrow", "mvs.wide"])
-
-    c.namedGlyphClass("fvs.nominal", [f"fvs{i}" for i in range(1, 5)])
-    c.namedGlyphClass("fvs.effective", [f"fvs{i}.effective" for i in range(1, 5)])
-    c.namedGlyphClass("fvs.ignored", [f"fvs{i}.ignored" for i in range(1, 5)])
-    for i in range(1, 5):
-        c.namedGlyphClass(f"fvs{i}", [f"fvs{i} fvs{i}.effective fvs{i}.ignored"])
-    c.namedGlyphClass("fvs", [f"@fvs{i}" for i in range(1, 5)])
-
-    # @consonant
-    # @consonantInit
-    # @vowelMasculine
-    # @vowelFeminine
-    # @vowelNeuter
-    # @vowel
+    composeClasses(c, locales)
 
     ### cursive joining
-    charToDefaultVariant = {joiningPosition: {} for joiningPosition in joiningPositions}
-    for locale in requiredLocales:
-        for joiningPosition in joiningPositions:
-            for letterAlias in getAliasesByLocale(locale):
-                charToDefaultVariant[joiningPosition][
-                    getUniNameByCharName(getCharNameByAlias(locale, letterAlias))
-                ] = getDefaultVariant(letterAlias, locale, joiningPosition)
-    for joiningPosition in joiningPositions:
-        with c.Lookup(feature=joiningPosition, name=f"IIa.{joiningPosition}"):
-            for nominalGlyph, defaultGlyph in charToDefaultVariant[joiningPosition].items():
-                c.sub(nominalGlyph, by=defaultGlyph)
+    for position in joiningPositions:
+        cpToLocalizedVariants = dict[int, tuple[LocaleID, GlyphDescriptor]]()
+        for locale in locales:
+            for alias in getAliasesByLocale(locale):
+                cp = ord(unicodedata.lookup(getCharNameByAlias(locale, alias)))
+                default = getDefaultVariant(locale, alias, position)
+                if existing := cpToLocalizedVariants.get(cp):
+                    existingLocale, existingDefault = existing
+                    if existingDefault != default:
+                        logging.warning(
+                            f"inconsistent default variants between locales: {existingLocale}:{existingDefault} {locale}:{default}"
+                        )
+                else:
+                    cpToLocalizedVariants[cp] = locale, default
+        with c.Lookup(f"IIa.{position}", feature=position):
+            for cp, (_, variant) in sorted(cpToLocalizedVariants.items()):
+                c.sub(uNameFromCodePoint(cp), by=str(variant))
 
     ### rclt
 
     # control character: preprocessing
 
-    with c.Lookup("_.ignored") as __ignored:
+    with c.Lookup("_.ignored") as _ignored:
         c.sub("nirugu", by="nirugu.ignored")
         c.sub("zwj", by="zwj.ignored")
         c.sub("zwnj", by="zwnj.ignored")
@@ -121,12 +57,12 @@ def compose(requiredLocales: list[LocaleID]) -> FeaComposer:
             for suffix in ["", ".effective"]:
                 c.sub(f"fvs{i}{suffix}", by=f"fvs{i}.ignored")
 
-    with c.Lookup("_.effective") as __effective:
+    with c.Lookup("_.effective") as _effective:
         for i in range(1, 5):
             for suffix in ["", ".ignored"]:
                 c.sub(f"fvs{i}{suffix}", by=f"fvs{i}.effective")
 
-    with c.Lookup("_.nominal") as __nominal:
+    with c.Lookup("_.nominal") as _nominal:
         for mvs in ["mvs", "mvs.narrow", "mvs.wide"]:
             c.sub(mvs, by="mvs.nominal")
         for mcs in [
@@ -142,20 +78,21 @@ def compose(requiredLocales: list[LocaleID]) -> FeaComposer:
         ]:
             c.sub(mcs, by=mcs.split(".")[0])
 
-    with c.Lookup("_.narrow") as __narrow:
+    with c.Lookup("_.narrow") as _narrow:
         for mvs in ["mvs", "mvs.wide", "mvs.nominal", "nnbsp"]:
             c.sub(mvs, by="mvs.narrow")
 
-    with c.Lookup("_.wide") as __wide:
+    with c.Lookup("_.wide") as _wide:
         for mvs in ["mvs", "mvs.narrow", "mvs.nominal", "nnbsp"]:
             c.sub(mvs, by="mvs.wide")
 
-    # lookup III.controls.preprocessing {
-    #     sub [zwnj nirugu]' lookup _.ignored;
-    #     sub [@vowel @consonant @lvs-tod] zwj' lookup _.ignored [@vowel @consonant @lvs-tod];
-    #     sub @fvs' lookup _.ignored;
-    #     sub mvs' lookup _.nominal;
-    # } III.controls.preprocessing;
+    with c.Lookup("III.controls.preprocessing", feature="rclt"):
+        c.contextualSub(c.input("mvs", _nominal))
+        c.contextualSub(c.input(c.glyphClass(["zwnj", "zwj", "nirugu", "@fvs"]), _ignored))
+
+    # if {"TOD", "TODx"}.intersection(locales):
+    #     with c.Lookup("III.tod_tag.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}):
+    #         ...
 
     # lookup III.tod_tag.lvs.preprocessing {
     #     lookupflag IgnoreMarks;
@@ -200,3 +137,53 @@ def compose(requiredLocales: list[LocaleID]) -> FeaComposer:
     # Ib: marks position
 
     return c
+
+
+def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> None:
+    """
+    Glyph class definition for letters and categories.
+    """
+
+    c.namedGlyphClass("msc", ["mvs", "mvs.narrow", "mvs.wide", "mvs.nominal", "nnbsp"])
+    c.namedGlyphClass("msc.effective", ["mvs.narrow", "mvs.wide"])
+
+    fvses = [f"fvs{i}" for i in range(1, 5)]
+    c.namedGlyphClass("fvs.nominal", fvses)
+    c.namedGlyphClass("fvs.effective", [i + ".effective" for i in fvses])
+    c.namedGlyphClass("fvs.ignored", [i + ".ignored" for i in fvses])
+    c.namedGlyphClass(
+        "fvs", [c.namedGlyphClass(i, [i, i + ".effective", i + ".ignored"]) for i in fvses]
+    )
+
+    for locale in locales:
+
+        categoryToClasses = dict[str, list[ast.GlyphClassDefinition]]()
+        for alias in getAliasesByLocale(locale):
+            charName = getCharNameByAlias(locale, alias)
+            letter = locale + ":" + alias
+            category = next(k for k, v in data.locales[locale].categories.items() if alias in v)
+            genderNeutralCategory = re.sub("[A-Z][a-z]+", "", category)
+
+            positionalClasses = list[ast.GlyphClassDefinition]()
+            for position, variants in data.variants[charName].items():
+                positionalClass = c.namedGlyphClass(
+                    letter + "." + position,
+                    [
+                        str(GlyphDescriptor.fromData(charName, position, i))
+                        for i in variants.values()
+                    ],
+                )
+                positionalClasses.append(positionalClass)
+                categoryToClasses.setdefault(
+                    locale + ":" + genderNeutralCategory + "." + position, []
+                ).append(positionalClass)
+
+            letterClass = c.namedGlyphClass(letter, positionalClasses)
+            if genderNeutralCategory != category:
+                categoryToClasses.setdefault(locale + ":" + genderNeutralCategory, []).append(
+                    letterClass
+                )
+            categoryToClasses.setdefault(locale + ":" + category, []).append(letterClass)
+
+        for name, positionalClasses in categoryToClasses.items():
+            c.namedGlyphClass(name, positionalClasses)

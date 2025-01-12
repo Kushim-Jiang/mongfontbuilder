@@ -11,6 +11,7 @@ from .types import (
     Locale,
     LocaleID,
     Variant,
+    VariantReference,
     WrittenUnitID,
     WrittenUnitVariant,
 )
@@ -41,3 +42,17 @@ with (dir / "variants.json").open(encoding="utf-8") as f:
         json.load(f),
         dict[CharacterName, dict[JoiningPosition, dict[FVS, Variant]]],
     )
+
+
+def normalizedWritten(
+    written: list[str] | VariantReference,
+    positionToVariants: dict[JoiningPosition, dict[FVS, Variant]],
+) -> tuple[list[WrittenUnitID], JoiningPosition | None]:
+    if not isinstance(written, list):
+        position, fvs, locale = written
+        assert not locale
+        written = positionToVariants[position][fvs].written
+        assert isinstance(written, list)
+    else:
+        position = None
+    return written, position
