@@ -13,7 +13,7 @@ from .utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
 def compose(locales: list[LocaleID]) -> FeaComposer:
     c = FeaComposer(
         languageSystems={
-            "mong": {"dflt"} | {namespaceFromLocale(i) for i in locales},
+            "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in locales},
         }
     )
 
