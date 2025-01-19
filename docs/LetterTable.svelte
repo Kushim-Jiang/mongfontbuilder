@@ -1,4 +1,10 @@
 <script lang="ts">
+  interface Props {
+    locale: LocaleID;
+  }
+
+  let { locale }: Props = $props();
+
   import type { LocaleID } from "../data/locales";
   import { aliases } from "../data/aliases";
   import { joiningPositions, type JoiningPosition } from "../data/misc";
@@ -6,8 +12,6 @@
 
   import LetterVariant from "./LetterVariant.svelte";
   import { nameToCP, hexFromCP } from "./utils";
-
-  const locale: LocaleID = "MNG";
 
   const charNameToPositionToFVSes = new Map<string, Map<JoiningPosition, FVS[]>>();
   for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {

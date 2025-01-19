@@ -1,11 +1,16 @@
 <script lang="ts">
+  interface Props {
+    locale: LocaleID;
+  }
+
+  let { locale }: Props = $props();
+
   import { writtenUnits, type WrittenUnitID } from "../data/writtenUnits";
+  import type { LocaleID } from "../data/locales";
   import { variants } from "../data/variants";
   import { joiningPositions, type JoiningPosition } from "../data/misc";
 
   import WrittenUnitVariant from "./WrittenUnitVariant.svelte";
-
-  const locale = "MNG";
 
   const unitToPositions = new Map<WrittenUnitID, Set<JoiningPosition>>();
   for (const positionToFVSToVariant of Object.values(variants)) {

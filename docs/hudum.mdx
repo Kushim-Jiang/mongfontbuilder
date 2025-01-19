@@ -4,16 +4,18 @@ sidebar:
   order: 2
 ---
 
-import HudumWrittenUnits from "./HudumWrittenUnits.svelte";
-import HudumLetters from "./HudumLetters.svelte";
+import WrittenUnitTable from "./WrittenUnitTable.svelte";
+import LetterTable from "./LetterTable.svelte";
+
+export const locale = "MNG";
 
 ## Written units
 
-<HudumWrittenUnits />
+<WrittenUnitTable locale={locale} />
 
 ## Phonetic letters
 
-<HudumLetters />
+<LetterTable locale={locale} />
 
 ## Shaping process
 
