@@ -19,12 +19,3 @@ def getCharNameByAlias(locale: LocaleID, alias: str) -> CharacterName:
 
 def getAliasesByLocale(locale: LocaleID) -> list[str]:
     return [alias for aliases in data.locales[locale].categories.values() for alias in aliases]
-
-
-def getDefaultVariant(locale: LocaleID, alias: str, position: JoiningPosition) -> GlyphDescriptor:
-    charName = getCharNameByAlias(locale, alias)
-    for variant in data.variants[charName][position].values():
-        if localeData := variant.locales.get(locale):
-            if "default" in localeData.conditions:
-                return GlyphDescriptor.fromData(charName, position, variant)
-    raise StopIteration(locale, alias, position)

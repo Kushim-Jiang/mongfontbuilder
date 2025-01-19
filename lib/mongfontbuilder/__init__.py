@@ -69,10 +69,12 @@ class GlyphDescriptor:
 
     @classmethod
     def fromData(
-        cls, charName: CharacterName, position: JoiningPosition, variant: Variant
+        cls, charName: CharacterName, position: JoiningPosition, variant: Variant | None = None
     ) -> GlyphDescriptor:
         from .data import normalizedWritten
 
+        if not variant:
+            variant = next(i for i in data.variants[charName][position].values() if i.default)
         units, writtenPosition = normalizedWritten(variant.written, data.variants[charName])
         return cls(
             [ord(unicodedata.lookup(charName))],

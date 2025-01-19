@@ -4,7 +4,6 @@
       "chachlag",
       "chachlag_devsger",
       "chachlag_onset",
-      "default",
       "devsger",
       "dotless",
       "feminine",
@@ -64,7 +63,6 @@
   "MNGx": {
     "conditions": [
       "chachlag",
-      "default",
       "marked",
       "post_bowed",
       "post_wa"
@@ -122,7 +120,6 @@
   "TOD": {
     "conditions": [
       "chachlag",
-      "default",
       "devsger",
       "feminine",
       "masculine_onset",
@@ -180,7 +177,6 @@
   },
   "TODx": {
     "conditions": [
-      "default",
       "devsger",
       "feminine",
       "masculine_onset",
@@ -247,7 +243,6 @@
   },
   "SIB": {
     "conditions": [
-      "default",
       "devsger",
       "feminine",
       "marked",
@@ -306,7 +301,6 @@
   },
   "MCH": {
     "conditions": [
-      "default",
       "devsger",
       "feminine",
       "marked",
@@ -366,7 +360,6 @@
   },
   "MCHx": {
     "conditions": [
-      "default",
       "devsger",
       "feminine",
       "marked",

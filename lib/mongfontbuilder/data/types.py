@@ -50,4 +50,5 @@ class VariantLocaleData:
 @dataclass
 class Variant:
     written: Written
-    locales: dict[LocaleID, VariantLocaleData]
+    default: bool = False
+    locales: dict[LocaleID, VariantLocaleData] = field(default_factory=dict)

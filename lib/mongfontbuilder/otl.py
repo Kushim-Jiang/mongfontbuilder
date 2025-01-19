@@ -1,4 +1,3 @@
-import logging
 import re
 
 from fontTools import unicodedata
@@ -8,12 +7,7 @@ from tptq.feacomposer import FeaComposer
 from . import GlyphDescriptor, data, uNameFromCodePoint
 from .data.misc import joiningPositions
 from .data.types import LocaleID
-from .utils import (
-    getAliasesByLocale,
-    getCharNameByAlias,
-    getDefaultVariant,
-    namespaceFromLocale,
-)
+from .utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
 
 
 def compose(locales: list[LocaleID]) -> FeaComposer:
@@ -26,23 +20,18 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
     composeClasses(c, locales)
 
     ### cursive joining
+    localeSet = {*locales}
     for position in joiningPositions:
-        cpToLocalizedVariants = dict[int, tuple[LocaleID, GlyphDescriptor]]()
-        for locale in locales:
-            for alias in getAliasesByLocale(locale):
-                cp = ord(unicodedata.lookup(getCharNameByAlias(locale, alias)))
-                default = getDefaultVariant(locale, alias, position)
-                if existing := cpToLocalizedVariants.get(cp):
-                    existingLocale, existingDefault = existing
-                    if existingDefault != default:
-                        logging.warning(
-                            f"inconsistent default variants between locales: {existingLocale}:{existingDefault} {locale}:{default}"
-                        )
-                else:
-                    cpToLocalizedVariants[cp] = locale, default
         with c.Lookup(f"IIa.{position}", feature=position):
-            for cp, (_, variant) in sorted(cpToLocalizedVariants.items()):
-                c.sub(uNameFromCodePoint(cp), by=str(variant))
+            for charName, positionToFVSToVariant in data.variants.items():
+                if any(
+                    localeSet.intersection(i.locales)
+                    for i in positionToFVSToVariant[position].values()
+                ):
+                    c.sub(
+                        uNameFromCodePoint(ord(unicodedata.lookup(charName))),
+                        by=str(GlyphDescriptor.fromData(charName, position)),
+                    )
 
     ### rclt
 
