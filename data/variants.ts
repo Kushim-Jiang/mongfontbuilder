@@ -7685,13 +7685,9 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {},
-        },
-      },
-      "1": {
-        written: ["init", 0, "TODx"],
-        default: true,
-        locales: {
-          TODx: {},
+          TODx: {
+            written: ["init", 0, "TODx"],
+          },
         },
       },
     },
