@@ -49,8 +49,8 @@
 <table>
   <thead>
     <tr>
-      <th rowspan="2">Written unit</th>
-      <th colspan="4">Positional forms</th>
+      <th rowspan="2">ID</th>
+      <th colspan="4">Joining positions</th>
     </tr>
     <tr>
       {#each joiningPositions as position}

@@ -317,6 +317,7 @@ export const variants: Record<
         written: ["A", "A"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "0004 e second initial form",
             eac: "MES2",
           },
@@ -698,6 +699,7 @@ export const variants: Record<
         written: ["A", "U"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "00BD oe second isolated form",
             eac: "MOD2",
           },
@@ -1042,6 +1044,7 @@ export const variants: Record<
         written: ["A"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "0007 na second initial form",
             eac: "MNS2",
           },
@@ -1328,6 +1331,7 @@ export const variants: Record<
         written: ["B2"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "00C5 ba second final form",
             eac: "MBM2",
           },
@@ -1431,6 +1435,7 @@ export const variants: Record<
         written: ["Hx"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "00C8 qa second initial form",
             eac: "MHS2",
           },
@@ -1473,6 +1478,7 @@ export const variants: Record<
         written: ["Hx"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "001C qa second medial form",
             eac: "MHZ2",
           },
@@ -1524,6 +1530,7 @@ export const variants: Record<
         written: ["Hx"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "001D qa second final form",
             eac: "MHM2",
           },
@@ -1576,6 +1583,7 @@ export const variants: Record<
         written: ["H"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "00C7 ga second initial form",
             eac: "MGS2",
           },
