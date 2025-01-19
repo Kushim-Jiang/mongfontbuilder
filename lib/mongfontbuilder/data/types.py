@@ -12,17 +12,17 @@ CharacterName = str
 FVS = int
 
 LocaleNamespace = Literal["MNG", "TOD", "SIB", "MCH"]
-Alias = str | dict[LocaleNamespace, str]
-register_structure_hook(Alias, lambda x, _: x)
+AliasData = str | dict[LocaleNamespace, str]
+register_structure_hook(AliasData, lambda x, _: x)
 
 
 @dataclass
-class WrittenUnitVariant:
+class WrittenUnitVariantData:
     archaic: bool = False
 
 
 @dataclass
-class Locale:
+class LocaleData:
     conditions: list[Condition]
     categories: dict[str, list[str]]
 
@@ -48,7 +48,7 @@ class VariantLocaleData:
 
 
 @dataclass
-class Variant:
+class VariantData:
     written: Written
     default: bool = False
     locales: dict[LocaleID, VariantLocaleData] = field(default_factory=dict)

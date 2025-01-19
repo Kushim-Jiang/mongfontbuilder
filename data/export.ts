@@ -2,7 +2,7 @@
 
 import { writeFile } from "node:fs/promises";
 
-import { locales, type LocaleID, type Condition } from "./locales";
+import { locales, type LocaleID } from "./locales";
 import { aliases, type LocaleNamespace } from "./aliases";
 import { writtenUnits } from "./writtenUnits";
 import { variants } from "./variants";
@@ -24,7 +24,7 @@ for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
     positionToFVSToVariant,
   )) {
     const defaultVariants = Object.values(fvsToVariant).filter(
-      ({ default: default_ }) => default_,
+      (i) => i.default,
     );
     if (defaultVariants.length != 1) {
       throw Error("unique default variant undefined for location", {

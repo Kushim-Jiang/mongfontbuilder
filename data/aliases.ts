@@ -1,9 +1,9 @@
 import type { CharacterName } from "./misc";
 
 export type LocaleNamespace = "MNG" | "TOD" | "SIB" | "MCH";
-type Alias = string | Partial<Record<LocaleNamespace, string>>;
+type AliasData = string | Partial<Record<LocaleNamespace, string>>;
 
-export const aliases: Record<CharacterName, Alias> = {
+export const aliases: Record<CharacterName, AliasData> = {
   SPACE: "space",
   "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER": {
     SIB: "sbm",

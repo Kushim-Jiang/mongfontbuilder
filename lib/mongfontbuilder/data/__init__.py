@@ -6,14 +6,14 @@ from cattrs import structure
 from .misc import JoiningPosition
 from .types import (
     FVS,
-    Alias,
+    AliasData,
     CharacterName,
-    Locale,
+    LocaleData,
     LocaleID,
-    Variant,
+    VariantData,
     VariantReference,
     WrittenUnitID,
-    WrittenUnitVariant,
+    WrittenUnitVariantData,
 )
 
 assert __package__
@@ -22,36 +22,36 @@ dir = files(__package__)
 with (dir / "writtenUnits.json").open(encoding="utf-8") as f:
     writtenUnits = structure(
         json.load(f),
-        dict[WrittenUnitID, dict[JoiningPosition, WrittenUnitVariant]],
+        dict[WrittenUnitID, dict[JoiningPosition, WrittenUnitVariantData]],
     )
 
 with (dir / "locales.json").open(encoding="utf-8") as f:
     locales = structure(
         json.load(f),
-        dict[LocaleID, Locale],
+        dict[LocaleID, LocaleData],
     )
 
 with (dir / "aliases.json").open(encoding="utf-8") as f:
     aliases = structure(
         json.load(f),
-        dict[CharacterName, Alias],
+        dict[CharacterName, AliasData],
     )
 
 with (dir / "variants.json").open(encoding="utf-8") as f:
     variants = structure(
         json.load(f),
-        dict[CharacterName, dict[JoiningPosition, dict[FVS, Variant]]],
+        dict[CharacterName, dict[JoiningPosition, dict[FVS, VariantData]]],
     )
 
 
 def normalizedWritten(
     written: list[str] | VariantReference,
-    positionToVariants: dict[JoiningPosition, dict[FVS, Variant]],
+    positionToFVSToVariantData: dict[JoiningPosition, dict[FVS, VariantData]],
 ) -> tuple[list[WrittenUnitID], JoiningPosition | None]:
     if not isinstance(written, list):
         position, fvs, locale = written
         assert not locale
-        written = positionToVariants[position][fvs].written
+        written = positionToFVSToVariantData[position][fvs].written
         assert isinstance(written, list)
     else:
         position = None

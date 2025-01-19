@@ -4,7 +4,7 @@ import type { CharacterName, JoiningPosition } from "./misc";
 
 export type FVS = 0 | 1 | 2 | 3 | 4;
 
-type Variant = {
+type VariantData = {
   written: Written;
   default?: true;
   locales: Partial<Record<LocaleID, VariantLocaleData>>;
@@ -24,7 +24,7 @@ type VariantReference = [
 
 export const variants: Record<
   CharacterName,
-  Record<JoiningPosition, Partial<Record<FVS, Variant>>>
+  Record<JoiningPosition, Partial<Record<FVS, VariantData>>>
 > = {
   "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER": {
     isol: {

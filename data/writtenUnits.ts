@@ -2,8 +2,8 @@ import type { JoiningPosition } from "./misc";
 
 export type WrittenUnitID = keyof typeof writtenUnits;
 
-type WrittenUnit = Partial<Record<JoiningPosition, WrittenUnitVariant>>;
-type WrittenUnitVariant = {
+type WrittenUnitData = Partial<Record<JoiningPosition, WrittenUnitVariantData>>;
+type WrittenUnitVariantData = {
   archaic?: true;
 };
 
@@ -583,4 +583,4 @@ export const writtenUnits = {
     medi: {},
     fina: {},
   },
-} satisfies Record<string, WrittenUnit>;
+} satisfies Record<string, WrittenUnitData>;

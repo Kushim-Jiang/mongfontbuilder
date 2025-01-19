@@ -14,7 +14,7 @@ from ufoLib2.objects import Component, Font, Glyph
 import data
 
 from .data import JoiningPosition, WrittenUnitID
-from .data.types import CharacterName, Variant
+from .data.types import CharacterName, VariantData
 
 
 def constructFont(font: Font) -> None:
@@ -69,13 +69,16 @@ class GlyphDescriptor:
 
     @classmethod
     def fromData(
-        cls, charName: CharacterName, position: JoiningPosition, variant: Variant | None = None
+        cls,
+        charName: CharacterName,
+        position: JoiningPosition,
+        variantData: VariantData | None = None,
     ) -> GlyphDescriptor:
         from .data import normalizedWritten
 
-        if not variant:
-            variant = next(i for i in data.variants[charName][position].values() if i.default)
-        units, writtenPosition = normalizedWritten(variant.written, data.variants[charName])
+        if not variantData:
+            variantData = next(i for i in data.variants[charName][position].values() if i.default)
+        units, writtenPosition = normalizedWritten(variantData.written, data.variants[charName])
         return cls(
             [ord(unicodedata.lookup(charName))],
             units,

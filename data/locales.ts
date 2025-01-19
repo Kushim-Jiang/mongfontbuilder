@@ -1,7 +1,7 @@
 export type LocaleID = keyof typeof locales;
 export type Condition = (typeof locales)[LocaleID]["conditions"][number];
 
-type Locale = {
+type LocaleData = {
   conditions: string[];
   categories: Record<string, string[]>;
 };
@@ -359,4 +359,4 @@ export const locales = {
       ],
     },
   },
-} satisfies Record<string, Locale>;
+} satisfies Record<string, LocaleData>;
