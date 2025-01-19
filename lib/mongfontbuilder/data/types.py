@@ -17,11 +17,6 @@ register_structure_hook(AliasData, lambda x, _: x)
 
 
 @dataclass
-class WrittenUnitVariantData:
-    archaic: bool = False
-
-
-@dataclass
 class LocaleData:
     conditions: list[Condition]
     categories: dict[str, list[str]]
@@ -43,6 +38,7 @@ register_structure_hook(Written | None, lambda x, _: _structureWritten(x, None) 
 class VariantLocaleData:
     written: Written | None = None
     conditions: list[Condition] = field(default_factory=list)
+    archaic: bool = False
     gb: str = ""
     eac: str = ""
 

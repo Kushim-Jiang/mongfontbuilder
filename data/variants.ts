@@ -12,6 +12,7 @@ type VariantData = {
 type VariantLocaleData = {
   written?: Written;
   conditions?: Condition[];
+  archaic?: true;
   gb?: string;
   eac?: string;
 };
@@ -373,6 +374,7 @@ export const variants: Record<
         written: ["Ix"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "00B6 i third isolated form",
             eac: "MID3",
           },
@@ -596,6 +598,7 @@ export const variants: Record<
         written: ["Ux"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "00BB u third isolated form",
             eac: "MVD3",
           },
@@ -814,6 +817,7 @@ export const variants: Record<
         written: ["Ux"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "00BB ue fourth isolated form",
             eac: "MUD4",
           },
@@ -1457,6 +1461,7 @@ export const variants: Record<
         written: ["Gx"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "001B qa fourth initial form",
             eac: "MHS4",
           },
@@ -1497,6 +1502,7 @@ export const variants: Record<
         written: ["Gx"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "001B qa fourth medial form",
             eac: "MHZ4",
           },
@@ -1600,6 +1606,7 @@ export const variants: Record<
         written: ["Gx"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "001B ga fourth initial form",
             eac: "MGS4",
           },
@@ -1642,6 +1649,7 @@ export const variants: Record<
         written: ["Gx"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "001B ga fourth medial form",
             eac: "MGZ4",
           },
@@ -1984,6 +1992,7 @@ export const variants: Record<
         written: ["Sz"],
         locales: {
           MNG: {
+            archaic: true,
             gb: "0026 sa second final form",
             eac: "MSM2",
           },

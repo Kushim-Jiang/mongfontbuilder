@@ -13,17 +13,13 @@ from .types import (
     VariantData,
     VariantReference,
     WrittenUnitID,
-    WrittenUnitVariantData,
 )
 
 assert __package__
 dir = files(__package__)
 
 with (dir / "writtenUnits.json").open(encoding="utf-8") as f:
-    writtenUnits = structure(
-        json.load(f),
-        dict[WrittenUnitID, dict[JoiningPosition, WrittenUnitVariantData]],
-    )
+    writtenUnits: list[WrittenUnitID] = json.load(f)
 
 with (dir / "locales.json").open(encoding="utf-8") as f:
     locales = structure(

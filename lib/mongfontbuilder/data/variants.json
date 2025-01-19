@@ -439,6 +439,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "00B6 i third isolated form",
             "eac": "MID3"
           }
@@ -719,6 +720,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "00BB u third isolated form",
             "eac": "MVD3"
           }
@@ -1004,6 +1006,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "00BB ue fourth isolated form",
             "eac": "MUD4"
           }
@@ -1800,6 +1803,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "001B qa fourth initial form",
             "eac": "MHS4"
           }
@@ -1851,6 +1855,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "001B qa fourth medial form",
             "eac": "MHZ4"
           }
@@ -1982,6 +1987,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "001B ga fourth initial form",
             "eac": "MGS4"
           }
@@ -2039,6 +2045,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "001B ga fourth medial form",
             "eac": "MGZ4"
           }
@@ -2424,6 +2431,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "0026 sa second final form",
             "eac": "MSM2"
           }

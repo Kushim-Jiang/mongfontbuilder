@@ -59,7 +59,7 @@
     </tr>
   </thead>
   <tbody>
-    {#each (Object.keys(writtenUnits) as WrittenUnitID[]).filter((i) => unitToPositions.has(i)) as id}
+    {#each writtenUnits.filter((i) => unitToPositions.has(i)) as id}
       <tr>
         <td>{id}</td>
         {#each joiningPositions as position}
