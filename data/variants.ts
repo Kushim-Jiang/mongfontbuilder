@@ -6,6 +6,7 @@ export type FVS = 0 | 1 | 2 | 3 | 4;
 
 type Variant = {
   written: Written;
+  default?: true;
   locales: Partial<Record<LocaleID, VariantLocaleData>>;
 };
 type VariantLocaleData = {
@@ -29,69 +30,54 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
           MCH: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A2"],
+        default: true,
         locales: {
           SIB: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
           MCH: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["A"],
+        default: true,
         locales: {
-          SIB: {
-            conditions: ["default"],
-          },
+          SIB: {},
           MCH: {
-            conditions: ["default"],
             gb: "1807 sibe syllable boundary",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          SIB: {
-            conditions: ["default"],
-          },
-          MCH: {
-            conditions: ["default"],
-          },
-          MCHx: {
-            conditions: ["default"],
-          },
+          SIB: {},
+          MCH: {},
+          MCHx: {},
         },
       },
     },
@@ -129,36 +115,27 @@ export const variants: Record<
       },
       "3": {
         written: ["A", "A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00B2 a first isolated form",
             eac: "MAD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1820 a first isolated form",
             eac: "TAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1820 sibe a isolated form",
             eac: "SAD1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1820 manchu a isolated form",
             eac: "MAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -176,72 +153,54 @@ export const variants: Record<
       },
       "2": {
         written: ["A", "A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0004 a first initial form",
             eac: "MAS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0004 a initial form",
             eac: "TAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1820 sibe a initial form",
             eac: "SAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0004 manchu a initial form",
             eac: "MAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0005 a first medial form",
             eac: "MAZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0005 a first medial form",
             eac: "TAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1820 sibe a medial form",
             eac: "SAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0005 manchu a medial form",
             eac: "MAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -294,36 +253,27 @@ export const variants: Record<
       },
       "2": {
         written: ["A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0008 a first final form",
             eac: "MAM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0008 a first final form",
             eac: "TAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1820 sibe a final form",
             eac: "SAM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0008 manchu a final form",
             eac: "MAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -342,9 +292,9 @@ export const variants: Record<
       },
       "2": {
         written: ["A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00B3 e first isolated form",
             eac: "MED1",
           },
@@ -354,9 +304,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0007 e first initial form",
             eac: "MES1",
           },
@@ -375,9 +325,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0005 e medial form",
             eac: "MEZ1",
           },
@@ -397,9 +347,9 @@ export const variants: Record<
       },
       "2": {
         written: ["A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0008 e first final form",
             eac: "MEM1",
           },
@@ -430,9 +380,9 @@ export const variants: Record<
       },
       "3": {
         written: ["A", "I"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00B5 i first isolated form",
             eac: "MID1",
           },
@@ -452,9 +402,9 @@ export const variants: Record<
       },
       "2": {
         written: ["A", "I"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "000A i first initial form",
             eac: "MIS1",
           },
@@ -483,9 +433,9 @@ export const variants: Record<
       },
       "3": {
         written: ["I"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00B7 i first medial form",
             eac: "MIZ1",
           },
@@ -495,9 +445,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["I"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "000B i final form",
             eac: "MIM0",
           },
@@ -509,84 +459,66 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "O"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00BA o isolated form",
             eac: "MWD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1823 sibe o isolated form",
             eac: "SOD1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1823 manchu o isolated form",
             eac: "MOD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "O"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00BA o initial form",
             eac: "MWS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1823 sibe o initial form",
             eac: "SOS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1824 manchu o initial form",
             eac: "MOS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["O"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "000C o first medial form",
             eac: "MWZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1823 sibe o medial form",
             eac: "SOZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "000C manchu o medial form",
             eac: "MOZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -628,28 +560,22 @@ export const variants: Record<
       },
       "2": {
         written: ["U"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "000E o first final form",
             eac: "MWM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1823 sibe o first final form",
             eac: "SOM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "000E manchu o first final form",
             eac: "MOM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -677,9 +603,9 @@ export const variants: Record<
       },
       "3": {
         written: ["A", "O"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00BA u first isolated form",
             eac: "MVD1",
           },
@@ -699,9 +625,9 @@ export const variants: Record<
       },
       "2": {
         written: ["A", "O"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00BA u first initial form",
             eac: "MVS1",
           },
@@ -711,9 +637,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["O"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "000F u first medial form",
             eac: "MVZ1",
           },
@@ -742,9 +668,10 @@ export const variants: Record<
       },
       "2": {
         written: ["U"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "particle"],
+            conditions: ["particle"],
             gb: "000E u first final form",
             eac: "MVM1",
           },
@@ -756,9 +683,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "Ue"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00BC oe first isolated form",
             eac: "MOD1",
           },
@@ -777,9 +704,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["A", "O", "I"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00BE oe initial form",
             eac: "MOS1",
           },
@@ -808,9 +735,9 @@ export const variants: Record<
       },
       "3": {
         written: ["O"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "000F oe first medial form",
             eac: "MOZ1",
           },
@@ -840,9 +767,9 @@ export const variants: Record<
       },
       "3": {
         written: ["U"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "000E oe first final form",
             eac: "MOM1",
           },
@@ -854,15 +781,13 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "Ue"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00BC ue first isolated form",
             eac: "MUD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
       "1": {
@@ -908,15 +833,13 @@ export const variants: Record<
       },
       "2": {
         written: ["A", "O", "I"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00BE ue first initial form",
             eac: "MUS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -945,15 +868,14 @@ export const variants: Record<
       },
       "3": {
         written: ["O"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "particle"],
+            conditions: ["particle"],
             gb: "000F ue first medial form",
             eac: "MUZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -983,15 +905,14 @@ export const variants: Record<
       },
       "3": {
         written: ["U"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "particle"],
+            conditions: ["particle"],
             gb: "000E ue first final form",
             eac: "MUM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -1000,60 +921,52 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "W"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C0 ee isolated form",
             eac: "XED1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "W"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0012 ee initial form",
             eac: "XES1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["W"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C1 ee medial form",
             eac: "XEZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["W"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0013 ee final form",
             eac: "XEM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -1062,34 +975,25 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C2 na first isolated form",
             eac: "MND1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1828 na isolated form",
             eac: "TNAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SNAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MNAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -1105,35 +1009,28 @@ export const variants: Record<
     init: {
       "0": {
         written: ["N"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C2 na first initial form",
             eac: "MNS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1828 na initial form",
             eac: "TNAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1828 sibe na initial form",
             eac: "SNAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1828 manchu na initial form",
             eac: "MNAS1",
           },
           MCHx: {
-            conditions: ["default", "onset"],
+            conditions: ["onset"],
           },
         },
       },
@@ -1185,35 +1082,34 @@ export const variants: Record<
       },
       "2": {
         written: ["A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
             gb: "0005 na first medial form",
             eac: "MNZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
             gb: "0005 na first medial form",
             eac: "TNAZ1",
           },
           TODx: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
           },
           SIB: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
             gb: "1828 sibe na first medial form",
             eac: "SNAZ1",
           },
           MCH: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
             gb: "0005 manchu na first medial form",
             eac: "MNAZ1",
           },
           MCHx: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
           },
         },
       },
@@ -1240,36 +1136,28 @@ export const variants: Record<
       },
       "2": {
         written: ["A"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
             gb: "0008 na first final form",
             eac: "MNM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0008 na final form",
             eac: "TNAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1828 sibe na first final form",
             eac: "SNAM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0008 manchu na first final form",
             eac: "MNAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -1278,90 +1166,70 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C3 ang isolated form",
             eac: "XND1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           MCH: {
-            conditions: ["default"],
             eac: "MANGD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C3 ang initial form",
             eac: "XNS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           MCH: {
-            conditions: ["default"],
             eac: "MANGS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["A", "G"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C3 ang medial form",
             eac: "XNZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           MCH: {
-            conditions: ["default"],
             gb: "1829 manchu ang first medial form",
             eac: "MANGZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["A", "G"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C3 ang final form",
             eac: "XNM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           MCH: {
-            conditions: ["default"],
             gb: "0017 manchu ang final form",
             eac: "MANGM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -1370,110 +1238,86 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C4 ba isolated form",
             eac: "MBD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SBAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MBAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["B"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C4 ba initial form",
             eac: "MBS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           SIB: {
-            conditions: ["default"],
             gb: "182A sibe ba initial form",
             eac: "SBAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "182A manchu ba initial form",
             eac: "MBAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["B"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C4 ba medial form",
             eac: "MBZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           SIB: {
-            conditions: ["default"],
             gb: "182A sibe ba medial form",
             eac: "SBAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "182A manchu ba medial form",
             eac: "MBAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["B"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0018 ba first final form",
             eac: "MBM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           SIB: {
-            conditions: ["default"],
             gb: "182A sibe ba final form",
             eac: "SBAM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0018 manchu ba final form",
             eac: "MBAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -1492,9 +1336,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C6 pa isolated form",
             eac: "MPD1",
           },
@@ -1504,9 +1348,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["P"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C6 pa initial form",
             eac: "MPS1",
           },
@@ -1516,9 +1360,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["P"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C6 pa medial form",
             eac: "MPZ1",
           },
@@ -1528,9 +1372,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["P"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0019 pa final form",
             eac: "MPM1",
           },
@@ -1542,9 +1386,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 3],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C7 qa first isolated form",
             eac: "MHD1",
           },
@@ -1600,9 +1444,10 @@ export const variants: Record<
       },
       "3": {
         written: ["H"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "00C7 qa first initial form",
             eac: "MHS1",
           },
@@ -1639,9 +1484,10 @@ export const variants: Record<
       },
       "3": {
         written: ["H"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "chachlag_onset", "masculine_devsger"],
+            conditions: ["chachlag_onset", "masculine_devsger"],
             gb: "0006 qa first medial form",
             eac: "MHZ1",
           },
@@ -1660,9 +1506,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["H"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "001A qa first final form",
             eac: "MHM1",
           },
@@ -1683,9 +1529,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 3],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C8 ga first isolated form",
             eac: "MGD1",
           },
@@ -1741,9 +1587,10 @@ export const variants: Record<
       },
       "3": {
         written: ["Hx"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "00C8 ga first initial form",
             eac: "MGS1",
           },
@@ -1772,9 +1619,10 @@ export const variants: Record<
       },
       "2": {
         written: ["G"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "feminine"],
+            conditions: ["feminine"],
             gb: "001E ga third medial form",
             eac: "MGZ3",
           },
@@ -1813,9 +1661,10 @@ export const variants: Record<
       },
       "2": {
         written: ["G"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "feminine"],
+            conditions: ["feminine"],
             gb: "001F ga second final form",
             eac: "MGM2",
           },
@@ -1837,98 +1686,82 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C9 ma isolated form",
             eac: "MMD1",
           },
           SIB: {
-            conditions: ["default"],
             eac: "SMAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MMAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["M"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C9 ma initial form",
             eac: "MMS1",
           },
           SIB: {
-            conditions: ["default"],
             gb: "182E sibe ma initial form",
             eac: "SMAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "182E manchu ma initial form",
             eac: "MMAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["M"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0020 ma medial form",
             eac: "MMZ1",
           },
           SIB: {
-            conditions: ["default"],
             gb: "182E sibe ma medial form",
             eac: "SMAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0020 manchu ma medial form",
             eac: "MMAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["M"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0021 ma final form",
             eac: "MMM1",
           },
           SIB: {
-            conditions: ["default"],
             gb: "182E sibe ma final form",
             eac: "SMAM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0021 manchu ma final form",
             eac: "MMAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -1937,142 +1770,106 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CA la isolated form",
             eac: "MLD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "182F la isolated form",
             eac: "TLAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SLAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MLAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["L"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CA la initial form",
             eac: "MLS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "182F la initial form",
             eac: "TLAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "182F sibe la initial form",
             eac: "SLAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "182F manchu la initial form",
             eac: "MLAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["L"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0022 la medial form",
             eac: "MLZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0022 la medial form",
             eac: "TLAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "182F sibe la medial form",
             eac: "SLAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0022 manchu la medial form",
             eac: "MLAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["L"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0023 la final form",
             eac: "MLM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0023 la final form",
             eac: "TLAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "182F sibe la final form",
             eac: "SLAM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0023 manchu la final form",
             eac: "MLAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -2081,142 +1878,106 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CB sa isolated form",
             eac: "MSD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1830 sa isolated form",
             eac: "TSAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SSAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MSAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["S"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CB sa initial form",
             eac: "MSS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1830 sa initial form",
             eac: "TSAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1830 sibe sa initial form",
             eac: "SSAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1830 manchu sa initial form",
             eac: "MSAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["S"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0024 sa first medial form",
             eac: "MSZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0024 sa medial form",
             eac: "TSAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1830 sibe sa medial form",
             eac: "SSAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0024 manchu sa medial form",
             eac: "MSAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["S"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0025 sa first final form",
             eac: "MSM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0025 sa final form",
             eac: "TSAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1830 sibe sa final form",
             eac: "SSAM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0025 manchu sa first final form",
             eac: "MSAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -2234,23 +1995,18 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CC sha first isolated form",
             eac: "MXD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1831 sha isolated form",
             eac: "TSHAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -2276,23 +2032,18 @@ export const variants: Record<
       },
       "2": {
         written: ["Sh"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CC sha first initial form",
             eac: "MXS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1831 sha initial form",
             eac: "TSHAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -2309,46 +2060,36 @@ export const variants: Record<
       },
       "2": {
         written: ["Sh"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0028 sha first medial form",
             eac: "MXZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0028 sha medial form",
             eac: "TSHAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Sh"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0029 sha final form",
             eac: "MXM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0029 sha final form",
             eac: "TSHAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -2357,9 +2098,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CD ta isolated form",
             eac: "MTD1",
           },
@@ -2369,9 +2110,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["T"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CD ta initial form",
             eac: "MTS1",
           },
@@ -2391,9 +2132,9 @@ export const variants: Record<
       },
       "2": {
         written: ["D"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CE ta first medial form",
             eac: "MTZ1",
           },
@@ -2403,9 +2144,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["T"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "002B ta final form",
             eac: "MTM1",
           },
@@ -2417,9 +2158,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 1],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CE da first isolated form",
             eac: "MDD1",
           },
@@ -2448,9 +2189,10 @@ export const variants: Record<
       },
       "2": {
         written: ["T"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "onset"],
+            conditions: ["onset"],
             gb: "00CD da first initial form",
             eac: "MDS1",
           },
@@ -2470,9 +2212,10 @@ export const variants: Record<
       },
       "2": {
         written: ["Dd"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
             gb: "002C da first medial form",
             eac: "MDZ1",
           },
@@ -2482,9 +2225,10 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Dd"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
             gb: "002D da first final form",
             eac: "MDM1",
           },
@@ -2505,143 +2249,108 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "002F cha isolated form",
             eac: "MQD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1834 dza isolated form",
             eac: "TZAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SCHAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MCHAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Ch"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "002F cha initial form",
             eac: "MQS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1834 dza initial form",
             eac: "TZAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1834 sibe cha initial form",
             eac: "SCHAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1834 manchu cha initial form",
             eac: "MCHAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Ch"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "002F cha medial form",
             eac: "MQZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "002F dza medial form",
             eac: "TZAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             gb: "1834 sibe cha medial form",
             eac: "SCHAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "002F manchu cha medial form",
             eac: "MCHAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Ch"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0030 cha final form",
             eac: "MQM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0030 dza final form",
             eac: "TZAM1",
           },
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
           SIB: {
             written: ["medi", 0],
-            conditions: ["default"],
             eac: "SCHAM1",
           },
           MCH: {
             written: ["medi", 0],
-            conditions: ["default"],
             eac: "MCHAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -2650,19 +2359,16 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00B7 ja first isolated form",
             eac: "MJD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MJAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -2679,60 +2385,51 @@ export const variants: Record<
     init: {
       "0": {
         written: ["I"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00B7 ja first initial form",
             eac: "MJS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1835 manchu ja initial form",
             eac: "MJAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["J"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0031 ja first medial form",
             eac: "MJZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0031 manchu ja medial form",
             eac: "MJAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["J"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0032 ja first final form",
             eac: "MJM1",
           },
           MCH: {
             written: ["medi", 0],
-            conditions: ["default"],
             eac: "MJAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -2751,23 +2448,19 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CF ya first isolated form",
             eac: "MYD1",
           },
           SIB: {
-            conditions: ["default"],
             eac: "SYAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MYAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -2793,24 +2486,20 @@ export const variants: Record<
       },
       "2": {
         written: ["Y"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CF ya first initial form",
             eac: "MYS1",
           },
           SIB: {
-            conditions: ["default"],
             eac: "SYAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1836 manchu ya initial form",
             eac: "MYAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -2836,49 +2525,42 @@ export const variants: Record<
       },
       "3": {
         written: ["Y"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00CF ya first medial form",
             eac: "MYZ1",
           },
           SIB: {
-            conditions: ["default"],
             eac: "SYAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1836 manchu ya medial form",
             eac: "MYAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["I"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "000B ya final form",
             eac: "MYM1",
           },
           SIB: {
             written: ["medi", 3],
-            conditions: ["default"],
             eac: "SYAM1",
           },
           MCH: {
             written: ["medi", 3],
-            conditions: ["default"],
             eac: "MYAM1",
           },
           MCHx: {
             written: ["medi", 3],
-            conditions: ["default"],
           },
         },
       },
@@ -2888,25 +2570,19 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D0 ra isolated form",
             eac: "MRD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1837 ra isolated form",
             eac: "TRAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SRAD1",
           },
         },
@@ -2915,25 +2591,19 @@ export const variants: Record<
     init: {
       "0": {
         written: ["R"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D0 ra initial form",
             eac: "MRS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1837 ra initial form",
             eac: "TRAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SRAS1",
           },
         },
@@ -2942,25 +2612,19 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["R"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D0 ra medial form",
             eac: "MRZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1837 ra medial form",
             eac: "TRAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SRAZ1",
           },
         },
@@ -2969,25 +2633,19 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["R"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0033 ra final form",
             eac: "MRM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0033 ra final form",
             eac: "TRAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SRAM1",
           },
         },
@@ -2998,95 +2656,74 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C1 wa isolated form",
             eac: "XWD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1838 fa isolated form",
             eac: "TFAD1",
           },
           SIB: {
-            conditions: ["default"],
             eac: "SFAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MWAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["W"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C1 wa initial form",
             eac: "XWS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1838 fa initial form",
             eac: "TFAS1",
           },
           SIB: {
-            conditions: ["default"],
             eac: "SFAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1838 manchu wa initial form",
             eac: "MWAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["W"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00C1 wa first medial form",
             eac: "XWZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1838 fa medial form",
             eac: "TFAZ1",
           },
           SIB: {
-            conditions: ["default"],
             eac: "SFAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1838 manchu wa medial form",
             eac: "MWAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -3102,31 +2739,24 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["W"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0013 wa first final form",
             eac: "XWM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0013 fa final form",
             eac: "TFAM1",
           },
           SIB: {
-            conditions: ["default"],
             eac: "SFAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MWAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -3145,9 +2775,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D1 fa isolated form",
             eac: "XFD1",
           },
@@ -3157,9 +2787,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["F"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D1 fa initial form",
             eac: "XFS1",
           },
@@ -3169,9 +2799,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["F"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D1 fa medial form",
             eac: "XFZ1",
           },
@@ -3181,9 +2811,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["F"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0034 fa final form",
             eac: "XFM1",
           },
@@ -3195,121 +2825,91 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D2 ka isolated form",
             eac: "MKD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SKAAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MKAAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["K2"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D2 ka initial form",
             eac: "MKS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SKAAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "183A manchu ka initial form",
             eac: "MKAAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["K2"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D2 ka medial form",
             eac: "MKZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
           SIB: {
-            conditions: ["default"],
             eac: "SKAAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "183A manchu ka medial form",
             eac: "MKAAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["K2"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0035 ka final form",
             eac: "MKM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
           SIB: {
             written: ["medi", 0],
-            conditions: ["default"],
             eac: "SKAAM1",
           },
           MCH: {
             written: ["medi", 0],
-            conditions: ["default"],
             eac: "MKAAM1",
           },
           MCHx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -3319,72 +2919,57 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D3 kha isolated form",
             eac: "XKD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["K"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D3 kha initial form",
             eac: "XKS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["K"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D3 kha medial form",
             eac: "XKZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["K"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0036 kha final form",
             eac: "XKM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -3394,72 +2979,57 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0037 tsa isolated form",
             eac: "XCD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["C"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0037 tsa initial form",
             eac: "XCS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["C"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0037 tsa medial form",
             eac: "XCZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["C"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0038 tsa final form",
             eac: "XCM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -3469,60 +3039,52 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0039 za isolated form",
             eac: "MZD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Z"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0039 za initial form",
             eac: "MZS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Z"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "0039 za medial form",
             eac: "MZZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Z"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "003A za final form",
             eac: "MZM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -3531,72 +3093,56 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D4 haa isolated form",
             eac: "XHD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "Hr"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D4 haa initial form",
             eac: "XHS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Hr"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D5 haa medial form",
             eac: "XHZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Hr"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "003B haa final form",
             eac: "XHM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
@@ -3605,9 +3151,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D6 zra isolated form",
             eac: "XRD1",
           },
@@ -3617,9 +3163,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Rh"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D6 zra initial form",
             eac: "XRS1",
           },
@@ -3629,9 +3175,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Rh"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D6 zra medial form",
             eac: "XRZ1",
           },
@@ -3641,9 +3187,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Rh"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "003C zra final form",
             eac: "XRM1",
           },
@@ -3655,92 +3201,72 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D7 lha isolated form",
             eac: "XLD1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1840 lha isolated form",
             eac: "TLHAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["L", "Hr"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D7 lha initial form",
             eac: "XLS1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1840 lha initial form",
             eac: "TLHAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["L", "Hr"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "003D lha medial form",
             eac: "XLZ1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "003D lha medial form",
             eac: "TLHAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "003D lha final form",
             eac: "XLM1",
           },
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "003D lha final form",
             eac: "TLHAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -3749,9 +3275,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D5 zhi isolated form",
             eac: "XZD1",
           },
@@ -3761,9 +3287,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Zr"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D5 zhi initial form",
             eac: "XZS1",
           },
@@ -3773,9 +3299,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D5 zhi medial form",
             eac: "XZZ1",
           },
@@ -3785,9 +3311,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D5 zhi final form",
             eac: "XZM1",
           },
@@ -3799,9 +3325,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D8 chi isolated form",
             eac: "XQD1",
           },
@@ -3811,9 +3337,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Cr"],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D8 chi initial form",
             eac: "XQS1",
           },
@@ -3823,9 +3349,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D8 chi medial form",
             eac: "XQZ1",
           },
@@ -3835,9 +3361,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MNG: {
-            conditions: ["default"],
             gb: "00D8 chi final form",
             eac: "XQM1",
           },
@@ -3849,60 +3375,52 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["Lv"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1843 todo long vowel sign isolated form",
             eac: "TLVSD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Lv"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1843 todo long vowel sign initial form",
             eac: "TLVSS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Lv"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1843 todo long vowel sign medial form",
             eac: "TLVSZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Lv"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1843 todo long vowel sign final form",
             eac: "TLVSM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -3911,45 +3429,39 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "E"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1844 todo e isolated form",
             eac: "TED1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "E"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1844 todo e initial form",
             eac: "TES1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["E"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "003F todo e first medial form",
             eac: "TEZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -3966,15 +3478,13 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["E"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "003F todo e first final form",
             eac: "TEM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -3983,30 +3493,26 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "I3"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1845 todo i first medial form",
             eac: "TID1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "Ip"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0041 todo i first initial form",
             eac: "TIS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -4033,15 +3539,13 @@ export const variants: Record<
       },
       "2": {
         written: ["Ip"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0042 todo i second medial form",
             eac: "TIZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "3": {
@@ -4068,15 +3572,13 @@ export const variants: Record<
       },
       "2": {
         written: ["I3"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0044 todo i first final form",
             eac: "TIM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -4085,45 +3587,39 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "Ob"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1846 todo o isolated form",
             eac: "TOD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "Ob"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0045 todo o initial form",
             eac: "TOS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Ob"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0046 todo o first medial form",
             eac: "TOZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -4140,15 +3636,13 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Ob"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0048 todo o final form",
             eac: "TOM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -4157,9 +3651,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "Up"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1847 todo u first isolated form",
             eac: "TUD1",
           },
@@ -4178,9 +3672,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["A", "Op"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "004A todo u initial form",
             eac: "TUS1",
           },
@@ -4209,9 +3703,9 @@ export const variants: Record<
       },
       "3": {
         written: ["Op"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "004B todo u first medial form",
             eac: "TUZ1",
           },
@@ -4240,9 +3734,9 @@ export const variants: Record<
       },
       "3": {
         written: ["Up"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "004D todo u first final form",
             eac: "TUM1",
           },
@@ -4254,9 +3748,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "Ot"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1848 todo oe isolated form",
             eac: "TOED1",
           },
@@ -4266,9 +3760,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["A", "Ot"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "004E todo oe initial form",
             eac: "TOES1",
           },
@@ -4278,9 +3772,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Ot"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "004F todo oe first medial form",
             eac: "TOEZ1",
           },
@@ -4307,9 +3801,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Ot"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0051 todo oe first final form",
             eac: "TOEM1",
           },
@@ -4329,15 +3823,13 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "U"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1849 todo ue first isolated form",
             eac: "TUED1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -4354,30 +3846,26 @@ export const variants: Record<
     init: {
       "0": {
         written: ["A", "O"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1824 todo ue initial form",
             eac: "TUES1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["O"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "000C todo ue first medial form",
             eac: "TUEZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -4406,15 +3894,13 @@ export const variants: Record<
       },
       "2": {
         written: ["U"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "000E todo ue final form",
             eac: "TUEM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -4423,60 +3909,52 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1829 ang isolated form",
             eac: "TANGD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1829 ang initial form",
             eac: "TANGS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["A", "G"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1829 ang medial form",
             eac: "TANGZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["A", "G2"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1829 todo ang final form",
             eac: "TANGM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -4485,60 +3963,52 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "182A ba isolated form",
             eac: "TBAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["B"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "182A ba initial form",
             eac: "TBAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["B"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "182A ba medial form",
             eac: "TBAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["B2"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "182A todo ba final form",
             eac: "TBAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -4547,15 +4017,14 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "184C todo pa isolated form",
             eac: "TPAD1",
           },
           TODx: {
             written: ["init", 0, "TODx"],
-            conditions: ["default"],
           },
         },
       },
@@ -4563,15 +4032,14 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Pp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "184C todo pa initial form",
             eac: "TPAS1",
           },
           TODx: {
             written: ["Ph"],
-            conditions: ["default"],
           },
         },
       },
@@ -4579,15 +4047,14 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Pp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "184C todo pa medial form",
             eac: "TPAZ1",
           },
           TODx: {
             written: ["Ph"],
-            conditions: ["default"],
           },
         },
       },
@@ -4595,15 +4062,14 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Pp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0052 todo pa final form",
             eac: "TPAM1",
           },
           TODx: {
             written: ["medi", 0, "TODx"],
-            conditions: ["default"],
           },
         },
       },
@@ -4613,9 +4079,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "184D todo qa isolated form",
             eac: "TQAD1",
           },
@@ -4643,9 +4109,10 @@ export const variants: Record<
       },
       "2": {
         written: ["Hx2"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "184D todo qa initial form",
             eac: "TQAS1",
           },
@@ -4665,9 +4132,10 @@ export const variants: Record<
       },
       "2": {
         written: ["Hx"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "001C todo qa medial form with dots",
             eac: "TQAZ1",
           },
@@ -4677,9 +4145,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["K"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1836 todo qa final form",
             eac: "TQAM1",
           },
@@ -4691,15 +4159,13 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "184E todo ga masculine isolated form",
             eac: "TGAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -4728,14 +4194,15 @@ export const variants: Record<
       },
       "2": {
         written: ["Hb"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "184E todo ga initial form",
             eac: "TGAS1",
           },
           TODx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -4768,14 +4235,15 @@ export const variants: Record<
       },
       "3": {
         written: ["Hb"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "0053 todo ga first medial form",
             eac: "TGAZ1",
           },
           TODx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -4783,15 +4251,13 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Hp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0055 todo ga first final form",
             eac: "TGAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -4800,72 +4266,56 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "182E todo ma isolated form",
             eac: "TMAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["M"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "182E todo ma initial form",
             eac: "TMAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["M"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0020 todo ma medial form",
             eac: "TMAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["M2"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "184F todo ma final form",
             eac: "TMAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -4874,72 +4324,57 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1850 todo ta isolated form",
             eac: "TTAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Tp"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1850 todo ta initial form",
             eac: "TTAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Tp"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1850 todo ta medial form",
             eac: "TTAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Tp"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0056 todo ta final form",
             eac: "TTAM1",
           },
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -4949,60 +4384,53 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1851 todo da isolated form",
             eac: "TDAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Dp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1851 todo da initial form",
             eac: "TDAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Dp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1851 todo da medial form",
             eac: "TDAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Dp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0311 todo da final form",
             eac: "TDAM1",
           },
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -5012,9 +4440,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1852 todo cha isolated form",
             eac: "TCHAD1",
           },
@@ -5024,9 +4452,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Jb"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1852 todo cha initial form",
             eac: "TCHAS1",
           },
@@ -5036,9 +4464,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Jb"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0057 todo cha medial form",
             eac: "TCHAZ1",
           },
@@ -5048,9 +4476,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Jb"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0058 todo cha final form",
             eac: "TCHAM1",
           },
@@ -5062,60 +4490,53 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1853 todo ja isolated form",
             eac: "TJAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Cp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1853 todo ja initial form",
             eac: "TJAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Cp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "0059 todo ja medial form",
             eac: "TJAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Cp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "005A todo ja final form",
             eac: "TJAM1",
           },
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -5125,72 +4546,57 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1854 todo tsa isolated form",
             eac: "TTSAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["J"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1854 todo tsa initial form",
             eac: "TTSAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["J"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0031 todo tsa medial form",
             eac: "TTSAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["J"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "0032 todo tsa final form",
             eac: "TTSAM1",
           },
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -5200,18 +4606,14 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1855 todo ya isolated form",
             eac: "TYAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -5226,18 +4628,14 @@ export const variants: Record<
     init: {
       "0": {
         written: ["I"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1855 todo ya first initial form",
             eac: "TYAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -5253,18 +4651,14 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["I"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "1855 todo ya first medial form",
             eac: "TYAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -5280,19 +4674,17 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["I3"],
+        default: true,
         locales: {
           MNGx: {
             written: ["I4"],
-            conditions: ["default"],
           },
           TOD: {
-            conditions: ["default"],
             gb: "0044 todo ya final form",
             eac: "TYAM1",
           },
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -5302,45 +4694,39 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1856 todo wa isolated form",
             eac: "TWAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Wb"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1856 todo wa initial form",
             eac: "TWAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Wb"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1856 todo wa first medial form",
             eac: "TWAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -5355,15 +4741,14 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Wb"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "005B todo wa first final form",
             eac: "TWAM1",
           },
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -5381,9 +4766,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1857 todo ka isolated form",
             eac: "TEKAD1",
           },
@@ -5393,9 +4778,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Kp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1857 todo ka initial form",
             eac: "TEKAS1",
           },
@@ -5405,9 +4790,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Kp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1857 todo ka medial form",
             eac: "TEKAZ1",
           },
@@ -5417,9 +4802,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Kp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "005C todo ka final form",
             eac: "TEKAM1",
           },
@@ -5431,9 +4816,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1858 todo gaa isolated form",
             eac: "TGAAD1",
           },
@@ -5443,9 +4828,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Gp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1858 todo gaa initial form",
             eac: "TGAAS1",
           },
@@ -5455,9 +4840,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Gp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1858 todo gaa medial form",
             eac: "TGAAZ1",
           },
@@ -5467,9 +4852,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "1858 todo gaa final form",
             eac: "TGAAM1",
           },
@@ -5481,73 +4866,58 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "183E todo haa isolated form",
             eac: "THAAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "Hr"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "183E todo haa first initial form",
             eac: "THAAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["A", "Hr"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "005D todo haa first medial form",
             eac: "THAAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["A", "Hr"],
+        default: true,
         locales: {
           MNGx: {
             written: ["Hr"],
-            conditions: ["default"],
           },
           TOD: {
-            conditions: ["default"],
             gb: "1859 todo haa first final form",
             eac: "THAAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -5556,9 +4926,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "185A todo jia isolated form",
             eac: "TAKAD1",
           },
@@ -5568,9 +4938,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["B", "Yp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "185A todo jia initial form",
             eac: "TAKAS1",
           },
@@ -5580,9 +4950,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["B", "Yp"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "185A todo jia medial form",
             eac: "TAKAZ1",
           },
@@ -5592,9 +4962,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "185A todo jia final form",
             eac: "TAKAM1",
           },
@@ -5606,73 +4976,58 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "185B todo nia isolated form",
             eac: "TANAD1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Ny"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "185B todo nia initial form",
             eac: "TANAS1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Ny"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TOD: {
-            conditions: ["default"],
             gb: "185B todo nia medial form",
             eac: "TANAZ1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           MNGx: {
             written: ["Ny"],
-            conditions: ["default"],
           },
           TOD: {
-            conditions: ["default"],
             gb: "185B todo nia final form",
             eac: "TANAM1",
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -5681,15 +5036,14 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "185C todo dza isolated form",
             eac: "TADZAD1",
           },
           TODx: {
             written: ["init", 0, "TODx"],
-            conditions: ["default"],
           },
         },
       },
@@ -5697,15 +5051,14 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Zz"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "185C todo dza first initial form",
             eac: "TADZAS1",
           },
           TODx: {
             written: ["Zc"],
-            conditions: ["default"],
           },
         },
       },
@@ -5713,15 +5066,14 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Zz"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "005E todo dza first medial form",
             eac: "TADZAZ1",
           },
           TODx: {
             written: ["Zc"],
-            conditions: ["default"],
           },
         },
       },
@@ -5729,15 +5081,14 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Zz"],
+        default: true,
         locales: {
           TOD: {
-            conditions: ["default"],
             gb: "005F todo dza first final form",
             eac: "TADZAM1",
           },
           TODx: {
             written: ["Zc"],
-            conditions: ["default"],
           },
         },
       },
@@ -5747,38 +5098,32 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SED1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1821 manchu e isolated form",
             eac: "MED1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SES1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0007 manchu e initial form",
             eac: "MES1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -5802,19 +5147,16 @@ export const variants: Record<
       },
       "2": {
         written: ["Ah"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SEZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0060 manchu e first medial form",
             eac: "MEZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -5870,19 +5212,16 @@ export const variants: Record<
       },
       "4": {
         written: ["Ah"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SEM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "185D manchu e first final form",
             eac: "MEM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -5899,9 +5238,9 @@ export const variants: Record<
       },
       "2": {
         written: ["A", "I"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SID1",
           },
         },
@@ -5910,9 +5249,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["A", "I"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SIS1",
           },
         },
@@ -5930,9 +5269,9 @@ export const variants: Record<
       },
       "3": {
         written: ["I"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SIZ1",
           },
         },
@@ -5959,9 +5298,9 @@ export const variants: Record<
       },
       "3": {
         written: ["I"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SIM1",
           },
         },
@@ -5972,76 +5311,64 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SIYD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MIYD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SIYS1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MIYS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Ai"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "185F sibe iy medial form",
             eac: "SIYZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "185F manchu iy medial form",
             eac: "MIYZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Ai"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "185F sibe iy final form",
             eac: "SIYM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0064 manchu iy final form",
             eac: "MIYM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -6050,40 +5377,34 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "Oh"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1860 sibe ue isolated form",
             eac: "SUED1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1860 manchu ue isolated form",
             eac: "MUED1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "Oh"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1860 sibe ue initial form",
             eac: "SUES1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0065 manchu ue initial form",
             eac: "MUES1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -6108,20 +5429,17 @@ export const variants: Record<
       },
       "2": {
         written: ["Oh"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1860 sibe ue first medial form",
             eac: "SUEZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0066 manchu ue first medial form",
             eac: "MUEZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -6182,20 +5500,17 @@ export const variants: Record<
       },
       "4": {
         written: ["Uh"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1860 sibe ue first final form",
             eac: "SUEM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0067 manchu ue first final form",
             eac: "MUEM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -6204,78 +5519,66 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "Ue"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SUD1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1825 manchu u isolated form",
             eac: "MUD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "O", "I"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SUS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1826 manchu u initial form",
             eac: "MUS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["O", "I"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1861 sibe u medial form",
             eac: "SUZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1861 manchu u medial form",
             eac: "MUZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Ue"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1861 sibe u final form",
             eac: "SUM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0011 manchu u final form",
             eac: "MUM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -6284,9 +5587,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SANGD1",
           },
         },
@@ -6295,9 +5598,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SANGS1",
           },
         },
@@ -6306,9 +5609,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["A", "G"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1862 sibe ang medial form",
             eac: "SANGZ1",
           },
@@ -6318,9 +5621,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["A", "G3"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1862 sibe ang final form",
             eac: "SANGM1",
           },
@@ -6332,9 +5635,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 3],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SKAD1",
           },
         },
@@ -6377,9 +5680,10 @@ export const variants: Record<
       },
       "3": {
         written: ["H"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             eac: "SKAS1",
           },
         },
@@ -6407,9 +5711,10 @@ export const variants: Record<
       },
       "3": {
         written: ["H"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             eac: "SKAZ1",
           },
         },
@@ -6426,9 +5731,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Nx"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1863 sibe ka final form",
             eac: "SKAM1",
           },
@@ -6456,18 +5761,15 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SGAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MGAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -6503,19 +5805,20 @@ export const variants: Record<
       },
       "2": {
         written: ["Hh"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "1864 sibe ga initial form",
             eac: "SGAS1",
           },
           MCH: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "1864 manchu ga first initial form",
             eac: "MGAS1",
           },
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -6540,19 +5843,20 @@ export const variants: Record<
       },
       "2": {
         written: ["Hh"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "1864 sibe ga medial form",
             eac: "SGAZ1",
           },
           MCH: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "006A manchu ga first medial form",
             eac: "MGAZ1",
           },
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -6560,18 +5864,15 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 2],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SGAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MGAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -6580,18 +5881,15 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SHAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MHAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -6627,19 +5925,20 @@ export const variants: Record<
       },
       "2": {
         written: ["Hc"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "1865 sibe ha initial form",
             eac: "SHAS1",
           },
           MCH: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "1865 manchu ha first initial form",
             eac: "MHAS1",
           },
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -6664,19 +5963,20 @@ export const variants: Record<
       },
       "2": {
         written: ["Hc"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "1865 sibe ha medial form",
             eac: "SHAZ1",
           },
           MCH: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "006C manchu ha first medial form",
             eac: "MHAZ1",
           },
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -6684,18 +5984,15 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 2],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SHAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MHAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -6704,76 +6001,64 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SPAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MPAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Pb"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1866 sibe pa initial form",
             eac: "SPAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1866 manchu pa first initial form",
             eac: "MPAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Pb"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1866 sibe pa medial form",
             eac: "SPAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1866 manchu pa first medial form",
             eac: "MPAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SPAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MPAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -6782,77 +6067,65 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SSHAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MSHAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Sp"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1867 sibe sha initial form",
             eac: "SSHAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1867 manchu sha initial form",
             eac: "MSHAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Sp"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1867 sibe sha medial form",
             eac: "SSHAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "006E manchu sha medial form",
             eac: "MSHAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Sp"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SSHAM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "006F manchu sha final form",
             eac: "MSHAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -6861,18 +6134,15 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "STAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MTAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -6909,19 +6179,20 @@ export const variants: Record<
       },
       "2": {
         written: ["Tb"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "feminine"],
+            conditions: ["feminine"],
             gb: "1868 sibe ta first initial form",
             eac: "STAS1",
           },
           MCH: {
-            conditions: ["default", "feminine"],
+            conditions: ["feminine"],
             gb: "1868 manchu ta first initial form",
             eac: "MTAS1",
           },
           MCHx: {
-            conditions: ["default", "feminine"],
+            conditions: ["feminine"],
           },
         },
       },
@@ -6965,19 +6236,20 @@ export const variants: Record<
       },
       "3": {
         written: ["Db"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "feminine"],
+            conditions: ["feminine"],
             gb: "1868 sibe ta first medial form",
             eac: "STAZ1",
           },
           MCH: {
-            conditions: ["default", "feminine"],
+            conditions: ["feminine"],
             gb: "0070 manchu ta first medial form",
             eac: "MTAZ1",
           },
           MCHx: {
-            conditions: ["default", "feminine"],
+            conditions: ["feminine"],
           },
         },
       },
@@ -6985,20 +6257,17 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Dd"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1868 sibe ta first final form",
             eac: "STAM1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "002D manchu ta final form",
             eac: "MTAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -7007,18 +6276,15 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SDAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MDAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -7055,19 +6321,20 @@ export const variants: Record<
       },
       "2": {
         written: ["Th"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "1869 sibe da first initial form",
             eac: "SDAS1",
           },
           MCH: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "1869 manchu da first initial form",
             eac: "MDAS1",
           },
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -7093,19 +6360,20 @@ export const variants: Record<
       },
       "2": {
         written: ["Dh"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "1869 sibe da first medial form",
             eac: "SDAZ2",
           },
           MCH: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "0072 manchu da first medial form",
             eac: "MDAZ1",
           },
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -7113,18 +6381,15 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 2],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SDAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MDAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -7133,9 +6398,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SJAD1",
           },
         },
@@ -7144,9 +6409,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["I"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186A sibe ja initial form",
             eac: "SJAS1",
           },
@@ -7156,9 +6421,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["J2"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186A sibe ja medial form",
             eac: "SJAZ1",
           },
@@ -7168,9 +6433,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SJAM1",
           },
         },
@@ -7181,9 +6446,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SFAD1",
           },
         },
@@ -7192,9 +6457,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["V"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186B sibe fa initial form",
             eac: "SFAS1",
           },
@@ -7204,9 +6469,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["V"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186B sibe fa medial form",
             eac: "SFAZ1",
           },
@@ -7216,9 +6481,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SFAM1",
           },
         },
@@ -7229,76 +6494,64 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SGAAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MGAAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Kh"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186C sibe gaa initial form",
             eac: "SGAAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "186C manchu gaa initial form",
             eac: "MGAAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Kh"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186C sibe gaa medial form",
             eac: "SGAAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "186C manchu gaa medial form",
             eac: "MGAAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SGAAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MGAAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -7307,13 +6560,12 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SHAAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MHAAD1",
           },
         },
@@ -7322,14 +6574,13 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Kc"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186D sibe haa initial form",
             eac: "SHAAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "186D manchu haa initial form",
             eac: "MHAAS1",
           },
@@ -7339,14 +6590,13 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Kc"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186D sibe haa medial form",
             eac: "SHAAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "186D manchu haa medial form",
             eac: "MHAAZ1",
           },
@@ -7356,13 +6606,12 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SHAAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MHAAM1",
           },
         },
@@ -7373,76 +6622,64 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "STSAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MTSAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Cs"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186E sibe tsa initial form",
             eac: "STSAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "186E manchu tsa initial form",
             eac: "MTSAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Cs"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186E sibe tsa medial form",
             eac: "STSAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0074 manchu tsa medial form",
             eac: "MTSAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "STSAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MTSAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -7451,76 +6688,64 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SZAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MZAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Zs"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186F sibe za first initial form",
             eac: "SZAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "186F manchu za first initial form",
             eac: "MZAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Zs"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "186F sibe za first medial form",
             eac: "SZAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0076 manchu za first medial form",
             eac: "MZAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Zs"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SZAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MZAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -7529,13 +6754,12 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SRAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MRAAD1",
           },
         },
@@ -7544,14 +6768,13 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Rr"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1870 sibe raa initial form",
             eac: "SRAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1870 manchu raa initial form",
             eac: "MRAAS1",
           },
@@ -7561,14 +6784,13 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Rr"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1870 sibe raa medial form",
             eac: "SRAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1870 manchu raa medial form",
             eac: "MRAAZ1",
           },
@@ -7578,13 +6800,12 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SRAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MRAAM1",
           },
         },
@@ -7595,76 +6816,65 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SCHAD1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MCHAAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Cc"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1871 sibe cha initial form",
             eac: "SCHAS1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "1871 manchu cha initial form",
             eac: "MCHAAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Cc"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1871 sibe cha medial form",
             eac: "SCHAZ1",
           },
           MCH: {
-            conditions: ["default"],
             gb: "0078 manchu cha medial form",
             eac: "MCHAAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SCHAM1",
           },
           MCH: {
-            conditions: ["default"],
             eac: "MCHAAM1",
           },
           MCHx: {
             written: ["Cc"],
-            conditions: ["default"],
           },
         },
       },
@@ -7674,9 +6884,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SZHAD1",
           },
         },
@@ -7685,9 +6895,9 @@ export const variants: Record<
     init: {
       "0": {
         written: ["Ic"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1872 sibe zha initial form",
             eac: "SZHAS1",
           },
@@ -7697,9 +6907,9 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Ic"],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             gb: "1872 sibe zha medial form",
             eac: "SZHAZ1",
           },
@@ -7709,9 +6919,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           SIB: {
-            conditions: ["default"],
             eac: "SZHAM1",
           },
         },
@@ -7730,30 +6940,26 @@ export const variants: Record<
       },
       "2": {
         written: ["A", "I"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "1822 manchu i isolated form",
             eac: "MID1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "I"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "000A manchu i initial form",
             eac: "MIS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -7773,15 +6979,13 @@ export const variants: Record<
       },
       "3": {
         written: ["I"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "1835 manchu i first medial form",
             eac: "MIZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -7811,15 +7015,13 @@ export const variants: Record<
       },
       "3": {
         written: ["I"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "000B manchu i first final form",
             eac: "MIM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "4": {
@@ -7838,14 +7040,12 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 3],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             eac: "MKAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -7893,14 +7093,15 @@ export const variants: Record<
       },
       "3": {
         written: ["H"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "182C manchu ka first initial form",
             eac: "MKAS1",
           },
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -7934,14 +7135,15 @@ export const variants: Record<
       },
       "3": {
         written: ["H"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
             gb: "0006 manchu ka first medial form",
             eac: "MKAZ1",
           },
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -7982,14 +7184,15 @@ export const variants: Record<
       },
       "3": {
         written: ["Hx"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default", "masculine_devsger"],
+            conditions: ["masculine_devsger"],
             gb: "1874 manchu ka first final form",
             eac: "MKAM1",
           },
           MCHx: {
-            conditions: ["default", "masculine_devsger"],
+            conditions: ["masculine_devsger"],
           },
         },
       },
@@ -7999,59 +7202,51 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             eac: "MRAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["R"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "1837 manchu ra initial form",
             eac: "MRAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["R"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "1837 manchu ra medial form",
             eac: "MRAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["R2"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "1875 manchu ra final form",
             eac: "MRAM1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -8060,9 +7255,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             eac: "MFAD1",
           },
         },
@@ -8089,9 +7284,9 @@ export const variants: Record<
       },
       "2": {
         written: ["V"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "186B manchu fa first initial form",
             eac: "MFAS1",
           },
@@ -8111,9 +7306,9 @@ export const variants: Record<
       },
       "2": {
         written: ["V"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "1876 manchu fa first medial form",
             eac: "MFAZ1",
           },
@@ -8123,9 +7318,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 2],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             eac: "MFAM1",
           },
         },
@@ -8136,58 +7331,51 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             eac: "MZHAD1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Ic"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "1877 manchu zha initial form",
             eac: "MZHAS1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Jc"],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             gb: "007C manchu zha medial form",
             eac: "MZHAZ1",
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
           MCH: {
-            conditions: ["default"],
             eac: "MZHAM1",
           },
           MCHx: {
             written: ["Jc"],
-            conditions: ["default"],
           },
         },
       },
@@ -8197,52 +7385,45 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "Aw"],
+        default: true,
         locales: {
           MNGx: {
             written: ["fina", 1],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "A"],
+        default: true,
         locales: {
           MNGx: {
             written: ["fina", 1],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["A"],
+        default: true,
         locales: {
           MNGx: {
             written: ["fina", 1],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Aw"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -8251,40 +7432,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["A", "I4"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["A", "I"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["I"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["I4"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -8293,52 +7470,41 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["G"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["G"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["G", "Vi"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -8348,52 +7514,41 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["N", "G"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["N", "G"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["N", "G4"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -8403,40 +7558,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Zc"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Zc"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Zc"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -8445,52 +7596,41 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Zr"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Zr"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Zr"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -8500,52 +7640,40 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Cr2"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Cr2"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
@@ -8554,31 +7682,27 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
       "1": {
         written: ["init", 0, "TODx"],
+        default: true,
         locales: {
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Ds"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["Ds2"],
-            conditions: ["default"],
           },
         },
       },
@@ -8586,13 +7710,11 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Ds"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["Ds2"],
-            conditions: ["default"],
           },
         },
       },
@@ -8600,13 +7722,11 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Ds"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0, "TODx"],
-            conditions: ["default"],
           },
         },
       },
@@ -8616,65 +7736,46 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Wn"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Wn"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Wn"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -8683,52 +7784,40 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Dv"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Dv"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Dv"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
@@ -8737,40 +7826,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Dq"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Dq"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Dq"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -8779,68 +7864,52 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["init", 0, "TODx"],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Bg"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["Bh"],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Bg"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["Bh"],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Bg"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 1],
-            conditions: ["default"],
           },
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -8849,40 +7918,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Pg"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Pg"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Pg"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -8891,52 +7956,41 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Sx"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Sx"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Sx"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -8946,40 +8000,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Rh2"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Rh2"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Rh2"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
         },
       },
     },
@@ -8988,52 +8038,41 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Zz"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Zz"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Zz"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -9043,52 +8082,40 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Q"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Q"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
-          TODx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
+          TODx: {},
         },
       },
     },
@@ -9097,40 +8124,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Rz"],
+        default: true,
         locales: {
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Rz"],
+        default: true,
         locales: {
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -9139,30 +8162,27 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Hy"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Hy"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -9175,10 +8195,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9187,40 +8206,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Nb"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Nb"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9229,40 +8244,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Ct"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Ct"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9271,40 +8282,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Zt"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Zt"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9313,40 +8320,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["It"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Jt"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Jt"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9355,40 +8358,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Ih"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Jh"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Jh"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9397,10 +8396,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -9421,9 +8419,10 @@ export const variants: Record<
       },
       "2": {
         written: ["Dr"],
+        default: true,
         locales: {
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -9439,9 +8438,10 @@ export const variants: Record<
       },
       "2": {
         written: ["Dr"],
+        default: true,
         locales: {
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -9449,10 +8449,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Dr"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9461,10 +8460,9 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 2],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
       "1": {
@@ -9485,9 +8483,10 @@ export const variants: Record<
       },
       "2": {
         written: ["Tx"],
+        default: true,
         locales: {
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -9503,9 +8502,10 @@ export const variants: Record<
       },
       "2": {
         written: ["Dx"],
+        default: true,
         locales: {
           MCHx: {
-            conditions: ["default", "masculine_onset"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -9513,10 +8513,9 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["medi", 2],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9525,40 +8524,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Sx"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Sx"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Sx"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9567,40 +8562,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Iq"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Jq"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Jq"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9609,40 +8600,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["St"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["St"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["St"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9651,40 +8638,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Sc"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Sc"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Sc"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9693,13 +8676,11 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["fina", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -9707,13 +8688,11 @@ export const variants: Record<
     init: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["fina", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -9721,13 +8700,11 @@ export const variants: Record<
     medi: {
       "0": {
         written: ["Wp"],
+        default: true,
         locales: {
-          MNGx: {
-            conditions: ["default"],
-          },
+          MNGx: {},
           TODx: {
             written: ["fina", 0],
-            conditions: ["default"],
           },
         },
       },
@@ -9735,14 +8712,12 @@ export const variants: Record<
     fina: {
       "0": {
         written: ["Wp"],
+        default: true,
         locales: {
           MNGx: {
             written: ["medi", 0],
-            conditions: ["default"],
           },
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
@@ -9751,40 +8726,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Yp"],
+        default: true,
         locales: {
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["Yp"],
+        default: true,
         locales: {
-          TODx: {
-            conditions: ["default"],
-          },
+          TODx: {},
         },
       },
       "1": {
@@ -9799,40 +8770,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Bc"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Bc"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -9841,40 +8808,36 @@ export const variants: Record<
     isol: {
       "0": {
         written: ["init", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     init: {
       "0": {
         written: ["Lc"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     medi: {
       "0": {
         written: ["Lc"],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },
     fina: {
       "0": {
         written: ["medi", 0],
+        default: true,
         locales: {
-          MCHx: {
-            conditions: ["default"],
-          },
+          MCHx: {},
         },
       },
     },

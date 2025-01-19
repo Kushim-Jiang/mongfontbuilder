@@ -12,7 +12,6 @@ export const locales = {
       "chachlag",
       "chachlag_devsger",
       "chachlag_onset",
-      "default",
       "devsger",
       "dotless",
       "feminine",
@@ -59,13 +58,7 @@ export const locales = {
     },
   },
   MNGx: {
-    conditions: [
-      "chachlag",
-      "default",
-      "marked",
-      "post_bowed",
-      "post_wa",
-    ] as const,
+    conditions: ["chachlag", "marked", "post_bowed", "post_wa"] as const,
     categories: {
       vowel: ["a", "aX", "iX", "ue", "ee", "o"],
       consonant: [
@@ -112,7 +105,6 @@ export const locales = {
   TOD: {
     conditions: [
       "chachlag",
-      "default",
       "devsger",
       "feminine",
       "masculine_onset",
@@ -158,7 +150,6 @@ export const locales = {
   },
   TODx: {
     conditions: [
-      "default",
       "devsger",
       "feminine",
       "masculine_onset",
@@ -215,7 +206,6 @@ export const locales = {
   },
   SIB: {
     conditions: [
-      "default",
       "devsger",
       "feminine",
       "marked",
@@ -263,7 +253,6 @@ export const locales = {
   },
   MCH: {
     conditions: [
-      "default",
       "devsger",
       "feminine",
       "marked",
@@ -312,7 +301,6 @@ export const locales = {
   },
   MCHx: {
     conditions: [
-      "default",
       "devsger",
       "feminine",
       "marked",

@@ -19,6 +19,20 @@ for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
   if (typeof localeToAlias == "string") {
     continue;
   }
+
+  for (const [position, fvsToVariant] of Object.entries(
+    positionToFVSToVariant,
+  )) {
+    const defaultVariants = Object.values(fvsToVariant).filter(
+      ({ default: default_ }) => default_,
+    );
+    if (defaultVariants.length != 1) {
+      throw Error("unique default variant undefined for location", {
+        cause: { charName, position, defaultVariants },
+      });
+    }
+  }
+
   for (const locale of Object.keys(locales) as LocaleID[]) {
     const localeNamespace = (
       locale.endsWith("x") ? locale.slice(0, -1) : locale
@@ -42,28 +56,6 @@ for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
             );
           }
           break;
-        }
-      }
-    }
-
-    for (const [position, fvsToVariant] of Object.entries(
-      positionToFVSToVariant,
-    )) {
-      const fvsToConditions = new Map<string, Condition[]>();
-      for (const [fvs, variant] of Object.entries(fvsToVariant)) {
-        const conditions = variant.locales[locale]?.conditions;
-        if (conditions) {
-          fvsToConditions.set(fvs, conditions);
-        }
-      }
-      if (fvsToConditions.size) {
-        const defaults = [...fvsToConditions].filter(([_, v]) =>
-          v.includes("default"),
-        );
-        if (defaults.length != 1) {
-          throw Error("unique default variant undefined for locale", {
-            cause: { charName, position, locale, defaults },
-          });
         }
       }
     }
