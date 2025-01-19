@@ -28,16 +28,17 @@ export const variants: Record<
   "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER": {
     isol: {
       "0": {
-        written: ["medi", 0],
+        written: ["init", 0],
         locales: {
           SIB: {
+            written: ["medi", 0],
             conditions: ["default"],
           },
           MCH: {
+            written: ["medi", 0],
             conditions: ["default"],
           },
           MCHx: {
-            written: ["init", 0, "MCHx"],
             conditions: ["default"],
           },
         },
@@ -45,16 +46,17 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["medi", 0],
+        written: ["A2"],
         locales: {
           SIB: {
+            written: ["medi", 0],
             conditions: ["default"],
           },
           MCH: {
+            written: ["medi", 0],
             conditions: ["default"],
           },
           MCHx: {
-            written: ["A2"],
             conditions: ["default"],
           },
         },
@@ -1131,7 +1133,7 @@ export const variants: Record<
             eac: "MNAS1",
           },
           MCHx: {
-            conditions: ["onset"],
+            conditions: ["default", "onset"],
           },
         },
       },
@@ -1143,7 +1145,7 @@ export const variants: Record<
             eac: "MNS2",
           },
           MCHx: {
-            conditions: ["default", "devsger"],
+            conditions: ["devsger"],
           },
         },
       },
@@ -8243,14 +8245,6 @@ export const variants: Record<
           },
         },
       },
-      "1": {
-        written: ["A2"],
-        locales: {
-          MNGx: {
-            conditions: ["default", "post_wa"],
-          },
-        },
-      },
     },
   },
   "MONGOLIAN LETTER ALI GALI I": {
@@ -8567,7 +8561,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 1],
+        written: ["init", 0, "TODx"],
         locales: {
           TODx: {
             conditions: ["default"],
@@ -8582,12 +8576,8 @@ export const variants: Record<
           MNGx: {
             conditions: ["default"],
           },
-        },
-      },
-      "1": {
-        written: ["Ds2"],
-        locales: {
           TODx: {
+            written: ["Ds2"],
             conditions: ["default"],
           },
         },
@@ -8600,12 +8590,8 @@ export const variants: Record<
           MNGx: {
             conditions: ["default"],
           },
-        },
-      },
-      "1": {
-        written: ["Ds2"],
-        locales: {
           TODx: {
+            written: ["Ds2"],
             conditions: ["default"],
           },
         },
@@ -8619,6 +8605,7 @@ export const variants: Record<
             conditions: ["default"],
           },
           TODx: {
+            written: ["medi", 0, "TODx"],
             conditions: ["default"],
           },
         },
@@ -8796,15 +8783,11 @@ export const variants: Record<
           MNGx: {
             conditions: ["default"],
           },
-          MCHx: {
+          TODx: {
+            written: ["init", 0, "TODx"],
             conditions: ["default"],
           },
-        },
-      },
-      "1": {
-        written: ["init", 1],
-        locales: {
-          TODx: {
+          MCHx: {
             conditions: ["default"],
           },
         },
@@ -8817,15 +8800,11 @@ export const variants: Record<
           MNGx: {
             conditions: ["default"],
           },
-          MCHx: {
+          TODx: {
+            written: ["Bh"],
             conditions: ["default"],
           },
-        },
-      },
-      "1": {
-        written: ["Bh"],
-        locales: {
-          TODx: {
+          MCHx: {
             conditions: ["default"],
           },
         },
@@ -8838,15 +8817,11 @@ export const variants: Record<
           MNGx: {
             conditions: ["default"],
           },
-          MCHx: {
+          TODx: {
+            written: ["Bh"],
             conditions: ["default"],
           },
-        },
-      },
-      "1": {
-        written: ["Bh"],
-        locales: {
-          TODx: {
+          MCHx: {
             conditions: ["default"],
           },
         },

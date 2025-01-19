@@ -3,26 +3,29 @@
     "isol": {
       "0": {
         "written": [
-          "medi",
+          "init",
           0
         ],
         "locales": {
           "SIB": {
+            "written": [
+              "medi",
+              0
+            ],
             "conditions": [
               "default"
             ]
           },
           "MCH": {
+            "written": [
+              "medi",
+              0
+            ],
             "conditions": [
               "default"
             ]
           },
           "MCHx": {
-            "written": [
-              "init",
-              0,
-              "MCHx"
-            ],
             "conditions": [
               "default"
             ]
@@ -33,24 +36,28 @@
     "init": {
       "0": {
         "written": [
-          "medi",
-          0
+          "A2"
         ],
         "locales": {
           "SIB": {
+            "written": [
+              "medi",
+              0
+            ],
             "conditions": [
               "default"
             ]
           },
           "MCH": {
+            "written": [
+              "medi",
+              0
+            ],
             "conditions": [
               "default"
             ]
           },
           "MCHx": {
-            "written": [
-              "A2"
-            ],
             "conditions": [
               "default"
             ]
@@ -1580,6 +1587,7 @@
           },
           "MCHx": {
             "conditions": [
+              "default",
               "onset"
             ]
           }
@@ -1596,7 +1604,6 @@
           },
           "MCHx": {
             "conditions": [
-              "default",
               "devsger"
             ]
           }
@@ -11759,19 +11766,6 @@
             ]
           }
         }
-      },
-      "1": {
-        "written": [
-          "A2"
-        ],
-        "locales": {
-          "MNGx": {
-            "conditions": [
-              "default",
-              "post_wa"
-            ]
-          }
-        }
       }
     }
   },
@@ -12245,7 +12239,8 @@
       "1": {
         "written": [
           "init",
-          1
+          0,
+          "TODx"
         ],
         "locales": {
           "TODx": {
@@ -12266,15 +12261,11 @@
             "conditions": [
               "default"
             ]
-          }
-        }
-      },
-      "1": {
-        "written": [
-          "Ds2"
-        ],
-        "locales": {
+          },
           "TODx": {
+            "written": [
+              "Ds2"
+            ],
             "conditions": [
               "default"
             ]
@@ -12292,15 +12283,11 @@
             "conditions": [
               "default"
             ]
-          }
-        }
-      },
-      "1": {
-        "written": [
-          "Ds2"
-        ],
-        "locales": {
+          },
           "TODx": {
+            "written": [
+              "Ds2"
+            ],
             "conditions": [
               "default"
             ]
@@ -12320,6 +12307,11 @@
             ]
           },
           "TODx": {
+            "written": [
+              "medi",
+              0,
+              "TODx"
+            ],
             "conditions": [
               "default"
             ]
@@ -12582,20 +12574,17 @@
               "default"
             ]
           },
-          "MCHx": {
+          "TODx": {
+            "written": [
+              "init",
+              0,
+              "TODx"
+            ],
             "conditions": [
               "default"
             ]
-          }
-        }
-      },
-      "1": {
-        "written": [
-          "init",
-          1
-        ],
-        "locales": {
-          "TODx": {
+          },
+          "MCHx": {
             "conditions": [
               "default"
             ]
@@ -12614,19 +12603,15 @@
               "default"
             ]
           },
-          "MCHx": {
+          "TODx": {
+            "written": [
+              "Bh"
+            ],
             "conditions": [
               "default"
             ]
-          }
-        }
-      },
-      "1": {
-        "written": [
-          "Bh"
-        ],
-        "locales": {
-          "TODx": {
+          },
+          "MCHx": {
             "conditions": [
               "default"
             ]
@@ -12645,19 +12630,15 @@
               "default"
             ]
           },
-          "MCHx": {
+          "TODx": {
+            "written": [
+              "Bh"
+            ],
             "conditions": [
               "default"
             ]
-          }
-        }
-      },
-      "1": {
-        "written": [
-          "Bh"
-        ],
-        "locales": {
-          "TODx": {
+          },
+          "MCHx": {
             "conditions": [
               "default"
             ]
