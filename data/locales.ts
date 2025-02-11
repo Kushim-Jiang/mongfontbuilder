@@ -208,7 +208,9 @@ export const locales = {
     conditions: [
       "devsger",
       "feminine",
+      "post_bowed_feminine",
       "marked",
+      "feminine_marked",
       "masculine_onset",
       "onset",
       "particle",

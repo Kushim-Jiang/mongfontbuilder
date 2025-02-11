@@ -5215,15 +5215,15 @@ export const variants: Record<
         written: ["Aa"],
         locales: {
           SIB: {
-            conditions: ["post_bowed"],
+            conditions: ["post_bowed_feminine"],
             eac: "SEM4",
           },
           MCH: {
-            conditions: ["post_bowed"],
+            conditions: ["post_bowed_feminine"],
             eac: "MEM4",
           },
           MCHx: {
-            conditions: ["post_bowed"],
+            conditions: ["post_bowed_feminine"],
           },
         },
       },
@@ -5501,17 +5501,17 @@ export const variants: Record<
         written: ["O"],
         locales: {
           SIB: {
-            conditions: ["feminine", "post_bowed"],
+            conditions: ["feminine_marked", "post_bowed_feminine"],
             gb: "1860 sibe ue fourth final form",
             eac: "SUEM4",
           },
           MCH: {
-            conditions: ["feminine", "post_bowed"],
+            conditions: ["feminine_marked", "post_bowed_feminine"],
             gb: "000F manchu ue fourth final form",
             eac: "MUEM4",
           },
           MCHx: {
-            conditions: ["feminine", "post_bowed"],
+            conditions: ["feminine_marked", "post_bowed_feminine"],
           },
         },
       },
