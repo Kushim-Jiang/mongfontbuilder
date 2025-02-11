@@ -3315,7 +3315,7 @@ export const variants: Record<
     },
     medi: {
       "0": {
-        written: ["init", 0],
+        written: ["Zr"],
         default: true,
         locales: {
           MNG: {
@@ -6753,7 +6753,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["Zs"],
+        written: ["medi", 0],
         default: true,
         locales: {
           SIB: {

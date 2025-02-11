@@ -368,6 +368,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "0004 e second initial form",
             "eac": "MES2"
           }
@@ -850,6 +851,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "00BD oe second isolated form",
             "eac": "MOD2"
           }
@@ -1290,6 +1292,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "0007 na second initial form",
             "eac": "MNS2"
           },
@@ -1637,6 +1640,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "00C5 ba second final form",
             "eac": "MBM2"
           },
@@ -1763,6 +1767,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "00C8 qa second initial form",
             "eac": "MHS2"
           }
@@ -1817,6 +1822,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "001C qa second medial form",
             "eac": "MHZ2"
           }
@@ -1881,6 +1887,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "001D qa second final form",
             "eac": "MHM2"
           }
@@ -1947,6 +1954,7 @@
         ],
         "locales": {
           "MNG": {
+            "archaic": true,
             "gb": "00C7 ga second initial form",
             "eac": "MGS2"
           }
@@ -4002,8 +4010,7 @@
     "medi": {
       "0": {
         "written": [
-          "init",
-          0
+          "Zr"
         ],
         "default": true,
         "locales": {
@@ -8301,7 +8308,8 @@
     "fina": {
       "0": {
         "written": [
-          "Zs"
+          "medi",
+          0
         ],
         "default": true,
         "locales": {
