@@ -428,7 +428,7 @@ export const variants: Record<
         written: ["I", "I"],
         locales: {
           MNG: {
-            conditions: ["devsger"],
+            conditions: ["vowel_devsger"],
             gb: "00B9 i third medial form",
             eac: "MIZ3",
           },
@@ -3547,7 +3547,7 @@ export const variants: Record<
         written: ["A", "Ip"],
         locales: {
           TOD: {
-            conditions: ["devsger"],
+            conditions: ["vowel_devsger"],
             gb: "0043 todo i first medial form",
             eac: "TIZ2",
           },
@@ -5279,7 +5279,7 @@ export const variants: Record<
         written: ["A", "I"],
         locales: {
           SIB: {
-            conditions: ["devsger"],
+            conditions: ["vowel_devsger"],
             eac: "SIZ2",
           },
         },
@@ -6985,12 +6985,12 @@ export const variants: Record<
         written: ["I", "I"],
         locales: {
           MCH: {
-            conditions: ["devsger"],
+            conditions: ["vowel_devsger"],
             gb: "1873 manchu i third medial form",
             eac: "MIZ2",
           },
           MCHx: {
-            conditions: ["devsger"],
+            conditions: ["vowel_devsger"],
           },
         },
       },

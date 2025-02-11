@@ -10,16 +10,17 @@ export const locales = {
   MNG: {
     conditions: [
       "chachlag",
-      "chachlag_devsger",
-      "chachlag_onset",
-      "devsger",
-      "dotless",
-      "feminine",
       "marked",
-      "masculine_devsger",
-      "masculine_onset",
+      "chachlag_onset",
+      "chachlag_devsger",
       "onset",
+      "devsger",
+      "masculine_onset",
+      "masculine_devsger",
+      "feminine",
+      "dotless",
       "particle",
+      "vowel_devsger",
       "post_bowed",
     ] as const,
     categories: {
@@ -58,7 +59,13 @@ export const locales = {
     },
   },
   MNGx: {
-    conditions: ["chachlag", "marked", "post_bowed", "post_wa"] as const,
+    conditions: [
+      "chachlag",
+      "marked",
+      "chachlag_onset",
+      "post_wa",
+      "post_bowed",
+    ] as const,
     categories: {
       vowel: ["a", "aX", "iX", "ue", "ee", "o"],
       consonant: [
@@ -104,12 +111,13 @@ export const locales = {
   },
   TOD: {
     conditions: [
-      "chachlag",
-      "devsger",
-      "feminine",
-      "masculine_onset",
       "onset",
+      "devsger",
+      "masculine_onset",
+      "masculine_devsger",
+      "feminine",
       "particle",
+      "vowel_devsger",
       "post_bowed",
     ] as const,
     categories: {
@@ -206,15 +214,16 @@ export const locales = {
   },
   SIB: {
     conditions: [
-      "devsger",
-      "feminine",
-      "post_bowed_feminine",
       "marked",
-      "feminine_marked",
-      "masculine_onset",
       "onset",
+      "devsger",
+      "masculine_onset",
+      "feminine",
+      "feminine_marked",
       "particle",
+      "vowel_devsger",
       "post_bowed",
+      "post_bowed_feminine",
     ] as const,
     categories: {
       vowelMasculine: ["a", "o", "ue"],
@@ -255,14 +264,17 @@ export const locales = {
   },
   MCH: {
     conditions: [
-      "devsger",
-      "feminine",
       "marked",
-      "masculine_devsger",
-      "masculine_onset",
       "onset",
+      "devsger",
+      "masculine_onset",
+      "masculine_devsger",
+      "feminine",
+      "feminine_marked",
       "particle",
+      "vowel_devsger",
       "post_bowed",
+      "post_bowed_feminine",
     ] as const,
     categories: {
       vowelMasculine: ["a", "o", "ue"],
@@ -303,13 +315,16 @@ export const locales = {
   },
   MCHx: {
     conditions: [
-      "devsger",
-      "feminine",
       "marked",
-      "masculine_devsger",
-      "masculine_onset",
       "onset",
+      "devsger",
+      "masculine_onset",
+      "masculine_devsger",
+      "feminine",
+      "feminine_marked",
+      "vowel_devsger",
       "post_bowed",
+      "post_bowed_feminine",
     ] as const,
     categories: {
       vowelMasculine: ["a", "o", "ue"],

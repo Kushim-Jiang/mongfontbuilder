@@ -510,7 +510,7 @@
         "locales": {
           "MNG": {
             "conditions": [
-              "devsger"
+              "vowel_devsger"
             ],
             "gb": "00B9 i third medial form",
             "eac": "MIZ3"
@@ -4291,7 +4291,7 @@
         "locales": {
           "TOD": {
             "conditions": [
-              "devsger"
+              "vowel_devsger"
             ],
             "gb": "0043 todo i first medial form",
             "eac": "TIZ2"
@@ -6453,7 +6453,7 @@
         "locales": {
           "SIB": {
             "conditions": [
-              "devsger"
+              "vowel_devsger"
             ],
             "eac": "SIZ2"
           }
@@ -8588,14 +8588,14 @@
         "locales": {
           "MCH": {
             "conditions": [
-              "devsger"
+              "vowel_devsger"
             ],
             "gb": "1873 manchu i third medial form",
             "eac": "MIZ2"
           },
           "MCHx": {
             "conditions": [
-              "devsger"
+              "vowel_devsger"
             ]
           }
         }

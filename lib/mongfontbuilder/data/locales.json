@@ -2,16 +2,17 @@
   "MNG": {
     "conditions": [
       "chachlag",
-      "chachlag_devsger",
-      "chachlag_onset",
-      "devsger",
-      "dotless",
-      "feminine",
       "marked",
-      "masculine_devsger",
-      "masculine_onset",
+      "chachlag_onset",
+      "chachlag_devsger",
       "onset",
+      "devsger",
+      "masculine_onset",
+      "masculine_devsger",
+      "feminine",
+      "dotless",
       "particle",
+      "vowel_devsger",
       "post_bowed"
     ],
     "categories": {
@@ -64,8 +65,9 @@
     "conditions": [
       "chachlag",
       "marked",
-      "post_bowed",
-      "post_wa"
+      "chachlag_onset",
+      "post_wa",
+      "post_bowed"
     ],
     "categories": {
       "vowel": [
@@ -119,12 +121,13 @@
   },
   "TOD": {
     "conditions": [
-      "chachlag",
-      "devsger",
-      "feminine",
-      "masculine_onset",
       "onset",
+      "devsger",
+      "masculine_onset",
+      "masculine_devsger",
+      "feminine",
       "particle",
+      "vowel_devsger",
       "post_bowed"
     ],
     "categories": {
@@ -243,15 +246,16 @@
   },
   "SIB": {
     "conditions": [
-      "devsger",
-      "feminine",
-      "post_bowed_feminine",
       "marked",
-      "feminine_marked",
-      "masculine_onset",
       "onset",
+      "devsger",
+      "masculine_onset",
+      "feminine",
+      "feminine_marked",
       "particle",
-      "post_bowed"
+      "vowel_devsger",
+      "post_bowed",
+      "post_bowed_feminine"
     ],
     "categories": {
       "vowelMasculine": [
@@ -303,14 +307,17 @@
   },
   "MCH": {
     "conditions": [
-      "devsger",
-      "feminine",
       "marked",
-      "masculine_devsger",
-      "masculine_onset",
       "onset",
+      "devsger",
+      "masculine_onset",
+      "masculine_devsger",
+      "feminine",
+      "feminine_marked",
       "particle",
-      "post_bowed"
+      "vowel_devsger",
+      "post_bowed",
+      "post_bowed_feminine"
     ],
     "categories": {
       "vowelMasculine": [
@@ -362,13 +369,16 @@
   },
   "MCHx": {
     "conditions": [
-      "devsger",
-      "feminine",
       "marked",
-      "masculine_devsger",
-      "masculine_onset",
       "onset",
-      "post_bowed"
+      "devsger",
+      "masculine_onset",
+      "masculine_devsger",
+      "feminine",
+      "feminine_marked",
+      "vowel_devsger",
+      "post_bowed",
+      "post_bowed_feminine"
     ],
     "categories": {
       "vowelMasculine": [
