@@ -17,7 +17,8 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
         }
     )
 
-    composeClasses(c, locales)
+    at = composeClasses(c, locales)
+    conditions = composeConditions(c, locales, at)
 
     ### cursive joining
     localeSet = {*locales}
@@ -41,7 +42,10 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
         c.sub("nirugu", by="nirugu.ignored")
         c.sub("zwj", by="zwj.ignored")
         c.sub("zwnj", by="zwnj.ignored")
-        c.sub("@lvs-tod", by="lvs.ignored")
+
+        if {"TOD", "TODx"}.intersection(locales):
+            c.sub(at["TOD:lvs"], by="lvs.ignored")
+
         for i in range(1, 5):
             for suffix in ["", ".effective"]:
                 c.sub(f"fvs{i}{suffix}", by=f"fvs{i}.ignored")
@@ -77,19 +81,29 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
 
     with c.Lookup("III.controls.preprocessing", feature="rclt"):
         c.contextualSub(c.input("mvs", _nominal))
-        c.contextualSub(c.input(c.glyphClass(["zwnj", "zwj", "nirugu", "@fvs"]), _ignored))
+        c.contextualSub(c.input(c.glyphClass(["zwnj", "zwj", "nirugu", at["fvs"]]), _ignored))
 
-    # if {"TOD", "TODx"}.intersection(locales):
-    #     with c.Lookup("III.tod_tag.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}):
-    #         ...
+    if "TOD" in locales:
+        with c.Lookup("III.TOD.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}):
+            c.contextualSub(
+                c.input(
+                    c.glyphClass([at["TOD:consonant.medi"], at["TOD:vowel.medi"]]),
+                    conditions["TOD.fina"],
+                ),
+                c.input(at["TOD:lvs.fina"], _ignored),
+            )
+            c.contextualSub(c.input(at["TOD:lvs"], _ignored))
 
-    # lookup III.tod_tag.lvs.preprocessing {
-    #     lookupflag IgnoreMarks;
-    #     sub [@tod.consonant.medi @tod.vowel.medi @tag.consonant.medi @tag.vowel.medi]' lookup condition.tod_tag.fina @lvs-tod.fina' lookup _.ignored;
-    #     sub [@tod.consonant.init @tod.vowel.init @tag.consonant.init @tag.vowel.init]' lookup condition.tod_tag.isol @lvs-tod.fina' lookup _.ignored;
-    #     sub @lvs-tod' lookup _.ignored;
-    #     lookupflag 0;
-    # } III.tod_tag.lvs.preprocessing;
+    if "TODx" in locales:
+        with c.Lookup("III.TODx.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}):
+            c.contextualSub(
+                c.input(
+                    c.glyphClass([at["TODx:consonant.medi"], at["TODx:vowel.medi"]]),
+                    conditions["TODx.fina"],
+                ),
+                c.input(at["TODx:lvs.fina"], _ignored),
+            )
+            c.contextualSub(c.input(at["TODx:lvs"], _ignored))
 
     # III.1: Phonetic - Chachlag
 
@@ -128,21 +142,23 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
     return c
 
 
-def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> None:
+def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> dict[str, ast.GlyphClassDefinition]:
     """
     Glyph class definition for letters and categories.
     """
 
-    c.namedGlyphClass("msc", ["mvs", "mvs.narrow", "mvs.wide", "mvs.nominal", "nnbsp"])
-    c.namedGlyphClass("msc.effective", ["mvs.narrow", "mvs.wide"])
-
     fvses = [f"fvs{i}" for i in range(1, 5)]
-    c.namedGlyphClass("fvs.nominal", fvses)
-    c.namedGlyphClass("fvs.effective", [i + ".effective" for i in fvses])
-    c.namedGlyphClass("fvs.ignored", [i + ".ignored" for i in fvses])
-    c.namedGlyphClass(
-        "fvs", [c.namedGlyphClass(i, [i, i + ".effective", i + ".ignored"]) for i in fvses]
-    )
+
+    namedClasses = {
+        "msc": c.namedGlyphClass("msc", ["mvs", "mvs.narrow", "mvs.wide", "mvs.nominal", "nnbsp"]),
+        "msc.effective": c.namedGlyphClass("msc.effective", ["mvs.narrow", "mvs.wide"]),
+        "fvs.nominal": c.namedGlyphClass("fvs.nominal", fvses),
+        "fvs.effective": c.namedGlyphClass("fvs.effective", [i + ".effective" for i in fvses]),
+        "fvs.ignored": c.namedGlyphClass("fvs.ignored", [i + ".ignored" for i in fvses]),
+        "fvs": c.namedGlyphClass(
+            "fvs", [c.namedGlyphClass(i, [i, i + ".effective", i + ".ignored"]) for i in fvses]
+        ),
+    }
 
     for locale in locales:
 
@@ -162,12 +178,14 @@ def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> None:
                         for i in variants.values()
                     ],
                 )
+                namedClasses[letter + "." + position] = positionalClass
                 positionalClasses.append(positionalClass)
                 categoryToClasses.setdefault(
                     locale + ":" + genderNeutralCategory + "." + position, []
                 ).append(positionalClass)
 
             letterClass = c.namedGlyphClass(letter, positionalClasses)
+            namedClasses[letter] = letterClass
             if genderNeutralCategory != category:
                 categoryToClasses.setdefault(locale + ":" + genderNeutralCategory, []).append(
                     letterClass
@@ -175,4 +193,49 @@ def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> None:
             categoryToClasses.setdefault(locale + ":" + category, []).append(letterClass)
 
         for name, positionalClasses in categoryToClasses.items():
-            c.namedGlyphClass(name, positionalClasses)
+            namedClasses[name] = c.namedGlyphClass(name, positionalClasses)
+
+    return namedClasses
+
+
+def composeConditions(
+    c: FeaComposer, locales: list[LocaleID], at: dict[str, ast.GlyphClassDefinition]
+) -> dict[str, ast.LookupBlock]:
+    """
+    Lookup definition for conditions.
+    """
+    conditionLookups = {}
+
+    for locale in locales:
+        for conditionID in data.locales[locale].conditions:
+            with c.Lookup(f"condition.{locale}.{conditionID}") as condition:
+                for alias in getAliasesByLocale(locale):
+                    charName = getCharNameByAlias(locale, alias)
+                    letter = locale + ":" + alias
+                    for position, fvsToVariant in data.variants[charName].items():
+                        for variant in fvsToVariant.values():
+                            if (
+                                locale in variant.locales
+                                and conditionID in variant.locales[locale].conditions
+                            ):
+                                c.sub(
+                                    at[letter + "." + position],
+                                    by=str(GlyphDescriptor.fromData(charName, position, variant)),
+                                )
+            conditionLookups[f"{locale}.{conditionID}"] = condition
+
+    for locale in ["TOD", "TODx"]:
+        if locale in locales:
+            with c.Lookup(f"condition.{locale}.{position}") as condition:
+                for charName, positionToFVSToVariant in data.variants.items():
+                    if any(
+                        {locale}.intersection(i.locales)
+                        for i in positionToFVSToVariant[position].values()
+                    ):
+                        c.sub(
+                            uNameFromCodePoint(ord(unicodedata.lookup(charName))),
+                            by=str(GlyphDescriptor.fromData(charName, position)),
+                        )
+            conditionLookups[f"{locale}.{position}"] = condition
+
+    return conditionLookups
