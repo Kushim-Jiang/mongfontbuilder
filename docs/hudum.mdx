@@ -6,6 +6,7 @@ sidebar:
 
 import WrittenUnitTable from "./WrittenUnitTable.svelte";
 import LetterTable from "./LetterTable.svelte";
+import Mong from "./Mong.svelte";
 
 export const locale = "MNG";
 
@@ -17,7 +18,63 @@ export const locale = "MNG";
 
 <LetterTable locale={locale} />
 
+**Isolated <Mong written="Ị" /> and isolated <Mong written="Ụ" />**. Isolated <Mong written="Ị" /> and isolated <Mong written="Ụ" /> are used historically, with examples shown in [(Dorji _et al._, 2017)](https://www.unicode.org/L2/L2017/17035r2-mongolian-std-var.pdf). In some Traditional Mongolian literature, even if the letter _n_ before isolated <Mong written="Ị" /> or <Mong written="Ụ" /> is omitted, the left point is retained and therefore has to be consistently analyzed as belonging to _i_, _u_ or _ü_.
+
+**Final <Mong written="I" /> in letter _j_**. Final <Mong written="I" /> in letter _j_ is introduced in [(Dorji _et al._, 2017)](https://www.unicode.org/L2/L2017/17035r2-mongolian-std-var.pdf), where the written form of _j_ in the example _bui–j·a_ is not final, but isolated. Since there are currently no examples exist to prove its existence, the written form is marked in gray, but the shaping process still supports the theoretical existence of a word with final <Mong written="I" /> in letter _j_ and chachlag.
+
+**Medial <Mong written="II" /> in letter _y_ and medial <Mong written="O" /> in letter _w_**. Medial <Mong written="II" /> in letter _y_ and medial <Mong written="O" /> in letter _w_ are introduced in [(Dorji _et al._, 2017)](https://www.unicode.org/L2/L2017/17035r2-mongolian-std-var.pdf), where the written form <Mong written="II" /> of letter _y_ in the examples _ayl_ and _aymag_, and the written form <Mong written="O" /> of letter _w_ in the example _tawlay_ are all differences derived from letter analysis. Since _ail_, _aimag_ and _taulai_ are preferred, these written forms are marked in gray.
+
+**Letter _ḳ_ (<Mong written="K2" />) and letter _k_ (<Mong written="K" />)**. Letter _ḳ_ in form <Mong written="K2" /> is used to represent /kʰ/ (Latin: k) in Hudum literature in China, while letter _k_ in form <Mong written="K" /> is used to represent /kʰ/ (Cyrillic: к) in Hudum literature in Mongolia. The reason for disunifying the two letters is that Hudum Ali Gali uses <Mong written="K2" /> to record /ɡ/ and uses <Mong written="K" /> to record /kʰ/.
+
+**Medial <Mong written="Ħ" /> in letter _ħ_ and initial <Mong written="Ž" /> in letter _ž_**. Medial <Mong written="Ħ" /> in letter _ħ_ and initial <Mong written="Ž" /> in letter _ž_ are similar, so they are unified in proposals such as [(SAH, 2017)](https://www.unicode.org/L2/L2017/17035r2-mongolian-std-var.pdf). The reason for disunifying the two written units is that Hudum Ali Gali uses <Mong written="Ħ" /> to record /ɦ/ and to indicate aspiration, and uses <Mong written="Ž" /> to record /ʈ/.
+
 ## Shaping process
+
+### Letter classes
+
+| Class              | Letters                                                                                                                                             |
+| :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| masculine vowel    | _a_ _o_ _u_                                                                                                                                         |
+| feminine vowel     | _e_ _ö_ _ü_ _é_                                                                                                                                     |
+| neuter vowel       | _i_                                                                                                                                                 |
+| consonant          | _n_ _ŋ_ _b_ _p_ _h_ _g_ _m_ _l_ _s_ _ś_ _t_ _d_ _ć_ _j_ _y_ _r_ _w_ _f_ _ḳ_ _k_ _c_ _z_ _ħ_ _ř_ _ł_ _ž_ _č_                                         |
+| bowed written unit | <Mong written="G" /> <Mong written="G̈" /> <Mong written="K" /> <Mong written="K2" /> <Mong written="B" /> <Mong written="P" /> <Mong written="F" /> |
+
+### Mongolian-specific phase
+
+| Shaping step  | Letters                     | Conditions                                                                                        | Lookups           |
+| :------------ | :-------------------------- | :------------------------------------------------------------------------------------------------ | :---------------- |
+| 1. Chachlag   | _a_ _e_                     | **if** follows an MVS:                                                                            | Chachlag          |
+|               | _a_ _e_                     | **if** follows an MVS and precedes an FVS:                                                        | Default           |
+| 2. Syllabic   | _o_ _u_ _ö_ _ü_             | **if** follows an _initial consonant_:                                                            | Marked            |
+|               | _o_ _u_ _ö_ _ü_             | **if** precedes an FVS or follows an FVS:                                                         | Default           |
+|               | _ö_ _ü_                     | **if** final form precedes an FVS2 or FVS4 that precedes _h_/_g_:                                 | Marked            |
+|               | _ö_ _ü_                     | **if** medial form follows a consonant cluster that starts with an _initial consonant_:           | Marked            |
+|               | _d_                         | **if** precedes a final vowel that does not precedes an FVS:                                      | Marked            |
+|               | _n_ _j_ _w_                 | **if** precedes an MVS that precedes an isolated _a_ or isolated _e_:                             | Chachlag_Onset    |
+|               | _h_ _g_                     | **if** precedes an MVS that precedes an isolated _a_:                                             | Chachlag_Onset    |
+|               | _g_                         | **if** precedes an MVS that precedes an isolated _e_:                                             | Chachlag_Devsger  |
+|               | _n_ _t_ _d_                 | **if** precedes a _vowel_:                                                                        | Onset             |
+|               |                             | **else if** follows a _vowel_:                                                                    | Devsger           |
+|               | _h_ _g_                     | **if** precedes a _masculine vowel_:                                                              | Masculine_Onset   |
+|               |                             | **else if** precedes a _feminine vowel_ or _neuter vowel_:                                        | Feminine          |
+|               |                             | **else if** follows a _masculine vowel_:                                                          | Masculine_Devsger |
+|               |                             | **else if** follows a _feminine vowel_:                                                           | Feminine          |
+|               |                             | **else if** remotely follows a _masculine vowel_ without a blocking _feminine vowel_:             | Masculine_Devsger |
+|               |                             | **else if** remotely follows a _feminine vowel_ without a blocking _masculine vowel_:             | Feminine          |
+|               |                             | **else if** remotely precedes a _masculine vowel_ without a blocking _feminine vowel_:            | Masculine_Devsger |
+|               |                             | **else**:                                                                                         | Feminine          |
+|               | _t_                         | **if** precedes _é_ or a _consonant_:                                                             | Devsger           |
+|               | _ś_                         | **if** initial form precedes medial _i_, or medial form precedes _i_:                             | Dotless           |
+|               | _g_                         | **if** follows _s_ or _d_:                                                                        | Dotless           |
+| 3. Particle   | _a_ _e_ _i_ _u_ _ü_ _d_ _y_ | **if** is in the specific particle dictionary that follows an MVS:                                | Particle          |
+|               | _u_ _ü_                     | **if** is in the specific particle dictionary:                                                    | Particle          |
+| 4. Devsger    | _i_                         | **if** follows a vowel that does not end with a written unit <Mong written="I" />:                | Devsger           |
+|               | _i_                         | **if** follows a vowel that will not (consider FVS) end with a written unit <Mong written="I" />: | Devsger           |
+| 5. Post-bowed | _o_ _u_ _ö_ _ü_             | **if** is in the written form of <Mong written="U" /> and follows a _bowed written unit_:         | Post_Bowed        |
+|               | _a_ _e_                     | **if** is in the written form of <Mong written="A" /> and follows a _bowed written unit_:         | Post_Bowed        |
+
+### Lookups
 
 ## References
 
