@@ -4010,7 +4010,8 @@
     "medi": {
       "0": {
         "written": [
-          "Zr"
+          "init",
+          0
         ],
         "default": true,
         "locales": {
