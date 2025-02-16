@@ -5,10 +5,10 @@
 
   let { locale }: Props = $props();
 
-  import type { LocaleID } from "../data/locales";
-  import { aliases, type LocaleNamespace } from "../data/aliases";
-  import { joiningPositions, type JoiningPosition } from "../data/misc";
-  import { variants, type FVS } from "../data/variants";
+  import type { LocaleID } from "../../data/locales";
+  import { aliases, type LocaleNamespace } from "../../data/aliases";
+  import { joiningPositions, type JoiningPosition } from "../../data/misc";
+  import { variants, type FVS } from "../../data/variants";
 
   import LetterVariant from "./LetterVariant.svelte";
   import { nameToCP, hexFromCP } from "./utils";
