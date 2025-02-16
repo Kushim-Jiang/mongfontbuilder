@@ -8,6 +8,10 @@ import yaml
 from fontTools import unicodedata
 from mongfontbuilder.data import LocaleID, aliases
 
+repo = Path(__file__).parent / ".."
+tempDir = repo / "temp"
+tempDir.mkdir(exist_ok=True)
+
 writingSystemToLocaleID: dict[str, LocaleID] = {
     "hud": "MNG",
     "hag": "MNGx",

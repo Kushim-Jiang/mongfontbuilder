@@ -18,7 +18,7 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
     )
 
     at = composeClasses(c, locales)
-    conditions = composeConditions(c, locales, at)
+    conditions = composeConditionLookups(c, locales, at)
 
     ### cursive joining
     localeSet = {*locales}
@@ -198,17 +198,18 @@ def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> dict[str, ast.Gly
     return namedClasses
 
 
-def composeConditions(
+def composeConditionLookups(
     c: FeaComposer, locales: list[LocaleID], at: dict[str, ast.GlyphClassDefinition]
 ) -> dict[str, ast.LookupBlock]:
     """
     Lookup definition for conditions.
     """
-    conditionLookups = {}
+
+    lookups = dict[str, ast.LookupBlock]()
 
     for locale in locales:
         for conditionID in data.locales[locale].conditions:
-            with c.Lookup(f"condition.{locale}.{conditionID}") as condition:
+            with c.Lookup(f"condition.{locale}.{conditionID}") as lookup:
                 for alias in getAliasesByLocale(locale):
                     charName = getCharNameByAlias(locale, alias)
                     letter = locale + ":" + alias
@@ -222,11 +223,11 @@ def composeConditions(
                                     at[letter + "." + position],
                                     by=str(GlyphDescriptor.fromData(charName, position, variant)),
                                 )
-            conditionLookups[f"{locale}.{conditionID}"] = condition
+            lookups[f"{locale}.{conditionID}"] = lookup
 
     for locale in ["TOD", "TODx"]:
         if locale in locales:
-            with c.Lookup(f"condition.{locale}.{position}") as condition:
+            with c.Lookup(f"condition.{locale}.{position}") as lookup:
                 for charName, positionToFVSToVariant in data.variants.items():
                     if any(
                         {locale}.intersection(i.locales)
@@ -236,6 +237,6 @@ def composeConditions(
                             uNameFromCodePoint(ord(unicodedata.lookup(charName))),
                             by=str(GlyphDescriptor.fromData(charName, position)),
                         )
-            conditionLookups[f"{locale}.{position}"] = condition
+            lookups[f"{locale}.{position}"] = lookup
 
-    return conditionLookups
+    return lookups
