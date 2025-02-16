@@ -16,7 +16,6 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
             "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in locales},
         }
     )
-
     at = composeClasses(c, locales)
     conditions = composeConditionLookups(c, locales, at)
 
@@ -147,21 +146,21 @@ def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> dict[str, ast.Gly
     Glyph class definition for letters and categories.
     """
 
+    classes = dict[str, ast.GlyphClassDefinition]()
     fvses = [f"fvs{i}" for i in range(1, 5)]
-
-    namedClasses = {
-        "msc": c.namedGlyphClass("msc", ["mvs", "mvs.narrow", "mvs.wide", "mvs.nominal", "nnbsp"]),
-        "msc.effective": c.namedGlyphClass("msc.effective", ["mvs.narrow", "mvs.wide"]),
-        "fvs.nominal": c.namedGlyphClass("fvs.nominal", fvses),
-        "fvs.effective": c.namedGlyphClass("fvs.effective", [i + ".effective" for i in fvses]),
-        "fvs.ignored": c.namedGlyphClass("fvs.ignored", [i + ".ignored" for i in fvses]),
-        "fvs": c.namedGlyphClass(
-            "fvs", [c.namedGlyphClass(i, [i, i + ".effective", i + ".ignored"]) for i in fvses]
-        ),
-    }
+    for fvs in fvses:
+        classes[fvs] = c.namedGlyphClass(fvs, [fvs, fvs + ".effective", fvs + ".ignored"])
+    for name, items in {
+        "mvs": ["mvs", "mvs.narrow", "mvs.wide", "mvs.nominal", "nnbsp"],
+        "mvs.effective": ["mvs.narrow", "mvs.wide"],
+        "fvs.nominal": fvses,
+        "fvs.effective": [i + ".effective" for i in fvses],
+        "fvs.ignored": [i + ".ignored" for i in fvses],
+        "fvs": [classes[i] for i in fvses],
+    }.items():
+        classes[name] = c.namedGlyphClass(name, items)
 
     for locale in locales:
-
         categoryToClasses = dict[str, list[ast.GlyphClassDefinition]]()
         for alias in getAliasesByLocale(locale):
             charName = getCharNameByAlias(locale, alias)
@@ -178,14 +177,14 @@ def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> dict[str, ast.Gly
                         for i in variants.values()
                     ],
                 )
-                namedClasses[letter + "." + position] = positionalClass
+                classes[letter + "." + position] = positionalClass
                 positionalClasses.append(positionalClass)
                 categoryToClasses.setdefault(
                     locale + ":" + genderNeutralCategory + "." + position, []
                 ).append(positionalClass)
 
             letterClass = c.namedGlyphClass(letter, positionalClasses)
-            namedClasses[letter] = letterClass
+            classes[letter] = letterClass
             if genderNeutralCategory != category:
                 categoryToClasses.setdefault(locale + ":" + genderNeutralCategory, []).append(
                     letterClass
@@ -193,9 +192,9 @@ def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> dict[str, ast.Gly
             categoryToClasses.setdefault(locale + ":" + category, []).append(letterClass)
 
         for name, positionalClasses in categoryToClasses.items():
-            namedClasses[name] = c.namedGlyphClass(name, positionalClasses)
+            classes[name] = c.namedGlyphClass(name, positionalClasses)
 
-    return namedClasses
+    return classes
 
 
 def composeConditionLookups(
