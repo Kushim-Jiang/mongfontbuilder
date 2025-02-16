@@ -6,6 +6,7 @@ sidebar:
 
 import WrittenUnitTable from "./lib/WrittenUnitTable.svelte";
 import LetterTable from "./lib/LetterTable.svelte";
+import ConditionTable from "./lib/ConditionTable.svelte";
 import Mong from "./lib/Mong.svelte";
 
 export const locale = "MNG";
@@ -74,7 +75,9 @@ export const locale = "MNG";
 | 5. Post-bowed | _o_ _u_ _ö_ _ü_             | **if** is in the written form of <Mong written="U" /> and follows a _bowed written unit_:         | Post_Bowed        |
 |               | _a_ _e_                     | **if** is in the written form of <Mong written="A" /> and follows a _bowed written unit_:         | Post_Bowed        |
 
-### Lookups
+### Conditions
+
+<ConditionTable locale={locale} />
 
 ## References
 

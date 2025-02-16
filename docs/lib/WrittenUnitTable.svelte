@@ -50,7 +50,7 @@
   <thead>
     <tr>
       <th rowspan="2">ID</th>
-      <th colspan="4">Joining positions</th>
+      <th colspan="4">Variants</th>
     </tr>
     <tr>
       {#each joiningPositions as position}

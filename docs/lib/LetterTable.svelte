@@ -7,34 +7,35 @@
 
   import type { LocaleID } from "../../data/locales";
   import { aliases, type LocaleNamespace } from "../../data/aliases";
-  import { joiningPositions, type JoiningPosition } from "../../data/misc";
   import { variants, type FVS } from "../../data/variants";
+  import { joiningPositions, type JoiningPosition } from "../../data/misc";
 
   import LetterVariant from "./LetterVariant.svelte";
   import { nameToCP, hexFromCP } from "./utils";
 
-  const localizedVariants = new Map<string, Map<JoiningPosition, Map<FVS, { fabricated: boolean; archaic: boolean }>>>();
+  const charNameToPositionToFVSToLocalizedVariant = new Map<string, Map<JoiningPosition, Map<FVS, { fabricated: boolean; archaic: boolean }>>>();
   for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
     for (const position of joiningPositions) {
       for (const [fvs, variant] of Object.entries(positionToFVSToVariant[position])) {
         const variantLocaleData = variant.locales[locale];
-        if (variantLocaleData) {
-          let positionToFVSToData = localizedVariants.get(charName);
-          if (!positionToFVSToData) {
-            positionToFVSToData = new Map();
-            localizedVariants.set(charName, positionToFVSToData);
-          }
-          let fvsToData = positionToFVSToData.get(position);
-          if (!fvsToData) {
-            fvsToData = new Map();
-            positionToFVSToData.set(position, fvsToData);
-          }
-          fvsToData.set(Number(fvs) as FVS, {
-            // @ts-ignore
-            fabricated: joiningPositions.includes((variantLocaleData.written ?? variant.written)[0]),
-            archaic: variantLocaleData.archaic ?? false,
-          });
+        if (!variantLocaleData) {
+          continue;
         }
+        let positionToFVSToData = charNameToPositionToFVSToLocalizedVariant.get(charName);
+        if (!positionToFVSToData) {
+          positionToFVSToData = new Map();
+          charNameToPositionToFVSToLocalizedVariant.set(charName, positionToFVSToData);
+        }
+        let fvsToData = positionToFVSToData.get(position);
+        if (!fvsToData) {
+          fvsToData = new Map();
+          positionToFVSToData.set(position, fvsToData);
+        }
+        fvsToData.set(Number(fvs) as FVS, {
+          // @ts-ignore
+          fabricated: joiningPositions.includes((variantLocaleData.written ?? variant.written)[0]),
+          archaic: variantLocaleData.archaic ?? false,
+        });
       }
     }
   }
@@ -45,7 +46,7 @@
     <tr>
       <th rowspan="2">Code point</th>
       <th rowspan="2">Alias</th>
-      <th colspan="4">Joining positions</th>
+      <th colspan="4">Variants</th>
     </tr>
     <tr>
       {#each joiningPositions as position}
@@ -54,7 +55,7 @@
     </tr>
   </thead>
   <tbody>
-    {#each localizedVariants as [charName, positionToFVSToLocalizedVariant]}
+    {#each charNameToPositionToFVSToLocalizedVariant as [charName, positionToFVSToLocalizedVariant]}
       {@const alias = aliases[charName]}
       <tr>
         <td title={charName}>{hexFromCP(nameToCP.get(charName)!)}</td>
