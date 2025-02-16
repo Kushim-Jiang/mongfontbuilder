@@ -94,7 +94,6 @@ export const variants: Record<
           },
           MNGx: {},
           TOD: {
-            conditions: [],
             gb: "1821 a second isolated form",
             eac: "TAD2",
           },

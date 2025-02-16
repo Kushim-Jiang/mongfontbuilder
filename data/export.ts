@@ -2,7 +2,7 @@
 
 import { writeFile } from "node:fs/promises";
 
-import { locales, type LocaleID } from "./locales";
+import { locales, type Condition, type LocaleID } from "./locales";
 import { aliases, type LocaleNamespace } from "./aliases";
 import { writtenUnits } from "./writtenUnits";
 import { variants } from "./variants";
@@ -33,14 +33,15 @@ for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
     }
   }
 
-  for (const locale of Object.keys(locales) as LocaleID[]) {
+  for (const [locale, { conditions }] of Object.entries(locales)) {
     const localeNamespace = (
       locale.endsWith("x") ? locale.slice(0, -1) : locale
     ) as LocaleNamespace;
 
     for (const fvsToVariant of Object.values(positionToFVSToVariant)) {
       for (const variant of Object.values(fvsToVariant)) {
-        if (locale in variant.locales) {
+        const variantLocaleData = variant.locales[locale as LocaleID];
+        if (variantLocaleData) {
           const alias = localeToAlias[localeNamespace];
           if (!alias) {
             throw Error("locale-specific alias not defined", {
@@ -55,7 +56,13 @@ for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
               },
             );
           }
-          break;
+          for (const condition of variantLocaleData.conditions ?? []) {
+            if (!(conditions as Condition[]).includes(condition)) {
+              throw Error("condition not defined for locale", {
+                cause: { locale, conditions, condition },
+              });
+            }
+          }
         }
       }
     }

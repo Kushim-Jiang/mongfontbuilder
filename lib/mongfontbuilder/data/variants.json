@@ -90,10 +90,6 @@
           },
           "MNGx": {},
           "TOD": {
-            "conditions": [
-              "chachlag",
-              "particle"
-            ],
             "gb": "1821 a second isolated form",
             "eac": "TAD2"
           },
