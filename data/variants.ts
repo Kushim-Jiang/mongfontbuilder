@@ -94,7 +94,7 @@ export const variants: Record<
           },
           MNGx: {},
           TOD: {
-            conditions: ["chachlag", "particle"],
+            conditions: [],
             gb: "1821 a second isolated form",
             eac: "TAD2",
           },
