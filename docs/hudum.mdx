@@ -17,6 +17,8 @@ export const locale = "MNG";
 
 ## Phonetic letters
 
+The variants in gray indicate the fabricated variants, _i.e._ variants borrowed from other joining positions. The variants in yellow indicate the variants that are unattested in the modern orthography of Traditional Mongolian.
+
 <LetterTable locale={locale} />
 
 **Isolated <Mong written="Ị" /> and isolated <Mong written="Ụ" />**. Isolated <Mong written="Ị" /> and isolated <Mong written="Ụ" /> are used historically, with examples shown in [(Dorji _et al._, 2017)](https://www.unicode.org/L2/L2017/17035r2-mongolian-std-var.pdf). In some Traditional Mongolian literature, even if the letter _n_ before isolated <Mong written="Ị" /> or <Mong written="Ụ" /> is omitted, the left point is retained and therefore has to be consistently analyzed as belonging to _i_, _u_ or _ü_.
@@ -33,47 +35,203 @@ export const locale = "MNG";
 
 ### Letter classes
 
-| Class              | Letters                                                                                                                                             |
-| :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| masculine vowel    | _a_ _o_ _u_                                                                                                                                         |
-| feminine vowel     | _e_ _ö_ _ü_ _é_                                                                                                                                     |
-| neuter vowel       | _i_                                                                                                                                                 |
-| consonant          | _n_ _ŋ_ _b_ _p_ _h_ _g_ _m_ _l_ _s_ _ś_ _t_ _d_ _ć_ _j_ _y_ _r_ _w_ _f_ _ḳ_ _k_ _c_ _z_ _ħ_ _ř_ _ł_ _ž_ _č_                                         |
-| bowed written unit | <Mong written="G" /> <Mong written="G̈" /> <Mong written="K" /> <Mong written="K2" /> <Mong written="B" /> <Mong written="P" /> <Mong written="F" /> |
+<table>
+  <thead>
+    <tr>
+      <td>Class</td>
+      <td>Letters</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> _masculine vowel_ </td>
+      <td> _a_, _o_, _u_ </td>
+    </tr>
+    <tr>
+      <td> _feminine vowel_ </td>
+      <td> _e_, _ö_, _ü_, _é_ </td>
+    </tr>
+    <tr>
+      <td> _neuter vowel_ </td>
+      <td> _i_ </td>
+    </tr>
+    <tr>
+      <td> _consonant_ </td>
+      <td> _n_, _ŋ_, _b_, _p_, _h_, _g_, _m_, _l_, _s_, _ś_, _t_, _d_, _ć_, _j_, _y_, _r_, _w_, _f_, _ḳ_, _k_, _c_, _z_, _ħ_, _ř_, _ł_, _ž_, _č_ </td>
+    </tr>
+    <tr>
+      <td> _bowed written unit_ </td>
+      <td>
+        <Mong written="G" />, <Mong written="G̈" />, <Mong written="K" />, <Mong written="K2" />, <Mong written="B" />, <Mong written="P" />, <Mong written="F" />
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### Mongolian-specific phase
 
-| Shaping step  | Letters                     | Conditions                                                                                        | Lookups           |
-| :------------ | :-------------------------- | :------------------------------------------------------------------------------------------------ | :---------------- |
-| 1. Chachlag   | _a_ _e_                     | **if** follows an MVS:                                                                            | Chachlag          |
-|               | _a_ _e_                     | **if** follows an MVS and precedes an FVS:                                                        | Default           |
-| 2. Syllabic   | _o_ _u_ _ö_ _ü_             | **if** follows an _initial consonant_:                                                            | Marked            |
-|               | _o_ _u_ _ö_ _ü_             | **if** precedes an FVS or follows an FVS:                                                         | Default           |
-|               | _ö_ _ü_                     | **if** final form precedes an FVS2 or FVS4 that precedes _h_/_g_:                                 | Marked            |
-|               | _ö_ _ü_                     | **if** medial form follows a consonant cluster that starts with an _initial consonant_:           | Marked            |
-|               | _d_                         | **if** precedes a final vowel that does not precedes an FVS:                                      | Marked            |
-|               | _n_ _j_ _w_                 | **if** precedes an MVS that precedes an isolated _a_ or isolated _e_:                             | Chachlag_Onset    |
-|               | _h_ _g_                     | **if** precedes an MVS that precedes an isolated _a_:                                             | Chachlag_Onset    |
-|               | _g_                         | **if** precedes an MVS that precedes an isolated _e_:                                             | Chachlag_Devsger  |
-|               | _n_ _t_ _d_                 | **if** precedes a _vowel_:                                                                        | Onset             |
-|               |                             | **else if** follows a _vowel_:                                                                    | Devsger           |
-|               | _h_ _g_                     | **if** precedes a _masculine vowel_:                                                              | Masculine_Onset   |
-|               |                             | **else if** precedes a _feminine vowel_ or _neuter vowel_:                                        | Feminine          |
-|               |                             | **else if** follows a _masculine vowel_:                                                          | Masculine_Devsger |
-|               |                             | **else if** follows a _feminine vowel_:                                                           | Feminine          |
-|               |                             | **else if** remotely follows a _masculine vowel_ without a blocking _feminine vowel_:             | Masculine_Devsger |
-|               |                             | **else if** remotely follows a _feminine vowel_ without a blocking _masculine vowel_:             | Feminine          |
-|               |                             | **else if** remotely precedes a _masculine vowel_ without a blocking _feminine vowel_:            | Masculine_Devsger |
-|               |                             | **else**:                                                                                         | Feminine          |
-|               | _t_                         | **if** precedes _é_ or a _consonant_:                                                             | Devsger           |
-|               | _ś_                         | **if** initial form precedes medial _i_, or medial form precedes _i_:                             | Dotless           |
-|               | _g_                         | **if** follows _s_ or _d_:                                                                        | Dotless           |
-| 3. Particle   | _a_ _e_ _i_ _u_ _ü_ _d_ _y_ | **if** is in the specific particle dictionary that follows an MVS:                                | Particle          |
-|               | _u_ _ü_                     | **if** is in the specific particle dictionary:                                                    | Particle          |
-| 4. Devsger    | _i_                         | **if** follows a vowel that does not end with a written unit <Mong written="I" />:                | Devsger           |
-|               | _i_                         | **if** follows a vowel that will not (consider FVS) end with a written unit <Mong written="I" />: | Devsger           |
-| 5. Post-bowed | _o_ _u_ _ö_ _ü_             | **if** is in the written form of <Mong written="U" /> and follows a _bowed written unit_:         | Post_Bowed        |
-|               | _a_ _e_                     | **if** is in the written form of <Mong written="A" /> and follows a _bowed written unit_:         | Post_Bowed        |
+<table>
+  <thead>
+    <tr>
+      <td>Shaping step</td>
+      <td>Letters</td>
+      <td>Conditions</td>
+      <td>Lookups</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">1. Chachlag</td>
+      <td>_a_, _e_</td>
+      <td>__if__ follows an MVS:</td>
+      <td>chachlag</td>
+    </tr>
+    <tr>
+      <td>_a_, _e_</td>
+      <td>__if__ follows an MVS and precedes an FVS:</td>
+      <td>default</td>
+    </tr>
+    <tr>
+      <td rowspan="21">2. Syllabic</td>
+      <td>_o_, _u_, _ö_, _ü_</td>
+      <td>__if__ follows an _initial consonant_:</td>
+      <td>marked</td>
+    </tr>
+    <tr>
+      <td>_o_, _u_, _ö_, _ü_</td>
+      <td>__if__ precedes an FVS or follows an FVS:</td>
+      <td>default</td>
+    </tr>
+    <tr>
+      <td>_ö_, _ü_</td>
+      <td>__if__ final form precedes an FVS2 or FVS2 that precedes _h_ or _g_:</td>
+      <td>marked</td>
+    </tr>
+    <tr>
+      <td>_ö_, _ü_</td>
+      <td>__if__ medial form follows a _consonant_ cluster that starts with an initial _consonant_:</td>
+      <td>marked</td>
+    </tr>
+    <tr>
+      <td>_d_</td>
+      <td>__if__ precedes a final _vowel_ that does not precedes an FVS:</td>
+      <td>marked</td>
+    </tr>
+    <tr>
+      <td>_n_, _j_, _w_</td>
+      <td>__if__ precedes an MVS that precedes an isolated _a_ or an isolated _e_:</td>
+      <td>chachlag_onset</td>
+    </tr>
+    <tr>
+      <td>_h_, _g_</td>
+      <td>__if__ precedes an MVS that precedes an isolated _a_:</td>
+      <td>chachlag_onset</td>
+    </tr>
+    <tr>
+      <td>_g_</td>
+      <td>__if__ precedes an MVS that precedes an isolated _e_:</td>
+      <td>chachlag_devsger</td>
+    </tr>
+    <tr>
+      <td rowspan="2">_n_, _t_, _d_</td>
+      <td>__if__ precedes a _vowel_:</td>
+      <td>onset</td>
+    </tr>
+    <tr>
+      <td>__else if__ follows a _vowel_:</td>
+      <td>devsger</td>
+    </tr>
+    <tr>
+      <td rowspan="8">_h_, _g_</td>
+      <td>__if__ precedes a _masculine vowel_:</td>
+      <td>masculine_onset</td>
+    </tr>
+    <tr>
+      <td>__else if__ precedes a _feminine vowel_ or a _neuter vowel_:</td>
+      <td>feminine</td>
+    </tr>
+    <tr>
+      <td>__else if__ follows a _masculine vowel_:</td>
+      <td>masculine_devsger</td>
+    </tr>
+    <tr>
+      <td>__else if__ follows a _feminine vowel_:</td>
+      <td>feminine</td>
+    </tr>
+    <tr>
+      <td>__else if__ remotely follows a _masculine vowel_ without a blocking _feminine vowel_:</td>
+      <td>masculine_devsger</td>
+    </tr>
+    <tr>
+      <td>__else if__ remotely follows a _feminine vowel_ without a blocking _masculine vowel_:</td>
+      <td>feminine</td>
+    </tr>
+    <tr>
+      <td>__else if__ remotely precedes a _masculine vowel_ without a blocking _feminine vowel_:</td>
+      <td>masculine_devsger</td>
+    </tr>
+    <tr>
+      <td>__else__:</td>
+      <td>feminine</td>
+    </tr>
+    <tr>
+      <td>_t_</td>
+      <td>__if__ precedes _é_ or a consonant:</td>
+      <td>devsger</td>
+    </tr>
+    <tr>
+      <td>ś</td>
+      <td>__if__ initial form precedes medial _i_, or medial form precedes _i_:</td>
+      <td>dotless</td>
+    </tr>
+    <tr>
+      <td>_g_</td>
+      <td>__if__ follows _s_ or _d_:</td>
+      <td>dotless</td>
+    </tr>
+    <tr>
+      <td rowspan="2">3. Particle</td>
+      <td>_a_, _e_, _i_, _u_, _ü_, _d_, _y_</td>
+      <td>__if__ is in the specific particle dictionary that follows an MVS:</td>
+      <td>particle</td>
+    </tr>
+    <tr>
+      <td>_u_, _ü_</td>
+      <td>__if__ is in the specific particle dictionary:</td>
+      <td>particle</td>
+    </tr>
+    <tr>
+      <td rowspan="2">4. Devsger</td>
+      <td>_i_</td>
+      <td>
+        __if__ follows a _vowel_ that does not end with a written unit <Mong written="I" />:
+      </td>
+      <td>vowel_devsger</td>
+    </tr>
+    <tr>
+      <td>_i_</td>
+      <td>
+        __if__ follows a _vowel_ that will not (consider FVS) end with a written unit <Mong written="I" />:
+      </td>
+      <td>vowel_devsger</td>
+    </tr>
+    <tr>
+      <td rowspan="2">5. Post-bowed</td>
+      <td>_o_, _u_, _ö_, _ü_</td>
+      <td>
+        __if__ is in the written form of <Mong written="U" /> and follows a _bowed written unit_:
+      </td>
+      <td>post_bowed</td>
+    </tr>
+    <tr>
+      <td>_a_, _e_</td>
+      <td>
+        __if__ is in the written form of <Mong written="A" /> and follows a _bowed written unit_:
+      </td>
+      <td>post_bowed</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Conditions
 
@@ -86,3 +244,15 @@ export const locale = "MNG";
 - _Information technology — Traditional Mongolian nominal characters, presentation characters and use rules of controlling characters_. China national standard, [GB/T 25914—2010](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=62808E0BCB8246A287CFD9CF795ECF94).
 
 - _Information technology — The Transferring rules of Traditional Mongolian nominal form to variant form_. Mongolian Language and Script Digital Resource Construction and Sharing Project, Mongolian script standard for information processing, [MGC/01-01, version 1.0.5 (June 18, 2021)](<http://rule.xueruhai.com/pdf/MGC01-01-%E6%A0%87%E5%87%86%E5%85%A8%E6%96%87V1.0.5(20210618).pdf>).
+
+- Liang Jinbao. (2021). _The Transferring rules of Traditional Mongolian nominal form to variant form_. [Research on Mongolian Encodings](https://web.archive.org/web/20220203040523/http://rule.mongoltoli.cn/), [version 1.0.5 (June 18, 2021)](http://rule.xueruhai.cn/allchars-mon.php).
+
+- Quejingzhabu. (2013). “Encoding of Traditional Mongolian”, in: [确精扎布蒙古文信息处理专辑](https://search.worldcat.org/zh-cn/title/1133116484). Hohhot: Inner Mongolian Education Press, pp. 276–294.
+
+- Mongolian Language Institute (Inner Mongolian University). (1999). [蒙汉词典 (增订本)](https://search.worldcat.org/zh-cn/title/867334994). Hohhot: Inner Mongolia University Press.
+
+- Ядамжавын Цэвэл. (1966). [_Монгол Хэлний Товч Тайлбар Толь_](https://search.worldcat.org/zh-cn/title/6752638). Улаанбаатар: Улсын Хэвлэлийн Хэрэг Эрхлэх Хороо.
+
+- Liang Hai. (2019). _Towards a well-formed Mongolian specification that allows interoperable implementations_. [WG2 N5104 = L2/19–130 = MWG/3–N8R](https://www.unicode.org/L2/L2019/19130-mwg3-8-mong-spec-r.pdf).
+
+- Bayantömöriin Khaisan. (1917). [蒙漢合璧五方元音](https://search.worldcat.org/zh-cn/title/1478072477).

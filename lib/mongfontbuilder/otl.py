@@ -71,11 +71,11 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
             c.sub(mcs, by=mcs.split(".")[0])
 
     with c.Lookup("_.narrow") as _narrow:
-        for mvs in ["mvs", "mvs.wide", "mvs.nominal", "nnbsp"]:
+        for mvs in ["mvs", "mvs.wide", "nnbsp"]:
             c.sub(mvs, by="mvs.narrow")
 
     with c.Lookup("_.wide") as _wide:
-        for mvs in ["mvs", "mvs.narrow", "mvs.nominal", "nnbsp"]:
+        for mvs in ["mvs", "mvs.narrow", "nnbsp"]:
             c.sub(mvs, by="mvs.wide")
 
     with c.Lookup("III.controls.preprocessing", feature="rclt"):
@@ -151,7 +151,7 @@ def composeClasses(c: FeaComposer, locales: list[LocaleID]) -> dict[str, ast.Gly
     for fvs in fvses:
         classes[fvs] = c.namedGlyphClass(fvs, [fvs, fvs + ".effective", fvs + ".ignored"])
     for name, items in {
-        "mvs": ["mvs", "mvs.narrow", "mvs.wide", "mvs.nominal", "nnbsp"],
+        "mvs": ["mvs", "mvs.narrow", "mvs.wide", "nnbsp"],
         "mvs.effective": ["mvs.narrow", "mvs.wide"],
         "fvs.nominal": fvses,
         "fvs.effective": [i + ".effective" for i in fvses],

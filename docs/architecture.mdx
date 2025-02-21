@@ -18,17 +18,66 @@ The character attribute information and text shaping rules of Mongolian script p
 
 The characters included in each writing system of the Mongolian script can be categorized into Mongolian-specific characters and characters shared with other scripts.
 
-| Script    | Type of characters | Examples                 | Note                   |
-| :-------- | :----------------- | :----------------------- | :--------------------- |
-| General   | Space              | space                    |                        |
-| General   | Punctuation        | middle dot, ...          |                        |
-| General   | Format controls    | ZWJ, ZWNJ, ...           | participate in shaping |
-| General   | Digits             | digit one, ...           |                        |
-| Mongolian | Punctuation        | birga, ...               | less used now          |
-| Mongolian | Format controls    | FVS, MVS, ...            | participate in shaping |
-| Mongolian | Digits             | Mongolian digit one, ... | less used now          |
-| Mongolian | Phonetic letters   | Mongolian letter a, ...  | participate in shaping |
-| CJK       | Punctuation        | question mark, ...       |                        |
+<table>
+  <thead>
+    <tr>
+      <td>Script</td>
+      <td>Type of characters</td>
+      <td>Examples</td>
+      <td>Note</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4">General</td>
+      <td>Space</td>
+      <td>space</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Punctuation</td>
+      <td>middle dot, …</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Format controls</td>
+      <td>ZWJ, ZWNJ, …</td>
+      <td>participate in shaping</td>
+    </tr>
+    <tr>
+      <td>Digits</td>
+      <td>digit one, …</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4">Mongolian</td>
+      <td>Punctuation</td>
+      <td>birga, …</td>
+      <td>less used now</td>
+    </tr>
+    <tr>
+      <td>Format controls</td>
+      <td>FVS, MVS, …</td>
+      <td>participate in shaping</td>
+    </tr>
+    <tr>
+      <td>Digits</td>
+      <td>Mongolian digit one, …</td>
+      <td>less used now</td>
+    </tr>
+    <tr>
+      <td>Phonetic letters</td>
+      <td>Mongolian letter a, …</td>
+      <td>participate in shaping</td>
+    </tr>
+    <tr>
+      <td>CJK</td>
+      <td>Punctuation</td>
+      <td>question mark, …</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Phonetic letters and written units
 
@@ -58,21 +107,71 @@ The document does not contain specifications for numbers, punctuation, damaru, u
 
 The Mongolian text shaping process is based on the well-implemented technology foundation for general scripts and cursive scripts, while an additional phase of Mongolian-specific shaping steps is inserted into the ordinary shaping process required by cursive scripts. The minimal shaping process consists of a number of steps as shown below.
 
-| Index | Shaping phase           | Shaping step                            |
-| :---- | :---------------------- | :-------------------------------------- |
-| Ia.1  | Ia. General             | Basic character-to-glyph mapping        |
-| IIa.1 | IIa. Cursive script     | Initiation of cursive positions         |
-| III.1 | III. Mongolian-specific | Phonetic: Chachlag                      |
-| III.2 |                         | Phonetic: Syllabic                      |
-| III.3 |                         | Phonetic: Particle                      |
-| III.4 |                         | Graphemic: Devsger                      |
-| III.5 |                         | Graphemic: Post-bowed                   |
-| III.6 |                         | Uncaptured: FVS-selected                |
-| IIb.1 | IIb. Cursive script     | Variation involving bowed written units |
-| IIb.2 |                         | Cleanup of format controls              |
-| IIb.3 |                         | Optional treatments                     |
-| Ib.1  | Ib. General             | Vertical forms of punctuation marks     |
-| Ib.2  |                         | Optional treatments                     |
+<table>
+  <thead>
+    <tr>
+      <td colspan="4">Shaping phase</td>
+      <td>Shaping step</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="13"></td>
+      <td colspan="3">Ia. General</td>
+      <td>Basic character-to-glyph mapping</td>
+    </tr>
+    <tr>
+      <td rowspan="10"></td>
+      <td colspan="2">IIa. Cursive script</td>
+      <td>Initiation of cursive positions</td>
+    </tr>
+    <tr>
+      <td rowspan="6">
+        III. Mongolian-specific <br /> (Reduction of phonetic letters to written units)
+      </td>
+      <td rowspan="3">Phonetic</td>
+      <td>Chachlag</td>
+    </tr>
+    <tr>
+      <td>Syllabic</td>
+    </tr>
+    <tr>
+      <td>Particle</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Graphemic</td>
+      <td>Devsger</td>
+    </tr>
+    <tr>
+      <td>Post-bowed</td>
+    </tr>
+    <tr>
+      <td>Uncaptured</td>
+      <td>FVS-selected</td>
+    </tr>
+    <tr>
+      <td colspan="2" rowspan="3">
+        IIb. Cursive script (continued) <br /> (Sub-written-unit variations)
+      </td>
+      <td>Variation involving bowed written units</td>
+    </tr>
+    <tr>
+      <td>Cleanup of format controls</td>
+    </tr>
+    <tr>
+      <td>Optional treatments</td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="2">
+        Ib. General (continued) <br /> (Typography)
+      </td>
+      <td>Vertical forms of punctuation marks</td>
+    </tr>
+    <tr>
+      <td>Optional treatments</td>
+    </tr>
+  </tbody>
+</table>
 
 ### General shaping phases
 
