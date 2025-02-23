@@ -1,5 +1,5 @@
 ---
-title: Todo Ali Gali writing system
+title: Todo Ali Gali
 sidebar:
   order: 7
 ---
@@ -7,6 +7,7 @@ sidebar:
 import WrittenUnitTable from "./lib/WrittenUnitTable.svelte";
 import LetterTable from "./lib/LetterTable.svelte";
 import ConditionTable from "./lib/ConditionTable.svelte";
+import Mong from "./lib/Mong.svelte";
 
 export const locale = "TODx";
 
@@ -20,6 +21,76 @@ export const locale = "TODx";
 
 ## Shaping process
 
+### Letter classes
+
+<table>
+  <thead>
+    <tr>
+      <td>Class</td>
+      <td>Letters</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> _masculine vowel_ </td>
+      <td> _a_, _o_ </td>
+    </tr>
+    <tr>
+      <td> _feminine vowel_ </td>
+      <td> _e_, _ü_ </td>
+    </tr>
+    <tr>
+      <td> _neuter vowel_ </td>
+      <td> _i_ </td>
+    </tr>
+    <tr>
+      <td> _consonant_ </td>
+      <td> _kX_, _kʰX_, _hX_, _gX_, _g_, _ŋ_, _ŋX_, _j_, _cʰX_, _jX_, _ñ_, _ṭX_, _ṭʰX_, _ḍX_, _ṇX_, _tX_, _t_, _d_, _n_, _pX_, _pʰX_, _b_, _m_, _y_, _yX_, _r_, _l_, _w_, _w̄X_, _ś_, _ṣX_, _s_, _ħ_, _c_, _z_, _žX_, _zX_, _ɁX_, _ł_ </td>
+    </tr>
+    <tr>
+      <td> _bowed written unit_ </td>
+      <td>
+        <Mong written="K2" />, <Mong written="K" />, <Mong written="G" />, <Mong written="B́" />, <Mong written="Ṕ" />, <Mong written="B" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Mongolian-specific phase
+
+<table>
+  <thead>
+    <tr>
+      <td>Shaping step</td>
+      <td>Letters</td>
+      <td>Conditions</td>
+      <td>Lookups</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">2. Syllabic</td>
+      <td rowspan="3">_g_</td>
+      <td>__if__ precedes a _masculine vowel_:</td>
+      <td>masculine_onset</td>
+    </tr>
+    <tr>
+      <td>__else if__ precedes a _feminine vowel_ or a _neuter vowel_:</td>
+      <td>feminine</td>
+    </tr>
+    <tr>
+      <td>__else if__ _g_ follows a _vowel_:</td>
+      <td>masculine_devsger</td>
+    </tr>
+    <tr>
+      <td rowspan>5. Post-bowed</td>
+      <td>_a_, _i_, _u_, _ü_</td>
+      <td>__if__ follows a _bowed written unit_:</td>
+      <td>post_bowed</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Conditions
 
 <ConditionTable locale={locale} />
@@ -27,3 +98,11 @@ export const locale = "TODx";
 ## References
 
 - _Information technology — Todo nominal characters, presentation characters and use rules of controlling characters_. China national standard, [GB/T 36649—2018](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=289D5B6AB1E6B17173C5F5842D9B0C8D).
+
+- Zheng Weizhe. (2016). _Preliminary proposal to encode four letters in Todo and Manchu Ali Gali_. [L2/16-331](https://www.unicode.org/L2/L2016/16331-four-todo-letters.pdf).
+
+- Kushim Jiang. (2021). _Proposal to encode four Mongolian characters in UCS_. [L2/21-244](http://www.unicode.org/L2/L2021/21244-mongolian-add-four.pdf).
+
+- Yeerda. (2017). [伊犁河流域额鲁特人托忒文文献荟萃](https://search.worldcat.org/zh-cn/title/1462731747). Beijing: China Social Sciences Press.
+
+- Хөхийн Бямбажав (2019). _Тод үсгийн сурах бичиг_. Улаанбаатар: Соёмбо Принтинг.

@@ -1,5 +1,5 @@
 ---
-title: Manchu Ali Gali writing system
+title: Manchu Ali Gali
 sidebar:
   order: 8
 ---
@@ -7,6 +7,7 @@ sidebar:
 import WrittenUnitTable from "./lib/WrittenUnitTable.svelte";
 import LetterTable from "./lib/LetterTable.svelte";
 import ConditionTable from "./lib/ConditionTable.svelte";
+import Mong from "./lib/Mong.svelte";
 
 export const locale = "MCHx";
 
@@ -20,6 +21,132 @@ export const locale = "MCHx";
 
 ## Shaping process
 
+### Letter classes
+
+<table>
+  <thead>
+    <tr>
+      <td>Class</td>
+      <td>Letters</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> _masculine vowel_ </td>
+      <td> _a_, _o_, _ü_ </td>
+    </tr>
+    <tr>
+      <td> _feminine vowel_ </td>
+      <td> _e_, _u_ </td>
+    </tr>
+    <tr>
+      <td> _neuter vowel_ </td>
+      <td> _i_, _ï_, _ā_ </td>
+    </tr>
+    <tr>
+      <td> _consonant_ </td>
+      <td> _ġ_, _ḳ_, _g_, _k_, _gʰX_, _ŋX_, _ŋ_, _cX_, _c_, _z_, _jʰX_, _ṭX_, _č_, _ž_, _ḍʰX_, _ṇX_, _tX_, _t_, _d_, _dʰX_, _n_, _pX_, _p_, _b_, _bʰX_, _X_, _y_, _r_, _l_, _w_, _ś_, _ṣX_, _s_, _h_, _čX_, _ć_, _j_, _ẑX_, _zX_, _Ɂ_, _łX_ </td>
+    </tr>
+    <tr>
+      <td> _masculine bowed written unit_ </td>
+      <td>
+        <Mong written="K̇" />, <Mong written="K2" />
+      </td>
+    </tr>
+    <tr>
+      <td> _feminine bowed written unit_ </td>
+      <td>
+        <Mong written="Ġ" />, <Mong written="G" />, <Mong written="G̊" />, <Mong written="Ḣ" />, <Mong written="Ḣ2" />, <Mong written="H̃" />, <Mong written="H̃2" />, <Mong written="N̥" />
+      </td>
+    </tr>
+    <tr>
+      <td> _neuter bowed written unit_ </td>
+      <td>
+        <Mong written="B̌" />, <Mong written="P̣" />, <Mong written="B" />, <Mong written="B̊" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Mongolian-specific phase
+
+<table>
+  <thead>
+    <tr>
+      <td>Shaping step</td>
+      <td>Letters</td>
+      <td>Conditions</td>
+      <td>Lookups</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="10">2. Syllabic</td>
+      <td>_o_, _u_</td>
+      <td>__if__ follows an initial _consonant_:</td>
+      <td>marked</td>
+    </tr>
+    <tr>
+      <td>_i_</td>
+      <td>__if__ follows _cX_ or _c_ or _z_:</td>
+      <td>marked</td>
+    </tr>
+    <tr>
+      <td>_e_, _u_</td>
+      <td>__if__ follows _tX_ or _t_ or _d_ or _dʰX_ or _g_ or _k_ or _gʰX_ or _h_:</td>
+      <td>feminine, feminine_marked</td>
+    </tr>
+    <tr>
+      <td rowspan="2">_n_</td>
+      <td>__if__ precedes a _vowel_:</td>
+      <td>onset</td>
+    </tr>
+    <tr>
+      <td>__else if__ precedes a _consonant_:</td>
+      <td>feminine</td>
+    </tr>
+    <tr>
+      <td rowspan="3">_tX_, _t_, _d_, _dʰX_</td>
+      <td>__if__ precedes _a_ or _i_ or _o_:</td>
+      <td>masculine_onset</td>
+    </tr>
+    <tr>
+      <td>__else if__ precedes _e_ or _u_ or _ü_:</td>
+      <td>feminine</td>
+    </tr>
+    <tr>
+      <td>__else if__ _t_ follows a _vowel_:</td>
+      <td>devsger</td>
+    </tr>
+    <tr>
+      <td rowspan="2">_k_, _g_, _h_</td>
+      <td>__if__ precedes a _masculine vowel_:</td>
+      <td>masculine_onset</td>
+    </tr>
+    <tr>
+      <td>__else if__ precedes a _feminine vowel_ or a _neuter vowel_:</td>
+      <td>feminine</td>
+    </tr>
+    <tr>
+      <td>4. Devsger</td>
+      <td>_i_, _u_</td>
+      <td>__if__ follows a _vowel_:</td>
+      <td>vowel_devsger</td>
+    </tr>
+    <tr>
+      <td rowspan="2">5. Post-bowed</td>
+      <td>_a_, _o_</td>
+      <td>__if__ follows a _neuter bowed written unit_ or a _masculine bowed written unit_:</td>
+      <td>post_bowed</td>
+    </tr>
+    <tr>
+      <td>_e_, _u_</td>
+      <td>__if__ follows a _neuter bowed written unit_ or a _feminine bowed written unit_:</td>
+      <td>post_bowed, post_bowed_feminine</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Conditions
 
 <ConditionTable locale={locale} />
@@ -27,3 +154,9 @@ export const locale = "MCHx";
 ## References
 
 - _Information technology — Manchu nominal characters, presentation characters and use rules of controlling characters_. China national standard, [GB/T 36645—2018](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=67DA394E47B970F80BBABE5511B9AAE2).
+
+- Zheng Weizhe, Wang Yihua. (2017). _Glyph corrections for Ali Gali final forms in the Mongolian block_. [L2/17-115R](https://www.unicode.org/L2/L2017/17115r-aligali-finals.pdf).
+
+- Zheng Weizhe. (2016). _Preliminary proposal to encode four letters in Todo and Manchu Ali Gali_. [L2/16-331](https://www.unicode.org/L2/L2016/16331-four-todo-letters.pdf).
+
+- [汉满蒙藏四体合璧大藏全咒, 同文韵统, 阿礼嘎礼读咒法](https://old.shuge.org/ebook/da-zang-quan-zhou/). 民国十八年上海涵芬楼影印清乾隆内府刻本.

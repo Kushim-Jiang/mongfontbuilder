@@ -228,7 +228,7 @@ export const variants: Record<
             eac: "MAM2",
           },
           MNGx: {
-            conditions: ["post_bowed"],
+            conditions: ["post_bowed", "chachlag_onset"],
           },
           TOD: {
             conditions: ["post_bowed"],
@@ -3390,7 +3390,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO LONG VOWEL SIGN": {
     isol: {
       "0": {
-        written: ["Lv"],
+        written: ["medi", 0],
         default: true,
         locales: {
           TOD: {
@@ -3403,7 +3403,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["Lv"],
+        written: ["medi", 0],
         default: true,
         locales: {
           TOD: {
@@ -3733,7 +3733,7 @@ export const variants: Record<
         written: ["U"],
         locales: {
           TOD: {
-            conditions: ["devsger"],
+            conditions: ["vowel_devsger"],
             gb: "000E todo u second final form",
             eac: "TUM2",
           },
@@ -5439,7 +5439,7 @@ export const variants: Record<
             eac: "MUEZ2",
           },
           MCHx: {
-            conditions: ["feminine"],
+            conditions: ["feminine", "vowel_devsger"],
           },
         },
       },
@@ -5474,7 +5474,7 @@ export const variants: Record<
             eac: "MUEM2",
           },
           MCHx: {
-            conditions: ["feminine"],
+            conditions: ["feminine", "vowel_devsger"],
           },
         },
       },
@@ -7403,9 +7403,6 @@ export const variants: Record<
         written: ["A", "Aw"],
         default: true,
         locales: {
-          MNGx: {
-            written: ["fina", 1],
-          },
           MCHx: {},
         },
       },
@@ -7415,9 +7412,6 @@ export const variants: Record<
         written: ["A", "A"],
         default: true,
         locales: {
-          MNGx: {
-            written: ["fina", 1],
-          },
           MCHx: {},
         },
       },
@@ -7427,9 +7421,6 @@ export const variants: Record<
         written: ["A"],
         default: true,
         locales: {
-          MNGx: {
-            written: ["fina", 1],
-          },
           MCHx: {},
         },
       },

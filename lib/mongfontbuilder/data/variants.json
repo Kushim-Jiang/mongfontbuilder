@@ -251,7 +251,8 @@
           },
           "MNGx": {
             "conditions": [
-              "post_bowed"
+              "post_bowed",
+              "chachlag_onset"
             ]
           },
           "TOD": {
@@ -4099,7 +4100,8 @@
     "isol": {
       "0": {
         "written": [
-          "Lv"
+          "medi",
+          0
         ],
         "default": true,
         "locales": {
@@ -4114,7 +4116,8 @@
     "init": {
       "0": {
         "written": [
-          "Lv"
+          "medi",
+          0
         ],
         "default": true,
         "locales": {
@@ -4522,7 +4525,7 @@
         "locales": {
           "TOD": {
             "conditions": [
-              "devsger"
+              "vowel_devsger"
             ],
             "gb": "000E todo u second final form",
             "eac": "TUM2"
@@ -6646,7 +6649,8 @@
           },
           "MCHx": {
             "conditions": [
-              "feminine"
+              "feminine",
+              "vowel_devsger"
             ]
           }
         }
@@ -6691,7 +6695,8 @@
           },
           "MCHx": {
             "conditions": [
-              "feminine"
+              "feminine",
+              "vowel_devsger"
             ]
           }
         }
@@ -9124,12 +9129,6 @@
         ],
         "default": true,
         "locales": {
-          "MNGx": {
-            "written": [
-              "fina",
-              1
-            ]
-          },
           "MCHx": {}
         }
       }
@@ -9142,12 +9141,6 @@
         ],
         "default": true,
         "locales": {
-          "MNGx": {
-            "written": [
-              "fina",
-              1
-            ]
-          },
           "MCHx": {}
         }
       }
@@ -9159,12 +9152,6 @@
         ],
         "default": true,
         "locales": {
-          "MNGx": {
-            "written": [
-              "fina",
-              1
-            ]
-          },
           "MCHx": {}
         }
       }

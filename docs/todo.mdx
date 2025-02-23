@@ -1,5 +1,5 @@
 ---
-title: Todo writing system
+title: Todo
 sidebar:
   order: 3
 ---
@@ -7,6 +7,7 @@ sidebar:
 import WrittenUnitTable from "./lib/WrittenUnitTable.svelte";
 import LetterTable from "./lib/LetterTable.svelte";
 import ConditionTable from "./lib/ConditionTable.svelte";
+import Mong from "./lib/Mong.svelte";
 
 export const locale = "TOD";
 
@@ -14,16 +15,142 @@ export const locale = "TOD";
 
 <WrittenUnitTable locale={locale} />
 
+**Written form <Mong written="W̥" />**. Written form <Mong written="W̥" /> (used in Todo letter _w_) is similar to the written form <Mong written="D" /> (used in Hudum letter _d_), but since the form <Mong written="W̥" /> comes from the bent <Mong written="W" /> and thus from _beth_, and the form <Mong written="D" /> from _lamedh_, the two are represented differently.
+
 ## Phonetic letters
+
+The variants in gray indicate the fabricated variants, _i.e._ variants borrowed from other joining positions. The variants in yellow indicate the variants that are unattested in the modern orthography of Traditional Mongolian.
 
 <LetterTable locale={locale} />
 
+**Final <Mong written="I3" /> in letter _y_, medial <Mong written="O" /> and final <Mong written="U" /> in letter _w_**. Final <Mong written="I3" /> in letter _y_, medial <Mong written="O" /> and final <Mong written="U" /> in letter _w_ are introduced in [GB/T 36649—2018](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=289D5B6AB1E6B17173C5F5842D9B0C8D), where the written form <Mong written="I3" /> of letter _y_ and the written form <Mong written="O" /> of letter _w_ in the examples _tuwlay_, and the written form <Mong written="U" /> of letter _w_ in the example _daruw_ are all differences derived from letter analysis. Since _tuulai_ and _daruu_ are preferred, the written forms are marked in gray.
+
+**Initial <Mong written="AI" /> and medial <Mong written="I" /> in letter _i_, medial <Mong written="O" /> and final <Mong written="O" /> in letter _ö_, written form <Mong written="Y" /> in letter _y_**. These written forms are introduced in [GB/T 36649—2018](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=289D5B6AB1E6B17173C5F5842D9B0C8D), showing the cognition between Todo _e_ and Hudum _é_, Todo _i_ and Hudum _i_, Todo _ö_ and Hudum _ö_, Todo _y_ and Hudum _y_. Since cognition is not considered a basis for establishing a written form system, the letters in the running text are not analyzed for these forms with cognition associations, and therefore these written forms are marked in gray.
+
+**Initial <Mong written="N2" /> in letter _n_**. This written unit is used for particle _–ni_ in Todo, and is regarded as a stylistic variant of the written unit <Mong written="N" />, thus is not triggered by FVS.
+
+**Letter _ñ_**. The letter _ñ_ is introduced in [蒙汉词典 (增订本)](https://search.worldcat.org/zh-cn/title/867334994), but is not found in Todo literature. The appearance is subsequently succeeded by [GB/T 36649—2018](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=289D5B6AB1E6B17173C5F5842D9B0C8D). The character is used by Hudum Ali Gali and Todo Ali Gali.
+
 ## Shaping process
+
+### Letter classes
+
+<table>
+  <thead>
+    <tr>
+      <td>Class</td>
+      <td>Letters</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> _masculine vowel_ </td>
+      <td> _a_, _o_, _u_ </td>
+    </tr>
+    <tr>
+      <td> _feminine vowel_ </td>
+      <td> _e_, _ö_, _ü_ </td>
+    </tr>
+    <tr>
+      <td> _neuter vowel_ </td>
+      <td> _i_ </td>
+    </tr>
+    <tr>
+      <td> _consonant_ </td>
+      <td> _n_, _ŋ_, _b_, _p_, _h_, _g_, _m_, _l_, _s_, _ś_, _t_, _d_, _ć_, _j_, _z_, _c_, _y_, _r_, _w_, _f_, _ḳ_, _ġ_, _ħ_, _ȷ̃_, _ñ_, _ż_, _ł_ </td>
+    </tr>
+    <tr>
+      <td> _bowed written unit_ </td>
+      <td>
+        <Mong written="B" />, <Mong written="P̂" />, <Mong written="G" />, <Mong written="K" />, <Mong written="Ĝ" />, <Mong written="K̂" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Mongolian-specific phase
+
+<table>
+  <thead>
+    <tr>
+      <td>Shaping step</td>
+      <td>Letters</td>
+      <td>Conditions</td>
+      <td>Lookups</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="5">2. Syllabic</td>
+      <td rowspan="2">_n_</td>
+      <td>__if__ precedes a _vowel_:</td>
+      <td>onset</td>
+    </tr>
+    <tr>
+      <td>__else if__ precedes a _consonant_:</td>
+      <td>devsger</td>
+    </tr>
+    <tr>
+      <td rowspan="3">_h_, _g_</td>
+      <td>__if__ precedes a _masculine vowel_:</td>
+      <td>masculine_onset</td>
+    </tr>
+    <tr>
+      <td>__else if__ precedes a _feminine vowel_ or a _neuter vowel_:</td>
+      <td>feminine</td>
+    </tr>
+    <tr>
+      <td>__else if__ _g_ follows a _vowel_:</td>
+      <td>masculine_devsger</td>
+    </tr>
+    <tr>
+      <td>3. Particle</td>
+      <td>_n_</td>
+      <td>__if__ is in the specific particle dictionary that follows an MVS:</td>
+      <td>particle</td>
+    </tr>
+    <tr>
+      <td rowspan="2">4. Devsger</td>
+      <td>_i_</td>
+      <td>__if__ follows a _vowel_:</td>
+      <td>vowel_devsger</td>
+    </tr>
+    <tr>
+      <td>_u_</td>
+      <td>__if__ follows _u_:</td>
+      <td>vowel_devsger</td>
+    </tr>
+    <tr>
+      <td>5. Post-bowed</td>
+      <td>_a_, _i_, _u_, _ü_</td>
+      <td>__if__ follows a _bowed written unit_:</td>
+      <td>post_bowed</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Conditions
 
 <ConditionTable locale={locale} />
 
+**Function of the sign _ƚ_**. The sign _ƚ_ behaves as a base character in some cases, but its logic in the shaping process behaves as a combining mark. For this reason, the necessary preprocessing and postprocessing should be introduced: before the Mongolian-specific steps begin, _ƚ_ is shaped in mark class, modifying the joining type of the characters before and after _ƚ_; after the Mongolian-specific steps finish, those signs _ƚ_ that need to be represented as marks are shaped to ligature with the neighboring letters. These extra steps are not included in the condition table shown above, but are completed in the specific implementation.
+
 ## References
 
 - _Information technology — Todo nominal characters, presentation characters and use rules of controlling characters_. China national standard, [GB/T 36649—2018](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=289D5B6AB1E6B17173C5F5842D9B0C8D).
+
+- Liang Jinbao. (2021). _The Transferring rules of Todo nominal form to variant form_. [Research on Mongolian Encodings](https://web.archive.org/web/20220203040523/http://rule.mongoltoli.cn/), [version 0.1.0 (April 18, 2020)](http://rule.xueruhai.cn/allchars-todo.php).
+
+- Quejingzhabu. (2013). “Encoding of Todo”, in: [确精扎布蒙古文信息处理专辑](https://search.worldcat.org/zh-cn/title/1133116484). Hohhot: Inner Mongolian Education Press, pp. 295–309.
+
+- Quejingzhabu, Geriletu. (1998). [卫拉特方言词汇](https://search.worldcat.org/zh-cn/title/1461083199). Hohhot: Inner Mongolia University Press.
+
+- Eerdeni, Gerilema. (1988). [蒙古语常用词汇](https://search.worldcat.org/zh-cn/title/707488935). Urumqi: Xinjiang People’s Press.
+
+- Wuenqi, Airencai. (2005). [四体卫拉特方言鉴](https://search.worldcat.org/zh-cn/title/1078386474). Urumqi: Xinjiang People’s Press.
+
+- Saierge. (2016). _Research on the Todo script and its development of history_. Doctoral dissertation, Inner Mongolia University.
+
+- Mingzai. (2018). _Тод бичгийн баримжаа кодын тухай санууламж_. [L2/19-136](https://www.unicode.org/L2/L2019/19136-mwg3-15-todo-encoding.pdf).
+
+- Mongolian Language Institute (Inner Mongolian University). (1999). [蒙汉词典 (增订本)](https://search.worldcat.org/zh-cn/title/867334994). Hohhot: Inner Mongolia University Press.

@@ -67,7 +67,7 @@ export const locales = {
       "post_bowed",
     ] as const,
     categories: {
-      vowel: ["a", "aX", "iX", "ue", "ee", "o"],
+      vowel: ["a", "iX", "ue", "ee", "o"],
       consonant: [
         "kX",
         "k",

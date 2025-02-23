@@ -368,7 +368,6 @@ export const aliases: Record<CharacterName, AliasData> = {
     MCH: "tribaluda",
   },
   "MONGOLIAN LETTER ALI GALI A": {
-    MNG: "aX",
     MCH: "aaX",
   },
   "MONGOLIAN LETTER ALI GALI I": {

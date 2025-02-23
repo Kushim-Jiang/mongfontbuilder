@@ -1,5 +1,5 @@
 ---
-title: Hudum Ali Gali writing system
+title: Hudum Ali Gali
 sidebar:
   order: 6
 ---
@@ -7,6 +7,7 @@ sidebar:
 import WrittenUnitTable from "./lib/WrittenUnitTable.svelte";
 import LetterTable from "./lib/LetterTable.svelte";
 import ConditionTable from "./lib/ConditionTable.svelte";
+import Mong from "./lib/Mong.svelte";
 
 export const locale = "MNGx";
 
@@ -18,7 +19,74 @@ export const locale = "MNGx";
 
 <LetterTable locale={locale} />
 
+**Final <Mong written="AG" /> in letter _ŋ_**. Both final <Mong written="NG4" /> and final <Mong written="AG4" /> are used to record Tibetan /ŋ/ in _Buddhist Mantras_. The final <Mong written="AG4" /> is considered as a variant of final <Mong written="AG" />, and the two shapes correspond to the same written form.
+
 ## Shaping process
+
+### Letter classes
+
+<table>
+  <thead>
+    <tr>
+      <td>Class</td>
+      <td>Letters</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> _vowel_ </td>
+      <td> _a_, _iX_, _ü_, _é_, _o_ </td>
+    </tr>
+    <tr>
+      <td> _consonant_ </td>
+      <td> _kX_, _k_, _ḳ_, _h_, _ŋ_, _ŋX_, _cX_, _c_, _z_, _ñX_, _ṭX_, _ṭʰX_, _ḍX_, _ṇX_, _tX_, _tʰX_, _dX_, _n_, _pX_, _pʰX_, _b_, _mX_, _yX_, _r_, _l_, _w_, _w̄X_, _ś_, _ṣX_, _s_, _hX_, _čX_, _ć_, _žX_, _zX_, _ɁX_, _ł_ </td>
+    </tr>
+    <tr>
+      <td> _bowed written unit_ </td>
+      <td>
+        <Mong written="G" />, <Mong written="K" />, <Mong written="K2" />, <Mong written="B̌" />, <Mong written="P̌" />, <Mong written="B" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Mongolian-specific phase
+
+<table>
+  <thead>
+    <tr>
+      <td>Shaping step</td>
+      <td>Letters</td>
+      <td>Conditions</td>
+      <td>Lookups</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1. Chachlag</td>
+      <td>_a_</td>
+      <td>__if__ follows an MVS:</td>
+      <td>chachlag</td>
+    </tr>
+    <tr>
+      <td rowspan="2">2. Syllabic</td>
+      <td>_ü_</td>
+      <td>__if__ follows an initial _consonant_ or an initial _consonant_ cluster:</td>
+      <td>marked</td>
+    </tr>
+    <tr>
+      <td>_a_</td>
+      <td>__if__ precedes an MVS that precedes an isolated _a_:</td>
+      <td>chachlag_onset</td>
+    </tr>
+    <tr>
+      <td>5. Post-bowed</td>
+      <td>_a_, _o_, _ü_</td>
+      <td>__if__ follows a _bowed written unit_:</td>
+      <td>post_bowed</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Conditions
 
@@ -31,3 +99,11 @@ export const locale = "MNGx";
 - _Information technology — Traditional Mongolian nominal characters, presentation characters and use rules of controlling characters_. China national standard, [GB/T 25914—2010](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=62808E0BCB8246A287CFD9CF795ECF94).
 
 - _Information technology — The Transferring rules of Traditional Mongolian nominal form to variant form_. Mongolian Language and Script Digital Resource Construction and Sharing Project, Mongolian script standard for information processing, [MGC/01-01, version 1.0.5 (June 18, 2021)](<http://rule.xueruhai.com/pdf/MGC01-01-%E6%A0%87%E5%87%86%E5%85%A8%E6%96%87V1.0.5(20210618).pdf>).
+
+- Zheng Weizhe, Wang Yihua. (2017). _Glyph corrections for Ali Gali final forms in the Mongolian block_. [L2/17-115R](https://www.unicode.org/L2/L2017/17115r-aligali-finals.pdf).
+
+- Дьердь Кара. (1972). [_Книги Монгольских Кочевников_](https://search.worldcat.org/zh-cn/title/13634803). Москва: Издательства «Наука».
+
+- Wurihan. (2019). _Study on the revival font development of the Kangxi version of Mongolian Kanjur_. Master thesis, Inner Mongolia Agricultural University.
+
+- [汉满蒙藏四体合璧大藏全咒, 同文韵统, 阿礼嘎礼读咒法](https://old.shuge.org/ebook/da-zang-quan-zhou/). 民国十八年上海涵芬楼影印清乾隆内府刻本.
