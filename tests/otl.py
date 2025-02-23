@@ -1,5 +1,6 @@
 from mongfontbuilder.data import locales
 from mongfontbuilder.otl import compose
+
 from utils import tempDir
 
 
