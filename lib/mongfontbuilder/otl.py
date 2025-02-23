@@ -11,6 +11,9 @@ from .utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
 
 
 def compose(locales: list[LocaleID]) -> FeaComposer:
+    for locale in locales:
+        assert locale.removesuffix("x") in locales
+
     c = FeaComposer(
         languageSystems={
             "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in locales},
@@ -82,29 +85,39 @@ def compose(locales: list[LocaleID]) -> FeaComposer:
         c.contextualSub(c.input("mvs", _nominal))
         c.contextualSub(c.input(c.glyphClass(["zwnj", "zwj", "nirugu", at["fvs"]]), _ignored))
 
-    if "TOD" in locales:
-        with c.Lookup("III.TOD.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}):
-            c.contextualSub(
-                c.input(
-                    c.glyphClass([at["TOD:consonant.medi"], at["TOD:vowel.medi"]]),
-                    conditions["TOD.fina"],
-                ),
-                c.input(at["TOD:lvs.fina"], _ignored),
-            )
-            c.contextualSub(c.input(at["TOD:lvs"], _ignored))
-
-    if "TODx" in locales:
-        with c.Lookup("III.TODx.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}):
-            c.contextualSub(
-                c.input(
-                    c.glyphClass([at["TODx:consonant.medi"], at["TODx:vowel.medi"]]),
-                    conditions["TODx.fina"],
-                ),
-                c.input(at["TODx:lvs.fina"], _ignored),
-            )
-            c.contextualSub(c.input(at["TODx:lvs"], _ignored))
+    for locale in ["TOD", "TODx"]:
+        if locale in locales:
+            with c.Lookup(
+                f"III.{locale}.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}
+            ):
+                c.contextualSub(
+                    c.input(
+                        c.glyphClass([at[f"{locale}:consonant.medi"], at[f"{locale}:vowel.medi"]]),
+                        conditions[f"{locale}.fina"],
+                    ),
+                    c.input(at[f"{locale}:lvs.fina"], _ignored),
+                )
+                c.contextualSub(c.input(at[f"{locale}:lvs"], _ignored))
 
     # III.1: Phonetic - Chachlag
+
+    if "MNG" in locales:
+        with c.Lookup("III.MNG.a_e.chachlag", feature="rclt", flags={"IgnoreMarks": True}):
+            c.contextualSub(
+                c.input(at["mvs"], _narrow),
+                c.input(
+                    c.glyphClass([at["MNG:a.isol"], at["MNG:e.isol"]]), conditions["MNG.chachlag"]
+                ),
+            )
+
+        with c.Lookup(
+            "III.eac.a_e.chachlag", feature="rclt", flags={"UseMarkFilteringSet": at["fvs"]}
+        ):
+            c.contextualSub(
+                c.input(at["mvs"], _nominal),
+                c.glyphClass([at["MNG:a.isol"], at["MNG:e.isol"]]),
+                at["fvs"],
+            )
 
     # III.2: Phonetic - Syllabic
 
