@@ -1,12 +1,13 @@
 import re
 from dataclasses import dataclass
+from typing import cast
 
 from fontTools import unicodedata
 from fontTools.feaLib import ast
 from tptq.feacomposer import FeaComposer
 
 from . import GlyphDescriptor, data, uNameFromCodePoint
-from .data.misc import joiningPositions
+from .data.misc import JoiningPosition, joiningPositions
 from .data.types import LocaleID
 from .utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
 
@@ -89,7 +90,7 @@ class MongFeaComposer(FeaComposer):
                 for suffix in ["", ".ignored"]:
                     self.sub(f"{fvs}{suffix}", by=f"{fvs}.valid")
 
-        with self.Lookup("_.invalid") as _invalid:
+        with self.Lookup("_.reset") as _reset:
             for mvs in ["mvs.narrow", "mvs.wide"]:
                 self.sub(mvs, by="mvs")
             self.sub("nirugu.ignored", by="nirugu")
@@ -105,7 +106,7 @@ class MongFeaComposer(FeaComposer):
             for mvs in ["mvs", "mvs.narrow", "nnbsp"]:
                 self.sub(mvs, by="mvs.wide")
 
-        for lookup in [_ignored, _valid, _invalid, _narrow, _wide]:
+        for lookup in [_ignored, _valid, _reset, _narrow, _wide]:
             self.conditions[lookup.name] = lookup
 
     def initVariantClasses(self) -> None:
@@ -157,9 +158,9 @@ class MongFeaComposer(FeaComposer):
         """
         Initialize condition lookups for variants.
 
-        condition generated from `variant.locales` -- locale + ":" + condition, e.g. `MNG:chachlag`.
+        Conditions generated from `variant.locales` -- locale + ":" + condition, e.g. `MNG:chachlag`.
 
-        condition generated from `variant.default` -- locale + ":default", e.g. `MNG:default`.
+        In addition, GB shaping requirements result in the need to reset the letter to its default variant. Resetting condition -- locale + ":reset", e.g. `MNG:reset`.
         """
 
         for locale in self.locales:
@@ -182,20 +183,22 @@ class MongFeaComposer(FeaComposer):
                                     )
                 self.conditions[lookup.name] = lookup
 
-            if locale in ["MNG", "TOD", "TODx"]:
-                with self.Lookup(f"{locale}:default") as lookup:
-                    for position in joiningPositions:
-                        for alias in getAliasesByLocale(locale):
-                            charName = getCharNameByAlias(locale, alias)
-                            self.sub(
-                                self.classes[locale + ":" + alias + "." + position],
-                                by=str(GlyphDescriptor.fromData(charName, position)),
-                            )
-                self.conditions[lookup.name] = lookup
+        if "MNG" in self.locales:
+            with self.Lookup(f"MNG:reset") as lookup:
+                for position in joiningPositions:
+                    for alias in getAliasesByLocale("MNG"):
+                        charName = getCharNameByAlias("MNG", alias)
+                        self.sub(
+                            self.classes["MNG:" + alias + "." + position],
+                            by=str(GlyphDescriptor.fromData(charName, position)),
+                        )
+            self.conditions[lookup.name] = lookup
 
     def ia(self) -> None:
         """
-        [Ia] nnbsp -> mvs
+        **Phase Ia: Basic character-to-glyph mapping**
+
+        Since Unicode Version 16.0, NNBSP has been taken over by MVS, which participate in chachlag and particle shaping.
         """
 
         with self.Lookup("Ia.nnbsp.preprocessing", feature="ccmp"):
@@ -203,7 +206,7 @@ class MongFeaComposer(FeaComposer):
 
     def iia(self) -> None:
         """
-        [IIa] cursive joining
+        **Phase IIa: Initiation of cursive positions**
         """
 
         localeSet = {*self.locales}
@@ -220,101 +223,308 @@ class MongFeaComposer(FeaComposer):
                         )
 
     def iii(self) -> None:
-        ### [III.0] control character preprocessing
+        """
+        **Phase III: Mongolian-specific shaping, reduction of phonetic letters to written units**
+        """
+
+        self.iii0()
+        self.iii1()
+        self.iii2()
+
+        # III.3: Phonetic - Particle
+        # III.4: Graphemic - Devsger
+        # III.5: Graphemic - Post bowed
+        # III.6: Uncaptured - FVS
+
+    def iii0(self):
+        """
+        **Phase III.0: Control character preprocessing**
+        """
+
+        self.iii0a()
+        if "MNG" in self.locales:
+            self.iii0b()
+
+    def iii0a(self):
+        """
+        Before Mongolian-specific shaping steps, ZWNJ, ZWJ, nirugu, Todo (Ali Gali) long vowel sign and FVS need to be substituted to ignored glyphs, while MVS needs to be substituted to invalid glyph.
+
+        Specifically, for Todo (Ali Gali) long vowel sign, when the final long vowel sign is substituted to ignored glyph, the joining position of the previous letter will be changed (from `init` to `isol`, from `medi` to `fina`).
+        """
 
         c = self
-        gc = self.classes
+        cl = self.classes
         cd = self.conditions
 
         with c.Lookup("III.controls.preprocessing", feature="rclt"):
-            c.contextualSub(c.input("mvs", cd["_.invalid"]))
+            c.contextualSub(c.input("mvs", cd["_.reset"]))
             c.contextualSub(
-                c.input(c.glyphClass(["zwnj", "zwj", "nirugu", gc["fvs"]]), cd["_.ignored"])
+                c.input(c.glyphClass(["zwnj", "zwj", "nirugu", cl["fvs"]]), cd["_.ignored"])
             )
 
         for locale in ["TOD", "TODx"]:
             if locale in self.locales:
+                with self.Lookup(f"{locale}:lvs.preprocessing") as lvsPreprocessing:
+                    positions: list[tuple[JoiningPosition, JoiningPosition]] = [
+                        ("init", "isol"),
+                        ("medi", "fina"),
+                    ]
+                    for position1, position2 in positions:
+                        for alias in getAliasesByLocale(locale):
+                            charName = getCharNameByAlias(locale, alias)
+                            self.sub(
+                                str(GlyphDescriptor.fromData(charName, position1)),
+                                by=str(GlyphDescriptor.fromData(charName, position2)),
+                            )
+
                 with c.Lookup(
                     f"III.{locale}.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}
                 ):
-                    c.contextualSub(
-                        c.input(
-                            c.glyphClass(
-                                [gc[f"{locale}:consonant.medi"], gc[f"{locale}:vowel.medi"]]
-                            ),
-                            cd[f"{locale}:default"],
-                        ),
-                        c.input(gc[f"{locale}:lvs.fina"], cd["_.ignored"]),
+                    variants = c.glyphClass(
+                        [
+                            cl[f"{locale}:consonant.init"],
+                            cl[f"{locale}:vowel.init"],
+                            cl[f"{locale}:consonant.medi"],
+                            cl[f"{locale}:vowel.medi"],
+                        ]
                     )
-                    c.contextualSub(c.input(gc[f"{locale}:lvs"], cd["_.ignored"]))
+                    c.contextualSub(
+                        c.input(variants, lvsPreprocessing),
+                        c.input(cl[f"{locale}:lvs.fina"], cd["_.ignored"]),
+                    )
+                    c.contextualSub(c.input(cl[f"{locale}:lvs"], cd["_.ignored"]))
 
-        ### [III.1] Phonetic - Chachlag
+    def iii0b(self):
+        """
+        GB requires that the masculinity and femininity of a letter be passed forward and backward indefinitely throughout the word.
+
+        A to C implement masculinity indefinitely passing forward, D to F implement femininity indefinitely passing forward, G to K implement masculinity indefinitely passing backward.
+        """
+
+        c = self
+        cl = self.classes
+        ct = data.locales["MNG"].categories
+
+        init = cast(JoiningPosition, "init")
+        medi = cast(JoiningPosition, "medi")
+        fina = cast(JoiningPosition, "fina")
+
+        masculine = c.glyphClass(["masculine"])
+        feminine = c.glyphClass(["feminine"])
+
+        def getDefault(alias: str, position: JoiningPosition, marked: bool = False) -> str:
+            charName = getCharNameByAlias("MNG", alias)
+            return str(
+                GlyphDescriptor.fromData(
+                    charName, position, suffixes=(["marked"] if marked else [])
+                )
+            )
+
+        # add masculine
+        with c.Lookup("III.ig.preprocessing.A", feature="rclt"):
+            for alias in ct["vowelMasculine"]:
+                for position in (init, medi):
+                    default = getDefault(alias, position)
+                    self.sub(default, by=[default, "masculine"])
+
+        with c.Lookup(
+            "III.ig.preprocessing.B", feature="rclt", flags={"UseMarkFilteringSet": masculine}
+        ):
+            for alias in ct["vowelNeuter"] + ct["consonant"]:
+                for position in (medi, fina):
+                    default = getDefault(alias, position)
+                    self.contextualSub(
+                        "masculine", c.input(default), by=" ".join([default, "masculine"])
+                    )  # FIXME: treat as glyph name
+
+        with c.Lookup("III.ig.preprocessing.C", feature="rclt"):
+            for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]:
+                if alias not in ["g", "h"]:
+                    for position in (init, medi, fina):
+                        default = getDefault(alias, position)
+                        self.sub(default, "masculine", by=default)
+
+        # add feminine
+        with c.Lookup("III.ig.preprocessing.D", feature="rclt"):
+            for alias in ct["vowelFeminine"]:
+                for position in (init, medi):
+                    default = getDefault(alias, position)
+                    self.sub(default, by=[default, "feminine"])
+
+        with c.Lookup(
+            "III.ig.preprocessing.E", feature="rclt", flags={"UseMarkFilteringSet": feminine}
+        ):
+            for alias in ct["vowelNeuter"] + ct["consonant"]:
+                for position in (medi, fina):
+                    default = getDefault(alias, position)
+                    self.contextualSub(
+                        "feminine", c.input(default), by=" ".join([default, "feminine"])
+                    )  # FIXME: treat as glyph name
+
+        with c.Lookup("III.ig.preprocessing.F", feature="rclt"):
+            for alias in ct["vowelFeminine"] + ct["vowelNeuter"] + ct["consonant"]:
+                if alias not in ["g", "h"]:
+                    for position in (init, medi, fina):
+                        default = getDefault(alias, position)
+                        self.sub(default, "feminine", by=default)
+
+        # reverse add masculine
+        unmarkedVariants = c.namedGlyphClass(
+            "MNG:unmarked.A",
+            [
+                getDefault(alias, position)
+                for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
+                for position in (init, medi, fina)
+            ],
+        )
+        markedVariants = c.namedGlyphClass(
+            "MNG:marked.A",
+            [
+                getDefault(alias, position, True)
+                for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
+                for position in (init, medi, fina)
+            ],
+        )
+
+        with c.Lookup("_.marked.MNG") as _marked:
+            self.sub(unmarkedVariants, by=markedVariants)
+
+        with c.Lookup("_.unmarked.MNG") as _unmarked:
+            self.sub(markedVariants, by=unmarkedVariants)
+
+        with c.Lookup("III.ig.preprocessing.G", feature="rclt", flags={"IgnoreMarks": True}):
+            for alias in ct["vowelNeuter"] + ct["consonant"]:
+                for position in (init, medi):
+                    unmarked = getDefault(alias, position)
+                    self.contextualSub(c.input(unmarked, _marked), cl["MNG:vowelMasculine"])
+            for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]:
+                unmarked = getDefault(alias, fina)
+                self.contextualSub(c.input(unmarked, _marked), cl["mvs"], cl["MNG:a.isol"])
+
+        with c.Lookup(
+            "III.ig.preprocessing.H", feature="rclt", flags={"UseMarkFilteringSet": feminine}
+        ):
+            for alias in ct["vowelNeuter"] + ct["consonant"]:
+                for position in (init, medi):
+                    unmarked = getDefault(alias, position)
+                    marked = getDefault(alias, position, True)
+                    self.current.append(
+                        ast.ReverseChainSingleSubstStatement(
+                            old_prefix=[],
+                            old_suffix=["@" + markedVariants.name],  # FIXME: treat as glyph name
+                            glyphs=[unmarked],
+                            replacements=[marked],
+                        )
+                    )
+
+        with c.Lookup("III.ig.preprocessing.I", feature="rclt"):
+            for alias in ["g", "h"]:
+                for position in (init, medi):
+                    marked = getDefault(alias, position, True)
+                    self.contextualSub(c.input(marked, _unmarked), "masculine")
+
+        with c.Lookup("III.ig.preprocessing.J", feature="rclt"):
+            markedVariants = c.namedGlyphClass(
+                "MNG:marked.B",
+                [
+                    getDefault(alias, position, True)
+                    for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
+                    if alias not in ["h", "g"]
+                    for position in (init, medi, fina)
+                ],
+            )
+            self.contextualSub(c.input(markedVariants, _unmarked))
+
+        with c.Lookup("III.ig.preprocessing.K", feature="rclt"):
+            for alias in ["h", "g"]:
+                for position in (init, medi):
+                    unmarked = getDefault(alias, position)
+                    marked = getDefault(alias, position, True)
+                    self.sub(marked, by=[unmarked, "masculine"])
+
+    def iii1(self):
+        """
+        **Phase III.1: Phonetic - Chachlag**
+
+        The isolated Hudum _a_, _e_ and Hudum Ali Gali _a_ (same as Hudum _a_) choose `Aa` when follow an MVS, while MVS chooses the narrow space glyph.
+
+        According to GB, when Hudum _a_ and _e_ are followed by FVS, the MVS shaping needs to be postponed to particle lookup, so MVS needs to be reset at this time. For example, for <MVS, _a_, FVS2>, in this step should be invalid MVS, isolated default _a_ and ignored FVS2. Since the function of NNBSP is transferred to MVS, this step, although required by GB, is essential, so the lookup name does not have a GB suffix.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
 
         if "MNG" in self.locales:
-            with c.Lookup("III.MNG.a_e.chachlag", feature="rclt", flags={"IgnoreMarks": True}):
+            with c.Lookup("III.a_e.chachlag.A", feature="rclt", flags={"IgnoreMarks": True}):
                 c.contextualSub(
-                    c.input(gc["mvs"], cd["_.narrow"]),
-                    c.input(c.glyphClass([gc["MNG:a.isol"], gc["MNG:e.isol"]]), cd["MNG:chachlag"]),
+                    c.input(cl["mvs"], cd["_.narrow"]),
+                    c.input(c.glyphClass([cl["MNG:a.isol"], cl["MNG:e.isol"]]), cd["MNG:chachlag"]),
                 )
 
             with c.Lookup(
-                "III.eac.a_e.chachlag", feature="rclt", flags={"UseMarkFilteringSet": gc["fvs"]}
+                "III.a_e.chachlag.B", feature="rclt", flags={"UseMarkFilteringSet": cl["fvs"]}
             ):
                 c.contextualSub(
-                    c.input(gc["mvs"], cd["_.invalid"]),
-                    c.glyphClass([gc["MNG:a.isol"], gc["MNG:e.isol"]]),
-                    gc["fvs"],
+                    c.input(cl["mvs"], cd["_.reset"]),
+                    c.glyphClass([cl["MNG:a.isol"], cl["MNG:e.isol"]]),
+                    cl["fvs"],
                 )
+
+    def iii2(self):
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
 
         # III.2: Phonetic - Syllabic
 
         if {"MNG", "MNGx", "MCH", "MCHx", "SIB"}.intersection(self.locales):
             with c.Lookup(
-                "III.MNG_MNGx_SIB_MCH_MCHx.o_u_oe_ue.marked",
+                "III.o_u_oe_ue.marked",
                 feature="rclt",
                 flags={"IgnoreMarks": True},
             ):
                 if "MNG" in self.locales:
                     c.contextualSub(
-                        gc["MNG:consonant.init"],
+                        cl["MNG:consonant.init"],
                         c.input(
-                            c.glyphClass([gc["MNG:o"], gc["MNG:u"], gc["MNG:oe"], gc["MNG:ue"]]),
+                            c.glyphClass([cl["MNG:o"], cl["MNG:u"], cl["MNG:oe"], cl["MNG:ue"]]),
                             cd["MNG:marked"],
                         ),
                     )
                 if "MNGx" in self.locales:
                     c.contextualSub(
-                        gc["MNGx:consonant.init"],
-                        c.input(c.glyphClass([gc["MNGx:o"], gc["MNGx:ue"]]), cd["MNGx:marked"]),
+                        cl["MNGx:consonant.init"],
+                        c.input(c.glyphClass([cl["MNGx:o"], cl["MNGx:ue"]]), cd["MNGx:marked"]),
                     )
                     c.contextualSub(
-                        gc["MNGx:consonant.init"],
-                        gc["MNGx:hX"],
-                        c.input(gc["MNGx:ue"], cd["MNGx:marked"]),
+                        cl["MNGx:consonant.init"],
+                        cl["MNGx:hX"],
+                        c.input(cl["MNGx:ue"], cd["MNGx:marked"]),
                     )
                 for locale in ["SIB", "MCH", "MCHx"]:
                     if locale in self.locales:
                         c.contextualSub(
-                            gc[f"{locale}:consonant.init"],
+                            cl[f"{locale}:consonant.init"],
                             c.input(
-                                c.glyphClass([gc[f"{locale}:o"], gc[f"{locale}:u"]]),
+                                c.glyphClass([cl[f"{locale}:o"], cl[f"{locale}:u"]]),
                                 cd[f"{locale}:marked"],
                             ),
                         )
 
         if "MNG" in self.locales:
             with c.Lookup(
-                "III.eac.o_u_oe_ue.marked", feature="rclt", flags={"UseMarkFilteringSet": gc["fvs"]}
+                "III.o_u_oe_ue.marked.GB.A",
+                feature="rclt",
+                flags={"UseMarkFilteringSet": cl["fvs"]},
             ):
                 variants = c.glyphClass(
-                    gc[f"MNG:{letter}.{position}"]
+                    cl[f"MNG:{letter}.{position}"]
                     for letter in ["o", "u", "oe", "ue"]
                     for position in ["medi", "fina"]
                 )
-                c.contextualSub(c.input(variants, cd["MNG:default"]), gc["fvs"])
-                c.contextualSub(gc["fvs"], c.input(variants, cd["MNG:default"]))
+                c.contextualSub(c.input(variants, cd["MNG:reset"]), cl["fvs"])
+                c.contextualSub(cl["fvs"], c.input(variants, cd["MNG:reset"]))
 
-        # III.3: Phonetic - Particle
-        # III.4: Graphemic - Devsger
-        # III.5: Graphemic - Post bowed
-        # III.6: Uncaptured - FVS
+        # TODO
