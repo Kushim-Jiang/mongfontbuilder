@@ -446,7 +446,7 @@ class MongFeaComposer(FeaComposer):
 
         The isolated Hudum _a_, _e_ and Hudum Ali Gali _a_ (same as Hudum _a_) choose `Aa` when follow an MVS, while MVS chooses the narrow space glyph.
 
-        According to GB, when Hudum _a_ and _e_ are followed by FVS, the MVS shaping needs to be postponed to particle lookup, so MVS needs to be reset at this time. For example, for <MVS, _a_, FVS2>, in this step should be invalid MVS, isolated default _a_ and ignored FVS2. Since the function of NNBSP is transferred to MVS, this step, although required by GB, is essential, so the lookup name does not have a GB suffix.
+        According to GB, when Hudum _a_ and _e_ are followed by FVS, the MVS shaping needs to be postponed to particle lookup, so MVS needs to be reset at this time. For example, for an MVS, an _a_ and an FVS2, in this step should be invalid MVS, isolated default _a_ and ignored FVS2. Since the function of NNBSP is transferred to MVS, this step, although required by GB, is essential, so the lookup name does not have a GB suffix.
         """
 
         c = self
@@ -470,17 +470,29 @@ class MongFeaComposer(FeaComposer):
                 )
 
     def iii2(self):
+        """
+        **Phase III.2: Phonetic - Syllabic**
+        """
+
+        self.iii2a()
+        self.iii2b()
+
+    def iii2a(self):
+        """
+        (1) When Hudum _o_ or _u_ or _oe_ or _ue_ follows an initial consonant, apply `marked`.
+
+        According to GB requirements: The `marked` will be skipped if the vowel precedes or follows an FVS, although Hudum _g_ or _h_ with FVS2 or FVS4 will apply `marked` for _oe_ or _ue_; when the first syllable contains a consonant cluster, the `marked` will still be applied.
+
+        (2) When initial Hudum _d_ follows a final vowel, apply `marked`. Appear in Twelve Syllabaries.
+
+        According to GB requirements: The `marked` will be skipped if the vowel precedes or follows an FVS.
+        """
 
         c = self
         cl = self.classes
         cd = self.conditions
         ct = data.locales["MNG"].categories
 
-        init = cast(JoiningPosition, "init")
-        medi = cast(JoiningPosition, "medi")
-        fina = cast(JoiningPosition, "fina")
-
-        # if o/u/ö/ü follows an initial consonant, marked
         if {"MNG", "MNGx", "MCH", "MCHx", "SIB"}.intersection(self.locales):
             with c.Lookup(
                 "III.o_u_oe_ue.marked",
@@ -515,7 +527,6 @@ class MongFeaComposer(FeaComposer):
                             ),
                         )
 
-        # GB requirements
         if "MNG" in self.locales:
             with c.Lookup(
                 "III.o_u_oe_ue.marked.GB.A",
@@ -546,7 +557,7 @@ class MongFeaComposer(FeaComposer):
                 [
                     self.getDefault(alias, position, True)
                     for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
-                    for position in (init, medi, fina)
+                    for position in ["init", "medi", "fina"]
                 ],
             )
             with c.Lookup(
@@ -569,15 +580,48 @@ class MongFeaComposer(FeaComposer):
             with c.Lookup("III.o_u_oe_ue.initial_marked.GB.C", feature="rclt"):
                 c.contextualSub(c.input(markedVariants, cd["_.unmarked.MNG"]))
 
+            with c.Lookup("III.d.marked", feature="rclt", flags={"IgnoreMarks": True}):
+                c.contextualSub(c.input(cl["MNG:d.init"], cd["MNG:marked"]), cl["MNG:vowel.fina"])
+
             with c.Lookup(
                 "III.d.marked.GB", feature="rclt", flags={"UseMarkFilteringSet": cl["fvs"]}
             ):
-                # FIXME: ignore sub @d-hud.init' @hud.vowel @fvs;
-                c.contextualSub(c.input(cl["MNG:d.init"], cd["MNG:marked"]), cl["MNG:vowel.fina"])
+                c.contextualSub(
+                    c.input(cl["MNG:d.init"], cd["MNG:reset"]), cl["MNG:vowel.fina"], cl["fvs"]
+                )
+                c.contextualSub(
+                    c.input(cl["MNG:d.init"], cd["MNG:reset"]), cl["fvs"], cl["MNG:vowel.fina"]
+                )
+
+    def iii2b(self):
+        """
+        (1) When Sibe _z_ precedes _i_, apply `marked`.
+
+        (2) When Manchu _i_ follows _z_, apply `marked`.
+
+        (3) When Manchu _f_ precedes _i_ or _o_ or _u_ or _ue_, apply `marked`.
+
+        (4) When Manchu Ali Gali _i_ follows _cX_ or _z_ or _jhX_, apply `marked`.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
 
         if {"SIB", "MCH", "MCHx"}.intersection(self.locales):
             with c.Lookup(
-                "III.f_i.marked.SIB_MCH_MCHx", feature="rclt", flags={"IgnoreMarks": True}
+                "III.z_f_i.marked.SIB_MCH_MCHx", feature="rclt", flags={"IgnoreMarks": True}
             ):
                 if "SIB" in self.locales:
-                    ...
+                    c.contextualSub(c.input(cl["SIB:z"], cd["SIB:marked"]), cl["SIB:i"])
+                if "MCH" in self.locales:
+                    c.contextualSub(cl["MCH:z"], c.input(cl["MCH:i"], cd["MCH:marked"]))
+                    c.contextualSub(
+                        c.input(cl["MCH:f"], cd["MCH:marked"]),
+                        c.glyphClass([cl["MCH:i"], cl["MCH:o"], cl["MCH:u"], cl["MCH:ue"]]),
+                    )
+                if "MCHx" in self.locales:
+                    c.contextualSub(
+                        c.glyphClass([cl["MCHx:cX"], cl["MCHx:z"], cl["MCHx:jhX"]]),
+                        c.input(cl["MCHx:i"], cd["MCHx:marked"]),
+                    )

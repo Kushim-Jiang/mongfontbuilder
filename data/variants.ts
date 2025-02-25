@@ -5298,7 +5298,6 @@ export const variants: Record<
         written: ["I2"],
         locales: {
           SIB: {
-            conditions: ["marked"],
             eac: "SIM2",
           },
         },
@@ -6732,6 +6731,15 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "1": {
+        written: ["Zs2"],
+        locales: {
+          SIB: {
+            conditions: ["marked"],
+            gb: "186F sibe za second initial form",
+          },
+        },
+      },
     },
     medi: {
       "0": {
@@ -6747,6 +6755,15 @@ export const variants: Record<
             eac: "MZAZ1",
           },
           MCHx: {},
+        },
+      },
+      "1": {
+        written: ["Zs2"],
+        locales: {
+          SIB: {
+            conditions: ["marked"],
+            gb: "186F sibe za second medial form",
+          },
         },
       },
     },

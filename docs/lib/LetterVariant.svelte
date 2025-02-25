@@ -30,6 +30,13 @@
 <span>{text ?? "?"}</span>
 
 <style>
+  @font-face {
+    font-family: "Noto Sans Mongolian";
+    src: url("/web/src/DraftNew-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
   span {
     font-family: "Noto Sans Mongolian";
   }

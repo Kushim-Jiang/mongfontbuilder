@@ -6478,9 +6478,6 @@
         ],
         "locales": {
           "SIB": {
-            "conditions": [
-              "marked"
-            ],
             "eac": "SIM2"
           }
         }
@@ -8286,6 +8283,19 @@
           },
           "MCHx": {}
         }
+      },
+      "1": {
+        "written": [
+          "Zs2"
+        ],
+        "locales": {
+          "SIB": {
+            "conditions": [
+              "marked"
+            ],
+            "gb": "186F sibe za second initial form"
+          }
+        }
       }
     },
     "medi": {
@@ -8304,6 +8314,19 @@
             "eac": "MZAZ1"
           },
           "MCHx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "Zs2"
+        ],
+        "locales": {
+          "SIB": {
+            "conditions": [
+              "marked"
+            ],
+            "gb": "186F sibe za second medial form"
+          }
         }
       }
     },

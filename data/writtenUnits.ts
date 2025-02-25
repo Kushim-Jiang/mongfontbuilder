@@ -140,6 +140,7 @@ export const writtenUnits = [
   "Zc",
   "Zr",
   "Zs",
+  "Zs2",
   "Zt",
   "Zz",
 ] as const;
