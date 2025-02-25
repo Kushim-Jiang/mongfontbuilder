@@ -294,6 +294,13 @@ class MongFeaComposer(FeaComposer):
                     )
                     c.contextualSub(c.input(cl[f"{locale}:lvs"], cd["_.ignored"]))
 
+    def getDefault(self, alias: str, position: JoiningPosition | str, marked: bool = False) -> str:
+        charName = getCharNameByAlias("MNG", alias)
+        position = cast(JoiningPosition, position)
+        return str(
+            GlyphDescriptor.fromData(charName, position, suffixes=(["marked"] if marked else []))
+        )
+
     def iii0b(self):
         """
         GB requires that the masculinity and femininity of a letter be passed forward and backward indefinitely throughout the word.
@@ -303,36 +310,25 @@ class MongFeaComposer(FeaComposer):
 
         c = self
         cl = self.classes
+        cd = self.conditions
         ct = data.locales["MNG"].categories
-
-        init = cast(JoiningPosition, "init")
-        medi = cast(JoiningPosition, "medi")
-        fina = cast(JoiningPosition, "fina")
 
         masculine = c.glyphClass(["masculine"])
         feminine = c.glyphClass(["feminine"])
 
-        def getDefault(alias: str, position: JoiningPosition, marked: bool = False) -> str:
-            charName = getCharNameByAlias("MNG", alias)
-            return str(
-                GlyphDescriptor.fromData(
-                    charName, position, suffixes=(["marked"] if marked else [])
-                )
-            )
-
         # add masculine
         with c.Lookup("III.ig.preprocessing.A", feature="rclt"):
             for alias in ct["vowelMasculine"]:
-                for position in (init, medi):
-                    default = getDefault(alias, position)
+                for position in ["init", "medi"]:
+                    default = self.getDefault(alias, position)
                     self.sub(default, by=[default, "masculine"])
 
         with c.Lookup(
             "III.ig.preprocessing.B", feature="rclt", flags={"UseMarkFilteringSet": masculine}
         ):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
-                for position in (medi, fina):
-                    default = getDefault(alias, position)
+                for position in ["medi", "fina"]:
+                    default = self.getDefault(alias, position)
                     self.contextualSub(
                         "masculine", c.input(default), by=" ".join([default, "masculine"])
                     )  # FIXME: treat as glyph name
@@ -340,23 +336,23 @@ class MongFeaComposer(FeaComposer):
         with c.Lookup("III.ig.preprocessing.C", feature="rclt"):
             for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]:
                 if alias not in ["g", "h"]:
-                    for position in (init, medi, fina):
-                        default = getDefault(alias, position)
+                    for position in ["init", "medi", "fina"]:
+                        default = self.getDefault(alias, position)
                         self.sub(default, "masculine", by=default)
 
         # add feminine
         with c.Lookup("III.ig.preprocessing.D", feature="rclt"):
             for alias in ct["vowelFeminine"]:
-                for position in (init, medi):
-                    default = getDefault(alias, position)
+                for position in ["init", "medi"]:
+                    default = self.getDefault(alias, position)
                     self.sub(default, by=[default, "feminine"])
 
         with c.Lookup(
             "III.ig.preprocessing.E", feature="rclt", flags={"UseMarkFilteringSet": feminine}
         ):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
-                for position in (medi, fina):
-                    default = getDefault(alias, position)
+                for position in ["medi", "fina"]:
+                    default = self.getDefault(alias, position)
                     self.contextualSub(
                         "feminine", c.input(default), by=" ".join([default, "feminine"])
                     )  # FIXME: treat as glyph name
@@ -364,50 +360,52 @@ class MongFeaComposer(FeaComposer):
         with c.Lookup("III.ig.preprocessing.F", feature="rclt"):
             for alias in ct["vowelFeminine"] + ct["vowelNeuter"] + ct["consonant"]:
                 if alias not in ["g", "h"]:
-                    for position in (init, medi, fina):
-                        default = getDefault(alias, position)
+                    for position in ["init", "medi", "fina"]:
+                        default = self.getDefault(alias, position)
                         self.sub(default, "feminine", by=default)
 
         # reverse add masculine
         unmarkedVariants = c.namedGlyphClass(
             "MNG:unmarked.A",
             [
-                getDefault(alias, position)
+                self.getDefault(alias, position)
                 for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
-                for position in (init, medi, fina)
+                for position in ["init", "medi", "fina"]
             ],
         )
         markedVariants = c.namedGlyphClass(
             "MNG:marked.A",
             [
-                getDefault(alias, position, True)
+                self.getDefault(alias, position, True)
                 for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
-                for position in (init, medi, fina)
+                for position in ["init", "medi", "fina"]
             ],
         )
 
         with c.Lookup("_.marked.MNG") as _marked:
             self.sub(unmarkedVariants, by=markedVariants)
+        cd[_marked.name] = _marked
 
         with c.Lookup("_.unmarked.MNG") as _unmarked:
             self.sub(markedVariants, by=unmarkedVariants)
+        cd[_unmarked.name] = _unmarked
 
         with c.Lookup("III.ig.preprocessing.G", feature="rclt", flags={"IgnoreMarks": True}):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
-                for position in (init, medi):
-                    unmarked = getDefault(alias, position)
+                for position in ["init", "medi"]:
+                    unmarked = self.getDefault(alias, position)
                     self.contextualSub(c.input(unmarked, _marked), cl["MNG:vowelMasculine"])
             for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]:
-                unmarked = getDefault(alias, fina)
+                unmarked = self.getDefault(alias, "fina")
                 self.contextualSub(c.input(unmarked, _marked), cl["mvs"], cl["MNG:a.isol"])
 
         with c.Lookup(
             "III.ig.preprocessing.H", feature="rclt", flags={"UseMarkFilteringSet": feminine}
         ):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
-                for position in (init, medi):
-                    unmarked = getDefault(alias, position)
-                    marked = getDefault(alias, position, True)
+                for position in ["init", "medi"]:
+                    unmarked = self.getDefault(alias, position)
+                    marked = self.getDefault(alias, position, True)
                     self.current.append(
                         ast.ReverseChainSingleSubstStatement(
                             old_prefix=[],
@@ -419,27 +417,27 @@ class MongFeaComposer(FeaComposer):
 
         with c.Lookup("III.ig.preprocessing.I", feature="rclt"):
             for alias in ["g", "h"]:
-                for position in (init, medi):
-                    marked = getDefault(alias, position, True)
+                for position in ["init", "medi"]:
+                    marked = self.getDefault(alias, position, True)
                     self.contextualSub(c.input(marked, _unmarked), "masculine")
 
         with c.Lookup("III.ig.preprocessing.J", feature="rclt"):
             markedVariants = c.namedGlyphClass(
                 "MNG:marked.B",
                 [
-                    getDefault(alias, position, True)
+                    self.getDefault(alias, position, True)
                     for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
                     if alias not in ["h", "g"]
-                    for position in (init, medi, fina)
+                    for position in ["init", "medi", "fina"]
                 ],
             )
             self.contextualSub(c.input(markedVariants, _unmarked))
 
         with c.Lookup("III.ig.preprocessing.K", feature="rclt"):
             for alias in ["h", "g"]:
-                for position in (init, medi):
-                    unmarked = getDefault(alias, position)
-                    marked = getDefault(alias, position, True)
+                for position in ["init", "medi"]:
+                    unmarked = self.getDefault(alias, position)
+                    marked = self.getDefault(alias, position, True)
                     self.sub(marked, by=[unmarked, "masculine"])
 
     def iii1(self):
@@ -476,9 +474,13 @@ class MongFeaComposer(FeaComposer):
         c = self
         cl = self.classes
         cd = self.conditions
+        ct = data.locales["MNG"].categories
 
-        # III.2: Phonetic - Syllabic
+        init = cast(JoiningPosition, "init")
+        medi = cast(JoiningPosition, "medi")
+        fina = cast(JoiningPosition, "fina")
 
+        # if o/u/ö/ü follows an initial consonant, marked
         if {"MNG", "MNGx", "MCH", "MCHx", "SIB"}.intersection(self.locales):
             with c.Lookup(
                 "III.o_u_oe_ue.marked",
@@ -513,6 +515,7 @@ class MongFeaComposer(FeaComposer):
                             ),
                         )
 
+        # GB requirements
         if "MNG" in self.locales:
             with c.Lookup(
                 "III.o_u_oe_ue.marked.GB.A",
@@ -527,4 +530,54 @@ class MongFeaComposer(FeaComposer):
                 c.contextualSub(c.input(variants, cd["MNG:reset"]), cl["fvs"])
                 c.contextualSub(cl["fvs"], c.input(variants, cd["MNG:reset"]))
 
-        # TODO
+            with c.Lookup(
+                "III.o_u_oe_ue.marked.GB.B",
+                feature="rclt",
+                flags={"UseMarkFilteringSet": cl["fvs"]},
+            ):
+                c.contextualSub(
+                    c.glyphClass([cl["MNG:g.init"], cl["MNG:h.init"]]),
+                    c.glyphClass([cl["fvs2"], cl["fvs4"]]),
+                    c.input(c.glyphClass([cl["MNG:oe.fina"], cl["MNG:ue.fina"]]), cd["MNG:marked"]),
+                )
+
+            markedVariants = c.namedGlyphClass(
+                "MNG:marked.C",
+                [
+                    self.getDefault(alias, position, True)
+                    for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
+                    for position in (init, medi, fina)
+                ],
+            )
+            with c.Lookup(
+                "III.o_u_oe_ue.initial_marked.GB.A", feature="rclt", flags={"IgnoreMarks": True}
+            ):
+                c.contextualSub(
+                    c.glyphClass([cl["MNG:consonant.init"], markedVariants]),
+                    c.input(cl["MNG:consonant.medi"], cd["_.marked.MNG"]),
+                )
+
+            variants = c.glyphClass(cl[f"MNG:{letter}.medi"] for letter in ["o", "u", "oe", "ue"])
+            with c.Lookup(
+                "III.o_u_oe_ue.initial_marked.GB.B", feature="rclt", flags={"IgnoreMarks": True}
+            ):
+                c.contextualSub(
+                    c.glyphClass([cl["MNG:consonant.init"], markedVariants]),
+                    c.input(variants, cd["MNG:marked"]),
+                )
+
+            with c.Lookup("III.o_u_oe_ue.initial_marked.GB.C", feature="rclt"):
+                c.contextualSub(c.input(markedVariants, cd["_.unmarked.MNG"]))
+
+            with c.Lookup(
+                "III.d.marked.GB", feature="rclt", flags={"UseMarkFilteringSet": cl["fvs"]}
+            ):
+                # FIXME: ignore sub @d-hud.init' @hud.vowel @fvs;
+                c.contextualSub(c.input(cl["MNG:d.init"], cd["MNG:marked"]), cl["MNG:vowel.fina"])
+
+        if {"SIB", "MCH", "MCHx"}.intersection(self.locales):
+            with c.Lookup(
+                "III.f_i.marked.SIB_MCH_MCHx", feature="rclt", flags={"IgnoreMarks": True}
+            ):
+                if "SIB" in self.locales:
+                    ...
