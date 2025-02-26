@@ -1668,7 +1668,7 @@ export const variants: Record<
         written: ["H"],
         locales: {
           MNG: {
-            conditions: ["chachlag_devsger", "masculine_devsger", "dotless"],
+            conditions: ["chachlag_onset_gb", "masculine_devsger", "dotless"],
             gb: "001A ga first final form",
             eac: "MGM1",
           },

@@ -12,7 +12,7 @@ export const locales = {
       "chachlag",
       "marked",
       "chachlag_onset",
-      "chachlag_devsger",
+      "chachlag_onset_gb",
       "onset",
       "devsger",
       "masculine_onset",

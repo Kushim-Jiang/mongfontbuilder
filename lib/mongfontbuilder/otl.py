@@ -409,7 +409,7 @@ class MongFeaComposer(FeaComposer):
                     self.current.append(
                         ast.ReverseChainSingleSubstStatement(
                             old_prefix=[],
-                            old_suffix=["@" + markedVariants.name],  # FIXME: treat as glyph name
+                            old_suffix=["@" + markedVariants.name],
                             glyphs=[unmarked],
                             replacements=[marked],
                         )
@@ -476,6 +476,9 @@ class MongFeaComposer(FeaComposer):
 
         self.iii2a()
         self.iii2b()
+        self.iii2c()
+        self.iii2d()
+        self.iii2e()
 
     def iii2a(self):
         """
@@ -625,3 +628,150 @@ class MongFeaComposer(FeaComposer):
                         c.glyphClass([cl["MCHx:cX"], cl["MCHx:z"], cl["MCHx:jhX"]]),
                         c.input(cl["MCHx:i"], cd["MCHx:marked"]),
                     )
+
+    def iii2c(self):
+        """
+        When Hudum _n_, _j_, _w_  follows an MVS that follows chachlag _a_ or _e_, apply `chachlag_onset`. When Hudum _h_, _g_, Hudum Ali Gali _a_ follows an MVS that follows chachlag _a_, apply `chachlag_onset`.
+
+        According to GB requirements, when Hudum _g_ follows an MVS that follows chachlag _e_, apply `chachlag_devsger`.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
+
+        if {"MNG", "MNGx"}.intersection(self.locales):
+            with c.Lookup(
+                "III.n_j_w_h_g_a.chachlag_onset.MNG_MNGx",
+                feature="rclt",
+                flags={"IgnoreMarks": True},
+            ):
+                njwVariants = c.glyphClass(
+                    [cl["MNG:n.fina"], cl["MNG:j.isol"], cl["MNG:j.fina"], cl["MNG:w.fina"]]
+                )
+                hgVariants = c.glyphClass([cl["MNG:h.fina"], cl["MNG:g.fina"]])
+                if "MNG" in self.locales:
+                    c.contextualSub(
+                        c.input(njwVariants, cd["MNG:chachlag_onset"]),
+                        cl["mvs.valid"],
+                        c.glyphClass(["u1820.Aa.isol", "u1821.Aa.isol"]),
+                    )
+                    c.contextualSub(
+                        c.input(hgVariants, cd["MNG:chachlag_onset"]),
+                        cl["mvs.valid"],
+                        "u1820.Aa.isol",
+                    )
+                if "MNGx" in self.locales:
+                    c.contextualSub(
+                        c.input(cl["MNGx:a.fina"], cd["MNG:chachlag_onset"]),
+                        cl["mvs.valid"],
+                        "u1820.Aa.isol",
+                    )
+
+        if "MNG" in self.locales:
+            with c.Lookup(
+                "III.g.chachlag_onset.MNG.GB", feature="rclt", flags={"IgnoreMarks": True}
+            ):
+                c.contextualSub(
+                    c.input(cl["MNG:g.fina"], cd["MNG:chachlag_onset_gb"]),
+                    cl["mvs.valid"],
+                    "u1821.Aa.isol",
+                )
+
+    def iii2d(self):
+        """
+        (1) When Sibe _e_ or _u_ follows _t_, _d_, _k_, _g_, _h_, apply `feminine`.
+
+        (2) When Manchu _e_, _u_ follows _t_, _d_, _k_, _g_, _h_, apply `feminine`.
+
+        (3) When Manchu Ali Gali _e_, _u_ follows _tX_, _t_, _d_, _dhX_, _g_, _k_, _ghX_, _h_, apply `feminine`. When Manchu Ali Gali _e_ follows _ngX_, _sbm_, apply `feminine`.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
+
+        if {"SIB", "MCH", "MCHx"}.intersection(self.locales):
+            with c.Lookup(
+                "III.e_u.feminine.SIB_MCH_MCHx", feature="rclt", flags={"IgnoreMarks": True}
+            ):
+                for locale in ["SIB", "MCH", "MCHx"]:
+                    if locale in self.locales:
+                        consonants = c.glyphClass(
+                            cl[f"{locale}:{letter}"] for letter in ["t", "d", "k", "g", "h"]
+                        )
+                        if locale == "MCHx":
+                            consonants = c.glyphClass(
+                                cl[f"MCHx:{letter}"]
+                                for letter in ["tX", "t", "d", "dhX", "g", "k", "ghX", "h"]
+                            )
+                        euLetters = c.glyphClass([cl[f"{locale}:e"], cl[f"{locale}:u"]])
+                        c.contextualSub(
+                            consonants, c.input("u1860.Oh.fina", cd[f"{locale}:feminine_marked"])
+                        )
+                        c.contextualSub(consonants, c.input(euLetters, cd[f"{locale}:feminine"]))
+
+                        if locale == "MCHx":
+                            c.contextualSub(
+                                c.glyphClass([cl["MCHx:ngX"], cl["MCHx:sbm"]]),
+                                c.input(euLetters, cd["MCHx:feminine"]),
+                            )
+
+    def iii2e(self):
+        """
+        (1) For Hudum, Todo, Sibe, Manchu and Manchu Ali Gali, when _n_ follows a vowel, apply `onset`; when _n_ follows a consonant, apply `devsger`.
+
+        (2) For Hudum, When _t_ or _d_ follows a vowel, apply `onset`; when _t_ or _d_ follows a consonant, apply `devsger`. For Sibe and Manchu, when _t_ or _d_ follows _a_ or _i_ or _o_, apply `masculine_onset`; when _t_ or _d_ follows _e_, _u_, _ue_, apply `feminine`; when _t_ follows a consonant, apply `devsger`; when _t_ precedes a vowel, apply `devsger`. For Manchu Ali Gali, when _tX_ or _dhX_ follows _a_ or _i_ or _o_, apply `masculine_onset`; when _tX_ or _dhX_ follows _e_ or _u_ or _ue_, apply `feminine`.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
+
+        if {"MNG", "TOD", "SIB", "MCH", "MCHx"}.intersection(self.locales):
+            with c.Lookup(
+                "III.n.onset_and_devsger.MNG_TOD_SIB_MCH_MCHx",
+                feature="rclt",
+                flags={"IgnoreMarks": True},
+            ):
+                for locale in ["MNG", "TOD", "SIB", "MCH", "MCHx"]:
+                    if locale in self.locales:
+                        c.contextualSub(
+                            c.input(cl[f"{locale}:n"], cd[f"{locale}:onset"]), cl[f"{locale}:vowel"]
+                        )
+                        c.contextualSub(
+                            c.input(cl[f"{locale}:n"], cd[f"{locale}:devsger"]),
+                            cl[f"{locale}:consonant"],
+                        )
+
+        if {"MNG", "SIB", "MCH", "MCHx"}.intersection(self.locales):
+            with c.Lookup(
+                "III.t_d.onset_and_devsger_and_gender.MNG_MCH_MCHx",
+                feature="rclt",
+                flags={"IgnoreMarks": True},
+            ):
+                if "MNG" in self.locales:
+                    # FIXME: ignore sub [@t-hud.init @d-hud.init]' @hud.vowel.fina;
+                    tdLetters = c.glyphClass(cl[f"MNG:{letter}"] for letter in ["t", "d"])
+                    c.contextualSub(c.input(tdLetters, cd["MNG:onset"]), cl["MNG:vowel"])
+                    c.contextualSub(c.input(tdLetters, cd["MNG:devsger"]), cl["MNG:consonant"])
+                for locale in ["SIB", "MCH", "MCHx"]:
+                    if locale in self.locales:
+                        tdLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["t", "d"])
+                        if locale == "MCHx":
+                            tdLetters = c.glyphClass(cl[f"MCHx:{i}"] for i in ["tX", "dhX"])
+                        aioLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["a", "i", "o"])
+                        euueLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["e", "u", "ue"])
+                        c.contextualSub(
+                            c.input(tdLetters, cd[f"{locale}:masculine_onset"]), aioLetters
+                        )
+                        c.contextualSub(c.input(tdLetters, cd[f"{locale}:feminine"]), euueLetters)
+                        if locale != "MCHx":
+                            c.contextualSub(
+                                c.input(cl[f"{locale}:t"], cd[f"{locale}:devsger"]),
+                                cl[f"{locale}:consonant"],
+                            )
+                            c.contextualSub(
+                                cl[f"{locale}:vowel"],
+                                c.input(cl[f"{locale}:t.fina"], cd[f"{locale}:devsger"]),
+                            )

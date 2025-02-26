@@ -2065,7 +2065,7 @@
         "locales": {
           "MNG": {
             "conditions": [
-              "chachlag_devsger",
+              "chachlag_onset_gb",
               "masculine_devsger",
               "dotless"
             ],
