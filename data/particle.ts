@@ -1,0 +1,23 @@
+export const particles = {
+  MNG: [
+    { particle: ["a", "ch", "a"], special: [0] },
+    { particle: ["a", "ch", "a", "g", "a", "n"], special: [0] },
+    { particle: ["i"], special: [0] },
+    { particle: ["i", "y", "a", "r"], special: [0, 1] },
+    { particle: ["i", "y", "e", "r"], special: [0, 1] },
+    { particle: ["i", "y", "a", "n"], special: [0, 1] },
+    { particle: ["i", "y", "e", "n"], special: [0, 1] },
+    { particle: ["u"], special: [0] },
+    { particle: ["ue"], special: [0] },
+    { particle: ["u", "n"], special: [0] },
+    { particle: ["ue", "n"], special: [0] },
+    { particle: ["u", "d"], special: [0] },
+    { particle: ["ue", "d"], special: [0] },
+    { particle: ["ch", "u"], special: [1] },
+    { particle: ["ch", "ue"], special: [1] },
+    { particle: ["t", "u"], special: [0, 1] },
+    { particle: ["t", "ue"], special: [0, 1] },
+    { particle: ["d", "u"], special: [0, 1] },
+    { particle: ["d", "ue"], special: [0, 1] },
+  ],
+} as const;

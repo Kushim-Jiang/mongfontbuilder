@@ -230,8 +230,8 @@ class MongFeaComposer(FeaComposer):
         self.iii0()
         self.iii1()
         self.iii2()
+        self.iii3()
 
-        # III.3: Phonetic - Particle
         # III.4: Graphemic - Devsger
         # III.5: Graphemic - Post bowed
         # III.6: Uncaptured - FVS
@@ -479,6 +479,8 @@ class MongFeaComposer(FeaComposer):
         self.iii2c()
         self.iii2d()
         self.iii2e()
+        self.iii2f()
+        self.iii2g()
 
     def iii2a(self):
         """
@@ -775,3 +777,161 @@ class MongFeaComposer(FeaComposer):
                                 cl[f"{locale}:vowel"],
                                 c.input(cl[f"{locale}:t.fina"], cd[f"{locale}:devsger"]),
                             )
+
+    def iii2f(self):
+        """
+        (1) When (_k_,) _g_, _h_ precedes masculine vowel, apply `masculine_onset`. When (_k_,) _g_, _h_ precedes feminine or neuter vowel, apply `feminine`. Apply `masculine_devsger` or `feminine` or `devsger` for Hudum, Todo, Sibe, Manchu in devsger context.
+
+        (2) For Hudum, when _g_, _h_ following _i_ precedes masculine indicator, apply `masculine_devsger`, else apply `feminine`. When initial _g_, _h_ precedes a consonant, apply `feminine`.
+
+        (3) Delete all the masculine indicators and the feminine indicators after _g_ or _h_.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
+
+        if {"MNG", "TOD", "SIB", "MCH"}.intersection(self.locales):
+            with c.Lookup(
+                "III.k_g_h.onset_and_devsger_and_gender.MNG_TOD_SIB_MCH",
+                feature="rclt",
+                flags={"IgnoreMarks": True},
+            ):
+                for locale in ["MNG", "TOD", "SIB", "MCH"]:
+                    if locale in self.locales:
+                        kghAlias = ["h", "g"] if locale in ["MNG", "TOD"] else ["k", "g", "h"]
+                        kghLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in kghAlias)
+
+                        # if locale == "MNG", ignore sub [@h-hud @g-hud]' @msc [@a-hud.isol @e-hud.isol]
+                        c.contextualSub(
+                            c.input(kghLetters, cd[f"{locale}:masculine_onset"]),
+                            cl[f"{locale}:vowelMasculine"],
+                        )
+                        c.contextualSub(
+                            c.input(kghLetters, cd[f"{locale}:feminine"]),
+                            c.glyphClass(
+                                [cl[f"{locale}:vowelFeminine"], cl[f"{locale}:vowelNeuter"]]
+                            ),
+                        )
+                if "MNG" in self.locales:
+                    ghLetters = c.glyphClass([cl["MNG:g"], cl["MNG:h"]])
+                    c.contextualSub(
+                        cl["MNG:vowelMasculine"], c.input(ghLetters, cd["MNG:masculine_devsger"])
+                    )
+                    c.contextualSub(cl["MNG:vowelFeminine"], c.input(ghLetters, cd["MNG:feminine"]))
+                if "TOD" in self.locales:
+                    c.contextualSub(
+                        cl["TOD:vowel"], c.input(cl["TOD:g"], cd["TOD:masculine_devsger"])
+                    )
+                if "SIB" in self.locales:
+                    c.contextualSub(c.input(cl["SIB:k"], cd["SIB:devsger"]), cl["SIB:consonant"])
+                    c.contextualSub(cl["SIB:vowel"], c.input(cl["SIB:k.fina"], cd["SIB:devsger"]))
+                if "MCH" in self.locales:
+                    c.contextualSub(
+                        cl["MCH:t"], cl["MCH:e"], c.input(cl["MCH:k"], cd["MCH:masculine_devsger"])
+                    )
+                    kghLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["k", "g", "h"])
+                    c.contextualSub(
+                        kghLetters, cl["MCH:u"], c.input(cl["MCH:k"], cd["MCH:feminine"])
+                    )
+                    kghLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["kh", "gh", "hh"])
+                    c.contextualSub(
+                        kghLetters, cl["MCH:a"], c.input(cl["MCH:k"], cd["MCH:feminine"])
+                    )
+                    c.contextualSub(
+                        c.glyphClass(cl[f"MCH:{i}"] for i in ["e", "ue"]),
+                        c.input(cl["MCH:k"], cd["MCH:feminine"]),
+                    )
+                    c.contextualSub(
+                        c.glyphClass(cl[f"MCH:{i}"] for i in ["a", "i", "o", "u"]),
+                        c.input(cl["MCH:k"], cd["MCH:masculine_devsger"]),
+                    )
+
+        masculine = c.glyphClass(["masculine"])
+        feminine = c.glyphClass(["feminine"])
+
+        if "MNG" in self.locales:
+            with c.Lookup(
+                "III.g_h.onset_and_devsger_and_gender.A.MNG",
+                feature="rclt",
+                flags={"UseMarkFilteringSet": masculine},
+            ):
+                # ignore sub [@h-hud @g-hud]' @hud.vowel;
+                # ignore sub [@h-hud @g-hud]' masculine @hud.vowel;
+                # ignore sub [@h-hud @g-hud]' @msc [@a-hud.isol @e-hud.isol];
+                # ignore sub [@h-hud @g-hud]' masculine @msc [@a-hud.isol @e-hud.isol];
+                c.contextualSub(
+                    cl["MNG:i"],
+                    c.input(c.glyphClass([cl["MNG:g"], cl["MNG:h"]]), cd["MNG:masculine_devsger"]),
+                    masculine,
+                )
+                c.contextualSub(cl["MNG:i"], c.input(cl["MNG:g"], cd["MNG:feminine"]))
+
+            with c.Lookup(
+                "III.g_h.onset_and_devsger_and_gender.B.MNG",
+                feature="rclt",
+                flags={"IgnoreMarks": True},
+            ):
+                c.contextualSub(
+                    c.input(
+                        c.glyphClass(cl[f"MNG:{i}.init"] for i in ["h", "g"]), cd["MNG:feminine"]
+                    ),
+                    cl["MCH:consonant"],
+                )
+
+            for index in [0, 1]:
+                step = ["A", "B"][index]
+                genderGlyph = ["masculine", "feminine"][index]
+                genderClass = [masculine, feminine][index]
+
+                with c.Lookup(
+                    f"III.ig.post_processing.{step}.MNG",
+                    feature="rclt",
+                    flags={"UseMarkFilteringSet": genderClass},
+                ):
+                    for alias in ["g", "h"]:
+                        charName = getCharNameByAlias("MNG", alias)
+                        for position in ["init", "medi", "fina"]:
+                            position = cast(JoiningPosition, position)
+                            variants = data.variants[charName].get(position, {})
+                            for i in variants.values():
+                                variant = str(GlyphDescriptor.fromData(charName, position, i))
+                                c.sub(variant, genderGlyph, by=variant)
+
+    def iii2g(self):
+        """
+        (1) When _t_ precedes _ee_ or consonant, apply `devsger`.
+
+        (2) When _sh_ precedes _i_ and not in Twelve Syllabaries, apply `dotless`.
+
+        (3) When _g_ follows _s_ or _d_, apply `dotless`.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
+
+        if "MNG" in self.locales:
+            with c.Lookup("III.t_sh_g.MNG.GB", feature="rclt", flags={"IgnoreMarks": True}):
+                c.contextualSub(
+                    c.input(cl["MNG:t"], cd["MNG:devsger"]),
+                    c.glyphClass([cl["MNG:ee"], cl["MNG:consonant"]]),
+                )
+                c.contextualSub(c.input(cl["MNG:sh.init"], cd["MNG:dotless"]), cl["MNG:i.medi"])
+                c.contextualSub(
+                    c.input(cl["MNG:sh.medi"], cd["MNG:dotless"]),
+                    c.glyphClass([cl["MNG:i.medi"], cl["MNG:i.fina"]]),
+                )
+                c.contextualSub(
+                    c.glyphClass([cl["MNG:s"], cl["MNG:d"]]),
+                    c.input(cl["MNG:g.medi"], cd["MNG:dotless"]),
+                    cl["MNG:vowelMasculine"],
+                )
+                c.contextualSub(
+                    c.glyphClass([cl["MNG:s"], cl["MNG:d"]]),
+                    c.input(cl["MNG:g.fina"], cd["MNG:dotless"]),
+                    cl["mvs"],
+                    "u1820.Aa.isol",
+                )
+
+    def iii3(self): ...
