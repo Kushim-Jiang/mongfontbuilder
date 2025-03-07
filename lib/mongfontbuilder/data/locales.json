@@ -16,20 +16,10 @@
       "post_bowed"
     ],
     "categories": {
-      "vowelMasculine": [
-        "a",
-        "o",
-        "u"
-      ],
-      "vowelFeminine": [
-        "e",
-        "ee",
-        "oe",
-        "ue"
-      ],
-      "vowelNeuter": [
-        "i"
-      ],
+      "vowelMasculine": ["a", "o", "u"],
+      "vowelFeminine": ["e", "ee", "oe", "ue"],
+      "vowelNeuter": ["i"],
+      "vowel": ["a", "e", "ee", "i", "o", "u", "oe", "ue"],
       "consonant": [
         "n",
         "ng",
@@ -70,13 +60,7 @@
       "post_bowed"
     ],
     "categories": {
-      "vowel": [
-        "a",
-        "iX",
-        "ue",
-        "ee",
-        "o"
-      ],
+      "vowel": ["a", "iX", "ue", "ee", "o"],
       "consonant": [
         "kX",
         "k",
@@ -129,22 +113,10 @@
       "post_bowed"
     ],
     "categories": {
-      "vowelMasculine": [
-        "a",
-        "o",
-        "u"
-      ],
-      "vowelFeminine": [
-        "e",
-        "oe",
-        "ue"
-      ],
-      "vowelNeuter": [
-        "i"
-      ],
-      "vowelOther": [
-        "lvs"
-      ],
+      "vowelMasculine": ["a", "o", "u"],
+      "vowelFeminine": ["e", "oe", "ue"],
+      "vowelNeuter": ["i"],
+      "vowel": ["a", "e", "i", "o", "u", "e", "ue", "lvs"],
       "consonant": [
         "n",
         "ng",
@@ -185,20 +157,10 @@
       "post_bowed"
     ],
     "categories": {
-      "vowelMasculine": [
-        "a",
-        "o"
-      ],
-      "vowelFeminine": [
-        "e",
-        "ue"
-      ],
-      "vowelNeuter": [
-        "i"
-      ],
-      "vowelOther": [
-        "lvs"
-      ],
+      "vowelMasculine": ["a", "o"],
+      "vowelFeminine": ["e", "ue"],
+      "vowelNeuter": ["i"],
+      "vowel": ["a", "e", "i", "o", "ue", "lvs"],
       "consonant": [
         "kX",
         "khX",
@@ -256,21 +218,10 @@
       "post_bowed_feminine"
     ],
     "categories": {
-      "vowelMasculine": [
-        "a",
-        "o",
-        "ue"
-      ],
-      "vowelFeminine": [
-        "e",
-        "u"
-      ],
-      "vowelNeuter": [
-        "i"
-      ],
-      "vowelOther": [
-        "ii"
-      ],
+      "vowelMasculine": ["a", "o", "ue"],
+      "vowelFeminine": ["e", "u"],
+      "vowelNeuter": ["i"],
+      "vowel": ["a", "e", "i", "o", "u", "ue", "ii"],
       "consonant": [
         "sbm",
         "n",
@@ -318,21 +269,10 @@
       "post_bowed_feminine"
     ],
     "categories": {
-      "vowelMasculine": [
-        "a",
-        "o",
-        "ue"
-      ],
-      "vowelFeminine": [
-        "e",
-        "u"
-      ],
-      "vowelNeuter": [
-        "i"
-      ],
-      "vowelOther": [
-        "ii"
-      ],
+      "vowelMasculine": ["a", "o", "ue"],
+      "vowelFeminine": ["e", "u"],
+      "vowelNeuter": ["i"],
+      "vowel": ["a", "e", "i", "o", "u", "ue", "ii"],
       "consonant": [
         "sbm",
         "n",
@@ -379,22 +319,10 @@
       "post_bowed_feminine"
     ],
     "categories": {
-      "vowelMasculine": [
-        "a",
-        "o",
-        "ue"
-      ],
-      "vowelFeminine": [
-        "e",
-        "u"
-      ],
-      "vowelNeuter": [
-        "i"
-      ],
-      "vowelOther": [
-        "aaX",
-        "ii"
-      ],
+      "vowelMasculine": ["a", "o", "ue"],
+      "vowelFeminine": ["e", "u"],
+      "vowelNeuter": ["i"],
+      "vowel": ["a", "aaX", "e", "i", "o", "u", "ue", "ii"],
       "consonant": [
         "gh",
         "kh",

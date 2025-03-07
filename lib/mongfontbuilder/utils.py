@@ -18,4 +18,5 @@ def getCharNameByAlias(locale: LocaleID, alias: str) -> CharacterName:
 
 
 def getAliasesByLocale(locale: LocaleID) -> list[str]:
-    return [alias for aliases in data.locales[locale].categories.values() for alias in aliases]
+    categories = data.locales[locale].categories
+    return categories["vowel"] + categories["consonant"]

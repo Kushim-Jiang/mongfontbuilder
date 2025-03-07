@@ -27,6 +27,7 @@ export const locales = {
       vowelMasculine: ["a", "o", "u"],
       vowelFeminine: ["e", "ee", "oe", "ue"],
       vowelNeuter: ["i"],
+      vowel: ["a", "e", "ee", "i", "o", "u", "oe", "ue"],
       consonant: [
         "n",
         "ng",
@@ -123,7 +124,7 @@ export const locales = {
       vowelMasculine: ["a", "o", "u"],
       vowelFeminine: ["e", "oe", "ue"],
       vowelNeuter: ["i"],
-      vowelOther: ["lvs"],
+      vowel: ["a", "e", "i", "o", "u", "e", "ue", "lvs"],
       consonant: [
         "n",
         "ng",
@@ -167,7 +168,7 @@ export const locales = {
       vowelMasculine: ["a", "o"],
       vowelFeminine: ["e", "ue"],
       vowelNeuter: ["i"],
-      vowelOther: ["lvs"],
+      vowel: ["a", "e", "i", "o", "ue", "lvs"],
       consonant: [
         "kX",
         "khX",
@@ -228,7 +229,7 @@ export const locales = {
       vowelMasculine: ["a", "o", "ue"],
       vowelFeminine: ["e", "u"],
       vowelNeuter: ["i"],
-      vowelOther: ["ii"],
+      vowel: ["a", "e", "i", "o", "u", "ue", "ii"],
       consonant: [
         "sbm",
         "n",
@@ -279,7 +280,7 @@ export const locales = {
       vowelMasculine: ["a", "o", "ue"],
       vowelFeminine: ["e", "u"],
       vowelNeuter: ["i"],
-      vowelOther: ["ii"],
+      vowel: ["a", "e", "i", "o", "u", "ue", "ii"],
       consonant: [
         "sbm",
         "n",
@@ -329,7 +330,7 @@ export const locales = {
       vowelMasculine: ["a", "o", "ue"],
       vowelFeminine: ["e", "u"],
       vowelNeuter: ["i"],
-      vowelOther: ["aaX", "ii"],
+      vowel: ["a", "aaX", "e", "i", "o", "u", "ue", "ii"],
       consonant: [
         "gh",
         "kh",

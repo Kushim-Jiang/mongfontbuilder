@@ -5,10 +5,10 @@
 
   let { locale }: Props = $props();
 
-  import { writtenUnits, type WrittenUnitID } from "../../data/writtenUnits";
   import type { LocaleID } from "../../data/locales";
-  import { variants } from "../../data/variants";
   import { joiningPositions, type JoiningPosition } from "../../data/misc";
+  import { variants } from "../../data/variants";
+  import { writtenUnits, type WrittenUnitID } from "../../data/writtenUnits";
 
   import WrittenUnitVariant from "./WrittenUnitVariant.svelte";
 

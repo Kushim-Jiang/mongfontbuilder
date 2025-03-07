@@ -5,13 +5,13 @@
 
   let { locale }: Props = $props();
 
-  import { locales, type LocaleID, type Condition } from "../../data/locales";
   import { aliases, type LocaleNamespace } from "../../data/aliases";
-  import { variants, type FVS } from "../../data/variants";
+  import { locales, type Condition, type LocaleID } from "../../data/locales";
   import { joiningPositions, type JoiningPosition } from "../../data/misc";
+  import { variants, type FVS } from "../../data/variants";
 
   import LetterVariant from "./LetterVariant.svelte";
-  import { nameToCP, hexFromCP } from "./utils";
+  import { hexFromCP, nameToCP } from "./utils";
 
   const conditionOrder = locales[locale].conditions;
 
@@ -22,7 +22,19 @@
       conditions: Map<Condition, Map<JoiningPosition, FVS>>;
     }
   >();
-  for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
+
+  const localeNamespace = locale.slice(0, 3) as LocaleNamespace;
+  const orderedAlias = [...locales[locale].categories.vowel, ...locales[locale].categories.consonant];
+  let charName = "";
+  for (const alias of orderedAlias) {
+    for (const [charName_, localeToAlias] of Object.entries(aliases)) {
+      // @ts-ignore
+      if (localeToAlias[localeNamespace] === alias) {
+        charName = charName_;
+        break;
+      }
+    }
+    const positionToFVSToVariant = variants[charName];
     for (const position of joiningPositions) {
       for (const [fvsKey, { default: default_, locales }] of Object.entries(positionToFVSToVariant[position])) {
         const variantLocaleData = locales[locale];

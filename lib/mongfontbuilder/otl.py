@@ -996,7 +996,7 @@ class MongFeaComposer(FeaComposer):
                                 getCharNameByAlias("MNG", alias)
                                 for alias in ["a", "e", "ee", "i", "o", "u", "oe", "ue"]
                             ]
-                            for position in joiningPositions
+                            for position in cast(list[JoiningPosition], ["init", "medi"])
                             for variant in data.variants[charName].get(position, {}).values()
                             if not variant.written[-1] == "I"
                         ],

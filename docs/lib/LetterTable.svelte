@@ -5,16 +5,28 @@
 
   let { locale }: Props = $props();
 
-  import type { LocaleID } from "../../data/locales";
   import { aliases, type LocaleNamespace } from "../../data/aliases";
-  import { variants, type FVS } from "../../data/variants";
+  import { locales, type LocaleID } from "../../data/locales";
   import { joiningPositions, type JoiningPosition } from "../../data/misc";
+  import { variants, type FVS } from "../../data/variants";
 
   import LetterVariant from "./LetterVariant.svelte";
-  import { nameToCP, hexFromCP } from "./utils";
+  import { hexFromCP, nameToCP } from "./utils";
 
   const charNameToPositionToFVSToLocalizedVariant = new Map<string, Map<JoiningPosition, Map<FVS, { fabricated: boolean; archaic: boolean }>>>();
-  for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
+
+  const localeNamespace = locale.slice(0, 3) as LocaleNamespace;
+  const orderedAlias = [...locales[locale].categories.vowel, ...locales[locale].categories.consonant];
+  let charName = "";
+  for (const alias of orderedAlias) {
+    for (const [charName_, localeToAlias] of Object.entries(aliases)) {
+      // @ts-ignore
+      if (localeToAlias[localeNamespace] === alias) {
+        charName = charName_;
+        break;
+      }
+    }
+    const positionToFVSToVariant = variants[charName];
     for (const position of joiningPositions) {
       for (const [fvs, variant] of Object.entries(positionToFVSToVariant[position])) {
         const variantLocaleData = variant.locales[locale];
@@ -59,7 +71,7 @@
       {@const alias = aliases[charName]}
       <tr>
         <td title={charName}>{hexFromCP(nameToCP.get(charName)!)}</td>
-        <td>{typeof alias == "object" ? alias[locale.slice(0, 3) as LocaleNamespace] : alias}</td>
+        <td><i>{typeof alias == "object" ? alias[localeNamespace] : alias}</i></td>
         {#each positionToFVSToLocalizedVariant as [position, fvsToLocalizedVariant]}
           <td>
             {#each fvsToLocalizedVariant as [fvs, { fabricated, archaic }], index}
