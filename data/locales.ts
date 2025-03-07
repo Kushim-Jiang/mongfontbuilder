@@ -116,7 +116,6 @@ export const locales = {
       "masculine_onset",
       "masculine_devsger",
       "feminine",
-      "particle",
       "vowel_devsger",
       "post_bowed",
     ] as const,
