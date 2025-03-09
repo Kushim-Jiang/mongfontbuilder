@@ -1,5 +1,6 @@
 export type LocaleID = keyof typeof locales;
-export type Condition = (typeof locales)[LocaleID]["conditions"][number];
+export type ConditionalMappingType =
+  (typeof locales)[LocaleID]["conditions"][number];
 
 type LocaleData = {
   conditions: string[];

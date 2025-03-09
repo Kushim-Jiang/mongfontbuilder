@@ -6,7 +6,7 @@ sidebar:
 
 import WrittenUnitTable from "./lib/WrittenUnitTable.svelte";
 import LetterTable from "./lib/LetterTable.svelte";
-import ConditionTable from "./lib/ConditionTable.svelte";
+import ConditionalMappingTable from "./lib/ConditionalMappingTable.svelte";
 import Mong from "./lib/Mong.svelte";
 
 export const locale = "TOD";
@@ -75,8 +75,8 @@ The variants in gray indicate the fabricated variants, _i.e._ variants borrowed 
     <tr>
       <td>Shaping step</td>
       <td>Letters</td>
-      <td>Conditions</td>
-      <td>Lookups</td>
+      <td>Condition</td>
+      <td>Mapping type</td>
     </tr>
   </thead>
   <tbody>
@@ -129,9 +129,9 @@ The variants in gray indicate the fabricated variants, _i.e._ variants borrowed 
   </tbody>
 </table>
 
-### Conditions
+### Conditional mapping
 
-<ConditionTable locale={locale} />
+<ConditionalMappingTable locale={locale} />
 
 **Function of the sign _ƚ_**. The sign _ƚ_ behaves as a base character in some cases, but its logic in the shaping process behaves as a combining mark. For this reason, the necessary preprocessing and postprocessing should be introduced: before the Mongolian-specific steps begin, _ƚ_ is shaped in mark class, modifying the joining type of the characters before and after _ƚ_; after the Mongolian-specific steps finish, those signs _ƚ_ that need to be represented as marks are shaped to ligature with the neighboring letters. These extra steps are not included in the condition table shown above, but are completed in the specific implementation.
 

@@ -6,7 +6,7 @@
   let { locale }: Props = $props();
 
   import { aliases, type LocaleNamespace } from "../../data/aliases";
-  import { locales, type Condition, type LocaleID } from "../../data/locales";
+  import { locales, type ConditionalMappingType, type LocaleID } from "../../data/locales";
   import { joiningPositions, type JoiningPosition } from "../../data/misc";
   import { variants, type FVS } from "../../data/variants";
 
@@ -19,7 +19,7 @@
     string,
     {
       default: Map<JoiningPosition, FVS>;
-      conditions: Map<Condition, Map<JoiningPosition, FVS>>;
+      conditions: Map<ConditionalMappingType, Map<JoiningPosition, FVS>>;
     }
   >();
 
@@ -71,7 +71,7 @@
   <thead>
     <tr>
       <th rowspan="2">Letter</th>
-      <th rowspan="2">Condition</th>
+      <th rowspan="2">Mapping type</th>
       <th colspan="4">Variants</th>
     </tr>
     <tr>

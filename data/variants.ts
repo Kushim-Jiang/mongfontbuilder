@@ -1,4 +1,4 @@
-import type { LocaleID, Condition } from "./locales";
+import type { LocaleID, ConditionalMappingType } from "./locales";
 import type { WrittenUnitID } from "./writtenUnits";
 import type { CharacterName, JoiningPosition } from "./misc";
 
@@ -11,7 +11,7 @@ type VariantData = {
 };
 type VariantLocaleData = {
   written?: Written;
-  conditions?: Condition[];
+  conditions?: ConditionalMappingType[];
   archaic?: true;
   gb?: string;
   eac?: string;

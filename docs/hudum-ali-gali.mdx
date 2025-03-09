@@ -6,7 +6,7 @@ sidebar:
 
 import WrittenUnitTable from "./lib/WrittenUnitTable.svelte";
 import LetterTable from "./lib/LetterTable.svelte";
-import ConditionTable from "./lib/ConditionTable.svelte";
+import ConditionalMappingTable from "./lib/ConditionalMappingTable.svelte";
 import Mong from "./lib/Mong.svelte";
 
 export const locale = "MNGx";
@@ -57,8 +57,8 @@ export const locale = "MNGx";
     <tr>
       <td>Shaping step</td>
       <td>Letters</td>
-      <td>Conditions</td>
-      <td>Lookups</td>
+      <td>Condition</td>
+      <td>Mapping type</td>
     </tr>
   </thead>
   <tbody>
@@ -88,9 +88,9 @@ export const locale = "MNGx";
   </tbody>
 </table>
 
-### Conditions
+### Conditional mapping
 
-<ConditionTable locale={locale} />
+<ConditionalMappingTable locale={locale} />
 
 ## References
 

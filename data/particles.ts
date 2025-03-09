@@ -1,4 +1,6 @@
-export const particles = {
+import type { LocaleID } from "./locales";
+
+export const particles: Partial<Record<LocaleID, {}[]>> = {
   MNG: [
     { particle: ["a", "ch", "a"], special: [0] },
     { particle: ["a", "ch", "a", "g", "a", "n"], special: [0] },

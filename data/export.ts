@@ -2,7 +2,7 @@
 
 import { writeFile } from "node:fs/promises";
 
-import { locales, type Condition, type LocaleID } from "./locales";
+import { locales, type ConditionalMappingType, type LocaleID } from "./locales";
 import { aliases, type LocaleNamespace } from "./aliases";
 import { writtenUnits } from "./writtenUnits";
 import { variants } from "./variants";
@@ -57,7 +57,7 @@ for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
             );
           }
           for (const condition of variantLocaleData.conditions ?? []) {
-            if (!(conditions as Condition[]).includes(condition)) {
+            if (!(conditions as ConditionalMappingType[]).includes(condition)) {
               throw Error("condition not defined for locale", {
                 cause: { locale, conditions, condition },
               });
