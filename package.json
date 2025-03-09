@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "astro": "astro",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "format": "prettier --write . !lib/mongfontbuilder/data/*.json !tests/data/*.json"
   },
   "engines": {
     "node": "^22.0.0"
