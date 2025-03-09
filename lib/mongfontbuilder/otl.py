@@ -257,10 +257,8 @@ class MongFeaComposer(FeaComposer):
         cd = self.conditions
 
         with c.Lookup("III.controls.preprocessing", feature="rclt"):
-            c.contextualSub(c.input("mvs", cd["_.reset"]))
-            c.contextualSub(
-                c.input(c.glyphClass(["zwnj", "zwj", "nirugu", cl["fvs"]]), cd["_.ignored"])
-            )
+            c.sub(c.input("mvs", cd["_.reset"]))
+            c.sub(c.input(c.glyphClass(["zwnj", "zwj", "nirugu", cl["fvs"]]), cd["_.ignored"]))
 
         for locale in ["TOD", "TODx"]:
             if locale in self.locales:
@@ -288,11 +286,11 @@ class MongFeaComposer(FeaComposer):
                             cl[f"{locale}:vowel.medi"],
                         ]
                     )
-                    c.contextualSub(
+                    c.sub(
                         c.input(variants, lvsPreprocessing),
                         c.input(cl[f"{locale}:lvs.fina"], cd["_.ignored"]),
                     )
-                    c.contextualSub(c.input(cl[f"{locale}:lvs"], cd["_.ignored"]))
+                    c.sub(c.input(cl[f"{locale}:lvs"], cd["_.ignored"]))
 
     def getDefault(self, alias: str, position: JoiningPosition | str, marked: bool = False) -> str:
         charName = getCharNameByAlias("MNG", alias)
@@ -329,9 +327,7 @@ class MongFeaComposer(FeaComposer):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
                 for position in ["medi", "fina"]:
                     default = self.getDefault(alias, position)
-                    self.contextualSub(
-                        "masculine", c.input(default), by=" ".join([default, "masculine"])
-                    )  # FIXME: treat two glyphs as glyph name
+                    self.sub("masculine", c.input(default), by=[default, "masculine"])
 
         with c.Lookup("III.ig.preprocessing.C", feature="rclt"):
             for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]:
@@ -353,9 +349,7 @@ class MongFeaComposer(FeaComposer):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
                 for position in ["medi", "fina"]:
                     default = self.getDefault(alias, position)
-                    self.contextualSub(
-                        "feminine", c.input(default), by=" ".join([default, "feminine"])
-                    )  # FIXME: treat two glyphs as glyph name
+                    self.sub("feminine", c.input(default), by=[default, "feminine"])
 
         with c.Lookup("III.ig.preprocessing.F", feature="rclt"):
             for alias in ct["vowelFeminine"] + ct["vowelNeuter"] + ct["consonant"]:
@@ -394,10 +388,10 @@ class MongFeaComposer(FeaComposer):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
                 for position in ["init", "medi"]:
                     unmarked = self.getDefault(alias, position)
-                    self.contextualSub(c.input(unmarked, _marked), cl["MNG:vowelMasculine"])
+                    self.sub(c.input(unmarked, _marked), cl["MNG:vowelMasculine"])
             for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]:
                 unmarked = self.getDefault(alias, "fina")
-                self.contextualSub(c.input(unmarked, _marked), cl["mvs"], cl["MNG:a.isol"])
+                self.sub(c.input(unmarked, _marked), cl["mvs"], cl["MNG:a.isol"])
 
         with c.Lookup(
             "III.ig.preprocessing.H", feature="rclt", flags={"UseMarkFilteringSet": feminine}
@@ -421,7 +415,7 @@ class MongFeaComposer(FeaComposer):
             for alias in ["g", "h"]:
                 for position in ["init", "medi"]:
                     marked = self.getDefault(alias, position, True)
-                    self.contextualSub(c.input(marked, _unmarked), "masculine")
+                    self.sub(c.input(marked, _unmarked), "masculine")
 
         with c.Lookup("III.ig.preprocessing.J", feature="rclt"):
             markedVariants = c.namedGlyphClass(
@@ -433,7 +427,7 @@ class MongFeaComposer(FeaComposer):
                     for position in ["init", "medi", "fina"]
                 ],
             )
-            self.contextualSub(c.input(markedVariants, _unmarked))
+            self.sub(c.input(markedVariants, _unmarked))
 
         with c.Lookup("III.ig.preprocessing.K", feature="rclt"):
             for alias in ["h", "g"]:
@@ -457,7 +451,7 @@ class MongFeaComposer(FeaComposer):
 
         if "MNG" in self.locales:
             with c.Lookup("III.a_e.chachlag.A", feature="rclt", flags={"IgnoreMarks": True}):
-                c.contextualSub(
+                c.sub(
                     c.input(cl["mvs"], cd["_.narrow"]),
                     c.input(c.glyphClass([cl["MNG:a.isol"], cl["MNG:e.isol"]]), cd["MNG:chachlag"]),
                 )
@@ -465,7 +459,7 @@ class MongFeaComposer(FeaComposer):
             with c.Lookup(
                 "III.a_e.chachlag.B", feature="rclt", flags={"UseMarkFilteringSet": cl["fvs"]}
             ):
-                c.contextualSub(
+                c.sub(
                     c.input(cl["mvs"], cd["_.reset"]),
                     c.glyphClass([cl["MNG:a.isol"], cl["MNG:e.isol"]]),
                     cl["fvs"],
@@ -507,7 +501,7 @@ class MongFeaComposer(FeaComposer):
                 flags={"IgnoreMarks": True},
             ):
                 if "MNG" in self.locales:
-                    c.contextualSub(
+                    c.sub(
                         cl["MNG:consonant.init"],
                         c.input(
                             c.glyphClass([cl["MNG:o"], cl["MNG:u"], cl["MNG:oe"], cl["MNG:ue"]]),
@@ -515,18 +509,18 @@ class MongFeaComposer(FeaComposer):
                         ),
                     )
                 if "MNGx" in self.locales:
-                    c.contextualSub(
+                    c.sub(
                         cl["MNGx:consonant.init"],
                         c.input(c.glyphClass([cl["MNGx:o"], cl["MNGx:ue"]]), cd["MNGx:marked"]),
                     )
-                    c.contextualSub(
+                    c.sub(
                         cl["MNGx:consonant.init"],
                         cl["MNGx:hX"],
                         c.input(cl["MNGx:ue"], cd["MNGx:marked"]),
                     )
                 for locale in ["SIB", "MCH", "MCHx"]:
                     if locale in self.locales:
-                        c.contextualSub(
+                        c.sub(
                             cl[f"{locale}:consonant.init"],
                             c.input(
                                 c.glyphClass([cl[f"{locale}:o"], cl[f"{locale}:u"]]),
@@ -545,15 +539,15 @@ class MongFeaComposer(FeaComposer):
                     for letter in ["o", "u", "oe", "ue"]
                     for position in ["medi", "fina"]
                 )
-                c.contextualSub(c.input(variants, cd["MNG:reset"]), cl["fvs"])
-                c.contextualSub(cl["fvs"], c.input(variants, cd["MNG:reset"]))
+                c.sub(c.input(variants, cd["MNG:reset"]), cl["fvs"])
+                c.sub(cl["fvs"], c.input(variants, cd["MNG:reset"]))
 
             with c.Lookup(
                 "III.o_u_oe_ue.marked.GB.B",
                 feature="rclt",
                 flags={"UseMarkFilteringSet": cl["fvs"]},
             ):
-                c.contextualSub(
+                c.sub(
                     c.glyphClass([cl["MNG:g.init"], cl["MNG:h.init"]]),
                     c.glyphClass([cl["fvs2"], cl["fvs4"]]),
                     c.input(c.glyphClass([cl["MNG:oe.fina"], cl["MNG:ue.fina"]]), cd["MNG:marked"]),
@@ -570,7 +564,7 @@ class MongFeaComposer(FeaComposer):
             with c.Lookup(
                 "III.o_u_oe_ue.initial_marked.GB.A", feature="rclt", flags={"IgnoreMarks": True}
             ):
-                c.contextualSub(
+                c.sub(
                     c.glyphClass([cl["MNG:consonant.init"], markedVariants]),
                     c.input(cl["MNG:consonant.medi"], cd["_.marked.MNG"]),
                 )
@@ -579,26 +573,22 @@ class MongFeaComposer(FeaComposer):
             with c.Lookup(
                 "III.o_u_oe_ue.initial_marked.GB.B", feature="rclt", flags={"IgnoreMarks": True}
             ):
-                c.contextualSub(
+                c.sub(
                     c.glyphClass([cl["MNG:consonant.init"], markedVariants]),
                     c.input(variants, cd["MNG:marked"]),
                 )
 
             with c.Lookup("III.o_u_oe_ue.initial_marked.GB.C", feature="rclt"):
-                c.contextualSub(c.input(markedVariants, cd["_.unmarked.MNG"]))
+                c.sub(c.input(markedVariants, cd["_.unmarked.MNG"]))
 
             with c.Lookup("III.d.marked", feature="rclt", flags={"IgnoreMarks": True}):
-                c.contextualSub(c.input(cl["MNG:d.init"], cd["MNG:marked"]), cl["MNG:vowel.fina"])
+                c.sub(c.input(cl["MNG:d.init"], cd["MNG:marked"]), cl["MNG:vowel.fina"])
 
             with c.Lookup(
                 "III.d.marked.GB", feature="rclt", flags={"UseMarkFilteringSet": cl["fvs"]}
             ):
-                c.contextualSub(
-                    c.input(cl["MNG:d.init"], cd["MNG:reset"]), cl["MNG:vowel.fina"], cl["fvs"]
-                )
-                c.contextualSub(
-                    c.input(cl["MNG:d.init"], cd["MNG:reset"]), cl["fvs"], cl["MNG:vowel.fina"]
-                )
+                c.sub(c.input(cl["MNG:d.init"], cd["MNG:reset"]), cl["MNG:vowel.fina"], cl["fvs"])
+                c.sub(c.input(cl["MNG:d.init"], cd["MNG:reset"]), cl["fvs"], cl["MNG:vowel.fina"])
 
     def iii2b(self):
         """
@@ -620,15 +610,15 @@ class MongFeaComposer(FeaComposer):
                 "III.z_f_i.marked.SIB_MCH_MCHx", feature="rclt", flags={"IgnoreMarks": True}
             ):
                 if "SIB" in self.locales:
-                    c.contextualSub(c.input(cl["SIB:z"], cd["SIB:marked"]), cl["SIB:i"])
+                    c.sub(c.input(cl["SIB:z"], cd["SIB:marked"]), cl["SIB:i"])
                 if "MCH" in self.locales:
-                    c.contextualSub(cl["MCH:z"], c.input(cl["MCH:i"], cd["MCH:marked"]))
-                    c.contextualSub(
+                    c.sub(cl["MCH:z"], c.input(cl["MCH:i"], cd["MCH:marked"]))
+                    c.sub(
                         c.input(cl["MCH:f"], cd["MCH:marked"]),
                         c.glyphClass([cl["MCH:i"], cl["MCH:o"], cl["MCH:u"], cl["MCH:ue"]]),
                     )
                 if "MCHx" in self.locales:
-                    c.contextualSub(
+                    c.sub(
                         c.glyphClass([cl["MCHx:cX"], cl["MCHx:z"], cl["MCHx:jhX"]]),
                         c.input(cl["MCHx:i"], cd["MCHx:marked"]),
                     )
@@ -655,18 +645,18 @@ class MongFeaComposer(FeaComposer):
                 )
                 hgVariants = c.glyphClass([cl["MNG:h.fina"], cl["MNG:g.fina"]])
                 if "MNG" in self.locales:
-                    c.contextualSub(
+                    c.sub(
                         c.input(njwVariants, cd["MNG:chachlag_onset"]),
                         cl["mvs.valid"],
                         c.glyphClass(["u1820.Aa.isol", "u1821.Aa.isol"]),
                     )
-                    c.contextualSub(
+                    c.sub(
                         c.input(hgVariants, cd["MNG:chachlag_onset"]),
                         cl["mvs.valid"],
                         "u1820.Aa.isol",
                     )
                 if "MNGx" in self.locales:
-                    c.contextualSub(
+                    c.sub(
                         c.input(cl["MNGx:a.fina"], cd["MNG:chachlag_onset"]),
                         cl["mvs.valid"],
                         "u1820.Aa.isol",
@@ -676,7 +666,7 @@ class MongFeaComposer(FeaComposer):
             with c.Lookup(
                 "III.g.chachlag_onset.MNG.GB", feature="rclt", flags={"IgnoreMarks": True}
             ):
-                c.contextualSub(
+                c.sub(
                     c.input(cl["MNG:g.fina"], cd["MNG:chachlag_onset_gb"]),
                     cl["mvs.valid"],
                     "u1821.Aa.isol",
@@ -710,13 +700,11 @@ class MongFeaComposer(FeaComposer):
                                 for letter in ["tX", "t", "d", "dhX", "g", "k", "ghX", "h"]
                             )
                         euLetters = c.glyphClass([cl[f"{locale}:e"], cl[f"{locale}:u"]])
-                        c.contextualSub(
-                            consonants, c.input("u1860.Oh.fina", cd[f"{locale}:feminine_marked"])
-                        )
-                        c.contextualSub(consonants, c.input(euLetters, cd[f"{locale}:feminine"]))
+                        c.sub(consonants, c.input("u1860.Oh.fina", cd[f"{locale}:feminine_marked"]))
+                        c.sub(consonants, c.input(euLetters, cd[f"{locale}:feminine"]))
 
                         if locale == "MCHx":
-                            c.contextualSub(
+                            c.sub(
                                 c.glyphClass([cl["MCHx:ngX"], cl["MCHx:sbm"]]),
                                 c.input(euLetters, cd["MCHx:feminine"]),
                             )
@@ -740,10 +728,10 @@ class MongFeaComposer(FeaComposer):
             ):
                 for locale in ["MNG", "TOD", "SIB", "MCH", "MCHx"]:
                     if locale in self.locales:
-                        c.contextualSub(
+                        c.sub(
                             c.input(cl[f"{locale}:n"], cd[f"{locale}:onset"]), cl[f"{locale}:vowel"]
                         )
-                        c.contextualSub(
+                        c.sub(
                             c.input(cl[f"{locale}:n"], cd[f"{locale}:devsger"]),
                             cl[f"{locale}:consonant"],
                         )
@@ -757,8 +745,8 @@ class MongFeaComposer(FeaComposer):
                 if "MNG" in self.locales:
                     # TODO: ignore sub [@t-hud.init @d-hud.init]' @hud.vowel.fina;
                     tdLetters = c.glyphClass(cl[f"MNG:{letter}"] for letter in ["t", "d"])
-                    c.contextualSub(c.input(tdLetters, cd["MNG:onset"]), cl["MNG:vowel"])
-                    c.contextualSub(c.input(tdLetters, cd["MNG:devsger"]), cl["MNG:consonant"])
+                    c.sub(c.input(tdLetters, cd["MNG:onset"]), cl["MNG:vowel"])
+                    c.sub(c.input(tdLetters, cd["MNG:devsger"]), cl["MNG:consonant"])
                 for locale in ["SIB", "MCH", "MCHx"]:
                     if locale in self.locales:
                         tdLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["t", "d"])
@@ -766,16 +754,14 @@ class MongFeaComposer(FeaComposer):
                             tdLetters = c.glyphClass(cl[f"MCHx:{i}"] for i in ["tX", "dhX"])
                         aioLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["a", "i", "o"])
                         euueLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["e", "u", "ue"])
-                        c.contextualSub(
-                            c.input(tdLetters, cd[f"{locale}:masculine_onset"]), aioLetters
-                        )
-                        c.contextualSub(c.input(tdLetters, cd[f"{locale}:feminine"]), euueLetters)
+                        c.sub(c.input(tdLetters, cd[f"{locale}:masculine_onset"]), aioLetters)
+                        c.sub(c.input(tdLetters, cd[f"{locale}:feminine"]), euueLetters)
                         if locale != "MCHx":
-                            c.contextualSub(
+                            c.sub(
                                 c.input(cl[f"{locale}:t"], cd[f"{locale}:devsger"]),
                                 cl[f"{locale}:consonant"],
                             )
-                            c.contextualSub(
+                            c.sub(
                                 cl[f"{locale}:vowel"],
                                 c.input(cl[f"{locale}:t.fina"], cd[f"{locale}:devsger"]),
                             )
@@ -805,11 +791,11 @@ class MongFeaComposer(FeaComposer):
                         kghLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in kghAlias)
 
                         # TODO: if locale == "MNG", ignore sub [@h-hud @g-hud]' @msc [@a-hud.isol @e-hud.isol]
-                        c.contextualSub(
+                        c.sub(
                             c.input(kghLetters, cd[f"{locale}:masculine_onset"]),
                             cl[f"{locale}:vowelMasculine"],
                         )
-                        c.contextualSub(
+                        c.sub(
                             c.input(kghLetters, cd[f"{locale}:feminine"]),
                             c.glyphClass(
                                 [cl[f"{locale}:vowelFeminine"], cl[f"{locale}:vowelNeuter"]]
@@ -817,34 +803,26 @@ class MongFeaComposer(FeaComposer):
                         )
                 if "MNG" in self.locales:
                     ghLetters = c.glyphClass([cl["MNG:g"], cl["MNG:h"]])
-                    c.contextualSub(
-                        cl["MNG:vowelMasculine"], c.input(ghLetters, cd["MNG:masculine_devsger"])
-                    )
-                    c.contextualSub(cl["MNG:vowelFeminine"], c.input(ghLetters, cd["MNG:feminine"]))
+                    c.sub(cl["MNG:vowelMasculine"], c.input(ghLetters, cd["MNG:masculine_devsger"]))
+                    c.sub(cl["MNG:vowelFeminine"], c.input(ghLetters, cd["MNG:feminine"]))
                 if "TOD" in self.locales:
-                    c.contextualSub(
-                        cl["TOD:vowel"], c.input(cl["TOD:g"], cd["TOD:masculine_devsger"])
-                    )
+                    c.sub(cl["TOD:vowel"], c.input(cl["TOD:g"], cd["TOD:masculine_devsger"]))
                 if "SIB" in self.locales:
-                    c.contextualSub(c.input(cl["SIB:k"], cd["SIB:devsger"]), cl["SIB:consonant"])
-                    c.contextualSub(cl["SIB:vowel"], c.input(cl["SIB:k.fina"], cd["SIB:devsger"]))
+                    c.sub(c.input(cl["SIB:k"], cd["SIB:devsger"]), cl["SIB:consonant"])
+                    c.sub(cl["SIB:vowel"], c.input(cl["SIB:k.fina"], cd["SIB:devsger"]))
                 if "MCH" in self.locales:
-                    c.contextualSub(
+                    c.sub(
                         cl["MCH:t"], cl["MCH:e"], c.input(cl["MCH:k"], cd["MCH:masculine_devsger"])
                     )
                     kghLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["k", "g", "h"])
-                    c.contextualSub(
-                        kghLetters, cl["MCH:u"], c.input(cl["MCH:k"], cd["MCH:feminine"])
-                    )
+                    c.sub(kghLetters, cl["MCH:u"], c.input(cl["MCH:k"], cd["MCH:feminine"]))
                     kghLetters = c.glyphClass(cl[f"{locale}:{i}"] for i in ["kh", "gh", "hh"])
-                    c.contextualSub(
-                        kghLetters, cl["MCH:a"], c.input(cl["MCH:k"], cd["MCH:feminine"])
-                    )
-                    c.contextualSub(
+                    c.sub(kghLetters, cl["MCH:a"], c.input(cl["MCH:k"], cd["MCH:feminine"]))
+                    c.sub(
                         c.glyphClass(cl[f"MCH:{i}"] for i in ["e", "ue"]),
                         c.input(cl["MCH:k"], cd["MCH:feminine"]),
                     )
-                    c.contextualSub(
+                    c.sub(
                         c.glyphClass(cl[f"MCH:{i}"] for i in ["a", "i", "o", "u"]),
                         c.input(cl["MCH:k"], cd["MCH:masculine_devsger"]),
                     )
@@ -862,19 +840,19 @@ class MongFeaComposer(FeaComposer):
                 # TODO: ignore sub [@h-hud @g-hud]' masculine @hud.vowel;
                 # TODO: ignore sub [@h-hud @g-hud]' @msc [@a-hud.isol @e-hud.isol];
                 # TODO: ignore sub [@h-hud @g-hud]' masculine @msc [@a-hud.isol @e-hud.isol];
-                c.contextualSub(
+                c.sub(
                     cl["MNG:i"],
                     c.input(c.glyphClass([cl["MNG:g"], cl["MNG:h"]]), cd["MNG:masculine_devsger"]),
                     masculine,
                 )
-                c.contextualSub(cl["MNG:i"], c.input(cl["MNG:g"], cd["MNG:feminine"]))
+                c.sub(cl["MNG:i"], c.input(cl["MNG:g"], cd["MNG:feminine"]))
 
             with c.Lookup(
                 "III.g_h.onset_and_devsger_and_gender.B.MNG",
                 feature="rclt",
                 flags={"IgnoreMarks": True},
             ):
-                c.contextualSub(
+                c.sub(
                     c.input(
                         c.glyphClass(cl[f"MNG:{i}.init"] for i in ["h", "g"]), cd["MNG:feminine"]
                     ),
@@ -915,21 +893,21 @@ class MongFeaComposer(FeaComposer):
 
         if "MNG" in self.locales:
             with c.Lookup("III.t_sh_g.MNG.GB", feature="rclt", flags={"IgnoreMarks": True}):
-                c.contextualSub(
+                c.sub(
                     c.input(cl["MNG:t"], cd["MNG:devsger"]),
                     c.glyphClass([cl["MNG:ee"], cl["MNG:consonant"]]),
                 )
-                c.contextualSub(c.input(cl["MNG:sh.init"], cd["MNG:dotless"]), cl["MNG:i.medi"])
-                c.contextualSub(
+                c.sub(c.input(cl["MNG:sh.init"], cd["MNG:dotless"]), cl["MNG:i.medi"])
+                c.sub(
                     c.input(cl["MNG:sh.medi"], cd["MNG:dotless"]),
                     c.glyphClass([cl["MNG:i.medi"], cl["MNG:i.fina"]]),
                 )
-                c.contextualSub(
+                c.sub(
                     c.glyphClass([cl["MNG:s"], cl["MNG:d"]]),
                     c.input(cl["MNG:g.medi"], cd["MNG:dotless"]),
                     cl["MNG:vowelMasculine"],
                 )
-                c.contextualSub(
+                c.sub(
                     c.glyphClass([cl["MNG:s"], cl["MNG:d"]]),
                     c.input(cl["MNG:g.fina"], cd["MNG:dotless"]),
                     cl["mvs"],
@@ -957,7 +935,7 @@ class MongFeaComposer(FeaComposer):
                 c.sub(cl["TOD:n.init"], by="u1828.N.init.mvs")
 
             with c.Lookup("III.particle.TOD", feature="rclt", flags={"IgnoreMarks": True}):
-                c.contextualSub(
+                c.sub(
                     c.input(cl["mvs"], cd["_.wide"]),
                     c.input(cl["TOD:n.init"], _particle),
                     cl["TOD:i.fina"],
@@ -965,7 +943,7 @@ class MongFeaComposer(FeaComposer):
 
         if "MNG" in self.locales:
             with c.Lookup("III.mvs.postprocessing.GB", feature="rclt"):
-                c.contextualSub(
+                c.sub(
                     c.input(cl["mvs.invalid"], cd["_.wide"]),
                     c.glyphClass(
                         [cl["MNG:vowel"], cl["MNG:consonant"], "nirugu", "nirugu.ignored"]
@@ -1001,39 +979,35 @@ class MongFeaComposer(FeaComposer):
                             if not variant.written[-1] == "I"
                         ],
                     )
-                    c.contextualSub(vowelVariants, c.input(cl["MNG:i"], cd["MNG:vowel_devsger"]))
+                    c.sub(vowelVariants, c.input(cl["MNG:i"], cd["MNG:vowel_devsger"]))
                 if "TOD" in self.locales:
-                    c.contextualSub(cl["TOD:vowel"], c.input(cl["TOD:i"], cd["TOD:vowel_devsger"]))
-                    c.contextualSub(cl["TOD:u"], c.input(cl["TOD:u"], cd["TOD:vowel_devsger"]))
+                    c.sub(cl["TOD:vowel"], c.input(cl["TOD:i"], cd["TOD:vowel_devsger"]))
+                    c.sub(cl["TOD:u"], c.input(cl["TOD:u"], cd["TOD:vowel_devsger"]))
                 if "SIB" in self.locales:
-                    c.contextualSub(cl["SIB:vowel"], c.input(cl["SIB:i"], cd["SIB:vowel_devsger"]))
-                    c.contextualSub(cl["SIB:u"], c.input(cl["SIB:u"], cd["SIB:vowel_devsger"]))
+                    c.sub(cl["SIB:vowel"], c.input(cl["SIB:i"], cd["SIB:vowel_devsger"]))
+                    c.sub(cl["SIB:u"], c.input(cl["SIB:u"], cd["SIB:vowel_devsger"]))
                 if "MCH" in self.locales:
-                    c.contextualSub(cl["MCH:vowel"], c.input(cl["MCH:i"], cd["MCH:vowel_devsger"]))
+                    c.sub(cl["MCH:vowel"], c.input(cl["MCH:i"], cd["MCH:vowel_devsger"]))
                 if "MCHx" in self.locales:
-                    c.contextualSub(
-                        cl["MCHx:vowel"], c.input(cl["MCHx:u"], cd["MCHx:vowel_devsger"])
-                    )
+                    c.sub(cl["MCHx:vowel"], c.input(cl["MCHx:u"], cd["MCHx:vowel_devsger"]))
 
         if "MNG" in self.locales:
             with c.Lookup(
                 "III.i.devsger.MNG.GB", feature="rclt", flags={"UseMarkFilteringSet": cl["fvs"]}
             ):
-                c.contextualSub(
+                c.sub(
                     c.glyphClass([cl["MNG:oe.medi"], cl["MNG:ue.medi"]]),
                     c.glyphClass([cl["fvs1"], cl["fvs2"]]),
                     c.input(c.glyphClass([cl["MNG:i.medi"], cl["MNG:i.fina"]]), cd["MNG:reset"]),
                 )
-                c.contextualSub(
+                c.sub(
                     c.glyphClass([cl["MNG:oe.medi"], cl["MNG:ue.medi"]]),
                     cl["fvs3"],
                     c.input(cl["MNG:i"], cd["MNG:vowel_devsger"]),
                 )
-                c.contextualSub(
+                c.sub(
                     cl["MNG:ue.init"],
                     cl["fvs2"],
                     c.input(c.glyphClass([cl["MNG:i.medi"], cl["MNG:i.fina"]]), cd["MNG:reset"]),
                 )
-                c.contextualSub(
-                    cl["MNG:ue.medi"], cl["fvs1"], c.input(cl["MNG:i"], cd["MNG:vowel_devsger"])
-                )
+                c.sub(cl["MNG:ue.medi"], cl["fvs1"], c.input(cl["MNG:i"], cd["MNG:vowel_devsger"]))

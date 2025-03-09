@@ -1,25 +1,24 @@
-[tool.poetry]
+[project]
 name = "mongfontbuilder"
-version = "0.3.1"
-description = ""
+version = "0.3.2"
 authors = [
-    "Kushim Jiang <kushim_jiang@outlook.com>",
-    "Liang Hai <lianghai@gmail.com>",
+    { name = "Kushim Jiang", email = "kushim_jiang@outlook.com" },
+    { name = "Liang Hai", email = "lianghai@gmail.com" },
 ]
+requires-python = ">= 3.10.0, < 4.0.0"
+dependencies = [
+    "cattrs >= 24.1.2, < 25.0.0",
+    "fontmake >= 3.7.1, < 4.0.0",
+    "PyYAML >= 6.0.1, < 7.0.0",
+    "tptq.feacomposer >= 1.5.0, < 2.0.0",
+    "unicodedata2 >= 16.0.0",
+]
+
+[tool.poetry]
+requires-poetry = ">= 2.0.0, < 3.0.0"
 packages = [{ include = "mongfontbuilder", from = "lib" }]
-
-[tool.poetry.dependencies]
-python = "^3.10"
-fontmake = "^3.7.1"
-PyYaml = "^6.0.1"
-unicodedata2 = "^15.1.0"
-"tptq.feacomposer" = "^1.4.0"
-cattrs = "^24.1.2"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
-uharfbuzz = "^0.42.0"
+group.dev.dependencies = { pytest = ">= 8.3.3, < 9.0.0", uharfbuzz = ">= 0.42.0, < 1.0.0" }
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core >= 2.0.0, < 3.0.0"]
 build-backend = "poetry.core.masonry.api"
