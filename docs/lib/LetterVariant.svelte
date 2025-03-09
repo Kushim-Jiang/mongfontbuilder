@@ -31,13 +31,13 @@
 
 <style>
   @font-face {
-    font-family: "Noto Sans Mongolian";
-    src: url("/web/src/DraftNew-Regular.otf");
+    font-family: "Noto Sans Mongolian Customized";
+    src: url("/DraftNew-Regular.otf");
     font-weight: normal;
     font-style: normal;
   }
 
   span {
-    font-family: "Noto Sans Mongolian";
+    font-family: "Noto Sans Mongolian Customized";
   }
 </style>
