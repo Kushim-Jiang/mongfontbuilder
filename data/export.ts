@@ -6,6 +6,7 @@ import { locales, type ConditionalMappingType, type LocaleID } from "./locales";
 import { aliases, type LocaleNamespace } from "./aliases";
 import { writtenUnits } from "./writtenUnits";
 import { variants } from "./variants";
+import { particles } from "./particles";
 
 const localeToCategorizedAliases = new Map(
   Object.entries(locales).map(([k, { categories }]) => [
@@ -74,6 +75,7 @@ for (const [name, data] of Object.entries({
   aliases,
   writtenUnits,
   variants,
+  particles,
 })) {
   await writeFile(
     `lib/mongfontbuilder/data/${name}.json`,
