@@ -4,7 +4,7 @@ from typing import cast
 
 from fontTools import unicodedata
 from fontTools.feaLib import ast
-from tptq.feacomposer import FeaComposer
+from tptq.feacomposer import AnyGlyph, ContextualInput, FeaComposer, _NormalizedAnyGlyph
 
 from . import GlyphDescriptor, data, uNameFromCodePoint
 from .data.misc import JoiningPosition, fina, init, isol, joiningPositions, medi
@@ -17,6 +17,30 @@ class MongFeaComposer(FeaComposer):
     locales: list[LocaleID]
     classes: dict[str, ast.GlyphClassDefinition]
     conditions: dict[str, ast.LookupBlock]
+
+    def rsub(
+        self, *glyphs: AnyGlyph | ContextualInput, by: AnyGlyph
+    ) -> ast.ReverseChainSingleSubstStatement:
+        prefix = list[_NormalizedAnyGlyph]()
+        input = list[_NormalizedAnyGlyph]()
+        suffix = list[_NormalizedAnyGlyph]()
+        for item in glyphs:
+            if isinstance(item, ContextualInput):
+                assert not suffix, glyphs
+                input.append(item.glyph)
+            elif input:
+                suffix.append(self._normalized(item))
+            else:
+                prefix.append(self._normalized(item))
+        if not input:
+            input = prefix
+            prefix = []
+        output = self._normalized(by)
+        statement = ast.ReverseChainSingleSubstStatement(
+            glyphs=input, replacements=[output], old_prefix=prefix, old_suffix=suffix
+        )
+        self.current.append(statement)
+        return statement
 
     def variants(
         self,
@@ -408,16 +432,7 @@ class MongFeaComposer(FeaComposer):
                 for position in [init, medi]:
                     unmarked = self.getDefault(alias, position)
                     marked = self.getDefault(alias, position, True)
-
-                    # FIXME: check if this is correct
-                    self.current.append(
-                        ast.ReverseChainSingleSubstStatement(
-                            old_prefix=[],
-                            old_suffix=["@" + markedVariants.name],
-                            glyphs=[unmarked],
-                            replacements=[marked],
-                        )
-                    )
+                    c.rsub(c.input(unmarked), markedVariants, by=marked)
 
         with c.Lookup("III.ig.preprocessing.I", feature="rclt"):
             for alias in ["g", "h"]:
@@ -632,9 +647,7 @@ class MongFeaComposer(FeaComposer):
                 feature="rclt",
                 flags={"IgnoreMarks": True},
             ):
-                njwVariants = c.glyphClass(
-                    [cl["MNG:n.fina"], cl["MNG:j.isol"], cl["MNG:j.fina"], cl["MNG:w.fina"]]
-                )
+                njwVariants = c.variants("MNG", ["n.fina", "j.isol", "j.fina", "w.fina"])
                 hgVariants = c.variants("MNG", ["h", "g"], "fina")
                 if "MNG" in self.locales:
                     c.sub(
