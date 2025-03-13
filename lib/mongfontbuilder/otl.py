@@ -304,9 +304,8 @@ class MongFeaComposer(FeaComposer):
     def getDefault(self, alias: str, position: JoiningPosition | str, marked: bool = False) -> str:
         charName = getCharNameByAlias("MNG", alias)
         position = cast(JoiningPosition, position)
-        return str(
-            GlyphDescriptor.fromData(charName, position, suffixes=(["marked"] if marked else []))
-        )
+        suffix = ["marked"] if marked else []
+        return str(GlyphDescriptor.fromData(charName, position, suffixes=suffix))
 
     def iii0b(self):
         """
@@ -636,7 +635,7 @@ class MongFeaComposer(FeaComposer):
                 njwVariants = c.glyphClass(
                     [cl["MNG:n.fina"], cl["MNG:j.isol"], cl["MNG:j.fina"], cl["MNG:w.fina"]]
                 )
-                hgVariants = c.glyphClass([cl["MNG:h.fina"], cl["MNG:g.fina"]])
+                hgVariants = c.variants("MNG", ["h", "g"], "fina")
                 if "MNG" in self.locales:
                     c.sub(
                         c.input(njwVariants, cd["MNG:chachlag_onset"]),
@@ -983,7 +982,7 @@ class MongFeaComposer(FeaComposer):
                 c.sub(
                     c.variants("MNG", ["oe", "ue"], medi),
                     c.glyphClass([cl["fvs1"], cl["fvs2"]]),
-                    c.input(c.glyphClass([cl["MNG:i.medi"], cl["MNG:i.fina"]]), cd["MNG:reset"]),
+                    c.input(c.variants("MNG", "i", [medi, fina]), cd["MNG:reset"]),
                 )
                 c.sub(
                     c.variants("MNG", ["oe", "ue"], medi),
