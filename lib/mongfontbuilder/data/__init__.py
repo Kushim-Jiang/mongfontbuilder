@@ -39,6 +39,9 @@ with (dir / "variants.json").open(encoding="utf-8") as f:
         dict[CharacterName, dict[JoiningPosition, dict[FVS, VariantData]]],
     )
 
+with (dir / "particles.json").open(encoding="utf-8") as f:
+    particles = structure(json.load(f), dict[LocaleID, dict[str, list[FVS]]])
+
 
 def normalizedWritten(
     written: list[str] | VariantReference,

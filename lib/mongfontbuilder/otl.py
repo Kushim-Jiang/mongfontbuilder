@@ -924,8 +924,46 @@ class MongFeaComposer(FeaComposer):
         cl = self.classes
         cd = self.conditions
 
-        # TODO: auto particle for MNG, SIB, MCH
-        ...
+        for locale in ["MNG", "SIB", "MCH"]:
+            if locale in self.locales:
+                with c.Lookup(
+                    f"III.particle.{locale}",
+                    feature="rclt",
+                    flags={"UseMarkFilteringSet": cl["fvs"]},
+                ):
+                    for aliasString, indices in data.particles[locale].items():
+                        aliasList = aliasString.split()
+                        hasMvs = aliasList[0] == "mvs"
+                        if hasMvs:
+                            aliasList = aliasList[1:]
+                            indices = [index - 1 for index in indices]
+                        classList = []
+
+                        position = lambda i, l: (
+                            "isol"
+                            if l == 1
+                            else ("init" if i == 0 else "fina" if i == l - 1 else "medi")
+                        )
+                        classList = [
+                            cl[f"{locale}:{alias}.{position(index, len(aliasList))}"]
+                            for index, alias in enumerate(aliasList)
+                        ]
+
+                        subArgs: list = [c.input(cl["mvs"], cd["_.wide"])] if hasMvs else []
+                        ignoreSubArgs: list = [c.input(cl["mvs"])] if hasMvs else []
+                        minIndex = 0 if hasMvs else min(indices)
+                        for i, glyphClass in enumerate(classList):
+                            if i in indices:
+                                subArgs.append(c.input(glyphClass, cd[f"{locale}:particle"]))
+                                ignoreSubArgs.append(c.input(glyphClass))
+                            elif minIndex <= i <= max(indices):
+                                subArgs.append(c.input(glyphClass))
+                                ignoreSubArgs.append(c.input(glyphClass))
+                            else:
+                                subArgs.append(glyphClass)
+                                ignoreSubArgs.append(glyphClass)
+                        c.sub(*subArgs)
+                        c.sub(*ignoreSubArgs, cl["fvs"], ignore=True)
 
         if "TOD" in self.locales:
             with c.Lookup("TOD:particle") as _particle:
