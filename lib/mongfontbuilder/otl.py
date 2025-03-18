@@ -1,6 +1,6 @@
 import re
 from dataclasses import dataclass
-from typing import cast
+from typing import Iterable
 
 from fontTools import unicodedata
 from fontTools.feaLib import ast
@@ -45,8 +45,8 @@ class MongFeaComposer(FeaComposer):
     def variants(
         self,
         locale: LocaleID,
-        aliases: str | list[str],
-        positions: str | list[str] | None = None,
+        aliases: str | Iterable[str],
+        positions: str | Iterable[str] | None = None,
     ):
         aliases_list = [aliases] if isinstance(aliases, str) else aliases
         positions_list = []
@@ -318,16 +318,15 @@ class MongFeaComposer(FeaComposer):
                 with c.Lookup(
                     f"III.{locale}.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}
                 ):
-                    variants = c.variants(locale, ["consonant", "vowel"], [init, medi])
+                    variants = c.variants(locale, ["consonant", "vowel"], (init, medi))
                     c.sub(
                         c.input(variants, lvsPreprocessing),
                         c.input(cl[f"{locale}:lvs.fina"], cd["_.ignored"]),
                     )
                     c.sub(c.input(cl[f"{locale}:lvs"], cd["_.ignored"]))
 
-    def getDefault(self, alias: str, position: JoiningPosition | str, marked: bool = False) -> str:
+    def getDefault(self, alias: str, position: JoiningPosition, marked: bool = False) -> str:
         charName = getCharNameByAlias("MNG", alias)
-        position = cast(JoiningPosition, position)
         suffix = ["marked"] if marked else []
         return str(GlyphDescriptor.fromData(charName, position, suffixes=suffix))
 
@@ -349,7 +348,7 @@ class MongFeaComposer(FeaComposer):
         # add masculine
         with c.Lookup("III.ig.preprocessing.A", feature="rclt"):
             for alias in ct["vowelMasculine"]:
-                for position in [init, medi]:
+                for position in (init, medi):
                     default = self.getDefault(alias, position)
                     self.sub(default, by=[default, masc])
 
@@ -357,21 +356,21 @@ class MongFeaComposer(FeaComposer):
             "III.ig.preprocessing.B", feature="rclt", flags={"UseMarkFilteringSet": mascClass}
         ):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
-                for position in [medi, fina]:
+                for position in (medi, fina):
                     default = self.getDefault(alias, position)
                     self.sub(masc, c.input(default), by=[default, masc])
 
         with c.Lookup("III.ig.preprocessing.C", feature="rclt"):
             for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]:
-                if alias not in ["g", "h"]:
-                    for position in [init, medi, fina]:
+                if alias not in ["h", "g"]:
+                    for position in (init, medi, fina):
                         default = self.getDefault(alias, position)
                         self.sub(default, masc, by=default)
 
         # add feminine
         with c.Lookup("III.ig.preprocessing.D", feature="rclt"):
             for alias in ct["vowelFeminine"]:
-                for position in [init, medi]:
+                for position in (init, medi):
                     default = self.getDefault(alias, position)
                     self.sub(default, by=[default, femi])
 
@@ -379,14 +378,14 @@ class MongFeaComposer(FeaComposer):
             "III.ig.preprocessing.E", feature="rclt", flags={"UseMarkFilteringSet": femiClass}
         ):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
-                for position in [medi, fina]:
+                for position in (medi, fina):
                     default = self.getDefault(alias, position)
                     self.sub(femi, c.input(default), by=[default, femi])
 
         with c.Lookup("III.ig.preprocessing.F", feature="rclt"):
             for alias in ct["vowelFeminine"] + ct["vowelNeuter"] + ct["consonant"]:
-                if alias not in ["g", "h"]:
-                    for position in [init, medi, fina]:
+                if alias not in ["h", "g"]:
+                    for position in (init, medi, fina):
                         default = self.getDefault(alias, position)
                         self.sub(default, femi, by=default)
 
@@ -396,7 +395,7 @@ class MongFeaComposer(FeaComposer):
             [
                 self.getDefault(alias, position)
                 for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
-                for position in [init, medi, fina]
+                for position in (init, medi, fina)
             ],
         )
         markedVariants = c.namedGlyphClass(
@@ -404,7 +403,7 @@ class MongFeaComposer(FeaComposer):
             [
                 self.getDefault(alias, position, True)
                 for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
-                for position in [init, medi, fina]
+                for position in (init, medi, fina)
             ],
         )
 
@@ -418,7 +417,7 @@ class MongFeaComposer(FeaComposer):
 
         with c.Lookup("III.ig.preprocessing.G", feature="rclt", flags={"IgnoreMarks": True}):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
-                for position in [init, medi]:
+                for position in (init, medi):
                     unmarked = self.getDefault(alias, position)
                     self.sub(c.input(unmarked, _marked), cl["MNG:vowelMasculine"])
             for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]:
@@ -429,14 +428,14 @@ class MongFeaComposer(FeaComposer):
             "III.ig.preprocessing.H", feature="rclt", flags={"UseMarkFilteringSet": femiClass}
         ):
             for alias in ct["vowelNeuter"] + ct["consonant"]:
-                for position in [init, medi]:
+                for position in (init, medi):
                     unmarked = self.getDefault(alias, position)
                     marked = self.getDefault(alias, position, True)
                     c.rsub(c.input(unmarked), markedVariants, by=marked)
 
         with c.Lookup("III.ig.preprocessing.I", feature="rclt"):
-            for alias in ["g", "h"]:
-                for position in [init, medi]:
+            for alias in ["h", "g"]:
+                for position in (init, medi):
                     marked = self.getDefault(alias, position, True)
                     self.sub(c.input(marked, _unmarked), masc)
 
@@ -447,14 +446,14 @@ class MongFeaComposer(FeaComposer):
                     self.getDefault(alias, position, True)
                     for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
                     if alias not in ["h", "g"]
-                    for position in [init, medi, fina]
+                    for position in (init, medi, fina)
                 ],
             )
             self.sub(c.input(markedVariants, _unmarked))
 
         with c.Lookup("III.ig.preprocessing.K", feature="rclt"):
             for alias in ["h", "g"]:
-                for position in [init, medi]:
+                for position in (init, medi):
                     unmarked = self.getDefault(alias, position)
                     marked = self.getDefault(alias, position, True)
                     self.sub(marked, by=[unmarked, masc])
@@ -545,7 +544,7 @@ class MongFeaComposer(FeaComposer):
                 feature="rclt",
                 flags={"UseMarkFilteringSet": cl["fvs"]},
             ):
-                variants = c.variants("MNG", ["o", "u", "oe", "ue"], [medi, fina])
+                variants = c.variants("MNG", ["o", "u", "oe", "ue"], (medi, fina))
                 c.sub(c.input(variants, cd["MNG:reset"]), cl["fvs"])
                 c.sub(cl["fvs"], c.input(variants, cd["MNG:reset"]))
 
@@ -565,7 +564,7 @@ class MongFeaComposer(FeaComposer):
                 [
                     self.getDefault(alias, position, True)
                     for alias in ct["vowelMasculine"] + ct["vowelNeuter"] + ct["consonant"]
-                    for position in [init, medi, fina]
+                    for position in (init, medi, fina)
                 ],
             )
             with c.Lookup(
@@ -869,8 +868,7 @@ class MongFeaComposer(FeaComposer):
                 ):
                     for alias in ["h", "g"]:
                         charName = getCharNameByAlias("MNG", alias)
-                        for position in [init, medi, fina]:
-                            position = cast(JoiningPosition, position)
+                        for position in (init, medi, fina):
                             variants = data.variants[charName].get(position, {})
                             for i in variants.values():
                                 variant = str(GlyphDescriptor.fromData(charName, position, i))
@@ -897,7 +895,7 @@ class MongFeaComposer(FeaComposer):
                 c.sub(c.input(cl["MNG:sh.init"], cd["MNG:dotless"]), cl["MNG:i.medi"])
                 c.sub(
                     c.input(cl["MNG:sh.medi"], cd["MNG:dotless"]),
-                    c.variants("MNG", "i", [medi, fina]),
+                    c.variants("MNG", "i", (medi, fina)),
                 )
                 c.sub(
                     c.variants("MNG", ["s", "d"]),
@@ -940,9 +938,7 @@ class MongFeaComposer(FeaComposer):
                         classList = []
 
                         position = lambda i, l: (
-                            "isol"
-                            if l == 1
-                            else ("init" if i == 0 else "fina" if i == l - 1 else "medi")
+                            isol if l == 1 else (init if i == 0 else fina if i == l - 1 else medi)
                         )
                         classList = [
                             cl[f"{locale}:{alias}.{position(index, len(aliasList))}"]
@@ -1009,7 +1005,7 @@ class MongFeaComposer(FeaComposer):
                                 getCharNameByAlias("MNG", alias)
                                 for alias in ["a", "e", "ee", "i", "o", "u", "oe", "ue"]
                             ]
-                            for position in cast(list[JoiningPosition], [init, medi])
+                            for position in (init, medi)
                             for variant in data.variants[charName].get(position, {}).values()
                             if not variant.written[-1] == "I"
                         ],
@@ -1020,7 +1016,7 @@ class MongFeaComposer(FeaComposer):
                     c.sub(cl["TOD:u"], c.input(cl["TOD:u"], cd["TOD:vowel_devsger"]))
                 if "SIB" in self.locales:
                     c.sub(cl["SIB:vowel"], c.input(cl["SIB:i"], cd["SIB:vowel_devsger"]))
-                    c.sub(cl["SIB:u"], c.input(cl["SIB:u"], cd["SIB:vowel_devsger"]))
+                    c.sub(cl["SIB:vowel"], c.input(cl["SIB:u"], cd["SIB:vowel_devsger"]))
                 if "MCH" in self.locales:
                     c.sub(cl["MCH:vowel"], c.input(cl["MCH:i"], cd["MCH:vowel_devsger"]))
                 if "MCHx" in self.locales:
@@ -1033,7 +1029,7 @@ class MongFeaComposer(FeaComposer):
                 c.sub(
                     c.variants("MNG", ["oe", "ue"], medi),
                     c.glyphClass([cl["fvs1"], cl["fvs2"]]),
-                    c.input(c.variants("MNG", "i", [medi, fina]), cd["MNG:reset"]),
+                    c.input(c.variants("MNG", "i", (medi, fina)), cd["MNG:reset"]),
                 )
                 c.sub(
                     c.variants("MNG", ["oe", "ue"], medi),
@@ -1043,6 +1039,6 @@ class MongFeaComposer(FeaComposer):
                 c.sub(
                     cl["MNG:ue.init"],
                     cl["fvs2"],
-                    c.input(c.variants("MNG", "i", [medi, fina]), cd["MNG:reset"]),
+                    c.input(c.variants("MNG", "i", (medi, fina)), cd["MNG:reset"]),
                 )
                 c.sub(cl["MNG:ue.medi"], cl["fvs1"], c.input(cl["MNG:i"], cd["MNG:vowel_devsger"]))
