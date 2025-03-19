@@ -125,7 +125,7 @@ export const locales = {
       vowelMasculine: ["a", "o", "u"],
       vowelFeminine: ["e", "oe", "ue"],
       vowelNeuter: ["i"],
-      vowel: ["a", "e", "i", "o", "u", "e", "ue", "lvs"],
+      vowel: ["a", "e", "i", "o", "u", "oe", "ue", "lvs"],
       consonant: [
         "n",
         "ng",
