@@ -15,7 +15,6 @@ dependencies = [
 ]
 
 [tool.poetry]
-requires-poetry = ">= 2.0.0, < 3.0.0"
 packages = [{ include = "mongfontbuilder", from = "lib" }]
 group.dev.dependencies = { pytest = ">= 8.3.3, < 9.0.0", uharfbuzz = ">= 0.42.0, < 1.0.0" }
 
