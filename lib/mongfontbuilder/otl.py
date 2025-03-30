@@ -46,16 +46,14 @@ class MongFeaComposer(FeaComposer):
         self,
         locale: LocaleID,
         aliases: str | Iterable[str],
-        positions: str | Iterable[str] | None = None,
-    ):
-        aliases_list = [aliases] if isinstance(aliases, str) else aliases
-        positions_list = []
-        if positions is not None:
-            positions_list = [positions] if isinstance(positions, str) else positions
+        positions: JoiningPosition | Iterable[JoiningPosition] | None = None,
+    ) -> ast.GlyphClass:
+        aliases = [aliases] if isinstance(aliases, str) else aliases
+        positions = [positions] if isinstance(positions, str) else positions
         return self.glyphClass(
-            self.classes[f"{locale}:{alias}" + (f".{position}" if positions_list else "")]
-            for alias in aliases_list
-            for position in (positions_list if positions_list else [None])
+            self.classes[f"{locale}:{alias}" + (f".{position}" if position else "")]
+            for alias in aliases
+            for position in positions or [None]
         )
 
     def __init__(self, locales: list[LocaleID]) -> None:
