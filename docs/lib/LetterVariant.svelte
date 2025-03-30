@@ -48,8 +48,9 @@
 
   span.variant {
     font-family: "Noto Sans Mongolian Customized";
+    color: black;
   }
   span.context {
-    color: silver;
+    opacity: 0.25;
   }
 </style>
