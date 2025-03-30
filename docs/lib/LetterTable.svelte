@@ -8,12 +8,12 @@
   import { aliases, type LocaleNamespace } from "../../data/aliases";
   import { locales, type LocaleID } from "../../data/locales";
   import { joiningPositions, type JoiningPosition } from "../../data/misc";
-  import { variants, type FVS } from "../../data/variants";
+  import { variants, type FVS, type VariantData } from "../../data/variants";
 
   import LetterVariant from "./LetterVariant.svelte";
   import { hexFromCP, nameToCP } from "./utils";
 
-  type LocalizedVariant = { fabricated: boolean; archaic: boolean };
+  type LocalizedVariant = { written: VariantData["written"]; archaic: boolean };
   const charNameToPositionToFVSToLocalizedVariant = new Map<string, Map<JoiningPosition, Map<FVS, LocalizedVariant>>>();
 
   const localeNamespace = locale.slice(0, 3) as LocaleNamespace;
@@ -45,8 +45,7 @@
           positionToFVSToData.set(position, fvsToData);
         }
         fvsToData.set(Number(fvs) as FVS, {
-          // @ts-ignore
-          fabricated: joiningPositions.includes((variantLocaleData.written ?? variant.written)[0]),
+          written: variantLocaleData.written ?? variant.written,
           archaic: variantLocaleData.archaic ?? false,
         });
       }
@@ -58,9 +57,18 @@
   <td>{fvs || "-"}</td>
   {#each positionToFVSToLocalizedVariant as [position, fvsToLocalizedVariant]}
     {@const variant = fvsToLocalizedVariant.get(fvs)}
-    <td class={{ variant: true, ...variant, undefined: !variant }}>
+    <td
+      class={{
+        variant: true,
+        undefined: !variant,
+        // @ts-ignore
+        fabricated: joiningPositions.includes(variant?.written[0]),
+        archaic: variant?.archaic,
+      }}
+    >
       {#if variant}
-        <LetterVariant {charName} {position} {fvs} />
+        <span><LetterVariant {charName} {position} {fvs} /></span><br />
+        {variant.written}
       {/if}
     </td>
   {/each}
@@ -106,7 +114,7 @@
     text-align: center !important;
     vertical-align: middle;
   }
-  td.variant {
+  td.variant span {
     font-size: 2em;
   }
   td.fabricated,

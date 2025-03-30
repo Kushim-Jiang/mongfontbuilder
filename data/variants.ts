@@ -3,25 +3,24 @@ import type { WrittenUnitID } from "./writtenUnits";
 import type { CharacterName, JoiningPosition } from "./misc";
 
 export type FVS = 0 | 1 | 2 | 3 | 4;
-
-type VariantData = {
-  written: Written;
+export type VariantData = {
+  written: WrittenUnitID[] | VariantReference;
   default?: true;
   locales: Partial<Record<LocaleID, VariantLocaleData>>;
 };
-type VariantLocaleData = {
-  written?: Written;
-  conditions?: ConditionalMappingType[];
-  archaic?: true;
-  gb?: string;
-  eac?: string;
-};
-type Written = WrittenUnitID[] | VariantReference;
+
 type VariantReference = [
   position: JoiningPosition,
   fvs: FVS,
   locale?: LocaleID,
 ];
+type VariantLocaleData = {
+  written?: VariantData["written"];
+  conditions?: ConditionalMappingType[];
+  archaic?: true;
+  gb?: string;
+  eac?: string;
+};
 
 export const variants: Record<
   CharacterName,
