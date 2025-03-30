@@ -18,6 +18,35 @@ class MongFeaComposer(FeaComposer):
     classes: dict[str, ast.GlyphClassDefinition]
     conditions: dict[str, ast.LookupBlock]
 
+    def __init__(self, locales: list[LocaleID]) -> None:
+        for locale in locales:
+            assert locale.removesuffix("x") in locales
+
+        self.locales = locales
+        super().__init__(
+            languageSystems={
+                "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in self.locales}
+            }
+        )
+        self.classes = {}
+        self.conditions = {}
+
+        self.initControls()
+        self.initVariants()
+
+        self.ia()
+        self.iia()
+        self.iii()
+
+        # IIb.1: ligature
+        # IIb.2: cleanup of format controls
+        # IIb.3: optional treatments
+
+        # Ib: vertical punctuation
+        # Ib: punctuation ligature
+        # Ib: proportional punctuation
+        # Ib: marks position
+
     def rsub(
         self, *glyphs: AnyGlyph | ContextualInput, by: AnyGlyph
     ) -> ast.ReverseChainSingleSubstStatement:
@@ -42,51 +71,7 @@ class MongFeaComposer(FeaComposer):
         self.current.append(statement)
         return statement
 
-    def variants(
-        self,
-        locale: LocaleID,
-        aliases: str | Iterable[str],
-        positions: JoiningPosition | Iterable[JoiningPosition] | None = None,
-    ) -> ast.GlyphClass:
-        aliases = [aliases] if isinstance(aliases, str) else aliases
-        positions = [positions] if isinstance(positions, str) else positions
-        return self.glyphClass(
-            self.classes[f"{locale}:{alias}" + (f".{position}" if position else "")]
-            for alias in aliases
-            for position in positions or [None]
-        )
-
-    def __init__(self, locales: list[LocaleID]) -> None:
-        for locale in locales:
-            assert locale.removesuffix("x") in locales
-
-        self.locales = locales
-        super().__init__(
-            languageSystems={
-                "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in self.locales}
-            }
-        )
-        self.classes = {}
-        self.conditions = {}
-
-        self.initVariantClasses()
-        self.initVariantConditions()
-        self.initControlClassesAndConditions()
-
-        self.ia()
-        self.iia()
-        self.iii()
-
-        # IIb.1: ligature
-        # IIb.2: cleanup of format controls
-        # IIb.3: optional treatments
-
-        # Ib: vertical punctuation
-        # Ib: punctuation ligature
-        # Ib: proportional punctuation
-        # Ib: marks position
-
-    def initControlClassesAndConditions(self):
+    def initControls(self):
         """
         Initialize glyph classes and condition lookups for control characters.
 
@@ -147,7 +132,7 @@ class MongFeaComposer(FeaComposer):
         for lookup in [_ignored, _valid, _reset, _narrow, _wide]:
             self.conditions[lookup.name] = lookup
 
-    def initVariantClasses(self) -> None:
+    def initVariants(self) -> None:
         """
         Initialize glyph classes for variants.
 
@@ -156,6 +141,12 @@ class MongFeaComposer(FeaComposer):
         `letterClass` -- locale + ":" + alias, e.g. `@MNG:a`.
 
         `categoryClass` -- locale + ":" + category (+ "." + position), e.g. `@MNG:vowel` or `@MNG:vowel.init`.
+
+        Initialize condition lookups for variants.
+
+        Conditions generated from `variant.locales` -- locale + ":" + condition, e.g. `MNG:chachlag`.
+
+        In addition, GB shaping requirements result in the need to reset the letter to its default variant. Resetting condition -- locale + ":reset", e.g. `MNG:reset`.
         """
 
         for locale in self.locales:
@@ -192,15 +183,6 @@ class MongFeaComposer(FeaComposer):
             for name, positionalClasses in categoryToClasses.items():
                 self.classes[name] = self.namedGlyphClass(name, positionalClasses)
 
-    def initVariantConditions(self) -> None:
-        """
-        Initialize condition lookups for variants.
-
-        Conditions generated from `variant.locales` -- locale + ":" + condition, e.g. `MNG:chachlag`.
-
-        In addition, GB shaping requirements result in the need to reset the letter to its default variant. Resetting condition -- locale + ":reset", e.g. `MNG:reset`.
-        """
-
         for locale in self.locales:
             for condition in data.locales[locale].conditions:
                 with self.Lookup(f"{locale}:{condition}") as lookup:
@@ -231,6 +213,20 @@ class MongFeaComposer(FeaComposer):
                             by=str(GlyphDescriptor.fromData(charName, position)),
                         )
             self.conditions[lookup.name] = lookup
+
+    def variants(
+        self,
+        locale: LocaleID,
+        aliases: str | Iterable[str],
+        positions: JoiningPosition | Iterable[JoiningPosition] | None = None,
+    ) -> ast.GlyphClass:
+        aliases = [aliases] if isinstance(aliases, str) else aliases
+        positions = [positions] if isinstance(positions, str) else positions
+        return self.glyphClass(
+            self.classes[f"{locale}:{alias}" + (f".{position}" if position else "")]
+            for alias in aliases
+            for position in positions or [None]
+        )
 
     def ia(self) -> None:
         """
