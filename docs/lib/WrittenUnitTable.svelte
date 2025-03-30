@@ -63,8 +63,9 @@
       <tr>
         <td>{id}</td>
         {#each joiningPositions as position}
-          <td>
-            {#if unitToPositions.get(id)!.has(position)}
+          {@const undefined = !unitToPositions.get(id)!.has(position)}
+          <td class={{ variant: true, undefined }}>
+            {#if !undefined}
               <WrittenUnitVariant {id} {position} />
             {/if}
           </td>
@@ -73,3 +74,17 @@
     {/each}
   </tbody>
 </table>
+
+<style>
+  td,
+  th {
+    text-align: center !important;
+    vertical-align: middle;
+  }
+  td.variant {
+    font-size: 2em;
+  }
+  td.undefined {
+    background-color: whitesmoke;
+  }
+</style>

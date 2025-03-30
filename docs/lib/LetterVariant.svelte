@@ -12,22 +12,31 @@
 
   import { nameToCP } from "./utils";
 
+  const zwj = "\u{200D}";
+  const nirugu = "\u{180A}";
+
   let text = $derived.by(() => {
     let text = String.fromCodePoint(nameToCP.get(charName)!);
     if (fvs) {
       text += ["\u{180B}", "\u{180C}", "\u{180D}", "\u{180F}"][Number(fvs) - 1];
     }
     if (position == "init" || position == "medi") {
-      text += "\u{200D}";
+      text = text + zwj;
     }
     if (position == "medi" || position == "fina") {
-      text = "\u{200D}" + text; // ZWJ may be segmented into a separate OTL run
+      text = zwj + text; // ZWJ may be segmented into a separate OTL run
     }
     return text;
   });
 </script>
 
-<span>{text ?? "?"}</span>
+<span class="variant">
+  {#if text.startsWith(zwj)}
+    <span class="context">{nirugu}</span>
+  {/if}{text ?? "?"}{#if text.endsWith(zwj)}
+    <span class="context">{nirugu}</span>
+  {/if}
+</span>
 
 <style>
   @font-face {
@@ -37,7 +46,10 @@
     font-style: normal;
   }
 
-  span {
+  span.variant {
     font-family: "Noto Sans Mongolian Customized";
+  }
+  span.context {
+    color: silver;
   }
 </style>

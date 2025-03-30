@@ -13,7 +13,8 @@
   import LetterVariant from "./LetterVariant.svelte";
   import { hexFromCP, nameToCP } from "./utils";
 
-  const charNameToPositionToFVSToLocalizedVariant = new Map<string, Map<JoiningPosition, Map<FVS, { fabricated: boolean; archaic: boolean }>>>();
+  type LocalizedVariant = { fabricated: boolean; archaic: boolean };
+  const charNameToPositionToFVSToLocalizedVariant = new Map<string, Map<JoiningPosition, Map<FVS, LocalizedVariant>>>();
 
   const localeNamespace = locale.slice(0, 3) as LocaleNamespace;
   const orderedAlias = [...locales[locale].categories.vowel, ...locales[locale].categories.consonant];
@@ -53,11 +54,24 @@
   }
 </script>
 
+{#snippet variantCells(charName: string, positionToFVSToLocalizedVariant: Map<JoiningPosition, Map<FVS, LocalizedVariant>>, fvs: FVS)}
+  <td>{fvs || "-"}</td>
+  {#each positionToFVSToLocalizedVariant as [position, fvsToLocalizedVariant]}
+    {@const variant = fvsToLocalizedVariant.get(fvs)}
+    <td class={{ variant: true, ...variant, undefined: !variant }}>
+      {#if variant}
+        <LetterVariant {charName} {position} {fvs} />
+      {/if}
+    </td>
+  {/each}
+{/snippet}
+
 <table>
   <thead>
     <tr>
       <th rowspan="2">Code point</th>
       <th rowspan="2">Alias</th>
+      <th rowspan="2">FVS</th>
       <th colspan="4">Variants</th>
     </tr>
     <tr>
@@ -69,31 +83,37 @@
   <tbody>
     {#each charNameToPositionToFVSToLocalizedVariant as [charName, positionToFVSToLocalizedVariant]}
       {@const alias = aliases[charName]}
+      {@const rowspan = Math.max(...[...positionToFVSToLocalizedVariant.values()].map((i) => i.size))}
+      {@const fvs = 0}
       <tr>
-        <td title={charName}>{hexFromCP(nameToCP.get(charName)!)}</td>
-        <td><i>{typeof alias == "object" ? alias[localeNamespace] : alias}</i></td>
-        {#each positionToFVSToLocalizedVariant as [position, fvsToLocalizedVariant]}
-          <td>
-            {#each fvsToLocalizedVariant as [fvs, { fabricated, archaic }], index}
-              {#if index}
-                <br />
-              {/if}
-              <span class={{ fabricated, archaic }}>
-                <LetterVariant {charName} {position} {fvs} />
-              </span>
-            {/each}
-          </td>
-        {/each}
+        <td {rowspan} title={charName}>{hexFromCP(nameToCP.get(charName)!)}</td>
+        <td {rowspan}><i>{typeof alias == "object" ? alias[localeNamespace] : alias}</i></td>
+        {@render variantCells(charName, positionToFVSToLocalizedVariant, fvs)}
       </tr>
+      {#each { length: rowspan - 1 }, index}
+        {@const fvs = (index + 1) as FVS}
+        <tr>
+          {@render variantCells(charName, positionToFVSToLocalizedVariant, fvs)}
+        </tr>
+      {/each}
     {/each}
   </tbody>
 </table>
 
 <style>
-  span.fabricated {
-    color: lightgray;
+  td,
+  th {
+    text-align: center !important;
+    vertical-align: middle;
   }
-  span.archaic {
-    background-color: yellow;
+  td.variant {
+    font-size: 2em;
+  }
+  td.fabricated,
+  td.undefined {
+    background-color: whitesmoke;
+  }
+  td.archaic {
+    background-color: beige;
   }
 </style>
