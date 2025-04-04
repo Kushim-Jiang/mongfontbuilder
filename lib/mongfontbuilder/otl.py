@@ -299,8 +299,7 @@ class MongFeaComposer(FeaComposer):
         self.iii3()
         self.iii4()
         self.iii5()
-
-        # TODO: III.6: Uncaptured - FVS
+        self.iii6()
 
     def iii0(self):
         """
@@ -1150,8 +1149,10 @@ class MongFeaComposer(FeaComposer):
             )
             with c.Lookup("III.vowel.post_bowed.TOD", feature="rclt", flags={"IgnoreMarks": True}):
                 bowed = c.glyphClass([bowedB, bowedK, bowedG])
-                vowels = ["a", "a_lvs", "i", "u", "ue"]
+                vowels = ["a", "i", "u", "ue"]
                 c.sub(bowed, c.input(c.variants("TOD", vowels, fina), cd["TOD:post_bowed"]))
+
+                c.sub(bowed, c.input(cl["TOD:a_lvs.fina"]), by="u1820_u1843.AaLv.fina")
 
         if "TODx" in self.locales:
             bowedB = c.namedGlyphClass("TODx:bowedB", c.variants("TODx", ["pX", "p", "b"]).glyphs)
@@ -1160,8 +1161,12 @@ class MongFeaComposer(FeaComposer):
             )
             with c.Lookup("III.vowel.post_bowed.TODx", feature="rclt", flags={"IgnoreMarks": True}):
                 bowed = c.glyphClass([bowedB, bowedK])
-                vowels = ["a", "a_lvs", "i", "i_lvs", "ue", "ue_lvs"]
+                vowels = ["a", "i", "ue"]
                 c.sub(bowed, c.input(c.variants("TODx", vowels, fina), cd["TODx:post_bowed"]))
+
+                c.sub(bowed, c.input(cl["TODx:a_lvs.fina"]), by="u1820_u1843.AaLv.fina")
+                c.sub(bowed, c.input(cl["TODx:i_lvs.fina"]), by="u1845_u1843.IpLv.fina")
+                c.sub(bowed, c.input(cl["TODx:ue_lvs.fina"]), by="u1849_u1843.OLv.fina")
 
         for locale in ["SIB", "MCH"]:
             if locale in self.locales:
@@ -1213,3 +1218,75 @@ class MongFeaComposer(FeaComposer):
                     c.glyphClass([bowedB, bowedK]),
                     c.input(c.variants("MCHx", ["a", "o"]), cd["MCHx:post_bowed"]),
                 )
+
+    def iii6(self):
+        """
+        (1) Apply `manual` for letters preceding FVS.
+
+        (2) Apply `manual` for letters preceding FVS that precedes LVS for Todo and Todo Ali Gali.
+
+        (3) Apply `manual` for punctuation.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
+
+        for locale in self.locales:
+            with c.Lookup(f"_.manual.{locale}") as _lvs:
+                for alias in getAliasesByLocale(locale):
+                    charName = getCharNameByAlias(locale, alias)
+                    letter = locale + ":" + alias
+                    for position, variants in data.variants[charName].items():
+                        glyphClass = cl[letter + "." + position]
+                        for fvs, variant in variants.items():
+                            if fvs != 0:
+                                variant = str(GlyphDescriptor.fromData(charName, position, variant))
+                                c.sub(c.input(glyphClass), f"fvs{fvs}.ignored", by=variant)
+
+            with c.Lookup(f"III.fvs.{locale}", feature="rclt"):
+                for alias in getAliasesByLocale(locale):
+                    charName = getCharNameByAlias(locale, alias)
+                    letter = locale + ":" + alias
+                    for position, variants in data.variants[charName].items():
+                        glyphClass = cl[letter + "." + position]
+                        for fvs in variants:
+                            if fvs != 0:
+                                c.sub(
+                                    c.input(glyphClass, _lvs),
+                                    c.input(f"fvs{fvs}.ignored", cd["_.valid"]),
+                                )
+
+        if "TOD" in self.locales:
+            with c.Lookup("_.manual.lvs.TOD") as _lvs:
+                c.sub(c.input(cl["TOD:a_lvs.isol"]), "fvs1.ignored", by="u1820_u1843.ALv.isol")
+                c.sub(c.input(cl["TOD:a_lvs.isol"]), "fvs3.ignored", by="u1820_u1843.AALv.isol")
+                c.sub(c.input(cl["TOD:a_lvs.init"]), "fvs2.ignored", by="u1820_u1843.AALv.init")
+                c.sub(c.input(cl["TOD:a_lvs.fina"]), "fvs1.ignored", by="u1820_u1843.AaLv.fina")
+                c.sub(c.input(cl["TOD:a_lvs.fina"]), "fvs2.ignored", by="u1820_u1843.AaLv.fina")
+            with c.Lookup("III.fvs.lvs.TOD"):
+                c.sub(c.input(cl["TOD:a_lvs.isol"], _lvs), c.input("fvs1.ignored", cd["_.valid"]))
+                c.sub(c.input(cl["TOD:a_lvs.isol"], _lvs), c.input("fvs3.ignored", cd["_.valid"]))
+                c.sub(c.input(cl["TOD:a_lvs.init"], _lvs), c.input("fvs2.ignored", cd["_.valid"]))
+                c.sub(c.input(cl["TOD:a_lvs.fina"], _lvs), c.input("fvs1.ignored", cd["_.valid"]))
+                c.sub(c.input(cl["TOD:a_lvs.fina"], _lvs), c.input("fvs2.ignored", cd["_.valid"]))
+
+        if "TODx" in self.locales:
+            with c.Lookup("_.manual.lvs.TODx") as _lvs:
+                c.sub(c.input(cl["TODx:i_lvs.fina"]), "fvs1.ignored", by="u1845_u1843.IpLv.fina")
+                c.sub(c.input(cl["TODx:i_lvs.fina"]), "fvs2.ignored", by="u1845_u1843.I3Lv.fina")
+                c.sub(c.input(cl["TODx:ue_lvs.fina"]), "fvs1.ignored", by="u1849_u1843.OLv.fina")
+                c.sub(c.input(cl["TODx:ue_lvs.fina"]), "fvs2.ignored", by="u1849_u1843.ULv.fina")
+            with c.Lookup("III.fvs.lvs.TODx"):
+                c.sub(c.input(cl["TODx:i_lvs.fina"], _lvs), c.input("fvs1.ignored", cd["_.valid"]))
+                c.sub(c.input(cl["TODx:i_lvs.fina"], _lvs), c.input("fvs2.ignored", cd["_.valid"]))
+                c.sub(c.input(cl["TODx:ue_lvs.fina"], _lvs), c.input("fvs1.ignored", cd["_.valid"]))
+                c.sub(c.input(cl["TODx:ue_lvs.fina"], _lvs), c.input("fvs2.ignored", cd["_.valid"]))
+
+        with c.Lookup("_.manual.punctuation") as _lvs:
+            c.sub(c.input("u1880"), "fvs1.ignored", by="u1880.fvs1")
+            c.sub(c.input("u1881"), "fvs1.ignored", by="u1881.fvs1")
+
+        with c.Lookup("III.fvs.punctuation", feature="rclt"):
+            c.sub(c.input("u1880", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
+            c.sub(c.input("u1881", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
