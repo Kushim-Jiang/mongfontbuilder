@@ -37,8 +37,8 @@ class MongFeaComposer(FeaComposer):
         self.ia()
         self.iia()
         self.iii()
+        self.iib1()
 
-        # TODO: IIb.1: ligature
         # TODO: IIb.2: cleanup of format controls
         # TODO: IIb.3: optional treatments
 
@@ -77,7 +77,7 @@ class MongFeaComposer(FeaComposer):
 
         For FVSes, `@fvs.ignored` indicates the state that needs to be ignored before FVS lookup, `@fvs.valid` indicates the state that is successfully matched after FVS lookup, and `@fvs.invalid` indicates the state that is not matched after FVS lookup.
 
-        For MVS, `@mvs.valid` indicates the state that is successfully matched after chachlag or particle lookups, and `@mvs.invalid` indicates the state that is not matched after chachalg and particle lookups.
+        For MVS, `@mvs.valid` indicates the state that is successfully matched after chachlag or particle lookups, and `@mvs.invalid` indicates the state that is not matched after chachlag and particle lookups.
 
         For nirugu, `nirugu.ignored` indicates the nirugu as a `mark` that needs to be ignored, and `nirugu` indicate the valid nirugu as a `base`.
         """
@@ -1290,3 +1290,16 @@ class MongFeaComposer(FeaComposer):
         with c.Lookup("III.fvs.punctuation", feature="rclt"):
             c.sub(c.input("u1880", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
             c.sub(c.input("u1881", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
+
+    def iib1(self):
+        """
+        Ligatures.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
+
+        for locale in self.locales:
+            for ligature in data.ligatures:
+                ...

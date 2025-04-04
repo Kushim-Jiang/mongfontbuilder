@@ -21,6 +21,9 @@ dir = files(__package__)
 with (dir / "writtenUnits.json").open(encoding="utf-8") as f:
     writtenUnits: list[WrittenUnitID] = json.load(f)
 
+with (dir / "ligatures.json").open(encoding="utf-8") as f:
+    ligatures: list[str] = json.load(f)
+
 with (dir / "locales.json").open(encoding="utf-8") as f:
     locales = structure(
         json.load(f),

@@ -4,7 +4,7 @@ import { writeFile } from "node:fs/promises";
 
 import { locales, type ConditionalMappingType, type LocaleID } from "./locales";
 import { aliases, type LocaleNamespace } from "./aliases";
-import { writtenUnits } from "./writtenUnits";
+import { writtenUnits, ligatures } from "./writtenUnits";
 import { variants } from "./variants";
 import { particles } from "./particles";
 
@@ -74,11 +74,12 @@ for (const [name, data] of Object.entries({
   locales,
   aliases,
   writtenUnits,
+  ligatures,
   variants,
   particles,
 })) {
   await writeFile(
     `lib/mongfontbuilder/data/${name}.json`,
-    JSON.stringify(data, undefined, 2),
+    JSON.stringify(data, undefined, 2).replace(/\n/g, "\r\n"),
   );
 }
