@@ -239,9 +239,21 @@ class MongFeaComposer(FeaComposer):
         locale: LocaleID,
         aliases: str | Iterable[str],
         positions: JoiningPosition | Iterable[JoiningPosition] | None = None,
+        writtens: str | Iterable[str] | None = None,
     ) -> ast.GlyphClass:
         aliases = [aliases] if isinstance(aliases, str) else aliases
         positions = [positions] if isinstance(positions, str) else positions
+        writtens = [writtens] if isinstance(writtens, str) else writtens
+        if writtens and positions:
+            codePoints = [
+                ord(unicodedata.lookup(getCharNameByAlias(locale, alias))) for alias in aliases
+            ]
+            return self.glyphClass(
+                str(GlyphDescriptor([codePoint], [written], position, []))
+                for codePoint in codePoints
+                for position in positions
+                for written in writtens
+            )
         return self.glyphClass(
             self.classes[f"{locale}:{alias}" + (f".{position}" if position else "")]
             for alias in aliases
@@ -286,8 +298,8 @@ class MongFeaComposer(FeaComposer):
         self.iii2()
         self.iii3()
         self.iii4()
+        self.iii5()
 
-        # TODO: III.5: Graphemic - Post bowed
         # TODO: III.6: Uncaptured - FVS
 
     def iii0(self):
@@ -1046,3 +1058,158 @@ class MongFeaComposer(FeaComposer):
                     c.input(c.variants("MNG", "i", (medi, fina)), cd["MNG:reset"]),
                 )
                 c.sub(cl["MNG:ue.medi"], cl["fvs1"], c.input(cl["MNG:i"], cd["MNG:vowel_devsger"]))
+
+    def iii5(self):
+        """
+        (1) Apply `post_bowed` for vowel following bowed consonant for Hudum, Hudum Ali Gali, Todo, Todo Ali Gali, Sibe, Manchu and Manchu Ali Gali.
+
+        (2) According to GB, adjust the vowel (may precede FVS) following bowed consonant for Hudum.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
+
+        if "MNG" in self.locales:
+            bowedB = c.namedGlyphClass("MNG:bowedB", c.variants("MNG", ["b", "p", "f"]).glyphs)
+            bowedK = c.namedGlyphClass("MNG:bowedK", c.variants("MNG", ["k", "k2"]).glyphs)
+            bowedG = c.namedGlyphClass(
+                "MNG:bowedG", c.variants("MNG", ["h", "g"], (init, medi), ["G", "Gx"]).glyphs
+            )
+            with c.Lookup("III.vowel.post_bowed.MNG", feature="rclt", flags={"IgnoreMarks": True}):
+                bowed = c.glyphClass([bowedB, bowedK, bowedG])
+                c.sub(bowed, c.input(c.glyphClass(["u1825.Ue.fina", "u1826.Ue.fina"])), ignore=True)
+                c.sub(
+                    bowed,
+                    c.input(c.variants("MNG", ["o", "u", "oe", "ue"], fina), cd["MNG:post_bowed"]),
+                )
+                c.sub(
+                    c.glyphClass([bowedB, bowedK]),
+                    c.input(c.variants("MNG", ["a", "e"], fina), cd["MNG:post_bowed"]),
+                )
+                c.sub(bowedG, c.input(c.variants("MNG", "e", fina), cd["MNG:post_bowed"]))
+
+            with c.Lookup(
+                "III.vowel.post_bowed.MNG.GB",
+                feature="rclt",
+                flags={"UseMarkFilteringSet": cl["fvs"]},
+            ):
+                hgVariants = c.variants("MNG", ["h", "g"])
+                c.sub(
+                    hgVariants,
+                    c.glyphClass([cl["fvs2"], cl["fvs4"]]),
+                    c.input(cl["MNG:e.fina"], cd["MNG:post_bowed"]),
+                )
+                c.sub(
+                    hgVariants,
+                    c.glyphClass([cl["fvs1"], cl["fvs3"]]),
+                    c.input(cl["MNG:e.fina"], cd["MNG:reset"]),
+                )
+                c.sub(
+                    c.variants("MNG", ["b", "p", "f", "k", "k2"], init),
+                    cl["fvs"],
+                    c.input(c.variants("MNG", ["oe", "ue"], fina), cd["MNG:marked"]),
+                )
+                c.sub(
+                    hgVariants,
+                    c.glyphClass([cl["fvs1"], cl["fvs3"]]),
+                    c.input(c.variants("MNG", ["o", "u", "oe", "ue"], fina), cd["MNG:reset"]),
+                )
+                c.sub(
+                    c.variants("MNG", ["g", "h"], (init, medi)),
+                    c.glyphClass([cl["fvs2"], cl["fvs4"]]),
+                    c.input(c.variants("MNG", ["o", "u"], fina), cd["MNG:reset"]),
+                )
+                c.sub(
+                    c.variants("MNG", ["g", "h"], medi),
+                    c.glyphClass([cl["fvs2"], cl["fvs4"]]),
+                    c.input(c.variants("MNG", ["oe", "ue"], fina), cd["MNG:post_bowed"]),
+                )
+                c.sub(
+                    c.variants("MNG", ["g", "h"], init),
+                    c.glyphClass([cl["fvs2"], cl["fvs4"]]),
+                    c.input(c.variants("MNG", ["oe", "ue"], fina), cd["MNG:marked"]),
+                )
+
+        if "MNGx" in self.locales:
+            bowedB = c.namedGlyphClass("MNGx:bowedB", c.variants("MNGx", ["pX", "phX", "b"]).glyphs)
+            bowedK = c.namedGlyphClass("MNGx:bowedK", c.variants("MNGx", ["kX", "k2", "k"]).glyphs)
+            with c.Lookup("III.vowel.post_bowed.MNGx", feature="rclt", flags={"IgnoreMarks": True}):
+                bowed = c.glyphClass([bowedB, bowedK])
+                vowels = ["a", "o", "ue"]
+                c.sub(bowed, c.input(c.variants("MNGx", vowels, fina), cd["MNGx:post_bowed"]))
+                c.sub(cl["MNGx:waX"], c.input(cl["MNGx:a"]), by="u1820.Aa.isol.post_wa")
+
+        if "TOD" in self.locales:
+            bowedB = c.namedGlyphClass("TOD:bowedB", c.variants("TOD", ["b", "p"]).glyphs)
+            bowedK = c.namedGlyphClass("TOD:bowedK", c.variants("TOD", ["kh", "gh"]).glyphs)
+            bowedG = c.namedGlyphClass(
+                "TOD:bowedG",
+                c.variants("TOD", "h", (init, medi), "K").glyphs
+                + c.variants("TOD", "g", (init, medi), "G").glyphs,
+            )
+            with c.Lookup("III.vowel.post_bowed.TOD", feature="rclt", flags={"IgnoreMarks": True}):
+                bowed = c.glyphClass([bowedB, bowedK, bowedG])
+                vowels = ["a", "a_lvs", "i", "u", "ue"]
+                c.sub(bowed, c.input(c.variants("TOD", vowels, fina), cd["TOD:post_bowed"]))
+
+        if "TODx" in self.locales:
+            bowedB = c.namedGlyphClass("TODx:bowedB", c.variants("TODx", ["pX", "p", "b"]).glyphs)
+            bowedK = c.namedGlyphClass(
+                "TODx:bowedK", c.variants("TODx", ["kX", "khX", "gX"]).glyphs
+            )
+            with c.Lookup("III.vowel.post_bowed.TODx", feature="rclt", flags={"IgnoreMarks": True}):
+                bowed = c.glyphClass([bowedB, bowedK])
+                vowels = ["a", "a_lvs", "i", "i_lvs", "ue", "ue_lvs"]
+                c.sub(bowed, c.input(c.variants("TODx", vowels, fina), cd["TODx:post_bowed"]))
+
+        for locale in ["SIB", "MCH"]:
+            if locale in self.locales:
+                bowedB = c.namedGlyphClass(
+                    f"{locale}:bowedB", c.variants(locale, ["b", "p"]).glyphs
+                )
+                bowedK = c.namedGlyphClass(
+                    f"{locale}:bowedK", c.variants(locale, ["kh", "gh", "hh"]).glyphs
+                )
+                bowedG = c.namedGlyphClass(
+                    f"{locale}:bowedG",
+                    c.variants(locale, "k", (init, medi), ["G", "Gx"]).glyphs
+                    + c.variants(locale, "g", (init, medi), "Gh").glyphs
+                    + c.variants(locale, "h", (init, medi), "Gc").glyphs,
+                )
+                with c.Lookup(
+                    f"III.vowel.post_bowed.{locale}", feature="rclt", flags={"IgnoreMarks": True}
+                ):
+                    c.sub(
+                        c.glyphClass([bowedB, bowedG]),
+                        c.input(c.variants(locale, ["e", "u"]), cd[f"{locale}:post_bowed"]),
+                    )
+                    c.sub(
+                        c.glyphClass([bowedB, bowedK]),
+                        c.input(c.variants(locale, ["a", "o"]), cd[f"{locale}:post_bowed"]),
+                    )
+
+        if "MCHx" in self.locales:
+            bowedB = c.namedGlyphClass(
+                "MCHx:bowedB", c.variants("MCHx", ["pX", "p", "b", "bhX"]).glyphs
+            )
+            bowedK = c.namedGlyphClass("MCHx:bowedK", c.variants("MCHx", ["gh", "kh"]).glyphs)
+            bowedG = c.namedGlyphClass(
+                "MCHx:bowedG",
+                c.variants("MCHx", "k", (init, medi), "G").glyphs
+                + c.variants("MCHx", "g", (init, medi), "Gh").glyphs
+                + c.variants("MCHx", "h", (init, medi), "Gc").glyphs,
+            )
+            with c.Lookup("III.vowel.post_bowed.MCHx", feature="rclt", flags={"IgnoreMarks": True}):
+                c.sub(
+                    c.glyphClass([bowedB, bowedG, cl["MCHx:ghX"]]),
+                    c.input(c.variants("MCHx", ["e", "u"]), cd["MCHx:post_bowed"]),
+                )
+                c.sub(
+                    c.glyphClass([cl["MCHx:ngX"], cl["MCHx:sbm"]]),
+                    c.input(cl["MCHx:e"], cd["MCHx:post_bowed"]),
+                )
+                c.sub(
+                    c.glyphClass([bowedB, bowedK]),
+                    c.input(c.variants("MCHx", ["a", "o"]), cd["MCHx:post_bowed"]),
+                )

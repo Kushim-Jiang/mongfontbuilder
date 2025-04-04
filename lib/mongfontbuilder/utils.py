@@ -1,5 +1,5 @@
-from . import GlyphDescriptor, data
-from .data.types import CharacterName, JoiningPosition, LocaleID, LocaleNamespace
+from . import data
+from .data.types import CharacterName, LocaleID, LocaleNamespace
 
 
 def namespaceFromLocale(locale: LocaleID) -> LocaleNamespace:
