@@ -38,14 +38,14 @@ class MongFeaComposer(FeaComposer):
         self.iia()
         self.iii()
 
-        # IIb.1: ligature
-        # IIb.2: cleanup of format controls
-        # IIb.3: optional treatments
+        # TODO: IIb.1: ligature
+        # TODO: IIb.2: cleanup of format controls
+        # TODO: IIb.3: optional treatments
 
-        # Ib: vertical punctuation
-        # Ib: punctuation ligature
-        # Ib: proportional punctuation
-        # Ib: marks position
+        # TODO: Ib: vertical punctuation
+        # TODO: Ib: punctuation ligature
+        # TODO: Ib: proportional punctuation
+        # TODO: Ib: marks position
 
     def rsub(
         self, *glyphs: AnyGlyph | ContextualInput, by: AnyGlyph
@@ -100,9 +100,6 @@ class MongFeaComposer(FeaComposer):
             self.sub("nirugu", by="nirugu.ignored")
             self.sub("zwj", by="zwj.ignored")
             self.sub("zwnj", by="zwnj.ignored")
-
-            if {"TOD", "TODx"}.intersection(self.locales):
-                self.sub(self.classes["TOD:lvs"], by="lvs.ignored")
 
             for fvs in fvses:
                 for suffix in ["", ".valid"]:
@@ -179,6 +176,29 @@ class MongFeaComposer(FeaComposer):
                         letterClass
                     )
                 categoryToClasses.setdefault(locale + ":" + category, []).append(letterClass)
+
+                localeToAliases = {"TOD": ["a", "e", "o", "oe"], "TODx": ["a", "e", "i", "o", "ue"]}
+                if locale in localeToAliases and alias in localeToAliases[locale]:
+                    lvsCharName = getCharNameByAlias(locale, "lvs")
+                    letter += "_lvs"
+                    lvsPositionalClasses = list[ast.GlyphClassDefinition]()
+                    for charPosition in (init, medi):
+                        charVariant = GlyphDescriptor.fromData(charName, charPosition)
+                        for lvsPosition in (medi, fina):
+                            lvsVariant = GlyphDescriptor.fromData(lvsCharName, lvsPosition)
+                            charLvsVariant = charVariant + lvsVariant
+                            positionalClass = self.namedGlyphClass(
+                                letter + "." + charLvsVariant.position, [str(charLvsVariant)]
+                            )
+                            self.classes[letter + "." + charLvsVariant.position] = positionalClass
+                            lvsPositionalClasses.append(positionalClass)
+                    letterClass = self.namedGlyphClass(letter, lvsPositionalClasses)
+                    self.classes[letter] = letterClass
+                    if genderNeutralCategory != category:
+                        categoryToClasses.setdefault(
+                            locale + ":" + genderNeutralCategory, []
+                        ).append(letterClass)
+                    categoryToClasses.setdefault(locale + ":" + category, []).append(letterClass)
 
             for name, positionalClasses in categoryToClasses.items():
                 self.classes[name] = self.namedGlyphClass(name, positionalClasses)
@@ -267,8 +287,8 @@ class MongFeaComposer(FeaComposer):
         self.iii3()
         self.iii4()
 
-        # III.5: Graphemic - Post bowed
-        # III.6: Uncaptured - FVS
+        # TODO: III.5: Graphemic - Post bowed
+        # TODO: III.6: Uncaptured - FVS
 
     def iii0(self):
         """
@@ -296,28 +316,18 @@ class MongFeaComposer(FeaComposer):
 
         for locale in ["TOD", "TODx"]:
             if locale in self.locales:
-                with self.Lookup(f"{locale}:lvs.preprocessing") as lvsPreprocessing:
-                    positions: list[tuple[JoiningPosition, JoiningPosition]] = [
-                        (init, isol),
-                        (medi, fina),
-                    ]
-                    for position1, position2 in positions:
-                        for alias in getAliasesByLocale(locale):
-                            charName = getCharNameByAlias(locale, alias)
-                            self.sub(
-                                str(GlyphDescriptor.fromData(charName, position1)),
-                                by=str(GlyphDescriptor.fromData(charName, position2)),
-                            )
-
+                lvsCharName = getCharNameByAlias("TOD", "lvs")
+                localeToAliases = {"TOD": ["a", "e", "o", "oe"], "TODx": ["a", "e", "i", "o", "ue"]}
                 with c.Lookup(
-                    f"III.{locale}.lvs.preprocessing", feature="rclt", flags={"IgnoreMarks": True}
+                    f"III.lvs.preprocessing.{locale}", feature="rclt", flags={"IgnoreMarks": True}
                 ):
-                    variants = c.variants(locale, ["consonant", "vowel"], (init, medi))
-                    c.sub(
-                        c.input(variants, lvsPreprocessing),
-                        c.input(cl[f"{locale}:lvs.fina"], cd["_.ignored"]),
-                    )
-                    c.sub(c.input(cl[f"{locale}:lvs"], cd["_.ignored"]))
+                    for alias in localeToAliases[locale]:
+                        charName = getCharNameByAlias(locale, alias)
+                        for position in (init, medi):
+                            charVar = GlyphDescriptor.fromData(charName, position)
+                            for lvsPosition in (medi, fina):
+                                lvsVar = GlyphDescriptor.fromData(lvsCharName, lvsPosition)
+                                self.sub(str(charVar), str(lvsVar), by=str(charVar + lvsVar))
 
     def getDefault(self, alias: str, position: JoiningPosition, marked: bool = False) -> str:
         charName = getCharNameByAlias("MNG", alias)
