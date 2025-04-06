@@ -3,12 +3,10 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field, replace
 
-import yaml
 from fontTools import unicodedata
 from ufoLib2.objects import Component, Font, Glyph
 
-from .data import JoiningPosition, WrittenUnitID
-from .data.types import CharacterName, LocaleID, VariantData
+from .data import CharacterName, JoiningPosition, LocaleID, VariantData, WrittenUnitID
 
 
 def constructFont(font: Font, locales: list[LocaleID]) -> None:
@@ -143,38 +141,43 @@ def constructGlyphSet(
                 glyph.width += member
         return glyph
 
-    for charName in data.variants:
-        codePoint = ord(unicodedata.lookup(charName))
-        glyph = composeGlyph(uNameFromCodePoint(codePoint), [])  # FIXME
-        glyph.unicode = codePoint
+    targetedLocales = {*locales}
+    for charName, positionToFVSToVariant in data.variants.items():
+        variantNames = list[str]()
+        for position, fvsToVariant in positionToFVSToVariant.items():
+            for fvs, variant in fvsToVariant.items():
+                if not targetedLocales.intersection(variant.locales):
+                    continue
 
-    categoryToExpectedGlyphs = dict[str, list[str]]()
-    for path in (data.dir / "glyphs").iterdir():
-        if path.name.endswith(".yaml"):
-            with path.open(encoding="utf-8") as f:
-                categoryToExpectedGlyphs[path.name] = [*yaml.safe_load(f)]
+                target = GlyphDescriptor.fromData(charName, position, variant)
+                targetName = str(target)
+                variantNames.append(targetName)
 
-    for name in categoryToExpectedGlyphs["variants.yaml"]:
-        glyph = font.get(name)
-        if glyph is not None:
-            glyph.unicode = None
-            continue
-        target = GlyphDescriptor.parse(name)
-        idealSource = replace(target, codePoints=[], suffixes=[])
-        for source in sources:
-            if source == idealSource:
-                break
-        else:
-            for source in sources:
-                if replace(source, codePoints=[]) == idealSource:
-                    break
-            else:
-                raise StopIteration(idealSource)
-        composeGlyph(
-            name,
-            [
-                initPadding if target.pseudoPosition() in ["isol", "init"] else 0,
-                font[str(source)],
-                finaPadding if target.pseudoPosition() in ["isol", "fina"] else 0,
-            ],
-        )
+                glyph = font.get(targetName)
+                if glyph is not None:
+                    glyph.unicode = None
+                    continue
+
+                idealSource = replace(target, codePoints=[], suffixes=[])
+                for source in sources:
+                    if source == idealSource:
+                        break
+                else:
+                    for source in sources:
+                        if replace(source, codePoints=[]) == idealSource:
+                            break
+                    else:
+                        raise StopIteration(idealSource)
+                composeGlyph(
+                    targetName,
+                    [
+                        initPadding if target.pseudoPosition() in ["isol", "init"] else 0,
+                        font[str(source)],
+                        finaPadding if target.pseudoPosition() in ["isol", "fina"] else 0,
+                    ],
+                )
+
+        if variantNames:
+            codePoint = ord(unicodedata.lookup(charName))
+            glyph = composeGlyph(uNameFromCodePoint(codePoint), [])  # FIXME
+            glyph.unicode = codePoint
