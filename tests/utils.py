@@ -3,10 +3,11 @@ from dataclasses import dataclass
 from importlib.resources import files
 from pathlib import Path
 
-import mongfontbuilder
 import yaml
 from fontTools import unicodedata
 from mongfontbuilder.data import LocaleID, aliases
+
+import data
 
 repo = Path(__file__).parent / ".."
 tempDir = repo / "temp"
@@ -24,7 +25,7 @@ writingSystemToLocaleID: dict[str, LocaleID] = {
 
 glyphNameMapping: dict[str, str | None] = {"space": "uni0020.Widespace.nomi"}
 for filename in ["marks.yaml", "format-controls.yaml", "bases.yaml"]:
-    path = files(mongfontbuilder) / "data" / "glyphs" / filename
+    path = files(data) / filename
     with path.open(encoding="utf-8") as f:
         glyphNameMapping.update(yaml.safe_load(f))
 
