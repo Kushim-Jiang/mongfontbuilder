@@ -1,37 +1,23 @@
 from __future__ import annotations
 
 import re
-from collections.abc import Iterable
 from dataclasses import dataclass, field, replace
-from importlib.resources import files
 
 import yaml
 from fontTools import unicodedata
-from fontTools.feaLib.ast import FeatureFile
-from fontTools.feaLib.parser import Parser
 from ufoLib2.objects import Component, Font, Glyph
 
-import data
-
 from .data import JoiningPosition, WrittenUnitID
-from .data.types import CharacterName, VariantData
+from .data.types import CharacterName, LocaleID, VariantData
 
 
-def constructFont(font: Font) -> None:
-    constructGlyphSet(font)
-    font.features.text = makeFeatureFile(availableGlyphs=font.keys()).asFea()
+def constructFont(font: Font, locales: list[LocaleID]) -> None:
+    from .otl import MongFeaComposer
 
-
-def makeFeatureFile(availableGlyphs: Iterable[str] = ()) -> FeatureFile:
-    """
-    Specify `availableGlyphs` to validate the glyph set against the feature file’s requirement.
-    An empty set is ignored by `Parser`.
-    """
-
-    assert __package__
-    path = files(__package__) / "otl" / "main.fea"
-    with path.open(encoding="utf-8") as f:
-        return Parser(featurefile=f, glyphNames=availableGlyphs).parse()
+    constructGlyphSet(font, locales)
+    composer = MongFeaComposer(locales)
+    assert not font.features.text, font.features.text
+    font.features.text = composer.asFeatureFile().asFea()
 
 
 @dataclass
@@ -129,7 +115,13 @@ def uNameFromCodePoint(codePoint: int) -> str:
 pseudoPositionSuffixes = ["_" + i for i in data.misc.joiningPositions]
 
 
-def constructGlyphSet(font: Font, initPadding: float = 40, finaPadding: float = 100) -> None:
+def constructGlyphSet(
+    font: Font,
+    locales: list[LocaleID],
+    *,
+    initPadding: float = 40,
+    finaPadding: float = 100,
+) -> None:
     sources = list[GlyphDescriptor]()
     for name in font.keys():
         try:

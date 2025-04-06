@@ -10,6 +10,7 @@ from fontTools.ttLib.tables._n_a_m_e import table__n_a_m_e
 from glyphsLib.builder import UFOBuilder
 from glyphsLib.parser import load
 from mongfontbuilder import constructFont
+from mongfontbuilder.data import locales
 from ufoLib2.objects import Font, Info
 
 parser = argparse.ArgumentParser()
@@ -45,7 +46,7 @@ def main() -> None:
             for source_name, utn_name in data.items():
                 glyph_name_mapping[source_name] = utn_name or source_name
 
-    constructFont(ufo)
+    constructFont(ufo, [*locales.keys()])
 
     build(
         ufo=ufo,
