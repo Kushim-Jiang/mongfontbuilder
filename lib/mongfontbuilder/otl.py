@@ -177,8 +177,7 @@ class MongFeaComposer(FeaComposer):
                     )
                 categoryToClasses.setdefault(locale + ":" + category, []).append(letterClass)
 
-                localeToAliases = {"TOD": ["a", "e", "o", "oe"], "TODx": ["a", "e", "i", "o", "ue"]}
-                if locale in localeToAliases and alias in localeToAliases[locale]:
+                if locale.startswith("TOD") and alias in data.locales[locale].categories["lvs"]:
                     lvsCharName = getCharNameByAlias(locale, "lvs")
                     letter += "_lvs"
                     lvsPositionalClasses = list[ast.GlyphClassDefinition]()
@@ -328,11 +327,10 @@ class MongFeaComposer(FeaComposer):
         for locale in ["TOD", "TODx"]:
             if locale in self.locales:
                 lvsCharName = getCharNameByAlias("TOD", "lvs")
-                localeToAliases = {"TOD": ["a", "e", "o", "oe"], "TODx": ["a", "e", "i", "o", "ue"]}
                 with c.Lookup(
                     f"III.lvs.preprocessing.{locale}", feature="rclt", flags={"IgnoreMarks": True}
                 ):
-                    for alias in localeToAliases[locale]:
+                    for alias in data.locales[locale].categories["lvs"]:
                         charName = getCharNameByAlias(locale, alias)
                         for position in (init, medi):
                             charVar = GlyphDescriptor.fromData(charName, position)
@@ -1018,7 +1016,7 @@ class MongFeaComposer(FeaComposer):
                             str(GlyphDescriptor.fromData(charName, position, variant))
                             for charName in [
                                 getCharNameByAlias("MNG", alias)
-                                for alias in ["a", "e", "ee", "i", "o", "u", "oe", "ue"]
+                                for alias in data.locales["MNG"].categories["vowel"]
                             ]
                             for position in (init, medi)
                             for variant in data.variants[charName].get(position, {}).values()

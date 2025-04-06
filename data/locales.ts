@@ -155,6 +155,7 @@ export const locales = {
         "zr",
         "lh",
       ],
+      lvs: ["a", "e", "o", "oe"],
     },
   },
   TODx: {
@@ -211,6 +212,7 @@ export const locales = {
         "qX",
         "lh",
       ],
+      lvs: ["a", "e", "i", "o", "ue"],
     },
   },
   SIB: {
