@@ -51,6 +51,10 @@
       }
     }
   }
+
+  function getSortedFVSKeys(positionToFVSToLocalizedVariant: Map<JoiningPosition, Map<FVS, LocalizedVariant>>): FVS[] {
+    return [...new Set([...positionToFVSToLocalizedVariant.values()].flatMap((i) => [...i.keys()]))].filter((fvs) => fvs !== 0).sort((a, b) => a - b);
+  }
 </script>
 
 {#snippet variantCells(charName: string, positionToFVSToLocalizedVariant: Map<JoiningPosition, Map<FVS, LocalizedVariant>>, fvs: FVS)}
@@ -91,15 +95,14 @@
   <tbody>
     {#each charNameToPositionToFVSToLocalizedVariant as [charName, positionToFVSToLocalizedVariant]}
       {@const alias = aliases[charName]}
-      {@const rowspan = Math.max(...[...positionToFVSToLocalizedVariant.values()].map((i) => i.size))}
+      {@const rowspan = new Set([...positionToFVSToLocalizedVariant.values()].flatMap((i) => [...i.keys()])).size}
       {@const fvs = 0}
       <tr>
         <td {rowspan} title={charName}>{hexFromCP(nameToCP.get(charName)!)}</td>
         <td {rowspan}><i>{typeof alias == "object" ? alias[localeNamespace] : alias}</i></td>
         {@render variantCells(charName, positionToFVSToLocalizedVariant, fvs)}
       </tr>
-      {#each { length: rowspan - 1 }, index}
-        {@const fvs = (index + 1) as FVS}
+      {#each getSortedFVSKeys(positionToFVSToLocalizedVariant) as fvs}
         <tr>
           {@render variantCells(charName, positionToFVSToLocalizedVariant, fvs)}
         </tr>
