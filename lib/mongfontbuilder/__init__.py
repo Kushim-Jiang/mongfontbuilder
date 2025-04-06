@@ -15,7 +15,8 @@ def constructFont(font: Font, locales: list[LocaleID]) -> None:
     from .otl import MongFeaComposer
 
     constructGlyphSet(font, locales)
-    composer = MongFeaComposer(locales)
+
+    composer = MongFeaComposer(font, locales)
     assert not font.features.text, font.features.text
     font.features.text = composer.asFeatureFile().asFea()
 
@@ -152,9 +153,6 @@ def constructGlyphSet(
         if path.name.endswith(".yaml"):
             with path.open(encoding="utf-8") as f:
                 categoryToExpectedGlyphs[path.name] = [*yaml.safe_load(f)]
-
-    for name in categoryToExpectedGlyphs["empty.yaml"]:
-        composeGlyph(name, [])
 
     for name in categoryToExpectedGlyphs["variants.yaml"]:
         glyph = font.get(name)
