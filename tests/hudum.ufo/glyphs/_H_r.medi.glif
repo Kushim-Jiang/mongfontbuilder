@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_Hr.medi" format="2">
+  <advance width="521"/>
+  <outline>
+    <contour>
+      <point x="140" y="-182" type="curve"/>
+      <point x="409" y="-57" type="line"/>
+      <point x="335" y="78"/>
+      <point x="297" y="219"/>
+      <point x="295" y="364" type="curve"/>
+      <point x="551" y="364" type="line"/>
+      <point x="551" y="444" type="line"/>
+      <point x="219" y="444" type="line"/>
+      <point x="219" y="366" type="line"/>
+      <point x="219" y="221"/>
+      <point x="247" y="94"/>
+      <point x="303" y="-17" type="curve"/>
+      <point x="179" y="-72" type="line"/>
+      <point x="110" y="54"/>
+      <point x="75" y="199"/>
+      <point x="75" y="364" type="curve"/>
+      <point x="75" y="444" type="line"/>
+      <point x="0" y="444" type="line"/>
+      <point x="0" y="364" type="line"/>
+      <point x="0" y="168"/>
+      <point x="47" y="-14"/>
+    </contour>
+  </outline>
+</glyph>

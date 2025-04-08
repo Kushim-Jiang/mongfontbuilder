@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_J.medi" format="2">
+  <advance width="530"/>
+  <outline>
+    <contour>
+      <point x="0" y="100" type="curve"/>
+      <point x="0" y="5" type="line"/>
+      <point x="43" y="44"/>
+      <point x="89" y="77"/>
+      <point x="137" y="103" type="curve"/>
+      <point x="245" y="161" type="line"/>
+      <point x="316" y="196"/>
+      <point x="351" y="263"/>
+      <point x="351" y="364" type="curve"/>
+      <point x="560" y="364" type="line"/>
+      <point x="560" y="444" type="line"/>
+      <point x="0" y="444" type="line"/>
+      <point x="0" y="364" type="line"/>
+      <point x="274" y="364" type="line"/>
+      <point x="274" y="328"/>
+      <point x="268" y="299"/>
+      <point x="256" y="278" type="curve"/>
+      <point x="244" y="256"/>
+      <point x="224" y="237"/>
+      <point x="196" y="222" type="curve"/>
+      <point x="114" y="178" type="line"/>
+      <point x="62" y="150"/>
+      <point x="24" y="124"/>
+    </contour>
+  </outline>
+</glyph>

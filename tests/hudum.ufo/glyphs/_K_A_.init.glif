@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_KA.init" format="2">
+  <advance width="714"/>
+  <outline>
+    <contour>
+      <point x="174" y="42" type="curve"/>
+      <point x="245" y="85" type="line"/>
+      <point x="176" y="180"/>
+      <point x="136" y="273"/>
+      <point x="126" y="364" type="curve"/>
+      <point x="285" y="364" type="line"/>
+      <point x="285" y="444" type="line"/>
+      <point x="124" y="444" type="line"/>
+      <point x="128" y="510"/>
+      <point x="143" y="560"/>
+      <point x="169" y="594" type="curve"/>
+      <point x="195" y="627"/>
+      <point x="230" y="644"/>
+      <point x="274" y="644" type="curve"/>
+      <point x="313" y="644"/>
+      <point x="343" y="633"/>
+      <point x="365" y="610" type="curve"/>
+      <point x="386" y="587"/>
+      <point x="402" y="554"/>
+      <point x="411" y="509" type="curve"/>
+      <point x="420" y="466"/>
+      <point x="426" y="417"/>
+      <point x="430" y="360" type="curve"/>
+      <point x="449" y="96" type="line"/>
+      <point x="515" y="96" type="line"/>
+      <point x="534" y="364" type="line"/>
+      <point x="744" y="364" type="line"/>
+      <point x="744" y="444" type="line"/>
+      <point x="503" y="444" type="line"/>
+      <point x="489" y="565"/>
+      <point x="453" y="648"/>
+      <point x="396" y="692" type="curve"/>
+      <point x="365" y="715"/>
+      <point x="324" y="727"/>
+      <point x="274" y="727" type="curve"/>
+      <point x="183" y="727"/>
+      <point x="117" y="679"/>
+      <point x="74" y="583" type="curve"/>
+      <point x="55" y="536"/>
+      <point x="45" y="481"/>
+      <point x="45" y="417" type="curve"/>
+      <point x="45" y="299"/>
+      <point x="88" y="174"/>
+    </contour>
+  </outline>
+</glyph>

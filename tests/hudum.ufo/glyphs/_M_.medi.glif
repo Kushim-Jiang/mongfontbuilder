@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_M.medi" format="2">
+  <advance width="284"/>
+  <outline>
+    <contour>
+      <point x="19" y="96" type="line"/>
+      <point x="85" y="96" type="line"/>
+      <point x="104" y="364" type="line"/>
+      <point x="314" y="364" type="line"/>
+      <point x="314" y="444" type="line"/>
+      <point x="84" y="444" type="line"/>
+      <point x="81" y="518"/>
+      <point x="71" y="583"/>
+      <point x="54" y="639" type="curve"/>
+      <point x="90" y="639" type="line"/>
+      <point x="137" y="639"/>
+      <point x="174" y="641"/>
+      <point x="201" y="646" type="curve"/>
+      <point x="228" y="651"/>
+      <point x="250" y="661"/>
+      <point x="269" y="677" type="curve"/>
+      <point x="269" y="754" type="line"/>
+      <point x="234" y="731"/>
+      <point x="174" y="719"/>
+      <point x="90" y="719" type="curve"/>
+      <point x="-31" y="719" type="line"/>
+      <point x="-31" y="653" type="line"/>
+      <point x="-1" y="585"/>
+      <point x="14" y="515"/>
+      <point x="14" y="444" type="curve"/>
+      <point x="0" y="444" type="line"/>
+      <point x="0" y="364" type="line"/>
+    </contour>
+  </outline>
+</glyph>
