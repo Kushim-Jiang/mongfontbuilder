@@ -13,7 +13,7 @@
   import LetterVariant from "./LetterVariant.svelte";
   import { hexFromCP, nameToCP } from "./utils";
 
-  type LocalizedVariant = { written: VariantData["written"]; archaic: boolean };
+  type LocalizedVariant = { written: VariantData["written"]; archaic: boolean; unrecommended: boolean };
   const charNameToPositionToFVSToLocalizedVariant = new Map<string, Map<JoiningPosition, Map<FVS, LocalizedVariant>>>();
 
   const localeNamespace = locale.slice(0, 3) as LocaleNamespace;
@@ -47,6 +47,7 @@
         fvsToData.set(Number(fvs) as FVS, {
           written: variantLocaleData.written ?? variant.written,
           archaic: variantLocaleData.archaic ?? false,
+          unrecommended: variantLocaleData.unrecommended ?? false,
         });
       }
     }
@@ -68,6 +69,7 @@
         // @ts-ignore
         fabricated: joiningPositions.includes(variant?.written[0]),
         archaic: variant?.archaic,
+        unrecommended: variant?.unrecommended,
       }}
     >
       {#if variant}
@@ -125,6 +127,9 @@
     background-color: whitesmoke;
   }
   td.archaic {
-    background-color: beige;
+    background-color: lightcyan;
+  }
+  td.unrecommended {
+    background-color: lightyellow;
   }
 </style>

@@ -2969,7 +2969,8 @@
         "locales": {
           "MNG": {
             "gb": "0032 ja first final form",
-            "eac": "MJM1"
+            "eac": "MJM1",
+            "unrecommended": true
           },
           "MCH": {
             "written": [
@@ -3091,7 +3092,8 @@
         "locales": {
           "MNG": {
             "gb": "00B9 ya third medial form",
-            "eac": "MYZ3"
+            "eac": "MYZ3",
+            "unrecommended": true
           }
         }
       },
@@ -3334,7 +3336,8 @@
         "locales": {
           "MNG": {
             "gb": "000F wa second medial form",
-            "eac": "XWZ2"
+            "eac": "XWZ2",
+            "unrecommended": true
           }
         }
       }
@@ -4276,9 +4279,9 @@
         ],
         "locales": {
           "TOD": {
-            "gb": "000A todo i second initial form"
-          },
-          "TODx": {}
+            "gb": "000A todo i second initial form",
+            "unrecommended": true
+          }
         }
       }
     },
@@ -4318,9 +4321,9 @@
         ],
         "locales": {
           "TOD": {
-            "gb": "1855 todo i third medial form"
-          },
-          "TODx": {}
+            "gb": "1855 todo i third medial form",
+            "unrecommended": true
+          }
         }
       }
     },
@@ -4609,7 +4612,8 @@
         ],
         "locales": {
           "TOD": {
-            "gb": "0046 todo oe second medial form"
+            "gb": "0046 todo oe second medial form",
+            "unrecommended": true
           }
         }
       },
@@ -4645,7 +4649,8 @@
         ],
         "locales": {
           "TOD": {
-            "gb": "0048 todo oe second final form"
+            "gb": "0048 todo oe second final form",
+            "unrecommended": true
           }
         }
       }
@@ -5677,7 +5682,8 @@
         "locales": {
           "TOD": {
             "gb": "1836 todo ya second initial form",
-            "eac": "TYAS2"
+            "eac": "TYAS2",
+            "unrecommended": true
           }
         }
       }
@@ -5704,7 +5710,8 @@
         "locales": {
           "TOD": {
             "gb": "1836 todo ya second medial form",
-            "eac": "TYAZ2"
+            "eac": "TYAZ2",
+            "unrecommended": true
           }
         }
       }
@@ -5723,7 +5730,8 @@
           },
           "TOD": {
             "gb": "0044 todo ya final form",
-            "eac": "TYAM1"
+            "eac": "TYAM1",
+            "unrecommended": true
           },
           "TODx": {
             "written": [
@@ -5787,7 +5795,8 @@
         ],
         "locales": {
           "TOD": {
-            "gb": "000C todo wa second medial form"
+            "gb": "000C todo wa second medial form",
+            "unrecommended": true
           }
         }
       }
@@ -5817,7 +5826,8 @@
         ],
         "locales": {
           "TOD": {
-            "gb": "000E todo wa second final form"
+            "gb": "000E todo wa second final form",
+            "unrecommended": true
           }
         }
       }
@@ -6478,7 +6488,8 @@
         ],
         "locales": {
           "SIB": {
-            "eac": "SIM2"
+            "eac": "SIM2",
+            "unrecommended": true
           }
         }
       },
@@ -6490,7 +6501,8 @@
         "locales": {
           "SIB": {
             "gb": "1834 sibe cha second final form",
-            "eac": "SIM3"
+            "eac": "SIM3",
+            "unrecommended": true
           }
         }
       },
@@ -6973,7 +6985,8 @@
         ],
         "locales": {
           "SIB": {
-            "eac": "SKAS3"
+            "eac": "SKAS3",
+            "unrecommended": true
           }
         }
       },
@@ -7040,7 +7053,8 @@
         ],
         "locales": {
           "SIB": {
-            "eac": "SKAZ4"
+            "eac": "SKAZ4",
+            "unrecommended": true
           }
         }
       }
@@ -7064,7 +7078,8 @@
         ],
         "locales": {
           "SIB": {
-            "eac": "SKAM2"
+            "eac": "SKAM2",
+            "unrecommended": true
           }
         }
       },
@@ -7074,7 +7089,8 @@
         ],
         "locales": {
           "SIB": {
-            "eac": "SKAM3"
+            "eac": "SKAM3",
+            "unrecommended": true
           }
         }
       }
@@ -8647,7 +8663,8 @@
         "locales": {
           "MCH": {
             "gb": "0062 manchu i second final form",
-            "eac": "MIM2"
+            "eac": "MIM2",
+            "unrecommended": true
           },
           "MCHx": {}
         }
@@ -8662,7 +8679,8 @@
               "marked"
             ],
             "gb": "0063 manchu i third final form",
-            "eac": "MIM3"
+            "eac": "MIM3",
+            "unrecommended": true
           },
           "MCHx": {
             "conditions": [
@@ -8692,7 +8710,8 @@
         "locales": {
           "MCH": {
             "gb": "0303 manchu i fourth final form",
-            "eac": "MIM4"
+            "eac": "MIM4",
+            "unrecommended": true
           },
           "MCHx": {}
         }
@@ -8766,7 +8785,8 @@
         "locales": {
           "MCH": {
             "gb": "001B manchu ka third initial form",
-            "eac": "MKAS3"
+            "eac": "MKAS3",
+            "archaic": true
           },
           "MCHx": {}
         }
@@ -8858,7 +8878,8 @@
         "locales": {
           "MCH": {
             "gb": "0079 manchu ka fourth medial form",
-            "eac": "MKAZ4"
+            "eac": "MKAZ4",
+            "archaic": true
           },
           "MCHx": {}
         }
@@ -8891,7 +8912,8 @@
         "locales": {
           "MCH": {
             "gb": "007B manchu ka third final form",
-            "eac": "MKAM3"
+            "eac": "MKAM3",
+            "archaic": true
           },
           "MCHx": {}
         }

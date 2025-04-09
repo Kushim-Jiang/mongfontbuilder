@@ -18,6 +18,7 @@ type VariantLocaleData = {
   written?: VariantData["written"];
   conditions?: ConditionalMappingType[];
   archaic?: true;
+  unrecommended?: true;
   gb?: string;
   eac?: string;
 };
@@ -2439,6 +2440,7 @@ export const variants: Record<
           MNG: {
             gb: "0032 ja first final form",
             eac: "MJM1",
+            unrecommended: true,
           },
           MCH: {
             written: ["medi", 0],
@@ -2535,6 +2537,7 @@ export const variants: Record<
           MNG: {
             gb: "00B9 ya third medial form",
             eac: "MYZ3",
+            unrecommended: true,
           },
         },
       },
@@ -2747,6 +2750,7 @@ export const variants: Record<
           MNG: {
             gb: "000F wa second medial form",
             eac: "XWZ2",
+            unrecommended: true,
           },
         },
       },
@@ -3535,8 +3539,8 @@ export const variants: Record<
         locales: {
           TOD: {
             gb: "000A todo i second initial form",
+            unrecommended: true,
           },
-          TODx: {},
         },
       },
     },
@@ -3568,8 +3572,8 @@ export const variants: Record<
         locales: {
           TOD: {
             gb: "1855 todo i third medial form",
+            unrecommended: true,
           },
-          TODx: {},
         },
       },
     },
@@ -3800,6 +3804,7 @@ export const variants: Record<
         locales: {
           TOD: {
             gb: "0046 todo oe second medial form",
+            unrecommended: true,
           },
         },
       },
@@ -3829,6 +3834,7 @@ export const variants: Record<
         locales: {
           TOD: {
             gb: "0048 todo oe second final form",
+            unrecommended: true,
           },
         },
       },
@@ -4659,6 +4665,7 @@ export const variants: Record<
           TOD: {
             gb: "1836 todo ya second initial form",
             eac: "TYAS2",
+            unrecommended: true,
           },
         },
       },
@@ -4682,6 +4689,7 @@ export const variants: Record<
           TOD: {
             gb: "1836 todo ya second medial form",
             eac: "TYAZ2",
+            unrecommended: true,
           },
         },
       },
@@ -4697,6 +4705,7 @@ export const variants: Record<
           TOD: {
             gb: "0044 todo ya final form",
             eac: "TYAM1",
+            unrecommended: true,
           },
           TODx: {
             written: ["medi", 0],
@@ -4749,6 +4758,7 @@ export const variants: Record<
         locales: {
           TOD: {
             gb: "000C todo wa second medial form",
+            unrecommended: true,
           },
         },
       },
@@ -4772,6 +4782,7 @@ export const variants: Record<
         locales: {
           TOD: {
             gb: "000E todo wa second final form",
+            unrecommended: true,
           },
         },
       },
@@ -5298,6 +5309,7 @@ export const variants: Record<
         locales: {
           SIB: {
             eac: "SIM2",
+            unrecommended: true,
           },
         },
       },
@@ -5307,6 +5319,7 @@ export const variants: Record<
           SIB: {
             gb: "1834 sibe cha second final form",
             eac: "SIM3",
+            unrecommended: true,
           },
         },
       },
@@ -5689,6 +5702,7 @@ export const variants: Record<
         locales: {
           SIB: {
             eac: "SKAS3",
+            unrecommended: true,
           },
         },
       },
@@ -5738,6 +5752,7 @@ export const variants: Record<
         locales: {
           SIB: {
             eac: "SKAZ4",
+            unrecommended: true,
           },
         },
       },
@@ -5758,6 +5773,7 @@ export const variants: Record<
         locales: {
           SIB: {
             eac: "SKAM2",
+            unrecommended: true,
           },
         },
       },
@@ -5766,6 +5782,7 @@ export const variants: Record<
         locales: {
           SIB: {
             eac: "SKAM3",
+            unrecommended: true,
           },
         },
       },
@@ -7028,6 +7045,7 @@ export const variants: Record<
           MCH: {
             gb: "0062 manchu i second final form",
             eac: "MIM2",
+            unrecommended: true,
           },
           MCHx: {},
         },
@@ -7039,6 +7057,7 @@ export const variants: Record<
             conditions: ["marked"],
             gb: "0063 manchu i third final form",
             eac: "MIM3",
+            unrecommended: true,
           },
           MCHx: {
             conditions: ["marked"],
@@ -7062,6 +7081,7 @@ export const variants: Record<
           MCH: {
             gb: "0303 manchu i fourth final form",
             eac: "MIM4",
+            unrecommended: true,
           },
           MCHx: {},
         },
@@ -7119,6 +7139,7 @@ export const variants: Record<
           MCH: {
             gb: "001B manchu ka third initial form",
             eac: "MKAS3",
+            archaic: true,
           },
           MCHx: {},
         },
@@ -7185,6 +7206,7 @@ export const variants: Record<
           MCH: {
             gb: "0079 manchu ka fourth medial form",
             eac: "MKAZ4",
+            archaic: true,
           },
           MCHx: {},
         },
@@ -7210,6 +7232,7 @@ export const variants: Record<
           MCH: {
             gb: "007B manchu ka third final form",
             eac: "MKAM3",
+            archaic: true,
           },
           MCHx: {},
         },
@@ -7419,7 +7442,9 @@ export const variants: Record<
         written: ["A", "Aw"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            unrecommended: true,
+          },
         },
       },
     },
@@ -7428,7 +7453,9 @@ export const variants: Record<
         written: ["A", "A"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            unrecommended: true,
+          },
         },
       },
     },
@@ -7437,7 +7464,9 @@ export const variants: Record<
         written: ["A"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            unrecommended: true,
+          },
         },
       },
     },
