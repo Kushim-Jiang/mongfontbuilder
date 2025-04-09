@@ -1,5 +1,6 @@
 import json
 from importlib.resources import files
+from typing import Literal
 
 from cattrs import structure
 
@@ -21,8 +22,9 @@ dir = files(__package__)
 with (dir / "writtenUnits.json").open(encoding="utf-8") as f:
     writtenUnits: list[WrittenUnitID] = json.load(f)
 
+ligatureKey = Literal["required", "optional", "lvs"]
 with (dir / "ligatures.json").open(encoding="utf-8") as f:
-    ligatures: list[str] = json.load(f)
+    ligatures: dict[ligatureKey, dict[str, list[JoiningPosition]]] = json.load(f)
 
 with (dir / "locales.json").open(encoding="utf-8") as f:
     locales = structure(
@@ -52,8 +54,10 @@ def normalizedWritten(
 ) -> tuple[list[WrittenUnitID], JoiningPosition | None]:
     if not isinstance(written, list):
         position, fvs, locale = written
-        assert not locale
-        written = positionToFVSToVariantData[position][fvs].written
+        if not locale:
+            written = positionToFVSToVariantData[position][fvs].written
+        else:
+            written = positionToFVSToVariantData[position][fvs].locales[locale].written  # type: ignore
         assert isinstance(written, list)
     else:
         position = None

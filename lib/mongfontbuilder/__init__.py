@@ -2,11 +2,13 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field, replace
+from typing import Iterable
 
 from fontTools import unicodedata
 from ufoLib2.objects import Component, Font, Glyph
 
 from .data import CharacterName, JoiningPosition, LocaleID, VariantData, WrittenUnitID
+from .data.misc import fina, init, isol, medi
 
 
 def constructFont(font: Font, locales: list[LocaleID]) -> None:
@@ -17,6 +19,57 @@ def constructFont(font: Font, locales: list[LocaleID]) -> None:
     composer = MongFeaComposer(font, locales)
     assert not font.features.text, font.features.text
     font.features.text = composer.asFeatureFile().asFea()
+
+
+def parseWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
+    """
+    >>> parseWrittens("ABC")
+    ['A', 'B', 'C']
+    """
+    if isinstance(writtens, str):
+        return re.sub(r"[A-Z]", lambda x: " " + x[0], writtens).removeprefix(" ").split(" ")
+    return list(writtens)
+
+
+def getPosition(index: int, length: int):
+    return isol if length == 1 else (init if index == 0 else fina if index == length - 1 else medi)
+
+
+def combineWrittens(writtens: str | Iterable[str], position: JoiningPosition) -> list[list[str]]:
+    """
+    >>> combineWrittens("ABCD", "isol")
+    [['A.init', 'B.medi', 'C.medi', 'D.fina'], ['A.init', 'B.medi', 'CD.fina'], ['A.init', 'BC.medi', 'D.fina'], ['A.init', 'BCD.fina'], ['AB.init', 'C.medi', 'D.fina'], ['AB.init', 'CD.fina'], ['ABC.init', 'D.fina'], ['ABCD.isol']]
+    """
+    parts = list(parseWrittens(writtens) if isinstance(writtens, str) else writtens)
+
+    leftJoin = 1 if position in (medi, fina) else 0
+    rightJoin = 1 if position in (init, medi) else 0
+    if leftJoin:
+        parts = ["X"] + parts
+    if rightJoin:
+        parts += ["X"]
+
+    combinations = [[]]
+    for part in parts:
+        newCombinations = []
+        for comb in combinations:
+            newCombinations.append(comb + [part])
+            if comb:
+                newCombinations.append(comb[:-1] + [comb[-1] + part])
+        combinations = newCombinations
+
+    results = []
+    for comb in combinations:
+        result = [
+            f"{written}.{getPosition(index, len(comb))}" for index, written in enumerate(comb)
+        ][leftJoin : (len(comb) - rightJoin)]
+        if (
+            len([l for w in result for l in w if l.isupper()])
+            == len(list(l for l in str(writtens) if l.isupper()))
+            and result
+        ):
+            results.append(result)
+    return results
 
 
 @dataclass
@@ -40,7 +93,7 @@ class GlyphDescriptor:
             if name.startswith("_")
             else name  # u1820.A.init
         ).split(".")
-        units = re.sub(r"[A-Z]", lambda x: " " + x[0], y).removeprefix(" ").split(" ")
+        units = parseWrittens(y)
         assert units and all(i in data.writtenUnits for i in units), name
         assert position in data.types.joiningPositions, name
         instance = cls(
@@ -59,12 +112,21 @@ class GlyphDescriptor:
         position: JoiningPosition,
         variantData: VariantData | None = None,
         suffixes: list[str] = [],
+        locale: LocaleID | None = None,
     ) -> GlyphDescriptor:
         from .data import normalizedWritten
 
         if not variantData:
             variantData = next(i for i in data.variants[charName][position].values() if i.default)
-        units, writtenPosition = normalizedWritten(variantData.written, data.variants[charName])
+
+        written = None
+        if locale and locale in variantData.locales:
+            written = variantData.locales[locale].written
+        if not written:
+            written = variantData.written
+        assert written, variantData
+
+        units, writtenPosition = normalizedWritten(written, data.variants[charName])
         return cls(
             [ord(unicodedata.lookup(charName))],
             units,

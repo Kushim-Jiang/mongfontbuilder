@@ -9174,7 +9174,9 @@
         ],
         "default": true,
         "locales": {
-          "MCHx": {}
+          "MCHx": {
+            "unrecommended": true
+          }
         }
       }
     },
@@ -9186,7 +9188,9 @@
         ],
         "default": true,
         "locales": {
-          "MCHx": {}
+          "MCHx": {
+            "unrecommended": true
+          }
         }
       }
     },
@@ -9197,7 +9201,9 @@
         ],
         "default": true,
         "locales": {
-          "MCHx": {}
+          "MCHx": {
+            "unrecommended": true
+          }
         }
       }
     },
@@ -9827,7 +9833,8 @@
           "TODx": {
             "written": [
               "medi",
-              1
+              0,
+              "TODx"
             ]
           },
           "MCHx": {}

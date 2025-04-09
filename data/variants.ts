@@ -7955,7 +7955,7 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TODx: {
-            written: ["medi", 1],
+            written: ["medi", 0, "TODx"],
           },
           MCHx: {},
         },
