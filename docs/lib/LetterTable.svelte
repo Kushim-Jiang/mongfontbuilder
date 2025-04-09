@@ -74,7 +74,7 @@
     >
       {#if variant}
         <span><LetterVariant {charName} {position} {fvs} /></span><br />
-        {variant.written}
+        {variant.written.join(" ")}
       {/if}
     </td>
   {/each}

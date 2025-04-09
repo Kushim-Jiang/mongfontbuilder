@@ -89,7 +89,9 @@
         <td rowspan={conditionToPositionToFVS.size + 1} title="U+{hexFromCP(cp)} {char} {charName}"> {char} <i>{typeof alias == "object" ? alias[locale.slice(0, 3) as LocaleNamespace] : alias}</i></td>
         <td class="default">default</td>
         {#each joiningPositions as position}
-          <td class="default"><LetterVariant {charName} {position} fvs={defaultPositionToFVS.get(position)!} /></td>
+          <td class="default">
+            <span><LetterVariant {charName} {position} fvs={defaultPositionToFVS.get(position)!} /></span>
+          </td>
         {/each}
       </tr>
       {#each conditionOrder as condition}
@@ -99,9 +101,9 @@
             <td>{condition}</td>
             {#each joiningPositions as position}
               {@const fvs = positionToFVS.get(position)}
-              <td>
+              <td class="variant">
                 {#if fvs != undefined}
-                  <LetterVariant {charName} {position} {fvs} />
+                  <span><LetterVariant {charName} {position} {fvs} /></span>
                 {/if}
               </td>
             {/each}
@@ -113,6 +115,15 @@
 </table>
 
 <style>
+  td,
+  th {
+    text-align: center !important;
+    vertical-align: middle;
+  }
+  td.variant span,
+  td.default span {
+    font-size: 2em;
+  }
   td.default {
     background-color: whitesmoke;
   }
