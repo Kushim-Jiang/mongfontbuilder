@@ -50,7 +50,7 @@ feature rlig {
 } rlig;
 
 feature vpal {
-    lookup Ib.punctuation.propotional;
+    lookup Ib.punctuation.proportional;
 } vpal;
 
 # IB.2: Optional treatments

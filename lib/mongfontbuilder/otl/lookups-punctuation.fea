@@ -32,7 +32,7 @@ lookup Ib.punctuation.ligature {
     sub uniFF01.vert uniFF1F.vert by uni2049.vert;
 } Ib.punctuation.ligature;
 
-lookup Ib.punctuation.propotional {
+lookup Ib.punctuation.proportional {
     pos uni00B7.vert <0 250 0 -500>;
     pos uni3001.vert <0 250 0 -500>;
     pos uni3002.vert <0 250 0 -500>;
@@ -49,5 +49,4 @@ lookup Ib.punctuation.propotional {
     pos uniFF3B.vert <0 678 0 -678>;
     pos uniFF3D.vert <0 0 0 -678>;
     pos uniFF0C.vert <0 250 0 -500>;
-} Ib.punctuation.propotional;
-
+} Ib.punctuation.proportional;

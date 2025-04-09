@@ -39,18 +39,20 @@ class MongFeaComposer(FeaComposer):
         self.initControls()
         self.initVariants()
 
-        self.ia()
-        self.iia()
-        self.iii()
+        self.ia1()
+        self.iia1()
+        self.iii0()
+        self.iii1()
+        self.iii2()
+        self.iii3()
+        self.iii4()
+        self.iii5()
+        self.iii6()
         self.iib1()
-
-        # TODO: IIb.2: cleanup of format controls
-        # TODO: IIb.3: optional treatments
-
-        # TODO: Ib: vertical punctuation
-        # TODO: Ib: punctuation ligature
-        # TODO: Ib: proportional punctuation
-        # TODO: Ib: marks position
+        self.iib2()
+        self.iib3()
+        self.ib1()
+        self.ib2()
 
     def rsub(
         self, *glyphs: AnyGlyph | ContextualInput, by: AnyGlyph
@@ -271,9 +273,9 @@ class MongFeaComposer(FeaComposer):
             for position in positions or [None]
         )
 
-    def ia(self) -> None:
+    def ia1(self) -> None:
         """
-        **Phase Ia: Basic character-to-glyph mapping**
+        **Phase Ia.1: Basic character-to-glyph mapping**
 
         Since Unicode Version 16.0, NNBSP has been taken over by MVS, which participate in chachlag and particle shaping.
         """
@@ -281,9 +283,9 @@ class MongFeaComposer(FeaComposer):
         with self.Lookup("Ia.nnbsp.preprocessing", feature="ccmp"):
             self.sub("nnbsp", by="mvs")
 
-    def iia(self) -> None:
+    def iia1(self) -> None:
         """
-        **Phase IIa: Initiation of cursive positions**
+        **Phase IIa.1: Initiation of cursive positions**
         """
 
         localeSet = {*self.locales}
@@ -298,19 +300,6 @@ class MongFeaComposer(FeaComposer):
                             uNameFromCodePoint(ord(unicodedata.lookup(charName))),
                             by=str(GlyphDescriptor.fromData(charName, position)),
                         )
-
-    def iii(self) -> None:
-        """
-        **Phase III: Mongolian-specific shaping, reduction of phonetic letters to written units**
-        """
-
-        self.iii0()
-        self.iii1()
-        self.iii2()
-        self.iii3()
-        self.iii4()
-        self.iii5()
-        self.iii6()
 
     def iii0(self):
         """
@@ -954,6 +943,8 @@ class MongFeaComposer(FeaComposer):
 
     def iii3(self):
         """
+        **Phase III.3: Phonetic - Particle**
+
         (1) Apply `particle` for letters in particles following MVS in Hudum, Todo, Sibe and Manchu.
 
         (2) Apply `particle` for letters in particles not following MVS in Hudum.
@@ -1026,6 +1017,8 @@ class MongFeaComposer(FeaComposer):
 
     def iii4(self):
         """
+        **Phase III.4: Graphemic - Devsger**
+
         (1) Apply `devsger` for _i_ and _u_ in Hudum, Todo, Sibe and Manchu.
 
         (2) According to GB, reset _i_ in some contexts.
@@ -1088,6 +1081,8 @@ class MongFeaComposer(FeaComposer):
 
     def iii5(self):
         """
+        **Phase III.5: Graphemic - Post-bowed**
+
         (1) Apply `post_bowed` for vowel following bowed consonant for Hudum, Hudum Ali Gali, Todo, Todo Ali Gali, Sibe, Manchu and Manchu Ali Gali.
 
         (2) According to GB, adjust the vowel (may precede FVS) following bowed consonant for Hudum.
@@ -1249,6 +1244,8 @@ class MongFeaComposer(FeaComposer):
 
     def iii6(self):
         """
+        **Phase III.6: Uncaptured - FVS-selected**
+
         (1) Apply `manual` for letters preceding FVS.
 
         (2) Apply `manual` for letters preceding FVS that precedes LVS for Todo and Todo Ali Gali.
@@ -1321,6 +1318,8 @@ class MongFeaComposer(FeaComposer):
 
     def iib1(self):
         """
+        **Phase IIb.1: Variation involving bowed written units**
+
         Ligatures.
         """
 
@@ -1330,4 +1329,45 @@ class MongFeaComposer(FeaComposer):
 
         for locale in self.locales:
             for ligature in data.ligatures:
+                # TODO
                 ...
+
+    def iib2(self):
+        """
+        **Phase IIb.2: Cleanup of format controls**
+
+        Controls postprocessing.
+        """
+
+        c = self
+        cl = self.classes
+        cd = self.conditions
+
+        with c.Lookup("IIb.controls.postprocessing", feature="rclt"):
+            c.sub(
+                c.input(c.glyphClass(["nirugu.ignored", cl["fvs.ignored"], "mvs"]), cd["_.reset"]),
+            )
+
+    def iib3(self):
+        """
+        **Phase IIb.3: Optional treatments**
+
+        Optional treatments.
+        """
+        pass
+
+    def ib1(self):
+        """
+        **Phase Ib.1: Vertical forms of punctuation marks**
+
+        Vertical forms of punctuation.
+        """
+        pass
+
+    def ib2(self):
+        """
+        **Phase Ib.2: Optional treatments**
+
+        Optional treatments.
+        """
+        pass

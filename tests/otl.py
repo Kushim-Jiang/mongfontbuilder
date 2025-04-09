@@ -1,10 +1,11 @@
 from mongfontbuilder.data import locales
 from mongfontbuilder.otl import MongFeaComposer
+from ufoLib2 import Font
 from utils import tempDir
 
 
 def main() -> None:
-    composer = MongFeaComposer(locales=[*locales.keys()])
+    composer = MongFeaComposer(font=Font(), locales=[*locales.keys()])
     code = composer.asFeatureFile().asFea()
     (tempDir / "otl.fea").write_text(code)
 
