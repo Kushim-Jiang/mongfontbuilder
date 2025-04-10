@@ -19,6 +19,7 @@ type VariantLocaleData = {
   conditions?: ConditionalMappingType[];
   archaic?: true;
   unrecommended?: true;
+  lvs?: true;
   gb?: string;
   eac?: string;
 };
@@ -97,7 +98,9 @@ export const variants: Record<
             gb: "1821 a second isolated form",
             eac: "TAD2",
           },
-          TODx: {},
+          TODx: {
+            lvs: true,
+          },
         },
       },
       "2": {
@@ -125,6 +128,7 @@ export const variants: Record<
           TOD: {
             gb: "1820 a first isolated form",
             eac: "TAD1",
+            lvs: true,
           },
           TODx: {},
           SIB: {
@@ -163,6 +167,7 @@ export const variants: Record<
           TOD: {
             gb: "0004 a initial form",
             eac: "TAS1",
+            lvs: true,
           },
           TODx: {},
           SIB: {
@@ -190,6 +195,7 @@ export const variants: Record<
           TOD: {
             gb: "0005 a first medial form",
             eac: "TAZ1",
+            lvs: true,
           },
           TODx: {},
           SIB: {
@@ -234,9 +240,11 @@ export const variants: Record<
             conditions: ["post_bowed"],
             gb: "0009 a second final form",
             eac: "TAM2",
+            lvs: true,
           },
           TODx: {
             conditions: ["post_bowed"],
+            lvs: true,
           },
           SIB: {
             conditions: ["post_bowed"],
@@ -263,6 +271,7 @@ export const variants: Record<
           TOD: {
             gb: "0008 a first final form",
             eac: "TAM1",
+            lvs: true,
           },
           TODx: {},
           SIB: {
@@ -3453,6 +3462,7 @@ export const variants: Record<
           TOD: {
             gb: "1844 todo e isolated form",
             eac: "TED1",
+            lvs: true,
           },
           TODx: {},
         },
@@ -3466,6 +3476,7 @@ export const variants: Record<
           TOD: {
             gb: "1844 todo e initial form",
             eac: "TES1",
+            lvs: true,
           },
           TODx: {},
         },
@@ -3479,6 +3490,7 @@ export const variants: Record<
           TOD: {
             gb: "003F todo e first medial form",
             eac: "TEZ1",
+            lvs: true,
           },
           TODx: {},
         },
@@ -3502,6 +3514,7 @@ export const variants: Record<
           TOD: {
             gb: "003F todo e first final form",
             eac: "TEM1",
+            lvs: true,
           },
           TODx: {},
         },
@@ -3518,7 +3531,9 @@ export const variants: Record<
             gb: "1845 todo i first medial form",
             eac: "TID1",
           },
-          TODx: {},
+          TODx: {
+            lvs: true,
+          },
         },
       },
     },
@@ -3586,6 +3601,7 @@ export const variants: Record<
           },
           TODx: {
             conditions: ["post_bowed"],
+            lvs: true,
           },
         },
       },
@@ -3597,7 +3613,9 @@ export const variants: Record<
             gb: "0044 todo i first final form",
             eac: "TIM1",
           },
-          TODx: {},
+          TODx: {
+            lvs: true,
+          },
         },
       },
     },
@@ -3611,6 +3629,7 @@ export const variants: Record<
           TOD: {
             gb: "1846 todo o isolated form",
             eac: "TOD1",
+            lvs: true,
           },
           TODx: {},
         },
@@ -3624,6 +3643,7 @@ export const variants: Record<
           TOD: {
             gb: "0045 todo o initial form",
             eac: "TOS1",
+            lvs: true,
           },
           TODx: {},
         },
@@ -3637,6 +3657,7 @@ export const variants: Record<
           TOD: {
             gb: "0046 todo o first medial form",
             eac: "TOZ1",
+            lvs: true,
           },
           TODx: {},
         },
@@ -3660,6 +3681,7 @@ export const variants: Record<
           TOD: {
             gb: "0048 todo o final form",
             eac: "TOM1",
+            lvs: true,
           },
           TODx: {},
         },
@@ -3772,6 +3794,7 @@ export const variants: Record<
           TOD: {
             gb: "1848 todo oe isolated form",
             eac: "TOED1",
+            lvs: true,
           },
         },
       },
@@ -3784,6 +3807,7 @@ export const variants: Record<
           TOD: {
             gb: "004E todo oe initial form",
             eac: "TOES1",
+            lvs: true,
           },
         },
       },
@@ -3796,6 +3820,7 @@ export const variants: Record<
           TOD: {
             gb: "004F todo oe first medial form",
             eac: "TOEZ1",
+            lvs: true,
           },
         },
       },
@@ -3826,6 +3851,7 @@ export const variants: Record<
           TOD: {
             gb: "0051 todo oe first final form",
             eac: "TOEM1",
+            lvs: true,
           },
         },
       },
@@ -3850,7 +3876,9 @@ export const variants: Record<
             gb: "1849 todo ue first isolated form",
             eac: "TUED1",
           },
-          TODx: {},
+          TODx: {
+            lvs: true,
+          },
         },
       },
       "1": {
@@ -3910,6 +3938,7 @@ export const variants: Record<
           },
           TODx: {
             conditions: ["post_bowed"],
+            lvs: true,
           },
         },
       },
@@ -3921,7 +3950,9 @@ export const variants: Record<
             gb: "000E todo ue final form",
             eac: "TUEM1",
           },
-          TODx: {},
+          TODx: {
+            lvs: true,
+          },
         },
       },
     },
@@ -8809,7 +8840,9 @@ export const variants: Record<
       "1": {
         written: ["Ir"],
         locales: {
-          TODx: {},
+          TODx: {
+            lvs: true,
+          },
         },
       },
     },

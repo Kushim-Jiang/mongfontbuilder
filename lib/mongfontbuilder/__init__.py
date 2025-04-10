@@ -42,6 +42,11 @@ def combineWrittens(writtens: str | Iterable[str], position: JoiningPosition) ->
     """
     parts = list(parseWrittens(writtens) if isinstance(writtens, str) else writtens)
 
+    if "Lv" in parts:
+        index = parts.index("Lv")
+        if index > 0:
+            parts[index - 1] += parts.pop(index)
+
     leftJoin = 1 if position in (medi, fina) else 0
     rightJoin = 1 if position in (init, medi) else 0
     if leftJoin:
@@ -167,6 +172,9 @@ class GlyphDescriptor:
                 position = suffix.removeprefix("_")
                 assert position in data.misc.joiningPositions
                 return position
+
+    def __hash__(self) -> int:
+        return hash(self.__str__())
 
 
 def uNameFromCodePoint(codePoint: int) -> str:

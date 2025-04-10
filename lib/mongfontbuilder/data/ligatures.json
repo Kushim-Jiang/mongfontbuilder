@@ -430,61 +430,7 @@
       "init",
       "medi"
     ],
-    "ZtOh": []
-  },
-  "optional": {
-    "AGH": [
-      "medi",
-      "fina"
-    ],
-    "AGHb": [
-      "medi"
-    ],
-    "AGHc": [
-      "medi"
-    ],
-    "AGHh": [
-      "medi"
-    ],
-    "AGHx": [
-      "medi"
-    ],
-    "AGL": [
-      "medi"
-    ],
-    "AGM": [
-      "medi"
-    ],
-    "AGN": [
-      "medi"
-    ],
-    "BL": [
-      "init",
-      "medi"
-    ],
-    "BM": [
-      "init",
-      "medi"
-    ],
-    "GL": [
-      "init",
-      "medi"
-    ],
-    "GM": [
-      "init",
-      "medi"
-    ],
-    "LL": [
-      "medi"
-    ],
-    "ML": [
-      "medi"
-    ],
-    "MM": [
-      "medi"
-    ]
-  },
-  "lvs": {
+    "ZtOh": [],
     "BALv": [
       "init",
       "medi"
@@ -579,5 +525,57 @@
     "PpELv": [],
     "PpObLv": [],
     "PpOtLv": []
+  },
+  "optional": {
+    "AGH": [
+      "medi",
+      "fina"
+    ],
+    "AGHb": [
+      "medi"
+    ],
+    "AGHc": [
+      "medi"
+    ],
+    "AGHh": [
+      "medi"
+    ],
+    "AGHx": [
+      "medi"
+    ],
+    "AGL": [
+      "medi"
+    ],
+    "AGM": [
+      "medi"
+    ],
+    "AGN": [
+      "medi"
+    ],
+    "BL": [
+      "init",
+      "medi"
+    ],
+    "BM": [
+      "init",
+      "medi"
+    ],
+    "GL": [
+      "init",
+      "medi"
+    ],
+    "GM": [
+      "init",
+      "medi"
+    ],
+    "LL": [
+      "medi"
+    ],
+    "ML": [
+      "medi"
+    ],
+    "MM": [
+      "medi"
+    ]
   }
 }

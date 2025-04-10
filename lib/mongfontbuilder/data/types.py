@@ -41,6 +41,7 @@ class VariantLocaleData:
     archaic: bool = False
     gb: str = ""
     eac: str = ""
+    lvs: bool = False
 
 
 @dataclass

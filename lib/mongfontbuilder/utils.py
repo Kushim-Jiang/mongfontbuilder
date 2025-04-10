@@ -1,9 +1,11 @@
+from typing import cast
+
 from . import data
 from .data.types import CharacterName, LocaleID, LocaleNamespace
 
 
 def namespaceFromLocale(locale: LocaleID) -> LocaleNamespace:
-    return locale.removesuffix("x")  # type: ignore
+    return cast(LocaleNamespace, locale.removesuffix("x"))
 
 
 def getCharNameByAlias(locale: LocaleID, alias: str) -> CharacterName:
