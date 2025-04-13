@@ -7,7 +7,15 @@ from typing import Iterable
 from fontTools import unicodedata
 from ufoLib2.objects import Component, Font, Glyph
 
-from .data import CharacterName, JoiningPosition, LocaleID, VariantData, WrittenUnitID
+from .data import (
+    CharacterName,
+    JoiningPosition,
+    LocaleID,
+    VariantData,
+    VariantReference,
+    WrittenUnitID,
+    codePointToCmapVariant,
+)
 from .data.misc import fina, init, isol, medi
 
 
@@ -119,7 +127,7 @@ class GlyphDescriptor:
         suffixes: list[str] = [],
         locale: LocaleID | None = None,
     ) -> GlyphDescriptor:
-        from .data import normalizedWritten
+        from .data import variantFromReference
 
         if not variantData:
             variantData = next(i for i in data.variants[charName][position].values() if i.default)
@@ -131,13 +139,13 @@ class GlyphDescriptor:
             written = variantData.written
         assert written, variantData
 
-        units, writtenPosition = normalizedWritten(written, data.variants[charName])
-        return cls(
-            [ord(unicodedata.lookup(charName))],
-            units,
-            writtenPosition or position,
-            (["_" + position] if writtenPosition else []) + suffixes,
-        )
+        if isinstance(written, VariantReference):
+            units = variantFromReference(written, data.variants[charName])
+            suffixes = ["_" + position, *suffixes]
+            position = written.position
+        else:
+            units = written
+        return cls([ord(unicodedata.lookup(charName))], units, position, suffixes)
 
     def __str__(self) -> str:
         assert self.units, self
@@ -249,5 +257,6 @@ def constructGlyphSet(
 
         if variantNames:
             codePoint = ord(unicodedata.lookup(charName))
-            glyph = composeGlyph(uNameFromCodePoint(codePoint), [])  # FIXME
+            variant = GlyphDescriptor([codePoint], *codePointToCmapVariant[codePoint])
+            glyph = composeGlyph(uNameFromCodePoint(codePoint), [font[str(variant)]])
             glyph.unicode = codePoint
