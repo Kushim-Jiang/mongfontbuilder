@@ -16,23 +16,68 @@
       "fina",
       "isol"
     ],
-    "BE": [],
-    "BI": [],
-    "BIp": [],
-    "BO": [],
+    "BE": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BIp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "BOI": [
       "init",
       "medi"
     ],
-    "BOb": [],
-    "BOh": [],
-    "BOp": [],
-    "BOt": [],
+    "BOb": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BOh": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BOp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BOt": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "BUe": [
       "fina",
       "isol"
     ],
-    "BW": [],
+    "BW": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "BcA": [
       "init",
       "medi"
@@ -49,9 +94,24 @@
       "fina",
       "isol"
     ],
-    "BcI": [],
-    "BcO": [],
-    "BcOh": [],
+    "BcI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BcO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BcOh": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "BgA": [
       "init",
       "medi"
@@ -68,14 +128,34 @@
       "fina",
       "isol"
     ],
-    "BgI": [],
-    "BgO": [],
+    "BgI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BgO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "BgOI": [
       "init",
       "medi"
     ],
-    "BgOh": [],
-    "BgW": [],
+    "BgOh": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BgW": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "BhA": [
       "init",
       "medi"
@@ -84,10 +164,30 @@
       "fina",
       "isol"
     ],
-    "BhE": [],
-    "BhIp": [],
-    "BhO": [],
-    "BhOb": [],
+    "BhE": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BhIp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BhO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BhOb": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "FA": [
       "init",
       "medi"
@@ -96,8 +196,18 @@
       "fina",
       "isol"
     ],
-    "FI": [],
-    "FO": [],
+    "FI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "FO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "FOI": [
       "init",
       "medi"
@@ -106,7 +216,12 @@
       "fina",
       "isol"
     ],
-    "FW": [],
+    "FW": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GA": [
       "init",
       "medi"
@@ -115,21 +230,56 @@
       "fina",
       "isol"
     ],
-    "GE": [],
-    "GI": [],
-    "GIp": [],
-    "GO": [],
+    "GE": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GIp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GOI": [
       "init",
       "medi"
     ],
-    "GOb": [],
-    "GOt": [],
+    "GOb": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GOt": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GUe": [
       "fina",
       "isol"
     ],
-    "GW": [],
+    "GW": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GcA": [
       "init",
       "medi"
@@ -138,8 +288,18 @@
       "fina",
       "isol"
     ],
-    "GcI": [],
-    "GcO": [],
+    "GcI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GcO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GcOI": [
       "init",
       "medi"
@@ -156,8 +316,18 @@
       "fina",
       "isol"
     ],
-    "GhI": [],
-    "GhO": [],
+    "GhI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GhO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GhOI": [
       "init",
       "medi"
@@ -174,8 +344,18 @@
       "fina",
       "isol"
     ],
-    "GpOb": [],
-    "GpOp": [],
+    "GpOb": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GpOp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GxA": [
       "init",
       "medi"
@@ -184,8 +364,18 @@
       "fina",
       "isol"
     ],
-    "GxI": [],
-    "GxO": [],
+    "GxI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GxO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GxOI": [
       "init",
       "medi"
@@ -194,7 +384,12 @@
       "fina",
       "isol"
     ],
-    "GxW": [],
+    "GxW": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "Hh2A": [
       "init",
       "medi"
@@ -231,12 +426,22 @@
       "init",
       "medi"
     ],
-    "IhOh": [],
+    "IhOh": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "JhAh": [
       "init",
       "medi"
     ],
-    "JhOh": [],
+    "JhOh": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "K2A": [
       "init",
       "medi"
@@ -245,20 +450,50 @@
       "fina",
       "isol"
     ],
-    "K2E": [],
-    "K2I": [],
-    "K2Ip": [],
-    "K2O": [],
+    "K2E": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "K2I": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "K2Ip": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "K2O": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "K2OI": [
       "init",
       "medi"
     ],
-    "K2Ob": [],
+    "K2Ob": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "K2Ue": [
       "fina",
       "isol"
     ],
-    "K2W": [],
+    "K2W": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "KA": [
       "init",
       "medi"
@@ -267,21 +502,56 @@
       "fina",
       "isol"
     ],
-    "KE": [],
-    "KI": [],
-    "KIp": [],
-    "KO": [],
+    "KE": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "KI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "KIp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "KO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "KOI": [
       "init",
       "medi"
     ],
-    "KOb": [],
-    "KOt": [],
+    "KOb": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "KOt": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "KUe": [
       "fina",
       "isol"
     ],
-    "KW": [],
+    "KW": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "KcA": [
       "init",
       "medi"
@@ -290,7 +560,12 @@
       "fina",
       "isol"
     ],
-    "KcO": [],
+    "KcO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "KhA": [
       "init",
       "medi"
@@ -299,7 +574,12 @@
       "fina",
       "isol"
     ],
-    "KhO": [],
+    "KhO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "KpA": [
       "init",
       "medi"
@@ -308,13 +588,28 @@
       "fina",
       "isol"
     ],
-    "KpOb": [],
-    "KpOp": [],
+    "KpOb": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "KpOp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "LcAh": [
       "init",
       "medi"
     ],
-    "LcOh": [],
+    "LcOh": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "PA": [
       "init",
       "medi"
@@ -323,8 +618,18 @@
       "fina",
       "isol"
     ],
-    "PI": [],
-    "PO": [],
+    "PI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "POI": [
       "init",
       "medi"
@@ -333,7 +638,12 @@
       "fina",
       "isol"
     ],
-    "PW": [],
+    "PW": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "Pb2A": [
       "init",
       "medi"
@@ -350,9 +660,24 @@
       "fina",
       "isol"
     ],
-    "Pb2I": [],
-    "Pb2O": [],
-    "Pb2Oh": [],
+    "Pb2I": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "Pb2O": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "Pb2Oh": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "PbA": [
       "init",
       "medi"
@@ -369,13 +694,28 @@
       "fina",
       "isol"
     ],
-    "PbI": [],
-    "PbO": [],
+    "PbI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PbO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "PbOI": [
       "init",
       "medi"
     ],
-    "PbOh": [],
+    "PbOh": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "PbUe": [
       "fina",
       "isol"
@@ -388,8 +728,18 @@
       "fina",
       "isol"
     ],
-    "PgI": [],
-    "PgO": [],
+    "PgI": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PgO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "PgOI": [
       "init",
       "medi"
@@ -398,7 +748,12 @@
       "fina",
       "isol"
     ],
-    "PgW": [],
+    "PgW": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "PhA": [
       "init",
       "medi"
@@ -407,10 +762,30 @@
       "fina",
       "isol"
     ],
-    "PhE": [],
-    "PhIp": [],
-    "PhO": [],
-    "PhOb": [],
+    "PhE": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PhIp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PhO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PhOb": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "PpA": [
       "init",
       "medi"
@@ -419,18 +794,58 @@
       "fina",
       "isol"
     ],
-    "PpE": [],
-    "PpIp": [],
-    "PpO": [],
-    "PpOb": [],
-    "PpOp": [],
-    "PpOt": [],
-    "Zs2I": [],
+    "PpE": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PpIp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PpO": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PpOb": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PpOp": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PpOt": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "Zs2I": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "ZtAh": [
       "init",
       "medi"
     ],
-    "ZtOh": [],
+    "ZtOh": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "BALv": [
       "init",
       "medi"
@@ -439,9 +854,24 @@
       "fina",
       "isol"
     ],
-    "BELv": [],
-    "BObLv": [],
-    "BOtLv": [],
+    "BELv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BObLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BOtLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "BhALv": [
       "init",
       "medi"
@@ -450,8 +880,18 @@
       "fina",
       "isol"
     ],
-    "BhIpLv": [],
-    "BhOLv": [],
+    "BhIpLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "BhOLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GALv": [
       "init",
       "medi"
@@ -460,10 +900,30 @@
       "fina",
       "isol"
     ],
-    "GELv": [],
-    "GIpLv": [],
-    "GOLv": [],
-    "GOtLv": [],
+    "GELv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GIpLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GOLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "GOtLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "GpALv": [
       "init",
       "medi"
@@ -472,7 +932,12 @@
       "fina",
       "isol"
     ],
-    "GpObLv": [],
+    "GpObLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "K2ALv": [
       "init",
       "medi"
@@ -481,8 +946,18 @@
       "fina",
       "isol"
     ],
-    "K2IpLv": [],
-    "K2OLv": [],
+    "K2IpLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "K2OLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "KALv": [
       "init",
       "medi"
@@ -491,10 +966,30 @@
       "fina",
       "isol"
     ],
-    "KELv": [],
-    "KIpLv": [],
-    "KOLv": [],
-    "KOtLv": [],
+    "KELv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "KIpLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "KOLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "KOtLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "KpALv": [
       "init",
       "medi"
@@ -503,7 +998,12 @@
       "fina",
       "isol"
     ],
-    "KpObLv": [],
+    "KpObLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "PhALv": [
       "init",
       "medi"
@@ -512,8 +1012,18 @@
       "fina",
       "isol"
     ],
-    "PhIpLv": [],
-    "PhOLv": [],
+    "PhIpLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PhOLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
     "PpALv": [
       "init",
       "medi"
@@ -522,9 +1032,24 @@
       "fina",
       "isol"
     ],
-    "PpELv": [],
-    "PpObLv": [],
-    "PpOtLv": []
+    "PpELv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PpObLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ],
+    "PpOtLv": [
+      "isol",
+      "init",
+      "medi",
+      "fina"
+    ]
   },
   "optional": {
     "AGH": [

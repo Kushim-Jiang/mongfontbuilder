@@ -22,9 +22,11 @@ dir = files(__package__)
 with (dir / "writtenUnits.json").open(encoding="utf-8") as f:
     writtenUnits: list[WrittenUnitID] = json.load(f)
 
-ligatureKey = Literal["required", "optional"]
 with (dir / "ligatures.json").open(encoding="utf-8") as f:
-    ligatures: dict[ligatureKey, dict[str, list[JoiningPosition]]] = json.load(f)
+    ligatures: dict[
+        Literal["required", "optional"],
+        dict[str, list[JoiningPosition]],
+    ] = json.load(f)
 
 with (dir / "locales.json").open(encoding="utf-8") as f:
     locales = structure(

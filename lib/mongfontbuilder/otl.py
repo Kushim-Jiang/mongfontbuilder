@@ -1368,7 +1368,7 @@ class MongFeaComposer(FeaComposer):
         locale: LocaleID,
         isRequired: bool = True,
     ):
-        for position in positions or joiningPositions:
+        for position in positions:
             for combination in combineWrittens(ligature, position):
                 writtenLists = [
                     [

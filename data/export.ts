@@ -4,7 +4,8 @@ import { writeFile } from "node:fs/promises";
 
 import { locales, type ConditionalMappingType, type LocaleID } from "./locales";
 import { aliases, type LocaleNamespace } from "./aliases";
-import { writtenUnits, ligatures } from "./writtenUnits";
+import { writtenUnits } from "./writtenUnits";
+import { ligatures } from "./ligatures";
 import { variants } from "./variants";
 import { particles } from "./particles";
 
