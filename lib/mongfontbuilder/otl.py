@@ -13,6 +13,7 @@ from ufoLib2.objects import Component, Font
 from . import (
     GlyphDescriptor,
     combineWrittens,
+    composeGlyph,
     data,
     getPosition,
     parseWrittens,
@@ -114,6 +115,7 @@ class MongFeaComposer(FeaComposer):
             variants = [fvs]
             for suffix in [".valid", ".ignored"]:
                 variant = fvs + suffix
+                self.font.lib.get("public.glyphOrder", []).append(variant)
                 self.font.newGlyph(variant)
                 variants.append(variant)
             self.classes[fvs] = self.namedGlyphClass(fvs, variants)
@@ -132,6 +134,7 @@ class MongFeaComposer(FeaComposer):
         with self.Lookup("_.ignored") as _ignored:
             for original in ["nirugu", "zwj", "zwnj"]:
                 variant = original + ".ignored"
+                self.font.lib.get("public.glyphOrder", []).append(variant)
                 self.font.newGlyph(variant)
                 self.sub(original, by=variant)
 
@@ -446,6 +449,7 @@ class MongFeaComposer(FeaComposer):
             )
         )
         if marked and name not in self.font:
+            self.font.lib.get("public.glyphOrder", []).append(name)
             self.font.newGlyph(name)
         return name
 
@@ -463,6 +467,7 @@ class MongFeaComposer(FeaComposer):
 
         # add masculine
 
+        self.font.lib.get("public.glyphOrder", []).append(masculineMarker)
         self.font.newGlyph(masculineMarker)
 
         with c.Lookup("III.ig.preprocessing.A", feature="rclt"):
@@ -490,6 +495,7 @@ class MongFeaComposer(FeaComposer):
 
         # add feminine
 
+        self.font.lib.get("public.glyphOrder", []).append(feminineMarker)
         self.font.newGlyph(feminineMarker)
 
         with c.Lookup("III.ig.preprocessing.D", feature="rclt"):
@@ -1369,13 +1375,14 @@ class MongFeaComposer(FeaComposer):
                 c.sub(c.input(cl["TODx:ue_lvs.fina"], _lvs), c.input("fvs1.ignored", cd["_.valid"]))
                 c.sub(c.input(cl["TODx:ue_lvs.fina"], _lvs), c.input("fvs2.ignored", cd["_.valid"]))
 
-        with c.Lookup("_.manual.punctuation") as _lvs:
-            c.sub(c.input("u1880"), "fvs1.ignored", by="u1880.fvs1")
-            c.sub(c.input("u1881"), "fvs1.ignored", by="u1881.fvs1")
+        if "MNGx" in self.locales:
+            with c.Lookup("_.manual.punctuation") as _lvs:
+                c.sub(c.input("u1880"), "fvs1.ignored", by="u1880.fvs1")
+                c.sub(c.input("u1881"), "fvs1.ignored", by="u1881.fvs1")
 
-        with c.Lookup("III.fvs.punctuation", feature="rclt"):
-            c.sub(c.input("u1880", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
-            c.sub(c.input("u1881", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
+            with c.Lookup("III.fvs.punctuation", feature="rclt"):
+                c.sub(c.input("u1880", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
+                c.sub(c.input("u1881", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
 
     def iterLigatureSubstitutions(
         self,
@@ -1411,21 +1418,26 @@ class MongFeaComposer(FeaComposer):
                 "UseMarkFilteringSet": c.glyphClass(["nirugu.ignored", cl["fvs.ignored"]])
             },
         ):
-            inputToLigature = dict[tuple[GlyphDescriptor, ...], GlyphDescriptor]()
+            inputToLigatureAndRequired = dict[
+                tuple[GlyphDescriptor, ...], tuple[GlyphDescriptor, bool]
+            ]()
             for locale in self.locales:
                 for category, ligatureToPositions in data.ligatures.items():
                     for writtens, positions in ligatureToPositions.items():
                         for position in positions:
-                            inputToLigature.update(  # Deduplicate inputs
-                                c.iterLigatureSubstitutions(writtens, position, locale)
-                            )
+                            for (
+                                input,
+                                ligature,
+                            ) in c.iterLigatureSubstitutions(  # Deduplicate inputs
+                                writtens, position, locale
+                            ):
+                                inputToLigatureAndRequired[input] = ligature, category == "required"
 
-            for input, ligature in inputToLigature.items():
+            for input, (ligature, required) in inputToLigatureAndRequired.items():
                 ligatureName = str(ligature)
-                if category == "required" and ligatureName not in self.font:
-                    glyph = self.font.newGlyph(ligatureName)
+                if required and ligatureName not in self.font:
                     componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
-                    glyph.components.append(Component(componentName))
+                    composeGlyph(self.font, ligatureName, [self.font[componentName]])
                 if ligatureName in self.font:
                     self.sub(*[str(i) for i in input], by=ligatureName)
 

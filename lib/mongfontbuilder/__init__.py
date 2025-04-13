@@ -27,7 +27,7 @@ def constructFont(font: Font, locales: list[LocaleID]) -> None:
 
     composer = MongFeaComposer(font, locales)
     assert not font.features.text, font.features.text
-    font.features.text = composer.asFeatureFile().asFea()
+    font.features.text = composer.asFeatureFile().asFea().replace(":", "-")  # HACK
 
 
 def parseWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
@@ -200,18 +200,6 @@ def constructGlyphSet(
     initPadding: float = 40,
     finaPadding: float = 100,
 ) -> None:
-    def composeGlyph(name: str, members: list[Glyph | float]) -> Glyph:
-        glyph = font.newGlyph(name)
-        for member in members:
-            if isinstance(member, Glyph):
-                component = Component(name)
-                component.move((glyph.width, 0))
-                glyph.components.append(component)
-                glyph.width += member.width
-            else:
-                glyph.width += member
-        return glyph
-
     sources = list[GlyphDescriptor]()
     for name in font.keys():
         try:
@@ -249,12 +237,10 @@ def constructGlyphSet(
                             memberNames = [str(source)]
                             break
                     else:
-                        print(target)
                         for writtenVariants in combineWrittens(
-                            "".join(writtenTarget.units), position
+                            "".join(writtenTarget.units), writtenTarget.position
                         ):
                             if len(writtenVariants) == len(writtenTarget.units):
-                                print(writtenVariants)
                                 memberNames = ["_" + i for i in writtenVariants]
                                 break
                         else:
@@ -266,10 +252,24 @@ def constructGlyphSet(
                         members = [initPadding, *members]
                     if pseudoPosition in ["isol", "fina"]:
                         members = [*members, finaPadding]
-                composeGlyph(targetName, members)
+                composeGlyph(font, targetName, members)
 
         if variantNames:
             codePoint = ord(unicodedata.lookup(charName))
             variant = GlyphDescriptor([codePoint], *codePointToCmapVariant[codePoint])
-            glyph = composeGlyph(uNameFromCodePoint(codePoint), [font[str(variant)]])
+            glyph = composeGlyph(font, uNameFromCodePoint(codePoint), [font[str(variant)]])
             glyph.unicode = codePoint
+
+
+def composeGlyph(font: Font, name: str, members: list[Glyph | float]) -> Glyph:
+    font.lib.get("public.glyphOrder", []).append(name)
+    glyph = font.newGlyph(name)
+    for member in members:
+        if isinstance(member, Glyph):
+            component = Component(str(member.name))
+            component.move((glyph.width, 0))
+            glyph.components.append(component)
+            glyph.width += member.width
+        else:
+            glyph.width += member
+    return glyph
