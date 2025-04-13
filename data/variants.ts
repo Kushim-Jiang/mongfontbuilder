@@ -18,6 +18,7 @@ type VariantLocaleData = {
   written?: VariantData["written"];
   conditions?: ConditionalMappingType[];
   archaic?: true;
+  /** Required for fonts, but not recommended for newly generated texts. See also: https://unicode.org/Public/16.0.0/ucd/DoNotEmit.txt */
   unrecommended?: true;
   lvs?: true;
   gb?: string;
@@ -2449,7 +2450,6 @@ export const variants: Record<
           MNG: {
             gb: "0032 ja first final form",
             eac: "MJM1",
-            unrecommended: true,
           },
           MCH: {
             written: ["medi", 0],
@@ -2465,6 +2465,7 @@ export const variants: Record<
             conditions: ["chachlag_onset"],
             gb: "000B ja second final form",
             eac: "MJM2",
+            unrecommended: true,
           },
         },
       },
