@@ -1,17 +1,23 @@
 import operator
 import re
+from collections.abc import Callable, Iterable, Iterator
 from dataclasses import dataclass
 from functools import reduce
 from itertools import product
-from typing import Callable, Iterable
 
 from fontTools import unicodedata
 from fontTools.feaLib import ast
 from tptq.feacomposer import AnyGlyph, ContextualInput, FeaComposer, _NormalizedAnyGlyph
-from ufoLib2 import Font
+from ufoLib2.objects import Component, Font
 
-from . import GlyphDescriptor as Glyph
-from . import combineWrittens, data, getPosition, parseWrittens, uNameFromCodePoint
+from . import (
+    GlyphDescriptor,
+    combineWrittens,
+    data,
+    getPosition,
+    parseWrittens,
+    uNameFromCodePoint,
+)
 from .data import locales as allLocales
 from .data.misc import JoiningPosition, fina, init, isol, joiningPositions, medi
 from .data.types import FVS, LocaleID
@@ -187,7 +193,10 @@ class MongFeaComposer(FeaComposer):
                 for position, variants in data.variants[charName].items():
                     positionalClass = self.namedGlyphClass(
                         letter + "." + position,
-                        [str(Glyph.fromData(charName, position, i)) for i in variants.values()],
+                        [
+                            str(GlyphDescriptor.fromData(charName, position, i))
+                            for i in variants.values()
+                        ],
                     )
                     self.classes[letter + "." + position] = positionalClass
                     positionalClasses.append(positionalClass)
@@ -196,13 +205,17 @@ class MongFeaComposer(FeaComposer):
                     ).append(positionalClass)
 
                     lvsVariants = [
-                        Glyph.fromData(charName, position, i)
+                        GlyphDescriptor.fromData(charName, position, i)
                         for i in variants.values()
                         if locale in i.locales and i.locales[locale].lvs
                     ]
                     if lvsVariants:
                         lvsVariants = [
-                            str(Glyph(v.codePoints + [0x1843], v.units + ["Lv"], v.position))
+                            str(
+                                GlyphDescriptor(
+                                    v.codePoints + [0x1843], v.units + ["Lv"], v.position
+                                )
+                            )
                             for v in lvsVariants
                         ]
                         lvsPositionalClass = self.namedGlyphClass(
@@ -245,7 +258,9 @@ class MongFeaComposer(FeaComposer):
                                 ):
                                     self.sub(
                                         self.classes[letter + "." + position],
-                                        by=str(Glyph.fromData(charName, position, variant)),
+                                        by=str(
+                                            GlyphDescriptor.fromData(charName, position, variant)
+                                        ),
                                     )
                 self.conditions[lookup.name] = lookup
 
@@ -256,7 +271,7 @@ class MongFeaComposer(FeaComposer):
                         charName = getCharNameByAlias("MNG", alias)
                         self.sub(
                             self.classes["MNG:" + alias + "." + position],
-                            by=str(Glyph.fromData(charName, position)),
+                            by=str(GlyphDescriptor.fromData(charName, position)),
                         )
             self.conditions[lookup.name] = lookup
 
@@ -281,7 +296,7 @@ class MongFeaComposer(FeaComposer):
 
     def variant(
         self, locale: LocaleID, alias: str, position: JoiningPosition, fvs: FVS = 0
-    ) -> Glyph:
+    ) -> GlyphDescriptor:
         """
         >>> composer = MongFeaComposer(Font())
         >>> str(composer.variant("MCH", "zr", fina))
@@ -291,7 +306,7 @@ class MongFeaComposer(FeaComposer):
         """
         charName = getCharNameByAlias(locale, alias)
         variant = data.variants[charName][position][fvs]
-        return Glyph.fromData(charName, position, variant, locale=locale)
+        return GlyphDescriptor.fromData(charName, position, variant, locale=locale)
 
     def writtens(
         self,
@@ -342,9 +357,10 @@ class MongFeaComposer(FeaComposer):
                         key = f"{locale}:{alias}_lvs.{position}"
                         if key in self.classes:
                             variants = [
-                                Glyph.parse(g.glyph)
+                                GlyphDescriptor.parse(g.glyph)
                                 for g in self.classes[key].glyphs.glyphs
-                                if written in g.glyph and filter(Glyph.parse(g.glyph).units)
+                                if written in g.glyph
+                                and filter(GlyphDescriptor.parse(g.glyph).units)
                             ]
                     glyphs.extend(str(v) for v in variants if str(v) not in glyphs)
         return self.glyphClass(glyphs)
@@ -374,7 +390,7 @@ class MongFeaComposer(FeaComposer):
                     ):
                         self.sub(
                             uNameFromCodePoint(ord(unicodedata.lookup(charName))),
-                            by=str(Glyph.fromData(charName, position)),
+                            by=str(GlyphDescriptor.fromData(charName, position)),
                         )
 
     def iii0(self):
@@ -410,9 +426,9 @@ class MongFeaComposer(FeaComposer):
                     for alias in data.locales[locale].categories["lvs"]:
                         charName = getCharNameByAlias(locale, alias)
                         for position in (init, medi):
-                            charVar = Glyph.fromData(charName, position)
+                            charVar = GlyphDescriptor.fromData(charName, position)
                             for lvsPosition in (medi, fina):
-                                lvsVar = Glyph.fromData(lvsCharName, lvsPosition)
+                                lvsVar = GlyphDescriptor.fromData(lvsCharName, lvsPosition)
                                 self.sub(str(charVar), str(lvsVar), by=str(charVar + lvsVar))
 
     def getDefault(
@@ -423,7 +439,7 @@ class MongFeaComposer(FeaComposer):
         marked: bool = False,
     ) -> str:
         name = str(
-            Glyph.fromData(
+            GlyphDescriptor.fromData(
                 getCharNameByAlias("MNG", alias),
                 position,
                 suffixes=["marked"] if marked else [],
@@ -979,7 +995,7 @@ class MongFeaComposer(FeaComposer):
                         for position in (init, medi, fina):
                             variants = data.variants[charName].get(position, {})
                             for i in variants.values():
-                                variant = str(Glyph.fromData(charName, position, i))
+                                variant = str(GlyphDescriptor.fromData(charName, position, i))
                                 c.sub(variant, genderMarker, by=variant)
 
     def iii2g(self):
@@ -1311,7 +1327,7 @@ class MongFeaComposer(FeaComposer):
                         glyphClass = cl[letter + "." + position]
                         for fvs, variant in variants.items():
                             if fvs != 0:
-                                variant = str(Glyph.fromData(charName, position, variant))
+                                variant = str(GlyphDescriptor.fromData(charName, position, variant))
                                 c.sub(c.input(glyphClass), f"fvs{fvs}.ignored", by=variant)
 
             with c.Lookup(f"III.fvs.{locale}", feature="rclt"):
@@ -1361,35 +1377,22 @@ class MongFeaComposer(FeaComposer):
             c.sub(c.input("u1880", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
             c.sub(c.input("u1881", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
 
-    def subLigature(
+    def iterLigatureSubstitutions(
         self,
-        ligature: str,
-        positions: list[JoiningPosition],
+        writtens: str,
+        position: JoiningPosition,
         locale: LocaleID,
-        isRequired: bool = True,
-    ):
-        for position in positions:
-            for combination in combineWrittens(ligature, position):
-                writtenLists = [
-                    [
-                        Glyph.parse(glyph.glyph)
-                        for glyph in self.writtens(locale, *units.split(".")).glyphs  # type: ignore
-                    ]
-                    for units in combination
+    ) -> Iterator[tuple[tuple[GlyphDescriptor, ...], GlyphDescriptor]]:
+        for combination in combineWrittens(writtens, position):
+            writtenLists = [
+                [
+                    GlyphDescriptor.parse(glyph.glyph)
+                    for glyph in self.writtens(locale, *units.split(".")).glyphs  # type: ignore
                 ]
-                length = reduce(operator.mul, [len(l) for l in writtenLists], 1)
-                if length > 0:
-                    variantsTuples = [v for v in product(*writtenLists)]
-                    for variants in variantsTuples:
-                        glyphStrings = [str(glyph) for glyph in variants]
-                        ligatureGlyph = str(reduce(operator.add, variants))
-                        if isRequired:
-                            if ligatureGlyph not in self.font:
-                                self.font.newGlyph(ligatureGlyph)  # FIXME
-                            self.sub(*glyphStrings, by=ligatureGlyph)
-                        else:
-                            if ligatureGlyph in self.font:  # FIXME
-                                self.sub(*glyphStrings, by=ligatureGlyph)
+                for units in combination
+            ]
+            for variants in product(*writtenLists):
+                yield variants, reduce(operator.add, variants)
 
     def iib1(self):
         """
@@ -1401,31 +1404,41 @@ class MongFeaComposer(FeaComposer):
         c = self
         cl = self.classes
 
-        breakLigature = c.glyphClass(["nirugu.ignored", cl["fvs.ignored"]])
-        for locale in self.locales:
-            with c.Lookup(
-                f"IIb.ligature.{locale}",
-                feature="rclt",
-                flags={"UseMarkFilteringSet": breakLigature},
-            ):
-                for ligature, positions in data.ligatures["required"].items():
-                    c.subLigature(ligature, positions, locale)
-                for ligature, positions in data.ligatures["optional"].items():
-                    c.subLigature(ligature, positions, locale, isRequired=False)
+        with c.Lookup(
+            f"IIb.ligature",
+            feature="rclt",
+            flags={  # Prevent ligation
+                "UseMarkFilteringSet": c.glyphClass(["nirugu.ignored", cl["fvs.ignored"]])
+            },
+        ):
+            inputToLigature = dict[tuple[GlyphDescriptor, ...], GlyphDescriptor]()
+            for locale in self.locales:
+                for category, ligatureToPositions in data.ligatures.items():
+                    for writtens, positions in ligatureToPositions.items():
+                        for position in positions:
+                            inputToLigature.update(  # Deduplicate inputs
+                                c.iterLigatureSubstitutions(writtens, position, locale)
+                            )
 
-        # special ligatures
-        if {"MNGx", "TODx", "MCH"}.intersection(self.locales):
-            with c.Lookup("IIb.ligature", feature="rclt"):
-                if "MNGx" in self.locales:
-                    c.sub("u18A6.Wp.medi", "u1820.A.fina", by="u18A6_u1820.WpA.fina")
-                    c.sub("u188A.NG.init", "u1820.Aa.fina", by="u188A_u1820.NGAa.isol")
-                    c.sub("u188A.NG.medi", "u1820.Aa.fina", by="u188A_u1820.NGAa.fina")
-                if "TODx" in self.locales:
-                    # TODO
-                    ...
-                if "MCH" in self.locales:
-                    c.sub("u186F.Zs.init", "u1873.I.fina", by="u186F_u1873.Zs.isol")
-                    c.sub("u186F.Zs.medi", "u1873.I.fina", by="u186F_u1873.Zs.fina")
+            for input, ligature in inputToLigature.items():
+                ligatureName = str(ligature)
+                if category == "required" and ligatureName not in self.font:
+                    glyph = self.font.newGlyph(ligatureName)
+                    componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
+                    glyph.components.append(Component(componentName))
+                if ligatureName in self.font:
+                    self.sub(*[str(i) for i in input], by=ligatureName)
+
+            if "MNGx" in self.locales:
+                c.sub("u18A6.Wp.medi", "u1820.A.fina", by="u18A6_u1820.WpA.fina")
+                c.sub("u188A.NG.init", "u1820.Aa.fina", by="u188A_u1820.NGAa.isol")
+                c.sub("u188A.NG.medi", "u1820.Aa.fina", by="u188A_u1820.NGAa.fina")
+            if "TODx" in self.locales:
+                # TODO
+                ...
+            if "MCH" in self.locales:
+                c.sub("u186F.Zs.init", "u1873.I.fina", by="u186F_u1873.Zs.isol")
+                c.sub("u186F.Zs.medi", "u1873.I.fina", by="u186F_u1873.Zs.fina")
 
     def iib2(self):
         """

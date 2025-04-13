@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from collections.abc import Iterator
 from dataclasses import dataclass, field, replace
 from typing import Iterable
 
@@ -31,9 +32,10 @@ def constructFont(font: Font, locales: list[LocaleID]) -> None:
 
 def parseWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
     """
-    >>> parseWrittens("ABC")
-    ['A', 'B', 'C']
+    >>> parseWrittens("ABbCcc")
+    ['A', 'Bb', 'Ccc']
     """
+
     if isinstance(writtens, str):
         return re.sub(r"[A-Z]", lambda x: " " + x[0], writtens).removeprefix(" ").split(" ")
     return list(writtens)
@@ -43,13 +45,13 @@ def getPosition(index: int, length: int):
     return isol if length == 1 else (init if index == 0 else fina if index == length - 1 else medi)
 
 
-def combineWrittens(writtens: str | Iterable[str], position: JoiningPosition) -> list[list[str]]:
+def combineWrittens(writtens: str, position: JoiningPosition) -> Iterator[list[str]]:
     """
-    >>> combineWrittens("ABCD", "isol")
+    >>> [*combineWrittens("ABCD", "isol")]
     [['A.init', 'B.medi', 'C.medi', 'D.fina'], ['A.init', 'B.medi', 'CD.fina'], ['A.init', 'BC.medi', 'D.fina'], ['A.init', 'BCD.fina'], ['AB.init', 'C.medi', 'D.fina'], ['AB.init', 'CD.fina'], ['ABC.init', 'D.fina'], ['ABCD.isol']]
     """
-    parts = list(parseWrittens(writtens) if isinstance(writtens, str) else writtens)
 
+    parts = parseWrittens(writtens)
     if "Lv" in parts:
         index = parts.index("Lv")
         if index > 0:
@@ -57,10 +59,11 @@ def combineWrittens(writtens: str | Iterable[str], position: JoiningPosition) ->
 
     leftJoin = 1 if position in (medi, fina) else 0
     rightJoin = 1 if position in (init, medi) else 0
+    placeholder = "X"
     if leftJoin:
-        parts = ["X"] + parts
+        parts = [placeholder] + parts
     if rightJoin:
-        parts += ["X"]
+        parts += [placeholder]
 
     combinations = [[]]
     for part in parts:
@@ -71,7 +74,6 @@ def combineWrittens(writtens: str | Iterable[str], position: JoiningPosition) ->
                 newCombinations.append(comb[:-1] + [comb[-1] + part])
         combinations = newCombinations
 
-    results = []
     for comb in combinations:
         result = [
             f"{written}.{getPosition(index, len(comb))}" for index, written in enumerate(comb)
@@ -81,8 +83,7 @@ def combineWrittens(writtens: str | Iterable[str], position: JoiningPosition) ->
             == len(list(l for l in str(writtens) if l.isupper()))
             and result
         ):
-            results.append(result)
-    return results
+            yield result
 
 
 @dataclass
