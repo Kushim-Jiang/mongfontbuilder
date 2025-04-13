@@ -81,6 +81,6 @@ for (const [name, data] of Object.entries({
 })) {
   await writeFile(
     `lib/mongfontbuilder/data/${name}.json`,
-    JSON.stringify(data, undefined, 2).replace(/\n/g, "\r\n"),
+    JSON.stringify(data, undefined, 2),
   );
 }
