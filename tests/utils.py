@@ -9,7 +9,8 @@ from mongfontbuilder.data import LocaleID, aliases
 
 import data
 
-repo = Path(__file__).parent / ".."
+testsDir = Path(__file__).parent
+repo = testsDir / ".."
 tempDir = repo / "temp"
 tempDir.mkdir(exist_ok=True)
 

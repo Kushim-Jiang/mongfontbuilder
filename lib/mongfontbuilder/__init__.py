@@ -200,14 +200,6 @@ def constructGlyphSet(
     initPadding: float = 40,
     finaPadding: float = 100,
 ) -> None:
-    sources = list[GlyphDescriptor]()
-    for name in font.keys():
-        try:
-            target = GlyphDescriptor.parse(name)
-        except:
-            continue
-        sources.append(target)
-
     def composeGlyph(name: str, members: list[Glyph | float]) -> Glyph:
         glyph = font.newGlyph(name)
         for member in members:
@@ -220,11 +212,19 @@ def constructGlyphSet(
                 glyph.width += member
         return glyph
 
+    sources = list[GlyphDescriptor]()
+    for name in font.keys():
+        try:
+            target = GlyphDescriptor.parse(name)
+        except:
+            continue
+        sources.append(target)
+
     targetedLocales = {*locales}
     for charName, positionToFVSToVariant in data.variants.items():
         variantNames = list[str]()
         for position, fvsToVariant in positionToFVSToVariant.items():
-            for fvs, variant in fvsToVariant.items():
+            for variant in fvsToVariant.values():
                 if not targetedLocales.intersection(variant.locales):
                     continue
 
@@ -237,24 +237,36 @@ def constructGlyphSet(
                     glyph.unicode = None
                     continue
 
-                idealSource = replace(target, codePoints=[], suffixes=[])
+                memberNames: list[str]
+                writtenTarget = replace(target, codePoints=[], suffixes=[])
                 for source in sources:
-                    if source == idealSource:
+                    if source == writtenTarget:
+                        memberNames = [str(source)]
                         break
                 else:
                     for source in sources:
-                        if replace(source, codePoints=[]) == idealSource:
+                        if replace(source, codePoints=[]) == writtenTarget:
+                            memberNames = [str(source)]
                             break
                     else:
-                        raise StopIteration(idealSource)
-                composeGlyph(
-                    targetName,
-                    [
-                        initPadding if target.pseudoPosition() in ["isol", "init"] else 0,
-                        font[str(source)],
-                        finaPadding if target.pseudoPosition() in ["isol", "fina"] else 0,
-                    ],
-                )
+                        print(target)
+                        for writtenVariants in combineWrittens(
+                            "".join(writtenTarget.units), position
+                        ):
+                            if len(writtenVariants) == len(writtenTarget.units):
+                                print(writtenVariants)
+                                memberNames = ["_" + i for i in writtenVariants]
+                                break
+                        else:
+                            raise NotImplementedError(target)
+
+                members: list[Glyph | float] = [font[i] for i in memberNames]
+                if pseudoPosition := target.pseudoPosition:
+                    if pseudoPosition in ["isol", "init"]:
+                        members = [initPadding, *members]
+                    if pseudoPosition in ["isol", "fina"]:
+                        members = [*members, finaPadding]
+                composeGlyph(targetName, members)
 
         if variantNames:
             codePoint = ord(unicodedata.lookup(charName))
