@@ -10,9 +10,13 @@ export default defineConfig({
     svelte(),
     starlight({
       title: "UTN #57",
-      social: {
-        github: "https://github.com/Kushim-Jiang/mongolian-utn",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/Kushim-Jiang/mongolian-utn",
+        },
+      ],
       editLink: {
         baseUrl:
           "https://github.com/Kushim-Jiang/mongolian-utn/edit/main/docs/",
