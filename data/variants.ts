@@ -1015,6 +1015,7 @@ export const variants: Record<
         written: ["init", 1],
         locales: {
           MNG: {
+            archaic: true,
             gb: "0007 na second isolated form",
             eac: "MND2",
           },
@@ -1415,6 +1416,7 @@ export const variants: Record<
         written: ["init", 1],
         locales: {
           MNG: {
+            archaic: true,
             gb: "00C8 qa second isolated form",
             eac: "MHD2",
           },
@@ -1433,6 +1435,7 @@ export const variants: Record<
         written: ["init", 4],
         locales: {
           MNG: {
+            archaic: true,
             gb: "001B qa fourth isolated form",
             eac: "MHD4",
           },
@@ -1563,6 +1566,7 @@ export const variants: Record<
         written: ["init", 1],
         locales: {
           MNG: {
+            archaic: true,
             gb: "00C7 ga second isolated form",
             eac: "MGD2",
           },
@@ -1581,6 +1585,7 @@ export const variants: Record<
         written: ["init", 4],
         locales: {
           MNG: {
+            archaic: true,
             gb: "001B ga fourth isolated form",
             eac: "MGD4",
           },

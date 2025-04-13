@@ -127,9 +127,9 @@
     background-color: whitesmoke;
   }
   td.archaic {
-    background-color: lightcyan;
+    background-color: beige;
   }
   td.unrecommended {
-    background-color: lightyellow;
+    background-color: pink;
   }
 </style>
