@@ -18,10 +18,13 @@ export default defineConfig({
         },
       ],
       editLink: {
-        baseUrl:
-          "https://github.com/Kushim-Jiang/mongolian-utn/edit/main/docs/",
+        baseUrl: "https://github.com/Kushim-Jiang/mongolian-utn/edit/main/",
       },
       customCss: ["./web/src/custom.css"],
+      components: {
+        ThemeProvider: "./web/src/ThemeProvider.astro",
+        ThemeSelect: "./web/src/ThemeSelect.astro",
+      },
     }),
   ],
 });
