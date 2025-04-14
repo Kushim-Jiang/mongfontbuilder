@@ -34,13 +34,21 @@ class MongFeaComposer(FeaComposer):
     classes: dict[str, ast.GlyphClassDefinition]
     conditions: dict[str, ast.LookupBlock]
     gdef: dict[str, list]
+    otlOnly: bool
 
-    def __init__(self, font: Font, locales: list[LocaleID] = [*allLocales.keys()]) -> None:
+    def __init__(
+        self,
+        font: Font,
+        locales: list[LocaleID] = [*allLocales.keys()],
+        otlOnly: bool = False,
+    ) -> None:
         for locale in locales:
             assert locale.removesuffix("x") in locales
 
         self.font = font
         self.locales = locales
+        self.otlOnly = otlOnly
+
         super().__init__(
             languageSystems={
                 "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in self.locales}
@@ -356,14 +364,12 @@ class MongFeaComposer(FeaComposer):
         )
         aliases = aliases or getAliasesByLocale(locale)
         if isinstance(writtens, Callable):
-            filter, writtens = writtens, list(
-                set(
-                    "".join(self.variant(locale, alias, position, fvs).units)
-                    for alias in aliases
-                    for position in positions
-                    for fvs in data.variants[getCharNameByAlias(locale, alias)][position].keys()
-                )
-            )
+            filter, writtens = writtens, [
+                "".join(self.variant(locale, alias, position, fvs).units)
+                for alias in aliases
+                for position in positions
+                for fvs in data.variants[getCharNameByAlias(locale, alias)][position].keys()
+            ]
         else:
             writtens = [writtens] if isinstance(writtens, str) else list(writtens)
             filter = lambda _: True
@@ -943,31 +949,43 @@ class MongFeaComposer(FeaComposer):
         cd = self.conditions
 
         if {"MNG", "TOD", "SIB", "MCH"}.intersection(self.locales):
+            gLike = lambda locale: c.variants(
+                locale, ["h", "g"] if locale in ["MNG", "TOD"] else ["k", "g", "h"]
+            )
+
             with c.Lookup(
                 "III.k_g_h.onset_and_devsger_and_gender.MNG_TOD_SIB_MCH",
                 feature="rclt",
                 flags={"IgnoreMarks": True},
             ):
+                if "MNG" in self.locales:
+                    c.sub(
+                        c.input(gLike("MNG")),
+                        cl["mvs"],
+                        c.variants("MNG", ["a", "e"], isol),
+                        ignore=True,
+                    )
                 for locale in ["MNG", "TOD", "SIB", "MCH"]:
                     if locale in self.locales:
-                        gLikeAliases = ["h", "g"] if locale in ["MNG", "TOD"] else ["k", "g", "h"]
-                        gLike = c.variants(locale, gLikeAliases)
-
-                        if locale == "MNG":
-                            aLike = c.variants("MNG", ["a", "e"], isol)
-                            c.sub(c.input(gLike), cl["mvs"], aLike, ignore=True)
                         c.sub(
-                            c.input(gLike, cd[f"{locale}:masculine_onset"]),
+                            c.input(gLike(locale), cd[f"{locale}:masculine_onset"]),
                             cl[f"{locale}:vowelMasculine"],
                         )
+
+                for locale in ["MNG", "TOD", "SIB", "MCH"]:
+                    if locale in self.locales:
                         c.sub(
-                            c.input(gLike, cd[f"{locale}:feminine"]),
-                            c.variants(locale, ["vowelFeminine", "vowelNeuter"]),
+                            c.input(gLike(locale), cd[f"{locale}:feminine"]),
+                            c.glyphClass(
+                                [cl[f"{locale}:vowelFeminine"], cl[f"{locale}:vowelNeuter"]]
+                            ),
                         )
+
                 if "MNG" in self.locales:
-                    gLike = c.variants("MNG", ["h", "g"])
-                    c.sub(cl["MNG:vowelMasculine"], c.input(gLike, cd["MNG:masculine_devsger"]))
-                    c.sub(cl["MNG:vowelFeminine"], c.input(gLike, cd["MNG:feminine"]))
+                    c.sub(
+                        cl["MNG:vowelMasculine"], c.input(gLike("MNG"), cd["MNG:masculine_devsger"])
+                    )
+                    c.sub(cl["MNG:vowelFeminine"], c.input(gLike("MNG"), cd["MNG:feminine"]))
                 if "TOD" in self.locales:
                     c.sub(cl["TOD:vowel"], c.input(cl["TOD:g"], cd["TOD:masculine_devsger"]))
                 if "SIB" in self.locales:
@@ -998,7 +1016,7 @@ class MongFeaComposer(FeaComposer):
                 c.sub(c.input(gLike), cl["MNG:vowel"], ignore=True)
                 c.sub(c.input(gLike), masculineMarker, cl["MNG:vowel"], ignore=True)
                 c.sub(c.input(gLike), cl["mvs"], aLike, ignore=True)
-                c.sub(c.input(gLike), cl["mvs"], masculineMarker, aLike, ignore=True)
+                c.sub(c.input(gLike), masculineMarker, cl["mvs"], aLike, ignore=True)
                 c.sub(cl["MNG:i"], c.input(gLike, cd["MNG:masculine_devsger"]), masculineMarker)
                 c.sub(cl["MNG:i"], c.input(cl["MNG:g"], cd["MNG:feminine"]))
 
@@ -1189,7 +1207,7 @@ class MongFeaComposer(FeaComposer):
                     cl["fvs2"],
                     c.input(c.variants("MNG", "i", (medi, fina)), cd["MNG:reset"]),
                 )
-                c.sub(cl["MNG:ue.medi"], cl["fvs1"], c.input(cl["MNG:i"], cd["MNG:vowel_devsger"]))
+                c.sub(cl["MNG:ue.init"], cl["fvs1"], c.input(cl["MNG:i"], cd["MNG:vowel_devsger"]))
 
     def iii5(self):
         """
@@ -1464,7 +1482,10 @@ class MongFeaComposer(FeaComposer):
                 ligatureName = str(ligature)
                 if required and ligatureName not in self.font:
                     componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
-                    composeGlyph(self.font, ligatureName, [self.font[componentName]])
+                    if self.otlOnly:
+                        self.font.newGlyph(ligatureName)
+                    else:
+                        composeGlyph(self.font, ligatureName, [self.font[componentName]])
                 if ligatureName in self.font:
                     self.sub(*[str(i) for i in input], by=ligatureName)
 

@@ -247,7 +247,7 @@ def constructGlyphSet(
                             raise NotImplementedError(target)
 
                 members: list[Glyph | float] = [font[i] for i in memberNames]
-                if pseudoPosition := target.pseudoPosition:
+                if pseudoPosition := target.pseudoPosition():
                     if pseudoPosition in ["isol", "init"]:
                         members = [initPadding, *members]
                     if pseudoPosition in ["isol", "fina"]:

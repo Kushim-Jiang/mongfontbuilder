@@ -1498,8 +1498,10 @@ export const variants: Record<
       },
       "2": {
         written: ["G"],
+        default: true,
         locales: {
           MNG: {
+            conditions: ["feminine"],
             gb: "001E qa third medial form",
             eac: "MHZ3",
           },
@@ -1507,10 +1509,9 @@ export const variants: Record<
       },
       "3": {
         written: ["H"],
-        default: true,
         locales: {
           MNG: {
-            conditions: ["chachlag_onset", "masculine_devsger"],
+            conditions: ["masculine_onset", "masculine_devsger"],
             gb: "0006 qa first medial form",
             eac: "MHZ1",
           },
@@ -1533,6 +1534,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
+            conditions: ["chachlag_onset", "masculine_devsger"],
             gb: "001A qa first final form",
             eac: "MHM1",
           },

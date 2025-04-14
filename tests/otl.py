@@ -5,7 +5,7 @@ from utils import tempDir
 
 
 def main() -> None:
-    composer = MongFeaComposer(font=Font(), locales=[*locales.keys()])
+    composer = MongFeaComposer(font=Font(), locales=[*locales.keys()], otlOnly=True)
     code = composer.asFeatureFile().asFea()
     (tempDir / "otl.fea").write_text(code)
 

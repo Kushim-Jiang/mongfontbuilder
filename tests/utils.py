@@ -24,7 +24,10 @@ writingSystemToLocaleID: dict[str, LocaleID] = {
     "mag": "MCHx",
 }
 
-glyphNameMapping: dict[str, str | None] = {"space": "uni0020.Widespace.nomi"}
+glyphNameMapping: dict[str, str | None] = {
+    "space": "uni0020.Widespace.nomi",
+    "uni0020": "uni0020.Widespace.nomi",
+}
 for filename in ["marks.yaml", "format-controls.yaml", "bases.yaml"]:
     path = files(data) / filename
     with path.open(encoding="utf-8") as f:
@@ -99,11 +102,14 @@ def parse_code(text: str, writing_system: str) -> str:
     return " ".join(result)
 
 
-def test(codes: str, index: str, result: str, goal: str):
+def test(codes: str, index: str, result: str, goal: str, errorCount: int = 0) -> int:
     if result != goal:
+        print("[" + str(errorCount) + "]")
         print(f"ind:  {index}")
         print(f"code: {codes}")
         print(f"res:  {result}\ngoal: {goal}\n=====")
+        errorCount += 1
+    return errorCount
 
 
 def parse_glyphs(text: str, font: Path) -> str:
