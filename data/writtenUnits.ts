@@ -35,7 +35,6 @@ export const writtenUnits = [
   "Dx",
   "Dy",
   "E",
-  "E2",
   "F",
   "G4",
   "G",

@@ -1159,7 +1159,7 @@
       "0": {
         "written": [
           "A",
-          "E2"
+          "W"
         ],
         "default": true,
         "locales": {
@@ -1175,7 +1175,7 @@
       "0": {
         "written": [
           "A",
-          "E2"
+          "W"
         ],
         "default": true,
         "locales": {
@@ -1190,7 +1190,7 @@
     "medi": {
       "0": {
         "written": [
-          "E2"
+          "W"
         ],
         "default": true,
         "locales": {
@@ -1205,7 +1205,7 @@
     "fina": {
       "0": {
         "written": [
-          "E2"
+          "W"
         ],
         "default": true,
         "locales": {

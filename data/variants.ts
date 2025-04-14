@@ -935,7 +935,7 @@ export const variants: Record<
   "MONGOLIAN LETTER EE": {
     isol: {
       "0": {
-        written: ["A", "E2"],
+        written: ["A", "W"],
         default: true,
         locales: {
           MNG: {
@@ -948,7 +948,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["A", "E2"],
+        written: ["A", "W"],
         default: true,
         locales: {
           MNG: {
@@ -961,7 +961,7 @@ export const variants: Record<
     },
     medi: {
       "0": {
-        written: ["E2"],
+        written: ["W"],
         default: true,
         locales: {
           MNG: {
@@ -974,7 +974,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["E2"],
+        written: ["W"],
         default: true,
         locales: {
           MNG: {
