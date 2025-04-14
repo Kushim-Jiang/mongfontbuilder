@@ -8,7 +8,7 @@ from itertools import product
 from fontTools import unicodedata
 from fontTools.feaLib import ast
 from tptq.feacomposer import AnyGlyph, ContextualInput, FeaComposer, _NormalizedAnyGlyph
-from ufoLib2.objects import Component, Font
+from ufoLib2.objects import Font
 
 from . import (
     GlyphDescriptor,
@@ -33,6 +33,7 @@ class MongFeaComposer(FeaComposer):
     locales: list[LocaleID]
     classes: dict[str, ast.GlyphClassDefinition]
     conditions: dict[str, ast.LookupBlock]
+    gdef: dict[str, list]
 
     def __init__(self, font: Font, locales: list[LocaleID] = [*allLocales.keys()]) -> None:
         for locale in locales:
@@ -47,6 +48,7 @@ class MongFeaComposer(FeaComposer):
         )
         self.classes = {}
         self.conditions = {}
+        self.gdef = {}
 
         self.initControls()
         self.initVariants()
@@ -65,6 +67,8 @@ class MongFeaComposer(FeaComposer):
         self.iib3()
         self.ib1()
         self.ib2()
+
+        self.writeGdef()
 
     def rsub(
         self, *glyphs: AnyGlyph | ContextualInput, by: AnyGlyph
@@ -99,6 +103,22 @@ class MongFeaComposer(FeaComposer):
         self.current.append(definition)
         return definition
 
+    def newGlyph(self, name: str):
+        self.font.lib.get("public.glyphOrder", []).append(name)
+        return self.font.newGlyph(name)
+
+    def writeGdef(self):
+        gdefBlock = ast.TableBlock("GDEF")
+        gdefBlock.statements.append(
+            ast.GlyphClassDefStatement(
+                baseGlyphs=self.glyphClass(self.gdef.get("base", [])),
+                ligatureGlyphs=self.glyphClass(self.gdef.get("ligature", [])),
+                markGlyphs=self.glyphClass(self.gdef.get("mark", [])),
+                componentGlyphs=self.glyphClass(self.gdef.get("component", [])),
+            )
+        )
+        self.current.append(gdefBlock)
+
     def initControls(self):
         """
         Initialize glyph classes and condition lookups for control characters.
@@ -115,8 +135,7 @@ class MongFeaComposer(FeaComposer):
             variants = [fvs]
             for suffix in [".valid", ".ignored"]:
                 variant = fvs + suffix
-                self.font.lib.get("public.glyphOrder", []).append(variant)
-                self.font.newGlyph(variant)
+                self.newGlyph(variant)
                 variants.append(variant)
             self.classes[fvs] = self.namedGlyphClass(fvs, variants)
 
@@ -131,12 +150,19 @@ class MongFeaComposer(FeaComposer):
         }.items():
             self.classes[name] = self.namedGlyphClass(name, items)
 
+        self.gdef.setdefault("base", []).extend([self.classes["fvs.invalid"], self.classes["mvs"]])
+        self.gdef.setdefault("mark", []).extend(
+            [self.classes["fvs.valid"], self.classes["fvs.ignored"]]
+        )
+
         with self.Lookup("_.ignored") as _ignored:
             for original in ["nirugu", "zwj", "zwnj"]:
                 variant = original + ".ignored"
-                self.font.lib.get("public.glyphOrder", []).append(variant)
-                self.font.newGlyph(variant)
+                self.newGlyph(variant)
                 self.sub(original, by=variant)
+
+            self.gdef.setdefault("base", []).extend(["nirugu", "zwj", "zwnj", "zwj.ignored"])
+            self.gdef.setdefault("mark", []).extend(["nirugu.ignored", "zwnj.ignored"])
 
             for fvs in fvses:
                 for suffix in ["", ".valid"]:
@@ -449,8 +475,7 @@ class MongFeaComposer(FeaComposer):
             )
         )
         if marked and name not in self.font:
-            self.font.lib.get("public.glyphOrder", []).append(name)
-            self.font.newGlyph(name)
+            self.newGlyph(name)
         return name
 
     def iii0b(self):
@@ -467,8 +492,8 @@ class MongFeaComposer(FeaComposer):
 
         # add masculine
 
-        self.font.lib.get("public.glyphOrder", []).append(masculineMarker)
-        self.font.newGlyph(masculineMarker)
+        self.newGlyph(masculineMarker)
+        self.gdef.setdefault("mark", []).append(masculineMarker)
 
         with c.Lookup("III.ig.preprocessing.A", feature="rclt"):
             for alias in ct["vowelMasculine"]:
@@ -495,8 +520,8 @@ class MongFeaComposer(FeaComposer):
 
         # add feminine
 
-        self.font.lib.get("public.glyphOrder", []).append(feminineMarker)
-        self.font.newGlyph(feminineMarker)
+        self.newGlyph(feminineMarker)
+        self.gdef.setdefault("mark", []).append(feminineMarker)
 
         with c.Lookup("III.ig.preprocessing.D", feature="rclt"):
             for alias in ct["vowelFeminine"]:
@@ -1383,6 +1408,8 @@ class MongFeaComposer(FeaComposer):
             with c.Lookup("III.fvs.punctuation", feature="rclt"):
                 c.sub(c.input("u1880", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
                 c.sub(c.input("u1881", _lvs), c.input("fvs1.ignored", cd["_.valid"]))
+
+            self.gdef.setdefault("mark", []).extend(["u1885", "u1886", "u18A9"])
 
     def iterLigatureSubstitutions(
         self,
