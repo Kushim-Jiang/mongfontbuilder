@@ -51,6 +51,6 @@
     color: black;
   }
   span.context {
-    opacity: 0.25;
+    color: hsl(0 0 0 / 0.25);
   }
 </style>
