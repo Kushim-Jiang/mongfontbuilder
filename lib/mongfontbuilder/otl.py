@@ -12,12 +12,12 @@ from ufoLib2.objects import Font
 
 from . import (
     GlyphDescriptor,
-    combineWrittens,
     composeGlyph,
     data,
     getPosition,
-    parseWrittens,
+    splitWrittens,
     uNameFromCodePoint,
+    writtenCombinations,
 )
 from .data import locales as allLocales
 from .data.misc import JoiningPosition, fina, init, isol, joiningPositions, medi
@@ -384,7 +384,7 @@ class MongFeaComposer(FeaComposer):
                             w
                             for fvs in data.variants[charName][position].keys()
                             if (w := self.variant(locale, alias, position, fvs)).units
-                            == parseWrittens(written)
+                            == splitWrittens(written)
                             and filter(w.units)
                         ]
                     else:
@@ -1435,7 +1435,7 @@ class MongFeaComposer(FeaComposer):
         position: JoiningPosition,
         locale: LocaleID,
     ) -> Iterator[tuple[tuple[GlyphDescriptor, ...], GlyphDescriptor]]:
-        for combination in combineWrittens(writtens, position):
+        for combination in writtenCombinations(writtens, position):
             writtenLists = [
                 [
                     GlyphDescriptor.parse(glyph.glyph)
@@ -1513,8 +1513,11 @@ class MongFeaComposer(FeaComposer):
 
         with c.Lookup("IIb.controls.postprocessing", feature="rclt"):
             c.sub(
-                c.input(c.glyphClass(["nirugu.ignored", cl["fvs.ignored"], "mvs"]), cd["_.reset"]),
+                c.input(c.glyphClass(["nirugu.ignored", cl["fvs.ignored"]]), cd["_.reset"]),
             )
+
+        with c.Lookup("IIb.mvs.postprocessing", feature="rclt"):
+            c.sub("mvs", by=["mvs", "zwnj.ignored"])
 
     def iib3(self):
         """

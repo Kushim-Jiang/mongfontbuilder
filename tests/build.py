@@ -18,7 +18,7 @@ parser.add_argument("font", type=Path)
 parser.add_argument(
     "--glyph-name-mapping",
     type=Path,
-    help="A maping from source glyph names to UTN glyph names, in YAML format.",
+    help="A mapping from source glyph names to UTN glyph names, in YAML format.",
 )
 parser.add_argument("--family-name")
 parser.add_argument("--output-dir", type=Path)

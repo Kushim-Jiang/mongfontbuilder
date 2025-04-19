@@ -6,6 +6,7 @@ from pathlib import Path
 import yaml
 from fontTools import unicodedata
 from mongfontbuilder.data import LocaleID, aliases
+from mongfontbuilder.utils import namespaceFromLocale
 
 import data
 
@@ -97,7 +98,7 @@ def parse_code(text: str, writing_system: str) -> str:
         if isinstance(alias, str):
             result.append(alias)
         else:
-            result.append(alias[localeID])
+            result.append(alias[namespaceFromLocale(localeID)])
 
     return " ".join(result)
 

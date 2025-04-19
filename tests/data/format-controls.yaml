@@ -5,7 +5,6 @@ fvs4: uni180F.Fvs4.nomi
 lvs.ignored: uni1843.Lv.mark
 mvs: uni180E.Mvs.nomi
 mvs.narrow: uni180E.Narrowspace.nomi
-mvs.nominal: uni180E.Wide.nomi
 mvs.wide: uni180E.Widespace.nomi
 nirugu: uni180A.Nirugu.medi
 nirugu.extend:

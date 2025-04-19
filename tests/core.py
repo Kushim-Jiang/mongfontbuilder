@@ -33,7 +33,7 @@ def main(font: Path, testInfo: dict[str, list[str]]) -> None:
                         errorCount=errorCount,
                     )
                 except StopIteration:
-                    print("[ " + str(errorCount) + " ]")
+                    print("[" + str(errorCount) + "]")
                     print(f"ind:  {testSet}-{writingSystem} > {index}")
                     print(f"code: {letters}")
                     print("err:  no glyph found")

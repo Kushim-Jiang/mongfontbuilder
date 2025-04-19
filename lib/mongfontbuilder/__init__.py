@@ -30,7 +30,7 @@ def constructFont(font: Font, locales: list[LocaleID]) -> None:
     font.features.text = composer.asFeatureFile().asFea().replace(":", "-")  # HACK
 
 
-def parseWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
+def splitWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
     """
     >>> parseWrittens("ABbCcc")
     ['A', 'Bb', 'Ccc']
@@ -45,13 +45,13 @@ def getPosition(index: int, length: int):
     return isol if length == 1 else (init if index == 0 else fina if index == length - 1 else medi)
 
 
-def combineWrittens(writtens: str, position: JoiningPosition) -> Iterator[list[str]]:
+def writtenCombinations(writtens: str, position: JoiningPosition) -> Iterator[list[str]]:
     """
     >>> [*combineWrittens("ABCD", "isol")]
     [['A.init', 'B.medi', 'C.medi', 'D.fina'], ['A.init', 'B.medi', 'CD.fina'], ['A.init', 'BC.medi', 'D.fina'], ['A.init', 'BCD.fina'], ['AB.init', 'C.medi', 'D.fina'], ['AB.init', 'CD.fina'], ['ABC.init', 'D.fina'], ['ABCD.isol']]
     """
 
-    parts = parseWrittens(writtens)
+    parts = splitWrittens(writtens)
     if "Lv" in parts:
         index = parts.index("Lv")
         if index > 0:
@@ -107,7 +107,7 @@ class GlyphDescriptor:
             if name.startswith("_")
             else name  # u1820.A.init
         ).split(".")
-        units = parseWrittens(y)
+        units = splitWrittens(y)
         assert units and all(i in data.writtenUnits for i in units), name
         assert position in data.types.joiningPositions, name
         instance = cls(
@@ -237,7 +237,7 @@ def constructGlyphSet(
                             memberNames = [str(source)]
                             break
                     else:
-                        for writtenVariants in combineWrittens(
+                        for writtenVariants in writtenCombinations(
                             "".join(writtenTarget.units), writtenTarget.position
                         ):
                             if len(writtenVariants) == len(writtenTarget.units):
