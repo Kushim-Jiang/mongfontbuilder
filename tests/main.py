@@ -1,4 +1,5 @@
-from os import environ, path
+from os import environ
+from os.path import relpath
 from subprocess import run
 
 from fontTools.ttLib import TTFont
@@ -7,31 +8,20 @@ from ufoLib2 import Font
 from utils import tempDir, testsDir
 
 
-def main(debug: bool = False) -> None:
-    if debug:
-        environ["FONTTOOLS_LOOKUP_DEBUGGING"] = "1"
-
+def main() -> None:
     output = tempDir / "build.ufo"
     run(
-        [
-            "poetry",
-            "run",
-            "python",
-            "-m",
-            "mongfontbuilder",
-            testsDir / "hudum.ufo",
-            output,
-            "--locales",
-            "MNG",
-        ]
+        ["poetry", "run", "python", "-m", "mongfontbuilder"]
+        + [testsDir / "hudum.ufo", output, "--locales", "MNG"]
     )
 
+    environ["FONTTOOLS_LOOKUP_DEBUGGING"] = "1"  # For feaLib.builder.Builder
     font: TTFont = OTFCompiler().compile(Font.open(output))
 
     output = output.with_suffix(".otf")
     font.save(output)
-    print(path.relpath(output))
+    print(relpath(output))
 
 
 if __name__ == "__main__":
-    main(debug=True)
+    main()
