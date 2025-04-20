@@ -1130,8 +1130,8 @@ class MongFeaComposer(FeaComposer):
                             else:
                                 subArgs.append(glyphClass)
                                 ignoreSubArgs.append(glyphClass)
-                        c.sub(*subArgs)
                         c.sub(*ignoreSubArgs, cl["fvs"], ignore=True)
+                        c.sub(*subArgs)
 
         if "TOD" in self.locales:
             with c.Lookup("TOD:particle") as _particle:
@@ -1226,6 +1226,7 @@ class MongFeaComposer(FeaComposer):
             bowedB = c.namedGlyphClass("MNG:bowedB", c.variants("MNG", ["b", "p", "f"]))
             bowedK = c.namedGlyphClass("MNG:bowedK", c.variants("MNG", ["k", "k2"]))
             bowedG = c.namedGlyphClass("MNG:bowedG", c.writtens("MNG", ["G", "Gx"]))
+
             with c.Lookup("III.vowel.post_bowed.MNG", feature="rclt", flags={"IgnoreMarks": True}):
                 bowed = c.glyphClass([bowedB, bowedK, bowedG])
                 c.sub(bowed, c.input(c.glyphClass(["u1825.Ue.fina", "u1826.Ue.fina"])), ignore=True)
@@ -1239,10 +1240,14 @@ class MongFeaComposer(FeaComposer):
                 )
                 c.sub(bowedG, c.input(c.variants("MNG", "e", fina), cd["MNG:post_bowed"]))
 
+            with c.Lookup("III.fvs.post_bowed.preprocessing.GB", feature="rclt"):
+                c.sub(
+                    c.glyphClass([bowedB, bowedK, bowedG]),
+                    c.input(cl["fvs.ignored"], cd["_.reset"]),
+                )
+
             with c.Lookup(
-                "III.vowel.post_bowed.MNG.GB",
-                feature="rclt",
-                flags={"UseMarkFilteringSet": cl["fvs"]},
+                "III.vowel.post_bowed.MNG.GB", feature="rclt", flags={"IgnoreMarks": True}
             ):
                 hgVariants = c.variants("MNG", ["h", "g"])
                 c.sub(
@@ -1279,6 +1284,12 @@ class MongFeaComposer(FeaComposer):
                     c.variants("MNG", ["g", "h"], init),
                     c.glyphClass([cl["fvs2"], cl["fvs4"]]),
                     c.input(c.variants("MNG", ["oe", "ue"], fina), cd["MNG:marked"]),
+                )
+
+            with c.Lookup("III.fvs.post_bowed.postprocessing.GB", feature="rclt"):
+                c.sub(
+                    c.glyphClass([bowedB, bowedK, bowedG]),
+                    c.input(cl["fvs.invalid"], cd["_.ignored"]),
                 )
 
         if "MNGx" in self.locales:
@@ -1515,9 +1526,6 @@ class MongFeaComposer(FeaComposer):
             c.sub(
                 c.input(c.glyphClass(["nirugu.ignored", cl["fvs.ignored"]]), cd["_.reset"]),
             )
-
-        with c.Lookup("IIb.mvs.postprocessing", feature="rclt"):
-            c.sub("mvs", by=["mvs", "zwnj.ignored"])
 
     def iib3(self):
         """
