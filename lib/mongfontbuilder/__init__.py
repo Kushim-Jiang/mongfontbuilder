@@ -23,7 +23,7 @@ from .data.misc import fina, init, isol, medi
 def constructFont(font: Font, locales: list[LocaleID]) -> None:
     from .otl import MongFeaComposer
 
-    constructGlyphSet(font, locales)
+    constructPredefinedGlyphs(font, locales)
 
     composer = MongFeaComposer(font, locales)
     assert not font.features.text, font.features.text
@@ -193,7 +193,7 @@ def uNameFromCodePoint(codePoint: int) -> str:
 pseudoPositionSuffixes = ["_" + i for i in data.misc.joiningPositions]
 
 
-def constructGlyphSet(
+def constructPredefinedGlyphs(
     font: Font,
     locales: list[LocaleID],
     *,

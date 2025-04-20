@@ -29,25 +29,22 @@ masculineMarker, feminineMarker = "_masculine", "_feminine"
 
 @dataclass
 class MongFeaComposer(FeaComposer):
-    font: Font
+    font: Font | None
     locales: list[LocaleID]
     classes: dict[str, ast.GlyphClassDefinition]
     conditions: dict[str, ast.LookupBlock]
     gdef: dict[str, list]
-    otlOnly: bool
 
     def __init__(
         self,
-        font: Font,
+        font: Font | None,
         locales: list[LocaleID] = [*allLocales.keys()],
-        otlOnly: bool = False,
     ) -> None:
         for locale in locales:
             assert locale.removesuffix("x") in locales
 
         self.font = font
         self.locales = locales
-        self.otlOnly = otlOnly
 
         super().__init__(
             languageSystems={
@@ -112,8 +109,9 @@ class MongFeaComposer(FeaComposer):
         return definition
 
     def newGlyph(self, name: str):
-        self.font.lib.get("public.glyphOrder", []).append(name)
-        return self.font.newGlyph(name)
+        if self.font is not None:
+            self.font.lib.get("public.glyphOrder", []).append(name)
+            return self.font.newGlyph(name)
 
     def writeGdef(self):
         gdefBlock = ast.TableBlock("GDEF")
@@ -480,7 +478,7 @@ class MongFeaComposer(FeaComposer):
                 suffixes=["marked"] if marked else [],
             )
         )
-        if marked and name not in self.font:
+        if marked and name not in (self.font or []):
             self.newGlyph(name)
         return name
 
@@ -1490,15 +1488,16 @@ class MongFeaComposer(FeaComposer):
                                 inputToLigatureAndRequired[input] = ligature, category == "required"
 
             for input, (ligature, required) in inputToLigatureAndRequired.items():
+                input = [str(i) for i in input]
                 ligatureName = str(ligature)
-                if required and ligatureName not in self.font:
-                    componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
-                    if self.otlOnly:
-                        self.font.newGlyph(ligatureName)
-                    else:
+                if self.font is None:
+                    self.sub(*input, by=ligatureName)
+                else:
+                    if required and ligatureName not in self.font:
+                        componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
                         composeGlyph(self.font, ligatureName, [self.font[componentName]])
-                if ligatureName in self.font:
-                    self.sub(*[str(i) for i in input], by=ligatureName)
+                    if ligatureName in self.font:
+                        self.sub(*input, by=ligatureName)
 
             if "MNGx" in self.locales:
                 c.sub("u18A6.Wp.medi", "u1820.A.fina", by="u18A6_u1820.WpA.fina")
