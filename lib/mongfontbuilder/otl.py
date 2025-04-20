@@ -19,7 +19,6 @@ from . import (
     uNameFromCodePoint,
     writtenCombinations,
 )
-from .data import locales as allLocales
 from .data.misc import JoiningPosition, fina, init, isol, joiningPositions, medi
 from .data.types import FVS, LocaleID
 from .utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
@@ -38,7 +37,7 @@ class MongFeaComposer(FeaComposer):
     def __init__(
         self,
         font: Font | None,
-        locales: list[LocaleID] = [*allLocales.keys()],
+        locales: list[LocaleID] = [*data.locales],
     ) -> None:
         for locale in locales:
             assert locale.removesuffix("x") in locales
@@ -1476,16 +1475,26 @@ class MongFeaComposer(FeaComposer):
                 tuple[GlyphDescriptor, ...], tuple[GlyphDescriptor, bool]
             ]()
             for locale in self.locales:
+                namespace = namespaceFromLocale(locale)
+                vowelAliases = data.locales[locale].categories["vowel"]
                 for category, ligatureToPositions in data.ligatures.items():
                     for writtens, positions in ligatureToPositions.items():
                         for position in positions:
-                            for (
-                                input,
-                                ligature,
-                            ) in c.iterLigatureSubstitutions(  # Deduplicate inputs
+                            for input, ligature in c.iterLigatureSubstitutions(
                                 writtens, position, locale
                             ):
-                                inputToLigatureAndRequired[input] = ligature, category == "required"
+                                if len(input) != 2:
+                                    continue
+                                if required := category == "required":
+                                    # Check the second glyph, ignoring LVS:
+                                    codePoint = input[1].codePoints[0]
+                                    alias = data.aliases[unicodedata.name(chr(codePoint))]
+                                    if isinstance(alias, dict):
+                                        alias = alias[namespace]
+                                    if alias not in vowelAliases:
+                                        continue
+                                # Deduplicate inputs:
+                                inputToLigatureAndRequired[input] = ligature, required
 
             for input, (ligature, required) in inputToLigatureAndRequired.items():
                 input = [str(i) for i in input]
