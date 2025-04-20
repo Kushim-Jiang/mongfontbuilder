@@ -16,7 +16,7 @@ def main() -> None:
     )
 
     environ["FONTTOOLS_LOOKUP_DEBUGGING"] = "1"  # For feaLib.builder.Builder
-    font: TTFont = OTFCompiler().compile(Font.open(output))
+    font: TTFont = OTFCompiler(useProductionNames=False).compile(Font.open(output))
 
     output = output.with_suffix(".otf")
     font.save(output)
