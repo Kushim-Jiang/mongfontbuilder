@@ -84,8 +84,7 @@
       <tr>
         <td id={alias} {rowspan} title="U+{hex} {char} {charName}">
           {hex}<br />
-          {char}<br />
-          <i>{alias}</i>
+          {char} <i>{alias}</i>
         </td>
         {@render variantCells(charName, positionToFVSToLocalizedVariant, fvs)}
       </tr>

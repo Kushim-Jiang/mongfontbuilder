@@ -82,11 +82,18 @@
   </thead>
   <tbody>
     {#each charNameToConditionToPositionToFVS as [charName, { default: defaultPositionToFVS, conditions: conditionToPositionToFVS }]}
-      {@const cp = nameToCP.get(charName)!}
-      {@const char = String.fromCodePoint(cp)}
-      {@const alias = aliases[charName]}
+      {@const codePoint = nameToCP.get(charName)!}
+      {@const hex = hexFromCP(codePoint)}
+      {@const char = String.fromCodePoint(codePoint)}
+      {@const aliasData = aliases[charName]}
+      {@const alias = typeof aliasData == "object" ? aliasData[localeNamespace] : aliasData}
       <tr>
-        <td rowspan={conditionToPositionToFVS.size + 1} title="U+{hexFromCP(cp)} {char} {charName}"> {char} <i>{typeof alias == "object" ? alias[locale.slice(0, 3) as LocaleNamespace] : alias}</i></td>
+        <td rowspan={conditionToPositionToFVS.size + 1} title="U+{hex} {char} {charName}">
+          <a href="#{alias}"
+            >{hex}<br />
+            {char} <i>{alias}</i></a
+          >
+        </td>
         <td class="default">default</td>
         {#each joiningPositions as position}
           <td class="default">
@@ -126,5 +133,8 @@
   }
   td.default {
     background-color: whitesmoke;
+  }
+  td a {
+    text-decoration: none;
   }
 </style>
