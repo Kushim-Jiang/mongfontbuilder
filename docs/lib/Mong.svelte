@@ -2,7 +2,6 @@
   interface Props {
     written: string;
   }
-
   let { written }: Props = $props();
 </script>
 
@@ -11,6 +10,5 @@
 <style>
   span {
     font-variant-caps: all-small-caps;
-    background-color: linen;
   }
 </style>

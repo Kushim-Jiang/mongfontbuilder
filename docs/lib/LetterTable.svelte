@@ -17,9 +17,10 @@
   const charNameToPositionToFVSToLocalizedVariant = new Map<string, Map<JoiningPosition, Map<FVS, LocalizedVariant>>>();
 
   const localeNamespace = locale.slice(0, 3) as LocaleNamespace;
-  const orderedAlias = [...locales[locale].categories.vowel, ...locales[locale].categories.consonant];
+  const orderedAliases = [...locales[locale].categories.vowel, ...locales[locale].categories.consonant];
+
   let charName = "";
-  for (const alias of orderedAlias) {
+  for (const alias of orderedAliases) {
     for (const [charName_, localeToAlias] of Object.entries(aliases)) {
       // @ts-ignore
       if (localeToAlias[localeNamespace] === alias) {
@@ -58,33 +59,10 @@
   }
 </script>
 
-{#snippet variantCells(charName: string, positionToFVSToLocalizedVariant: Map<JoiningPosition, Map<FVS, LocalizedVariant>>, fvs: FVS)}
-  <td>{fvs || "-"}</td>
-  {#each positionToFVSToLocalizedVariant as [position, fvsToLocalizedVariant]}
-    {@const variant = fvsToLocalizedVariant.get(fvs)}
-    <td
-      class={{
-        variant: true,
-        undefined: !variant,
-        // @ts-ignore
-        fabricated: joiningPositions.includes(variant?.written[0]),
-        archaic: variant?.archaic,
-        unrecommended: variant?.unrecommended,
-      }}
-    >
-      {#if variant}
-        <span><LetterVariant {charName} {position} {fvs} /></span><br />
-        {variant.written.join(" ")}
-      {/if}
-    </td>
-  {/each}
-{/snippet}
-
 <table>
   <thead>
     <tr>
-      <th rowspan="2">Code point</th>
-      <th rowspan="2">Alias</th>
+      <th rowspan="2">Letter</th>
       <th rowspan="2">FVS</th>
       <th colspan="4">Variants</th>
     </tr>
@@ -96,12 +74,19 @@
   </thead>
   <tbody>
     {#each charNameToPositionToFVSToLocalizedVariant as [charName, positionToFVSToLocalizedVariant]}
-      {@const alias = aliases[charName]}
+      {@const codePoint = nameToCP.get(charName)!}
+      {@const hex = hexFromCP(codePoint)}
+      {@const char = String.fromCodePoint(codePoint)}
+      {@const aliasData = aliases[charName]}
+      {@const alias = typeof aliasData == "object" ? aliasData[localeNamespace] : aliasData}
       {@const rowspan = new Set([...positionToFVSToLocalizedVariant.values()].flatMap((i) => [...i.keys()])).size}
       {@const fvs = 0}
       <tr>
-        <td {rowspan} title={charName}>{hexFromCP(nameToCP.get(charName)!)}</td>
-        <td {rowspan}><i>{typeof alias == "object" ? alias[localeNamespace] : alias}</i></td>
+        <td id={alias} {rowspan} title="U+{hex} {char} {charName}">
+          {hex}<br />
+          {char}<br />
+          <i>{alias}</i>
+        </td>
         {@render variantCells(charName, positionToFVSToLocalizedVariant, fvs)}
       </tr>
       {#each getSortedFVSKeys(positionToFVSToLocalizedVariant) as fvs}
@@ -112,6 +97,35 @@
     {/each}
   </tbody>
 </table>
+
+{#snippet variantCells(charName: string, positionToFVSToLocalizedVariant: Map<JoiningPosition, Map<FVS, LocalizedVariant>>, fvs: FVS)}
+  <td>{fvs || "-"}</td>
+  {#each positionToFVSToLocalizedVariant as [position, fvsToLocalizedVariant]}
+    {@const variant = fvsToLocalizedVariant.get(fvs)}
+    {@const fabricated = joiningPositions.includes(variant?.written[0] as any)}
+    <td
+      class={{
+        variant: true,
+        undefined: !variant,
+        fabricated,
+        archaic: variant?.archaic,
+        unrecommended: variant?.unrecommended,
+      }}
+    >
+      {#if variant}
+        <span><LetterVariant {charName} {position} {fvs} /></span><br />
+        {#if fabricated}
+          → {variant.written.join(" ")}
+        {:else}
+          {#each variant.written as unit, index}
+            {index ? " " : ""}
+            <a href="#{unit}">{unit}</a>
+          {/each}
+        {/if}
+      {/if}
+    </td>
+  {/each}
+{/snippet}
 
 <style>
   td,
@@ -131,5 +145,11 @@
   }
   td.unrecommended {
     background-color: pink;
+  }
+  td:target {
+    background-color: yellow;
+  }
+  td a {
+    text-decoration: none;
   }
 </style>
