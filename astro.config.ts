@@ -9,7 +9,27 @@ export default defineConfig({
   integrations: [
     svelte(),
     starlight({
-      title: "UTN #57",
+      title: "UTN #57 (Editor’s Draft)",
+      sidebar: [
+        {
+          label: "Introduction",
+          slug: "index",
+        },
+        "architecture",
+        {
+          label: "Writing systems",
+          items: [
+            "hudum",
+            "todo",
+            "sibe",
+            "manchu",
+            "hudum-ali-gali",
+            "todo-ali-gali",
+            "manchu-ali-gali",
+          ],
+        },
+        "comparison",
+      ],
       social: [
         {
           icon: "github",
