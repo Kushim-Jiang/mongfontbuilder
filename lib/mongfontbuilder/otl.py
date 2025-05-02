@@ -316,7 +316,7 @@ class MongFeaComposer(FeaComposer):
         positions: JoiningPosition | Iterable[JoiningPosition] | None = None,
     ) -> ast.GlyphClass:
         """
-        >>> composer = MongFeaComposer(Font())
+        >>> composer = MongFeaComposer(font=None)
         >>> composer.variants("MNG", ["a", "o", "u"], fina).asFea()
         '[@MNG:a.fina @MNG:o.fina @MNG:u.fina]'
         """
@@ -332,7 +332,7 @@ class MongFeaComposer(FeaComposer):
         self, locale: LocaleID, alias: str, position: JoiningPosition, fvs: FVS = 0
     ) -> GlyphDescriptor:
         """
-        >>> composer = MongFeaComposer(Font())
+        >>> composer = MongFeaComposer(font=None)
         >>> str(composer.variant("MCH", "zr", fina))
         'u1877.Jc.medi._fina'
         >>> str(composer.variant("MCHx", "zr", fina))
@@ -350,7 +350,7 @@ class MongFeaComposer(FeaComposer):
         aliases: list[str] = [],
     ) -> ast.GlyphClass:
         """
-        >>> composer = MongFeaComposer(Font(), ["MNG"])
+        >>> composer = MongFeaComposer(font=None)
         >>> composer.writtens("MNG", "A", medi).asFea()
         '[u1820.A.medi u1821.A.medi u1828.A.medi]'
         """
@@ -446,8 +446,13 @@ class MongFeaComposer(FeaComposer):
         cd = self.conditions
 
         with c.Lookup("III.controls.preprocessing", feature="rclt"):
-            c.sub(c.input("mvs", cd["_.reset"]))
             c.sub(c.input(c.glyphClass(["zwnj", "zwj", "nirugu", cl["fvs"]]), cd["_.ignored"]))
+
+        with c.Lookup("III.mvs.preserving.A", feature="rclt"):
+            c.sub("mvs", by=["mvs.wide", "mvs.wide"])
+
+        with c.Lookup("III.mvs.preserving.B", feature="rclt"):
+            c.sub("mvs.wide", "mvs.wide", by="mvs")
 
         for locale in ["TOD", "TODx"]:
             if locale in self.locales:

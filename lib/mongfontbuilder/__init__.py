@@ -32,7 +32,7 @@ def constructFont(font: Font, locales: list[LocaleID]) -> None:
 
 def splitWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
     """
-    >>> parseWrittens("ABbCcc")
+    >>> splitWrittens("ABbCcc")
     ['A', 'Bb', 'Ccc']
     """
 
@@ -47,7 +47,7 @@ def getPosition(index: int, length: int):
 
 def writtenCombinations(writtens: str, position: JoiningPosition) -> Iterator[list[str]]:
     """
-    >>> [*combineWrittens("ABCD", "isol")]
+    >>> [*writtenCombinations("ABCD", "isol")]
     [['A.init', 'B.medi', 'C.medi', 'D.fina'], ['A.init', 'B.medi', 'CD.fina'], ['A.init', 'BC.medi', 'D.fina'], ['A.init', 'BCD.fina'], ['AB.init', 'C.medi', 'D.fina'], ['AB.init', 'CD.fina'], ['ABC.init', 'D.fina'], ['ABCD.isol']]
     """
 
