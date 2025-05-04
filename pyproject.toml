@@ -1,6 +1,6 @@
 [project]
 name = "mongfontbuilder"
-version = "0.4.1"
+version = "0.4.2"
 description = "Mongolian Font Builder."
 license = { text = "MIT" }
 readme = "README.md"
@@ -13,11 +13,12 @@ urls.releasenotes = "https://github.com/Kushim-Jiang/mongfontbuilder/releases"
 requires-python = ">= 3.10.0, < 4.0.0"
 dependencies = [
     "cattrs >= 24.1.2, < 25.0.0",
-    "fontmake >= 3.7.1, < 4.0.0",
     "PyYAML >= 6.0.1, < 7.0.0",
     "tptq.feacomposer >= 1.5.0, < 2.0.0",
-    "unicodedata2 >= 16.0.0",
+    "ufo2ft >= 3.4.3, < 4.0.0",
+    "ufolib2 >= 0.17.1, < 0.18.0",
     "ufonormalizer >= 0.6.2, < 0.7.0",
+    "unicodedata2 >= 16.0.0",
 ]
 
 [tool.poetry]
