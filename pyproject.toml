@@ -1,10 +1,15 @@
 [project]
 name = "mongfontbuilder"
-version = "0.3.2"
+version = "0.4.0"
+description = "Mongolian Font Builder."
+license = { text = "MIT" }
+readme = "README.md"
 authors = [
     { name = "Kushim Jiang", email = "kushim_jiang@outlook.com" },
     { name = "Liang Hai", email = "lianghai@gmail.com" },
 ]
+urls.repository = "https://github.com/Kushim-Jiang/mongfontbuilder"
+urls.releasenotes = "https://github.com/Kushim-Jiang/mongfontbuilder/releases"
 requires-python = ">= 3.10.0, < 4.0.0"
 dependencies = [
     "cattrs >= 24.1.2, < 25.0.0",
