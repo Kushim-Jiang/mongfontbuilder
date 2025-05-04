@@ -107,11 +107,6 @@ class MongFeaComposer(FeaComposer):
         self.current.append(definition)
         return definition
 
-    def newGlyph(self, name: str):
-        if self.font is not None:
-            self.font.lib.get("public.glyphOrder", []).append(name)
-            return self.font.newGlyph(name)
-
     def writeGdef(self):
         gdefBlock = ast.TableBlock("GDEF")
         gdefBlock.statements.append(
@@ -140,7 +135,8 @@ class MongFeaComposer(FeaComposer):
             variants = [fvs]
             for suffix in [".valid", ".ignored"]:
                 variant = fvs + suffix
-                self.newGlyph(variant)
+                if self.font is not None:
+                    composeGlyph(self.font, variant, [])
                 variants.append(variant)
             self.classes[fvs] = self.namedGlyphClass(fvs, variants)
 
@@ -163,7 +159,8 @@ class MongFeaComposer(FeaComposer):
         with self.Lookup("_.ignored") as _ignored:
             for original in ["nirugu", "zwj", "zwnj"]:
                 variant = original + ".ignored"
-                self.newGlyph(variant)
+                if self.font is not None:
+                    composeGlyph(self.font, variant, [])
                 self.sub(original, by=variant)
 
             self.gdef.setdefault("base", []).extend(["nirugu", "zwj", "zwnj", "zwj.ignored"])
@@ -482,8 +479,8 @@ class MongFeaComposer(FeaComposer):
                 suffixes=["marked"] if marked else [],
             )
         )
-        if marked and name not in (self.font or []):
-            self.newGlyph(name)
+        if marked and self.font is not None and name not in self.font:
+            composeGlyph(self.font, name, [])
         return name
 
     def iii0b(self):
@@ -500,7 +497,8 @@ class MongFeaComposer(FeaComposer):
 
         # add masculine
 
-        self.newGlyph(masculineMarker)
+        if self.font is not None:
+            composeGlyph(self.font, masculineMarker, [])
         self.gdef.setdefault("mark", []).append(masculineMarker)
 
         with c.Lookup("III.ig.preprocessing.A", feature="rclt"):
@@ -528,7 +526,8 @@ class MongFeaComposer(FeaComposer):
 
         # add feminine
 
-        self.newGlyph(feminineMarker)
+        if self.font is not None:
+            composeGlyph(self.font, feminineMarker, [])
         self.gdef.setdefault("mark", []).append(feminineMarker)
 
         with c.Lookup("III.ig.preprocessing.D", feature="rclt"):
