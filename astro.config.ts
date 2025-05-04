@@ -34,11 +34,11 @@ export default defineConfig({
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/Kushim-Jiang/mongolian-utn",
+          href: "https://github.com/Kushim-Jiang/mongfontbuilder",
         },
       ],
       editLink: {
-        baseUrl: "https://github.com/Kushim-Jiang/mongolian-utn/edit/main/",
+        baseUrl: "https://github.com/Kushim-Jiang/mongfontbuilder/edit/main/",
       },
       customCss: ["./web/src/custom.css"],
       components: {
