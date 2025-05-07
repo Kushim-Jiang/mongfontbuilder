@@ -10,6 +10,17 @@ The core Python package, `mongfontbuilder`, is located in the [lib/](lib/) direc
 
 The [tests/](tests/) directory contains examples and test cases. While it is not part of the package, it can be referred to when writing code.
 
+> It is known that the following EAC test cases may fail:
+>
+> - `eac-hud > XIM11-46`
+>   - EAC believes that an invalid FVS after a letter prevents this MVS shaping step, but UTN disagrees.
+> - `eac-hud > XIM11-47`
+> - `eac-hud > XIM11-48`
+> - `eac-hud > XIM11-49`
+>   - This font does not include the characters `one`, `two`, `three`, and `alatin` by default.
+> - `eac-hud > XIM11-1012`
+>   - When an FVS after a letter prevents the MVS shaping step, the MVS is treated as an NBSP. In this case, the FVS remains valid. UTN considers this test case incorrect.
+
 To install the package (can be done using PowerShell or any terminal):
 
 ```powershell

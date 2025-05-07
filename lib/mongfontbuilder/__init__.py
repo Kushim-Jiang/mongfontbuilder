@@ -2,11 +2,12 @@ from __future__ import annotations
 
 import re
 from collections.abc import Iterator
+from copy import deepcopy
 from dataclasses import dataclass, field, replace
 from typing import Iterable
 
 from fontTools import unicodedata
-from ufoLib2.objects import Component, Font, Glyph
+from ufoLib2.objects import Font, Glyph
 
 from .data import (
     CharacterName,
@@ -28,6 +29,10 @@ def constructFont(font: Font, locales: list[LocaleID]) -> None:
     composer = MongFeaComposer(font, locales)
     assert not font.features.text, font.features.text
     font.features.text = composer.asFeatureFile().asFea().replace(":", "-")  # HACK
+
+    for glyph_name in list(font.keys()):
+        if glyph_name.startswith("_") and glyph_name not in ["_masculine", "_feminine"]:
+            del font[glyph_name]
 
 
 def splitWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
@@ -266,9 +271,11 @@ def composeGlyph(font: Font, name: str, members: list[Glyph | float]) -> Glyph:
     glyph = font.newGlyph(name)
     for member in members:
         if isinstance(member, Glyph):
-            component = Component(str(member.name))
-            component.move((glyph.width, 0))
-            glyph.components.append(component)
+            for contour in member.contours:
+                adjusted_contour = deepcopy(contour)
+                for point in adjusted_contour.points:
+                    point.x += glyph.width
+                glyph.appendContour(adjusted_contour)
             glyph.width += member.width
         else:
             glyph.width += member
