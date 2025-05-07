@@ -5,7 +5,7 @@ a-2	a fvs1	A
 a-3	a n a g mvs a	A A N A Hx _ Aa
 a-4	a m b a	A A M B Aa
 a-5	u u l mvs a ch a	A O O L - A Ch A
-a-6	b u y a n zwj a r b i n	B O Y A A A A R B I A
+# a-6	b u y a n zwj a r b i n	B O Y A A A A R B I A
 
 e-1	e	A
 e-2	e n e t e g e	A N A D A G Aa
@@ -21,26 +21,26 @@ i-1	i	A I
 i-2	i l i g e ch i	A I L I G A Ch I
 i-3	h e b mvs i space s a h i h u	G A B - I - S A G I H U
 i-4	t u s mvs i y a r mvs i y a n	T O S - I I A R - I I A A
-i-5	s a i n zwj i r oe g e l	S A I I A A I R O G A L
+# i-5	s a i n zwj i r oe g e l	S A I I A A I R O G A L
 i-6	n a i fvs3 m a	N A I M A
 
 o-1	o	A O
 o-2	o ng h o	A O A G H U
 o-3	h o m h o	H O M H U
-o-4	u r a n zwj o d o	A O R A A A O D U
+# o-4	u r a n zwj o d o	A O R A A A O D U
 o-5	k2 i n o fvs1	K2 I N O
 
 u-1	u	A O
 u-2	u r u g u	A O R O Hx U
 u-3	o n mvs u space t o l i	A O A - U - T O L I
 u-4	n a m mvs u n space t u g	N A M - O A - T O H
-u-5	n a s u n zwj u r t u	N A S O A A O R D U
+# u-5	n a s u n zwj u r t u	N A S O A A O R D U
 u-6	t a k2 a n u fvs1	T A K2 A N O
 
 oe-1	oe	A Ue
 oe-2	oe d oe space s oe d oe	A O I D U - S O I D U
 oe-3	t oe s oe b	T O I S O B
-oe-4	s a n a g a zwj oe l j e i	S A N A Hx A A O I L J A I
+# oe-4	s a n a g a zwj oe l j e i	S A N A Hx A A O I L J A I
 oe-5	a space h oe	A A - G Ue
 oe-6	h oe r h oe	G O I R G O
 
@@ -50,7 +50,7 @@ ue-3	s ue n space s i d ue	S O I A - S I D U
 ue-4	s ue space e r g ue h ue	S Ue - A R G O G O
 ue-5	t a n mvs u space h i	T A A - U - G I
 ue-6	e ng mvs ue n space ue g e	A A G - O A - A O I G Aa
-ue-7	ch i ng zwj ue n e n	Ch I A G A O I N A A
+# ue-7	ch i ng zwj ue n e n	Ch I A G A O I N A A
 ue-8	t e g ue n mvs ue fvs3	T A G O A - Ux
 
 n-1	n a n d i n	N A A D I A
@@ -148,8 +148,6 @@ lh-1	lh a s a	L Hr A S A
 lh-2	g ue lh ee hh ue	G O I L Hr W Hr U
 
 zr-1	zr i space p i y o u	Zr I - P I Y O U
-zr-2	m o zr i k2 a n	M O Zr I K2 A A
-zr-3	w ee r zr i n i y a	W W R Zr I N I Y A
 
 cr-1	d fvs1 i y a n space cr i	D I Y A A - Cr I
 
