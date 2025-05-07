@@ -17,7 +17,7 @@ export const locale = "MCH";
 
 <LetterTable locale={locale} />
 
-Final <Mong written="AI" /> in letter _i_. Final <Mong written="AI" /> in letter _i_ is introduced in [GB/T 36645—2018](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=67DA394E47B970F80BBABE5511B9AAE2), where the written form <Mong written="AI" /> of letter _i_ in the examples _jui_, is the differing form derived from letter analysis. Since _juɁi_ is preferred, the written form is marked in gray.
+Final <Mong locale="MCH" links="A I" /> in letter <Mong locale="MCH" links="i" />. Final <Mong locale="MCH" links="A I" /> in letter <Mong locale="MCH" links="i" /> is introduced in [GB/T 36645—2018](https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=67DA394E47B970F80BBABE5511B9AAE2), where the written form <Mong locale="MCH" links="A I" /> of letter <Mong locale="MCH" links="i" /> in the examples <Mong locale="MCH" links="j u i" />, is the differing form derived from letter analysis. Since <Mong locale="MCH" links="j u sbm i" /> is preferred, the written form is marked in gray.
 
 ## Shaping process
 
@@ -33,36 +33,50 @@ Final <Mong written="AI" /> in letter _i_. Final <Mong written="AI" /> in letter
   <tbody>
     <tr>
       <td> _masculine vowel_ </td>
-      <td> _a_, _o_, _ü_ </td>
+      <td>
+        <Mong locale="MCH" category="vowelMasculine" />
+      </td>
     </tr>
     <tr>
       <td> _feminine vowel_ </td>
-      <td> _e_, _u_ </td>
+      <td>
+        <Mong locale="MCH" category="vowelFeminine" />
+      </td>
     </tr>
     <tr>
       <td> _neuter vowel_ </td>
-      <td> _i_, _ï_ </td>
+      <td>
+        <Mong locale="MCH" category="vowelNeuter" />
+      </td>
+    </tr>
+    <tr>
+      <td> _vowel_ </td>
+      <td>
+        <Mong locale="MCH" category="vowel" />
+      </td>
     </tr>
     <tr>
       <td> _consonant_ </td>
-      <td> _Ɂ_, _n_, _ŋ_, _k_, _g_, _h_, _b_, _p_, _s_, _ś_, _t_, _d_, _l_, _m_, _ć_, _j_, _y_, _r_, _f_, _w_, _ḳ_, _ġ_, _ħ_, _c_, _z_, _ř_, _č_, _ž_ </td>
+      <td>
+        <Mong locale="MCH" category="consonant" />
+      </td>
     </tr>
     <tr>
       <td> _masculine bowed written unit_ </td>
       <td>
-        <Mong written="K2" />, <Mong written="K̇" />, <Mong written="K̊" />
+        <Mong locale="MCH" links="K2" />, <Mong locale="MCH" links="Kh" />, <Mong locale="MCH" links="Kc" />
       </td>
     </tr>
     <tr>
       <td> _feminine bowed written unit_ </td>
       <td>
-        <Mong written="G" />, <Mong written="Ġ" />, <Mong written="G̊" />, <Mong written="G̈" />
+        <Mong locale="MCH" links="G" />, <Mong locale="MCH" links="Gh" />, <Mong locale="MCH" links="Gc" />, <Mong locale="MCH" links="Gx" />
       </td>
     </tr>
     <tr>
       <td> _neuter bowed written unit_ </td>
       <td>
-        <Mong written="B" />, <Mong written="P̣" />
+        <Mong locale="MCH" links="B" />, <Mong locale="MCH" links="Pb" />
       </td>
     </tr>
   </tbody>
@@ -82,27 +96,43 @@ Final <Mong written="AI" /> in letter _i_. Final <Mong written="AI" /> in letter
   <tbody>
     <tr>
       <td rowspan="15">2. Syllabic</td>
-      <td>_o_, _u_</td>
+      <td>
+        <Mong locale="MCH" links="o" />, <Mong locale="MCH" links="u" />
+      </td>
       <td>__if__ follows an initial _consonant_:</td>
       <td>marked</td>
     </tr>
     <tr>
-      <td>_f_</td>
-      <td>__if__ precedes _i_ or _o_ or _u_ or _ü_:</td>
+      <td>
+        <Mong locale="MCH" links="f" />
+      </td>
+      <td>
+        __if__ precedes <Mong locale="MCH" links="i" /> or <Mong locale="MCH" links="o" /> or <Mong locale="MCH" links="u" /> or <Mong locale="MCH" links="ue" />:
+      </td>
       <td>marked</td>
     </tr>
     <tr>
-      <td>_i_</td>
-      <td>__if__ follows _z_:</td>
+      <td>
+        <Mong locale="MCH" links="i" />
+      </td>
+      <td>
+        __if__ follows <Mong locale="MCH" links="z" />:
+      </td>
       <td>marked</td>
     </tr>
     <tr>
-      <td>_e_, _u_</td>
-      <td>__if__ follows _t_ or _d_ or _k_ or _g_ or _h_:</td>
+      <td>
+        <Mong locale="MCH" links="e" />, <Mong locale="MCH" links="u" />
+      </td>
+      <td>
+        __if__ follows <Mong locale="MCH" links="t" /> or <Mong locale="MCH" links="d" /> or <Mong locale="MCH" links="k" /> or <Mong locale="MCH" links="g" /> or <Mong locale="MCH" links="h" />:
+      </td>
       <td>feminine, feminine_marked</td>
     </tr>
     <tr>
-      <td rowspan="2">_n_</td>
+      <td rowspan="2">
+        <Mong locale="MCH" links="n" />
+      </td>
       <td>__if__ precedes a _vowel_:</td>
       <td>onset</td>
     </tr>
@@ -111,12 +141,18 @@ Final <Mong written="AI" /> in letter _i_. Final <Mong written="AI" /> in letter
       <td>feminine</td>
     </tr>
     <tr>
-      <td rowspan="3">_t_, _d_</td>
-      <td>__if__ precedes _a_ or _i_ or _o_:</td>
+      <td rowspan="3">
+        <Mong locale="MCH" links="t" />, <Mong locale="MCH" links="d" />
+      </td>
+      <td>
+        __if__ precedes <Mong locale="MCH" links="a" /> or <Mong locale="MCH" links="i" /> or <Mong locale="MCH" links="o" />:
+      </td>
       <td>masculine_onset</td>
     </tr>
     <tr>
-      <td>__else if__ precedes _e_ or _u_ or _ü_:</td>
+      <td>
+        __else if__ precedes <Mong locale="MCH" links="e" /> or <Mong locale="MCH" links="u" /> or <Mong locale="MCH" links="ue" />:
+      </td>
       <td>feminine</td>
     </tr>
     <tr>
@@ -124,7 +160,9 @@ Final <Mong written="AI" /> in letter _i_. Final <Mong written="AI" /> in letter
       <td>devsger</td>
     </tr>
     <tr>
-      <td rowspan="6">_k_, _g_, _h_</td>
+      <td rowspan="6">
+        <Mong locale="MCH" links="k" />, <Mong locale="MCH" links="g" />, <Mong locale="MCH" links="h" />
+      </td>
       <td>__if__ precedes a _masculine vowel_:</td>
       <td>masculine_onset</td>
     </tr>
@@ -133,41 +171,57 @@ Final <Mong written="AI" /> in letter _i_. Final <Mong written="AI" /> in letter
       <td>feminine</td>
     </tr>
     <tr>
-      <td>__else if__ _k_ follows _e_ that follows _t_:</td>
+      <td>
+        __else if__ <Mong locale="MCH" links="k" /> follows <Mong locale="MCH" links="e" /> that follows <Mong locale="MCH" links="t" />:
+      </td>
       <td>masculine_devsger</td>
     </tr>
     <tr>
-      <td>__else if__ _k_ follows _u_ that follows _k_ or _g_ or _h_:</td>
+      <td>
+        __else if__ <Mong locale="MCH" links="k" /> follows <Mong locale="MCH" links="u" /> that follows <Mong locale="MCH" links="k" /> or <Mong locale="MCH" links="g" /> or <Mong locale="MCH" links="h" />:
+      </td>
       <td>feminine</td>
     </tr>
     <tr>
-      <td>__else if__ _k_ follows _e_ or _ü_:</td>
+      <td>
+        __else if__ <Mong locale="MCH" links="k" /> follows <Mong locale="MCH" links="e" /> or <Mong locale="MCH" links="ue" />:
+      </td>
       <td>feminine</td>
     </tr>
     <tr>
-      <td>__else__ _k_:</td>
+      <td>
+        __else__ <Mong locale="MCH" links="k" />:
+      </td>
       <td>masculine_devsger</td>
     </tr>
     <tr>
       <td>3. Particle</td>
-      <td>_i_</td>
+      <td>
+        <Mong locale="MCH" links="i" />
+      </td>
       <td>__if__ follows an MVS:</td>
       <td>particle</td>
     </tr>
     <tr>
       <td>4. Devsger</td>
-      <td>_i_</td>
+      <td>
+        <Mong locale="MCH" links="i" />
+      </td>
       <td>__if__ follows a _vowel_:</td>
       <td>vowel_devsger</td>
     </tr>
     <tr>
       <td rowspan="2">5. Post-bowed</td>
-      <td>_a_, _o_</td>
+      <td>
+        <Mong locale="MCH" links="a" />, <Mong locale="MCH" links="o" />
+      </td>
       <td>__if__ follows a _neuter bowed written unit_ or a _masculine bowed written unit_:</td>
       <td>post_bowed</td>
     </tr>
     <tr>
-      <td>_e_, _u_</td>
+      <td>
+        <Mong locale="MCH" links="e" />, <Mong locale="MCH" links="u" />
+      </td>
       <td>__if__ follows a _neuter bowed written unit_ or a _feminine bowed written unit_:</td>
       <td>post_bowed, post_bowed_feminine</td>
     </tr>

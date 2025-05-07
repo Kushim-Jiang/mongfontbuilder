@@ -2022,6 +2022,12 @@ export const variants: Record<
           },
         },
       },
+      "2": {
+        written: ["S3"],
+        locales: {
+          MCHx: {},
+        },
+      },
     },
   },
   "MONGOLIAN LETTER SHA": {
@@ -4264,6 +4270,12 @@ export const variants: Record<
           TODx: {
             conditions: ["masculine_onset"],
           },
+        },
+      },
+      "3": {
+        written: ["Hp"],
+        locales: {
+          TODx: {},
         },
       },
     },

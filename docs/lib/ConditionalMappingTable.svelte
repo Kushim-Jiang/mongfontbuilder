@@ -126,6 +126,7 @@
   th {
     text-align: center !important;
     vertical-align: middle;
+    word-break: normal;
   }
   td.variant span,
   td.default span {
@@ -136,5 +137,11 @@
   }
   td a {
     text-decoration: none;
+  }
+  tbody td:first-child {
+    width: 4vw;
+  }
+  tbody td:nth-child(n + 3) {
+    width: 6vw;
   }
 </style>

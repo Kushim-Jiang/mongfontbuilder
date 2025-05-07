@@ -31,24 +31,44 @@ export const locale = "TODx";
   <tbody>
     <tr>
       <td> _masculine vowel_ </td>
-      <td> _a_, _o_ </td>
+      <td>
+        <Mong locale="TODx" category="vowelMasculine" />
+      </td>
     </tr>
     <tr>
       <td> _feminine vowel_ </td>
-      <td> _e_, _ü_ </td>
+      <td>
+        <Mong locale="TODx" category="vowelFeminine" />
+      </td>
     </tr>
     <tr>
       <td> _neuter vowel_ </td>
-      <td> _i_ </td>
+      <td>
+        <Mong locale="TODx" category="vowelNeuter" />
+      </td>
+    </tr>
+    <tr>
+      <td> _vowel_ </td>
+      <td>
+        <Mong locale="TODx" category="vowel" />
+      </td>
+    </tr>
+    <tr>
+      <td> _long vowel_ </td>
+      <td>
+        <Mong locale="TODx" category="lvs" />
+      </td>
     </tr>
     <tr>
       <td> _consonant_ </td>
-      <td> _kX_, _kʰX_, _hX_, _gX_, _g_, _ŋ_, _ŋX_, _j_, _cʰX_, _jX_, _ñ_, _ṭX_, _ṭʰX_, _ḍX_, _ṇX_, _tX_, _t_, _d_, _n_, _pX_, _pʰX_, _b_, _m_, _y_, _yX_, _r_, _l_, _w_, _w̄X_, _ś_, _ṣX_, _s_, _ħ_, _c_, _z_, _žX_, _zX_, _ɁX_, _ł_ </td>
+      <td>
+        <Mong locale="TODx" category="consonant" />
+      </td>
     </tr>
     <tr>
       <td> _bowed written unit_ </td>
       <td>
-        <Mong written="K2" />, <Mong written="K" />, <Mong written="G" />, <Mong written="B́" />, <Mong written="Ṕ" />, <Mong written="B" />
+        <Mong locale="TODx" links="K2" />, <Mong locale="TODx" links="K" />, <Mong locale="TODx" links="G" />, <Mong locale="TODx" links="Bh" />, <Mong locale="TODx" links="Ph" />, <Mong locale="TODx" links="B" />
       </td>
     </tr>
   </tbody>
@@ -68,21 +88,27 @@ export const locale = "TODx";
   <tbody>
     <tr>
       <td rowspan="3">2. Syllabic</td>
-      <td rowspan="3">_g_</td>
-      <td>__if__ precedes a _masculine vowel_:</td>
+      <td rowspan="3">
+        <Mong locale="TODx" links="g" />
+      </td>
+      <td>__if__ precedes a _masculine vowel_ or a _masculine long vowel_:</td>
       <td>masculine_onset</td>
     </tr>
     <tr>
-      <td>__else if__ precedes a _feminine vowel_ or a _neuter vowel_:</td>
+      <td>__else if__ precedes a _feminine vowel_ or a _neuter vowel_ or a _feminine long vowel_ or a _neuter long vowel_:</td>
       <td>feminine</td>
     </tr>
     <tr>
-      <td>__else if__ _g_ follows a _vowel_:</td>
+      <td>
+        __else if__ <Mong locale="TODx" links="g" /> follows a _vowel_ or a _long vowel_:
+      </td>
       <td>masculine_devsger</td>
     </tr>
     <tr>
       <td rowspan>5. Post-bowed</td>
-      <td>_a_, _i_, _u_, _ü_</td>
+      <td>
+        <Mong locale="TODx" links="a" />, <Mong locale="TODx" links="i" />, <Mong locale="TODx" links="u" />, <Mong locale="TODx" links="ue" />
+      </td>
       <td>__if__ follows a _bowed written unit_:</td>
       <td>post_bowed</td>
     </tr>

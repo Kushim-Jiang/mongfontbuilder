@@ -151,4 +151,10 @@
   td a {
     text-decoration: none;
   }
+  td:nth-child(-n+2) {
+    width: 4vw;
+  }
+  td:nth-child(n+3) {
+    width: 8vw;
+  }
 </style>

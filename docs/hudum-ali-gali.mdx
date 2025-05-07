@@ -17,7 +17,7 @@ export const locale = "MNGx";
 
 <LetterTable locale={locale} />
 
-**Final <Mong written="AG" /> in letter _ŋ_**. Both final <Mong written="NG4" /> and final <Mong written="AG4" /> are used to record Tibetan /ŋ/ in _Buddhist Mantras_. The final <Mong written="AG4" /> is considered as a variant of final <Mong written="AG" />, and the two shapes correspond to the same written form.
+**Final <Mong locale="MNGx" links="A G" /> in letter <Mong locale="MNGx" links="ng" />**. Both final <Mong locale="MNGx" links="N G4" /> and final <Mong locale="MNGx" links="A G4" /> are used to record Tibetan /ŋ/ in _Buddhist Mantras_. The final <Mong locale="MNGx" links="A G4" /> is considered as a variant of final <Mong locale="MNGx" links="A G" />, and the two shapes correspond to the same written form.
 
 ## Shaping process
 
@@ -33,16 +33,20 @@ export const locale = "MNGx";
   <tbody>
     <tr>
       <td> _vowel_ </td>
-      <td> _a_, _iX_, _ü_, _é_, _o_ </td>
+      <td>
+        <Mong locale="MNGx" category="vowel" />
+      </td>
     </tr>
     <tr>
       <td> _consonant_ </td>
-      <td> _kX_, _k_, _ḳ_, _h_, _ŋ_, _ŋX_, _cX_, _c_, _z_, _ñX_, _ṭX_, _ṭʰX_, _ḍX_, _ṇX_, _tX_, _tʰX_, _dX_, _n_, _pX_, _pʰX_, _b_, _mX_, _yX_, _r_, _l_, _w_, _w̄X_, _ś_, _ṣX_, _s_, _hX_, _čX_, _ć_, _žX_, _zX_, _ɁX_, _ł_ </td>
+      <td>
+        <Mong locale="MNGx" category="consonant" />
+      </td>
     </tr>
     <tr>
       <td> _bowed written unit_ </td>
       <td>
-        <Mong written="G" />, <Mong written="K" />, <Mong written="K2" />, <Mong written="B̌" />, <Mong written="P̌" />, <Mong written="B" />
+        <Mong locale="MNGx" links="G" />, <Mong locale="MNGx" links="K" />, <Mong locale="MNGx" links="K2" />, <Mong locale="MNGx" links="Bg" />, <Mong locale="MNGx" links="Pg" />, <Mong locale="MNGx" links="B" />
       </td>
     </tr>
   </tbody>
@@ -62,24 +66,34 @@ export const locale = "MNGx";
   <tbody>
     <tr>
       <td>1. Chachlag</td>
-      <td>_a_</td>
+      <td>
+        <Mong locale="MNGx" links="a" />
+      </td>
       <td>__if__ follows an MVS:</td>
       <td>chachlag</td>
     </tr>
     <tr>
       <td rowspan="2">2. Syllabic</td>
-      <td>_ü_</td>
+      <td>
+        <Mong locale="MNGx" links="ü" />
+      </td>
       <td>__if__ follows an initial _consonant_ or an initial _consonant_ cluster:</td>
       <td>marked</td>
     </tr>
     <tr>
-      <td>_a_</td>
-      <td>__if__ precedes an MVS that precedes an isolated _a_:</td>
+      <td>
+        <Mong locale="MNGx" links="a" />
+      </td>
+      <td>
+        __if__ precedes an MVS that precedes an isolated <Mong locale="MNGx" links="a" />:
+      </td>
       <td>chachlag_onset</td>
     </tr>
     <tr>
       <td>5. Post-bowed</td>
-      <td>_a_, _o_, _ü_</td>
+      <td>
+        <Mong locale="MNGx" links="a" />, <Mong locale="MNGx" links="o" />, <Mong locale="MNGx" links="ue" />
+      </td>
       <td>__if__ follows a _bowed written unit_:</td>
       <td>post_bowed</td>
     </tr>

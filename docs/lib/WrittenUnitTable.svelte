@@ -117,4 +117,10 @@
   td a {
     text-decoration: none;
   }
+  td:first-child {
+    width: 4vw;
+  }
+  td:not(:first-child) {
+    width: 8vw;
+  }
 </style>
