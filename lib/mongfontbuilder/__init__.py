@@ -26,8 +26,9 @@ def constructFont(font: Font, locales: list[LocaleID]) -> None:
 
     constructPredefinedGlyphs(font, locales)
 
-    composer = MongFeaComposer(font, locales)
     assert not font.features.text, font.features.text
+    composer = MongFeaComposer(font, locales)
+    composer.compose()
     font.features.text = composer.asFeatureFile().asFea().replace(":", "-")  # HACK
 
     for glyph_name in list(font.keys()):

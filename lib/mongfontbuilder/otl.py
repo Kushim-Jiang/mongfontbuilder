@@ -41,22 +41,20 @@ class MongFeaComposer(FeaComposer):
     ) -> None:
         for locale in locales:
             assert locale.removesuffix("x") in locales
-
         self.font = font
         self.locales = locales
-
+        self.classes = {}
+        self.conditions = {}
+        self.gdef = {}
         super().__init__(
             languageSystems={
                 "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in self.locales}
             }
         )
-        self.classes = {}
-        self.conditions = {}
-        self.gdef = {}
-
         self.initControls()
         self.initVariants()
 
+    def compose(self) -> None:
         self.ia1()
         self.iia1()
         self.iii0()
@@ -325,16 +323,20 @@ class MongFeaComposer(FeaComposer):
             for position in positions or [None]
         )
 
+    @staticmethod
     def variant(
-        self, locale: LocaleID, alias: str, position: JoiningPosition, fvs: FVS = 0
+        locale: LocaleID,
+        alias: str,
+        position: JoiningPosition,
+        fvs: FVS = 0,
     ) -> GlyphDescriptor:
         """
-        >>> composer = MongFeaComposer(font=None)
-        >>> str(composer.variant("MCH", "zr", fina))
+        >>> str(MongFeaComposer.variant("MCH", "zr", fina))
         'u1877.Jc.medi._fina'
-        >>> str(composer.variant("MCHx", "zr", fina))
+        >>> str(MongFeaComposer.variant("MCHx", "zr", fina))
         'u1877.Jc.fina'
         """
+
         charName = getCharNameByAlias(locale, alias)
         variant = data.variants[charName][position][fvs]
         return GlyphDescriptor.fromData(charName, position, variant, locale=locale)
