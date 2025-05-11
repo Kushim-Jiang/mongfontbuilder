@@ -9,12 +9,10 @@ export default defineConfig({
   integrations: [
     svelte(),
     starlight({
-      title: "UTN #57 (Editor’s Draft)",
+      title: "Mongolian Font Builder",
       sidebar: [
-        {
-          label: "Introduction",
-          slug: "index",
-        },
+        "index",
+        "introduction",
         "architecture",
         {
           label: "Writing systems",
