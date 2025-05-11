@@ -25,14 +25,15 @@
   "python.analysis.typeCheckingMode": "basic",
   "black-formatter.args": ["--line-length", "100"],
   "isort.args": ["--profile", "black"],
-  "python.testing.pytestArgs": [
-    "--doctest-modules",
-    "--doctest-report",
-    "ndiff",
-    "lib"
-  ],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": [
+    "tests",
+    "lib",
+    "--doctest-modules",
+    "--doctest-report",
+    "ndiff"
+  ],
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   }

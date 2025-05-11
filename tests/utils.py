@@ -5,10 +5,11 @@ from pathlib import Path
 
 import yaml
 from fontTools import unicodedata
-from mongfontbuilder.data import LocaleID, aliases
-from mongfontbuilder.utils import namespaceFromLocale
+from fontTools.ttLib import TTFont
 
 import data
+from mongfontbuilder.data import LocaleID, aliases
+from mongfontbuilder.utils import namespaceFromLocale
 
 testsDir = Path(__file__).parent
 repo = testsDir / ".."
@@ -143,3 +144,14 @@ def parse_glyphs(text: str, font: Path) -> str:
         .replace("Widespace", "-")
         .replace("Narrowspace", "_")
     )
+
+
+def makeFontFilename(font: TTFont) -> str:
+    from fontTools.ttLib.tables._n_a_m_e import table__n_a_m_e
+
+    table: table__n_a_m_e = font["name"]  # type: ignore
+    postScriptName = table.getDebugName(6)
+    assert postScriptName
+
+    suffix = ".otf" if {"CFF ", "CFF2"}.intersection(font.keys()) else ".ttf"
+    return postScriptName + suffix
