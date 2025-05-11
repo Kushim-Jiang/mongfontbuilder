@@ -24,7 +24,7 @@ jobs:
           python-version-file: pyproject.toml
           cache: poetry
       - run: poetry install
-      - run: # See python.testing.pytestArgs in .vscode/settings.json
-          poetry run pytest --doctest-modules --doctest-report ndiff lib
+      - run: # Sync with python.testing.pytestArgs in .vscode/settings.json
+          poetry run pytest lib tests --doctest-modules --doctest-report ndiff
       - run: poetry build
       - uses: pypa/gh-action-pypi-publish@release/v1

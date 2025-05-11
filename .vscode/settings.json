@@ -28,8 +28,8 @@
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "python.testing.pytestArgs": [
-    "tests",
     "lib",
+    "tests",
     "--doctest-modules",
     "--doctest-report",
     "ndiff"
