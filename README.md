@@ -1,42 +1,44 @@
 # Mongolian Font Builder
 
-## Overview
+The Mongolian Font Builder project consists of:
 
-Mongolian Font Builder is a comprehensive toolchain for constructing, shaping, and testing Mongolian script fonts. It provides a Python package, detailed documentation, and structured data to support font development and testing.
+- **Documentation and data files** that clarify the encoding and shaping rules required for a font to be compatible with the Unicode Standard and China’s national standard GB/T 25914-2023.
+  - Stabilized versions of the documentation will be published as revisions of [UTN \#57, Encoding and Shaping of the Mongolian Script](https://www.unicode.org/notes/tn57/) (the **Mongolian UTN**).
+- **Tooling**, as a Python package `mongfontbuilder`, that helps font designers and developers produce a standard-compatible Mongolian script font, as clarified by the documentation.
+  - It also acts the reference implementation of the Mongolian UTN.
+- **Tests** for validating fonts produced by the tooling.
+
+## Documentation and data files
+
+The documentation is maintained in [web/docs/](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/web/docs), and continuously deployed to [mongolian-utn.pages.dev/](https://mongolian-utn.pages.dev/). For contribution guidelines, refer to [CONTRIBUTING.md](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/CONTRIBUTING.md).
+
+The source-of-truth data files are maintained in [data/](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/data). They’re also exported to [lib/mongfontbuilder/data/](https://github.com/Kushim-Jiang/mongfontbuilder/tree/main/lib/mongfontbuilder/data) for consumption of the Python API.
 
 ## Tooling
 
-The core Python package, `mongfontbuilder`, is located in the [lib](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/lib) directory. It includes utilities for font construction, shaping rule implementation, and data processing.
+The Python package `mongfontbuilder` is maintained in [lib/](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/lib). To install the package in terminal:
 
-The [tests](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/tests) directory contains examples and test cases. While it is not part of the package, it can be referred to when writing code.
-
-> It is known that the following EAC test cases may fail:
->
-> - `eac-hud > XIM11-46`
->   - EAC believes that an invalid FVS after a letter prevents this MVS shaping step, but UTN disagrees.
-> - `eac-hud > XIM11-47`
-> - `eac-hud > XIM11-48`
-> - `eac-hud > XIM11-49`
->   - This font does not include the characters `one`, `two`, `three`, and `alatin` by default.
-> - `eac-hud > XIM11-1012`
->   - When an FVS after a letter prevents the MVS shaping step, the MVS is treated as an NBSP. In this case, the FVS remains valid. UTN considers this test case incorrect.
-
-To install the package (can be done using PowerShell or any terminal):
-
-```powershell
+```sh
 pip install mongfontbuilder
 ```
 
-## Documentation
+This package includes various utilities, including:
 
-The project documentation is maintained in the [docs](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/docs) directory. While it is not part of the Python package, it is built using [Astro](https://astro.build/) and [Svelte](https://svelte.dev/). It serves as a draft for the Mongolian UTN ([UTN \#57: Encoding and Shaping of the Mongolian Script](https://www.unicode.org/notes/tn57/)). The latest editor’s draft is available at [mongolian-utn.pages.dev/](https://mongolian-utn.pages.dev/).
+- Python API for the data files.
+- Dynamic generation of OpenType Layout rules.
+- Construction of a complete font from a minimal glyph set.
 
-For contribution guidelines, refer to [CONTRIBUTING.md](CONTRIBUTING.md).
+## Tests
 
-## Data
+Maintained in [tests/](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/tests).
 
-The source data for the UTN is maintained in the [data](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/data) directory. This data is exported to [lib/mongfontbuilder/data](https://github.com/Kushim-Jiang/mongfontbuilder/tree/main/lib/mongfontbuilder/data) directory for use in the Python package.
+Currently the following EAC test cases are expected to fail:
 
-## License
-
-This project is licensed under the MIT License.
+- `eac-hud > XIM11-46`
+  - The EAC spec expects an invalid FVS after a letter to prevent the MVS shaping step. The UTN model disagrees.
+- `eac-hud > XIM11-47`
+- `eac-hud > XIM11-48`
+- `eac-hud > XIM11-49`
+  - The current test font does not include the glyphs `one`, `two`, `three`, and `alatin`.
+- `eac-hud > XIM11-1012`
+  - When an FVS after a letter prevents the MVS shaping step, the MVS is treated as an NBSP. In this case, the FVS remains valid. The UTN model considers this test case incorrect.
