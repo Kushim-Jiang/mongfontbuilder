@@ -2563,18 +2563,18 @@ XIM11-34	e j i mvs mvs mvs	A J I Mvs Mvs Mvs
 XIM11-35	mvs mvs mvs e j i	Mvs Mvs - A J I
 # XIM11-36	one mvs two	-
 # XIM11-37	one nnbsp two	Nnbsp
-# XIM11-38	nnbsp	Nnbsp
-# XIM11-39	b a g nnbsp a	B A H Nnbsp A A
-# XIM11-40	a b u nnbsp y i n	A A B O Nnbsp Y I A
-# XIM11-41	a b u nnbsp e j i	A A B O Nnbsp A J I
+XIM11-38	nnbsp	Nnbsp
+XIM11-39	b a g nnbsp a	B A H Nnbsp A A
+XIM11-40	a b u nnbsp y i n	A A B O Nnbsp Y I A
+XIM11-41	a b u nnbsp e j i	A A B O Nnbsp A J I
 XIM11-42	fvs1 fvs2 fvs3	Fvs1 Fvs2 Fvs3
 XIM11-43	fvs1 a fvs2	Fvs1 Aa
 XIM11-44	mvs	Mvs
 XIM11-45	mvs l mvs	- L > Mvs
 XIM11-46	e n fvs3 mvs e	A A Fvs3 _ Aa
-XIM11-47	one two three mvs u	- < U
-XIM11-48	alatin mvs one mvs alatin	- -
-XIM11-49	one andlatin mvs one	-
+# XIM11-47	one two three mvs u	- < U
+# XIM11-48	alatin mvs one mvs alatin	- -
+# XIM11-49	one andlatin mvs one	-
 XIM11-50	b i ch i g mvs n u g u d	B I Ch I G - N O Hx O Dd
 XIM11-51	b i ch i g mvs n ue g ue d	B I Ch I G - N O G O Dd
 XIM11-52	a g t a mvs b i ch i g	A A H D A - B I Ch I G
@@ -2608,14 +2608,14 @@ XIM11-79	g e r mvs nirugu nirugu nirugu nirugu nirugu nirugu l ue g e	G A R - < 
 XIM11-80	g a l mvs nirugu nirugu nirugu nirugu nirugu nirugu nirugu n u g u d	Hx A L - < Ni Ni Ni Ni Ni Ni Ni N O Hx O Dd
 XIM11-81	g e r mvs nirugu nirugu nirugu nirugu nirugu nirugu n ue g ue d	G A R - < Ni Ni Ni Ni Ni Ni N O G O Dd
 # XIM11-82	n fvs3
-# XIM11-83	g fvs3	D
-# XIM11-84	m fvs3	E
-# XIM11-85	l fvs3	F
+# XIM11-83	g fvs3
+# XIM11-84	m fvs3
+# XIM11-85	l fvs3
 # XIM11-86	sh fvs3
-# XIM11-87	c fvs3	C
-# XIM11-88	z fvs3	D
-# XIM11-89	rh fvs3	F
-# XIM11-90	oe fvs3	< Iy
+# XIM11-87	c fvs3
+# XIM11-88	z fvs3
+# XIM11-89	rh fvs3
+# XIM11-90	oe fvs3
 XIM11-91	a l i mvs y i mvs n i mvs ch ue	A A L I - I I - N I - Ch U
 XIM11-92	b a g s i mvs y i n mvs i y a n	B A H S I - I I A - I I A A
 XIM11-93	g e r mvs ue n mvs i y e n	G A R - O A - I I A A

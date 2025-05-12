@@ -6,10 +6,10 @@ from pathlib import Path
 import yaml
 from fontTools import unicodedata
 from fontTools.ttLib import TTFont
-
-import data
 from mongfontbuilder.data import LocaleID, aliases
 from mongfontbuilder.utils import namespaceFromLocale
+
+import data
 
 testsDir = Path(__file__).parent
 repo = testsDir / ".."
@@ -42,55 +42,49 @@ class UTNGlyphName(str):
     Besides the graphical .joining_position, there’s also a joining position in terms of shaping logic that may appear in a glyph name. For example, uni1828.N.init._isol is an isol glyph in terms of shaping, but graphically it’s actually N.init.
     """
 
-    uni_name: str | None
-    written_units: list[str]
-    joining_position: str | None  # isol | init | medi | fina
+    uniName: str | None
+    writtenUnits: list[str]
+    joiningPosition: str | None  # isol | init | medi | fina
 
     def __init__(self, name: str):
         parts = name.split(".")
         if len(parts) == 1:
-            self.uni_name, self.written_units, self.joining_position = parts[0], [], None
+            self.uniName, self.writtenUnits, self.joiningPosition = parts[0], [], None
             return
 
         if len(parts) == 3:
-            self.uni_name = parts[0]
-            written_units_part, self.joining_position = parts[1:]
+            self.uniName = parts[0]
+            written_units_part, self.joiningPosition = parts[1:]
         else:  # 2
-            self.uni_name = None
-            written_units_part, self.joining_position = parts
-        self.written_units = re.findall("[A-Z][a-z0-9]*", written_units_part)
+            self.uniName = None
+            written_units_part, self.joiningPosition = parts
+        self.writtenUnits = re.findall("[A-Z][a-z0-9]*", written_units_part)
 
-    def code_point(self) -> int | None:
-        if self.uni_name:
-            return int(self.uni_name.removeprefix("uni"), 16)
+    def codePoint(self) -> int | None:
+        if self.uniName:
+            return int(self.uniName.removeprefix("uni"), 16)
         else:
             return None
 
-    def code_point_agnostic(self) -> str:
-        return ".".join(i for i in ["".join(self.written_units), self.joining_position] if i)
+    def codePointAgnostic(self) -> str:
+        return ".".join(i for i in ["".join(self.writtenUnits), self.joiningPosition] if i)
 
 
-def get_units(utn_name: UTNGlyphName) -> str:
-    position = utn_name.joining_position or ""
+def getWrittenUnits(utnName: UTNGlyphName) -> str:
+    position = utnName.joiningPosition or ""
     units: list[str]
     if position.startswith("init"):
-        units = utn_name.written_units + ["Right"]
+        units = utnName.writtenUnits + ["Right"]
     elif position.startswith("medi"):
-        units = ["Left"] + utn_name.written_units + ["Right"]
+        units = ["Left"] + utnName.writtenUnits + ["Right"]
     elif position.startswith("fina"):
-        units = ["Left"] + utn_name.written_units
+        units = ["Left"] + utnName.writtenUnits
     else:
-        units = utn_name.written_units
+        units = utnName.writtenUnits
     return "".join(units)
 
 
-def init_to_medi(written_units: str, units: list[str]) -> str:
-    for unit in units:
-        written_units = written_units.replace(f"{unit}RightLeftSelectRight", f"Left{unit}Right")
-    return written_units
-
-
-def parse_code(text: str, writing_system: str) -> str:
+def parseAliases(text: str, writing_system: str) -> str:
     localeID = writingSystemToLocaleID[writing_system]
 
     result = []
@@ -104,17 +98,26 @@ def parse_code(text: str, writing_system: str) -> str:
     return " ".join(result)
 
 
-def test(codes: str, index: str, result: str, goal: str, errorCount: int = 0) -> int:
-    if result != goal:
-        print("[" + str(errorCount) + "]")
-        print(f"ind:  {index}")
-        print(f"code: {codes}")
-        print(f"res:  {result}\ngoal: {goal}\n=====")
-        errorCount += 1
-    return errorCount
+def parseLetter(names: str, writing_system: str) -> str:
+    localeID = writingSystemToLocaleID[writing_system]
+    result = []
+
+    for name in names.split():
+        try:
+            charName = next(
+                k
+                for k, v in aliases.items()
+                if (isinstance(v, dict) and v.get(namespaceFromLocale(localeID)) == name)
+                or v == name
+            )
+            result.append(unicodedata.lookup(charName))
+        except StopIteration:
+            raise ValueError(f"No alias found for name: {name}")
+
+    return "".join(result)
 
 
-def parse_glyphs(text: str, font: Path) -> str:
+def parseWrittenUnits(text: str, font: Path) -> str:
     from uharfbuzz import Blob, Buffer, Face, Font, shape  # type: ignore
 
     hbFont = Font(Face(Blob.from_file_path(font)))
@@ -123,21 +126,21 @@ def parse_glyphs(text: str, font: Path) -> str:
     buffer.guess_segment_properties()
     shape(hbFont, buffer)
 
-    glyph_names = [hbFont.glyph_to_string(info.codepoint) for info in buffer.glyph_infos]
-    written_units = ""
+    glyphNames = [hbFont.glyph_to_string(info.codepoint) for info in buffer.glyph_infos]
+    writtenUnits = ""
 
-    for glyph_name in glyph_names:
-        name = glyphNameMapping.get(glyph_name) or glyph_name
-        utn_name = UTNGlyphName(name.replace("._", "@").replace(".mvs", "@mvs"))
-        written_units += get_units(utn_name)
+    for glyphName in glyphNames:
+        name = glyphNameMapping.get(glyphName) or glyphName
+        utnName = UTNGlyphName(name.replace("._", "@").replace(".mvs", "@mvs"))
+        writtenUnits += getWrittenUnits(utnName)
 
-    written_units = (
-        written_units.replace("RightLeft", "")
+    writtenUnits = (
+        writtenUnits.replace("RightLeft", "")
         .replace("RightBaludaLeft", "Baluda")
         .replace("RightTribaludaLeft", "Tribaluda")
     )
     return (
-        " ".join(UTNGlyphName(f".{written_units}.").written_units)
+        " ".join(UTNGlyphName(f".{writtenUnits}.").writtenUnits)
         .replace("Nirugu", "Ni")
         .replace("Left", "<")
         .replace("Right", ">")

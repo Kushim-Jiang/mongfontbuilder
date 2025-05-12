@@ -225,6 +225,7 @@ class MongFeaComposer(FeaComposer):
                         [
                             str(GlyphDescriptor.fromData(charName, position, i))
                             for i in variants.values()
+                            if locale in i.locales
                         ],
                     )
                     self.classes[letter + "." + position] = positionalClass
@@ -1389,7 +1390,7 @@ class MongFeaComposer(FeaComposer):
                     for position, variants in data.variants[charName].items():
                         glyphClass = cl[letter + "." + position]
                         for fvs, variant in variants.items():
-                            if fvs != 0:
+                            if fvs != 0 and locale in variant.locales:
                                 variant = str(GlyphDescriptor.fromData(charName, position, variant))
                                 c.sub(c.input(glyphClass), f"fvs{fvs}.ignored", by=variant)
 

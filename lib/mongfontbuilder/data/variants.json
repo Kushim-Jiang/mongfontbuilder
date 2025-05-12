@@ -2461,6 +2461,14 @@
             "eac": "MSM2"
           }
         }
+      },
+      "2": {
+        "written": [
+          "S3"
+        ],
+        "locales": {
+          "MCHx": {}
+        }
       }
     }
   },
@@ -5189,6 +5197,14 @@
               "masculine_onset"
             ]
           }
+        }
+      },
+      "3": {
+        "written": [
+          "Hp"
+        ],
+        "locales": {
+          "TODx": {}
         }
       }
     },
