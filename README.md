@@ -10,7 +10,7 @@ The Mongolian Font Builder project consists of:
 
 ## Documentation and data files
 
-The documentation is maintained in [web/docs/](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/web/docs) and deployed to [mongolian-utn.pages.dev](https://mongolian-utn.pages.dev). For contribution guidelines, refer to [CONTRIBUTING.md](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/CONTRIBUTING.md).
+The documentation is maintained in [web/docs/](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/web/docs) and deployed to [mongfontbuilder.pages.dev](https://mongfontbuilder.pages.dev/). For contribution guidelines, refer to [CONTRIBUTING.md](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/CONTRIBUTING.md).
 
 The source-of-truth data files are maintained as TypeScript files in [data/](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/data). They’re exported to JSON in [lib/mongfontbuilder/data/](https://github.com/Kushim-Jiang/mongfontbuilder/tree/main/lib/mongfontbuilder/data) for consumption of the Python API.
 
