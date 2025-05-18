@@ -5,7 +5,8 @@ from pathlib import Path
 import pytest
 
 import data
-from tests.utils import parseAliases, parseLetter, parseWrittenUnits, tempDir
+from tests.test_mongfontbuilder import output
+from tests.utils import parseAliases, parseLetter, parseWrittenUnits
 
 
 def loadTestCases(font: Path, test_info: dict[str, list[str]]):
@@ -25,7 +26,7 @@ def loadTestCases(font: Path, test_info: dict[str, list[str]]):
                     test_case = (
                         f"{testSet}-{locale} > {index}",
                         parseAliases(parsedText, locale),
-                        parseWrittenUnits(parsedText, Path(font)),
+                        parseWrittenUnits(parsedText, font),
                         goal,
                     )
 
@@ -75,9 +76,9 @@ def loadTestCases(font: Path, test_info: dict[str, list[str]]):
 @pytest.mark.parametrize(
     ("codes", "index", "result", "goal"),
     loadTestCases(
-        tempDir / "build.otf",
+        output,
         {"eac": ["hud"], "core": ["hud"]},
     ),
 )
-def test_MNG(index: str, codes: str, result: str, goal: str) -> None:
+def test_MNG(codes: str, index: str, result: str, goal: str) -> None:
     assert result == goal, f"ind:  {index}\ncode: {codes}\nres:  {result}\ngoal: {goal}"

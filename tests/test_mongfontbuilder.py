@@ -3,15 +3,16 @@ from os.path import relpath
 from subprocess import run
 
 from fontTools.ttLib import TTFont
-from mongfontbuilder.otl import MongFeaComposer
 from ufo2ft import OTFCompiler
 from ufo2ft.constants import CFFOptimization
 from ufoLib2 import Font
 
-from tests.utils import makeFontFilename, tempDir, testsDir
+from mongfontbuilder.otl import MongFeaComposer
+from tests.utils import tempDir, testsDir
 
 input = testsDir / "hudum.ufo"
-intermediate = tempDir / "build.ufo"
+intermediate = tempDir / input.name
+output = intermediate.with_suffix(".otf")
 
 
 def test_main() -> None:
@@ -27,7 +28,6 @@ def test_main() -> None:
     environ["FONTTOOLS_LOOKUP_DEBUGGING"] = "1"  # For feaLib.builder.Builder
     font: TTFont = compiler.compile(Font.open(intermediate))
 
-    output = tempDir / makeFontFilename(font)
     font.save(output)
     print(relpath(output))
 

@@ -1,15 +1,17 @@
 import re
 from dataclasses import dataclass
+from functools import cache
 from importlib.resources import files
 from pathlib import Path
 
+import uharfbuzz
 import yaml
 from fontTools import unicodedata
 from fontTools.ttLib import TTFont
-from mongfontbuilder.data import LocaleID, aliases
-from mongfontbuilder.utils import namespaceFromLocale
 
 import data
+from mongfontbuilder.data import LocaleID, aliases
+from mongfontbuilder.utils import namespaceFromLocale
 
 testsDir = Path(__file__).parent
 repo = testsDir / ".."
@@ -117,10 +119,17 @@ def parseLetter(names: str, writing_system: str) -> str:
     return "".join(result)
 
 
-def parseWrittenUnits(text: str, font: Path) -> str:
-    from uharfbuzz import Blob, Buffer, Face, Font, shape  # type: ignore
+@cache
+def loadHBFont(path: Path) -> uharfbuzz.Font:  # type: ignore
+    from uharfbuzz import Blob, Face, Font  # type: ignore
 
-    hbFont = Font(Face(Blob.from_file_path(font)))
+    return Font(Face(Blob.from_file_path(path)))
+
+
+def parseWrittenUnits(text: str, font: Path) -> str:
+    from uharfbuzz import Buffer, shape  # type: ignore
+
+    hbFont = loadHBFont(font)
     buffer = Buffer()
     buffer.add_str(text)
     buffer.guess_segment_properties()
