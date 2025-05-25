@@ -223,6 +223,7 @@ def constructPredefinedGlyphs(
             continue
         sources.append(target)
 
+    codePointToVariantGlyph = dict[int, Glyph]()
     targetedLocales = {*locales}
     for charName, positionToFVSToVariant in data.variants.items():
         variantNames = list[str]()
@@ -271,11 +272,14 @@ def constructPredefinedGlyphs(
         if variantNames:
             codePoint = ord(unicodedata.lookup(charName))
             variant = GlyphDescriptor([codePoint], *codePointToCmapVariant[codePoint])
-            glyph = composeGlyph(font, uNameFromCodePoint(codePoint), [font[str(variant)]])
-            existingGlyph = existingCmap.get(codePoint)
-            if existingGlyph is not None:
-                existingGlyph.unicodes.remove(codePoint)
-            glyph.unicode = codePoint
+            codePointToVariantGlyph[codePoint] = font[str(variant)]
+
+    for codePoint, variantGlyph in codePointToVariantGlyph.items():
+        glyph = composeGlyph(font, uNameFromCodePoint(codePoint), [variantGlyph])
+        existingGlyph = existingCmap.get(codePoint)
+        if existingGlyph is not None:
+            existingGlyph.unicodes.remove(codePoint)
+        glyph.unicode = codePoint
 
 
 def composeGlyph(font: Font, name: str, members: list[Glyph | float]) -> Glyph:
