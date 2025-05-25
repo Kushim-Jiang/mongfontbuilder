@@ -212,8 +212,11 @@ def constructPredefinedGlyphs(
     initPadding: float = 40,
     finaPadding: float = 100,
 ) -> None:
+    existingCmap = dict[int, Glyph]()
     sources = list[GlyphDescriptor]()
     for name in font.keys():
+        glyph = font[name]
+        existingCmap.update((i, glyph) for i in glyph.unicodes)
         try:
             target = GlyphDescriptor.parse(name)
         except:
@@ -234,7 +237,6 @@ def constructPredefinedGlyphs(
 
                 glyph = font.get(targetName)
                 if glyph is not None:
-                    glyph.unicode = None
                     continue
 
                 memberNames: list[str]
@@ -270,6 +272,9 @@ def constructPredefinedGlyphs(
             codePoint = ord(unicodedata.lookup(charName))
             variant = GlyphDescriptor([codePoint], *codePointToCmapVariant[codePoint])
             glyph = composeGlyph(font, uNameFromCodePoint(codePoint), [font[str(variant)]])
+            existingGlyph = existingCmap.get(codePoint)
+            if existingGlyph is not None:
+                existingGlyph.unicodes.remove(codePoint)
             glyph.unicode = codePoint
 
 
