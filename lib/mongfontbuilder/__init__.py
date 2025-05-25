@@ -7,6 +7,7 @@ from dataclasses import dataclass, field, replace
 from typing import Iterable
 
 from fontTools import unicodedata
+from fontTools.misc.transform import Transform
 from ufoLib2.objects import Font, Glyph
 
 from .data import (
@@ -268,11 +269,29 @@ def constructPredefinedGlyphs(
 
 
 def composeGlyph(font: Font, name: str, members: list[Glyph | float]) -> Glyph:
+
+    def decompose(glyph: Glyph) -> Glyph:
+        while glyph.components:
+            component = glyph.components.pop(0)
+            base_glyph = font[component.baseGlyph]
+            base_glyph = decompose(base_glyph)
+
+            for contour in base_glyph.contours:
+                new_contour = deepcopy(contour)
+                transform = Transform(*component.transformation)
+                for point in new_contour.points:
+                    new_x, new_y = transform.transformPoint((point.x, point.y))
+                    point.x, point.y = new_x, new_y
+                glyph.contours.append(new_contour)
+        return glyph
+
     font.lib.get("public.glyphOrder", []).append(name)
     glyph = font.newGlyph(name)
     for member in members:
         if isinstance(member, Glyph):
-            for contour in member.contours:
+            temp_glyph = deepcopy(member)
+            temp_glyph = decompose(temp_glyph)
+            for contour in temp_glyph.contours:
                 adjusted_contour = deepcopy(contour)
                 for point in adjusted_contour.points:
                     point.x += glyph.width
