@@ -7,8 +7,8 @@ from pathlib import Path
 
 from ufoLib2 import Font
 
-from . import constructFont
-from .data import locales
+from . import constructFont, data
+from .data.types import LocaleID
 
 parser = ArgumentParser()
 parser.add_argument(
@@ -24,13 +24,18 @@ parser.add_argument(
 parser.add_argument(
     "--locales",
     metavar="LOCALE",
-    choices=locales,
+    choices=data.locales,
     nargs="+",
     required=True,
-    help="targeted locales, one or more from: " + ", ".join(locales),
+    help="targeted locales, one or more from: " + ", ".join(data.locales),
 )
 
 args = parser.parse_args()
-font = Font.open(args.input)
-constructFont(font, args.locales)
-font.save(args.output, overwrite=True)
+input: Path = args.input
+output: Path = args.output
+locales: list[LocaleID] = args.locales
+
+font = Font.open(input)
+constructFont(font, locales)
+output.parent.mkdir(parents=True, exist_ok=True)
+font.save(output, overwrite=True)
