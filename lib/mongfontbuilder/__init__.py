@@ -30,10 +30,10 @@ def constructFont(
 
     constructPredefinedGlyphs(font, locales)
 
-    assert not font.features.text, font.features.text
     composer = MongFeaComposer(font, locales)
     composer.compose()
-    font.features.text = composer.asFeatureFile().asFea().replace(":", "-")  # HACK
+    code = composer.asFeatureFile().asFea().replace(":", "-")  # HACK: feaLib limitation
+    font.features.text = code + font.features.text  # HACK: Keep original code at the end
 
     if not exportPrivateGlyphs:
         skipExportGlyphs: list[str] = font.lib.setdefault("public.skipExportGlyphs", [])
