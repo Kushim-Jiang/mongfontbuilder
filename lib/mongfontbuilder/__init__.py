@@ -21,7 +21,11 @@ from .data import (
 from .data.misc import fina, init, isol, medi
 
 
-def constructFont(font: Font, locales: list[LocaleID]) -> None:
+def constructFont(
+    font: Font,
+    locales: list[LocaleID],
+    exportPrivateGlyphs: bool = False,
+) -> None:
     from .otl import MongFeaComposer
 
     constructPredefinedGlyphs(font, locales)
@@ -31,9 +35,11 @@ def constructFont(font: Font, locales: list[LocaleID]) -> None:
     composer.compose()
     font.features.text = composer.asFeatureFile().asFea().replace(":", "-")  # HACK
 
-    for glyph_name in list(font.keys()):
-        if glyph_name.startswith("_") and glyph_name not in ["_masculine", "_feminine"]:
-            del font[glyph_name]
+    if not exportPrivateGlyphs:
+        skipExportGlyphs: list[str] = font.lib.setdefault("public.skipExportGlyphs", [])
+        for name in font.keys():
+            if name.startswith("_") and name not in skipExportGlyphs:
+                skipExportGlyphs.append(name)
 
 
 def splitWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
