@@ -282,6 +282,22 @@ def constructPredefinedGlyphs(
         glyph.unicode = codePoint
 
 
+# NOTE: A font class is required with:
+# - font.load(dir)
+# - font["A"]
+# - font["A"].unicodes = [...]
+# - font["A"].layer[0].width
+# - font["A"].layer[0].width = ...
+# - font["A"].components.append(Component(...))
+# - font.keys()
+# - font.newGlyph("A")
+# - Component(font["A"], Transform(...))
+# - font.lib.setdefault("public.skipExportGlyphs", [])
+# - font.lib.get("public.glyphOrder", []).append(name)
+# - font.features.text
+# - font.save(outputDir, overwrite=True)
+
+
 def composeGlyph(font: Font, name: str, members: list[Glyph | float]) -> Glyph:
     font.lib.get("public.glyphOrder", []).append(name)
     glyph = font.newGlyph(name)
