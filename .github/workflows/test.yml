@@ -1,17 +1,13 @@
 # https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#publishing-to-pypi
 
-name: Publish to PyPI
+name: Test
 
 on:
-  release:
-    types: [published]
-
-permissions:
-  contents: read
-  id-token: write
+  push:
+    branches: [main]
 
 jobs:
-  publish:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,6 +19,3 @@ jobs:
 
       - run: uv sync --locked
       - run: uv run pytest
-      - run: uv build
-
-      - uses: pypa/gh-action-pypi-publish@release/v1
