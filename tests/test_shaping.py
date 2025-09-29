@@ -3,10 +3,10 @@ from importlib.resources import files
 from pathlib import Path
 
 import pytest
+from test_mongfontbuilder import output
+from utils import parseAliases, parseLetter, parseWrittenUnits
 
 import data
-from tests.test_mongfontbuilder import output
-from tests.utils import parseAliases, parseLetter, parseWrittenUnits
 
 
 def loadTestCases(font: Path, test_info: dict[str, list[str]]):
