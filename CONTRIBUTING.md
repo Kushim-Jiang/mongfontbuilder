@@ -2,12 +2,10 @@
 
 ## Contributing to the Python Package
 
-1. Set up the development environment using [Poetry](https://python-poetry.org/):
+1. Set up the development environment using [uv](https://docs.astral.sh/uv/getting-started/installation/):
 
    ```sh
-   poetry install
-   poetry env use python
-   poetry env activate
+   uv sync
    ```
 
 2. Write tests to verify your changes.

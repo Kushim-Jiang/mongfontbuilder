@@ -6,7 +6,7 @@
     "ms-python.black-formatter",
     "ms-python.python",
     "redhat.vscode-yaml",
-    "tamasfe.even-better-toml",
+    "bodil.prettier-toml",
     "unifiedjs.vscode-mdx"
   ]
 }

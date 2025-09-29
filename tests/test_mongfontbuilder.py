@@ -16,10 +16,7 @@ output = intermediate.with_suffix(".otf")
 
 
 def test_main() -> None:
-    run(
-        ["poetry", "run", "python", "-m", "mongfontbuilder"]
-        + [input, intermediate, "--locales", "MNG"]
-    )
+    run(["uv", "run", "python", "-m", "mongfontbuilder", input, intermediate, "--locales", "MNG"])
 
     compiler = OTFCompiler(
         useProductionNames=False,

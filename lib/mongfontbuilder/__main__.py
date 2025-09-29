@@ -1,5 +1,5 @@
 """
-poetry run python -m mongfontbuilder
+uv run python -m mongfontbuilder
 """
 
 from argparse import ArgumentParser

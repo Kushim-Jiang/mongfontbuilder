@@ -18,13 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pipx install poetry
-      - uses: actions/setup-python@v5
+
+      - uses: actions/setup-python@v6
         with:
-          python-version-file: pyproject.toml
-          cache: poetry
-      - run: poetry install
-      - run: # Sync with python.testing.pytestArgs in .vscode/settings.json
-          poetry run pytest lib tests --doctest-modules --doctest-report ndiff
-      - run: poetry build
+          python-version-file: .python-version
+      - uses: astral-sh/setup-uv@v6
+
+      - run: uv sync --locked
+      - run: uv run pytest
+      - run: uv build
+
       - uses: pypa/gh-action-pypi-publish@release/v1

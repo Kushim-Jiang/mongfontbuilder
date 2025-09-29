@@ -6,16 +6,11 @@
   "files.exclude": {
     ".astro": true,
     ".svelte-kit": true,
+    ".venv": true,
     "node_modules": true
   },
-  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml"
-  },
+  "editor.formatOnSave": true,
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.codeActionsOnSave": {
@@ -23,21 +18,16 @@
     }
   },
   "python.analysis.typeCheckingMode": "basic",
+  "python.testing.pytestEnabled": true,
   "black-formatter.args": ["--line-length", "100"],
   "isort.args": ["--profile", "black"],
-  "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": true,
-  "python.testing.pytestArgs": [
-    "lib",
-    "tests",
-    "--doctest-modules",
-    "--doctest-report",
-    "ndiff"
-  ],
+  "[toml]": {
+    "editor.defaultFormatter": "bodil.prettier-toml"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
-  },
-  "python-envs.defaultEnvManager": "ms-python.python:poetry",
-  "python-envs.defaultPackageManager": "ms-python.python:poetry",
-  "python-envs.pythonProjects": []
+  }
 }

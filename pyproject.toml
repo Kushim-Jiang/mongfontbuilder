@@ -1,6 +1,6 @@
 [project]
 name = "mongfontbuilder"
-version = "0.6.2"
+version = "0.6.3"
 description = "Mongolian Font Builder."
 license = { text = "MIT" }
 readme = "README.md"
@@ -10,23 +10,27 @@ authors = [
 ]
 urls.repository = "https://github.com/Kushim-Jiang/mongfontbuilder"
 urls.releasenotes = "https://github.com/Kushim-Jiang/mongfontbuilder/releases"
-requires-python = ">=3.10.0"
+requires-python = ">=3.10"
 dependencies = [
     "cattrs>=24.1.2",
     "PyYAML>=6.0.1",
-    "tptq.feacomposer>=1.5.0",
+    "tptq-feacomposer>=1.5.0",
     "ufo2ft>=3.4.3",
-    "ufolib2>=0.17.1",
+    "ufoLib2>=0.17.1",
     "ufonormalizer>=0.6.2",
     "unicodedata2>=16.0.0",
     "babelfont>=3.1.3",
 ]
 
-[tool.poetry]
-requires-poetry = ">=2.0.0"
-packages = [{ include = "mongfontbuilder", from = "lib" }]
-group.dev.dependencies = { pytest = ">=8.3.3", uharfbuzz = ">=0.42.0" }
+[dependency-groups]
+dev = ["pytest>=8.3.3", "uharfbuzz>=0.42.0"]
+
+[tool.uv.build-backend]
+module-root = "lib"
+
+[tool.pytest.ini_options]
+addopts = "lib tests --doctest-modules --doctest-report ndiff"
 
 [build-system]
-requires = ["poetry-core>=2.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.8.11,<0.9.0"]
+build-backend = "uv_build"
