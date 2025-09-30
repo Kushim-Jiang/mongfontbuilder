@@ -1740,7 +1740,7 @@ MSM10-2	mvs nirugu s	- < Ni S
 MSM10-3	mvs nirugu nirugu s	- < Ni Ni S
 MSM10-4	nirugu s mvs	< Ni S Mvs
 MSM11-1	a l m a s	A A L M A S
-MSM11-2	a l m a s fvs2	A A L M A S Fvs2
+# MSM11-2	a l m a s fvs2	A A L M A S Fvs2
 MSM11-3	a l m a s fvs3	A A L M A S Fvs3
 MSM20-1	nirugu s fvs1	< Ni Sz
 MSM20-2	nirugu s fvs1 mvs	< Ni Sz Mvs
@@ -2541,7 +2541,7 @@ XIM11-12	a b fvs2	A A B Fvs2
 XIM11-13	h fvs3	H > Fvs3
 XIM11-14	sh fvs2	Sh > Fvs2
 XIM11-15	e s fvs3	A S Fvs3
-XIM11-16	e s fvs2	A S Fvs2
+# XIM11-16	e s fvs2	A S Fvs2
 XIM11-17	d fvs2	D > Fvs2
 XIM11-18	e d fvs2	A Dd Fvs2
 XIM11-19	j o r j fvs2	I O R J Fvs2

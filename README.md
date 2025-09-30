@@ -34,11 +34,11 @@ Maintained in [tests/](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main
 
 Currently the following EAC test cases are expected to fail:
 
-- `eac-hud > XIM11-39`
-- `eac-hud > XIM11-40`
-- `eac-hud > XIM11-41`
+- `eac-hud > XIM11-39`, `eac-hud > XIM11-40`, `eac-hud > XIM11-41`
   - The EAC spec assumes that all features of NNBSP should be disabled. The UTN model considers this test case incorrect. The UTN model considers that the old functionality of NNBSP should be retained.
 - `eac-hud > XIM11-46`
   - The EAC spec expects an invalid FVS after a letter to prevent the MVS shaping step. The UTN model disagrees.
 - `eac-hud > XIM11-1012`
   - When an FVS after a letter prevents the MVS shaping step, the MVS is treated as an NBSP. In this case, the FVS remains valid. The UTN model considers this test case incorrect.
+- `eac-hud > MSM11-2`, `eac-hud > XIM11-16`
+  - The currently exported font does not yet account for shaping rules based on locale, resulting in these two tests failing. Future efforts will focus on resolving this issue to pass both tests.
