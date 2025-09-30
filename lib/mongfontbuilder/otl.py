@@ -361,12 +361,15 @@ class MongFeaComposer(FeaComposer):
         )
         aliases = aliases or getAliasesByLocale(locale)
         if isinstance(writtens, Callable):
-            filter, writtens = writtens, [
-                "".join(self.variant(locale, alias, position, fvs).units)
-                for alias in aliases
-                for position in positions
-                for fvs in data.variants[getCharNameByAlias(locale, alias)][position].keys()
-            ]
+            filter, writtens = (
+                writtens,
+                [
+                    "".join(self.variant(locale, alias, position, fvs).units)
+                    for alias in aliases
+                    for position in positions
+                    for fvs in data.variants[getCharNameByAlias(locale, alias)][position].keys()
+                ],
+            )
         else:
             writtens = [writtens] if isinstance(writtens, str) else list(writtens)
             filter = lambda _: True

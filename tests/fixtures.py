@@ -10,9 +10,9 @@ from fontTools.ttLib import TTFont
 from ufo2ft import OTFCompiler
 from ufo2ft.constants import CFFOptimization
 from ufoLib2 import Font
-from utils import parseAliases, parseLetter, parseWrittenUnits, tempDir, testsDir
 
 import data
+from utils import parseAliases, parseLetter, parseWrittenUnits, tempDir, testsDir
 
 input = testsDir / "hudum.ufo"
 intermediate = tempDir / input.name

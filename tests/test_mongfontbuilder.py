@@ -1,6 +1,5 @@
-from utils import tempDir
-
 from mongfontbuilder.otl import MongFeaComposer
+from utils import tempDir
 
 
 def test_otl() -> None:
