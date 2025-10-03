@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import re
 from collections.abc import Iterator
-from dataclasses import dataclass, field, replace
+from dataclasses import dataclass, field
 from typing import Iterable
 
 from fontTools import unicodedata
@@ -16,7 +16,6 @@ from .data import (
     VariantData,
     VariantReference,
     WrittenUnitID,
-    codePointToCmapVariant,
 )
 from .data.misc import fina, init, isol, medi
 
@@ -28,8 +27,8 @@ def constructFont(
 ) -> None:
     from .otl import MongFeaComposer
 
-    constructPredefinedGlyphs(font, locales)
     composer = MongFeaComposer(font=font, locales=locales)
+    composer.constructPredefinedGlyphs()
     composer.compose()
     font.features.text = (
         composer.asFeatureFile().asFea() + font.features.text  # HACK: Keep original code at the end
@@ -202,83 +201,6 @@ def uNameFromCodePoint(codePoint: int) -> str:
 
 
 pseudoPositionSuffixes = ["_" + i for i in data.misc.joiningPositions]
-
-
-def constructPredefinedGlyphs(
-    font: Font,
-    locales: list[LocaleID],
-    *,
-    initPadding: float = 40,
-    finaPadding: float = 100,
-) -> None:
-    existingCmap = dict[int, Glyph]()
-    sources = list[GlyphDescriptor]()
-    for name in font.keys():
-        glyph = font[name]
-        existingCmap.update((i, glyph) for i in glyph.unicodes)
-        try:
-            target = GlyphDescriptor.parse(name)
-        except:
-            continue
-        sources.append(target)
-
-    codePointToVariantGlyph = dict[int, Glyph]()
-    targetedLocales = {*locales}
-    for charName, positionToFVSToVariant in data.variants.items():
-        variantNames = list[str]()
-        for position, fvsToVariant in positionToFVSToVariant.items():
-            for variant in fvsToVariant.values():
-                if not targetedLocales.intersection(variant.locales):
-                    continue
-
-                target = GlyphDescriptor.fromData(charName, position, variant)
-                targetName = str(target)
-                variantNames.append(targetName)
-
-                glyph = font.get(targetName)
-                if glyph is not None:
-                    continue
-
-                memberNames: list[str]
-                writtenTarget = replace(target, codePoints=[], suffixes=[])
-                for source in sources:
-                    if source == writtenTarget:
-                        memberNames = [str(source)]
-                        break
-                else:
-                    for source in sources:
-                        if replace(source, codePoints=[]) == writtenTarget:
-                            memberNames = [str(source)]
-                            break
-                    else:
-                        for writtenVariants in writtenCombinations(
-                            "".join(writtenTarget.units), writtenTarget.position
-                        ):
-                            if len(writtenVariants) == len(writtenTarget.units):
-                                memberNames = ["_" + i for i in writtenVariants]
-                                break
-                        else:
-                            raise NotImplementedError(target)
-
-                members: list[Glyph | float] = [font[i] for i in memberNames]
-                if pseudoPosition := target.pseudoPosition():
-                    if pseudoPosition in ["isol", "init"]:
-                        members = [initPadding, *members]
-                    if pseudoPosition in ["isol", "fina"]:
-                        members = [*members, finaPadding]
-                composeGlyph(font, targetName, members)
-
-        if variantNames:
-            codePoint = ord(unicodedata.lookup(charName))
-            variant = GlyphDescriptor([codePoint], *codePointToCmapVariant[codePoint])
-            codePointToVariantGlyph[codePoint] = font[str(variant)]
-
-    for codePoint, variantGlyph in codePointToVariantGlyph.items():
-        glyph = composeGlyph(font, uNameFromCodePoint(codePoint), [variantGlyph])
-        existingGlyph = existingCmap.get(codePoint)
-        if existingGlyph is not None:
-            existingGlyph.unicodes.remove(codePoint)
-        glyph.unicode = codePoint
 
 
 def composeGlyph(font: Font, name: str, members: list[Glyph | float]) -> Glyph:

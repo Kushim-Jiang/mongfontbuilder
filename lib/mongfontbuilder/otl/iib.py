@@ -65,7 +65,11 @@ def iib1(c: MongFeaComposer) -> None:
             else:
                 if required and ligatureName not in c.font:
                     componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
-                    composeGlyph(c.font, ligatureName, [c.font[componentName]])
+                    composeGlyph(
+                        c.font,
+                        c.glyphNameProcessor(ligatureName),
+                        [c.font[c.glyphNameProcessor(componentName)]],
+                    )
                 if ligatureName in c.font:
                     c.sub(*input, by=ligatureName)
 

@@ -82,7 +82,7 @@ def iii0b(c: MongFeaComposer) -> None:
     # add masculine
 
     if c.font is not None:
-        composeGlyph(c.font, markerMasculine, [])
+        composeGlyph(c.font, c.glyphNameProcessor(markerMasculine), [])
     c.gdef.setdefault("mark", []).append(markerMasculine)
 
     with c.Lookup("III.ig.preprocessing.A", feature="rclt"):
@@ -113,7 +113,7 @@ def iii0b(c: MongFeaComposer) -> None:
     # add feminine
 
     if c.font is not None:
-        composeGlyph(c.font, markerFeminine, [])
+        composeGlyph(c.font, c.glyphNameProcessor(markerFeminine), [])
     c.gdef.setdefault("mark", []).append(markerFeminine)
 
     with c.Lookup("III.ig.preprocessing.D", feature="rclt"):
