@@ -52,7 +52,7 @@ def splitWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
     return list(writtens)
 
 
-def getPosition(index: int, length: int):
+def getPosition(index: int, length: int) -> JoiningPosition:
     return isol if length == 1 else (init if index == 0 else fina if index == length - 1 else medi)
 
 

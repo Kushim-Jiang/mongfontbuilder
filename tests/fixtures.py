@@ -6,6 +6,7 @@ from pathlib import Path
 from subprocess import run
 
 import pytest
+from _pytest.mark.structures import ParameterSet
 from fontTools.ttLib import TTFont
 from ufo2ft import OTFCompiler
 from ufo2ft.constants import CFFOptimization
@@ -31,8 +32,11 @@ font.save(output)
 print(relpath(output))
 
 
-def loadTestCases(font: Path, test_info: dict[str, list[str]]):
-    test_cases = []
+def loadTestCases(
+    font: Path,
+    test_info: dict[str, list[str]],
+) -> list[tuple[str, str, str, str] | ParameterSet]:
+    test_cases = list[tuple[str, str, str, str] | ParameterSet]()
     for testSet, locales in test_info.items():
         for locale in locales:
             file_path = files(data) / f"{testSet}-{locale}.tsv"

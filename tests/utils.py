@@ -48,7 +48,7 @@ class UTNGlyphName(str):
     writtenUnits: list[str]
     joiningPosition: str | None  # isol | init | medi | fina
 
-    def __init__(self, name: str):
+    def __init__(self, name: str) -> None:
         parts = name.split(".")
         if len(parts) == 1:
             self.uniName, self.writtenUnits, self.joiningPosition = parts[0], [], None
