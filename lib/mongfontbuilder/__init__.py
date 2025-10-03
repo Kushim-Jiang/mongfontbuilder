@@ -30,7 +30,7 @@ def constructFont(
 
     constructPredefinedGlyphs(font, locales)
 
-    composer = MongFeaComposer(font, locales)
+    composer = MongFeaComposer(font=font, locales=locales)
     composer.compose()
     code = composer.asFeatureFile().asFea().replace(":", "-")  # HACK: feaLib limitation
     font.features.text = code + font.features.text  # HACK: Keep original code at the end

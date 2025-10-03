@@ -36,8 +36,9 @@ class MongFeaComposer(FeaComposer):
 
     def __init__(
         self,
+        *,
         font: Font | None,
-        locales: list[LocaleID] = [*data.locales],
+        locales: list[LocaleID],
     ) -> None:
         for locale in locales:
             assert locale.removesuffix("x") in locales
