@@ -29,12 +29,11 @@ def constructFont(
     from .otl import MongFeaComposer
 
     constructPredefinedGlyphs(font, locales)
-
     composer = MongFeaComposer(font=font, locales=locales)
     composer.compose()
-    code = composer.asFeatureFile().asFea().replace(":", "-")  # HACK: feaLib limitation
-    font.features.text = code + font.features.text  # HACK: Keep original code at the end
-
+    font.features.text = (
+        composer.asFeatureFile().asFea() + font.features.text  # HACK: Keep original code at the end
+    )
     if not exportPrivateGlyphs:
         skipExportGlyphs: list[str] = font.lib.setdefault("public.skipExportGlyphs", [])
         for name in font.keys():

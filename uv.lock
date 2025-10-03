@@ -505,14 +505,14 @@ wheels = [
 
 [[package]]
 name = "tptq-feacomposer"
-version = "1.11.3"
+version = "1.11.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "fonttools" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6d/b0/5eef54092c7eb2c0a64bdc207d4bad0f4ab843bf46004bc09b0320c504ae/tptq_feacomposer-1.11.3.tar.gz", hash = "sha256:e82ea4983d58f3f054f77ed667d7a47600aaf9fba8bb6678cf56a0f0637f648b", size = 4728, upload-time = "2025-09-30T16:02:39.029Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c6/03/91dc030b66012f003257a2331774c30b800e7da769a0e0be5b361102f56a/tptq_feacomposer-1.11.6.tar.gz", hash = "sha256:e16f676c512a9dab6e4f110a757386d2d052197c5c43adde8e930ad65cf6504b", size = 4887, upload-time = "2025-10-03T17:07:35.572Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/41/c9/e736caca63a5861f3ea768456ca2f201794d45203f3664cfd3280fe51d11/tptq_feacomposer-1.11.3-py3-none-any.whl", hash = "sha256:73e69bba3bb37f91bc58873608337325e37e893252306806d1d1453baa09703f", size = 5754, upload-time = "2025-09-30T16:02:37.835Z" },
+    { url = "https://files.pythonhosted.org/packages/00/f1/4880e46aa85664b8228b881518cc0360d49b4f27e731b1eb32181a7b398f/tptq_feacomposer-1.11.6-py3-none-any.whl", hash = "sha256:4c854ab71c19729daf5011707faeea824eae91a6cd6903e3e6df24a761beab13", size = 5914, upload-time = "2025-10-03T17:07:33.726Z" },
 ]
 
 [[package]]
