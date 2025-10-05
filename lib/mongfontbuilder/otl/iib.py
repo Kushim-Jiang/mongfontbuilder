@@ -5,9 +5,10 @@ from itertools import product
 
 from fontTools import unicodedata
 
-from .. import GlyphDescriptor, composeGlyph, data, writtenCombinations
+from .. import GlyphDescriptor, data, writtenCombinations
 from ..data.misc import JoiningPosition
 from ..data.types import LocaleID
+from ..spec import GlyphSpec
 from ..utils import namespaceFromLocale
 from . import MongFeaComposer
 
@@ -60,18 +61,16 @@ def iib1(c: MongFeaComposer) -> None:
         for input, (ligature, required) in inputToLigatureAndRequired.items():
             input = [str(i) for i in input]
             ligatureName = str(ligature)
-            if c.font is None:
-                c.sub(*input, by=ligatureName)
-            else:
-                if required and ligatureName not in c.font:
+            if c.glyphs:
+                if required and ligatureName not in c.glyphs:
                     componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
-                    composeGlyph(
-                        c.font,
-                        c.glyphNameProcessor(ligatureName),
-                        [c.font[c.glyphNameProcessor(componentName)]],
+                    c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
+                        [c.glyphNameProcessor(componentName)]
                     )
-                if ligatureName in c.font:
+                if ligatureName in c.glyphs:
                     c.sub(*input, by=ligatureName)
+            else:
+                c.sub(*input, by=ligatureName)
 
         if "MNGx" in c.locales:
             c.sub("u18A6.Wp.medi", "u1820.A.fina", by="u18A6_u1820.WpA.fina")

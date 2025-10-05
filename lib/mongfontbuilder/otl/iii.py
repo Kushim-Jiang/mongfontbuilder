@@ -1,16 +1,11 @@
 from fontTools.feaLib import ast
 
-from .. import (
-    GlyphDescriptor,
-    composeGlyph,
-    data,
-    getPosition,
-)
+from .. import GlyphDescriptor, data, getPosition
 from ..data.misc import fina, init, isol, medi
 from ..utils import getAliasesByLocale, getCharNameByAlias
 from . import MongFeaComposer
 
-markerMasculine, markerFeminine = "marker.masculine", "marker.feminine"
+MARKER_MASCULINE, MARKER_FEMININE = "marker.masculine", "marker.feminine"
 
 
 def compose(c: MongFeaComposer) -> None:
@@ -79,27 +74,21 @@ def iii0b(c: MongFeaComposer) -> None:
 
     categories = data.locales["MNG"].categories
 
-    # add masculine
-
-    if c.font is not None:
-        composeGlyph(c.font, c.glyphNameProcessor(markerMasculine), [])
-    c.gdef.setdefault("mark", []).append(markerMasculine)
-
     with c.Lookup("III.ig.preprocessing.A", feature="rclt"):
         for alias in categories["vowelMasculine"]:
             for position in (init, medi):
                 default = c.getDefault(alias, position)
-                c.sub(default, by=[default, markerMasculine])
+                c.sub(default, by=[default, MARKER_MASCULINE])
 
     with c.Lookup(
         "III.ig.preprocessing.B",
         feature="rclt",
-        flags={"UseMarkFilteringSet": c.glyphClass([markerMasculine])},
+        flags={"UseMarkFilteringSet": c.glyphClass([MARKER_MASCULINE])},
     ):
         for alias in categories["vowelNeuter"] + categories["consonant"]:
             for position in (medi, fina):
                 default = c.getDefault(alias, position)
-                c.sub(markerMasculine, c.input(default), by=[default, markerMasculine])
+                c.sub(MARKER_MASCULINE, c.input(default), by=[default, MARKER_MASCULINE])
 
     with c.Lookup("III.ig.preprocessing.C", feature="rclt"):
         for alias in (
@@ -108,29 +97,23 @@ def iii0b(c: MongFeaComposer) -> None:
             if alias not in ["h", "g"]:
                 for position in (init, medi, fina):
                     default = c.getDefault(alias, position)
-                    c.sub(default, markerMasculine, by=default)
-
-    # add feminine
-
-    if c.font is not None:
-        composeGlyph(c.font, c.glyphNameProcessor(markerFeminine), [])
-    c.gdef.setdefault("mark", []).append(markerFeminine)
+                    c.sub(default, MARKER_MASCULINE, by=default)
 
     with c.Lookup("III.ig.preprocessing.D", feature="rclt"):
         for alias in categories["vowelFeminine"]:
             for position in (init, medi):
                 default = c.getDefault(alias, position)
-                c.sub(default, by=[default, markerFeminine])
+                c.sub(default, by=[default, MARKER_FEMININE])
 
     with c.Lookup(
         "III.ig.preprocessing.E",
         feature="rclt",
-        flags={"UseMarkFilteringSet": c.glyphClass([markerFeminine])},
+        flags={"UseMarkFilteringSet": c.glyphClass([MARKER_FEMININE])},
     ):
         for alias in categories["vowelNeuter"] + categories["consonant"]:
             for position in (medi, fina):
                 default = c.getDefault(alias, position)
-                c.sub(markerFeminine, c.input(default), by=[default, markerFeminine])
+                c.sub(MARKER_FEMININE, c.input(default), by=[default, MARKER_FEMININE])
 
     with c.Lookup("III.ig.preprocessing.F", feature="rclt"):
         for alias in (
@@ -139,7 +122,7 @@ def iii0b(c: MongFeaComposer) -> None:
             if alias not in ["h", "g"]:
                 for position in (init, medi, fina):
                     default = c.getDefault(alias, position)
-                    c.sub(default, markerFeminine, by=default)
+                    c.sub(default, MARKER_FEMININE, by=default)
 
     # reverse add masculine
     unmarkedVariants = c.namedGlyphClass(
@@ -185,7 +168,7 @@ def iii0b(c: MongFeaComposer) -> None:
     with c.Lookup(
         "III.ig.preprocessing.H",
         feature="rclt",
-        flags={"UseMarkFilteringSet": c.glyphClass([markerFeminine])},
+        flags={"UseMarkFilteringSet": c.glyphClass([MARKER_FEMININE])},
     ):
         for alias in categories["vowelNeuter"] + categories["consonant"]:
             for position in (init, medi):
@@ -204,7 +187,7 @@ def iii0b(c: MongFeaComposer) -> None:
         for alias in ["h", "g"]:
             for position in (init, medi):
                 marked = c.getDefault(alias, position, marked=True)
-                c.sub(c.input(marked, _unmarked), markerMasculine, by=None)
+                c.sub(c.input(marked, _unmarked), MARKER_MASCULINE, by=None)
 
     with c.Lookup("III.ig.preprocessing.J", feature="rclt"):
         markedVariants = c.namedGlyphClass(
@@ -225,7 +208,7 @@ def iii0b(c: MongFeaComposer) -> None:
             for position in (init, medi):
                 unmarked = c.getDefault(alias, position)
                 marked = c.getDefault(alias, position, marked=True)
-                c.sub(marked, by=[unmarked, markerMasculine])
+                c.sub(marked, by=[unmarked, MARKER_MASCULINE])
 
 
 def iii1(c: MongFeaComposer) -> None:
@@ -702,18 +685,18 @@ def iii2f(c: MongFeaComposer) -> None:
         with c.Lookup(
             "III.g_h.onset_and_devsger_and_gender.A.MNG",
             feature="rclt",
-            flags={"UseMarkFilteringSet": c.glyphClass([markerMasculine])},
+            flags={"UseMarkFilteringSet": c.glyphClass([MARKER_MASCULINE])},
         ):
             gLike = c.variants("MNG", ["h", "g"])
             aLike = c.variants("MNG", ["a", "e"], isol)
             c.sub(c.input(gLike), c.classes["MNG-vowel"], by=None)
-            c.sub(c.input(gLike), markerMasculine, c.classes["MNG-vowel"], by=None)
+            c.sub(c.input(gLike), MARKER_MASCULINE, c.classes["MNG-vowel"], by=None)
             c.sub(c.input(gLike), c.classes["mvs"], aLike, by=None)
-            c.sub(c.input(gLike), markerMasculine, c.classes["mvs"], aLike, by=None)
+            c.sub(c.input(gLike), MARKER_MASCULINE, c.classes["mvs"], aLike, by=None)
             c.sub(
                 c.classes["MNG-i"],
                 c.input(gLike, c.conditions["MNG:masculine_devsger"]),
-                markerMasculine,
+                MARKER_MASCULINE,
                 by=None,
             )
             c.sub(
@@ -735,7 +718,7 @@ def iii2f(c: MongFeaComposer) -> None:
 
         for index in [0, 1]:
             step = ["A", "B"][index]
-            genderMarker = [markerMasculine, markerFeminine][index]
+            genderMarker = [MARKER_MASCULINE, MARKER_FEMININE][index]
 
             with c.Lookup(
                 f"III.ig.post_processing.{step}.MNG",
@@ -1293,5 +1276,3 @@ def iii6(c: MongFeaComposer) -> None:
                 c.input("fvs1.ignored", c.conditions["_.valid"]),
                 by=None,
             )
-
-        c.gdef.setdefault("mark", []).extend(["u1885", "u1886", "u18A9"])

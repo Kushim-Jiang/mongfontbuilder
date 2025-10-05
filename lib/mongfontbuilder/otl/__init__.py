@@ -5,11 +5,9 @@ from dataclasses import dataclass, replace
 from fontTools import unicodedata
 from fontTools.feaLib import ast
 from tptq.feacomposer import FeaComposer
-from ufoLib2.objects import Font, Glyph
 
 from .. import (
     GlyphDescriptor,
-    composeGlyph,
     data,
     splitWrittens,
     uNameFromCodePoint,
@@ -18,56 +16,73 @@ from .. import (
 from ..data import codePointToCmapVariant
 from ..data.misc import JoiningPosition, joiningPositions
 from ..data.types import FVS, LocaleID
+from ..spec import FontSpec, GlyphSpec
 from ..utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
 
 
 @dataclass
 class MongFeaComposer(FeaComposer):
-    font: Font | None
+    cmap: dict[int, str]
+    glyphs: list[str]
     locales: list[LocaleID]
+    spec: FontSpec
+
+    # Internal states:
     classes: dict[str, ast.GlyphClassDefinition]
     conditions: dict[str, ast.LookupBlock]
-    gdef: dict[str, list]
 
     def __init__(
         self,
         *,
-        font: Font | None,
+        cmap: dict[int, str],
+        glyphs: list[str],
         locales: list[LocaleID],
     ) -> None:
-        self.font = font
+        self.cmap = cmap
+        self.glyphs = glyphs
         for locale in locales:
             assert locale.removesuffix("x") in locales
         self.locales = locales
+        self.spec = FontSpec(cmap={}, newGlyphs={}, openTypeCategories={})
+
         self.classes = {}
         self.conditions = {}
-        self.gdef = {}
+
         super().__init__(
             languageSystems={
                 "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in self.locales}
             }
         )
 
-    def constructPredefinedGlyphs(
-        self,
-        *,
-        initPadding: float = 40,
-        finaPadding: float = 100,
-    ) -> None:
-        assert self.font is not None
+    def compose(self) -> FontSpec:
+        from . import ia, ib, iia, iib, iii
 
-        existingCmap = dict[int, Glyph]()
+        self.constructPredefinedGlyphs()
+        self.initControls()
+        self.initVariants()
+        for name in ["u1885", "u1886", "u18A9"]:
+            processedName = self.glyphNameProcessor(name)
+            if processedName in self.glyphs:
+                self.spec.openTypeCategories[processedName] = "mark"
+
+        ia.compose(self)
+        iia.compose(self)
+        iii.compose(self)
+        iib.compose(self)
+        ib.compose(self)
+
+        return self.spec
+
+    def constructPredefinedGlyphs(self) -> None:
         sources = list[GlyphDescriptor]()
-        for name in self.font.keys():
-            glyph = self.font[name]
-            existingCmap.update((i, glyph) for i in glyph.unicodes)
+        for name in self.glyphs:
             try:
-                target = GlyphDescriptor.parse(name)
+                source = GlyphDescriptor.parse(name)
             except:
                 continue
-            sources.append(target)
+            sources.append(source)
 
-        codePointToVariantGlyph = dict[int, Glyph]()
+        codePointToVariantGlyph = dict[int, str]()
         targetedLocales = {*self.locales}
         for charName, positionToFVSToVariant in data.variants.items():
             variantNames = list[str]()
@@ -80,8 +95,7 @@ class MongFeaComposer(FeaComposer):
                     targetName = str(target)
                     variantNames.append(targetName)
 
-                    glyph = self.font.get(self.glyphNameProcessor(targetName))
-                    if glyph is not None:
+                    if self.glyphNameProcessor(targetName) in self.glyphs:
                         continue
 
                     memberNames: list[str]
@@ -105,57 +119,21 @@ class MongFeaComposer(FeaComposer):
                             else:
                                 raise NotImplementedError(target)
 
-                    members: list[Glyph | float] = [
-                        self.font[self.glyphNameProcessor(i)] for i in memberNames
-                    ]
+                    glyphSpec = GlyphSpec([self.glyphNameProcessor(i) for i in memberNames])
                     if pseudoPosition := target.pseudoPosition():
-                        if pseudoPosition in ["isol", "init"]:
-                            members = [initPadding, *members]
-                        if pseudoPosition in ["isol", "fina"]:
-                            members = [*members, finaPadding]
-                    composeGlyph(self.font, self.glyphNameProcessor(targetName), members)
+                        glyphSpec.initPadding = pseudoPosition in ["isol", "init"]
+                        glyphSpec.finaPadding = pseudoPosition in ["isol", "fina"]
+                    self.spec.newGlyphs[self.glyphNameProcessor(targetName)] = glyphSpec
 
             if variantNames:
                 codePoint = ord(unicodedata.lookup(charName))
                 variant = GlyphDescriptor([codePoint], *codePointToCmapVariant[codePoint])
-                codePointToVariantGlyph[codePoint] = self.font[
-                    self.glyphNameProcessor(str(variant))
-                ]
+                codePointToVariantGlyph[codePoint] = str(variant)
 
         for codePoint, variantGlyph in codePointToVariantGlyph.items():
-            glyph = composeGlyph(
-                self.font, self.glyphNameProcessor(uNameFromCodePoint(codePoint)), [variantGlyph]
-            )
-            existingGlyph = existingCmap.get(codePoint)
-            if existingGlyph is not None:
-                existingGlyph.unicodes.remove(codePoint)
-            glyph.unicode = codePoint
-
-    def compose(self) -> None:
-        from . import ia, ib, iia, iib, iii
-
-        self.initControls()
-        self.initVariants()
-
-        ia.compose(self)
-        iia.compose(self)
-        iii.compose(self)
-        iib.compose(self)
-        ib.compose(self)
-
-        self.writeGdef()
-
-    def writeGdef(self) -> None:
-        gdefBlock = ast.TableBlock("GDEF")
-        gdefBlock.statements.append(
-            ast.GlyphClassDefStatement(
-                baseGlyphs=self.glyphClass(self.gdef.get("base", [])),
-                ligatureGlyphs=self.glyphClass(self.gdef.get("ligature", [])),
-                markGlyphs=self.glyphClass(self.gdef.get("mark", [])),
-                componentGlyphs=self.glyphClass(self.gdef.get("component", [])),
-            )
-        )
-        self.current.append(gdefBlock)
+            processedName = self.glyphNameProcessor(uNameFromCodePoint(codePoint))
+            self.spec.cmap[codePoint] = processedName
+            self.spec.newGlyphs[processedName] = GlyphSpec([self.glyphNameProcessor(variantGlyph)])
 
     def initControls(self) -> None:
         """
@@ -168,14 +146,15 @@ class MongFeaComposer(FeaComposer):
         For nirugu, `nirugu.ignored` indicates the nirugu as a `mark` that needs to be ignored, and `nirugu` indicate the valid nirugu as a `base`.
         """
 
+        from .iii import MARKER_FEMININE, MARKER_MASCULINE
+
         fvses = [f"fvs{i}" for i in range(1, 5)]
         for fvs in fvses:
             variants = [fvs]
             for suffix in [".valid", ".ignored"]:
                 variant = fvs + suffix
-                if self.font is not None:
-                    composeGlyph(self.font, self.glyphNameProcessor(variant), [])
                 variants.append(variant)
+                self.spec.newGlyphs[self.glyphNameProcessor(variant)] = GlyphSpec([])
             self.classes[fvs] = self.namedGlyphClass(fvs, variants)
 
         for name, items in {
@@ -189,20 +168,23 @@ class MongFeaComposer(FeaComposer):
         }.items():
             self.classes[name] = self.namedGlyphClass(name, items)
 
-        self.gdef.setdefault("base", []).extend([self.classes["fvs.invalid"], self.classes["mvs"]])
-        self.gdef.setdefault("mark", []).extend(
-            [self.classes["fvs.valid"], self.classes["fvs.ignored"]]
-        )
+        for glyphClass in [self.classes["fvs.invalid"], self.classes["mvs"]]:
+            for glyphName in glyphClass.glyphSet():
+                self.spec.openTypeCategories[glyphName.glyph] = "base"
+        for glyphClass in [self.classes["fvs.valid"], self.classes["fvs.ignored"]]:
+            for glyphName in glyphClass.glyphSet():
+                self.spec.openTypeCategories[glyphName.glyph] = "mark"
 
         with self.Lookup("_.ignored") as _ignored:
             for original in ["nirugu", "zwj", "zwnj"]:
                 variant = original + ".ignored"
-                if self.font is not None:
-                    composeGlyph(self.font, self.glyphNameProcessor(variant), [])
                 self.sub(original, by=variant)
+                self.spec.newGlyphs[self.glyphNameProcessor(variant)] = GlyphSpec([])
 
-            self.gdef.setdefault("base", []).extend(["nirugu", "zwj", "zwnj", "zwj.ignored"])
-            self.gdef.setdefault("mark", []).extend(["nirugu.ignored", "zwnj.ignored"])
+            for name in ["nirugu", "zwj", "zwnj", "zwj.ignored"]:
+                self.spec.openTypeCategories[self.glyphNameProcessor(name)] = "base"
+            for name in ["nirugu.ignored", "zwnj.ignored"]:
+                self.spec.openTypeCategories[self.glyphNameProcessor(name)] = "mark"
 
             for fvs in fvses:
                 for suffix in ["", ".valid"]:
@@ -231,6 +213,12 @@ class MongFeaComposer(FeaComposer):
 
         for lookup in [_ignored, _valid, _reset, _narrow, _wide]:
             self.conditions[lookup.name] = lookup
+
+        if "MNG" in self.locales:
+            for name in MARKER_MASCULINE, MARKER_FEMININE:
+                processedName = self.glyphNameProcessor(name)
+                self.spec.newGlyphs[processedName] = GlyphSpec([])
+                self.spec.openTypeCategories[processedName] = "mark"
 
     def initVariants(self) -> None:
         """
@@ -352,7 +340,7 @@ class MongFeaComposer(FeaComposer):
         positions: JoiningPosition | Iterable[JoiningPosition] | None = None,
     ) -> ast.GlyphClass:
         """
-        >>> composer = MongFeaComposer(font=None, locales=["MNG"])
+        >>> composer = MongFeaComposer(cmap={}, glyphs=[], locales=["MNG"])
         >>> composer.initVariants()
         >>> composer.variants("MNG", ["a", "o", "u"], "fina").asFea()
         '[@MNG-a.fina @MNG-o.fina @MNG-u.fina]'
@@ -373,7 +361,7 @@ class MongFeaComposer(FeaComposer):
         aliases: list[str] = [],
     ) -> ast.GlyphClass:
         """
-        >>> composer = MongFeaComposer(font=None, locales=["MNG"])
+        >>> composer = MongFeaComposer(cmap={}, glyphs=[], locales=["MNG"])
         >>> composer.writtens("MNG", "A", "medi").asFea()
         '[u1820.A.medi u1821.A.medi u1828.A.medi]'
         """
@@ -437,8 +425,9 @@ class MongFeaComposer(FeaComposer):
                 suffixes=["marked"] if marked else [],
             )
         )
-        if marked and self.font is not None and name not in self.font:
-            composeGlyph(self.font, self.glyphNameProcessor(name), [])
+        processedName = self.glyphNameProcessor(name)
+        if marked and processedName not in self.glyphs:
+            self.spec.newGlyphs[processedName] = GlyphSpec([])
         return name
 
 

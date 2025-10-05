@@ -3,7 +3,7 @@ from utils import tempDir
 
 
 def test_otl() -> None:
-    composer = MongFeaComposer(font=None, locales=["MNG"])
+    composer = MongFeaComposer(cmap={}, glyphs=[], locales=["MNG"])
     composer.compose()
     code = composer.asFeatureFile().asFea()
     (tempDir / "otl.fea").write_text(code)
