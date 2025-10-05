@@ -7,7 +7,6 @@ from typing import Iterable
 
 from fontTools import unicodedata
 from fontTools.misc.transform import Identity
-from ufoLib2.objects import Component, Font, Glyph
 
 from .data import (
     CharacterName,
@@ -18,26 +17,6 @@ from .data import (
     WrittenUnitID,
 )
 from .data.misc import fina, init, isol, medi
-
-
-def constructFont(
-    font: Font,
-    locales: list[LocaleID],
-    exportPrivateGlyphs: bool = False,
-) -> None:
-    from .otl import MongFeaComposer
-
-    composer = MongFeaComposer(font=font, locales=locales)
-    composer.constructPredefinedGlyphs()
-    composer.compose()
-    font.features.text = (
-        composer.asFeatureFile().asFea() + font.features.text  # HACK: Keep original code at the end
-    )
-    if not exportPrivateGlyphs:
-        skipExportGlyphs: list[str] = font.lib.setdefault("public.skipExportGlyphs", [])
-        for name in font.keys():
-            if name.startswith("_") and name not in skipExportGlyphs:
-                skipExportGlyphs.append(name)
 
 
 def splitWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
@@ -201,20 +180,3 @@ def uNameFromCodePoint(codePoint: int) -> str:
 
 
 pseudoPositionSuffixes = ["_" + i for i in data.misc.joiningPositions]
-
-
-def composeGlyph(font: Font, name: str, members: list[Glyph | float]) -> Glyph:
-    font.lib.get("public.glyphOrder", []).append(name)
-    glyph = font.newGlyph(name)
-    for member in members:
-        if isinstance(member, Glyph):
-            glyph.components.append(
-                Component(
-                    str(member.name),
-                    Identity.translate(x=glyph.width),
-                )
-            )
-            glyph.width += member.width
-        else:
-            glyph.width += member
-    return glyph

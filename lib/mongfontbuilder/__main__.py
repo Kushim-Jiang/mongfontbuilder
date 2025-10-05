@@ -7,8 +7,10 @@ from pathlib import Path
 
 from ufoLib2 import Font
 
-from . import constructFont, data
+from . import data
 from .data.types import LocaleID
+from .otl import MongFeaComposer
+from .spec import applySpecToFont
 
 parser = ArgumentParser()
 parser.add_argument(
@@ -36,6 +38,15 @@ output: Path = args.output
 locales: list[LocaleID] = args.locales
 
 font = Font.open(input)
-constructFont(font, locales)
+
+c = MongFeaComposer(
+    cmap={j: i for i in font.keys() for j in font[i].unicodes},
+    glyphs=[*font.keys()],
+    locales=locales,
+)
+spec = c.compose()
+applySpecToFont(spec, font)
+font.features.text = c.asFeatureFile().asFea()
+
 output.parent.mkdir(parents=True, exist_ok=True)
 font.save(output, overwrite=True)

@@ -1,6 +1,6 @@
 [project]
 name = "mongfontbuilder"
-version = "0.8.0"
+version = "0.9.0"
 description = "Mongolian Font Builder."
 license = { text = "MIT" }
 readme = "README.md"
@@ -38,4 +38,4 @@ src = ["lib", "tests"] # Treat as first-party for sorting imports
 lint.select = []
 
 [tool.pytest.ini_options]
-addopts = "lib tests --doctest-modules --doctest-report ndiff"
+addopts = "lib tests --doctest-modules --doctest-report ndiff --color=yes"

@@ -19,7 +19,20 @@ input = testsDir / "hudum.ufo"
 intermediate = tempDir / input.name
 output = intermediate.with_suffix(".otf")
 
-run(["uv", "run", "python", "-m", "mongfontbuilder", input, intermediate, "--locales", "MNG"])
+run(
+    [
+        "uv",
+        "run",
+        "--locked",
+        "python",
+        "-m",
+        "mongfontbuilder",
+        input,
+        intermediate,
+        "--locales",
+        "MNG",
+    ]
+)
 
 compiler = OTFCompiler(
     useProductionNames=False,
