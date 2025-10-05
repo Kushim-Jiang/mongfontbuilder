@@ -61,15 +61,18 @@ def iib1(c: MongFeaComposer) -> None:
         for input, (ligature, required) in inputToLigatureAndRequired.items():
             input = [str(i) for i in input]
             ligatureName = str(ligature)
+            ligate = True
             if c.glyphs:
-                if required and ligatureName not in c.glyphs:
+                if ligatureName in c.glyphs:
+                    pass
+                elif required:
                     componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
                     c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
                         [c.glyphNameProcessor(componentName)]
                     )
-                if ligatureName in c.glyphs:
-                    c.sub(*input, by=ligatureName)
-            else:
+                else:
+                    ligate = False
+            if ligate:
                 c.sub(*input, by=ligatureName)
 
         if "MNGx" in c.locales:
