@@ -27,7 +27,10 @@ def applySpecToFont(
 ) -> None:
     """Default implementation for ufoLib2 Font."""
 
-    existingCmap = {j: i for i in font for j in i.unicodes}
+    skipExportGlyphs: list[str] = font.lib.get("public.skipExportGlyphs", [])
+    existingCmap = {
+        j: i for i in font.keys() if i not in skipExportGlyphs for j in font[i].unicodes
+    }
 
     for name, glyphSpec in spec.newGlyphs.items():
         glyph = font.newGlyph(name)
@@ -40,9 +43,8 @@ def applySpecToFont(
             glyph.width += finaPadding
 
     for codePoint, glyphName in spec.cmap.items():
-        glyph = existingCmap.get(codePoint)
-        if glyph is not None:
-            glyph.unicodes.remove(codePoint)
+        if existingGlyphName := existingCmap.get(codePoint):
+            font[existingGlyphName].unicodes.remove(codePoint)
         font[glyphName].unicode = codePoint
 
     font.lib.setdefault("public.openTypeCategories", {}).update(spec.openTypeCategories)
