@@ -181,9 +181,9 @@ class MongFeaComposer(FeaComposer):
                 self.sub(original, by=variant)
                 self.spec.newGlyphs[self.glyphNameProcessor(variant)] = GlyphSpec([])
 
-            for name in ["nirugu", "zwj", "zwnj", "zwj.ignored"]:
+            for name in ["nirugu"]:
                 self.spec.openTypeCategories[self.glyphNameProcessor(name)] = "base"
-            for name in ["nirugu.ignored", "zwnj.ignored"]:
+            for name in ["nirugu.ignored", "zwj", "zwj.ignored", "zwnj", "zwnj.ignored"]:
                 self.spec.openTypeCategories[self.glyphNameProcessor(name)] = "mark"
 
             for fvs in fvses:

@@ -30,7 +30,7 @@ def iii0(c: MongFeaComposer) -> None:
 
 def iii0a(c: MongFeaComposer) -> None:
     """
-    Before Mongolian-specific shaping steps, ZWNJ, ZWJ, nirugu, Todo (Ali Gali) long vowel sign and FVS need to be substituted to ignored glyphs, while MVS needs to be substituted to invalid glyph.
+    Before Mongolian-specific shaping steps, nirugu, Todo (Ali Gali) long vowel sign and FVS need to be substituted to ignored glyphs, while MVS needs to be substituted to invalid glyph. ZWNJ and ZWJ also need to be substituted to ignored glyphs to avoid HarfBuzz converting them to zero-width spaces.
 
     Specifically, for Todo (Ali Gali) long vowel sign, when the final long vowel sign is substituted to ignored glyph, the joining position of the previous letter will be changed (from `init` to `isol`, from `medi` to `fina`).
     """
