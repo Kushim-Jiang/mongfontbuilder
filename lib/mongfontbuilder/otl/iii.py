@@ -62,7 +62,7 @@ def iii0a(c: MongFeaComposer) -> None:
                         charVar = GlyphDescriptor.fromData(charName, position)
                         for lvsPosition in (medi, fina):
                             lvsVar = GlyphDescriptor.fromData(lvsCharName, lvsPosition)
-                            c.sub(str(charVar), str(lvsVar), by=str(charVar + lvsVar))
+                            c.sub(str(charVar), str(lvsVar), by=str(ligateParts([charVar, lvsVar])))
 
 
 def iii0b(c: MongFeaComposer) -> None:
