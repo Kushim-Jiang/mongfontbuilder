@@ -38,6 +38,7 @@ def iib1(c: MongFeaComposer) -> None:
             namespace = namespaceFromLocale(locale)
             vowelAliases = data.locales[locale].categories["vowel"]
             for category, ligatureToPositions in data.ligatures.items():
+                required = category == "required"
                 for writtens, positions in ligatureToPositions.items():
                     for position in positions:
                         for input, ligature in iterLigatureSubstitutions(
@@ -45,7 +46,7 @@ def iib1(c: MongFeaComposer) -> None:
                         ):
                             if len(input) != 2:
                                 continue
-                            if required := category == "required":
+                            if required:
                                 # Check the second glyph, ignoring LVS:
                                 codePoint = input[1].codePoints[0]
                                 alias = data.aliases[unicodedata.name(chr(codePoint))]
@@ -59,19 +60,18 @@ def iib1(c: MongFeaComposer) -> None:
         for input, (ligature, required) in inputToLigatureAndRequired.items():
             input = [str(i) for i in input]
             ligatureName = str(ligature)
-            ligate = True
-            if c.glyphs:
-                if ligatureName in c.glyphs:
+            if c.glyphs and ligatureName not in c.glyphs:
+                componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
+                if required:
+                    assert componentName in c.glyphs, componentName
+                elif componentName in c.glyphs:
                     pass
-                elif required:
-                    componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
-                    c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
-                        [c.glyphNameProcessor(componentName)]
-                    )
                 else:
-                    ligate = False
-            if ligate:
-                c.sub(*input, by=ligatureName)
+                    continue
+                c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
+                    [c.glyphNameProcessor(componentName)]
+                )
+            c.sub(*input, by=ligatureName)
 
         if "MNGx" in c.locales:
             c.sub("u18A6.Wp.medi", "u1820.A.fina", by="u18A6_u1820.WpA.fina")
