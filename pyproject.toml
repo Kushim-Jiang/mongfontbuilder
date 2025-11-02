@@ -1,6 +1,6 @@
 [project]
 name = "mongfontbuilder"
-version = "0.9.3"
+version = "0.10.0"
 description = "Mongolian Font Builder."
 license = { text = "MIT" }
 readme = "README.md"

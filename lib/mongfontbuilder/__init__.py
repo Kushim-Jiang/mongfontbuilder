@@ -145,24 +145,6 @@ class GlyphDescriptor:
             name = "_"
         return name + ".".join(["".join(self.units), self.position, *self.suffixes])
 
-    def __add__(self, other: GlyphDescriptor) -> GlyphDescriptor:
-        """
-        >>> GlyphDescriptor.parse('u1820.A.init') + GlyphDescriptor.parse('u1820.A.medi')
-        GlyphDescriptor(codePoints=[6176, 6176], units=['A', 'A'], position='init', suffixes=[])
-        """
-        joiningType: dict[tuple[JoiningPosition, JoiningPosition], JoiningPosition] = {
-            ("init", "fina"): "isol",
-            ("init", "medi"): "init",
-            ("medi", "medi"): "medi",
-            ("medi", "fina"): "fina",
-        }
-        assert (self.position, other.position) in joiningType
-        return GlyphDescriptor(
-            self.codePoints + other.codePoints,
-            self.units + other.units,
-            joiningType[(self.position, other.position)],
-        )
-
     def pseudoPosition(self) -> JoiningPosition | None:
         if self.suffixes:
             suffix = self.suffixes[0]

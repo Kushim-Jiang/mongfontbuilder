@@ -1,6 +1,5 @@
-import operator
 from collections.abc import Iterator
-from functools import reduce
+from copy import deepcopy
 from itertools import product
 
 from fontTools import unicodedata
@@ -113,6 +112,14 @@ def iib3(c: MongFeaComposer) -> None:
     pass
 
 
+joiningTypeConcatenation: dict[tuple[JoiningPosition, JoiningPosition], JoiningPosition] = {
+    ("init", "medi"): "init",
+    ("init", "fina"): "isol",
+    ("medi", "medi"): "medi",
+    ("medi", "fina"): "fina",
+}
+
+
 def iterLigatureSubstitutions(
     c: MongFeaComposer,
     writtens: str,
@@ -130,5 +137,11 @@ def iterLigatureSubstitutions(
             ]
             for units in combination
         ]
-        for variants in product(*writtenLists):
-            yield variants, reduce(operator.add, variants)
+        for parts in product(*writtenLists):
+            first, *remaining = parts
+            ligature = deepcopy(first)
+            for part in remaining:
+                ligature.codePoints.extend(part.codePoints)
+                ligature.units.extend(part.units)
+                ligature.position = joiningTypeConcatenation[ligature.position, part.position]
+            yield parts, ligature
