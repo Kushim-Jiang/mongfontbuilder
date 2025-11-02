@@ -111,7 +111,7 @@ class MongFeaComposer(FeaComposer):
                                 break
                         else:
                             for writtenVariants in writtenCombinations(
-                                "".join(writtenTarget.units), writtenTarget.position
+                                writtenTarget.units, writtenTarget.position
                             ):
                                 if len(writtenVariants) == len(writtenTarget.units):
                                     memberNames = ["_" + i for i in writtenVariants]

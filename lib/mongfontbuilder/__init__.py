@@ -2,11 +2,10 @@ from __future__ import annotations
 
 import re
 from collections.abc import Iterator
+from copy import deepcopy
 from dataclasses import dataclass, field
-from typing import Iterable
 
 from fontTools import unicodedata
-from fontTools.misc.transform import Identity
 
 from .data import (
     CharacterName,
@@ -19,7 +18,7 @@ from .data import (
 from .data.misc import fina, init, isol, medi
 
 
-def splitWrittens(writtens: str | Iterable[str]) -> list[WrittenUnitID]:
+def splitWrittens(writtens: str) -> list[WrittenUnitID]:
     """
     >>> splitWrittens("ABbCcc")
     ['A', 'Bb', 'Ccc']
@@ -34,13 +33,13 @@ def getPosition(index: int, length: int) -> JoiningPosition:
     return isol if length == 1 else (init if index == 0 else fina if index == length - 1 else medi)
 
 
-def writtenCombinations(writtens: str, position: JoiningPosition) -> Iterator[list[str]]:
+def writtenCombinations(writtens: list[str], position: JoiningPosition) -> Iterator[list[str]]:
     """
-    >>> [*writtenCombinations("ABCD", "isol")]
+    >>> [*writtenCombinations(['A', 'B', 'C', 'D'], "isol")]
     [['A.init', 'B.medi', 'C.medi', 'D.fina'], ['A.init', 'B.medi', 'CD.fina'], ['A.init', 'BC.medi', 'D.fina'], ['A.init', 'BCD.fina'], ['AB.init', 'C.medi', 'D.fina'], ['AB.init', 'CD.fina'], ['ABC.init', 'D.fina'], ['ABCD.isol']]
     """
 
-    parts = splitWrittens(writtens)
+    parts = [*writtens]
     if "Lv" in parts:
         index = parts.index("Lv")
         if index > 0:
@@ -54,9 +53,9 @@ def writtenCombinations(writtens: str, position: JoiningPosition) -> Iterator[li
     if rightJoin:
         parts += [placeholder]
 
-    combinations = [[]]
+    combinations: list[list[str]] = [[]]
     for part in parts:
-        newCombinations = []
+        newCombinations = list[list[str]]()
         for comb in combinations:
             newCombinations.append(comb + [part])
             if comb:
@@ -66,12 +65,8 @@ def writtenCombinations(writtens: str, position: JoiningPosition) -> Iterator[li
     for comb in combinations:
         result = [
             f"{written}.{getPosition(index, len(comb))}" for index, written in enumerate(comb)
-        ][leftJoin : (len(comb) - rightJoin)]
-        if (
-            len([l for w in result for l in w if l.isupper()])
-            == len(list(l for l in str(writtens) if l.isupper()))
-            and result
-        ):
+        ][leftJoin : len(comb) - rightJoin]
+        if result and sum(len(splitWrittens(i)) for i in result) == len(writtens):
             yield result
 
 
@@ -162,3 +157,21 @@ def uNameFromCodePoint(codePoint: int) -> str:
 
 
 pseudoPositionSuffixes = ["_" + i for i in data.misc.joiningPositions]
+
+
+joiningPositionConcatenation: dict[tuple[JoiningPosition, JoiningPosition], JoiningPosition] = {
+    ("init", "medi"): "init",
+    ("init", "fina"): "isol",
+    ("medi", "medi"): "medi",
+    ("medi", "fina"): "fina",
+}
+
+
+def ligateParts(parts: list[GlyphDescriptor]) -> GlyphDescriptor:
+    first, *remaining = parts
+    ligature = deepcopy(first)
+    for part in remaining:
+        ligature.codePoints.extend(part.codePoints)
+        ligature.units.extend(part.units)
+        ligature.position = joiningPositionConcatenation[ligature.position, part.position]
+    return ligature

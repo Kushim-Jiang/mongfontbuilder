@@ -1,6 +1,6 @@
 from fontTools.feaLib import ast
 
-from .. import GlyphDescriptor, data, getPosition
+from .. import GlyphDescriptor, data, getPosition, ligateParts
 from ..data.misc import fina, init, isol, medi
 from ..utils import getAliasesByLocale, getCharNameByAlias
 from . import MongFeaComposer

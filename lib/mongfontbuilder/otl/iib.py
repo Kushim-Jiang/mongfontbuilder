@@ -1,10 +1,9 @@
 from collections.abc import Iterator
-from copy import deepcopy
 from itertools import product
 
 from fontTools import unicodedata
 
-from .. import GlyphDescriptor, data, writtenCombinations
+from .. import GlyphDescriptor, data, ligateParts, splitWrittens, writtenCombinations
 from ..data.misc import JoiningPosition
 from ..data.types import LocaleID
 from ..spec import GlyphSpec
@@ -112,21 +111,13 @@ def iib3(c: MongFeaComposer) -> None:
     pass
 
 
-joiningTypeConcatenation: dict[tuple[JoiningPosition, JoiningPosition], JoiningPosition] = {
-    ("init", "medi"): "init",
-    ("init", "fina"): "isol",
-    ("medi", "medi"): "medi",
-    ("medi", "fina"): "fina",
-}
-
-
 def iterLigatureSubstitutions(
     c: MongFeaComposer,
     writtens: str,
     position: JoiningPosition,
     locale: LocaleID,
 ) -> Iterator[tuple[tuple[GlyphDescriptor, ...], GlyphDescriptor]]:
-    for combination in writtenCombinations(writtens, position):
+    for combination in writtenCombinations(splitWrittens(writtens), position):
         writtenLists = [
             [
                 GlyphDescriptor.parse(glyph.glyph)
@@ -138,10 +129,4 @@ def iterLigatureSubstitutions(
             for units in combination
         ]
         for parts in product(*writtenLists):
-            first, *remaining = parts
-            ligature = deepcopy(first)
-            for part in remaining:
-                ligature.codePoints.extend(part.codePoints)
-                ligature.units.extend(part.units)
-                ligature.position = joiningTypeConcatenation[ligature.position, part.position]
-            yield parts, ligature
+            yield parts, ligateParts([*parts])
