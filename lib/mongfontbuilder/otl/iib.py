@@ -54,24 +54,14 @@ def iib1(c: MongFeaComposer) -> None:
                                     alias = alias[namespace]
                                 if alias not in vowelAliases:
                                     continue
-                            # Deduplicate inputs:
-                            inputToLigatureAndRequired[input] = ligature, required
+                            # Deduplicate inputs between locales:
+                            if existing := inputToLigatureAndRequired.get(input):
+                                assert existing == (ligature, required)
+                            else:
+                                inputToLigatureAndRequired[input] = ligature, required
 
         for input, (ligature, required) in inputToLigatureAndRequired.items():
-            input = [str(i) for i in input]
-            ligatureName = str(ligature)
-            if c.glyphs and ligatureName not in c.glyphs:
-                componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
-                if required:
-                    assert componentName in c.glyphs, componentName
-                elif componentName in c.glyphs:
-                    pass
-                else:
-                    continue
-                c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
-                    [c.glyphNameProcessor(componentName)]
-                )
-            c.sub(*input, by=ligatureName)
+            implementLigature(c, input, ligature, required)
 
         if "MNGx" in c.locales:
             c.sub("u18A6.Wp.medi", "u1820.A.fina", by="u18A6_u1820.WpA.fina")
@@ -83,6 +73,49 @@ def iib1(c: MongFeaComposer) -> None:
         if "MCH" in c.locales:
             c.sub("u186F.Zs.init", "u1873.I.fina", by="u186F_u1873.Zs.isol")
             c.sub("u186F.Zs.medi", "u1873.I.fina", by="u186F_u1873.Zs.fina")
+
+
+def iterLigatureSubstitutions(
+    c: MongFeaComposer,
+    writtens: str,
+    position: JoiningPosition,
+    locale: LocaleID,
+) -> Iterator[tuple[tuple[GlyphDescriptor, ...], GlyphDescriptor]]:
+    for combination in writtenCombinations(splitWrittens(writtens), position):
+        writtenLists = [
+            [
+                GlyphDescriptor.parse(glyph.glyph)
+                for glyph in c.writtens(
+                    locale,
+                    *units.split("."),  # type: ignore
+                ).glyphs
+            ]
+            for units in combination
+        ]
+        for parts in product(*writtenLists):
+            yield parts, ligateParts([*parts])
+
+
+def implementLigature(
+    c: MongFeaComposer,
+    input: tuple[GlyphDescriptor, ...],
+    ligature: GlyphDescriptor,
+    required: bool,
+) -> None:
+    inputNames = [str(i) for i in input]
+    ligatureName = str(ligature)
+    if c.glyphs and ligatureName not in c.glyphs:
+        componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
+        if required:
+            assert componentName in c.glyphs, componentName
+        elif componentName in c.glyphs:
+            pass
+        else:
+            return
+        c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
+            [c.glyphNameProcessor(componentName)]
+        )
+    c.sub(*inputNames, by=ligatureName)
 
 
 def iib2(c: MongFeaComposer) -> None:
@@ -109,24 +142,3 @@ def iib3(c: MongFeaComposer) -> None:
     Optional treatments.
     """
     pass
-
-
-def iterLigatureSubstitutions(
-    c: MongFeaComposer,
-    writtens: str,
-    position: JoiningPosition,
-    locale: LocaleID,
-) -> Iterator[tuple[tuple[GlyphDescriptor, ...], GlyphDescriptor]]:
-    for combination in writtenCombinations(splitWrittens(writtens), position):
-        writtenLists = [
-            [
-                GlyphDescriptor.parse(glyph.glyph)
-                for glyph in c.writtens(
-                    locale,
-                    *units.split("."),  # type: ignore
-                ).glyphs
-            ]
-            for units in combination
-        ]
-        for parts in product(*writtenLists):
-            yield parts, ligateParts([*parts])
