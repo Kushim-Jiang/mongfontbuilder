@@ -16,6 +16,7 @@ def compose(c: MongFeaComposer) -> None:
     iii4(c)
     iii5(c)
     iii6(c)
+    iii7(c)
 
 
 def iii0(c: MongFeaComposer) -> None:
@@ -1276,3 +1277,18 @@ def iii6(c: MongFeaComposer) -> None:
                 c.input("fvs1.ignored", c.conditions["_.valid"]),
                 by=None,
             )
+
+
+def iii7(c: MongFeaComposer) -> None:
+    """
+    **Phase III.7: Control character postprocessing**
+    """
+
+    with c.Lookup("III.controls.postprocessing", feature="rclt"):
+        c.sub(
+            c.input(
+                c.glyphClass(["nirugu.ignored", c.classes["fvs.ignored"]]),
+                c.conditions["_.reset"],
+            ),
+            by=None,
+        )

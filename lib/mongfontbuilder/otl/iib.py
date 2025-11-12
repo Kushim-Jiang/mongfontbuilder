@@ -24,13 +24,7 @@ def iib1(c: MongFeaComposer) -> None:
     Ligatures.
     """
 
-    with c.Lookup(
-        f"IIb.ligature",
-        feature="rclt",
-        flags={  # Prevent ligation
-            "UseMarkFilteringSet": c.glyphClass(["nirugu.ignored", c.classes["fvs.ignored"]])
-        },
-    ):
+    with c.Lookup(f"IIb.ligature", feature="rclt"):
         inputToLigatureAndRequired = dict[
             tuple[GlyphDescriptor, ...], tuple[GlyphDescriptor, bool]
         ]()
@@ -122,17 +116,9 @@ def iib2(c: MongFeaComposer) -> None:
     """
     **Phase IIb.2: Cleanup of format controls**
 
-    Controls postprocessing.
+    Optional treatments.
     """
-
-    with c.Lookup("IIb.controls.postprocessing", feature="rclt"):
-        c.sub(
-            c.input(
-                c.glyphClass(["nirugu.ignored", c.classes["fvs.ignored"]]),
-                c.conditions["_.reset"],
-            ),
-            by=None,
-        )
+    pass
 
 
 def iib3(c: MongFeaComposer) -> None:
