@@ -100,12 +100,11 @@ def implementLigature(
     ligatureName = str(ligature)
     if c.glyphs and ligatureName not in c.glyphs:
         componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
-        if required:
-            assert componentName in c.glyphs, componentName
-        elif componentName in c.glyphs:
-            pass
-        else:
-            return
+        if componentName not in c.glyphs:
+            if required:
+                raise KeyError(componentName)
+            else:
+                return
         c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
             [c.glyphNameProcessor(componentName)]
         )
