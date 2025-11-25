@@ -19,7 +19,7 @@
     "@fontsource/noto-sans-mongolian": "^5.1.1",
     "@types/node": "^22.0.0",
     "@unicode/unicode-16.0.0": "^1.6.5",
-    "astro": "^5.15.5",
+    "astro": "^5.15.9",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-svelte": "^3.2.6",
