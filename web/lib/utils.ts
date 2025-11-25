@@ -1,7 +1,5 @@
-// @ts-ignore
-import _Names from "@unicode/unicode-16.0.0/Names";
+import Names from "@unicode/unicode-17.0.0/Names";
 
-const Names: Map<number, string> = _Names;
 export const nameToCP = new Map(
   [...Names].filter(([_, v]) => !v.startsWith("<")).map(([k, v]) => [v, k]),
 );
