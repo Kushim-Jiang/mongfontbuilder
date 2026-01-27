@@ -26,6 +26,9 @@
     "typescript": "5.9.3",
     "vite-node": "3.0.0"
   },
+  "overrides": {
+    "lodash": "4.17.23"
+  },
   "prettier": {
     "overrides": [
       {
