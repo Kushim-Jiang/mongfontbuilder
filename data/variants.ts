@@ -2793,6 +2793,7 @@ export const variants: Record<
             eac: "TFAM1",
           },
           SIB: {
+            written: ["medi", 0],
             eac: "SFAM1",
           },
           MCH: {
@@ -5335,7 +5336,7 @@ export const variants: Record<
       },
     },
     medi: {
-      "2": {
+      "1": {
         written: ["A", "I"],
         locales: {
           SIB: {
@@ -5344,7 +5345,7 @@ export const variants: Record<
           },
         },
       },
-      "3": {
+      "2": {
         written: ["I"],
         default: true,
         locales: {
@@ -5355,26 +5356,7 @@ export const variants: Record<
       },
     },
     fina: {
-      "1": {
-        written: ["I2"],
-        locales: {
-          SIB: {
-            eac: "SIM2",
-            unrecommended: true,
-          },
-        },
-      },
-      "2": {
-        written: ["A", "I"],
-        locales: {
-          SIB: {
-            gb: "1834 sibe cha second final form",
-            eac: "SIM3",
-            unrecommended: true,
-          },
-        },
-      },
-      "3": {
+      "0": {
         written: ["I"],
         default: true,
         locales: {
@@ -5728,14 +5710,6 @@ export const variants: Record<
           },
         },
       },
-      "2": {
-        written: ["init", 2],
-        locales: {
-          SIB: {
-            eac: "SKAD3",
-          },
-        },
-      },
     },
     init: {
       "1": {
@@ -5745,15 +5719,6 @@ export const variants: Record<
             conditions: ["feminine"],
             gb: "1863 sibe ka initial form",
             eac: "SKAS2",
-          },
-        },
-      },
-      "2": {
-        written: ["Gx"],
-        locales: {
-          SIB: {
-            eac: "SKAS3",
-            unrecommended: true,
           },
         },
       },
@@ -5798,15 +5763,6 @@ export const variants: Record<
           },
         },
       },
-      "4": {
-        written: ["Gx"],
-        locales: {
-          SIB: {
-            eac: "SKAZ4",
-            unrecommended: true,
-          },
-        },
-      },
     },
     fina: {
       "0": {
@@ -5816,24 +5772,6 @@ export const variants: Record<
           SIB: {
             gb: "1863 sibe ka final form",
             eac: "SKAM1",
-          },
-        },
-      },
-      "1": {
-        written: ["G4"],
-        locales: {
-          SIB: {
-            eac: "SKAM2",
-            unrecommended: true,
-          },
-        },
-      },
-      "2": {
-        written: ["Gx"],
-        locales: {
-          SIB: {
-            eac: "SKAM3",
-            unrecommended: true,
           },
         },
       },
@@ -6215,20 +6153,8 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE TA": {
     isol: {
       "0": {
-        written: ["init", 2],
-        default: true,
-        locales: {
-          SIB: {
-            eac: "STAD1",
-          },
-          MCH: {
-            eac: "MTAD1",
-          },
-          MCHx: {},
-        },
-      },
-      "1": {
         written: ["init", 1],
+        default: true,
         locales: {
           SIB: {
             eac: "STAD2",
@@ -6239,27 +6165,21 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "1": {
+        written: ["init", 2],
+        locales: {
+          SIB: {
+            eac: "STAD1",
+          },
+          MCH: {
+            eac: "MTAD1",
+          },
+          MCHx: {},
+        },
+      },
     },
     init: {
       "1": {
-        written: ["T"],
-        locales: {
-          SIB: {
-            conditions: ["masculine_onset"],
-            gb: "1868 sibe ta second initial form",
-            eac: "STAS2",
-          },
-          MCH: {
-            conditions: ["masculine_onset"],
-            gb: "1832 manchu ta second initial form",
-            eac: "MTAS2",
-          },
-          MCHx: {
-            conditions: ["masculine_onset"],
-          },
-        },
-      },
-      "2": {
         written: ["Tb"],
         default: true,
         locales: {
@@ -6278,23 +6198,42 @@ export const variants: Record<
           },
         },
       },
-    },
-    medi: {
-      "1": {
-        written: ["D"],
+      "2": {
+        written: ["T"],
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
-            gb: "1868 sibe ta second medial form",
-            eac: "STAZ2",
+            gb: "1868 sibe ta second initial form",
+            eac: "STAS2",
           },
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "1833 manchu ta second medial form",
-            eac: "MTAZ2",
+            gb: "1832 manchu ta second initial form",
+            eac: "MTAS2",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+          },
+        },
+      },
+    },
+    medi: {
+      "1": {
+        written: ["Db"],
+        default: true,
+        locales: {
+          SIB: {
+            conditions: ["feminine"],
+            gb: "1868 sibe ta first medial form",
+            eac: "STAZ1",
+          },
+          MCH: {
+            conditions: ["feminine"],
+            gb: "0070 manchu ta first medial form",
+            eac: "MTAZ1",
+          },
+          MCHx: {
+            conditions: ["feminine"],
           },
         },
       },
@@ -6317,21 +6256,20 @@ export const variants: Record<
         },
       },
       "3": {
-        written: ["Db"],
-        default: true,
+        written: ["D"],
         locales: {
           SIB: {
-            conditions: ["feminine"],
-            gb: "1868 sibe ta first medial form",
-            eac: "STAZ1",
+            conditions: ["masculine_onset"],
+            gb: "1868 sibe ta second medial form",
+            eac: "STAZ2",
           },
           MCH: {
-            conditions: ["feminine"],
-            gb: "0070 manchu ta first medial form",
-            eac: "MTAZ1",
+            conditions: ["masculine_onset"],
+            gb: "1833 manchu ta second medial form",
+            eac: "MTAZ2",
           },
           MCHx: {
-            conditions: ["feminine"],
+            conditions: ["masculine_onset"],
           },
         },
       },
@@ -6769,7 +6707,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE ZA": {
     isol: {
       "0": {
-        written: ["init", 0],
+        written: ["init", 2],
         default: true,
         locales: {
           SIB: {
@@ -6783,7 +6721,16 @@ export const variants: Record<
       },
     },
     init: {
-      "0": {
+      "1": {
+        written: ["Zs2"],
+        locales: {
+          SIB: {
+            conditions: ["marked"],
+            gb: "186F sibe za second initial form",
+          },
+        },
+      },
+      "2": {
         written: ["Zs"],
         default: true,
         locales: {
@@ -6798,18 +6745,18 @@ export const variants: Record<
           MCHx: {},
         },
       },
+    },
+    medi: {
       "1": {
         written: ["Zs2"],
         locales: {
           SIB: {
             conditions: ["marked"],
-            gb: "186F sibe za second initial form",
+            gb: "186F sibe za second medial form",
           },
         },
       },
-    },
-    medi: {
-      "0": {
+      "2": {
         written: ["Zs"],
         default: true,
         locales: {
@@ -6824,19 +6771,10 @@ export const variants: Record<
           MCHx: {},
         },
       },
-      "1": {
-        written: ["Zs2"],
-        locales: {
-          SIB: {
-            conditions: ["marked"],
-            gb: "186F sibe za second medial form",
-          },
-        },
-      },
     },
     fina: {
       "0": {
-        written: ["medi", 0],
+        written: ["medi", 2],
         default: true,
         locales: {
           SIB: {
