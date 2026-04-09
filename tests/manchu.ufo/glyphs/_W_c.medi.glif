@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_Wc.medi" format="2">
+  <advance width="377"/>
+  <anchor x="1" y="0" name="baluda"/>
+  <anchor x="1" y="0" name="dagalga"/>
+  <outline>
+    <contour>
+      <point x="220" y="82" type="curve"/>
+      <point x="253" y="82"/>
+      <point x="283" y="90"/>
+      <point x="310" y="107" type="curve"/>
+      <point x="310" y="190" type="line"/>
+      <point x="287" y="173"/>
+      <point x="257" y="165"/>
+      <point x="220" y="165" type="curve"/>
+      <point x="125" y="165"/>
+      <point x="78" y="243"/>
+      <point x="78" y="407" type="curve"/>
+      <point x="78" y="544"/>
+      <point x="135" y="609"/>
+      <point x="227" y="609" type="curve"/>
+      <point x="315" y="609"/>
+      <point x="367" y="525"/>
+      <point x="377" y="376" type="curve"/>
+      <point x="457" y="386" type="line"/>
+      <point x="447" y="556"/>
+      <point x="378" y="692"/>
+      <point x="227" y="692" type="curve"/>
+      <point x="78" y="692"/>
+      <point x="-1" y="573"/>
+      <point x="-1" y="407" type="curve"/>
+      <point x="-1" y="192"/>
+      <point x="76" y="82"/>
+    </contour>
+  </outline>
+</glyph>
