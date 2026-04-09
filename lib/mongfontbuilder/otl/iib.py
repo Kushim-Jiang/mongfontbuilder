@@ -55,7 +55,7 @@ def iib1(c: MongFeaComposer) -> None:
                                 inputToLigatureAndRequired[input] = ligature, required
 
         for input, (ligature, required) in inputToLigatureAndRequired.items():
-            implementLigature(c, input, ligature, required)
+            implementLigature(c, input, ligature)
 
         if "MNGx" in c.locales:
             c.sub("u18A6.Wp.medi", "u1820.A.fina", by="u18A6_u1820.WpA.fina")
@@ -94,10 +94,25 @@ def implementLigature(
     c: MongFeaComposer,
     input: tuple[GlyphDescriptor, ...],
     ligature: GlyphDescriptor,
-    required: bool,
 ) -> None:
     inputNames = [str(i) for i in input]
     ligatureName = str(ligature)
+    for glyph in input:
+        isGlyphValid = False
+        charName = unicodedata.name(chr(glyph.codePoints[0]))
+        for variantData in data.variants[charName][glyph.position].values():
+            if variantData.written == glyph.units:
+                if c.locale in variantData.locales:
+                    if not hasattr(variantData.locales[c.locale], "written"):
+                        isGlyphValid = True
+                        break
+            else:
+                if c.locale in variantData.locales:
+                    if variantData.locales[c.locale].written == glyph.units:
+                        isGlyphValid = True
+                        break
+        if not isGlyphValid:
+            return
     if c.glyphs and ligatureName not in c.glyphs:
         componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
         if componentName not in c.glyphs:

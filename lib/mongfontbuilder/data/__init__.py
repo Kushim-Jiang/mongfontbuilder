@@ -70,8 +70,8 @@ def _resolveCmapVariants() -> dict[int, tuple[list[WrittenUnitID], JoiningPositi
     ]()
     for charName, positionToFVSToVariantData in variants.items():
         codePoint = ord(unicodedata.lookup(charName))
-        for position, fvsToVariantData in positionToFVSToVariantData.items():
-            for data in fvsToVariantData.values():
+        for position in joiningPositions:
+            for data in positionToFVSToVariantData[position].values():
                 if data.default:
                     cross_locale = True
                     for locale_data in data.locales.values():
@@ -80,13 +80,10 @@ def _resolveCmapVariants() -> dict[int, tuple[list[WrittenUnitID], JoiningPositi
                             break
                     if cross_locale:
                         written = data.written
-                        if isinstance(written, VariantReference):
-                            variant = (
-                                variantFromReference(written, positionToFVSToVariantData),
-                                written.position,
-                            )
-                        else:
+                        if not isinstance(written, VariantReference):
                             variant = written, position
+                        else:
+                            continue
                         codePointToPositionToVariant.setdefault(codePoint, {})[position] = variant
                         break
 

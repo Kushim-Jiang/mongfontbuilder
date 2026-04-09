@@ -2,16 +2,16 @@ import pytest
 
 from fixtures import loadTestCases, run_otf
 
-output_MNG = run_otf(["MNG"])
+output_MCH = run_otf(["MCH"])
 
 
 @pytest.mark.parametrize(
     ("codes", "index", "result", "goal"),
     loadTestCases(
-        output_MNG,
-        {"eac": ["hud"], "core": ["hud"]},
-        "MNG",
+        output_MCH,
+        {"core": ["man"]},
+        "MCH",
     ),
 )
-def test_MNG(codes: str, index: str, result: str, goal: str) -> None:
+def test_MCH(codes: str, index: str, result: str, goal: str) -> None:
     assert result == goal, f"ind:  {index}\ncode: {codes}\nres:  {result}\ngoal: {goal}"
