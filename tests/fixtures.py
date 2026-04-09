@@ -12,6 +12,7 @@ from utils import tempDir, testsDir
 FONT_NAME = {
     "MNG": "hudum",
     "SIB": "sibe",
+    "MCH": "manchu",
 }
 
 

@@ -644,40 +644,6 @@
       "medi",
       "fina"
     ],
-    "Pb2A": [
-      "init",
-      "medi"
-    ],
-    "Pb2Aa": [
-      "isol",
-      "fina"
-    ],
-    "Pb2Ah": [
-      "init",
-      "medi"
-    ],
-    "Pb2At": [
-      "isol",
-      "fina"
-    ],
-    "Pb2I": [
-      "isol",
-      "init",
-      "medi",
-      "fina"
-    ],
-    "Pb2O": [
-      "isol",
-      "init",
-      "medi",
-      "fina"
-    ],
-    "Pb2Oh": [
-      "isol",
-      "init",
-      "medi",
-      "fina"
-    ],
     "PbA": [
       "init",
       "medi"

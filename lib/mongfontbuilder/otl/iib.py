@@ -65,8 +65,8 @@ def iib1(c: MongFeaComposer) -> None:
             # TODO
             ...
         if "MCH" in c.locales:
-            c.sub("u186F.Zs.init", "u1873.I.fina", by="u186F_u1873.Zs.isol")
-            c.sub("u186F.Zs.medi", "u1873.I.fina", by="u186F_u1873.Zs.fina")
+            # TODO
+            ...
 
 
 def iterLigatureSubstitutions(

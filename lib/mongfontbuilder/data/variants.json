@@ -1403,6 +1403,16 @@
             ]
           }
         }
+      },
+      "3": {
+        "written": [
+          "Nx"
+        ],
+        "locales": {
+          "MCH": {
+            "gb": "0069 manchu na third medial form"
+          }
+        }
       }
     },
     "fina": {
@@ -1457,6 +1467,16 @@
             "eac": "MNAM1"
           },
           "MCHx": {}
+        }
+      },
+      "3": {
+        "written": [
+          "Nx"
+        ],
+        "locales": {
+          "MCH": {
+            "gb": "031A manchu na third final form"
+          }
         }
       }
     }
@@ -2245,6 +2265,17 @@
           },
           "MCHx": {}
         }
+      },
+      "1": {
+        "written": [
+          "init",
+          1
+        ],
+        "locales": {
+          "MCHx": {
+            "gb": "0350 manchu la second isolated form"
+          }
+        }
       }
     },
     "init": {
@@ -2273,6 +2304,16 @@
             "eac": "MLAS1"
           },
           "MCHx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "L2"
+        ],
+        "locales": {
+          "MCHx": {
+            "gb": "0350 manchu la second initial form"
+          }
         }
       }
     },
@@ -3394,9 +3435,18 @@
             "eac": "SFAM1"
           },
           "MCH": {
+            "written": [
+              "medi",
+              0
+            ],
             "eac": "MWAM1"
           },
-          "MCHx": {}
+          "MCHx": {
+            "written": [
+              "medi",
+              0
+            ]
+          }
         }
       },
       "1": {
@@ -7775,6 +7825,17 @@
           },
           "MCHx": {}
         }
+      },
+      "2": {
+        "written": [
+          "init",
+          3
+        ],
+        "locales": {
+          "MCH": {
+            "gb": "0073 manchu da third isolated form"
+          }
+        }
       }
     },
     "init": {
@@ -7828,6 +7889,16 @@
             "conditions": [
               "masculine_onset"
             ]
+          }
+        }
+      },
+      "3": {
+        "written": [
+          "Dt"
+        ],
+        "locales": {
+          "MCH": {
+            "gb": "0073 manchu da third isolated form"
           }
         }
       }
@@ -8093,7 +8164,12 @@
           "MCH": {
             "eac": "MGAAM1"
           },
-          "MCHx": {}
+          "MCHx": {
+            "written": [
+              "Kh"
+            ],
+            "gb": "0337 manchu gaa final form"
+          }
         }
       }
     }
@@ -8604,7 +8680,7 @@
       }
     },
     "medi": {
-      "2": {
+      "1": {
         "written": [
           "I",
           "I"
@@ -8624,6 +8700,18 @@
           }
         }
       },
+      "2": {
+        "written": [
+          "A",
+          "I"
+        ],
+        "locales": {
+          "MCH": {
+            "gb": "1873 manchu i third medial form"
+          },
+          "MCHx": {}
+        }
+      },
       "3": {
         "written": [
           "I"
@@ -8640,19 +8728,6 @@
     },
     "fina": {
       "1": {
-        "written": [
-          "I2"
-        ],
-        "locales": {
-          "MCH": {
-            "gb": "0062 manchu i second final form",
-            "eac": "MIM2",
-            "unrecommended": true
-          },
-          "MCHx": {}
-        }
-      },
-      "2": {
         "written": [
           "Iy"
         ],
@@ -8672,7 +8747,7 @@
           }
         }
       },
-      "3": {
+      "2": {
         "written": [
           "I"
         ],
@@ -8681,20 +8756,6 @@
           "MCH": {
             "gb": "000B manchu i first final form",
             "eac": "MIM1"
-          },
-          "MCHx": {}
-        }
-      },
-      "4": {
-        "written": [
-          "A",
-          "I"
-        ],
-        "locales": {
-          "MCH": {
-            "gb": "0303 manchu i fourth final form",
-            "eac": "MIM4",
-            "unrecommended": true
           },
           "MCHx": {}
         }
@@ -8937,6 +8998,18 @@
           },
           "MCHx": {}
         }
+      },
+      "1": {
+        "written": [
+          "init",
+          1
+        ],
+        "locales": {
+          "MCH": {
+            "gb": "034F manchu ra second isolated form"
+          },
+          "MCHx": {}
+        }
       }
     },
     "init": {
@@ -8952,6 +9025,17 @@
           },
           "MCHx": {}
         }
+      },
+      "1": {
+        "written": [
+          "R3"
+        ],
+        "locales": {
+          "MCH": {
+            "gb": "034F manchu ra second initial form"
+          },
+          "MCHx": {}
+        }
       }
     },
     "medi": {
@@ -8964,6 +9048,17 @@
           "MCH": {
             "gb": "1837 manchu ra medial form",
             "eac": "MRAZ1"
+          },
+          "MCHx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "R3"
+        ],
+        "locales": {
+          "MCH": {
+            "gb": "034F manchu ra second medial form"
           },
           "MCHx": {}
         }
@@ -9820,7 +9915,12 @@
               "TODx"
             ]
           },
-          "MCHx": {}
+          "MCHx": {
+            "written": [
+              "medi",
+              0
+            ]
+          }
         }
       }
     }
@@ -10156,19 +10256,19 @@
       }
     },
     "medi": {
-      "0": {
-        "written": [
-          "Hy"
-        ],
-        "default": true,
-        "locales": {
-          "MCHx": {}
-        }
-      },
       "1": {
         "written": [
           "Hy2"
         ],
+        "locales": {
+          "MCHx": {}
+        }
+      },
+      "2": {
+        "written": [
+          "Hy"
+        ],
+        "default": true,
         "locales": {
           "MCHx": {}
         }
@@ -10416,7 +10516,8 @@
     "fina": {
       "0": {
         "written": [
-          "Jh"
+          "medi",
+          0
         ],
         "default": true,
         "locales": {
@@ -10565,7 +10666,7 @@
     "medi": {
       "1": {
         "written": [
-          "Ds"
+          "Dw"
         ],
         "locales": {
           "MCHx": {
@@ -10644,7 +10745,12 @@
         ],
         "default": true,
         "locales": {
-          "MCHx": {}
+          "MCHx": {
+            "written": [
+              "medi",
+              0
+            ]
+          }
         }
       }
     }
@@ -10687,7 +10793,8 @@
     "fina": {
       "0": {
         "written": [
-          "Jq"
+          "medi",
+          0
         ],
         "default": true,
         "locales": {
@@ -10707,6 +10814,15 @@
         "locales": {
           "MCHx": {}
         }
+      },
+      "1": {
+        "written": [
+          "init",
+          1
+        ],
+        "locales": {
+          "MCHx": {}
+        }
       }
     },
     "init": {
@@ -10715,6 +10831,14 @@
           "St"
         ],
         "default": true,
+        "locales": {
+          "MCHx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "St2"
+        ],
         "locales": {
           "MCHx": {}
         }
@@ -10729,12 +10853,21 @@
         "locales": {
           "MCHx": {}
         }
+      },
+      "1": {
+        "written": [
+          "St2"
+        ],
+        "locales": {
+          "MCHx": {}
+        }
       }
     },
     "fina": {
       "0": {
         "written": [
-          "St"
+          "medi",
+          0
         ],
         "default": true,
         "locales": {
@@ -10781,7 +10914,8 @@
     "fina": {
       "0": {
         "written": [
-          "Sc"
+          "medi",
+          0
         ],
         "default": true,
         "locales": {
@@ -10931,6 +11065,24 @@
         "locales": {
           "MCHx": {}
         }
+      },
+      "1": {
+        "written": [
+          "init",
+          1
+        ],
+        "locales": {
+          "MCHx": {}
+        }
+      },
+      "2": {
+        "written": [
+          "init",
+          2
+        ],
+        "locales": {
+          "MCHx": {}
+        }
       }
     },
     "init": {
@@ -10942,6 +11094,22 @@
         "locales": {
           "MCHx": {}
         }
+      },
+      "1": {
+        "written": [
+          "Wd"
+        ],
+        "locales": {
+          "MCHx": {}
+        }
+      },
+      "2": {
+        "written": [
+          "Wc"
+        ],
+        "locales": {
+          "MCHx": {}
+        }
       }
     },
     "medi": {
@@ -10950,6 +11118,22 @@
           "Bc"
         ],
         "default": true,
+        "locales": {
+          "MCHx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "Wd"
+        ],
+        "locales": {
+          "MCHx": {}
+        }
+      },
+      "2": {
+        "written": [
+          "Wc"
+        ],
         "locales": {
           "MCHx": {}
         }

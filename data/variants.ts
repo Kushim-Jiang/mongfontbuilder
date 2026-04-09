@@ -1130,6 +1130,14 @@ export const variants: Record<
           },
         },
       },
+      "3": {
+        written: ["Nx"],
+        locales: {
+          MCH: {
+            gb: "0069 manchu na third medial form",
+          },
+        },
+      },
     },
     fina: {
       "1": {
@@ -1175,6 +1183,14 @@ export const variants: Record<
             eac: "MNAM1",
           },
           MCHx: {},
+        },
+      },
+      "3": {
+        written: ["Nx"],
+        locales: {
+          MCH: {
+            gb: "031A manchu na third final form",
+          },
         },
       },
     },
@@ -1823,6 +1839,14 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "1": {
+        written: ["init", 1],
+        locales: {
+          MCHx: {
+            gb: "0350 manchu la second isolated form",
+          },
+        },
+      },
     },
     init: {
       "0": {
@@ -1848,6 +1872,14 @@ export const variants: Record<
             eac: "MLAS1",
           },
           MCHx: {},
+        },
+      },
+      "1": {
+        written: ["L2"],
+        locales: {
+          MCHx: {
+            gb: "0350 manchu la second initial form",
+          },
         },
       },
     },
@@ -2797,9 +2829,12 @@ export const variants: Record<
             eac: "SFAM1",
           },
           MCH: {
+            written: ["medi", 0],
             eac: "MWAM1",
           },
-          MCHx: {},
+          MCHx: {
+            written: ["medi", 0],
+          },
         },
       },
       "1": {
@@ -6319,6 +6354,14 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "2": {
+        written: ["init", 3],
+        locales: {
+          MCH: {
+            gb: "0073 manchu da third isolated form",
+          },
+        },
+      },
     },
     init: {
       "1": {
@@ -6355,6 +6398,14 @@ export const variants: Record<
           },
           MCHx: {
             conditions: ["masculine_onset"],
+          },
+        },
+      },
+      "3": {
+        written: ["Dt"],
+        locales: {
+          MCH: {
+            gb: "0073 manchu da third isolated form",
           },
         },
       },
@@ -6571,7 +6622,10 @@ export const variants: Record<
           MCH: {
             eac: "MGAAM1",
           },
-          MCHx: {},
+          MCHx: {
+            written: ["Kh"],
+            gb: "0337 manchu gaa final form",
+          },
         },
       },
     },
@@ -7002,7 +7056,7 @@ export const variants: Record<
       },
     },
     medi: {
-      "2": {
+      "1": {
         written: ["I", "I"],
         locales: {
           MCH: {
@@ -7013,6 +7067,15 @@ export const variants: Record<
           MCHx: {
             conditions: ["vowel_devsger"],
           },
+        },
+      },
+      "2": {
+        written: ["A", "I"],
+        locales: {
+          MCH: {
+            gb: "1873 manchu i third medial form",
+          },
+          MCHx: {},
         },
       },
       "3": {
@@ -7029,17 +7092,6 @@ export const variants: Record<
     },
     fina: {
       "1": {
-        written: ["I2"],
-        locales: {
-          MCH: {
-            gb: "0062 manchu i second final form",
-            eac: "MIM2",
-            unrecommended: true,
-          },
-          MCHx: {},
-        },
-      },
-      "2": {
         written: ["Iy"],
         locales: {
           MCH: {
@@ -7053,24 +7105,13 @@ export const variants: Record<
           },
         },
       },
-      "3": {
+      "2": {
         written: ["I"],
         default: true,
         locales: {
           MCH: {
             gb: "000B manchu i first final form",
             eac: "MIM1",
-          },
-          MCHx: {},
-        },
-      },
-      "4": {
-        written: ["A", "I"],
-        locales: {
-          MCH: {
-            gb: "0303 manchu i fourth final form",
-            eac: "MIM4",
-            unrecommended: true,
           },
           MCHx: {},
         },
@@ -7254,6 +7295,15 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "1": {
+        written: ["init", 1],
+        locales: {
+          MCH: {
+            gb: "034F manchu ra second isolated form",
+          },
+          MCHx: {},
+        },
+      },
     },
     init: {
       "0": {
@@ -7267,6 +7317,15 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "1": {
+        written: ["R3"],
+        locales: {
+          MCH: {
+            gb: "034F manchu ra second initial form",
+          },
+          MCHx: {},
+        },
+      },
     },
     medi: {
       "0": {
@@ -7276,6 +7335,15 @@ export const variants: Record<
           MCH: {
             gb: "1837 manchu ra medial form",
             eac: "MRAZ1",
+          },
+          MCHx: {},
+        },
+      },
+      "1": {
+        written: ["R3"],
+        locales: {
+          MCH: {
+            gb: "034F manchu ra second medial form",
           },
           MCHx: {},
         },
@@ -7946,7 +8014,9 @@ export const variants: Record<
           TODx: {
             written: ["medi", 0, "TODx"],
           },
-          MCHx: {},
+          MCHx: {
+            written: ["medi", 0],
+          },
         },
       },
     },
@@ -8215,15 +8285,15 @@ export const variants: Record<
       },
     },
     medi: {
-      "0": {
-        written: ["Hy"],
-        default: true,
+      "1": {
+        written: ["Hy2"],
         locales: {
           MCHx: {},
         },
       },
-      "1": {
-        written: ["Hy2"],
+      "2": {
+        written: ["Hy"],
+        default: true,
         locales: {
           MCHx: {},
         },
@@ -8421,7 +8491,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["Jh"],
+        written: ["medi", 0],
         default: true,
         locales: {
           MCHx: {},
@@ -8530,7 +8600,7 @@ export const variants: Record<
     },
     medi: {
       "1": {
-        written: ["Ds"],
+        written: ["Dw"],
         locales: {
           MCHx: {
             conditions: ["feminine"],
@@ -8590,7 +8660,9 @@ export const variants: Record<
         written: ["Sx"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            written: ["medi", 0],
+          },
         },
       },
     },
@@ -8625,7 +8697,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["Jq"],
+        written: ["medi", 0],
         default: true,
         locales: {
           MCHx: {},
@@ -8642,11 +8714,23 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "1": {
+        written: ["init", 1],
+        locales: {
+          MCHx: {},
+        },
+      },
     },
     init: {
       "0": {
         written: ["St"],
         default: true,
+        locales: {
+          MCHx: {},
+        },
+      },
+      "1": {
+        written: ["St2"],
         locales: {
           MCHx: {},
         },
@@ -8660,10 +8744,16 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "1": {
+        written: ["St2"],
+        locales: {
+          MCHx: {},
+        },
+      },
     },
     fina: {
       "0": {
-        written: ["St"],
+        written: ["medi", 0],
         default: true,
         locales: {
           MCHx: {},
@@ -8701,7 +8791,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["Sc"],
+        written: ["medi", 0],
         default: true,
         locales: {
           MCHx: {},
@@ -8814,6 +8904,18 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "1": {
+        written: ["init", 1],
+        locales: {
+          MCHx: {},
+        },
+      },
+      "2": {
+        written: ["init", 2],
+        locales: {
+          MCHx: {},
+        },
+      },
     },
     init: {
       "0": {
@@ -8823,11 +8925,35 @@ export const variants: Record<
           MCHx: {},
         },
       },
+      "1": {
+        written: ["Wd"],
+        locales: {
+          MCHx: {},
+        },
+      },
+      "2": {
+        written: ["Wc"],
+        locales: {
+          MCHx: {},
+        },
+      },
     },
     medi: {
       "0": {
         written: ["Bc"],
         default: true,
+        locales: {
+          MCHx: {},
+        },
+      },
+      "1": {
+        written: ["Wd"],
+        locales: {
+          MCHx: {},
+        },
+      },
+      "2": {
+        written: ["Wc"],
         locales: {
           MCHx: {},
         },
