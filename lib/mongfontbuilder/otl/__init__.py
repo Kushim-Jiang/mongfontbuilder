@@ -5,6 +5,8 @@ from dataclasses import dataclass, replace
 from fontTools import unicodedata
 from fontTools.feaLib import ast
 from tptq.feacomposer import FeaComposer
+from typing import cast
+
 
 from .. import (
     GlyphDescriptor,
@@ -44,6 +46,10 @@ class MongFeaComposer(FeaComposer):
             assert locale.removesuffix("x") in locales
         self.locales = locales
         self.spec = FontSpec(cmap={}, newGlyphs={}, openTypeCategories={})
+
+        # TODO: only support one locale
+        assert len({locale.removesuffix("x") for locale in self.locales}) == 1
+        self.locale: LocaleID = cast(LocaleID, self.locales[0].removesuffix("x"))
 
         self.classes = {}
         self.conditions = {}
@@ -91,7 +97,9 @@ class MongFeaComposer(FeaComposer):
                     if not targetedLocales.intersection(variant.locales):
                         continue
 
-                    target = GlyphDescriptor.fromData(charName, position, variant)
+                    target = GlyphDescriptor.fromData(
+                        charName, position, variant, locale=self.locale
+                    )
                     targetName = str(target)
                     variantNames.append(targetName)
 
@@ -251,7 +259,7 @@ class MongFeaComposer(FeaComposer):
                     positionalClass = self.namedGlyphClass(
                         letter + "." + position,
                         [
-                            str(GlyphDescriptor.fromData(charName, position, i))
+                            str(GlyphDescriptor.fromData(charName, position, i, locale=self.locale))
                             for i in variants.values()
                             if locale in i.locales
                         ],
@@ -263,7 +271,7 @@ class MongFeaComposer(FeaComposer):
                     ).append(positionalClass)
 
                     lvsVariants = [
-                        GlyphDescriptor.fromData(charName, position, i)
+                        GlyphDescriptor.fromData(charName, position, i, locale=self.locale)
                         for i in variants.values()
                         if locale in i.locales and i.locales[locale].lvs
                     ]
@@ -317,7 +325,9 @@ class MongFeaComposer(FeaComposer):
                                     self.sub(
                                         self.classes[letter + "." + position],
                                         by=str(
-                                            GlyphDescriptor.fromData(charName, position, variant)
+                                            GlyphDescriptor.fromData(
+                                                charName, position, variant, locale=self.locale
+                                            )
                                         ),
                                     )
                 self.conditions[lookup.name] = lookup

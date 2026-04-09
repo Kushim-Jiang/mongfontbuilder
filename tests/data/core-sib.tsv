@@ -1,6 +1,6 @@
 # regular test
 
-sbm-1	z i b e n space j u sbm i	Zs I B Ah A - I Oh A I
+sbm-1	z i b e n space j u sbm i	Zs2 I B Ah A - I Oh A I
 
 a-1	a	A A
 a-2	j a f a t a r a	I A V A D A R A
@@ -133,8 +133,8 @@ zr-2	z u zr i l e h e	Zs Oh Ic I L Ah Gc Aa
 syllabic-o/u-1	n o space n u	N O - N Oh
 syllabic-o/u-2	b o space b u	B O - B Oh
 
-syllabic-i-1	p i y a z i	Pb I Y A Zs I
-syllabic-i-2	y u w a n space z i	Y Oh W A A - Zs I
+syllabic-i-1	p i y a z i	Pb I Y A Zs2 I
+syllabic-i-2	y u w a n space z i	Y Oh W A A - Zs2 I
 
 syllabic-e/u-1	t e d e k e g e h e	Tb A Dt A G A Gh A Gc Aa
 syllabic-e/u-2	t u d u k u g u h u	Tb O Dt O G O Gh O Gc O
@@ -161,8 +161,8 @@ bowed-2	kh a space gh a space hh a	K2 Aa - Kh Aa - Kc Aa
 bowed-3	b o space p o	B O - Pb O
 bowed-4	kh o space gh o space hh o	K2 O - Kh O - Kc O
 bowed-5	b e space p e space g e	B At - Pb At - Gh Aa
-bowed-6	k e space k fvs2 e space h e	G Aa - Gx Aa - Gc Aa
+bowed-6	k e space h e	G Aa - Gc Aa
 bowed-7	b u space p u space g u	B Oh - Pb Oh - Gh O
-bowed-8	k u space k fvs2 u space h u	G O - Gx O - Gc O
+bowed-8	k u space h u	G O - Gc O
 bowed-9	b i space p i space g i	B I - Pb I - Gh I
-bowed-10	k i space k fvs2 i space h i	G I - Gx I - Gc I
+bowed-10	k i space h i	G I - Gc I

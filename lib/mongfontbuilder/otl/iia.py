@@ -20,5 +20,5 @@ def compose(c: MongFeaComposer) -> None:
                 ):
                     c.sub(
                         uNameFromCodePoint(ord(unicodedata.lookup(charName))),
-                        by=str(GlyphDescriptor.fromData(charName, position)),
+                        by=str(GlyphDescriptor.fromData(charName, position, locale=c.locale)),
                     )

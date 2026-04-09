@@ -1105,8 +1105,13 @@ def iii5(c: MongFeaComposer) -> None:
                 f"III.vowel.post_bowed.{locale}", feature="rclt", flags={"IgnoreMarks": True}
             ):
                 c.sub(
-                    c.glyphClass([bowedB, bowedG]),
+                    bowedB,
                     c.input(c.variants(locale, ["e", "u"]), c.conditions[f"{locale}:post_bowed"]),
+                    by=None,
+                )
+                c.sub(
+                    bowedG,
+                    c.input(c.variants(locale, ["e", "u"]), c.conditions[f"{locale}:post_bowed_feminine"]),
                     by=None,
                 )
                 c.sub(

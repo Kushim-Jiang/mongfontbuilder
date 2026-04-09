@@ -101,10 +101,9 @@ def implementLigature(
     if c.glyphs and ligatureName not in c.glyphs:
         componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
         if componentName not in c.glyphs:
-            if required:
-                raise KeyError(componentName)
-            else:
-                return
+            # we don't check ligatures when generating, only generate OTL for existing glyphs,
+            # so it's possible for the component to be missing.
+            return
         c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
             [c.glyphNameProcessor(componentName)]
         )
