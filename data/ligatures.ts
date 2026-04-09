@@ -225,6 +225,7 @@ export const ligatures: Record<
     AGL: ["medi"],
     AGM: ["medi"],
     AGN: ["medi"],
+    AGNx: ["medi"],
     BL: ["init", "medi"],
     BM: ["init", "medi"],
     GL: ["init", "medi"],
