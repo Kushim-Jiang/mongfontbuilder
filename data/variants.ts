@@ -1021,6 +1021,14 @@ export const variants: Record<
           },
         },
       },
+      "2": {
+        written: ["init", 2],
+        locales: {
+          TOD: {
+            gb: "",
+          },
+        },
+      },
     },
     init: {
       "0": {
@@ -1060,6 +1068,14 @@ export const variants: Record<
           },
           MCHx: {
             conditions: ["devsger"],
+          },
+        },
+      },
+      "2": {
+        written: ["N2"],
+        locales: {
+          TOD: {
+            gb: "",
           },
         },
       },
@@ -3178,7 +3194,9 @@ export const variants: Record<
             eac: "XHD1",
           },
           MNGx: {},
-          TODx: {},
+          TODx: {
+            written: ["medi", 0],
+          },
         },
       },
     },
@@ -3192,7 +3210,9 @@ export const variants: Record<
             eac: "XHS1",
           },
           MNGx: {},
-          TODx: {},
+          TODx: {
+            written: ["medi", 0],
+          },
         },
       },
     },
@@ -3220,7 +3240,9 @@ export const variants: Record<
             eac: "XHM1",
           },
           MNGx: {},
-          TODx: {},
+          TODx: {
+            written: ["medi", 0],
+          },
         },
       },
     },
@@ -3643,19 +3665,7 @@ export const variants: Record<
       },
     },
     fina: {
-      "1": {
-        written: ["Ip"],
-        locales: {
-          TOD: {
-            conditions: ["post_bowed"],
-          },
-          TODx: {
-            conditions: ["post_bowed"],
-            lvs: true,
-          },
-        },
-      },
-      "2": {
+      "0": {
         written: ["I3"],
         default: true,
         locales: {
@@ -3874,15 +3884,6 @@ export const variants: Record<
           },
         },
       },
-      "1": {
-        written: ["O"],
-        locales: {
-          TOD: {
-            gb: "0046 todo oe second medial form",
-            unrecommended: true,
-          },
-        },
-      },
       "2": {
         written: ["A", "Ot"],
         locales: {
@@ -3902,15 +3903,6 @@ export const variants: Record<
             gb: "0051 todo oe first final form",
             eac: "TOEM1",
             lvs: true,
-          },
-        },
-      },
-      "1": {
-        written: ["O"],
-        locales: {
-          TOD: {
-            gb: "0048 todo oe second final form",
-            unrecommended: true,
           },
         },
       },
@@ -4125,8 +4117,13 @@ export const variants: Record<
             gb: "184C todo pa isolated form",
             eac: "TPAD1",
           },
+        },
+      },
+      "1": {
+        written: ["init", 1],
+        locales: {
           TODx: {
-            written: ["init", 0, "TODx"],
+            gb: "",
           },
         },
       },
@@ -4140,8 +4137,13 @@ export const variants: Record<
             gb: "184C todo pa initial form",
             eac: "TPAS1",
           },
+        },
+      },
+      "1": {
+        written: ["Ph"],
+        locales: {
           TODx: {
-            written: ["Ph"],
+            gb: "",
           },
         },
       },
@@ -4155,8 +4157,13 @@ export const variants: Record<
             gb: "184C todo pa medial form",
             eac: "TPAZ1",
           },
+        },
+      },
+      "1": {
+        written: ["Ph"],
+        locales: {
           TODx: {
-            written: ["Ph"],
+            gb: "",
           },
         },
       },
@@ -4724,14 +4731,6 @@ export const variants: Record<
           TODx: {},
         },
       },
-      "1": {
-        written: ["init", 1],
-        locales: {
-          TOD: {
-            eac: "TYAD2",
-          },
-        },
-      },
     },
     init: {
       "0": {
@@ -4744,16 +4743,6 @@ export const variants: Record<
             eac: "TYAS1",
           },
           TODx: {},
-        },
-      },
-      "1": {
-        written: ["Y"],
-        locales: {
-          TOD: {
-            gb: "1836 todo ya second initial form",
-            eac: "TYAS2",
-            unrecommended: true,
-          },
         },
       },
     },
@@ -4770,33 +4759,18 @@ export const variants: Record<
           TODx: {},
         },
       },
-      "1": {
-        written: ["Y"],
-        locales: {
-          TOD: {
-            gb: "1836 todo ya second medial form",
-            eac: "TYAZ2",
-            unrecommended: true,
-          },
-        },
-      },
     },
     fina: {
       "0": {
-        written: ["I3"],
+        written: ["medi", 0],
         default: true,
         locales: {
-          MNGx: {
-            written: ["I4"],
-          },
+          MNGx: {},
           TOD: {
             gb: "0044 todo ya final form",
             eac: "TYAM1",
-            unrecommended: true,
           },
-          TODx: {
-            written: ["medi", 0],
-          },
+          TODx: {},
         },
       },
     },
@@ -4840,15 +4814,6 @@ export const variants: Record<
           TODx: {},
         },
       },
-      "1": {
-        written: ["O"],
-        locales: {
-          TOD: {
-            gb: "000C todo wa second medial form",
-            unrecommended: true,
-          },
-        },
-      },
     },
     fina: {
       "0": {
@@ -4861,15 +4826,6 @@ export const variants: Record<
           },
           TODx: {
             written: ["medi", 0],
-          },
-        },
-      },
-      "1": {
-        written: ["U"],
-        locales: {
-          TOD: {
-            gb: "000E todo wa second final form",
-            unrecommended: true,
           },
         },
       },
@@ -5160,6 +5116,12 @@ export const variants: Record<
           },
         },
       },
+      "1": {
+        written: ["init", 1],
+        locales: {
+          TODx: {},
+        },
+      },
     },
     init: {
       "0": {
@@ -5170,9 +5132,14 @@ export const variants: Record<
             gb: "185C todo dza first initial form",
             eac: "TADZAS1",
           },
-          TODx: {
-            written: ["Zc"],
-          },
+          TODx: {},
+        },
+      },
+      "1": {
+        written: ["Zc"],
+        locales: {
+          TOD: {},
+          TODx: {},
         },
       },
     },
@@ -5185,9 +5152,14 @@ export const variants: Record<
             gb: "005E todo dza first medial form",
             eac: "TADZAZ1",
           },
-          TODx: {
-            written: ["Zc"],
-          },
+          TODx: {},
+        },
+      },
+      "1": {
+        written: ["Zc"],
+        locales: {
+          TOD: {},
+          TODx: {},
         },
       },
     },
@@ -5200,9 +5172,14 @@ export const variants: Record<
             gb: "005F todo dza first final form",
             eac: "TADZAM1",
           },
-          TODx: {
-            written: ["Zc"],
-          },
+          TODx: {},
+        },
+      },
+      "1": {
+        written: ["Zc"],
+        locales: {
+          TOD: {},
+          TODx: {},
         },
       },
     },
@@ -7922,7 +7899,9 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {},
-          TODx: {},
+          TODx: {
+            written: ["medi", 0],
+          },
         },
       },
     },
@@ -7972,10 +7951,13 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {},
-          TODx: {
-            written: ["init", 0, "TODx"],
-          },
           MCHx: {},
+        },
+      },
+      "1": {
+        written: ["init", 1],
+        locales: {
+          TODx: {},
         },
       },
     },
@@ -7985,10 +7967,13 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {},
-          TODx: {
-            written: ["Bh"],
-          },
           MCHx: {},
+        },
+      },
+      "1": {
+        written: ["Bh"],
+        locales: {
+          TODx: {},
         },
       },
     },
@@ -7998,10 +7983,13 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {},
-          TODx: {
-            written: ["Bh"],
-          },
           MCHx: {},
+        },
+      },
+      "1": {
+        written: ["Bh"],
+        locales: {
+          TODx: {},
         },
       },
     },

@@ -86,6 +86,7 @@ export const writtenUnits = [
   "M",
   "M2",
   "N",
+  "N2",
   "Nb",
   "Nx",
   "Ny",

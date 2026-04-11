@@ -1258,6 +1258,17 @@
             "eac": "MND2"
           }
         }
+      },
+      "2": {
+        "written": [
+          "init",
+          2
+        ],
+        "locales": {
+          "TOD": {
+            "gb": ""
+          }
+        }
       }
     },
     "init": {
@@ -1306,6 +1317,16 @@
             "conditions": [
               "devsger"
             ]
+          }
+        }
+      },
+      "2": {
+        "written": [
+          "N2"
+        ],
+        "locales": {
+          "TOD": {
+            "gb": ""
           }
         }
       }
@@ -3860,7 +3881,12 @@
             "eac": "XHD1"
           },
           "MNGx": {},
-          "TODx": {}
+          "TODx": {
+            "written": [
+              "medi",
+              0
+            ]
+          }
         }
       }
     },
@@ -3877,7 +3903,12 @@
             "eac": "XHS1"
           },
           "MNGx": {},
-          "TODx": {}
+          "TODx": {
+            "written": [
+              "medi",
+              0
+            ]
+          }
         }
       }
     },
@@ -3909,7 +3940,12 @@
             "eac": "XHM1"
           },
           "MNGx": {},
-          "TODx": {}
+          "TODx": {
+            "written": [
+              "medi",
+              0
+            ]
+          }
         }
       }
     }
@@ -4416,25 +4452,7 @@
       }
     },
     "fina": {
-      "1": {
-        "written": [
-          "Ip"
-        ],
-        "locales": {
-          "TOD": {
-            "conditions": [
-              "post_bowed"
-            ]
-          },
-          "TODx": {
-            "conditions": [
-              "post_bowed"
-            ],
-            "lvs": true
-          }
-        }
-      },
-      "2": {
+      "0": {
         "written": [
           "I3"
         ],
@@ -4704,17 +4722,6 @@
           }
         }
       },
-      "1": {
-        "written": [
-          "O"
-        ],
-        "locales": {
-          "TOD": {
-            "gb": "0046 todo oe second medial form",
-            "unrecommended": true
-          }
-        }
-      },
       "2": {
         "written": [
           "A",
@@ -4739,17 +4746,6 @@
             "gb": "0051 todo oe first final form",
             "eac": "TOEM1",
             "lvs": true
-          }
-        }
-      },
-      "1": {
-        "written": [
-          "O"
-        ],
-        "locales": {
-          "TOD": {
-            "gb": "0048 todo oe second final form",
-            "unrecommended": true
           }
         }
       }
@@ -5009,13 +5005,17 @@
           "TOD": {
             "gb": "184C todo pa isolated form",
             "eac": "TPAD1"
-          },
+          }
+        }
+      },
+      "1": {
+        "written": [
+          "init",
+          1
+        ],
+        "locales": {
           "TODx": {
-            "written": [
-              "init",
-              0,
-              "TODx"
-            ]
+            "gb": ""
           }
         }
       }
@@ -5030,11 +5030,16 @@
           "TOD": {
             "gb": "184C todo pa initial form",
             "eac": "TPAS1"
-          },
+          }
+        }
+      },
+      "1": {
+        "written": [
+          "Ph"
+        ],
+        "locales": {
           "TODx": {
-            "written": [
-              "Ph"
-            ]
+            "gb": ""
           }
         }
       }
@@ -5049,11 +5054,16 @@
           "TOD": {
             "gb": "184C todo pa medial form",
             "eac": "TPAZ1"
-          },
+          }
+        }
+      },
+      "1": {
+        "written": [
+          "Ph"
+        ],
+        "locales": {
           "TODx": {
-            "written": [
-              "Ph"
-            ]
+            "gb": ""
           }
         }
       }
@@ -5759,17 +5769,6 @@
           },
           "TODx": {}
         }
-      },
-      "1": {
-        "written": [
-          "init",
-          1
-        ],
-        "locales": {
-          "TOD": {
-            "eac": "TYAD2"
-          }
-        }
       }
     },
     "init": {
@@ -5785,18 +5784,6 @@
             "eac": "TYAS1"
           },
           "TODx": {}
-        }
-      },
-      "1": {
-        "written": [
-          "Y"
-        ],
-        "locales": {
-          "TOD": {
-            "gb": "1836 todo ya second initial form",
-            "eac": "TYAS2",
-            "unrecommended": true
-          }
         }
       }
     },
@@ -5814,43 +5801,22 @@
           },
           "TODx": {}
         }
-      },
-      "1": {
-        "written": [
-          "Y"
-        ],
-        "locales": {
-          "TOD": {
-            "gb": "1836 todo ya second medial form",
-            "eac": "TYAZ2",
-            "unrecommended": true
-          }
-        }
       }
     },
     "fina": {
       "0": {
         "written": [
-          "I3"
+          "medi",
+          0
         ],
         "default": true,
         "locales": {
-          "MNGx": {
-            "written": [
-              "I4"
-            ]
-          },
+          "MNGx": {},
           "TOD": {
             "gb": "0044 todo ya final form",
-            "eac": "TYAM1",
-            "unrecommended": true
+            "eac": "TYAM1"
           },
-          "TODx": {
-            "written": [
-              "medi",
-              0
-            ]
-          }
+          "TODx": {}
         }
       }
     }
@@ -5900,17 +5866,6 @@
           },
           "TODx": {}
         }
-      },
-      "1": {
-        "written": [
-          "O"
-        ],
-        "locales": {
-          "TOD": {
-            "gb": "000C todo wa second medial form",
-            "unrecommended": true
-          }
-        }
       }
     },
     "fina": {
@@ -5929,17 +5884,6 @@
               "medi",
               0
             ]
-          }
-        }
-      },
-      "1": {
-        "written": [
-          "U"
-        ],
-        "locales": {
-          "TOD": {
-            "gb": "000E todo wa second final form",
-            "unrecommended": true
           }
         }
       }
@@ -6293,6 +6237,15 @@
             ]
           }
         }
+      },
+      "1": {
+        "written": [
+          "init",
+          1
+        ],
+        "locales": {
+          "TODx": {}
+        }
       }
     },
     "init": {
@@ -6306,11 +6259,16 @@
             "gb": "185C todo dza first initial form",
             "eac": "TADZAS1"
           },
-          "TODx": {
-            "written": [
-              "Zc"
-            ]
-          }
+          "TODx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "Zc"
+        ],
+        "locales": {
+          "TOD": {},
+          "TODx": {}
         }
       }
     },
@@ -6325,11 +6283,16 @@
             "gb": "005E todo dza first medial form",
             "eac": "TADZAZ1"
           },
-          "TODx": {
-            "written": [
-              "Zc"
-            ]
-          }
+          "TODx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "Zc"
+        ],
+        "locales": {
+          "TOD": {},
+          "TODx": {}
         }
       }
     },
@@ -6344,11 +6307,16 @@
             "gb": "005F todo dza first final form",
             "eac": "TADZAM1"
           },
-          "TODx": {
-            "written": [
-              "Zc"
-            ]
-          }
+          "TODx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "Zc"
+        ],
+        "locales": {
+          "TOD": {},
+          "TODx": {}
         }
       }
     }
@@ -9793,7 +9761,12 @@
         "default": true,
         "locales": {
           "MNGx": {},
-          "TODx": {}
+          "TODx": {
+            "written": [
+              "medi",
+              0
+            ]
+          }
         }
       }
     }
@@ -9855,14 +9828,16 @@
         "default": true,
         "locales": {
           "MNGx": {},
-          "TODx": {
-            "written": [
-              "init",
-              0,
-              "TODx"
-            ]
-          },
           "MCHx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "init",
+          1
+        ],
+        "locales": {
+          "TODx": {}
         }
       }
     },
@@ -9874,12 +9849,15 @@
         "default": true,
         "locales": {
           "MNGx": {},
-          "TODx": {
-            "written": [
-              "Bh"
-            ]
-          },
           "MCHx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "Bh"
+        ],
+        "locales": {
+          "TODx": {}
         }
       }
     },
@@ -9891,12 +9869,15 @@
         "default": true,
         "locales": {
           "MNGx": {},
-          "TODx": {
-            "written": [
-              "Bh"
-            ]
-          },
           "MCHx": {}
+        }
+      },
+      "1": {
+        "written": [
+          "Bh"
+        ],
+        "locales": {
+          "TODx": {}
         }
       }
     },
