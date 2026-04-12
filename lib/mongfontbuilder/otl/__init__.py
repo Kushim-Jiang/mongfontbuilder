@@ -407,6 +407,7 @@ class MongFeaComposer(FeaComposer):
                             if (w := variantGlyphDescriptor(locale, alias, position, fvs)).units
                             == splitWrittens(written)
                             and filter(w.units)
+                            and locale in data.variants[charName][position][fvs].locales
                         ]
                     else:
                         variants = []

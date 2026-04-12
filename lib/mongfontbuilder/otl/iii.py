@@ -1181,7 +1181,7 @@ def iii6(c: MongFeaComposer) -> None:
                 for position, variants in data.variants[charName].items():
                     glyphClass = c.classes[letter + "." + position]
                     for fvs in variants:
-                        if fvs != 0:
+                        if fvs != 0 and locale in variants[fvs].locales:
                             c.sub(
                                 c.input(glyphClass, _lvs),
                                 c.input(f"fvs{fvs}.ignored", c.conditions["_.valid"]),

@@ -25,9 +25,7 @@ def iib1(c: MongFeaComposer) -> None:
     """
 
     with c.Lookup(f"IIb.ligature", feature="rclt"):
-        inputToLigatureAndRequired = dict[
-            tuple[GlyphDescriptor, ...], tuple[GlyphDescriptor, bool]
-        ]()
+        inputToLigatureAndRequired = dict[tuple[GlyphDescriptor, ...], tuple[GlyphDescriptor, bool]]()
         for locale in c.locales:
             namespace = namespaceFromLocale(locale)
             vowelAliases = data.locales[locale].categories["vowel"]
@@ -35,9 +33,7 @@ def iib1(c: MongFeaComposer) -> None:
                 required = category == "required"
                 for writtens, positions in ligatureToPositions.items():
                     for position in positions:
-                        for input, ligature in iterLigatureSubstitutions(
-                            c, writtens, position, locale
-                        ):
+                        for input, ligature in iterLigatureSubstitutions(c, writtens, position, locale):
                             if len(input) != 2:
                                 continue
                             if required:
@@ -97,31 +93,13 @@ def implementLigature(
 ) -> None:
     inputNames = [str(i) for i in input]
     ligatureName = str(ligature)
-    for glyph in input:
-        isGlyphValid = False
-        charName = unicodedata.name(chr(glyph.codePoints[0]))
-        for variantData in data.variants[charName][glyph.position].values():
-            if variantData.written == glyph.units:
-                if c.locale in variantData.locales:
-                    if not hasattr(variantData.locales[c.locale], "written"):
-                        isGlyphValid = True
-                        break
-            else:
-                if c.locale in variantData.locales:
-                    if variantData.locales[c.locale].written == glyph.units:
-                        isGlyphValid = True
-                        break
-        if not isGlyphValid:
-            return
     if c.glyphs and ligatureName not in c.glyphs:
         componentName = str(GlyphDescriptor([], ligature.units, ligature.position))
         if componentName not in c.glyphs:
             # we don't check ligatures when generating, only generate OTL for existing glyphs,
             # so it's possible for the component to be missing.
             return
-        c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
-            [c.glyphNameProcessor(componentName)]
-        )
+        c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec([c.glyphNameProcessor(componentName)])
     c.sub(*inputNames, by=ligatureName)
 
 
