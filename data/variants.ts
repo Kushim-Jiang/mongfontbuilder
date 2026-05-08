@@ -4315,12 +4315,6 @@ export const variants: Record<
           },
         },
       },
-      "3": {
-        written: ["Hp"],
-        locales: {
-          TODx: {},
-        },
-      },
     },
     medi: {
       "1": {
