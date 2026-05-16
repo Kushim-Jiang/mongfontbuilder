@@ -23,8 +23,7 @@
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-svelte": "3.4.0",
     "svelte": "5.55.0",
-    "typescript": "5.9.3",
-    "vite-node": "3.0.0"
+    "typescript": "5.9.3"
   },
   "overrides": {
     "lodash": "4.17.23"
