@@ -1,0 +1,2971 @@
+languagesystem DFLT dflt;
+languagesystem mong dflt;
+languagesystem mong MNG;
+@fvs1 = [fvs1 fvs1.valid fvs1.ignored];
+@fvs2 = [fvs2 fvs2.valid fvs2.ignored];
+@fvs3 = [fvs3 fvs3.valid fvs3.ignored];
+@fvs4 = [fvs4 fvs4.valid fvs4.ignored];
+@mvs = [mvs mvs.narrow mvs.wide nnbsp];
+@mvs.invalid = [mvs nnbsp];
+@mvs.valid = [mvs.narrow mvs.wide];
+@fvs.invalid = [fvs1 fvs2 fvs3 fvs4];
+@fvs.valid = [fvs1.valid fvs2.valid fvs3.valid fvs4.valid];
+@fvs.ignored = [fvs1.ignored fvs2.ignored fvs3.ignored fvs4.ignored];
+@fvs = [@fvs1 @fvs2 @fvs3 @fvs4];
+lookup _.ignored {
+    lookupflag 0;
+    sub nirugu by nirugu.ignored;
+    sub zwj by zwj.ignored;
+    sub zwnj by zwnj.ignored;
+    sub fvs1 by fvs1.ignored;
+    sub fvs1.valid by fvs1.ignored;
+    sub fvs2 by fvs2.ignored;
+    sub fvs2.valid by fvs2.ignored;
+    sub fvs3 by fvs3.ignored;
+    sub fvs3.valid by fvs3.ignored;
+    sub fvs4 by fvs4.ignored;
+    sub fvs4.valid by fvs4.ignored;
+} _.ignored;
+
+lookup _.valid {
+    lookupflag 0;
+    sub fvs1 by fvs1.valid;
+    sub fvs1.ignored by fvs1.valid;
+    sub fvs2 by fvs2.valid;
+    sub fvs2.ignored by fvs2.valid;
+    sub fvs3 by fvs3.valid;
+    sub fvs3.ignored by fvs3.valid;
+    sub fvs4 by fvs4.valid;
+    sub fvs4.ignored by fvs4.valid;
+} _.valid;
+
+lookup _.reset {
+    lookupflag 0;
+    sub mvs.narrow by mvs;
+    sub mvs.wide by mvs;
+    sub nirugu.ignored by nirugu;
+    sub fvs1.ignored by fvs1;
+    sub fvs1.valid by fvs1;
+    sub fvs2.ignored by fvs2;
+    sub fvs2.valid by fvs2;
+    sub fvs3.ignored by fvs3;
+    sub fvs3.valid by fvs3;
+    sub fvs4.ignored by fvs4;
+    sub fvs4.valid by fvs4;
+} _.reset;
+
+lookup _.narrow {
+    lookupflag 0;
+    sub mvs by mvs.narrow;
+    sub mvs.wide by mvs.narrow;
+    sub nnbsp by mvs.narrow;
+} _.narrow;
+
+lookup _.wide {
+    lookupflag 0;
+    sub mvs by mvs.wide;
+    sub mvs.narrow by mvs.wide;
+    sub nnbsp by mvs.wide;
+} _.wide;
+
+@MNG-a.isol = [u1820.A.isol u1820.Aa.isol u1820.AA.isol];
+@MNG-a.init = [u1820.A.init u1820.AA.init];
+@MNG-a.medi = [u1820.A.medi u1820.AA.medi];
+@MNG-a.fina = [u1820.Aa.fina u1820.A.fina];
+@MNG-a = [@MNG-a.isol @MNG-a.init @MNG-a.medi @MNG-a.fina];
+@MNG-e.isol = [u1821.Aa.isol u1821.A.isol];
+@MNG-e.init = [u1821.A.init u1821.AA.init];
+@MNG-e.medi = [u1821.A.medi];
+@MNG-e.fina = [u1821.Aa.fina u1821.A.fina];
+@MNG-e = [@MNG-e.isol @MNG-e.init @MNG-e.medi @MNG-e.fina];
+@MNG-ee.isol = [u1827.AW.isol];
+@MNG-ee.init = [u1827.AW.init];
+@MNG-ee.medi = [u1827.W.medi];
+@MNG-ee.fina = [u1827.W.fina];
+@MNG-ee = [@MNG-ee.isol @MNG-ee.init @MNG-ee.medi @MNG-ee.fina];
+@MNG-i.isol = [u1822.I.isol u1822.Ix.isol u1822.AI.isol];
+@MNG-i.init = [u1822.I.init u1822.AI.init];
+@MNG-i.medi = [u1822.AI.medi u1822.II.medi u1822.I.medi];
+@MNG-i.fina = [u1822.I.fina];
+@MNG-i = [@MNG-i.isol @MNG-i.init @MNG-i.medi @MNG-i.fina];
+@MNG-o.isol = [u1823.AO.isol];
+@MNG-o.init = [u1823.AO.init];
+@MNG-o.medi = [u1823.O.medi u1823.AO.medi];
+@MNG-o.fina = [u1823.O.fina u1823.U.fina];
+@MNG-o = [@MNG-o.isol @MNG-o.init @MNG-o.medi @MNG-o.fina];
+@MNG-u.isol = [u1824.U.isol u1824.Ux.isol u1824.AO.isol];
+@MNG-u.init = [u1824.O.init u1824.AO.init];
+@MNG-u.medi = [u1824.O.medi u1824.AO.medi];
+@MNG-u.fina = [u1824.O.fina u1824.U.fina];
+@MNG-u = [@MNG-u.isol @MNG-u.init @MNG-u.medi @MNG-u.fina];
+@MNG-oe.isol = [u1825.AUe.isol u1825.AU.isol];
+@MNG-oe.init = [u1825.AOI.init];
+@MNG-oe.medi = [u1825.OI.medi u1825.AOI.medi u1825.O.medi];
+@MNG-oe.fina = [u1825.Ue.fina u1825.O.fina u1825.U.fina];
+@MNG-oe = [@MNG-oe.isol @MNG-oe.init @MNG-oe.medi @MNG-oe.fina];
+@MNG-ue.isol = [u1826.AUe.isol u1826.AU.isol u1826.U.isol u1826.Ux.isol];
+@MNG-ue.init = [u1826.O.init u1826.AOI.init];
+@MNG-ue.medi = [u1826.OI.medi u1826.AOI.medi u1826.O.medi];
+@MNG-ue.fina = [u1826.Ue.fina u1826.O.fina u1826.U.fina];
+@MNG-ue = [@MNG-ue.isol @MNG-ue.init @MNG-ue.medi @MNG-ue.fina];
+@MNG-n.isol = [u1828.N.init._isol u1828.A.init._isol];
+@MNG-n.init = [u1828.N.init u1828.A.init];
+@MNG-n.medi = [u1828.N.medi u1828.A.medi];
+@MNG-n.fina = [u1828.N.fina u1828.A.fina];
+@MNG-n = [@MNG-n.isol @MNG-n.init @MNG-n.medi @MNG-n.fina];
+@MNG-ng.isol = [u1829.AG.medi._isol];
+@MNG-ng.init = [u1829.AG.medi._init];
+@MNG-ng.medi = [u1829.AG.medi];
+@MNG-ng.fina = [u1829.AG.fina];
+@MNG-ng = [@MNG-ng.isol @MNG-ng.init @MNG-ng.medi @MNG-ng.fina];
+@MNG-b.isol = [u182A.B.init._isol];
+@MNG-b.init = [u182A.B.init];
+@MNG-b.medi = [u182A.B.medi];
+@MNG-b.fina = [u182A.B.fina u182A.B2.fina];
+@MNG-b = [@MNG-b.isol @MNG-b.init @MNG-b.medi @MNG-b.fina];
+@MNG-p.isol = [u182B.P.init._isol];
+@MNG-p.init = [u182B.P.init];
+@MNG-p.medi = [u182B.P.medi];
+@MNG-p.fina = [u182B.P.fina];
+@MNG-p = [@MNG-p.isol @MNG-p.init @MNG-p.medi @MNG-p.fina];
+@MNG-h.isol = [u182C.H.init._isol u182C.Hx.init._isol u182C.G.init._isol u182C.Gx.init._isol];
+@MNG-h.init = [u182C.Hx.init u182C.G.init u182C.H.init u182C.Gx.init];
+@MNG-h.medi = [u182C.Hx.medi u182C.G.medi u182C.H.medi u182C.Gx.medi];
+@MNG-h.fina = [u182C.H.fina u182C.Hx.fina];
+@MNG-h = [@MNG-h.isol @MNG-h.init @MNG-h.medi @MNG-h.fina];
+@MNG-g.isol = [u182D.Hx.init._isol u182D.H.init._isol u182D.G.init._isol u182D.Gx.init._isol];
+@MNG-g.init = [u182D.H.init u182D.G.init u182D.Hx.init u182D.Gx.init];
+@MNG-g.medi = [u182D.Hx.medi u182D.G.medi u182D.H.medi u182D.Gx.medi];
+@MNG-g.fina = [u182D.H.fina u182D.G.fina u182D.Hx.fina];
+@MNG-g = [@MNG-g.isol @MNG-g.init @MNG-g.medi @MNG-g.fina];
+@MNG-m.isol = [u182E.M.init._isol];
+@MNG-m.init = [u182E.M.init];
+@MNG-m.medi = [u182E.M.medi];
+@MNG-m.fina = [u182E.M.fina];
+@MNG-m = [@MNG-m.isol @MNG-m.init @MNG-m.medi @MNG-m.fina];
+@MNG-l.isol = [u182F.L.init._isol];
+@MNG-l.init = [u182F.L.init];
+@MNG-l.medi = [u182F.L.medi];
+@MNG-l.fina = [u182F.L.fina];
+@MNG-l = [@MNG-l.isol @MNG-l.init @MNG-l.medi @MNG-l.fina];
+@MNG-s.isol = [u1830.S.init._isol];
+@MNG-s.init = [u1830.S.init];
+@MNG-s.medi = [u1830.S.medi];
+@MNG-s.fina = [u1830.S.fina u1830.Sz.fina];
+@MNG-s = [@MNG-s.isol @MNG-s.init @MNG-s.medi @MNG-s.fina];
+@MNG-sh.isol = [u1831.Sh.init._isol u1831.S.init._isol];
+@MNG-sh.init = [u1831.S.init u1831.Sh.init];
+@MNG-sh.medi = [u1831.S.medi u1831.Sh.medi];
+@MNG-sh.fina = [u1831.Sh.fina];
+@MNG-sh = [@MNG-sh.isol @MNG-sh.init @MNG-sh.medi @MNG-sh.fina];
+@MNG-t.isol = [u1832.T.init._isol];
+@MNG-t.init = [u1832.T.init];
+@MNG-t.medi = [u1832.T.medi u1832.D.medi];
+@MNG-t.fina = [u1832.T.fina];
+@MNG-t = [@MNG-t.isol @MNG-t.init @MNG-t.medi @MNG-t.fina];
+@MNG-d.isol = [u1833.D.init._isol u1833.T.init._isol];
+@MNG-d.init = [u1833.D.init u1833.T.init];
+@MNG-d.medi = [u1833.D.medi u1833.Dd.medi];
+@MNG-d.fina = [u1833.Dd.fina u1833.D.fina];
+@MNG-d = [@MNG-d.isol @MNG-d.init @MNG-d.medi @MNG-d.fina];
+@MNG-ch.isol = [u1834.Ch.init._isol];
+@MNG-ch.init = [u1834.Ch.init];
+@MNG-ch.medi = [u1834.Ch.medi];
+@MNG-ch.fina = [u1834.Ch.fina];
+@MNG-ch = [@MNG-ch.isol @MNG-ch.init @MNG-ch.medi @MNG-ch.fina];
+@MNG-j.isol = [u1835.I.init._isol u1835.I.isol];
+@MNG-j.init = [u1835.I.init];
+@MNG-j.medi = [u1835.J.medi];
+@MNG-j.fina = [u1835.J.fina u1835.I.fina];
+@MNG-j = [@MNG-j.isol @MNG-j.init @MNG-j.medi @MNG-j.fina];
+@MNG-y.isol = [u1836.Y.init._isol u1836.I.init._isol];
+@MNG-y.init = [u1836.I.init u1836.Y.init];
+@MNG-y.medi = [u1836.I.medi u1836.II.medi u1836.Y.medi];
+@MNG-y.fina = [u1836.I.fina];
+@MNG-y = [@MNG-y.isol @MNG-y.init @MNG-y.medi @MNG-y.fina];
+@MNG-r.isol = [u1837.R.init._isol];
+@MNG-r.init = [u1837.R.init];
+@MNG-r.medi = [u1837.R.medi];
+@MNG-r.fina = [u1837.R.fina];
+@MNG-r = [@MNG-r.isol @MNG-r.init @MNG-r.medi @MNG-r.fina];
+@MNG-w.isol = [u1838.W.init._isol];
+@MNG-w.init = [u1838.W.init];
+@MNG-w.medi = [u1838.W.medi u1838.O.medi];
+@MNG-w.fina = [u1838.W.fina u1838.U.fina];
+@MNG-w = [@MNG-w.isol @MNG-w.init @MNG-w.medi @MNG-w.fina];
+@MNG-f.isol = [u1839.F.init._isol];
+@MNG-f.init = [u1839.F.init];
+@MNG-f.medi = [u1839.F.medi];
+@MNG-f.fina = [u1839.F.fina];
+@MNG-f = [@MNG-f.isol @MNG-f.init @MNG-f.medi @MNG-f.fina];
+@MNG-k2.isol = [u183A.K2.init._isol];
+@MNG-k2.init = [u183A.K2.init];
+@MNG-k2.medi = [u183A.K2.medi];
+@MNG-k2.fina = [u183A.K2.fina];
+@MNG-k2 = [@MNG-k2.isol @MNG-k2.init @MNG-k2.medi @MNG-k2.fina];
+@MNG-k.isol = [u183B.K.init._isol];
+@MNG-k.init = [u183B.K.init];
+@MNG-k.medi = [u183B.K.medi];
+@MNG-k.fina = [u183B.K.fina];
+@MNG-k = [@MNG-k.isol @MNG-k.init @MNG-k.medi @MNG-k.fina];
+@MNG-c.isol = [u183C.C.init._isol];
+@MNG-c.init = [u183C.C.init];
+@MNG-c.medi = [u183C.C.medi];
+@MNG-c.fina = [u183C.C.fina];
+@MNG-c = [@MNG-c.isol @MNG-c.init @MNG-c.medi @MNG-c.fina];
+@MNG-z.isol = [u183D.Z.init._isol];
+@MNG-z.init = [u183D.Z.init];
+@MNG-z.medi = [u183D.Z.medi];
+@MNG-z.fina = [u183D.Z.fina];
+@MNG-z = [@MNG-z.isol @MNG-z.init @MNG-z.medi @MNG-z.fina];
+@MNG-hh.isol = [u183E.AHr.init._isol];
+@MNG-hh.init = [u183E.AHr.init];
+@MNG-hh.medi = [u183E.Hr.medi];
+@MNG-hh.fina = [u183E.Hr.fina];
+@MNG-hh = [@MNG-hh.isol @MNG-hh.init @MNG-hh.medi @MNG-hh.fina];
+@MNG-rh.isol = [u183F.Rh.init._isol];
+@MNG-rh.init = [u183F.Rh.init];
+@MNG-rh.medi = [u183F.Rh.medi];
+@MNG-rh.fina = [u183F.Rh.fina];
+@MNG-rh = [@MNG-rh.isol @MNG-rh.init @MNG-rh.medi @MNG-rh.fina];
+@MNG-lh.isol = [u1840.LHr.init._isol];
+@MNG-lh.init = [u1840.LHr.init];
+@MNG-lh.medi = [u1840.LHr.medi];
+@MNG-lh.fina = [u1840.LHr.medi._fina];
+@MNG-lh = [@MNG-lh.isol @MNG-lh.init @MNG-lh.medi @MNG-lh.fina];
+@MNG-zr.isol = [u1841.Zr.init._isol];
+@MNG-zr.init = [u1841.Zr.init];
+@MNG-zr.medi = [u1841.Zr.init._medi];
+@MNG-zr.fina = [u1841.Zr.init._fina];
+@MNG-zr = [@MNG-zr.isol @MNG-zr.init @MNG-zr.medi @MNG-zr.fina];
+@MNG-cr.isol = [u1842.Cr.init._isol];
+@MNG-cr.init = [u1842.Cr.init];
+@MNG-cr.medi = [u1842.Cr.init._medi];
+@MNG-cr.fina = [u1842.Cr.init._fina];
+@MNG-cr = [@MNG-cr.isol @MNG-cr.init @MNG-cr.medi @MNG-cr.fina];
+@MNG-vowel.isol = [@MNG-a.isol @MNG-e.isol @MNG-ee.isol @MNG-i.isol @MNG-o.isol @MNG-u.isol @MNG-oe.isol @MNG-ue.isol];
+@MNG-vowel.init = [@MNG-a.init @MNG-e.init @MNG-ee.init @MNG-i.init @MNG-o.init @MNG-u.init @MNG-oe.init @MNG-ue.init];
+@MNG-vowel.medi = [@MNG-a.medi @MNG-e.medi @MNG-ee.medi @MNG-i.medi @MNG-o.medi @MNG-u.medi @MNG-oe.medi @MNG-ue.medi];
+@MNG-vowel.fina = [@MNG-a.fina @MNG-e.fina @MNG-ee.fina @MNG-i.fina @MNG-o.fina @MNG-u.fina @MNG-oe.fina @MNG-ue.fina];
+@MNG-vowel = [@MNG-a @MNG-e @MNG-ee @MNG-i @MNG-o @MNG-u @MNG-oe @MNG-ue];
+@MNG-vowelMasculine = [@MNG-a @MNG-o @MNG-u];
+@MNG-vowelFeminine = [@MNG-e @MNG-ee @MNG-oe @MNG-ue];
+@MNG-vowelNeuter = [@MNG-i];
+@MNG-consonant.isol = [@MNG-n.isol @MNG-ng.isol @MNG-b.isol @MNG-p.isol @MNG-h.isol @MNG-g.isol @MNG-m.isol @MNG-l.isol @MNG-s.isol @MNG-sh.isol @MNG-t.isol @MNG-d.isol @MNG-ch.isol @MNG-j.isol @MNG-y.isol @MNG-r.isol @MNG-w.isol @MNG-f.isol @MNG-k2.isol @MNG-k.isol @MNG-c.isol @MNG-z.isol @MNG-hh.isol @MNG-rh.isol @MNG-lh.isol @MNG-zr.isol @MNG-cr.isol];
+@MNG-consonant.init = [@MNG-n.init @MNG-ng.init @MNG-b.init @MNG-p.init @MNG-h.init @MNG-g.init @MNG-m.init @MNG-l.init @MNG-s.init @MNG-sh.init @MNG-t.init @MNG-d.init @MNG-ch.init @MNG-j.init @MNG-y.init @MNG-r.init @MNG-w.init @MNG-f.init @MNG-k2.init @MNG-k.init @MNG-c.init @MNG-z.init @MNG-hh.init @MNG-rh.init @MNG-lh.init @MNG-zr.init @MNG-cr.init];
+@MNG-consonant.medi = [@MNG-n.medi @MNG-ng.medi @MNG-b.medi @MNG-p.medi @MNG-h.medi @MNG-g.medi @MNG-m.medi @MNG-l.medi @MNG-s.medi @MNG-sh.medi @MNG-t.medi @MNG-d.medi @MNG-ch.medi @MNG-j.medi @MNG-y.medi @MNG-r.medi @MNG-w.medi @MNG-f.medi @MNG-k2.medi @MNG-k.medi @MNG-c.medi @MNG-z.medi @MNG-hh.medi @MNG-rh.medi @MNG-lh.medi @MNG-zr.medi @MNG-cr.medi];
+@MNG-consonant.fina = [@MNG-n.fina @MNG-ng.fina @MNG-b.fina @MNG-p.fina @MNG-h.fina @MNG-g.fina @MNG-m.fina @MNG-l.fina @MNG-s.fina @MNG-sh.fina @MNG-t.fina @MNG-d.fina @MNG-ch.fina @MNG-j.fina @MNG-y.fina @MNG-r.fina @MNG-w.fina @MNG-f.fina @MNG-k2.fina @MNG-k.fina @MNG-c.fina @MNG-z.fina @MNG-hh.fina @MNG-rh.fina @MNG-lh.fina @MNG-zr.fina @MNG-cr.fina];
+@MNG-consonant = [@MNG-n @MNG-ng @MNG-b @MNG-p @MNG-h @MNG-g @MNG-m @MNG-l @MNG-s @MNG-sh @MNG-t @MNG-d @MNG-ch @MNG-j @MNG-y @MNG-r @MNG-w @MNG-f @MNG-k2 @MNG-k @MNG-c @MNG-z @MNG-hh @MNG-rh @MNG-lh @MNG-zr @MNG-cr];
+lookup MNG.chachlag {
+    lookupflag 0;
+    sub @MNG-a.isol by u1820.Aa.isol;
+    sub @MNG-e.isol by u1821.Aa.isol;
+} MNG.chachlag;
+
+lookup MNG.marked {
+    lookupflag 0;
+    sub @MNG-o.fina by u1823.O.fina;
+    sub @MNG-u.fina by u1824.O.fina;
+    sub @MNG-oe.medi by u1825.OI.medi;
+    sub @MNG-oe.fina by u1825.Ue.fina;
+    sub @MNG-ue.medi by u1826.OI.medi;
+    sub @MNG-ue.fina by u1826.Ue.fina;
+    sub @MNG-d.init by u1833.D.init;
+} MNG.marked;
+
+lookup MNG.chachlag_onset {
+    lookupflag 0;
+    sub @MNG-n.fina by u1828.N.fina;
+    sub @MNG-h.fina by u182C.H.fina;
+    sub @MNG-g.fina by u182D.Hx.fina;
+    sub @MNG-j.isol by u1835.I.isol;
+    sub @MNG-j.fina by u1835.I.fina;
+    sub @MNG-w.fina by u1838.U.fina;
+} MNG.chachlag_onset;
+
+lookup MNG.chachlag_onset_gb {
+    lookupflag 0;
+    sub @MNG-g.fina by u182D.H.fina;
+} MNG.chachlag_onset_gb;
+
+lookup MNG.onset {
+    lookupflag 0;
+    sub @MNG-n.medi by u1828.N.medi;
+    sub @MNG-d.init by u1833.T.init;
+    sub @MNG-d.medi by u1833.D.medi;
+} MNG.onset;
+
+lookup MNG.devsger {
+    lookupflag 0;
+    sub @MNG-n.medi by u1828.A.medi;
+    sub @MNG-n.fina by u1828.A.fina;
+    sub @MNG-t.medi by u1832.T.medi;
+    sub @MNG-d.medi by u1833.Dd.medi;
+    sub @MNG-d.fina by u1833.Dd.fina;
+} MNG.devsger;
+
+lookup MNG.masculine_onset {
+    lookupflag 0;
+    sub @MNG-h.init by u182C.H.init;
+    sub @MNG-h.medi by u182C.H.medi;
+    sub @MNG-g.init by u182D.Hx.init;
+    sub @MNG-g.medi by u182D.Hx.medi;
+} MNG.masculine_onset;
+
+lookup MNG.masculine_devsger {
+    lookupflag 0;
+    sub @MNG-h.medi by u182C.H.medi;
+    sub @MNG-h.fina by u182C.H.fina;
+    sub @MNG-g.medi by u182D.H.medi;
+    sub @MNG-g.fina by u182D.H.fina;
+} MNG.masculine_devsger;
+
+lookup MNG.feminine {
+    lookupflag 0;
+    sub @MNG-h.init by u182C.G.init;
+    sub @MNG-h.medi by u182C.G.medi;
+    sub @MNG-g.init by u182D.G.init;
+    sub @MNG-g.medi by u182D.G.medi;
+    sub @MNG-g.fina by u182D.G.fina;
+} MNG.feminine;
+
+lookup MNG.dotless {
+    lookupflag 0;
+    sub @MNG-g.medi by u182D.H.medi;
+    sub @MNG-g.fina by u182D.H.fina;
+    sub @MNG-sh.init by u1831.S.init;
+    sub @MNG-sh.medi by u1831.S.medi;
+} MNG.dotless;
+
+lookup MNG.particle {
+    lookupflag 0;
+    sub @MNG-a.isol by u1820.Aa.isol;
+    sub @MNG-a.init by u1820.A.init;
+    sub @MNG-e.isol by u1821.Aa.isol;
+    sub @MNG-i.isol by u1822.I.isol;
+    sub @MNG-i.init by u1822.I.init;
+    sub @MNG-u.isol by u1824.U.isol;
+    sub @MNG-u.init by u1824.O.init;
+    sub @MNG-u.fina by u1824.U.fina;
+    sub @MNG-ue.isol by u1826.U.isol;
+    sub @MNG-ue.init by u1826.O.init;
+    sub @MNG-ue.medi by u1826.O.medi;
+    sub @MNG-ue.fina by u1826.U.fina;
+    sub @MNG-d.init by u1833.D.init;
+    sub @MNG-y.init by u1836.I.init;
+    sub @MNG-y.medi by u1836.I.medi;
+} MNG.particle;
+
+lookup MNG.vowel_devsger {
+    lookupflag 0;
+    sub @MNG-i.medi by u1822.II.medi;
+} MNG.vowel_devsger;
+
+lookup MNG.post_bowed {
+    lookupflag 0;
+    sub @MNG-a.fina by u1820.Aa.fina;
+    sub @MNG-e.fina by u1821.Aa.fina;
+    sub @MNG-o.fina by u1823.O.fina;
+    sub @MNG-u.fina by u1824.O.fina;
+    sub @MNG-oe.fina by u1825.O.fina;
+    sub @MNG-ue.fina by u1826.O.fina;
+} MNG.post_bowed;
+
+lookup MNG.reset {
+    lookupflag 0;
+    sub @MNG-a.isol by u1820.AA.isol;
+    sub @MNG-e.isol by u1821.A.isol;
+    sub @MNG-ee.isol by u1827.AW.isol;
+    sub @MNG-i.isol by u1822.AI.isol;
+    sub @MNG-o.isol by u1823.AO.isol;
+    sub @MNG-u.isol by u1824.AO.isol;
+    sub @MNG-oe.isol by u1825.AUe.isol;
+    sub @MNG-ue.isol by u1826.AUe.isol;
+    sub @MNG-n.isol by u1828.N.init._isol;
+    sub @MNG-ng.isol by u1829.AG.medi._isol;
+    sub @MNG-b.isol by u182A.B.init._isol;
+    sub @MNG-p.isol by u182B.P.init._isol;
+    sub @MNG-h.isol by u182C.H.init._isol;
+    sub @MNG-g.isol by u182D.Hx.init._isol;
+    sub @MNG-m.isol by u182E.M.init._isol;
+    sub @MNG-l.isol by u182F.L.init._isol;
+    sub @MNG-s.isol by u1830.S.init._isol;
+    sub @MNG-sh.isol by u1831.Sh.init._isol;
+    sub @MNG-t.isol by u1832.T.init._isol;
+    sub @MNG-d.isol by u1833.D.init._isol;
+    sub @MNG-ch.isol by u1834.Ch.init._isol;
+    sub @MNG-j.isol by u1835.I.init._isol;
+    sub @MNG-y.isol by u1836.Y.init._isol;
+    sub @MNG-r.isol by u1837.R.init._isol;
+    sub @MNG-w.isol by u1838.W.init._isol;
+    sub @MNG-f.isol by u1839.F.init._isol;
+    sub @MNG-k2.isol by u183A.K2.init._isol;
+    sub @MNG-k.isol by u183B.K.init._isol;
+    sub @MNG-c.isol by u183C.C.init._isol;
+    sub @MNG-z.isol by u183D.Z.init._isol;
+    sub @MNG-hh.isol by u183E.AHr.init._isol;
+    sub @MNG-rh.isol by u183F.Rh.init._isol;
+    sub @MNG-lh.isol by u1840.LHr.init._isol;
+    sub @MNG-zr.isol by u1841.Zr.init._isol;
+    sub @MNG-cr.isol by u1842.Cr.init._isol;
+    sub @MNG-a.init by u1820.AA.init;
+    sub @MNG-e.init by u1821.A.init;
+    sub @MNG-ee.init by u1827.AW.init;
+    sub @MNG-i.init by u1822.AI.init;
+    sub @MNG-o.init by u1823.AO.init;
+    sub @MNG-u.init by u1824.AO.init;
+    sub @MNG-oe.init by u1825.AOI.init;
+    sub @MNG-ue.init by u1826.AOI.init;
+    sub @MNG-n.init by u1828.N.init;
+    sub @MNG-ng.init by u1829.AG.medi._init;
+    sub @MNG-b.init by u182A.B.init;
+    sub @MNG-p.init by u182B.P.init;
+    sub @MNG-h.init by u182C.H.init;
+    sub @MNG-g.init by u182D.Hx.init;
+    sub @MNG-m.init by u182E.M.init;
+    sub @MNG-l.init by u182F.L.init;
+    sub @MNG-s.init by u1830.S.init;
+    sub @MNG-sh.init by u1831.Sh.init;
+    sub @MNG-t.init by u1832.T.init;
+    sub @MNG-d.init by u1833.T.init;
+    sub @MNG-ch.init by u1834.Ch.init;
+    sub @MNG-j.init by u1835.I.init;
+    sub @MNG-y.init by u1836.Y.init;
+    sub @MNG-r.init by u1837.R.init;
+    sub @MNG-w.init by u1838.W.init;
+    sub @MNG-f.init by u1839.F.init;
+    sub @MNG-k2.init by u183A.K2.init;
+    sub @MNG-k.init by u183B.K.init;
+    sub @MNG-c.init by u183C.C.init;
+    sub @MNG-z.init by u183D.Z.init;
+    sub @MNG-hh.init by u183E.AHr.init;
+    sub @MNG-rh.init by u183F.Rh.init;
+    sub @MNG-lh.init by u1840.LHr.init;
+    sub @MNG-zr.init by u1841.Zr.init;
+    sub @MNG-cr.init by u1842.Cr.init;
+    sub @MNG-a.medi by u1820.A.medi;
+    sub @MNG-e.medi by u1821.A.medi;
+    sub @MNG-ee.medi by u1827.W.medi;
+    sub @MNG-i.medi by u1822.I.medi;
+    sub @MNG-o.medi by u1823.O.medi;
+    sub @MNG-u.medi by u1824.O.medi;
+    sub @MNG-oe.medi by u1825.O.medi;
+    sub @MNG-ue.medi by u1826.O.medi;
+    sub @MNG-n.medi by u1828.A.medi;
+    sub @MNG-ng.medi by u1829.AG.medi;
+    sub @MNG-b.medi by u182A.B.medi;
+    sub @MNG-p.medi by u182B.P.medi;
+    sub @MNG-h.medi by u182C.G.medi;
+    sub @MNG-g.medi by u182D.G.medi;
+    sub @MNG-m.medi by u182E.M.medi;
+    sub @MNG-l.medi by u182F.L.medi;
+    sub @MNG-s.medi by u1830.S.medi;
+    sub @MNG-sh.medi by u1831.Sh.medi;
+    sub @MNG-t.medi by u1832.D.medi;
+    sub @MNG-d.medi by u1833.Dd.medi;
+    sub @MNG-ch.medi by u1834.Ch.medi;
+    sub @MNG-j.medi by u1835.J.medi;
+    sub @MNG-y.medi by u1836.Y.medi;
+    sub @MNG-r.medi by u1837.R.medi;
+    sub @MNG-w.medi by u1838.W.medi;
+    sub @MNG-f.medi by u1839.F.medi;
+    sub @MNG-k2.medi by u183A.K2.medi;
+    sub @MNG-k.medi by u183B.K.medi;
+    sub @MNG-c.medi by u183C.C.medi;
+    sub @MNG-z.medi by u183D.Z.medi;
+    sub @MNG-hh.medi by u183E.Hr.medi;
+    sub @MNG-rh.medi by u183F.Rh.medi;
+    sub @MNG-lh.medi by u1840.LHr.medi;
+    sub @MNG-zr.medi by u1841.Zr.init._medi;
+    sub @MNG-cr.medi by u1842.Cr.init._medi;
+    sub @MNG-a.fina by u1820.A.fina;
+    sub @MNG-e.fina by u1821.A.fina;
+    sub @MNG-ee.fina by u1827.W.fina;
+    sub @MNG-i.fina by u1822.I.fina;
+    sub @MNG-o.fina by u1823.U.fina;
+    sub @MNG-u.fina by u1824.U.fina;
+    sub @MNG-oe.fina by u1825.U.fina;
+    sub @MNG-ue.fina by u1826.U.fina;
+    sub @MNG-n.fina by u1828.A.fina;
+    sub @MNG-ng.fina by u1829.AG.fina;
+    sub @MNG-b.fina by u182A.B.fina;
+    sub @MNG-p.fina by u182B.P.fina;
+    sub @MNG-h.fina by u182C.H.fina;
+    sub @MNG-g.fina by u182D.G.fina;
+    sub @MNG-m.fina by u182E.M.fina;
+    sub @MNG-l.fina by u182F.L.fina;
+    sub @MNG-s.fina by u1830.S.fina;
+    sub @MNG-sh.fina by u1831.Sh.fina;
+    sub @MNG-t.fina by u1832.T.fina;
+    sub @MNG-d.fina by u1833.Dd.fina;
+    sub @MNG-ch.fina by u1834.Ch.fina;
+    sub @MNG-j.fina by u1835.J.fina;
+    sub @MNG-y.fina by u1836.I.fina;
+    sub @MNG-r.fina by u1837.R.fina;
+    sub @MNG-w.fina by u1838.W.fina;
+    sub @MNG-f.fina by u1839.F.fina;
+    sub @MNG-k2.fina by u183A.K2.fina;
+    sub @MNG-k.fina by u183B.K.fina;
+    sub @MNG-c.fina by u183C.C.fina;
+    sub @MNG-z.fina by u183D.Z.fina;
+    sub @MNG-hh.fina by u183E.Hr.fina;
+    sub @MNG-rh.fina by u183F.Rh.fina;
+    sub @MNG-lh.fina by u1840.LHr.medi._fina;
+    sub @MNG-zr.fina by u1841.Zr.init._fina;
+    sub @MNG-cr.fina by u1842.Cr.init._fina;
+} MNG.reset;
+
+feature ccmp {
+    script DFLT;
+    language dflt;
+    lookup Ia.nnbsp.preprocessing {
+        lookupflag 0;
+        sub nnbsp by mvs;
+    } Ia.nnbsp.preprocessing;
+
+} ccmp;
+
+feature ccmp {
+    script mong;
+    language dflt;
+    lookup Ia.nnbsp.preprocessing;
+} ccmp;
+
+feature ccmp {
+    script mong;
+    language MNG;
+    lookup Ia.nnbsp.preprocessing;
+} ccmp;
+
+feature isol {
+    script DFLT;
+    language dflt;
+    lookup IIa.isol {
+        lookupflag 0;
+        sub u1820 by u1820.AA.isol;
+        sub u1821 by u1821.A.isol;
+        sub u1822 by u1822.AI.isol;
+        sub u1823 by u1823.AO.isol;
+        sub u1824 by u1824.AO.isol;
+        sub u1825 by u1825.AUe.isol;
+        sub u1826 by u1826.AUe.isol;
+        sub u1827 by u1827.AW.isol;
+        sub u1828 by u1828.N.init._isol;
+        sub u1829 by u1829.AG.medi._isol;
+        sub u182A by u182A.B.init._isol;
+        sub u182B by u182B.P.init._isol;
+        sub u182C by u182C.H.init._isol;
+        sub u182D by u182D.Hx.init._isol;
+        sub u182E by u182E.M.init._isol;
+        sub u182F by u182F.L.init._isol;
+        sub u1830 by u1830.S.init._isol;
+        sub u1831 by u1831.Sh.init._isol;
+        sub u1832 by u1832.T.init._isol;
+        sub u1833 by u1833.D.init._isol;
+        sub u1834 by u1834.Ch.init._isol;
+        sub u1835 by u1835.I.init._isol;
+        sub u1836 by u1836.Y.init._isol;
+        sub u1837 by u1837.R.init._isol;
+        sub u1838 by u1838.W.init._isol;
+        sub u1839 by u1839.F.init._isol;
+        sub u183A by u183A.K2.init._isol;
+        sub u183B by u183B.K.init._isol;
+        sub u183C by u183C.C.init._isol;
+        sub u183D by u183D.Z.init._isol;
+        sub u183E by u183E.AHr.init._isol;
+        sub u183F by u183F.Rh.init._isol;
+        sub u1840 by u1840.LHr.init._isol;
+        sub u1841 by u1841.Zr.init._isol;
+        sub u1842 by u1842.Cr.init._isol;
+    } IIa.isol;
+
+} isol;
+
+feature isol {
+    script mong;
+    language dflt;
+    lookup IIa.isol;
+} isol;
+
+feature isol {
+    script mong;
+    language MNG;
+    lookup IIa.isol;
+} isol;
+
+feature init {
+    script DFLT;
+    language dflt;
+    lookup IIa.init {
+        lookupflag 0;
+        sub u1820 by u1820.AA.init;
+        sub u1821 by u1821.A.init;
+        sub u1822 by u1822.AI.init;
+        sub u1823 by u1823.AO.init;
+        sub u1824 by u1824.AO.init;
+        sub u1825 by u1825.AOI.init;
+        sub u1826 by u1826.AOI.init;
+        sub u1827 by u1827.AW.init;
+        sub u1828 by u1828.N.init;
+        sub u1829 by u1829.AG.medi._init;
+        sub u182A by u182A.B.init;
+        sub u182B by u182B.P.init;
+        sub u182C by u182C.H.init;
+        sub u182D by u182D.Hx.init;
+        sub u182E by u182E.M.init;
+        sub u182F by u182F.L.init;
+        sub u1830 by u1830.S.init;
+        sub u1831 by u1831.Sh.init;
+        sub u1832 by u1832.T.init;
+        sub u1833 by u1833.T.init;
+        sub u1834 by u1834.Ch.init;
+        sub u1835 by u1835.I.init;
+        sub u1836 by u1836.Y.init;
+        sub u1837 by u1837.R.init;
+        sub u1838 by u1838.W.init;
+        sub u1839 by u1839.F.init;
+        sub u183A by u183A.K2.init;
+        sub u183B by u183B.K.init;
+        sub u183C by u183C.C.init;
+        sub u183D by u183D.Z.init;
+        sub u183E by u183E.AHr.init;
+        sub u183F by u183F.Rh.init;
+        sub u1840 by u1840.LHr.init;
+        sub u1841 by u1841.Zr.init;
+        sub u1842 by u1842.Cr.init;
+    } IIa.init;
+
+} init;
+
+feature init {
+    script mong;
+    language dflt;
+    lookup IIa.init;
+} init;
+
+feature init {
+    script mong;
+    language MNG;
+    lookup IIa.init;
+} init;
+
+feature medi {
+    script DFLT;
+    language dflt;
+    lookup IIa.medi {
+        lookupflag 0;
+        sub u1820 by u1820.A.medi;
+        sub u1821 by u1821.A.medi;
+        sub u1822 by u1822.I.medi;
+        sub u1823 by u1823.O.medi;
+        sub u1824 by u1824.O.medi;
+        sub u1825 by u1825.O.medi;
+        sub u1826 by u1826.O.medi;
+        sub u1827 by u1827.W.medi;
+        sub u1828 by u1828.A.medi;
+        sub u1829 by u1829.AG.medi;
+        sub u182A by u182A.B.medi;
+        sub u182B by u182B.P.medi;
+        sub u182C by u182C.G.medi;
+        sub u182D by u182D.G.medi;
+        sub u182E by u182E.M.medi;
+        sub u182F by u182F.L.medi;
+        sub u1830 by u1830.S.medi;
+        sub u1831 by u1831.Sh.medi;
+        sub u1832 by u1832.D.medi;
+        sub u1833 by u1833.Dd.medi;
+        sub u1834 by u1834.Ch.medi;
+        sub u1835 by u1835.J.medi;
+        sub u1836 by u1836.Y.medi;
+        sub u1837 by u1837.R.medi;
+        sub u1838 by u1838.W.medi;
+        sub u1839 by u1839.F.medi;
+        sub u183A by u183A.K2.medi;
+        sub u183B by u183B.K.medi;
+        sub u183C by u183C.C.medi;
+        sub u183D by u183D.Z.medi;
+        sub u183E by u183E.Hr.medi;
+        sub u183F by u183F.Rh.medi;
+        sub u1840 by u1840.LHr.medi;
+        sub u1841 by u1841.Zr.init._medi;
+        sub u1842 by u1842.Cr.init._medi;
+    } IIa.medi;
+
+} medi;
+
+feature medi {
+    script mong;
+    language dflt;
+    lookup IIa.medi;
+} medi;
+
+feature medi {
+    script mong;
+    language MNG;
+    lookup IIa.medi;
+} medi;
+
+feature fina {
+    script DFLT;
+    language dflt;
+    lookup IIa.fina {
+        lookupflag 0;
+        sub u1820 by u1820.A.fina;
+        sub u1821 by u1821.A.fina;
+        sub u1822 by u1822.I.fina;
+        sub u1823 by u1823.U.fina;
+        sub u1824 by u1824.U.fina;
+        sub u1825 by u1825.U.fina;
+        sub u1826 by u1826.U.fina;
+        sub u1827 by u1827.W.fina;
+        sub u1828 by u1828.A.fina;
+        sub u1829 by u1829.AG.fina;
+        sub u182A by u182A.B.fina;
+        sub u182B by u182B.P.fina;
+        sub u182C by u182C.H.fina;
+        sub u182D by u182D.G.fina;
+        sub u182E by u182E.M.fina;
+        sub u182F by u182F.L.fina;
+        sub u1830 by u1830.S.fina;
+        sub u1831 by u1831.Sh.fina;
+        sub u1832 by u1832.T.fina;
+        sub u1833 by u1833.Dd.fina;
+        sub u1834 by u1834.Ch.fina;
+        sub u1835 by u1835.J.fina;
+        sub u1836 by u1836.I.fina;
+        sub u1837 by u1837.R.fina;
+        sub u1838 by u1838.W.fina;
+        sub u1839 by u1839.F.fina;
+        sub u183A by u183A.K2.fina;
+        sub u183B by u183B.K.fina;
+        sub u183C by u183C.C.fina;
+        sub u183D by u183D.Z.fina;
+        sub u183E by u183E.Hr.fina;
+        sub u183F by u183F.Rh.fina;
+        sub u1840 by u1840.LHr.medi._fina;
+        sub u1841 by u1841.Zr.init._fina;
+        sub u1842 by u1842.Cr.init._fina;
+    } IIa.fina;
+
+} fina;
+
+feature fina {
+    script mong;
+    language dflt;
+    lookup IIa.fina;
+} fina;
+
+feature fina {
+    script mong;
+    language MNG;
+    lookup IIa.fina;
+} fina;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.controls.preprocessing {
+        lookupflag 0;
+        sub [zwnj zwj nirugu @fvs]' lookup _.ignored;
+    } III.controls.preprocessing;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.controls.preprocessing;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.controls.preprocessing;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.mvs.preserving.A {
+        lookupflag 0;
+        sub mvs by mvs.wide mvs.wide;
+    } III.mvs.preserving.A;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.mvs.preserving.A;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.mvs.preserving.A;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.mvs.preserving.B {
+        lookupflag 0;
+        sub mvs.wide mvs.wide by mvs;
+    } III.mvs.preserving.B;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.mvs.preserving.B;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.mvs.preserving.B;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.A {
+        lookupflag 0;
+        sub u1820.AA.init by u1820.AA.init marker.masculine;
+        sub u1820.A.medi by u1820.A.medi marker.masculine;
+        sub u1823.AO.init by u1823.AO.init marker.masculine;
+        sub u1823.O.medi by u1823.O.medi marker.masculine;
+        sub u1824.AO.init by u1824.AO.init marker.masculine;
+        sub u1824.O.medi by u1824.O.medi marker.masculine;
+    } III.ig.preprocessing.A;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.A;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.A;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.B {
+        lookupflag UseMarkFilteringSet [marker.masculine];
+        sub marker.masculine u1822.I.medi' by u1822.I.medi marker.masculine;
+        sub marker.masculine u1822.I.fina' by u1822.I.fina marker.masculine;
+        sub marker.masculine u1828.A.medi' by u1828.A.medi marker.masculine;
+        sub marker.masculine u1828.A.fina' by u1828.A.fina marker.masculine;
+        sub marker.masculine u1829.AG.medi' by u1829.AG.medi marker.masculine;
+        sub marker.masculine u1829.AG.fina' by u1829.AG.fina marker.masculine;
+        sub marker.masculine u182A.B.medi' by u182A.B.medi marker.masculine;
+        sub marker.masculine u182A.B.fina' by u182A.B.fina marker.masculine;
+        sub marker.masculine u182B.P.medi' by u182B.P.medi marker.masculine;
+        sub marker.masculine u182B.P.fina' by u182B.P.fina marker.masculine;
+        sub marker.masculine u182C.G.medi' by u182C.G.medi marker.masculine;
+        sub marker.masculine u182C.H.fina' by u182C.H.fina marker.masculine;
+        sub marker.masculine u182D.G.medi' by u182D.G.medi marker.masculine;
+        sub marker.masculine u182D.G.fina' by u182D.G.fina marker.masculine;
+        sub marker.masculine u182E.M.medi' by u182E.M.medi marker.masculine;
+        sub marker.masculine u182E.M.fina' by u182E.M.fina marker.masculine;
+        sub marker.masculine u182F.L.medi' by u182F.L.medi marker.masculine;
+        sub marker.masculine u182F.L.fina' by u182F.L.fina marker.masculine;
+        sub marker.masculine u1830.S.medi' by u1830.S.medi marker.masculine;
+        sub marker.masculine u1830.S.fina' by u1830.S.fina marker.masculine;
+        sub marker.masculine u1831.Sh.medi' by u1831.Sh.medi marker.masculine;
+        sub marker.masculine u1831.Sh.fina' by u1831.Sh.fina marker.masculine;
+        sub marker.masculine u1832.D.medi' by u1832.D.medi marker.masculine;
+        sub marker.masculine u1832.T.fina' by u1832.T.fina marker.masculine;
+        sub marker.masculine u1833.Dd.medi' by u1833.Dd.medi marker.masculine;
+        sub marker.masculine u1833.Dd.fina' by u1833.Dd.fina marker.masculine;
+        sub marker.masculine u1834.Ch.medi' by u1834.Ch.medi marker.masculine;
+        sub marker.masculine u1834.Ch.fina' by u1834.Ch.fina marker.masculine;
+        sub marker.masculine u1835.J.medi' by u1835.J.medi marker.masculine;
+        sub marker.masculine u1835.J.fina' by u1835.J.fina marker.masculine;
+        sub marker.masculine u1836.Y.medi' by u1836.Y.medi marker.masculine;
+        sub marker.masculine u1836.I.fina' by u1836.I.fina marker.masculine;
+        sub marker.masculine u1837.R.medi' by u1837.R.medi marker.masculine;
+        sub marker.masculine u1837.R.fina' by u1837.R.fina marker.masculine;
+        sub marker.masculine u1838.W.medi' by u1838.W.medi marker.masculine;
+        sub marker.masculine u1838.W.fina' by u1838.W.fina marker.masculine;
+        sub marker.masculine u1839.F.medi' by u1839.F.medi marker.masculine;
+        sub marker.masculine u1839.F.fina' by u1839.F.fina marker.masculine;
+        sub marker.masculine u183A.K2.medi' by u183A.K2.medi marker.masculine;
+        sub marker.masculine u183A.K2.fina' by u183A.K2.fina marker.masculine;
+        sub marker.masculine u183B.K.medi' by u183B.K.medi marker.masculine;
+        sub marker.masculine u183B.K.fina' by u183B.K.fina marker.masculine;
+        sub marker.masculine u183C.C.medi' by u183C.C.medi marker.masculine;
+        sub marker.masculine u183C.C.fina' by u183C.C.fina marker.masculine;
+        sub marker.masculine u183D.Z.medi' by u183D.Z.medi marker.masculine;
+        sub marker.masculine u183D.Z.fina' by u183D.Z.fina marker.masculine;
+        sub marker.masculine u183E.Hr.medi' by u183E.Hr.medi marker.masculine;
+        sub marker.masculine u183E.Hr.fina' by u183E.Hr.fina marker.masculine;
+        sub marker.masculine u183F.Rh.medi' by u183F.Rh.medi marker.masculine;
+        sub marker.masculine u183F.Rh.fina' by u183F.Rh.fina marker.masculine;
+        sub marker.masculine u1840.LHr.medi' by u1840.LHr.medi marker.masculine;
+        sub marker.masculine u1840.LHr.medi._fina' by u1840.LHr.medi._fina marker.masculine;
+        sub marker.masculine u1841.Zr.init._medi' by u1841.Zr.init._medi marker.masculine;
+        sub marker.masculine u1841.Zr.init._fina' by u1841.Zr.init._fina marker.masculine;
+        sub marker.masculine u1842.Cr.init._medi' by u1842.Cr.init._medi marker.masculine;
+        sub marker.masculine u1842.Cr.init._fina' by u1842.Cr.init._fina marker.masculine;
+    } III.ig.preprocessing.B;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.B;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.B;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.C {
+        lookupflag 0;
+        sub u1820.AA.init marker.masculine by u1820.AA.init;
+        sub u1820.A.medi marker.masculine by u1820.A.medi;
+        sub u1820.A.fina marker.masculine by u1820.A.fina;
+        sub u1823.AO.init marker.masculine by u1823.AO.init;
+        sub u1823.O.medi marker.masculine by u1823.O.medi;
+        sub u1823.U.fina marker.masculine by u1823.U.fina;
+        sub u1824.AO.init marker.masculine by u1824.AO.init;
+        sub u1824.O.medi marker.masculine by u1824.O.medi;
+        sub u1824.U.fina marker.masculine by u1824.U.fina;
+        sub u1822.AI.init marker.masculine by u1822.AI.init;
+        sub u1822.I.medi marker.masculine by u1822.I.medi;
+        sub u1822.I.fina marker.masculine by u1822.I.fina;
+        sub u1828.N.init marker.masculine by u1828.N.init;
+        sub u1828.A.medi marker.masculine by u1828.A.medi;
+        sub u1828.A.fina marker.masculine by u1828.A.fina;
+        sub u1829.AG.medi._init marker.masculine by u1829.AG.medi._init;
+        sub u1829.AG.medi marker.masculine by u1829.AG.medi;
+        sub u1829.AG.fina marker.masculine by u1829.AG.fina;
+        sub u182A.B.init marker.masculine by u182A.B.init;
+        sub u182A.B.medi marker.masculine by u182A.B.medi;
+        sub u182A.B.fina marker.masculine by u182A.B.fina;
+        sub u182B.P.init marker.masculine by u182B.P.init;
+        sub u182B.P.medi marker.masculine by u182B.P.medi;
+        sub u182B.P.fina marker.masculine by u182B.P.fina;
+        sub u182E.M.init marker.masculine by u182E.M.init;
+        sub u182E.M.medi marker.masculine by u182E.M.medi;
+        sub u182E.M.fina marker.masculine by u182E.M.fina;
+        sub u182F.L.init marker.masculine by u182F.L.init;
+        sub u182F.L.medi marker.masculine by u182F.L.medi;
+        sub u182F.L.fina marker.masculine by u182F.L.fina;
+        sub u1830.S.init marker.masculine by u1830.S.init;
+        sub u1830.S.medi marker.masculine by u1830.S.medi;
+        sub u1830.S.fina marker.masculine by u1830.S.fina;
+        sub u1831.Sh.init marker.masculine by u1831.Sh.init;
+        sub u1831.Sh.medi marker.masculine by u1831.Sh.medi;
+        sub u1831.Sh.fina marker.masculine by u1831.Sh.fina;
+        sub u1832.T.init marker.masculine by u1832.T.init;
+        sub u1832.D.medi marker.masculine by u1832.D.medi;
+        sub u1832.T.fina marker.masculine by u1832.T.fina;
+        sub u1833.T.init marker.masculine by u1833.T.init;
+        sub u1833.Dd.medi marker.masculine by u1833.Dd.medi;
+        sub u1833.Dd.fina marker.masculine by u1833.Dd.fina;
+        sub u1834.Ch.init marker.masculine by u1834.Ch.init;
+        sub u1834.Ch.medi marker.masculine by u1834.Ch.medi;
+        sub u1834.Ch.fina marker.masculine by u1834.Ch.fina;
+        sub u1835.I.init marker.masculine by u1835.I.init;
+        sub u1835.J.medi marker.masculine by u1835.J.medi;
+        sub u1835.J.fina marker.masculine by u1835.J.fina;
+        sub u1836.Y.init marker.masculine by u1836.Y.init;
+        sub u1836.Y.medi marker.masculine by u1836.Y.medi;
+        sub u1836.I.fina marker.masculine by u1836.I.fina;
+        sub u1837.R.init marker.masculine by u1837.R.init;
+        sub u1837.R.medi marker.masculine by u1837.R.medi;
+        sub u1837.R.fina marker.masculine by u1837.R.fina;
+        sub u1838.W.init marker.masculine by u1838.W.init;
+        sub u1838.W.medi marker.masculine by u1838.W.medi;
+        sub u1838.W.fina marker.masculine by u1838.W.fina;
+        sub u1839.F.init marker.masculine by u1839.F.init;
+        sub u1839.F.medi marker.masculine by u1839.F.medi;
+        sub u1839.F.fina marker.masculine by u1839.F.fina;
+        sub u183A.K2.init marker.masculine by u183A.K2.init;
+        sub u183A.K2.medi marker.masculine by u183A.K2.medi;
+        sub u183A.K2.fina marker.masculine by u183A.K2.fina;
+        sub u183B.K.init marker.masculine by u183B.K.init;
+        sub u183B.K.medi marker.masculine by u183B.K.medi;
+        sub u183B.K.fina marker.masculine by u183B.K.fina;
+        sub u183C.C.init marker.masculine by u183C.C.init;
+        sub u183C.C.medi marker.masculine by u183C.C.medi;
+        sub u183C.C.fina marker.masculine by u183C.C.fina;
+        sub u183D.Z.init marker.masculine by u183D.Z.init;
+        sub u183D.Z.medi marker.masculine by u183D.Z.medi;
+        sub u183D.Z.fina marker.masculine by u183D.Z.fina;
+        sub u183E.AHr.init marker.masculine by u183E.AHr.init;
+        sub u183E.Hr.medi marker.masculine by u183E.Hr.medi;
+        sub u183E.Hr.fina marker.masculine by u183E.Hr.fina;
+        sub u183F.Rh.init marker.masculine by u183F.Rh.init;
+        sub u183F.Rh.medi marker.masculine by u183F.Rh.medi;
+        sub u183F.Rh.fina marker.masculine by u183F.Rh.fina;
+        sub u1840.LHr.init marker.masculine by u1840.LHr.init;
+        sub u1840.LHr.medi marker.masculine by u1840.LHr.medi;
+        sub u1840.LHr.medi._fina marker.masculine by u1840.LHr.medi._fina;
+        sub u1841.Zr.init marker.masculine by u1841.Zr.init;
+        sub u1841.Zr.init._medi marker.masculine by u1841.Zr.init._medi;
+        sub u1841.Zr.init._fina marker.masculine by u1841.Zr.init._fina;
+        sub u1842.Cr.init marker.masculine by u1842.Cr.init;
+        sub u1842.Cr.init._medi marker.masculine by u1842.Cr.init._medi;
+        sub u1842.Cr.init._fina marker.masculine by u1842.Cr.init._fina;
+    } III.ig.preprocessing.C;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.C;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.C;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.D {
+        lookupflag 0;
+        sub u1821.A.init by u1821.A.init marker.feminine;
+        sub u1821.A.medi by u1821.A.medi marker.feminine;
+        sub u1827.AW.init by u1827.AW.init marker.feminine;
+        sub u1827.W.medi by u1827.W.medi marker.feminine;
+        sub u1825.AOI.init by u1825.AOI.init marker.feminine;
+        sub u1825.O.medi by u1825.O.medi marker.feminine;
+        sub u1826.AOI.init by u1826.AOI.init marker.feminine;
+        sub u1826.O.medi by u1826.O.medi marker.feminine;
+    } III.ig.preprocessing.D;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.D;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.D;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.E {
+        lookupflag UseMarkFilteringSet [marker.feminine];
+        sub marker.feminine u1822.I.medi' by u1822.I.medi marker.feminine;
+        sub marker.feminine u1822.I.fina' by u1822.I.fina marker.feminine;
+        sub marker.feminine u1828.A.medi' by u1828.A.medi marker.feminine;
+        sub marker.feminine u1828.A.fina' by u1828.A.fina marker.feminine;
+        sub marker.feminine u1829.AG.medi' by u1829.AG.medi marker.feminine;
+        sub marker.feminine u1829.AG.fina' by u1829.AG.fina marker.feminine;
+        sub marker.feminine u182A.B.medi' by u182A.B.medi marker.feminine;
+        sub marker.feminine u182A.B.fina' by u182A.B.fina marker.feminine;
+        sub marker.feminine u182B.P.medi' by u182B.P.medi marker.feminine;
+        sub marker.feminine u182B.P.fina' by u182B.P.fina marker.feminine;
+        sub marker.feminine u182C.G.medi' by u182C.G.medi marker.feminine;
+        sub marker.feminine u182C.H.fina' by u182C.H.fina marker.feminine;
+        sub marker.feminine u182D.G.medi' by u182D.G.medi marker.feminine;
+        sub marker.feminine u182D.G.fina' by u182D.G.fina marker.feminine;
+        sub marker.feminine u182E.M.medi' by u182E.M.medi marker.feminine;
+        sub marker.feminine u182E.M.fina' by u182E.M.fina marker.feminine;
+        sub marker.feminine u182F.L.medi' by u182F.L.medi marker.feminine;
+        sub marker.feminine u182F.L.fina' by u182F.L.fina marker.feminine;
+        sub marker.feminine u1830.S.medi' by u1830.S.medi marker.feminine;
+        sub marker.feminine u1830.S.fina' by u1830.S.fina marker.feminine;
+        sub marker.feminine u1831.Sh.medi' by u1831.Sh.medi marker.feminine;
+        sub marker.feminine u1831.Sh.fina' by u1831.Sh.fina marker.feminine;
+        sub marker.feminine u1832.D.medi' by u1832.D.medi marker.feminine;
+        sub marker.feminine u1832.T.fina' by u1832.T.fina marker.feminine;
+        sub marker.feminine u1833.Dd.medi' by u1833.Dd.medi marker.feminine;
+        sub marker.feminine u1833.Dd.fina' by u1833.Dd.fina marker.feminine;
+        sub marker.feminine u1834.Ch.medi' by u1834.Ch.medi marker.feminine;
+        sub marker.feminine u1834.Ch.fina' by u1834.Ch.fina marker.feminine;
+        sub marker.feminine u1835.J.medi' by u1835.J.medi marker.feminine;
+        sub marker.feminine u1835.J.fina' by u1835.J.fina marker.feminine;
+        sub marker.feminine u1836.Y.medi' by u1836.Y.medi marker.feminine;
+        sub marker.feminine u1836.I.fina' by u1836.I.fina marker.feminine;
+        sub marker.feminine u1837.R.medi' by u1837.R.medi marker.feminine;
+        sub marker.feminine u1837.R.fina' by u1837.R.fina marker.feminine;
+        sub marker.feminine u1838.W.medi' by u1838.W.medi marker.feminine;
+        sub marker.feminine u1838.W.fina' by u1838.W.fina marker.feminine;
+        sub marker.feminine u1839.F.medi' by u1839.F.medi marker.feminine;
+        sub marker.feminine u1839.F.fina' by u1839.F.fina marker.feminine;
+        sub marker.feminine u183A.K2.medi' by u183A.K2.medi marker.feminine;
+        sub marker.feminine u183A.K2.fina' by u183A.K2.fina marker.feminine;
+        sub marker.feminine u183B.K.medi' by u183B.K.medi marker.feminine;
+        sub marker.feminine u183B.K.fina' by u183B.K.fina marker.feminine;
+        sub marker.feminine u183C.C.medi' by u183C.C.medi marker.feminine;
+        sub marker.feminine u183C.C.fina' by u183C.C.fina marker.feminine;
+        sub marker.feminine u183D.Z.medi' by u183D.Z.medi marker.feminine;
+        sub marker.feminine u183D.Z.fina' by u183D.Z.fina marker.feminine;
+        sub marker.feminine u183E.Hr.medi' by u183E.Hr.medi marker.feminine;
+        sub marker.feminine u183E.Hr.fina' by u183E.Hr.fina marker.feminine;
+        sub marker.feminine u183F.Rh.medi' by u183F.Rh.medi marker.feminine;
+        sub marker.feminine u183F.Rh.fina' by u183F.Rh.fina marker.feminine;
+        sub marker.feminine u1840.LHr.medi' by u1840.LHr.medi marker.feminine;
+        sub marker.feminine u1840.LHr.medi._fina' by u1840.LHr.medi._fina marker.feminine;
+        sub marker.feminine u1841.Zr.init._medi' by u1841.Zr.init._medi marker.feminine;
+        sub marker.feminine u1841.Zr.init._fina' by u1841.Zr.init._fina marker.feminine;
+        sub marker.feminine u1842.Cr.init._medi' by u1842.Cr.init._medi marker.feminine;
+        sub marker.feminine u1842.Cr.init._fina' by u1842.Cr.init._fina marker.feminine;
+    } III.ig.preprocessing.E;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.E;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.E;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.F {
+        lookupflag 0;
+        sub u1821.A.init marker.feminine by u1821.A.init;
+        sub u1821.A.medi marker.feminine by u1821.A.medi;
+        sub u1821.A.fina marker.feminine by u1821.A.fina;
+        sub u1827.AW.init marker.feminine by u1827.AW.init;
+        sub u1827.W.medi marker.feminine by u1827.W.medi;
+        sub u1827.W.fina marker.feminine by u1827.W.fina;
+        sub u1825.AOI.init marker.feminine by u1825.AOI.init;
+        sub u1825.O.medi marker.feminine by u1825.O.medi;
+        sub u1825.U.fina marker.feminine by u1825.U.fina;
+        sub u1826.AOI.init marker.feminine by u1826.AOI.init;
+        sub u1826.O.medi marker.feminine by u1826.O.medi;
+        sub u1826.U.fina marker.feminine by u1826.U.fina;
+        sub u1822.AI.init marker.feminine by u1822.AI.init;
+        sub u1822.I.medi marker.feminine by u1822.I.medi;
+        sub u1822.I.fina marker.feminine by u1822.I.fina;
+        sub u1828.N.init marker.feminine by u1828.N.init;
+        sub u1828.A.medi marker.feminine by u1828.A.medi;
+        sub u1828.A.fina marker.feminine by u1828.A.fina;
+        sub u1829.AG.medi._init marker.feminine by u1829.AG.medi._init;
+        sub u1829.AG.medi marker.feminine by u1829.AG.medi;
+        sub u1829.AG.fina marker.feminine by u1829.AG.fina;
+        sub u182A.B.init marker.feminine by u182A.B.init;
+        sub u182A.B.medi marker.feminine by u182A.B.medi;
+        sub u182A.B.fina marker.feminine by u182A.B.fina;
+        sub u182B.P.init marker.feminine by u182B.P.init;
+        sub u182B.P.medi marker.feminine by u182B.P.medi;
+        sub u182B.P.fina marker.feminine by u182B.P.fina;
+        sub u182E.M.init marker.feminine by u182E.M.init;
+        sub u182E.M.medi marker.feminine by u182E.M.medi;
+        sub u182E.M.fina marker.feminine by u182E.M.fina;
+        sub u182F.L.init marker.feminine by u182F.L.init;
+        sub u182F.L.medi marker.feminine by u182F.L.medi;
+        sub u182F.L.fina marker.feminine by u182F.L.fina;
+        sub u1830.S.init marker.feminine by u1830.S.init;
+        sub u1830.S.medi marker.feminine by u1830.S.medi;
+        sub u1830.S.fina marker.feminine by u1830.S.fina;
+        sub u1831.Sh.init marker.feminine by u1831.Sh.init;
+        sub u1831.Sh.medi marker.feminine by u1831.Sh.medi;
+        sub u1831.Sh.fina marker.feminine by u1831.Sh.fina;
+        sub u1832.T.init marker.feminine by u1832.T.init;
+        sub u1832.D.medi marker.feminine by u1832.D.medi;
+        sub u1832.T.fina marker.feminine by u1832.T.fina;
+        sub u1833.T.init marker.feminine by u1833.T.init;
+        sub u1833.Dd.medi marker.feminine by u1833.Dd.medi;
+        sub u1833.Dd.fina marker.feminine by u1833.Dd.fina;
+        sub u1834.Ch.init marker.feminine by u1834.Ch.init;
+        sub u1834.Ch.medi marker.feminine by u1834.Ch.medi;
+        sub u1834.Ch.fina marker.feminine by u1834.Ch.fina;
+        sub u1835.I.init marker.feminine by u1835.I.init;
+        sub u1835.J.medi marker.feminine by u1835.J.medi;
+        sub u1835.J.fina marker.feminine by u1835.J.fina;
+        sub u1836.Y.init marker.feminine by u1836.Y.init;
+        sub u1836.Y.medi marker.feminine by u1836.Y.medi;
+        sub u1836.I.fina marker.feminine by u1836.I.fina;
+        sub u1837.R.init marker.feminine by u1837.R.init;
+        sub u1837.R.medi marker.feminine by u1837.R.medi;
+        sub u1837.R.fina marker.feminine by u1837.R.fina;
+        sub u1838.W.init marker.feminine by u1838.W.init;
+        sub u1838.W.medi marker.feminine by u1838.W.medi;
+        sub u1838.W.fina marker.feminine by u1838.W.fina;
+        sub u1839.F.init marker.feminine by u1839.F.init;
+        sub u1839.F.medi marker.feminine by u1839.F.medi;
+        sub u1839.F.fina marker.feminine by u1839.F.fina;
+        sub u183A.K2.init marker.feminine by u183A.K2.init;
+        sub u183A.K2.medi marker.feminine by u183A.K2.medi;
+        sub u183A.K2.fina marker.feminine by u183A.K2.fina;
+        sub u183B.K.init marker.feminine by u183B.K.init;
+        sub u183B.K.medi marker.feminine by u183B.K.medi;
+        sub u183B.K.fina marker.feminine by u183B.K.fina;
+        sub u183C.C.init marker.feminine by u183C.C.init;
+        sub u183C.C.medi marker.feminine by u183C.C.medi;
+        sub u183C.C.fina marker.feminine by u183C.C.fina;
+        sub u183D.Z.init marker.feminine by u183D.Z.init;
+        sub u183D.Z.medi marker.feminine by u183D.Z.medi;
+        sub u183D.Z.fina marker.feminine by u183D.Z.fina;
+        sub u183E.AHr.init marker.feminine by u183E.AHr.init;
+        sub u183E.Hr.medi marker.feminine by u183E.Hr.medi;
+        sub u183E.Hr.fina marker.feminine by u183E.Hr.fina;
+        sub u183F.Rh.init marker.feminine by u183F.Rh.init;
+        sub u183F.Rh.medi marker.feminine by u183F.Rh.medi;
+        sub u183F.Rh.fina marker.feminine by u183F.Rh.fina;
+        sub u1840.LHr.init marker.feminine by u1840.LHr.init;
+        sub u1840.LHr.medi marker.feminine by u1840.LHr.medi;
+        sub u1840.LHr.medi._fina marker.feminine by u1840.LHr.medi._fina;
+        sub u1841.Zr.init marker.feminine by u1841.Zr.init;
+        sub u1841.Zr.init._medi marker.feminine by u1841.Zr.init._medi;
+        sub u1841.Zr.init._fina marker.feminine by u1841.Zr.init._fina;
+        sub u1842.Cr.init marker.feminine by u1842.Cr.init;
+        sub u1842.Cr.init._medi marker.feminine by u1842.Cr.init._medi;
+        sub u1842.Cr.init._fina marker.feminine by u1842.Cr.init._fina;
+    } III.ig.preprocessing.F;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.F;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.F;
+} rclt;
+
+@MNG-unmarked.A = [u1820.AA.init u1820.A.medi u1820.A.fina u1823.AO.init u1823.O.medi u1823.U.fina u1824.AO.init u1824.O.medi u1824.U.fina u1822.AI.init u1822.I.medi u1822.I.fina u1828.N.init u1828.A.medi u1828.A.fina u1829.AG.medi._init u1829.AG.medi u1829.AG.fina u182A.B.init u182A.B.medi u182A.B.fina u182B.P.init u182B.P.medi u182B.P.fina u182C.H.init u182C.G.medi u182C.H.fina u182D.Hx.init u182D.G.medi u182D.G.fina u182E.M.init u182E.M.medi u182E.M.fina u182F.L.init u182F.L.medi u182F.L.fina u1830.S.init u1830.S.medi u1830.S.fina u1831.Sh.init u1831.Sh.medi u1831.Sh.fina u1832.T.init u1832.D.medi u1832.T.fina u1833.T.init u1833.Dd.medi u1833.Dd.fina u1834.Ch.init u1834.Ch.medi u1834.Ch.fina u1835.I.init u1835.J.medi u1835.J.fina u1836.Y.init u1836.Y.medi u1836.I.fina u1837.R.init u1837.R.medi u1837.R.fina u1838.W.init u1838.W.medi u1838.W.fina u1839.F.init u1839.F.medi u1839.F.fina u183A.K2.init u183A.K2.medi u183A.K2.fina u183B.K.init u183B.K.medi u183B.K.fina u183C.C.init u183C.C.medi u183C.C.fina u183D.Z.init u183D.Z.medi u183D.Z.fina u183E.AHr.init u183E.Hr.medi u183E.Hr.fina u183F.Rh.init u183F.Rh.medi u183F.Rh.fina u1840.LHr.init u1840.LHr.medi u1840.LHr.medi._fina u1841.Zr.init u1841.Zr.init._medi u1841.Zr.init._fina u1842.Cr.init u1842.Cr.init._medi u1842.Cr.init._fina];
+@MNG-marked.A = [u1820.AA.init.marked u1820.A.medi.marked u1820.A.fina.marked u1823.AO.init.marked u1823.O.medi.marked u1823.U.fina.marked u1824.AO.init.marked u1824.O.medi.marked u1824.U.fina.marked u1822.AI.init.marked u1822.I.medi.marked u1822.I.fina.marked u1828.N.init.marked u1828.A.medi.marked u1828.A.fina.marked u1829.AG.medi._init.marked u1829.AG.medi.marked u1829.AG.fina.marked u182A.B.init.marked u182A.B.medi.marked u182A.B.fina.marked u182B.P.init.marked u182B.P.medi.marked u182B.P.fina.marked u182C.H.init.marked u182C.G.medi.marked u182C.H.fina.marked u182D.Hx.init.marked u182D.G.medi.marked u182D.G.fina.marked u182E.M.init.marked u182E.M.medi.marked u182E.M.fina.marked u182F.L.init.marked u182F.L.medi.marked u182F.L.fina.marked u1830.S.init.marked u1830.S.medi.marked u1830.S.fina.marked u1831.Sh.init.marked u1831.Sh.medi.marked u1831.Sh.fina.marked u1832.T.init.marked u1832.D.medi.marked u1832.T.fina.marked u1833.T.init.marked u1833.Dd.medi.marked u1833.Dd.fina.marked u1834.Ch.init.marked u1834.Ch.medi.marked u1834.Ch.fina.marked u1835.I.init.marked u1835.J.medi.marked u1835.J.fina.marked u1836.Y.init.marked u1836.Y.medi.marked u1836.I.fina.marked u1837.R.init.marked u1837.R.medi.marked u1837.R.fina.marked u1838.W.init.marked u1838.W.medi.marked u1838.W.fina.marked u1839.F.init.marked u1839.F.medi.marked u1839.F.fina.marked u183A.K2.init.marked u183A.K2.medi.marked u183A.K2.fina.marked u183B.K.init.marked u183B.K.medi.marked u183B.K.fina.marked u183C.C.init.marked u183C.C.medi.marked u183C.C.fina.marked u183D.Z.init.marked u183D.Z.medi.marked u183D.Z.fina.marked u183E.AHr.init.marked u183E.Hr.medi.marked u183E.Hr.fina.marked u183F.Rh.init.marked u183F.Rh.medi.marked u183F.Rh.fina.marked u1840.LHr.init.marked u1840.LHr.medi.marked u1840.LHr.medi._fina.marked u1841.Zr.init.marked u1841.Zr.init._medi.marked u1841.Zr.init._fina.marked u1842.Cr.init.marked u1842.Cr.init._medi.marked u1842.Cr.init._fina.marked];
+lookup _.marked.MNG {
+    lookupflag 0;
+    sub @MNG-unmarked.A by @MNG-marked.A;
+} _.marked.MNG;
+
+lookup _.unmarked.MNG {
+    lookupflag 0;
+    sub @MNG-marked.A by @MNG-unmarked.A;
+} _.unmarked.MNG;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.G {
+        lookupflag IgnoreMarks;
+        sub u1822.AI.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1822.I.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1828.N.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1828.A.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1829.AG.medi._init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1829.AG.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182A.B.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182A.B.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182B.P.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182B.P.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182C.H.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182C.G.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182D.Hx.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182D.G.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182E.M.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182E.M.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182F.L.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u182F.L.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1830.S.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1830.S.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1831.Sh.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1831.Sh.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1832.T.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1832.D.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1833.T.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1833.Dd.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1834.Ch.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1834.Ch.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1835.I.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1835.J.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1836.Y.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1836.Y.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1837.R.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1837.R.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1838.W.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1838.W.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1839.F.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1839.F.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183A.K2.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183A.K2.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183B.K.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183B.K.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183C.C.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183C.C.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183D.Z.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183D.Z.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183E.AHr.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183E.Hr.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183F.Rh.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u183F.Rh.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1840.LHr.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1840.LHr.medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1841.Zr.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1841.Zr.init._medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1842.Cr.init' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1842.Cr.init._medi' lookup _.marked.MNG @MNG-vowelMasculine;
+        sub u1820.A.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1823.U.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1824.U.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1822.I.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1828.A.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1829.AG.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u182A.B.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u182B.P.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u182C.H.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u182D.G.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u182E.M.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u182F.L.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1830.S.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1831.Sh.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1832.T.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1833.Dd.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1834.Ch.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1835.J.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1836.I.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1837.R.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1838.W.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1839.F.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u183A.K2.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u183B.K.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u183C.C.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u183D.Z.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u183E.Hr.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u183F.Rh.fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1840.LHr.medi._fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1841.Zr.init._fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+        sub u1842.Cr.init._fina' lookup _.marked.MNG @mvs @MNG-a.isol;
+    } III.ig.preprocessing.G;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.G;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.G;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.H {
+        lookupflag UseMarkFilteringSet [marker.feminine];
+        rsub u1822.AI.init' @MNG-marked.A by u1822.AI.init.marked;
+        rsub u1822.I.medi' @MNG-marked.A by u1822.I.medi.marked;
+        rsub u1828.N.init' @MNG-marked.A by u1828.N.init.marked;
+        rsub u1828.A.medi' @MNG-marked.A by u1828.A.medi.marked;
+        rsub u1829.AG.medi._init' @MNG-marked.A by u1829.AG.medi._init.marked;
+        rsub u1829.AG.medi' @MNG-marked.A by u1829.AG.medi.marked;
+        rsub u182A.B.init' @MNG-marked.A by u182A.B.init.marked;
+        rsub u182A.B.medi' @MNG-marked.A by u182A.B.medi.marked;
+        rsub u182B.P.init' @MNG-marked.A by u182B.P.init.marked;
+        rsub u182B.P.medi' @MNG-marked.A by u182B.P.medi.marked;
+        rsub u182C.H.init' @MNG-marked.A by u182C.H.init.marked;
+        rsub u182C.G.medi' @MNG-marked.A by u182C.G.medi.marked;
+        rsub u182D.Hx.init' @MNG-marked.A by u182D.Hx.init.marked;
+        rsub u182D.G.medi' @MNG-marked.A by u182D.G.medi.marked;
+        rsub u182E.M.init' @MNG-marked.A by u182E.M.init.marked;
+        rsub u182E.M.medi' @MNG-marked.A by u182E.M.medi.marked;
+        rsub u182F.L.init' @MNG-marked.A by u182F.L.init.marked;
+        rsub u182F.L.medi' @MNG-marked.A by u182F.L.medi.marked;
+        rsub u1830.S.init' @MNG-marked.A by u1830.S.init.marked;
+        rsub u1830.S.medi' @MNG-marked.A by u1830.S.medi.marked;
+        rsub u1831.Sh.init' @MNG-marked.A by u1831.Sh.init.marked;
+        rsub u1831.Sh.medi' @MNG-marked.A by u1831.Sh.medi.marked;
+        rsub u1832.T.init' @MNG-marked.A by u1832.T.init.marked;
+        rsub u1832.D.medi' @MNG-marked.A by u1832.D.medi.marked;
+        rsub u1833.T.init' @MNG-marked.A by u1833.T.init.marked;
+        rsub u1833.Dd.medi' @MNG-marked.A by u1833.Dd.medi.marked;
+        rsub u1834.Ch.init' @MNG-marked.A by u1834.Ch.init.marked;
+        rsub u1834.Ch.medi' @MNG-marked.A by u1834.Ch.medi.marked;
+        rsub u1835.I.init' @MNG-marked.A by u1835.I.init.marked;
+        rsub u1835.J.medi' @MNG-marked.A by u1835.J.medi.marked;
+        rsub u1836.Y.init' @MNG-marked.A by u1836.Y.init.marked;
+        rsub u1836.Y.medi' @MNG-marked.A by u1836.Y.medi.marked;
+        rsub u1837.R.init' @MNG-marked.A by u1837.R.init.marked;
+        rsub u1837.R.medi' @MNG-marked.A by u1837.R.medi.marked;
+        rsub u1838.W.init' @MNG-marked.A by u1838.W.init.marked;
+        rsub u1838.W.medi' @MNG-marked.A by u1838.W.medi.marked;
+        rsub u1839.F.init' @MNG-marked.A by u1839.F.init.marked;
+        rsub u1839.F.medi' @MNG-marked.A by u1839.F.medi.marked;
+        rsub u183A.K2.init' @MNG-marked.A by u183A.K2.init.marked;
+        rsub u183A.K2.medi' @MNG-marked.A by u183A.K2.medi.marked;
+        rsub u183B.K.init' @MNG-marked.A by u183B.K.init.marked;
+        rsub u183B.K.medi' @MNG-marked.A by u183B.K.medi.marked;
+        rsub u183C.C.init' @MNG-marked.A by u183C.C.init.marked;
+        rsub u183C.C.medi' @MNG-marked.A by u183C.C.medi.marked;
+        rsub u183D.Z.init' @MNG-marked.A by u183D.Z.init.marked;
+        rsub u183D.Z.medi' @MNG-marked.A by u183D.Z.medi.marked;
+        rsub u183E.AHr.init' @MNG-marked.A by u183E.AHr.init.marked;
+        rsub u183E.Hr.medi' @MNG-marked.A by u183E.Hr.medi.marked;
+        rsub u183F.Rh.init' @MNG-marked.A by u183F.Rh.init.marked;
+        rsub u183F.Rh.medi' @MNG-marked.A by u183F.Rh.medi.marked;
+        rsub u1840.LHr.init' @MNG-marked.A by u1840.LHr.init.marked;
+        rsub u1840.LHr.medi' @MNG-marked.A by u1840.LHr.medi.marked;
+        rsub u1841.Zr.init' @MNG-marked.A by u1841.Zr.init.marked;
+        rsub u1841.Zr.init._medi' @MNG-marked.A by u1841.Zr.init._medi.marked;
+        rsub u1842.Cr.init' @MNG-marked.A by u1842.Cr.init.marked;
+        rsub u1842.Cr.init._medi' @MNG-marked.A by u1842.Cr.init._medi.marked;
+    } III.ig.preprocessing.H;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.H;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.H;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.I {
+        lookupflag 0;
+        sub u182C.H.init.marked' lookup _.unmarked.MNG marker.masculine;
+        sub u182C.G.medi.marked' lookup _.unmarked.MNG marker.masculine;
+        sub u182D.Hx.init.marked' lookup _.unmarked.MNG marker.masculine;
+        sub u182D.G.medi.marked' lookup _.unmarked.MNG marker.masculine;
+    } III.ig.preprocessing.I;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.I;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.I;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.J {
+        lookupflag 0;
+        @MNG-marked.B = [u1820.AA.init.marked u1820.A.medi.marked u1820.A.fina.marked u1823.AO.init.marked u1823.O.medi.marked u1823.U.fina.marked u1824.AO.init.marked u1824.O.medi.marked u1824.U.fina.marked u1822.AI.init.marked u1822.I.medi.marked u1822.I.fina.marked u1828.N.init.marked u1828.A.medi.marked u1828.A.fina.marked u1829.AG.medi._init.marked u1829.AG.medi.marked u1829.AG.fina.marked u182A.B.init.marked u182A.B.medi.marked u182A.B.fina.marked u182B.P.init.marked u182B.P.medi.marked u182B.P.fina.marked u182E.M.init.marked u182E.M.medi.marked u182E.M.fina.marked u182F.L.init.marked u182F.L.medi.marked u182F.L.fina.marked u1830.S.init.marked u1830.S.medi.marked u1830.S.fina.marked u1831.Sh.init.marked u1831.Sh.medi.marked u1831.Sh.fina.marked u1832.T.init.marked u1832.D.medi.marked u1832.T.fina.marked u1833.T.init.marked u1833.Dd.medi.marked u1833.Dd.fina.marked u1834.Ch.init.marked u1834.Ch.medi.marked u1834.Ch.fina.marked u1835.I.init.marked u1835.J.medi.marked u1835.J.fina.marked u1836.Y.init.marked u1836.Y.medi.marked u1836.I.fina.marked u1837.R.init.marked u1837.R.medi.marked u1837.R.fina.marked u1838.W.init.marked u1838.W.medi.marked u1838.W.fina.marked u1839.F.init.marked u1839.F.medi.marked u1839.F.fina.marked u183A.K2.init.marked u183A.K2.medi.marked u183A.K2.fina.marked u183B.K.init.marked u183B.K.medi.marked u183B.K.fina.marked u183C.C.init.marked u183C.C.medi.marked u183C.C.fina.marked u183D.Z.init.marked u183D.Z.medi.marked u183D.Z.fina.marked u183E.AHr.init.marked u183E.Hr.medi.marked u183E.Hr.fina.marked u183F.Rh.init.marked u183F.Rh.medi.marked u183F.Rh.fina.marked u1840.LHr.init.marked u1840.LHr.medi.marked u1840.LHr.medi._fina.marked u1841.Zr.init.marked u1841.Zr.init._medi.marked u1841.Zr.init._fina.marked u1842.Cr.init.marked u1842.Cr.init._medi.marked u1842.Cr.init._fina.marked];
+        sub @MNG-marked.B' lookup _.unmarked.MNG;
+    } III.ig.preprocessing.J;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.J;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.J;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.preprocessing.K {
+        lookupflag 0;
+        sub u182C.H.init.marked by u182C.H.init marker.masculine;
+        sub u182C.G.medi.marked by u182C.G.medi marker.masculine;
+        sub u182D.Hx.init.marked by u182D.Hx.init marker.masculine;
+        sub u182D.G.medi.marked by u182D.G.medi marker.masculine;
+    } III.ig.preprocessing.K;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.preprocessing.K;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.preprocessing.K;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.a_e.chachlag {
+        lookupflag IgnoreMarks;
+        sub @mvs' lookup _.narrow [@MNG-a.isol @MNG-e.isol]' lookup MNG.chachlag;
+    } III.a_e.chachlag;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.a_e.chachlag;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.a_e.chachlag;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.a_e.chachlag.GB {
+        lookupflag UseMarkFilteringSet @fvs;
+        sub @mvs' lookup _.reset [@MNG-a.isol @MNG-e.isol] @fvs;
+    } III.a_e.chachlag.GB;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.a_e.chachlag.GB;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.a_e.chachlag.GB;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.o_u_oe_ue.marked {
+        lookupflag IgnoreMarks;
+        sub @MNG-consonant.init [@MNG-o @MNG-u @MNG-oe @MNG-ue]' lookup MNG.marked;
+    } III.o_u_oe_ue.marked;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.o_u_oe_ue.marked;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.o_u_oe_ue.marked;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.o_u_oe_ue.marked.GB.A {
+        lookupflag UseMarkFilteringSet @fvs;
+        sub [@MNG-o.medi @MNG-o.fina @MNG-u.medi @MNG-u.fina @MNG-oe.medi @MNG-oe.fina @MNG-ue.medi @MNG-ue.fina]' lookup MNG.reset @fvs;
+        sub @fvs [@MNG-o.medi @MNG-o.fina @MNG-u.medi @MNG-u.fina @MNG-oe.medi @MNG-oe.fina @MNG-ue.medi @MNG-ue.fina]' lookup MNG.reset;
+    } III.o_u_oe_ue.marked.GB.A;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.o_u_oe_ue.marked.GB.A;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.o_u_oe_ue.marked.GB.A;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.o_u_oe_ue.marked.GB.B {
+        lookupflag UseMarkFilteringSet @fvs;
+        sub [@MNG-g.init @MNG-h.init] [@fvs2 @fvs4] [@MNG-oe.fina @MNG-ue.fina]' lookup MNG.marked;
+    } III.o_u_oe_ue.marked.GB.B;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.o_u_oe_ue.marked.GB.B;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.o_u_oe_ue.marked.GB.B;
+} rclt;
+
+@MNG-marked.C = [u1820.AA.init.marked u1820.A.medi.marked u1820.A.fina.marked u1823.AO.init.marked u1823.O.medi.marked u1823.U.fina.marked u1824.AO.init.marked u1824.O.medi.marked u1824.U.fina.marked u1822.AI.init.marked u1822.I.medi.marked u1822.I.fina.marked u1828.N.init.marked u1828.A.medi.marked u1828.A.fina.marked u1829.AG.medi._init.marked u1829.AG.medi.marked u1829.AG.fina.marked u182A.B.init.marked u182A.B.medi.marked u182A.B.fina.marked u182B.P.init.marked u182B.P.medi.marked u182B.P.fina.marked u182C.H.init.marked u182C.G.medi.marked u182C.H.fina.marked u182D.Hx.init.marked u182D.G.medi.marked u182D.G.fina.marked u182E.M.init.marked u182E.M.medi.marked u182E.M.fina.marked u182F.L.init.marked u182F.L.medi.marked u182F.L.fina.marked u1830.S.init.marked u1830.S.medi.marked u1830.S.fina.marked u1831.Sh.init.marked u1831.Sh.medi.marked u1831.Sh.fina.marked u1832.T.init.marked u1832.D.medi.marked u1832.T.fina.marked u1833.T.init.marked u1833.Dd.medi.marked u1833.Dd.fina.marked u1834.Ch.init.marked u1834.Ch.medi.marked u1834.Ch.fina.marked u1835.I.init.marked u1835.J.medi.marked u1835.J.fina.marked u1836.Y.init.marked u1836.Y.medi.marked u1836.I.fina.marked u1837.R.init.marked u1837.R.medi.marked u1837.R.fina.marked u1838.W.init.marked u1838.W.medi.marked u1838.W.fina.marked u1839.F.init.marked u1839.F.medi.marked u1839.F.fina.marked u183A.K2.init.marked u183A.K2.medi.marked u183A.K2.fina.marked u183B.K.init.marked u183B.K.medi.marked u183B.K.fina.marked u183C.C.init.marked u183C.C.medi.marked u183C.C.fina.marked u183D.Z.init.marked u183D.Z.medi.marked u183D.Z.fina.marked u183E.AHr.init.marked u183E.Hr.medi.marked u183E.Hr.fina.marked u183F.Rh.init.marked u183F.Rh.medi.marked u183F.Rh.fina.marked u1840.LHr.init.marked u1840.LHr.medi.marked u1840.LHr.medi._fina.marked u1841.Zr.init.marked u1841.Zr.init._medi.marked u1841.Zr.init._fina.marked u1842.Cr.init.marked u1842.Cr.init._medi.marked u1842.Cr.init._fina.marked];
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.o_u_oe_ue.initial_marked.GB.A {
+        lookupflag IgnoreMarks;
+        sub [@MNG-consonant.init @MNG-marked.C] @MNG-consonant.medi' lookup _.marked.MNG;
+    } III.o_u_oe_ue.initial_marked.GB.A;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.o_u_oe_ue.initial_marked.GB.A;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.o_u_oe_ue.initial_marked.GB.A;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.o_u_oe_ue.initial_marked.GB.B {
+        lookupflag IgnoreMarks;
+        sub [@MNG-consonant.init @MNG-marked.C] [@MNG-o.medi @MNG-u.medi @MNG-oe.medi @MNG-ue.medi]' lookup MNG.marked;
+    } III.o_u_oe_ue.initial_marked.GB.B;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.o_u_oe_ue.initial_marked.GB.B;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.o_u_oe_ue.initial_marked.GB.B;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.o_u_oe_ue.initial_marked.GB.C {
+        lookupflag 0;
+        sub @MNG-marked.C' lookup _.unmarked.MNG;
+    } III.o_u_oe_ue.initial_marked.GB.C;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.o_u_oe_ue.initial_marked.GB.C;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.o_u_oe_ue.initial_marked.GB.C;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.d.marked {
+        lookupflag IgnoreMarks;
+        sub @MNG-d.init' lookup MNG.marked @MNG-vowel.fina;
+    } III.d.marked;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.d.marked;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.d.marked;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.d.marked.GB {
+        lookupflag UseMarkFilteringSet @fvs;
+        sub @MNG-d.init' lookup MNG.reset @MNG-vowel.fina @fvs;
+        sub @MNG-d.init' lookup MNG.reset @fvs @MNG-vowel.fina;
+    } III.d.marked.GB;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.d.marked.GB;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.d.marked.GB;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.n_j_w_h_g_a.chachlag_onset.MNG_MNGx {
+        lookupflag IgnoreMarks;
+        sub [@MNG-n.fina @MNG-j.isol @MNG-j.fina @MNG-w.fina]' lookup MNG.chachlag_onset @mvs.valid [u1820.Aa.isol u1821.Aa.isol];
+        sub [@MNG-h.fina @MNG-g.fina]' lookup MNG.chachlag_onset @mvs.valid u1820.Aa.isol;
+    } III.n_j_w_h_g_a.chachlag_onset.MNG_MNGx;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.n_j_w_h_g_a.chachlag_onset.MNG_MNGx;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.n_j_w_h_g_a.chachlag_onset.MNG_MNGx;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.g.chachlag_onset.MNG.GB {
+        lookupflag IgnoreMarks;
+        sub @MNG-g.fina' lookup MNG.chachlag_onset_gb @mvs.valid u1821.Aa.isol;
+    } III.g.chachlag_onset.MNG.GB;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.g.chachlag_onset.MNG.GB;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.g.chachlag_onset.MNG.GB;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.n.onset_and_devsger.MNG_TOD_SIB_MCH_MCHx {
+        lookupflag IgnoreMarks;
+        sub @MNG-n' lookup MNG.onset @MNG-vowel;
+        sub @MNG-n' lookup MNG.devsger @MNG-consonant;
+    } III.n.onset_and_devsger.MNG_TOD_SIB_MCH_MCHx;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.n.onset_and_devsger.MNG_TOD_SIB_MCH_MCHx;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.n.onset_and_devsger.MNG_TOD_SIB_MCH_MCHx;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.t_d.onset_and_devsger_and_gender.MNG_MCH_MCHx {
+        lookupflag IgnoreMarks;
+        ignore sub [@MNG-t.init @MNG-d.init]' @MNG-vowel.fina;
+        sub [@MNG-t @MNG-d]' lookup MNG.onset @MNG-vowel;
+        sub [@MNG-t @MNG-d]' lookup MNG.devsger @MNG-consonant;
+    } III.t_d.onset_and_devsger_and_gender.MNG_MCH_MCHx;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.t_d.onset_and_devsger_and_gender.MNG_MCH_MCHx;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.t_d.onset_and_devsger_and_gender.MNG_MCH_MCHx;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.k_g_h.onset_and_devsger_and_gender.MNG_TOD_SIB_MCH {
+        lookupflag IgnoreMarks;
+        ignore sub [@MNG-h @MNG-g]' @mvs [@MNG-a.isol @MNG-e.isol];
+        sub [@MNG-h @MNG-g]' lookup MNG.masculine_onset @MNG-vowelMasculine;
+        sub [@MNG-h @MNG-g]' lookup MNG.feminine [@MNG-vowelFeminine @MNG-vowelNeuter];
+        sub @MNG-vowelMasculine [@MNG-h @MNG-g]' lookup MNG.masculine_devsger;
+        sub @MNG-vowelFeminine [@MNG-h @MNG-g]' lookup MNG.feminine;
+    } III.k_g_h.onset_and_devsger_and_gender.MNG_TOD_SIB_MCH;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.k_g_h.onset_and_devsger_and_gender.MNG_TOD_SIB_MCH;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.k_g_h.onset_and_devsger_and_gender.MNG_TOD_SIB_MCH;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.g_h.onset_and_devsger_and_gender.A.MNG {
+        lookupflag UseMarkFilteringSet [marker.masculine];
+        ignore sub [@MNG-h @MNG-g]' @MNG-vowel;
+        ignore sub [@MNG-h @MNG-g]' marker.masculine @MNG-vowel;
+        ignore sub [@MNG-h @MNG-g]' @mvs [@MNG-a.isol @MNG-e.isol];
+        ignore sub [@MNG-h @MNG-g]' marker.masculine @mvs [@MNG-a.isol @MNG-e.isol];
+        sub @MNG-i [@MNG-h @MNG-g]' lookup MNG.masculine_devsger marker.masculine;
+        sub @MNG-i @MNG-g' lookup MNG.feminine;
+    } III.g_h.onset_and_devsger_and_gender.A.MNG;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.g_h.onset_and_devsger_and_gender.A.MNG;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.g_h.onset_and_devsger_and_gender.A.MNG;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.g_h.onset_and_devsger_and_gender.B.MNG {
+        lookupflag IgnoreMarks;
+        sub [@MNG-h.init @MNG-g.init]' lookup MNG.feminine @MNG-consonant;
+    } III.g_h.onset_and_devsger_and_gender.B.MNG;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.g_h.onset_and_devsger_and_gender.B.MNG;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.g_h.onset_and_devsger_and_gender.B.MNG;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.post_processing.A.MNG {
+        lookupflag UseMarkFilteringSet [marker.masculine];
+        sub u182C.Hx.init marker.masculine by u182C.Hx.init;
+        sub u182C.G.init marker.masculine by u182C.G.init;
+        sub u182C.H.init marker.masculine by u182C.H.init;
+        sub u182C.Gx.init marker.masculine by u182C.Gx.init;
+        sub u182C.Hx.medi marker.masculine by u182C.Hx.medi;
+        sub u182C.G.medi marker.masculine by u182C.G.medi;
+        sub u182C.H.medi marker.masculine by u182C.H.medi;
+        sub u182C.Gx.medi marker.masculine by u182C.Gx.medi;
+        sub u182C.H.fina marker.masculine by u182C.H.fina;
+        sub u182C.Hx.fina marker.masculine by u182C.Hx.fina;
+        sub u182D.H.init marker.masculine by u182D.H.init;
+        sub u182D.G.init marker.masculine by u182D.G.init;
+        sub u182D.Hx.init marker.masculine by u182D.Hx.init;
+        sub u182D.Gx.init marker.masculine by u182D.Gx.init;
+        sub u182D.Hx.medi marker.masculine by u182D.Hx.medi;
+        sub u182D.G.medi marker.masculine by u182D.G.medi;
+        sub u182D.H.medi marker.masculine by u182D.H.medi;
+        sub u182D.Gx.medi marker.masculine by u182D.Gx.medi;
+        sub u182D.H.fina marker.masculine by u182D.H.fina;
+        sub u182D.G.fina marker.masculine by u182D.G.fina;
+        sub u182D.Hx.fina marker.masculine by u182D.Hx.fina;
+    } III.ig.post_processing.A.MNG;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.post_processing.A.MNG;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.post_processing.A.MNG;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.ig.post_processing.B.MNG {
+        lookupflag UseMarkFilteringSet [marker.feminine];
+        sub u182C.Hx.init marker.feminine by u182C.Hx.init;
+        sub u182C.G.init marker.feminine by u182C.G.init;
+        sub u182C.H.init marker.feminine by u182C.H.init;
+        sub u182C.Gx.init marker.feminine by u182C.Gx.init;
+        sub u182C.Hx.medi marker.feminine by u182C.Hx.medi;
+        sub u182C.G.medi marker.feminine by u182C.G.medi;
+        sub u182C.H.medi marker.feminine by u182C.H.medi;
+        sub u182C.Gx.medi marker.feminine by u182C.Gx.medi;
+        sub u182C.H.fina marker.feminine by u182C.H.fina;
+        sub u182C.Hx.fina marker.feminine by u182C.Hx.fina;
+        sub u182D.H.init marker.feminine by u182D.H.init;
+        sub u182D.G.init marker.feminine by u182D.G.init;
+        sub u182D.Hx.init marker.feminine by u182D.Hx.init;
+        sub u182D.Gx.init marker.feminine by u182D.Gx.init;
+        sub u182D.Hx.medi marker.feminine by u182D.Hx.medi;
+        sub u182D.G.medi marker.feminine by u182D.G.medi;
+        sub u182D.H.medi marker.feminine by u182D.H.medi;
+        sub u182D.Gx.medi marker.feminine by u182D.Gx.medi;
+        sub u182D.H.fina marker.feminine by u182D.H.fina;
+        sub u182D.G.fina marker.feminine by u182D.G.fina;
+        sub u182D.Hx.fina marker.feminine by u182D.Hx.fina;
+    } III.ig.post_processing.B.MNG;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.ig.post_processing.B.MNG;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.ig.post_processing.B.MNG;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.t_sh_g.MNG.GB {
+        lookupflag IgnoreMarks;
+        sub @MNG-t' lookup MNG.devsger [@MNG-ee @MNG-consonant];
+        sub @MNG-sh.init' lookup MNG.dotless @MNG-i.medi;
+        sub @MNG-sh.medi' lookup MNG.dotless [@MNG-i.medi @MNG-i.fina];
+        sub [@MNG-s @MNG-d] @MNG-g.medi' lookup MNG.dotless @MNG-vowelMasculine;
+        sub [@MNG-s @MNG-d] @MNG-g.fina' lookup MNG.dotless @mvs u1820.Aa.isol;
+    } III.t_sh_g.MNG.GB;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.t_sh_g.MNG.GB;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.t_sh_g.MNG.GB;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.particle.MNG {
+        lookupflag UseMarkFilteringSet @fvs;
+        ignore sub @MNG-u.init' @MNG-u.fina @fvs;
+        sub @MNG-u.init' lookup MNG.particle @MNG-u.fina;
+        ignore sub @MNG-ue.init' @MNG-ue.fina @fvs;
+        sub @MNG-ue.init' lookup MNG.particle @MNG-ue.fina;
+        ignore sub @MNG-b.init @MNG-ue.medi' @MNG-ue.fina @fvs;
+        sub @MNG-b.init @MNG-ue.medi' lookup MNG.particle @MNG-ue.fina;
+        ignore sub @mvs' @MNG-a.init' @MNG-ch.medi @MNG-a.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-a.init' lookup MNG.particle @MNG-ch.medi @MNG-a.fina;
+        ignore sub @mvs' @MNG-a.init' @MNG-ch.medi @MNG-a.medi @MNG-g.medi @MNG-a.medi @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-a.init' lookup MNG.particle @MNG-ch.medi @MNG-a.medi @MNG-g.medi @MNG-a.medi @MNG-n.fina;
+        ignore sub @mvs' @MNG-i.isol' @fvs;
+        sub @mvs' lookup _.wide @MNG-i.isol' lookup MNG.particle;
+        ignore sub @mvs' @MNG-i.init' @MNG-y.medi' @MNG-a.medi @MNG-r.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-i.init' lookup MNG.particle @MNG-y.medi' lookup MNG.particle @MNG-a.medi @MNG-r.fina;
+        ignore sub @mvs' @MNG-i.init' @MNG-y.medi' @MNG-e.medi @MNG-r.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-i.init' lookup MNG.particle @MNG-y.medi' lookup MNG.particle @MNG-e.medi @MNG-r.fina;
+        ignore sub @mvs' @MNG-i.init' @MNG-y.medi' @MNG-a.medi @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-i.init' lookup MNG.particle @MNG-y.medi' lookup MNG.particle @MNG-a.medi @MNG-n.fina;
+        ignore sub @mvs' @MNG-i.init' @MNG-y.medi' @MNG-e.medi @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-i.init' lookup MNG.particle @MNG-y.medi' lookup MNG.particle @MNG-e.medi @MNG-n.fina;
+        ignore sub @mvs' @MNG-u.isol' @fvs;
+        sub @mvs' lookup _.wide @MNG-u.isol' lookup MNG.particle;
+        ignore sub @mvs' @MNG-ue.isol' @fvs;
+        sub @mvs' lookup _.wide @MNG-ue.isol' lookup MNG.particle;
+        ignore sub @mvs' @MNG-u.init' @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-u.init' lookup MNG.particle @MNG-n.fina;
+        ignore sub @mvs' @MNG-ue.init' @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-ue.init' lookup MNG.particle @MNG-n.fina;
+        ignore sub @mvs' @MNG-u.init' @MNG-d.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-u.init' lookup MNG.particle @MNG-d.fina;
+        ignore sub @mvs' @MNG-ue.init' @MNG-d.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-ue.init' lookup MNG.particle @MNG-d.fina;
+        ignore sub @mvs' @MNG-ch.init' @MNG-u.fina' @fvs;
+        sub @mvs' lookup _.wide @MNG-ch.init' @MNG-u.fina' lookup MNG.particle;
+        ignore sub @mvs' @MNG-ch.init' @MNG-ue.fina' @fvs;
+        sub @mvs' lookup _.wide @MNG-ch.init' @MNG-ue.fina' lookup MNG.particle;
+        ignore sub @mvs' @MNG-t.init' @MNG-u.fina' @fvs;
+        sub @mvs' lookup _.wide @MNG-t.init' @MNG-u.fina' lookup MNG.particle;
+        ignore sub @mvs' @MNG-t.init' @MNG-ue.fina' @fvs;
+        sub @mvs' lookup _.wide @MNG-t.init' @MNG-ue.fina' lookup MNG.particle;
+        ignore sub @mvs' @MNG-t.init' @MNG-ue.medi' @MNG-r.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-t.init' @MNG-ue.medi' lookup MNG.particle @MNG-r.fina;
+        ignore sub @mvs' @MNG-t.init' @MNG-ue.medi' @MNG-n.medi @MNG-i.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-t.init' @MNG-ue.medi' lookup MNG.particle @MNG-n.medi @MNG-i.fina;
+        ignore sub @mvs' @MNG-y.init' @MNG-ue.medi' @MNG-g.medi @MNG-e.medi @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-y.init' @MNG-ue.medi' lookup MNG.particle @MNG-g.medi @MNG-e.medi @MNG-n.fina;
+        ignore sub @mvs' @MNG-l.init' @MNG-ue.medi' @MNG-g.medi @MNG-e.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-l.init' @MNG-ue.medi' lookup MNG.particle @MNG-g.medi @MNG-e.fina;
+        ignore sub @mvs' @MNG-n.init' @MNG-ue.medi' @MNG-g.medi @MNG-ue.medi @MNG-d.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-n.init' @MNG-ue.medi' lookup MNG.particle @MNG-g.medi @MNG-ue.medi @MNG-d.fina;
+        ignore sub @mvs' @MNG-n.init' @MNG-ue.medi' @MNG-g.medi @MNG-e.medi @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-n.init' @MNG-ue.medi' lookup MNG.particle @MNG-g.medi @MNG-e.medi @MNG-n.fina;
+        ignore sub @mvs' @MNG-y.init' @MNG-ue.medi' @MNG-m.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-y.init' @MNG-ue.medi' lookup MNG.particle @MNG-m.fina;
+        ignore sub @mvs' @MNG-y.init' @MNG-ue.medi' @MNG-m.medi @MNG-s.medi @MNG-e.medi @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-y.init' @MNG-ue.medi' lookup MNG.particle @MNG-m.medi @MNG-s.medi @MNG-e.medi @MNG-n.fina;
+        ignore sub @mvs' @MNG-h.init' @MNG-ue.fina' @fvs;
+        sub @mvs' lookup _.wide @MNG-h.init' @MNG-ue.fina' lookup MNG.particle;
+        ignore sub @mvs' @MNG-y.init' @MNG-i.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-y.init' lookup MNG.particle @MNG-i.fina;
+        ignore sub @mvs' @MNG-y.init' @MNG-i.medi @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-y.init' lookup MNG.particle @MNG-i.medi @MNG-n.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-a.medi @MNG-g.medi @MNG-a.medi @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-a.medi @MNG-g.medi @MNG-a.medi @MNG-n.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-e.medi @MNG-g.medi @MNG-e.medi @MNG-n.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-e.medi @MNG-g.medi @MNG-e.medi @MNG-n.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-u.fina' @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-u.fina' lookup MNG.particle;
+        ignore sub @mvs' @MNG-d.init' @MNG-ue.fina' @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-ue.fina' lookup MNG.particle;
+        ignore sub @mvs' @MNG-d.init' @MNG-a.medi @MNG-g.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-a.medi @MNG-g.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-e.medi @MNG-g.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-e.medi @MNG-g.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-a.medi @MNG-h.medi @MNG-i.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-a.medi @MNG-h.medi @MNG-i.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-e.medi @MNG-h.medi @MNG-i.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-e.medi @MNG-h.medi @MNG-i.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-u.medi @MNG-r.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-u.medi @MNG-r.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-ue.medi' @MNG-r.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-ue.medi' lookup MNG.particle @MNG-r.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-u.medi @MNG-n.medi @MNG-i.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-u.medi @MNG-n.medi @MNG-i.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-ue.medi' @MNG-n.medi @MNG-i.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-ue.medi' lookup MNG.particle @MNG-n.medi @MNG-i.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-u.medi @MNG-g.medi @MNG-a.medi @MNG-r.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-u.medi @MNG-g.medi @MNG-a.medi @MNG-r.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-ue.medi' @MNG-g.medi @MNG-e.medi @MNG-r.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-ue.medi' lookup MNG.particle @MNG-g.medi @MNG-e.medi @MNG-r.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-a.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-a.fina;
+        ignore sub @mvs' @MNG-d.init' @MNG-e.fina @fvs;
+        sub @mvs' lookup _.wide @MNG-d.init' lookup MNG.particle @MNG-e.fina;
+    } III.particle.MNG;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.particle.MNG;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.particle.MNG;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.mvs.postprocessing.GB {
+        lookupflag 0;
+        sub @mvs.invalid' lookup _.wide [@MNG-vowel @MNG-consonant nirugu nirugu.ignored];
+    } III.mvs.postprocessing.GB;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.mvs.postprocessing.GB;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.mvs.postprocessing.GB;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.i_u.devsger.MNG_TOD_SIB_MCH_MCHx {
+        lookupflag IgnoreMarks;
+        @MNG-vowel.not_ending_with_I = [u1820.A.init u1820.AA.init u1820.A.medi u1820.AA.medi u1821.A.init u1821.AA.init u1821.A.medi u1827.AW.init u1827.W.medi u1823.AO.init u1823.AO.medi u1823.O.medi u1824.AO.init u1824.O.init u1824.AO.medi u1824.O.medi u1825.O.medi u1826.O.init u1826.O.medi];
+        sub @MNG-vowel.not_ending_with_I @MNG-i' lookup MNG.vowel_devsger;
+    } III.i_u.devsger.MNG_TOD_SIB_MCH_MCHx;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.i_u.devsger.MNG_TOD_SIB_MCH_MCHx;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.i_u.devsger.MNG_TOD_SIB_MCH_MCHx;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.i.devsger.MNG.GB {
+        lookupflag UseMarkFilteringSet @fvs;
+        sub [@MNG-oe.medi @MNG-ue.medi] [@fvs1 @fvs2] [@MNG-i.medi @MNG-i.fina]' lookup MNG.reset;
+        sub [@MNG-oe.medi @MNG-ue.medi] @fvs3 @MNG-i' lookup MNG.vowel_devsger;
+        sub @MNG-ue.init @fvs2 [@MNG-i.medi @MNG-i.fina]' lookup MNG.reset;
+        sub @MNG-ue.init @fvs1 @MNG-i' lookup MNG.vowel_devsger;
+    } III.i.devsger.MNG.GB;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.i.devsger.MNG.GB;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.i.devsger.MNG.GB;
+} rclt;
+
+@MNG-bowedB = [@MNG-b @MNG-p @MNG-f];
+@MNG-bowedK = [@MNG-k @MNG-k2];
+@MNG-bowedG = [u182C.G.init._isol u182C.Gx.init._isol u182C.G.init u182C.Gx.init u182C.G.medi u182C.Gx.medi u182D.G.init._isol u182D.Gx.init._isol u182D.G.init u182D.Gx.init u182D.G.medi u182D.Gx.medi u182D.G.fina];
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.vowel.post_bowed.MNG {
+        lookupflag IgnoreMarks;
+        ignore sub [@MNG-bowedB @MNG-bowedK @MNG-bowedG] [u1825.Ue.fina u1826.Ue.fina]';
+        sub [@MNG-bowedB @MNG-bowedK @MNG-bowedG] [@MNG-o.fina @MNG-u.fina @MNG-oe.fina @MNG-ue.fina]' lookup MNG.post_bowed;
+        sub [@MNG-bowedB @MNG-bowedK] [@MNG-a.fina @MNG-e.fina]' lookup MNG.post_bowed;
+        sub @MNG-bowedG [@MNG-e.fina]' lookup MNG.post_bowed;
+    } III.vowel.post_bowed.MNG;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.vowel.post_bowed.MNG;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.vowel.post_bowed.MNG;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.fvs.post_bowed.preprocessing.GB {
+        lookupflag 0;
+        sub [@MNG-bowedB @MNG-bowedK @MNG-bowedG] @fvs.ignored' lookup _.reset;
+    } III.fvs.post_bowed.preprocessing.GB;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.fvs.post_bowed.preprocessing.GB;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.fvs.post_bowed.preprocessing.GB;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.vowel.post_bowed.MNG.GB {
+        lookupflag IgnoreMarks;
+        sub [@MNG-h @MNG-g] [@fvs2 @fvs4] @MNG-e.fina' lookup MNG.post_bowed;
+        sub [@MNG-h @MNG-g] [@fvs1 @fvs3] @MNG-e.fina' lookup MNG.reset;
+        sub [@MNG-b.init @MNG-p.init @MNG-f.init @MNG-k.init @MNG-k2.init] @fvs [@MNG-oe.fina @MNG-ue.fina]' lookup MNG.marked;
+        sub [@MNG-h @MNG-g] [@fvs1 @fvs3] [@MNG-o.fina @MNG-u.fina @MNG-oe.fina @MNG-ue.fina]' lookup MNG.reset;
+        sub [@MNG-g.init @MNG-g.medi @MNG-h.init @MNG-h.medi] [@fvs2 @fvs4] [@MNG-o.fina @MNG-u.fina]' lookup MNG.reset;
+        sub [@MNG-g.medi @MNG-h.medi] [@fvs2 @fvs4] [@MNG-oe.fina @MNG-ue.fina]' lookup MNG.post_bowed;
+        sub [@MNG-g.init @MNG-h.init] [@fvs2 @fvs4] [@MNG-oe.fina @MNG-ue.fina]' lookup MNG.marked;
+    } III.vowel.post_bowed.MNG.GB;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.vowel.post_bowed.MNG.GB;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.vowel.post_bowed.MNG.GB;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.fvs.post_bowed.postprocessing.GB {
+        lookupflag 0;
+        sub [@MNG-bowedB @MNG-bowedK @MNG-bowedG] @fvs.invalid' lookup _.ignored;
+    } III.fvs.post_bowed.postprocessing.GB;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.fvs.post_bowed.postprocessing.GB;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.fvs.post_bowed.postprocessing.GB;
+} rclt;
+
+lookup _.manual.MNG {
+    lookupflag 0;
+    sub @MNG-a.isol' fvs1.ignored by u1820.A.isol;
+    sub @MNG-a.isol' fvs2.ignored by u1820.Aa.isol;
+    sub @MNG-a.isol' fvs3.ignored by u1820.AA.isol;
+    sub @MNG-a.init' fvs1.ignored by u1820.A.init;
+    sub @MNG-a.init' fvs2.ignored by u1820.AA.init;
+    sub @MNG-a.medi' fvs1.ignored by u1820.AA.medi;
+    sub @MNG-a.fina' fvs1.ignored by u1820.Aa.fina;
+    sub @MNG-a.fina' fvs2.ignored by u1820.A.fina;
+    sub @MNG-e.isol' fvs1.ignored by u1821.Aa.isol;
+    sub @MNG-e.isol' fvs2.ignored by u1821.A.isol;
+    sub @MNG-e.init' fvs1.ignored by u1821.AA.init;
+    sub @MNG-e.fina' fvs1.ignored by u1821.Aa.fina;
+    sub @MNG-e.fina' fvs2.ignored by u1821.A.fina;
+    sub @MNG-i.isol' fvs1.ignored by u1822.I.isol;
+    sub @MNG-i.isol' fvs2.ignored by u1822.Ix.isol;
+    sub @MNG-i.isol' fvs3.ignored by u1822.AI.isol;
+    sub @MNG-i.init' fvs1.ignored by u1822.I.init;
+    sub @MNG-i.init' fvs2.ignored by u1822.AI.init;
+    sub @MNG-i.medi' fvs1.ignored by u1822.AI.medi;
+    sub @MNG-i.medi' fvs2.ignored by u1822.II.medi;
+    sub @MNG-i.medi' fvs3.ignored by u1822.I.medi;
+    sub @MNG-o.medi' fvs1.ignored by u1823.AO.medi;
+    sub @MNG-o.fina' fvs1.ignored by u1823.O.fina;
+    sub @MNG-o.fina' fvs2.ignored by u1823.U.fina;
+    sub @MNG-u.isol' fvs1.ignored by u1824.U.isol;
+    sub @MNG-u.isol' fvs2.ignored by u1824.Ux.isol;
+    sub @MNG-u.isol' fvs3.ignored by u1824.AO.isol;
+    sub @MNG-u.init' fvs1.ignored by u1824.O.init;
+    sub @MNG-u.init' fvs2.ignored by u1824.AO.init;
+    sub @MNG-u.medi' fvs1.ignored by u1824.AO.medi;
+    sub @MNG-u.fina' fvs1.ignored by u1824.O.fina;
+    sub @MNG-u.fina' fvs2.ignored by u1824.U.fina;
+    sub @MNG-oe.isol' fvs1.ignored by u1825.AU.isol;
+    sub @MNG-oe.medi' fvs1.ignored by u1825.OI.medi;
+    sub @MNG-oe.medi' fvs2.ignored by u1825.AOI.medi;
+    sub @MNG-oe.medi' fvs3.ignored by u1825.O.medi;
+    sub @MNG-oe.fina' fvs1.ignored by u1825.Ue.fina;
+    sub @MNG-oe.fina' fvs2.ignored by u1825.O.fina;
+    sub @MNG-oe.fina' fvs3.ignored by u1825.U.fina;
+    sub @MNG-ue.isol' fvs1.ignored by u1826.AU.isol;
+    sub @MNG-ue.isol' fvs2.ignored by u1826.U.isol;
+    sub @MNG-ue.isol' fvs3.ignored by u1826.Ux.isol;
+    sub @MNG-ue.init' fvs1.ignored by u1826.O.init;
+    sub @MNG-ue.init' fvs2.ignored by u1826.AOI.init;
+    sub @MNG-ue.medi' fvs1.ignored by u1826.OI.medi;
+    sub @MNG-ue.medi' fvs2.ignored by u1826.AOI.medi;
+    sub @MNG-ue.medi' fvs3.ignored by u1826.O.medi;
+    sub @MNG-ue.fina' fvs1.ignored by u1826.Ue.fina;
+    sub @MNG-ue.fina' fvs2.ignored by u1826.O.fina;
+    sub @MNG-ue.fina' fvs3.ignored by u1826.U.fina;
+    sub @MNG-n.isol' fvs1.ignored by u1828.A.init._isol;
+    sub @MNG-n.init' fvs1.ignored by u1828.A.init;
+    sub @MNG-n.medi' fvs1.ignored by u1828.N.medi;
+    sub @MNG-n.medi' fvs2.ignored by u1828.A.medi;
+    sub @MNG-n.fina' fvs1.ignored by u1828.N.fina;
+    sub @MNG-n.fina' fvs2.ignored by u1828.A.fina;
+    sub @MNG-b.fina' fvs1.ignored by u182A.B2.fina;
+    sub @MNG-h.isol' fvs1.ignored by u182C.Hx.init._isol;
+    sub @MNG-h.isol' fvs2.ignored by u182C.G.init._isol;
+    sub @MNG-h.isol' fvs4.ignored by u182C.Gx.init._isol;
+    sub @MNG-h.init' fvs1.ignored by u182C.Hx.init;
+    sub @MNG-h.init' fvs2.ignored by u182C.G.init;
+    sub @MNG-h.init' fvs3.ignored by u182C.H.init;
+    sub @MNG-h.init' fvs4.ignored by u182C.Gx.init;
+    sub @MNG-h.medi' fvs1.ignored by u182C.Hx.medi;
+    sub @MNG-h.medi' fvs2.ignored by u182C.G.medi;
+    sub @MNG-h.medi' fvs3.ignored by u182C.H.medi;
+    sub @MNG-h.medi' fvs4.ignored by u182C.Gx.medi;
+    sub @MNG-h.fina' fvs1.ignored by u182C.Hx.fina;
+    sub @MNG-g.isol' fvs1.ignored by u182D.H.init._isol;
+    sub @MNG-g.isol' fvs2.ignored by u182D.G.init._isol;
+    sub @MNG-g.isol' fvs4.ignored by u182D.Gx.init._isol;
+    sub @MNG-g.init' fvs1.ignored by u182D.H.init;
+    sub @MNG-g.init' fvs2.ignored by u182D.G.init;
+    sub @MNG-g.init' fvs3.ignored by u182D.Hx.init;
+    sub @MNG-g.init' fvs4.ignored by u182D.Gx.init;
+    sub @MNG-g.medi' fvs1.ignored by u182D.Hx.medi;
+    sub @MNG-g.medi' fvs2.ignored by u182D.G.medi;
+    sub @MNG-g.medi' fvs3.ignored by u182D.H.medi;
+    sub @MNG-g.medi' fvs4.ignored by u182D.Gx.medi;
+    sub @MNG-g.fina' fvs1.ignored by u182D.H.fina;
+    sub @MNG-g.fina' fvs2.ignored by u182D.G.fina;
+    sub @MNG-g.fina' fvs3.ignored by u182D.Hx.fina;
+    sub @MNG-s.fina' fvs1.ignored by u1830.Sz.fina;
+    sub @MNG-sh.isol' fvs1.ignored by u1831.S.init._isol;
+    sub @MNG-sh.init' fvs1.ignored by u1831.S.init;
+    sub @MNG-sh.init' fvs2.ignored by u1831.Sh.init;
+    sub @MNG-sh.medi' fvs1.ignored by u1831.S.medi;
+    sub @MNG-sh.medi' fvs2.ignored by u1831.Sh.medi;
+    sub @MNG-t.medi' fvs1.ignored by u1832.T.medi;
+    sub @MNG-t.medi' fvs2.ignored by u1832.D.medi;
+    sub @MNG-d.isol' fvs1.ignored by u1833.T.init._isol;
+    sub @MNG-d.init' fvs1.ignored by u1833.D.init;
+    sub @MNG-d.init' fvs2.ignored by u1833.T.init;
+    sub @MNG-d.medi' fvs1.ignored by u1833.D.medi;
+    sub @MNG-d.medi' fvs2.ignored by u1833.Dd.medi;
+    sub @MNG-d.fina' fvs1.ignored by u1833.D.fina;
+    sub @MNG-j.isol' fvs1.ignored by u1835.I.isol;
+    sub @MNG-j.fina' fvs1.ignored by u1835.I.fina;
+    sub @MNG-y.isol' fvs1.ignored by u1836.I.init._isol;
+    sub @MNG-y.init' fvs1.ignored by u1836.I.init;
+    sub @MNG-y.init' fvs2.ignored by u1836.Y.init;
+    sub @MNG-y.medi' fvs1.ignored by u1836.I.medi;
+    sub @MNG-y.medi' fvs2.ignored by u1836.II.medi;
+    sub @MNG-y.medi' fvs3.ignored by u1836.Y.medi;
+    sub @MNG-w.medi' fvs1.ignored by u1838.O.medi;
+    sub @MNG-w.fina' fvs1.ignored by u1838.U.fina;
+} _.manual.MNG;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.fvs.MNG {
+        lookupflag 0;
+        sub @MNG-a.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-a.isol' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-a.isol' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-a.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-a.init' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-a.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-a.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-a.fina' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-e.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-e.isol' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-e.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-e.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-e.fina' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-i.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-i.isol' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-i.isol' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-i.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-i.init' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-i.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-i.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-i.medi' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-o.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-o.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-o.fina' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-u.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-u.isol' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-u.isol' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-u.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-u.init' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-u.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-u.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-u.fina' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-oe.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-oe.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-oe.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-oe.medi' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-oe.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-oe.fina' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-oe.fina' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-ue.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-ue.isol' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-ue.isol' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-ue.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-ue.init' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-ue.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-ue.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-ue.medi' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-ue.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-ue.fina' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-ue.fina' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-n.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-n.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-n.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-n.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-n.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-n.fina' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-b.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-h.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-h.isol' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-h.isol' lookup _.manual.MNG fvs4.ignored' lookup _.valid;
+        sub @MNG-h.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-h.init' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-h.init' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-h.init' lookup _.manual.MNG fvs4.ignored' lookup _.valid;
+        sub @MNG-h.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-h.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-h.medi' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-h.medi' lookup _.manual.MNG fvs4.ignored' lookup _.valid;
+        sub @MNG-h.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-g.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-g.isol' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-g.isol' lookup _.manual.MNG fvs4.ignored' lookup _.valid;
+        sub @MNG-g.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-g.init' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-g.init' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-g.init' lookup _.manual.MNG fvs4.ignored' lookup _.valid;
+        sub @MNG-g.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-g.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-g.medi' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-g.medi' lookup _.manual.MNG fvs4.ignored' lookup _.valid;
+        sub @MNG-g.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-g.fina' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-g.fina' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-s.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-sh.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-sh.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-sh.init' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-sh.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-sh.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-t.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-t.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-d.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-d.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-d.init' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-d.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-d.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-d.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-j.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-j.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-y.isol' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-y.init' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-y.init' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-y.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-y.medi' lookup _.manual.MNG fvs2.ignored' lookup _.valid;
+        sub @MNG-y.medi' lookup _.manual.MNG fvs3.ignored' lookup _.valid;
+        sub @MNG-w.medi' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+        sub @MNG-w.fina' lookup _.manual.MNG fvs1.ignored' lookup _.valid;
+    } III.fvs.MNG;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.fvs.MNG;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.fvs.MNG;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup III.controls.postprocessing {
+        lookupflag 0;
+        sub [nirugu.ignored @fvs.ignored]' lookup _.reset;
+    } III.controls.postprocessing;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup III.controls.postprocessing;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup III.controls.postprocessing;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup IIb.ligature {
+        lookupflag 0;
+        sub u182A.B.init u1820.A.medi by u182A_u1820.BA.init;
+        sub u182A.B.init u1821.A.medi by u182A_u1821.BA.init;
+        sub u182A.B.medi u1820.A.medi by u182A_u1820.BA.medi;
+        sub u182A.B.medi u1821.A.medi by u182A_u1821.BA.medi;
+        sub u182A.B.init u1820.Aa.fina by u182A_u1820.BAa.isol;
+        sub u182A.B.init u1821.Aa.fina by u182A_u1821.BAa.isol;
+        sub u182A.B.medi u1820.Aa.fina by u182A_u1820.BAa.fina;
+        sub u182A.B.medi u1821.Aa.fina by u182A_u1821.BAa.fina;
+        sub u182A.B.init u1822.I.fina by u182A_u1822.BI.isol;
+        sub u182A.B.init u1822.I.medi by u182A_u1822.BI.init;
+        sub u182A.B.medi u1822.I.medi by u182A_u1822.BI.medi;
+        sub u182A.B.medi u1822.I.fina by u182A_u1822.BI.fina;
+        sub u182A.B.init u1823.O.fina by u182A_u1823.BO.isol;
+        sub u182A.B.init u1824.O.fina by u182A_u1824.BO.isol;
+        sub u182A.B.init u1825.O.fina by u182A_u1825.BO.isol;
+        sub u182A.B.init u1826.O.fina by u182A_u1826.BO.isol;
+        sub u182A.B.init u1823.O.medi by u182A_u1823.BO.init;
+        sub u182A.B.init u1824.O.medi by u182A_u1824.BO.init;
+        sub u182A.B.init u1825.O.medi by u182A_u1825.BO.init;
+        sub u182A.B.init u1826.O.medi by u182A_u1826.BO.init;
+        sub u182A.B.medi u1823.O.medi by u182A_u1823.BO.medi;
+        sub u182A.B.medi u1824.O.medi by u182A_u1824.BO.medi;
+        sub u182A.B.medi u1825.O.medi by u182A_u1825.BO.medi;
+        sub u182A.B.medi u1826.O.medi by u182A_u1826.BO.medi;
+        sub u182A.B.medi u1823.O.fina by u182A_u1823.BO.fina;
+        sub u182A.B.medi u1824.O.fina by u182A_u1824.BO.fina;
+        sub u182A.B.medi u1825.O.fina by u182A_u1825.BO.fina;
+        sub u182A.B.medi u1826.O.fina by u182A_u1826.BO.fina;
+        sub u182A.B.init u1825.OI.medi by u182A_u1825.BOI.init;
+        sub u182A.B.init u1826.OI.medi by u182A_u1826.BOI.init;
+        sub u182A.B.medi u1825.OI.medi by u182A_u1825.BOI.medi;
+        sub u182A.B.medi u1826.OI.medi by u182A_u1826.BOI.medi;
+        sub u182A.B.init u1825.Ue.fina by u182A_u1825.BUe.isol;
+        sub u182A.B.init u1826.Ue.fina by u182A_u1826.BUe.isol;
+        sub u182A.B.medi u1825.Ue.fina by u182A_u1825.BUe.fina;
+        sub u182A.B.medi u1826.Ue.fina by u182A_u1826.BUe.fina;
+        sub u182A.B.init u1827.W.fina by u182A_u1827.BW.isol;
+        sub u182A.B.init u1827.W.medi by u182A_u1827.BW.init;
+        sub u182A.B.medi u1827.W.medi by u182A_u1827.BW.medi;
+        sub u182A.B.medi u1827.W.fina by u182A_u1827.BW.fina;
+        sub u1839.F.init u1820.A.medi by u1839_u1820.FA.init;
+        sub u1839.F.init u1821.A.medi by u1839_u1821.FA.init;
+        sub u1839.F.medi u1820.A.medi by u1839_u1820.FA.medi;
+        sub u1839.F.medi u1821.A.medi by u1839_u1821.FA.medi;
+        sub u1839.F.init u1820.Aa.fina by u1839_u1820.FAa.isol;
+        sub u1839.F.init u1821.Aa.fina by u1839_u1821.FAa.isol;
+        sub u1839.F.medi u1820.Aa.fina by u1839_u1820.FAa.fina;
+        sub u1839.F.medi u1821.Aa.fina by u1839_u1821.FAa.fina;
+        sub u1839.F.init u1822.I.fina by u1839_u1822.FI.isol;
+        sub u1839.F.init u1822.I.medi by u1839_u1822.FI.init;
+        sub u1839.F.medi u1822.I.medi by u1839_u1822.FI.medi;
+        sub u1839.F.medi u1822.I.fina by u1839_u1822.FI.fina;
+        sub u1839.F.init u1823.O.fina by u1839_u1823.FO.isol;
+        sub u1839.F.init u1824.O.fina by u1839_u1824.FO.isol;
+        sub u1839.F.init u1825.O.fina by u1839_u1825.FO.isol;
+        sub u1839.F.init u1826.O.fina by u1839_u1826.FO.isol;
+        sub u1839.F.init u1823.O.medi by u1839_u1823.FO.init;
+        sub u1839.F.init u1824.O.medi by u1839_u1824.FO.init;
+        sub u1839.F.init u1825.O.medi by u1839_u1825.FO.init;
+        sub u1839.F.init u1826.O.medi by u1839_u1826.FO.init;
+        sub u1839.F.medi u1823.O.medi by u1839_u1823.FO.medi;
+        sub u1839.F.medi u1824.O.medi by u1839_u1824.FO.medi;
+        sub u1839.F.medi u1825.O.medi by u1839_u1825.FO.medi;
+        sub u1839.F.medi u1826.O.medi by u1839_u1826.FO.medi;
+        sub u1839.F.medi u1823.O.fina by u1839_u1823.FO.fina;
+        sub u1839.F.medi u1824.O.fina by u1839_u1824.FO.fina;
+        sub u1839.F.medi u1825.O.fina by u1839_u1825.FO.fina;
+        sub u1839.F.medi u1826.O.fina by u1839_u1826.FO.fina;
+        sub u1839.F.init u1825.OI.medi by u1839_u1825.FOI.init;
+        sub u1839.F.init u1826.OI.medi by u1839_u1826.FOI.init;
+        sub u1839.F.medi u1825.OI.medi by u1839_u1825.FOI.medi;
+        sub u1839.F.medi u1826.OI.medi by u1839_u1826.FOI.medi;
+        sub u1839.F.init u1825.Ue.fina by u1839_u1825.FUe.isol;
+        sub u1839.F.init u1826.Ue.fina by u1839_u1826.FUe.isol;
+        sub u1839.F.medi u1825.Ue.fina by u1839_u1825.FUe.fina;
+        sub u1839.F.medi u1826.Ue.fina by u1839_u1826.FUe.fina;
+        sub u1839.F.init u1827.W.fina by u1839_u1827.FW.isol;
+        sub u1839.F.init u1827.W.medi by u1839_u1827.FW.init;
+        sub u1839.F.medi u1827.W.medi by u1839_u1827.FW.medi;
+        sub u1839.F.medi u1827.W.fina by u1839_u1827.FW.fina;
+        sub u182C.G.init u1820.A.medi by u182C_u1820.GA.init;
+        sub u182C.G.init u1821.A.medi by u182C_u1821.GA.init;
+        sub u182D.G.init u1820.A.medi by u182D_u1820.GA.init;
+        sub u182D.G.init u1821.A.medi by u182D_u1821.GA.init;
+        sub u182C.G.medi u1820.A.medi by u182C_u1820.GA.medi;
+        sub u182C.G.medi u1821.A.medi by u182C_u1821.GA.medi;
+        sub u182D.G.medi u1820.A.medi by u182D_u1820.GA.medi;
+        sub u182D.G.medi u1821.A.medi by u182D_u1821.GA.medi;
+        sub u182C.G.init u1820.Aa.fina by u182C_u1820.GAa.isol;
+        sub u182C.G.init u1821.Aa.fina by u182C_u1821.GAa.isol;
+        sub u182D.G.init u1820.Aa.fina by u182D_u1820.GAa.isol;
+        sub u182D.G.init u1821.Aa.fina by u182D_u1821.GAa.isol;
+        sub u182C.G.medi u1820.Aa.fina by u182C_u1820.GAa.fina;
+        sub u182C.G.medi u1821.Aa.fina by u182C_u1821.GAa.fina;
+        sub u182D.G.medi u1820.Aa.fina by u182D_u1820.GAa.fina;
+        sub u182D.G.medi u1821.Aa.fina by u182D_u1821.GAa.fina;
+        sub u182C.G.init u1822.I.fina by u182C_u1822.GI.isol;
+        sub u182D.G.init u1822.I.fina by u182D_u1822.GI.isol;
+        sub u182C.G.init u1822.I.medi by u182C_u1822.GI.init;
+        sub u182D.G.init u1822.I.medi by u182D_u1822.GI.init;
+        sub u182C.G.medi u1822.I.medi by u182C_u1822.GI.medi;
+        sub u182D.G.medi u1822.I.medi by u182D_u1822.GI.medi;
+        sub u182C.G.medi u1822.I.fina by u182C_u1822.GI.fina;
+        sub u182D.G.medi u1822.I.fina by u182D_u1822.GI.fina;
+        sub u182C.G.init u1823.O.fina by u182C_u1823.GO.isol;
+        sub u182C.G.init u1824.O.fina by u182C_u1824.GO.isol;
+        sub u182C.G.init u1825.O.fina by u182C_u1825.GO.isol;
+        sub u182C.G.init u1826.O.fina by u182C_u1826.GO.isol;
+        sub u182D.G.init u1823.O.fina by u182D_u1823.GO.isol;
+        sub u182D.G.init u1824.O.fina by u182D_u1824.GO.isol;
+        sub u182D.G.init u1825.O.fina by u182D_u1825.GO.isol;
+        sub u182D.G.init u1826.O.fina by u182D_u1826.GO.isol;
+        sub u182C.G.init u1823.O.medi by u182C_u1823.GO.init;
+        sub u182C.G.init u1824.O.medi by u182C_u1824.GO.init;
+        sub u182C.G.init u1825.O.medi by u182C_u1825.GO.init;
+        sub u182C.G.init u1826.O.medi by u182C_u1826.GO.init;
+        sub u182D.G.init u1823.O.medi by u182D_u1823.GO.init;
+        sub u182D.G.init u1824.O.medi by u182D_u1824.GO.init;
+        sub u182D.G.init u1825.O.medi by u182D_u1825.GO.init;
+        sub u182D.G.init u1826.O.medi by u182D_u1826.GO.init;
+        sub u182C.G.medi u1823.O.medi by u182C_u1823.GO.medi;
+        sub u182C.G.medi u1824.O.medi by u182C_u1824.GO.medi;
+        sub u182C.G.medi u1825.O.medi by u182C_u1825.GO.medi;
+        sub u182C.G.medi u1826.O.medi by u182C_u1826.GO.medi;
+        sub u182D.G.medi u1823.O.medi by u182D_u1823.GO.medi;
+        sub u182D.G.medi u1824.O.medi by u182D_u1824.GO.medi;
+        sub u182D.G.medi u1825.O.medi by u182D_u1825.GO.medi;
+        sub u182D.G.medi u1826.O.medi by u182D_u1826.GO.medi;
+        sub u182C.G.medi u1823.O.fina by u182C_u1823.GO.fina;
+        sub u182C.G.medi u1824.O.fina by u182C_u1824.GO.fina;
+        sub u182C.G.medi u1825.O.fina by u182C_u1825.GO.fina;
+        sub u182C.G.medi u1826.O.fina by u182C_u1826.GO.fina;
+        sub u182D.G.medi u1823.O.fina by u182D_u1823.GO.fina;
+        sub u182D.G.medi u1824.O.fina by u182D_u1824.GO.fina;
+        sub u182D.G.medi u1825.O.fina by u182D_u1825.GO.fina;
+        sub u182D.G.medi u1826.O.fina by u182D_u1826.GO.fina;
+        sub u182C.G.init u1825.OI.medi by u182C_u1825.GOI.init;
+        sub u182C.G.init u1826.OI.medi by u182C_u1826.GOI.init;
+        sub u182D.G.init u1825.OI.medi by u182D_u1825.GOI.init;
+        sub u182D.G.init u1826.OI.medi by u182D_u1826.GOI.init;
+        sub u182C.G.medi u1825.OI.medi by u182C_u1825.GOI.medi;
+        sub u182C.G.medi u1826.OI.medi by u182C_u1826.GOI.medi;
+        sub u182D.G.medi u1825.OI.medi by u182D_u1825.GOI.medi;
+        sub u182D.G.medi u1826.OI.medi by u182D_u1826.GOI.medi;
+        sub u182C.G.init u1825.Ue.fina by u182C_u1825.GUe.isol;
+        sub u182C.G.init u1826.Ue.fina by u182C_u1826.GUe.isol;
+        sub u182D.G.init u1825.Ue.fina by u182D_u1825.GUe.isol;
+        sub u182D.G.init u1826.Ue.fina by u182D_u1826.GUe.isol;
+        sub u182C.G.medi u1825.Ue.fina by u182C_u1825.GUe.fina;
+        sub u182C.G.medi u1826.Ue.fina by u182C_u1826.GUe.fina;
+        sub u182D.G.medi u1825.Ue.fina by u182D_u1825.GUe.fina;
+        sub u182D.G.medi u1826.Ue.fina by u182D_u1826.GUe.fina;
+        sub u182C.G.init u1827.W.fina by u182C_u1827.GW.isol;
+        sub u182D.G.init u1827.W.fina by u182D_u1827.GW.isol;
+        sub u182C.G.init u1827.W.medi by u182C_u1827.GW.init;
+        sub u182D.G.init u1827.W.medi by u182D_u1827.GW.init;
+        sub u182C.G.medi u1827.W.medi by u182C_u1827.GW.medi;
+        sub u182D.G.medi u1827.W.medi by u182D_u1827.GW.medi;
+        sub u182C.G.medi u1827.W.fina by u182C_u1827.GW.fina;
+        sub u182D.G.medi u1827.W.fina by u182D_u1827.GW.fina;
+        sub u182C.Gx.init u1820.A.medi by u182C_u1820.GxA.init;
+        sub u182C.Gx.init u1821.A.medi by u182C_u1821.GxA.init;
+        sub u182D.Gx.init u1820.A.medi by u182D_u1820.GxA.init;
+        sub u182D.Gx.init u1821.A.medi by u182D_u1821.GxA.init;
+        sub u182C.Gx.medi u1820.A.medi by u182C_u1820.GxA.medi;
+        sub u182C.Gx.medi u1821.A.medi by u182C_u1821.GxA.medi;
+        sub u182D.Gx.medi u1820.A.medi by u182D_u1820.GxA.medi;
+        sub u182D.Gx.medi u1821.A.medi by u182D_u1821.GxA.medi;
+        sub u182C.Gx.init u1820.Aa.fina by u182C_u1820.GxAa.isol;
+        sub u182C.Gx.init u1821.Aa.fina by u182C_u1821.GxAa.isol;
+        sub u182D.Gx.init u1820.Aa.fina by u182D_u1820.GxAa.isol;
+        sub u182D.Gx.init u1821.Aa.fina by u182D_u1821.GxAa.isol;
+        sub u182C.Gx.medi u1820.Aa.fina by u182C_u1820.GxAa.fina;
+        sub u182C.Gx.medi u1821.Aa.fina by u182C_u1821.GxAa.fina;
+        sub u182D.Gx.medi u1820.Aa.fina by u182D_u1820.GxAa.fina;
+        sub u182D.Gx.medi u1821.Aa.fina by u182D_u1821.GxAa.fina;
+        sub u182C.Gx.init u1822.I.fina by u182C_u1822.GxI.isol;
+        sub u182D.Gx.init u1822.I.fina by u182D_u1822.GxI.isol;
+        sub u182C.Gx.init u1822.I.medi by u182C_u1822.GxI.init;
+        sub u182D.Gx.init u1822.I.medi by u182D_u1822.GxI.init;
+        sub u182C.Gx.medi u1822.I.medi by u182C_u1822.GxI.medi;
+        sub u182D.Gx.medi u1822.I.medi by u182D_u1822.GxI.medi;
+        sub u182C.Gx.medi u1822.I.fina by u182C_u1822.GxI.fina;
+        sub u182D.Gx.medi u1822.I.fina by u182D_u1822.GxI.fina;
+        sub u182C.Gx.init u1823.O.fina by u182C_u1823.GxO.isol;
+        sub u182C.Gx.init u1824.O.fina by u182C_u1824.GxO.isol;
+        sub u182C.Gx.init u1825.O.fina by u182C_u1825.GxO.isol;
+        sub u182C.Gx.init u1826.O.fina by u182C_u1826.GxO.isol;
+        sub u182D.Gx.init u1823.O.fina by u182D_u1823.GxO.isol;
+        sub u182D.Gx.init u1824.O.fina by u182D_u1824.GxO.isol;
+        sub u182D.Gx.init u1825.O.fina by u182D_u1825.GxO.isol;
+        sub u182D.Gx.init u1826.O.fina by u182D_u1826.GxO.isol;
+        sub u182C.Gx.init u1823.O.medi by u182C_u1823.GxO.init;
+        sub u182C.Gx.init u1824.O.medi by u182C_u1824.GxO.init;
+        sub u182C.Gx.init u1825.O.medi by u182C_u1825.GxO.init;
+        sub u182C.Gx.init u1826.O.medi by u182C_u1826.GxO.init;
+        sub u182D.Gx.init u1823.O.medi by u182D_u1823.GxO.init;
+        sub u182D.Gx.init u1824.O.medi by u182D_u1824.GxO.init;
+        sub u182D.Gx.init u1825.O.medi by u182D_u1825.GxO.init;
+        sub u182D.Gx.init u1826.O.medi by u182D_u1826.GxO.init;
+        sub u182C.Gx.medi u1823.O.medi by u182C_u1823.GxO.medi;
+        sub u182C.Gx.medi u1824.O.medi by u182C_u1824.GxO.medi;
+        sub u182C.Gx.medi u1825.O.medi by u182C_u1825.GxO.medi;
+        sub u182C.Gx.medi u1826.O.medi by u182C_u1826.GxO.medi;
+        sub u182D.Gx.medi u1823.O.medi by u182D_u1823.GxO.medi;
+        sub u182D.Gx.medi u1824.O.medi by u182D_u1824.GxO.medi;
+        sub u182D.Gx.medi u1825.O.medi by u182D_u1825.GxO.medi;
+        sub u182D.Gx.medi u1826.O.medi by u182D_u1826.GxO.medi;
+        sub u182C.Gx.medi u1823.O.fina by u182C_u1823.GxO.fina;
+        sub u182C.Gx.medi u1824.O.fina by u182C_u1824.GxO.fina;
+        sub u182C.Gx.medi u1825.O.fina by u182C_u1825.GxO.fina;
+        sub u182C.Gx.medi u1826.O.fina by u182C_u1826.GxO.fina;
+        sub u182D.Gx.medi u1823.O.fina by u182D_u1823.GxO.fina;
+        sub u182D.Gx.medi u1824.O.fina by u182D_u1824.GxO.fina;
+        sub u182D.Gx.medi u1825.O.fina by u182D_u1825.GxO.fina;
+        sub u182D.Gx.medi u1826.O.fina by u182D_u1826.GxO.fina;
+        sub u182C.Gx.init u1825.OI.medi by u182C_u1825.GxOI.init;
+        sub u182C.Gx.init u1826.OI.medi by u182C_u1826.GxOI.init;
+        sub u182D.Gx.init u1825.OI.medi by u182D_u1825.GxOI.init;
+        sub u182D.Gx.init u1826.OI.medi by u182D_u1826.GxOI.init;
+        sub u182C.Gx.medi u1825.OI.medi by u182C_u1825.GxOI.medi;
+        sub u182C.Gx.medi u1826.OI.medi by u182C_u1826.GxOI.medi;
+        sub u182D.Gx.medi u1825.OI.medi by u182D_u1825.GxOI.medi;
+        sub u182D.Gx.medi u1826.OI.medi by u182D_u1826.GxOI.medi;
+        sub u182C.Gx.init u1825.Ue.fina by u182C_u1825.GxUe.isol;
+        sub u182C.Gx.init u1826.Ue.fina by u182C_u1826.GxUe.isol;
+        sub u182D.Gx.init u1825.Ue.fina by u182D_u1825.GxUe.isol;
+        sub u182D.Gx.init u1826.Ue.fina by u182D_u1826.GxUe.isol;
+        sub u182C.Gx.medi u1825.Ue.fina by u182C_u1825.GxUe.fina;
+        sub u182C.Gx.medi u1826.Ue.fina by u182C_u1826.GxUe.fina;
+        sub u182D.Gx.medi u1825.Ue.fina by u182D_u1825.GxUe.fina;
+        sub u182D.Gx.medi u1826.Ue.fina by u182D_u1826.GxUe.fina;
+        sub u182C.Gx.init u1827.W.fina by u182C_u1827.GxW.isol;
+        sub u182D.Gx.init u1827.W.fina by u182D_u1827.GxW.isol;
+        sub u182C.Gx.init u1827.W.medi by u182C_u1827.GxW.init;
+        sub u182D.Gx.init u1827.W.medi by u182D_u1827.GxW.init;
+        sub u182C.Gx.medi u1827.W.medi by u182C_u1827.GxW.medi;
+        sub u182D.Gx.medi u1827.W.medi by u182D_u1827.GxW.medi;
+        sub u182C.Gx.medi u1827.W.fina by u182C_u1827.GxW.fina;
+        sub u182D.Gx.medi u1827.W.fina by u182D_u1827.GxW.fina;
+        sub u183A.K2.init u1820.A.medi by u183A_u1820.K2A.init;
+        sub u183A.K2.init u1821.A.medi by u183A_u1821.K2A.init;
+        sub u183A.K2.medi u1820.A.medi by u183A_u1820.K2A.medi;
+        sub u183A.K2.medi u1821.A.medi by u183A_u1821.K2A.medi;
+        sub u183A.K2.init u1820.Aa.fina by u183A_u1820.K2Aa.isol;
+        sub u183A.K2.init u1821.Aa.fina by u183A_u1821.K2Aa.isol;
+        sub u183A.K2.medi u1820.Aa.fina by u183A_u1820.K2Aa.fina;
+        sub u183A.K2.medi u1821.Aa.fina by u183A_u1821.K2Aa.fina;
+        sub u183A.K2.init u1822.I.fina by u183A_u1822.K2I.isol;
+        sub u183A.K2.init u1822.I.medi by u183A_u1822.K2I.init;
+        sub u183A.K2.medi u1822.I.medi by u183A_u1822.K2I.medi;
+        sub u183A.K2.medi u1822.I.fina by u183A_u1822.K2I.fina;
+        sub u183A.K2.init u1823.O.fina by u183A_u1823.K2O.isol;
+        sub u183A.K2.init u1824.O.fina by u183A_u1824.K2O.isol;
+        sub u183A.K2.init u1825.O.fina by u183A_u1825.K2O.isol;
+        sub u183A.K2.init u1826.O.fina by u183A_u1826.K2O.isol;
+        sub u183A.K2.init u1823.O.medi by u183A_u1823.K2O.init;
+        sub u183A.K2.init u1824.O.medi by u183A_u1824.K2O.init;
+        sub u183A.K2.init u1825.O.medi by u183A_u1825.K2O.init;
+        sub u183A.K2.init u1826.O.medi by u183A_u1826.K2O.init;
+        sub u183A.K2.medi u1823.O.medi by u183A_u1823.K2O.medi;
+        sub u183A.K2.medi u1824.O.medi by u183A_u1824.K2O.medi;
+        sub u183A.K2.medi u1825.O.medi by u183A_u1825.K2O.medi;
+        sub u183A.K2.medi u1826.O.medi by u183A_u1826.K2O.medi;
+        sub u183A.K2.medi u1823.O.fina by u183A_u1823.K2O.fina;
+        sub u183A.K2.medi u1824.O.fina by u183A_u1824.K2O.fina;
+        sub u183A.K2.medi u1825.O.fina by u183A_u1825.K2O.fina;
+        sub u183A.K2.medi u1826.O.fina by u183A_u1826.K2O.fina;
+        sub u183A.K2.init u1825.OI.medi by u183A_u1825.K2OI.init;
+        sub u183A.K2.init u1826.OI.medi by u183A_u1826.K2OI.init;
+        sub u183A.K2.medi u1825.OI.medi by u183A_u1825.K2OI.medi;
+        sub u183A.K2.medi u1826.OI.medi by u183A_u1826.K2OI.medi;
+        sub u183A.K2.init u1825.Ue.fina by u183A_u1825.K2Ue.isol;
+        sub u183A.K2.init u1826.Ue.fina by u183A_u1826.K2Ue.isol;
+        sub u183A.K2.medi u1825.Ue.fina by u183A_u1825.K2Ue.fina;
+        sub u183A.K2.medi u1826.Ue.fina by u183A_u1826.K2Ue.fina;
+        sub u183A.K2.init u1827.W.fina by u183A_u1827.K2W.isol;
+        sub u183A.K2.init u1827.W.medi by u183A_u1827.K2W.init;
+        sub u183A.K2.medi u1827.W.medi by u183A_u1827.K2W.medi;
+        sub u183A.K2.medi u1827.W.fina by u183A_u1827.K2W.fina;
+        sub u183B.K.init u1820.A.medi by u183B_u1820.KA.init;
+        sub u183B.K.init u1821.A.medi by u183B_u1821.KA.init;
+        sub u183B.K.medi u1820.A.medi by u183B_u1820.KA.medi;
+        sub u183B.K.medi u1821.A.medi by u183B_u1821.KA.medi;
+        sub u183B.K.init u1820.Aa.fina by u183B_u1820.KAa.isol;
+        sub u183B.K.init u1821.Aa.fina by u183B_u1821.KAa.isol;
+        sub u183B.K.medi u1820.Aa.fina by u183B_u1820.KAa.fina;
+        sub u183B.K.medi u1821.Aa.fina by u183B_u1821.KAa.fina;
+        sub u183B.K.init u1822.I.fina by u183B_u1822.KI.isol;
+        sub u183B.K.init u1822.I.medi by u183B_u1822.KI.init;
+        sub u183B.K.medi u1822.I.medi by u183B_u1822.KI.medi;
+        sub u183B.K.medi u1822.I.fina by u183B_u1822.KI.fina;
+        sub u183B.K.init u1823.O.fina by u183B_u1823.KO.isol;
+        sub u183B.K.init u1824.O.fina by u183B_u1824.KO.isol;
+        sub u183B.K.init u1825.O.fina by u183B_u1825.KO.isol;
+        sub u183B.K.init u1826.O.fina by u183B_u1826.KO.isol;
+        sub u183B.K.init u1823.O.medi by u183B_u1823.KO.init;
+        sub u183B.K.init u1824.O.medi by u183B_u1824.KO.init;
+        sub u183B.K.init u1825.O.medi by u183B_u1825.KO.init;
+        sub u183B.K.init u1826.O.medi by u183B_u1826.KO.init;
+        sub u183B.K.medi u1823.O.medi by u183B_u1823.KO.medi;
+        sub u183B.K.medi u1824.O.medi by u183B_u1824.KO.medi;
+        sub u183B.K.medi u1825.O.medi by u183B_u1825.KO.medi;
+        sub u183B.K.medi u1826.O.medi by u183B_u1826.KO.medi;
+        sub u183B.K.medi u1823.O.fina by u183B_u1823.KO.fina;
+        sub u183B.K.medi u1824.O.fina by u183B_u1824.KO.fina;
+        sub u183B.K.medi u1825.O.fina by u183B_u1825.KO.fina;
+        sub u183B.K.medi u1826.O.fina by u183B_u1826.KO.fina;
+        sub u183B.K.init u1825.OI.medi by u183B_u1825.KOI.init;
+        sub u183B.K.init u1826.OI.medi by u183B_u1826.KOI.init;
+        sub u183B.K.medi u1825.OI.medi by u183B_u1825.KOI.medi;
+        sub u183B.K.medi u1826.OI.medi by u183B_u1826.KOI.medi;
+        sub u183B.K.init u1825.Ue.fina by u183B_u1825.KUe.isol;
+        sub u183B.K.init u1826.Ue.fina by u183B_u1826.KUe.isol;
+        sub u183B.K.medi u1825.Ue.fina by u183B_u1825.KUe.fina;
+        sub u183B.K.medi u1826.Ue.fina by u183B_u1826.KUe.fina;
+        sub u183B.K.init u1827.W.fina by u183B_u1827.KW.isol;
+        sub u183B.K.init u1827.W.medi by u183B_u1827.KW.init;
+        sub u183B.K.medi u1827.W.medi by u183B_u1827.KW.medi;
+        sub u183B.K.medi u1827.W.fina by u183B_u1827.KW.fina;
+        sub u182B.P.init u1820.A.medi by u182B_u1820.PA.init;
+        sub u182B.P.init u1821.A.medi by u182B_u1821.PA.init;
+        sub u182B.P.medi u1820.A.medi by u182B_u1820.PA.medi;
+        sub u182B.P.medi u1821.A.medi by u182B_u1821.PA.medi;
+        sub u182B.P.init u1820.Aa.fina by u182B_u1820.PAa.isol;
+        sub u182B.P.init u1821.Aa.fina by u182B_u1821.PAa.isol;
+        sub u182B.P.medi u1820.Aa.fina by u182B_u1820.PAa.fina;
+        sub u182B.P.medi u1821.Aa.fina by u182B_u1821.PAa.fina;
+        sub u182B.P.init u1822.I.fina by u182B_u1822.PI.isol;
+        sub u182B.P.init u1822.I.medi by u182B_u1822.PI.init;
+        sub u182B.P.medi u1822.I.medi by u182B_u1822.PI.medi;
+        sub u182B.P.medi u1822.I.fina by u182B_u1822.PI.fina;
+        sub u182B.P.init u1823.O.fina by u182B_u1823.PO.isol;
+        sub u182B.P.init u1824.O.fina by u182B_u1824.PO.isol;
+        sub u182B.P.init u1825.O.fina by u182B_u1825.PO.isol;
+        sub u182B.P.init u1826.O.fina by u182B_u1826.PO.isol;
+        sub u182B.P.init u1823.O.medi by u182B_u1823.PO.init;
+        sub u182B.P.init u1824.O.medi by u182B_u1824.PO.init;
+        sub u182B.P.init u1825.O.medi by u182B_u1825.PO.init;
+        sub u182B.P.init u1826.O.medi by u182B_u1826.PO.init;
+        sub u182B.P.medi u1823.O.medi by u182B_u1823.PO.medi;
+        sub u182B.P.medi u1824.O.medi by u182B_u1824.PO.medi;
+        sub u182B.P.medi u1825.O.medi by u182B_u1825.PO.medi;
+        sub u182B.P.medi u1826.O.medi by u182B_u1826.PO.medi;
+        sub u182B.P.medi u1823.O.fina by u182B_u1823.PO.fina;
+        sub u182B.P.medi u1824.O.fina by u182B_u1824.PO.fina;
+        sub u182B.P.medi u1825.O.fina by u182B_u1825.PO.fina;
+        sub u182B.P.medi u1826.O.fina by u182B_u1826.PO.fina;
+        sub u182B.P.init u1825.OI.medi by u182B_u1825.POI.init;
+        sub u182B.P.init u1826.OI.medi by u182B_u1826.POI.init;
+        sub u182B.P.medi u1825.OI.medi by u182B_u1825.POI.medi;
+        sub u182B.P.medi u1826.OI.medi by u182B_u1826.POI.medi;
+        sub u182B.P.init u1825.Ue.fina by u182B_u1825.PUe.isol;
+        sub u182B.P.init u1826.Ue.fina by u182B_u1826.PUe.isol;
+        sub u182B.P.medi u1825.Ue.fina by u182B_u1825.PUe.fina;
+        sub u182B.P.medi u1826.Ue.fina by u182B_u1826.PUe.fina;
+        sub u182B.P.init u1827.W.fina by u182B_u1827.PW.isol;
+        sub u182B.P.init u1827.W.medi by u182B_u1827.PW.init;
+        sub u182B.P.medi u1827.W.medi by u182B_u1827.PW.medi;
+        sub u182B.P.medi u1827.W.fina by u182B_u1827.PW.fina;
+        sub u1829.AG.medi u182F.L.medi by u1829_u182F.AGL.medi;
+        sub u1829.AG.medi u182E.M.medi by u1829_u182E.AGM.medi;
+        sub u182A.B.init u182F.L.medi by u182A_u182F.BL.init;
+        sub u182A.B.medi u182F.L.medi by u182A_u182F.BL.medi;
+        sub u182A.B.init u182E.M.medi by u182A_u182E.BM.init;
+        sub u182A.B.medi u182E.M.medi by u182A_u182E.BM.medi;
+        sub u182C.G.init u182F.L.medi by u182C_u182F.GL.init;
+        sub u182D.G.init u182F.L.medi by u182D_u182F.GL.init;
+        sub u182C.G.medi u182F.L.medi by u182C_u182F.GL.medi;
+        sub u182D.G.medi u182F.L.medi by u182D_u182F.GL.medi;
+        sub u182C.G.init u182E.M.medi by u182C_u182E.GM.init;
+        sub u182D.G.init u182E.M.medi by u182D_u182E.GM.init;
+        sub u182C.G.medi u182E.M.medi by u182C_u182E.GM.medi;
+        sub u182D.G.medi u182E.M.medi by u182D_u182E.GM.medi;
+        sub u182F.L.medi u182F.L.medi by u182F_u182F.LL.medi;
+        sub u182E.M.medi u182F.L.medi by u182E_u182F.ML.medi;
+        sub u182E.M.medi u182E.M.medi by u182E_u182E.MM.medi;
+    } IIb.ligature;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup IIb.ligature;
+} rclt;
+
+feature rclt {
+    script mong;
+    language MNG;
+    lookup IIb.ligature;
+} rclt;
