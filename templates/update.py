@@ -20,8 +20,9 @@ def main() -> None:
         glyphs=[*font.keys()],
         locales=["MNG"],
     )
-    composer.languageSystems["DFLT"] = {"dflt"}
+    composer.languageSystems["mong"] = {"dflt"}
     spec = composer.compose()
+    composer.languageSystems["DFLT"] = {"dflt"}
     fea = composer.asFeatureFile().asFea()
 
     applySpecToFont(  # Padding disturbs automatic alignment in Glyphs
