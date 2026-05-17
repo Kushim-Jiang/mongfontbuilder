@@ -57,10 +57,12 @@ def main() -> None:
     i.openTypeHeadFlags = None
     i.openTypeHeadLowestRecPPEM = None
 
+    masterID = "E14AE757-7134-4DB9-897C-AD248BACE90D"  # Stable between updates
     gsFont: GSFont = GlyphsBuilder(ufos=[font]).font
     gsFont.axes.clear()
     master: GSFontMaster
     [master] = gsFont.masters
+    master.id = masterID
     master.axes.clear()
     prefixes: list[GSFeaturePrefix] = gsFont.featurePrefixes
     prefixes.append(GSFeaturePrefix("mongfontbuilder", "include(hudum.fea);"))
@@ -68,15 +70,20 @@ def main() -> None:
     gsFont.format_version = 3
     glyph: GSGlyph
     for glyph in gsFont.glyphs:
-        if glyph.name in ["mvs.narrow", "mvs.wide", "fvs4"]:
+        assert glyph.name
+        name: str = glyph.name
+        if name.startswith("_"):
+            glyph.export = False
+        if name in ["mvs.narrow", "mvs.wide", "fvs4"]:
             glyph.script = "mongolian"
-        if glyph.name in ["mvs.narrow", "mvs.wide"]:
+        if name in ["mvs.narrow", "mvs.wide"]:
             glyph.category, glyph.subCategory = "Separator", "Space"
-        if glyph.name in ["mvs", "fvs1", "fvs2", "fvs3", "fvs4", "zwnj", "zwj", "nnbsp"]:
+        if name in ["mvs", "fvs1", "fvs2", "fvs3", "fvs4", "zwnj", "zwj", "nnbsp"]:
             glyph.category, glyph.subCategory = "Separator", "Other"
         glyph.note = None
         layer: GSLayer
         [layer] = glyph.layers
+        layer.layerId = layer.associatedMasterId = masterID
         if not len(layer.paths):
             if layer.components:
                 glyph.color = 10  # Light gray

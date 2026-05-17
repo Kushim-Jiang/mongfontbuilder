@@ -316,6 +316,7 @@ width = 168;
 unicode = 6154;
 },
 {
+export = 0;
 glyphname = _A.isol;
 layers = (
 {
@@ -404,6 +405,7 @@ width = 824;
 );
 },
 {
+export = 0;
 glyphname = _A.init;
 layers = (
 {
@@ -456,6 +458,7 @@ width = 492;
 );
 },
 {
+export = 0;
 glyphname = _A.medi;
 layers = (
 {
@@ -479,6 +482,7 @@ width = 284;
 );
 },
 {
+export = 0;
 glyphname = _A.fina;
 layers = (
 {
@@ -523,6 +527,7 @@ width = 427;
 );
 },
 {
+export = 0;
 glyphname = _Aa.isol;
 layers = (
 {
@@ -579,6 +584,7 @@ width = 470;
 );
 },
 {
+export = 0;
 glyphname = _Aa.fina;
 layers = (
 {
@@ -635,6 +641,7 @@ width = 439;
 );
 },
 {
+export = 0;
 glyphname = _I.isol;
 layers = (
 {
@@ -686,6 +693,7 @@ width = 548;
 );
 },
 {
+export = 0;
 glyphname = _I.init;
 layers = (
 {
@@ -712,6 +720,7 @@ width = 421;
 );
 },
 {
+export = 0;
 glyphname = _I.medi;
 layers = (
 {
@@ -739,6 +748,7 @@ width = 361;
 );
 },
 {
+export = 0;
 glyphname = _I.fina;
 layers = (
 {
@@ -790,6 +800,7 @@ width = 501;
 );
 },
 {
+export = 0;
 glyphname = _Ix.isol;
 layers = (
 {
@@ -854,6 +865,7 @@ width = 501;
 );
 },
 {
+export = 0;
 glyphname = _O.init;
 layers = (
 {
@@ -912,6 +924,7 @@ width = 618;
 );
 },
 {
+export = 0;
 glyphname = _O.medi;
 layers = (
 {
@@ -969,6 +982,7 @@ width = 573;
 );
 },
 {
+export = 0;
 glyphname = _O.fina;
 layers = (
 {
@@ -1027,6 +1041,7 @@ width = 440;
 );
 },
 {
+export = 0;
 glyphname = _U.isol;
 layers = (
 {
@@ -1108,6 +1123,7 @@ width = 634;
 );
 },
 {
+export = 0;
 glyphname = _U.fina;
 layers = (
 {
@@ -1189,6 +1205,7 @@ width = 634;
 );
 },
 {
+export = 0;
 glyphname = _Ux.isol;
 layers = (
 {
@@ -1283,6 +1300,7 @@ width = 634;
 );
 },
 {
+export = 0;
 glyphname = _Ue.fina;
 layers = (
 {
@@ -1355,6 +1373,7 @@ width = 743;
 );
 },
 {
+export = 0;
 glyphname = _N.init;
 layers = (
 {
@@ -1421,6 +1440,7 @@ width = 492;
 );
 },
 {
+export = 0;
 glyphname = _N.medi;
 layers = (
 {
@@ -1457,6 +1477,7 @@ width = 284;
 );
 },
 {
+export = 0;
 glyphname = _N.fina;
 layers = (
 {
@@ -1514,6 +1535,7 @@ width = 427;
 );
 },
 {
+export = 0;
 glyphname = _N.fina.mvs;
 layers = (
 {
@@ -1569,6 +1591,7 @@ width = 427;
 );
 },
 {
+export = 0;
 glyphname = _B.init;
 layers = (
 {
@@ -1647,6 +1670,7 @@ width = 557;
 );
 },
 {
+export = 0;
 glyphname = _B.medi;
 layers = (
 {
@@ -1725,6 +1749,7 @@ width = 511;
 );
 },
 {
+export = 0;
 glyphname = _B.fina;
 layers = (
 {
@@ -1830,6 +1855,7 @@ width = 747;
 );
 },
 {
+export = 0;
 glyphname = _B2.fina;
 layers = (
 {
@@ -1923,6 +1949,7 @@ width = 820;
 );
 },
 {
+export = 0;
 glyphname = _P.init;
 layers = (
 {
@@ -2001,6 +2028,7 @@ width = 552;
 );
 },
 {
+export = 0;
 glyphname = _P.medi;
 layers = (
 {
@@ -2079,6 +2107,7 @@ width = 507;
 );
 },
 {
+export = 0;
 glyphname = _P.fina;
 layers = (
 {
@@ -2187,6 +2216,7 @@ width = 715;
 );
 },
 {
+export = 0;
 glyphname = _H.init;
 layers = (
 {
@@ -2251,6 +2281,7 @@ width = 788;
 );
 },
 {
+export = 0;
 glyphname = _H.medi;
 layers = (
 {
@@ -2278,6 +2309,7 @@ width = 568;
 );
 },
 {
+export = 0;
 glyphname = _H.fina;
 layers = (
 {
@@ -2326,6 +2358,7 @@ width = 663;
 );
 },
 {
+export = 0;
 glyphname = _Hx.init;
 layers = (
 {
@@ -2416,6 +2449,7 @@ width = 788;
 );
 },
 {
+export = 0;
 glyphname = _Hx.medi;
 layers = (
 {
@@ -2469,6 +2503,7 @@ width = 568;
 );
 },
 {
+export = 0;
 glyphname = _Hx.fina;
 layers = (
 {
@@ -2543,6 +2578,7 @@ width = 663;
 );
 },
 {
+export = 0;
 glyphname = _Hx.fina.mvs;
 layers = (
 {
@@ -2615,6 +2651,7 @@ width = 663;
 );
 },
 {
+export = 0;
 glyphname = _G.init;
 layers = (
 {
@@ -2661,6 +2698,7 @@ width = 377;
 );
 },
 {
+export = 0;
 glyphname = _G.medi;
 layers = (
 {
@@ -2707,6 +2745,7 @@ width = 330;
 );
 },
 {
+export = 0;
 glyphname = _G.fina;
 layers = (
 {
@@ -2773,6 +2812,7 @@ width = 668;
 );
 },
 {
+export = 0;
 glyphname = _Gx.init;
 layers = (
 {
@@ -2845,6 +2885,7 @@ width = 378;
 );
 },
 {
+export = 0;
 glyphname = _Gx.medi;
 layers = (
 {
@@ -2917,6 +2958,7 @@ width = 331;
 );
 },
 {
+export = 0;
 glyphname = _M.init;
 layers = (
 {
@@ -2987,6 +3029,7 @@ width = 492;
 );
 },
 {
+export = 0;
 glyphname = _M.medi;
 layers = (
 {
@@ -3030,6 +3073,7 @@ width = 284;
 );
 },
 {
+export = 0;
 glyphname = _M.fina;
 layers = (
 {
@@ -3091,6 +3135,7 @@ width = 455;
 );
 },
 {
+export = 0;
 glyphname = _L.init;
 layers = (
 {
@@ -3165,6 +3210,7 @@ width = 492;
 );
 },
 {
+export = 0;
 glyphname = _L.medi;
 layers = (
 {
@@ -3211,6 +3257,7 @@ width = 284;
 );
 },
 {
+export = 0;
 glyphname = _L.fina;
 layers = (
 {
@@ -3270,6 +3317,7 @@ width = 383;
 );
 },
 {
+export = 0;
 glyphname = _S.init;
 layers = (
 {
@@ -3326,6 +3374,7 @@ width = 681;
 );
 },
 {
+export = 0;
 glyphname = _S.medi;
 layers = (
 {
@@ -3375,6 +3424,7 @@ width = 581;
 );
 },
 {
+export = 0;
 glyphname = _S.fina;
 layers = (
 {
@@ -3429,6 +3479,7 @@ width = 685;
 );
 },
 {
+export = 0;
 glyphname = _Sz.fina;
 layers = (
 {
@@ -3471,6 +3522,7 @@ width = 428;
 );
 },
 {
+export = 0;
 glyphname = _Sh.init;
 layers = (
 {
@@ -3553,6 +3605,7 @@ width = 681;
 );
 },
 {
+export = 0;
 glyphname = _Sh.medi;
 layers = (
 {
@@ -3628,6 +3681,7 @@ width = 581;
 );
 },
 {
+export = 0;
 glyphname = _Sh.fina;
 layers = (
 {
@@ -3708,6 +3762,7 @@ width = 685;
 );
 },
 {
+export = 0;
 glyphname = _T.init;
 layers = (
 {
@@ -3767,6 +3822,7 @@ width = 670;
 );
 },
 {
+export = 0;
 glyphname = _T.medi;
 layers = (
 {
@@ -3825,6 +3881,7 @@ width = 624;
 );
 },
 {
+export = 0;
 glyphname = _T.fina;
 layers = (
 {
@@ -3898,6 +3955,7 @@ width = 874;
 );
 },
 {
+export = 0;
 glyphname = _D.init;
 layers = (
 {
@@ -3967,6 +4025,7 @@ width = 673;
 );
 },
 {
+export = 0;
 glyphname = _D.medi;
 layers = (
 {
@@ -4037,6 +4096,7 @@ width = 613;
 );
 },
 {
+export = 0;
 glyphname = _D.fina;
 layers = (
 {
@@ -4122,6 +4182,7 @@ width = 863;
 );
 },
 {
+export = 0;
 glyphname = _Dd.medi;
 layers = (
 {
@@ -4183,6 +4244,7 @@ width = 857;
 );
 },
 {
+export = 0;
 glyphname = _Dd.fina;
 layers = (
 {
@@ -4268,6 +4330,7 @@ width = 1000;
 );
 },
 {
+export = 0;
 glyphname = _Ch.init;
 layers = (
 {
@@ -4311,6 +4374,7 @@ width = 692;
 );
 },
 {
+export = 0;
 glyphname = _Ch.medi;
 layers = (
 {
@@ -4354,6 +4418,7 @@ width = 530;
 );
 },
 {
+export = 0;
 glyphname = _Ch.fina;
 layers = (
 {
@@ -4412,6 +4477,7 @@ width = 780;
 );
 },
 {
+export = 0;
 glyphname = _J.medi;
 layers = (
 {
@@ -4451,6 +4517,7 @@ width = 530;
 );
 },
 {
+export = 0;
 glyphname = _J.fina;
 layers = (
 {
@@ -4505,6 +4572,7 @@ width = 780;
 );
 },
 {
+export = 0;
 glyphname = _Y.init;
 layers = (
 {
@@ -4540,6 +4608,7 @@ width = 421;
 );
 },
 {
+export = 0;
 glyphname = _Y.medi;
 layers = (
 {
@@ -4573,6 +4642,7 @@ width = 361;
 );
 },
 {
+export = 0;
 glyphname = _R.init;
 layers = (
 {
@@ -4614,6 +4684,7 @@ width = 421;
 );
 },
 {
+export = 0;
 glyphname = _R.medi;
 layers = (
 {
@@ -4655,6 +4726,7 @@ width = 361;
 );
 },
 {
+export = 0;
 glyphname = _R.fina;
 layers = (
 {
@@ -4720,6 +4792,7 @@ width = 501;
 );
 },
 {
+export = 0;
 glyphname = _W.init;
 layers = (
 {
@@ -4767,6 +4840,7 @@ width = 520;
 );
 },
 {
+export = 0;
 glyphname = _W.medi;
 layers = (
 {
@@ -4815,6 +4889,7 @@ width = 458;
 );
 },
 {
+export = 0;
 glyphname = _W.fina;
 layers = (
 {
@@ -4878,6 +4953,7 @@ width = 708;
 );
 },
 {
+export = 0;
 glyphname = _F.init;
 layers = (
 {
@@ -4973,6 +5049,7 @@ width = 557;
 );
 },
 {
+export = 0;
 glyphname = _F.medi;
 layers = (
 {
@@ -5068,6 +5145,7 @@ width = 511;
 );
 },
 {
+export = 0;
 glyphname = _F.fina;
 layers = (
 {
@@ -5187,6 +5265,7 @@ width = 747;
 );
 },
 {
+export = 0;
 glyphname = _K.init;
 layers = (
 {
@@ -5241,6 +5320,7 @@ width = 428;
 );
 },
 {
+export = 0;
 glyphname = _K.medi;
 layers = (
 {
@@ -5295,6 +5375,7 @@ width = 381;
 );
 },
 {
+export = 0;
 glyphname = _K.fina;
 layers = (
 {
@@ -5376,6 +5457,7 @@ width = 620;
 );
 },
 {
+export = 0;
 glyphname = _K2.init;
 layers = (
 {
@@ -5433,6 +5515,7 @@ width = 429;
 );
 },
 {
+export = 0;
 glyphname = _K2.medi;
 layers = (
 {
@@ -5490,6 +5573,7 @@ width = 384;
 );
 },
 {
+export = 0;
 glyphname = _K2.fina;
 layers = (
 {
@@ -5574,6 +5658,7 @@ width = 620;
 );
 },
 {
+export = 0;
 glyphname = _C.init;
 layers = (
 {
@@ -5663,6 +5748,7 @@ width = 817;
 );
 },
 {
+export = 0;
 glyphname = _C.medi;
 layers = (
 {
@@ -5753,6 +5839,7 @@ width = 655;
 );
 },
 {
+export = 0;
 glyphname = _C.fina;
 layers = (
 {
@@ -5858,6 +5945,7 @@ width = 905;
 );
 },
 {
+export = 0;
 glyphname = _Z.init;
 layers = (
 {
@@ -5919,6 +6007,7 @@ width = 740;
 );
 },
 {
+export = 0;
 glyphname = _Z.medi;
 layers = (
 {
@@ -5977,6 +6066,7 @@ width = 578;
 );
 },
 {
+export = 0;
 glyphname = _Z.fina;
 layers = (
 {
@@ -6050,6 +6140,7 @@ width = 828;
 );
 },
 {
+export = 0;
 glyphname = _Hr.medi;
 layers = (
 {
@@ -6087,6 +6178,7 @@ width = 521;
 );
 },
 {
+export = 0;
 glyphname = _Hr.fina;
 layers = (
 {
@@ -6139,6 +6231,7 @@ width = 771;
 );
 },
 {
+export = 0;
 glyphname = _Rh.init;
 layers = (
 {
@@ -6232,6 +6325,7 @@ width = 833;
 );
 },
 {
+export = 0;
 glyphname = _Rh.medi;
 layers = (
 {
@@ -6325,6 +6419,7 @@ width = 787;
 );
 },
 {
+export = 0;
 glyphname = _Rh.fina;
 layers = (
 {
@@ -6433,6 +6528,7 @@ width = 1037;
 );
 },
 {
+export = 0;
 glyphname = _Zr.init;
 layers = (
 {
@@ -6470,6 +6566,7 @@ width = 566;
 );
 },
 {
+export = 0;
 glyphname = _Cr.init;
 layers = (
 {
@@ -6565,6 +6662,7 @@ width = 1102;
 );
 },
 {
+export = 0;
 glyphname = _GA.init;
 layers = (
 {
@@ -6624,6 +6722,7 @@ width = 714;
 );
 },
 {
+export = 0;
 glyphname = _GA.medi;
 layers = (
 {
@@ -6683,6 +6782,7 @@ width = 666;
 );
 },
 {
+export = 0;
 glyphname = _GAa.isol;
 layers = (
 {
@@ -6778,6 +6878,7 @@ width = 1021;
 );
 },
 {
+export = 0;
 glyphname = _GAa.fina;
 layers = (
 {
@@ -6873,6 +6974,7 @@ width = 973;
 );
 },
 {
+export = 0;
 glyphname = _GxA.init;
 layers = (
 {
@@ -6958,6 +7060,7 @@ width = 714;
 );
 },
 {
+export = 0;
 glyphname = _GxA.medi;
 layers = (
 {
@@ -7043,6 +7146,7 @@ width = 666;
 );
 },
 {
+export = 0;
 glyphname = _GxAa.isol;
 layers = (
 {
@@ -7164,6 +7268,7 @@ width = 1021;
 );
 },
 {
+export = 0;
 glyphname = _GxAa.fina;
 layers = (
 {
@@ -7285,6 +7390,7 @@ width = 973;
 );
 },
 {
+export = 0;
 glyphname = _GI.init;
 layers = (
 {
@@ -7357,6 +7463,7 @@ width = 810;
 );
 },
 {
+export = 0;
 glyphname = _GI.medi;
 layers = (
 {
@@ -7429,6 +7536,7 @@ width = 762;
 );
 },
 {
+export = 0;
 glyphname = _GI.isol;
 layers = (
 {
@@ -7513,6 +7621,7 @@ width = 1060;
 );
 },
 {
+export = 0;
 glyphname = _GI.fina;
 layers = (
 {
@@ -7597,6 +7706,7 @@ width = 1012;
 );
 },
 {
+export = 0;
 glyphname = _GxI.init;
 layers = (
 {
@@ -7695,6 +7805,7 @@ width = 810;
 );
 },
 {
+export = 0;
 glyphname = _GxI.medi;
 layers = (
 {
@@ -7793,6 +7904,7 @@ width = 762;
 );
 },
 {
+export = 0;
 glyphname = _GxI.isol;
 layers = (
 {
@@ -7903,6 +8015,7 @@ width = 1060;
 );
 },
 {
+export = 0;
 glyphname = _GxI.fina;
 layers = (
 {
@@ -8013,6 +8126,7 @@ width = 1012;
 );
 },
 {
+export = 0;
 glyphname = _GOI.init;
 layers = (
 {
@@ -8113,6 +8227,7 @@ width = 1180;
 );
 },
 {
+export = 0;
 glyphname = _GOI.medi;
 layers = (
 {
@@ -8213,6 +8328,7 @@ width = 1133;
 );
 },
 {
+export = 0;
 glyphname = _GUe.isol;
 layers = (
 {
@@ -8320,6 +8436,7 @@ width = 1135;
 );
 },
 {
+export = 0;
 glyphname = _GUe.fina;
 layers = (
 {
@@ -8427,6 +8544,7 @@ width = 1088;
 );
 },
 {
+export = 0;
 glyphname = _GO.init;
 layers = (
 {
@@ -8519,6 +8637,7 @@ width = 885;
 );
 },
 {
+export = 0;
 glyphname = _GO.medi;
 layers = (
 {
@@ -8611,6 +8730,7 @@ width = 838;
 );
 },
 {
+export = 0;
 glyphname = _GO.isol;
 layers = (
 {
@@ -8699,6 +8819,7 @@ width = 749;
 );
 },
 {
+export = 0;
 glyphname = _GO.fina;
 layers = (
 {
@@ -8787,6 +8908,7 @@ width = 702;
 );
 },
 {
+export = 0;
 glyphname = _GxOI.init;
 layers = (
 {
@@ -8913,6 +9035,7 @@ width = 1180;
 );
 },
 {
+export = 0;
 glyphname = _GxOI.medi;
 layers = (
 {
@@ -9039,6 +9162,7 @@ width = 1133;
 );
 },
 {
+export = 0;
 glyphname = _GxUe.isol;
 layers = (
 {
@@ -9172,6 +9296,7 @@ width = 1135;
 );
 },
 {
+export = 0;
 glyphname = _GxUe.fina;
 layers = (
 {
@@ -9305,6 +9430,7 @@ width = 1088;
 );
 },
 {
+export = 0;
 glyphname = _GxO.init;
 layers = (
 {
@@ -9423,6 +9549,7 @@ width = 885;
 );
 },
 {
+export = 0;
 glyphname = _GxO.medi;
 layers = (
 {
@@ -9541,6 +9668,7 @@ width = 838;
 );
 },
 {
+export = 0;
 glyphname = _GxO.isol;
 layers = (
 {
@@ -9655,6 +9783,7 @@ width = 749;
 );
 },
 {
+export = 0;
 glyphname = _GxO.fina;
 layers = (
 {
@@ -9769,6 +9898,7 @@ width = 702;
 );
 },
 {
+export = 0;
 glyphname = _GW.init;
 layers = (
 {
@@ -9856,6 +9986,7 @@ width = 885;
 );
 },
 {
+export = 0;
 glyphname = _GW.medi;
 layers = (
 {
@@ -9943,6 +10074,7 @@ width = 837;
 );
 },
 {
+export = 0;
 glyphname = _GW.isol;
 layers = (
 {
@@ -10042,6 +10174,7 @@ width = 1135;
 );
 },
 {
+export = 0;
 glyphname = _GW.fina;
 layers = (
 {
@@ -10141,6 +10274,7 @@ width = 1087;
 );
 },
 {
+export = 0;
 glyphname = _GxW.init;
 layers = (
 {
@@ -10254,6 +10388,7 @@ width = 885;
 );
 },
 {
+export = 0;
 glyphname = _GxW.medi;
 layers = (
 {
@@ -10367,6 +10502,7 @@ width = 837;
 );
 },
 {
+export = 0;
 glyphname = _GxW.isol;
 layers = (
 {
@@ -10492,6 +10628,7 @@ width = 1135;
 );
 },
 {
+export = 0;
 glyphname = _GxW.fina;
 layers = (
 {
@@ -10617,6 +10754,7 @@ width = 1087;
 );
 },
 {
+export = 0;
 glyphname = _BA.init;
 layers = (
 {
@@ -10697,6 +10835,7 @@ width = 863;
 );
 },
 {
+export = 0;
 glyphname = _BA.medi;
 layers = (
 {
@@ -10777,6 +10916,7 @@ width = 817;
 );
 },
 {
+export = 0;
 glyphname = _BAa.isol;
 layers = (
 {
@@ -10893,6 +11033,7 @@ width = 1170;
 );
 },
 {
+export = 0;
 glyphname = _BAa.fina;
 layers = (
 {
@@ -11009,6 +11150,7 @@ width = 1124;
 );
 },
 {
+export = 0;
 glyphname = _BI.init;
 layers = (
 {
@@ -11099,6 +11241,7 @@ width = 917;
 );
 },
 {
+export = 0;
 glyphname = _BI.medi;
 layers = (
 {
@@ -11189,6 +11332,7 @@ width = 871;
 );
 },
 {
+export = 0;
 glyphname = _BI.isol;
 layers = (
 {
@@ -11297,6 +11441,7 @@ width = 1167;
 );
 },
 {
+export = 0;
 glyphname = _BI.fina;
 layers = (
 {
@@ -11405,6 +11550,7 @@ width = 1121;
 );
 },
 {
+export = 0;
 glyphname = _BO.init;
 layers = (
 {
@@ -11513,6 +11659,7 @@ width = 933;
 );
 },
 {
+export = 0;
 glyphname = _BO.medi;
 layers = (
 {
@@ -11621,6 +11768,7 @@ width = 883;
 );
 },
 {
+export = 0;
 glyphname = _BO.isol;
 layers = (
 {
@@ -11732,6 +11880,7 @@ width = 797;
 );
 },
 {
+export = 0;
 glyphname = _BO.fina;
 layers = (
 {
@@ -11843,6 +11992,7 @@ width = 751;
 );
 },
 {
+export = 0;
 glyphname = _BOI.init;
 layers = (
 {
@@ -11956,6 +12106,7 @@ width = 1224;
 );
 },
 {
+export = 0;
 glyphname = _BOI.medi;
 layers = (
 {
@@ -12069,6 +12220,7 @@ width = 1178;
 );
 },
 {
+export = 0;
 glyphname = _BUe.isol;
 layers = (
 {
@@ -12192,6 +12344,7 @@ width = 1183;
 );
 },
 {
+export = 0;
 glyphname = _BUe.fina;
 layers = (
 {
@@ -12315,6 +12468,7 @@ width = 1137;
 );
 },
 {
+export = 0;
 glyphname = _BW.init;
 layers = (
 {
@@ -12423,6 +12577,7 @@ width = 1006;
 );
 },
 {
+export = 0;
 glyphname = _BW.medi;
 layers = (
 {
@@ -12531,6 +12686,7 @@ width = 960;
 );
 },
 {
+export = 0;
 glyphname = _BW.isol;
 layers = (
 {
@@ -12654,6 +12810,7 @@ width = 1256;
 );
 },
 {
+export = 0;
 glyphname = _BW.fina;
 layers = (
 {
@@ -12777,6 +12934,7 @@ width = 1210;
 );
 },
 {
+export = 0;
 glyphname = _PA.init;
 layers = (
 {
@@ -12854,6 +13012,7 @@ width = 830;
 );
 },
 {
+export = 0;
 glyphname = _PA.medi;
 layers = (
 {
@@ -12931,6 +13090,7 @@ width = 785;
 );
 },
 {
+export = 0;
 glyphname = _PAa.isol;
 layers = (
 {
@@ -13044,6 +13204,7 @@ width = 1137;
 );
 },
 {
+export = 0;
 glyphname = _PAa.fina;
 layers = (
 {
@@ -13157,6 +13318,7 @@ width = 1092;
 );
 },
 {
+export = 0;
 glyphname = _PI.init;
 layers = (
 {
@@ -13247,6 +13409,7 @@ width = 895;
 );
 },
 {
+export = 0;
 glyphname = _PI.medi;
 layers = (
 {
@@ -13337,6 +13500,7 @@ width = 850;
 );
 },
 {
+export = 0;
 glyphname = _PI.isol;
 layers = (
 {
@@ -13442,6 +13606,7 @@ width = 1145;
 );
 },
 {
+export = 0;
 glyphname = _PI.fina;
 layers = (
 {
@@ -13547,6 +13712,7 @@ width = 1100;
 );
 },
 {
+export = 0;
 glyphname = _PO.init;
 layers = (
 {
@@ -13646,6 +13812,7 @@ width = 900;
 );
 },
 {
+export = 0;
 glyphname = _PO.medi;
 layers = (
 {
@@ -13745,6 +13912,7 @@ width = 855;
 );
 },
 {
+export = 0;
 glyphname = _PO.isol;
 layers = (
 {
@@ -13841,6 +14009,7 @@ width = 764;
 );
 },
 {
+export = 0;
 glyphname = _PO.fina;
 layers = (
 {
@@ -13937,6 +14106,7 @@ width = 719;
 );
 },
 {
+export = 0;
 glyphname = _POI.init;
 layers = (
 {
@@ -14044,6 +14214,7 @@ width = 1191;
 );
 },
 {
+export = 0;
 glyphname = _POI.medi;
 layers = (
 {
@@ -14151,6 +14322,7 @@ width = 1146;
 );
 },
 {
+export = 0;
 glyphname = _PUe.isol;
 layers = (
 {
@@ -14265,6 +14437,7 @@ width = 1150;
 );
 },
 {
+export = 0;
 glyphname = _PUe.fina;
 layers = (
 {
@@ -14379,6 +14552,7 @@ width = 1104;
 );
 },
 {
+export = 0;
 glyphname = _PW.init;
 layers = (
 {
@@ -14487,6 +14661,7 @@ width = 984;
 );
 },
 {
+export = 0;
 glyphname = _PW.medi;
 layers = (
 {
@@ -14595,6 +14770,7 @@ width = 939;
 );
 },
 {
+export = 0;
 glyphname = _PW.isol;
 layers = (
 {
@@ -14718,6 +14894,7 @@ width = 1234;
 );
 },
 {
+export = 0;
 glyphname = _PW.fina;
 layers = (
 {
@@ -14841,6 +15018,7 @@ width = 1189;
 );
 },
 {
+export = 0;
 glyphname = _FA.init;
 layers = (
 {
@@ -14938,6 +15116,7 @@ width = 863;
 );
 },
 {
+export = 0;
 glyphname = _FA.medi;
 layers = (
 {
@@ -15035,6 +15214,7 @@ width = 817;
 );
 },
 {
+export = 0;
 glyphname = _FAa.isol;
 layers = (
 {
@@ -15165,6 +15345,7 @@ width = 1170;
 );
 },
 {
+export = 0;
 glyphname = _FAa.fina;
 layers = (
 {
@@ -15295,6 +15476,7 @@ width = 1124;
 );
 },
 {
+export = 0;
 glyphname = _FI.init;
 layers = (
 {
@@ -15402,6 +15584,7 @@ width = 917;
 );
 },
 {
+export = 0;
 glyphname = _FI.medi;
 layers = (
 {
@@ -15509,6 +15692,7 @@ width = 871;
 );
 },
 {
+export = 0;
 glyphname = _FI.isol;
 layers = (
 {
@@ -15631,6 +15815,7 @@ width = 1167;
 );
 },
 {
+export = 0;
 glyphname = _FI.fina;
 layers = (
 {
@@ -15753,6 +15938,7 @@ width = 1167;
 );
 },
 {
+export = 0;
 glyphname = _FO.init;
 layers = (
 {
@@ -15871,6 +16057,7 @@ width = 933;
 );
 },
 {
+export = 0;
 glyphname = _FO.medi;
 layers = (
 {
@@ -15989,6 +16176,7 @@ width = 887;
 );
 },
 {
+export = 0;
 glyphname = _FO.isol;
 layers = (
 {
@@ -16110,6 +16298,7 @@ width = 797;
 );
 },
 {
+export = 0;
 glyphname = _FO.fina;
 layers = (
 {
@@ -16231,6 +16420,7 @@ width = 751;
 );
 },
 {
+export = 0;
 glyphname = _FOI.init;
 layers = (
 {
@@ -16357,6 +16547,7 @@ width = 1224;
 );
 },
 {
+export = 0;
 glyphname = _FOI.medi;
 layers = (
 {
@@ -16483,6 +16674,7 @@ width = 1178;
 );
 },
 {
+export = 0;
 glyphname = _FUe.isol;
 layers = (
 {
@@ -16616,6 +16808,7 @@ width = 1183;
 );
 },
 {
+export = 0;
 glyphname = _FUe.fina;
 layers = (
 {
@@ -16749,6 +16942,7 @@ width = 1137;
 );
 },
 {
+export = 0;
 glyphname = _FW.init;
 layers = (
 {
@@ -16871,6 +17065,7 @@ width = 1006;
 );
 },
 {
+export = 0;
 glyphname = _FW.medi;
 layers = (
 {
@@ -16993,6 +17188,7 @@ width = 960;
 );
 },
 {
+export = 0;
 glyphname = _FW.isol;
 layers = (
 {
@@ -17130,6 +17326,7 @@ width = 1256;
 );
 },
 {
+export = 0;
 glyphname = _FW.fina;
 layers = (
 {
@@ -17267,6 +17464,7 @@ width = 1210;
 );
 },
 {
+export = 0;
 glyphname = _K2A.init;
 layers = (
 {
@@ -17329,6 +17527,7 @@ width = 714;
 );
 },
 {
+export = 0;
 glyphname = _K2A.medi;
 layers = (
 {
@@ -17391,6 +17590,7 @@ width = 669;
 );
 },
 {
+export = 0;
 glyphname = _K2Aa.isol;
 layers = (
 {
@@ -17489,6 +17689,7 @@ width = 1021;
 );
 },
 {
+export = 0;
 glyphname = _K2Aa.fina;
 layers = (
 {
@@ -17587,6 +17788,7 @@ width = 976;
 );
 },
 {
+export = 0;
 glyphname = _K2I.init;
 layers = (
 {
@@ -17656,6 +17858,7 @@ width = 810;
 );
 },
 {
+export = 0;
 glyphname = _K2I.medi;
 layers = (
 {
@@ -17725,6 +17928,7 @@ width = 765;
 );
 },
 {
+export = 0;
 glyphname = _K2I.isol;
 layers = (
 {
@@ -17809,6 +18013,7 @@ width = 1060;
 );
 },
 {
+export = 0;
 glyphname = _K2I.fina;
 layers = (
 {
@@ -17893,6 +18098,7 @@ width = 1015;
 );
 },
 {
+export = 0;
 glyphname = _K2O.init;
 layers = (
 {
@@ -17988,6 +18194,7 @@ width = 885;
 );
 },
 {
+export = 0;
 glyphname = _K2O.medi;
 layers = (
 {
@@ -18083,6 +18290,7 @@ width = 840;
 );
 },
 {
+export = 0;
 glyphname = _K2O.isol;
 layers = (
 {
@@ -18174,6 +18382,7 @@ width = 749;
 );
 },
 {
+export = 0;
 glyphname = _K2O.fina;
 layers = (
 {
@@ -18265,6 +18474,7 @@ width = 704;
 );
 },
 {
+export = 0;
 glyphname = _K2OI.init;
 layers = (
 {
@@ -18368,6 +18578,7 @@ width = 1176;
 );
 },
 {
+export = 0;
 glyphname = _K2OI.medi;
 layers = (
 {
@@ -18471,6 +18682,7 @@ width = 1131;
 );
 },
 {
+export = 0;
 glyphname = _K2Ue.isol;
 layers = (
 {
@@ -18584,6 +18796,7 @@ width = 1135;
 );
 },
 {
+export = 0;
 glyphname = _K2Ue.fina;
 layers = (
 {
@@ -18697,6 +18910,7 @@ width = 1090;
 );
 },
 {
+export = 0;
 glyphname = _K2W.init;
 layers = (
 {
@@ -18784,6 +18998,7 @@ width = 885;
 );
 },
 {
+export = 0;
 glyphname = _K2W.medi;
 layers = (
 {
@@ -18871,6 +19086,7 @@ width = 840;
 );
 },
 {
+export = 0;
 glyphname = _K2W.isol;
 layers = (
 {
@@ -18973,6 +19189,7 @@ width = 1135;
 );
 },
 {
+export = 0;
 glyphname = _K2W.fina;
 layers = (
 {
@@ -19075,6 +19292,7 @@ width = 1090;
 );
 },
 {
+export = 0;
 glyphname = _KA.init;
 layers = (
 {
@@ -19134,6 +19352,7 @@ width = 714;
 );
 },
 {
+export = 0;
 glyphname = _KA.medi;
 layers = (
 {
@@ -19193,6 +19412,7 @@ width = 666;
 );
 },
 {
+export = 0;
 glyphname = _KAa.isol;
 layers = (
 {
@@ -19288,6 +19508,7 @@ width = 1021;
 );
 },
 {
+export = 0;
 glyphname = _KAa.fina;
 layers = (
 {
@@ -19383,6 +19604,7 @@ width = 973;
 );
 },
 {
+export = 0;
 glyphname = _KI.init;
 layers = (
 {
@@ -19449,6 +19671,7 @@ width = 810;
 );
 },
 {
+export = 0;
 glyphname = _KI.medi;
 layers = (
 {
@@ -19515,6 +19738,7 @@ width = 762;
 );
 },
 {
+export = 0;
 glyphname = _KI.isol;
 layers = (
 {
@@ -19596,6 +19820,7 @@ width = 1060;
 );
 },
 {
+export = 0;
 glyphname = _KI.fina;
 layers = (
 {
@@ -19677,6 +19902,7 @@ width = 1012;
 );
 },
 {
+export = 0;
 glyphname = _KO.init;
 layers = (
 {
@@ -19766,6 +19992,7 @@ width = 885;
 );
 },
 {
+export = 0;
 glyphname = _KO.medi;
 layers = (
 {
@@ -19855,6 +20082,7 @@ width = 838;
 );
 },
 {
+export = 0;
 glyphname = _KO.isol;
 layers = (
 {
@@ -19943,6 +20171,7 @@ width = 749;
 );
 },
 {
+export = 0;
 glyphname = _KO.fina;
 layers = (
 {
@@ -20031,6 +20260,7 @@ width = 702;
 );
 },
 {
+export = 0;
 glyphname = _KOI.init;
 layers = (
 {
@@ -20131,6 +20361,7 @@ width = 1176;
 );
 },
 {
+export = 0;
 glyphname = _KOI.medi;
 layers = (
 {
@@ -20231,6 +20462,7 @@ width = 1159;
 );
 },
 {
+export = 0;
 glyphname = _KUe.isol;
 layers = (
 {
@@ -20338,6 +20570,7 @@ width = 1135;
 );
 },
 {
+export = 0;
 glyphname = _KUe.fina;
 layers = (
 {
@@ -20445,6 +20678,7 @@ width = 1088;
 );
 },
 {
+export = 0;
 glyphname = _KW.init;
 layers = (
 {
@@ -20529,6 +20763,7 @@ width = 885;
 );
 },
 {
+export = 0;
 glyphname = _KW.medi;
 layers = (
 {
@@ -20613,6 +20848,7 @@ width = 837;
 );
 },
 {
+export = 0;
 glyphname = _KW.isol;
 layers = (
 {
@@ -20712,6 +20948,7 @@ width = 1135;
 );
 },
 {
+export = 0;
 glyphname = _KW.fina;
 layers = (
 {
@@ -20811,6 +21048,7 @@ width = 1087;
 );
 },
 {
+export = 0;
 glyphname = _AGL.medi;
 layers = (
 {
@@ -20904,6 +21142,7 @@ width = 858;
 );
 },
 {
+export = 0;
 glyphname = _AGM.medi;
 layers = (
 {
@@ -20994,6 +21233,7 @@ width = 858;
 );
 },
 {
+export = 0;
 glyphname = _BL.init;
 layers = (
 {
@@ -21105,6 +21345,7 @@ width = 863;
 );
 },
 {
+export = 0;
 glyphname = _BL.medi;
 layers = (
 {
@@ -21216,6 +21457,7 @@ width = 817;
 );
 },
 {
+export = 0;
 glyphname = _BM.init;
 layers = (
 {
@@ -21332,6 +21574,7 @@ width = 863;
 );
 },
 {
+export = 0;
 glyphname = _BM.medi;
 layers = (
 {
@@ -21450,6 +21693,7 @@ width = 817;
 );
 },
 {
+export = 0;
 glyphname = _GL.init;
 layers = (
 {
@@ -21534,6 +21778,7 @@ width = 714;
 );
 },
 {
+export = 0;
 glyphname = _GL.medi;
 layers = (
 {
@@ -21618,6 +21863,7 @@ width = 666;
 );
 },
 {
+export = 0;
 glyphname = _GM.init;
 layers = (
 {
@@ -21699,6 +21945,7 @@ width = 714;
 );
 },
 {
+export = 0;
 glyphname = _GM.medi;
 layers = (
 {
@@ -21780,6 +22027,7 @@ width = 666;
 );
 },
 {
+export = 0;
 glyphname = _LL.medi;
 layers = (
 {
@@ -21853,6 +22101,7 @@ width = 588;
 );
 },
 {
+export = 0;
 glyphname = _ML.medi;
 layers = (
 {
@@ -21932,6 +22181,7 @@ width = 568;
 );
 },
 {
+export = 0;
 glyphname = _MM.medi;
 layers = (
 {
