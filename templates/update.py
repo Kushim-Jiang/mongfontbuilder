@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from glyphsLib import GSFeaturePrefix, GSFont, GSFontMaster, GSGlyph, GSLayer
+from glyphsLib import GSFeaturePrefix, GSFont, GSFontMaster, GSGlyph, GSInstance, GSLayer
 from glyphsLib.builder import GlyphsBuilder
 from ufoLib2 import Font
 
@@ -65,6 +65,7 @@ def main() -> None:
     [master] = gsFont.masters
     master.id = masterID
     master.axes.clear()
+    gsFont.instances.append(GSInstance())
     prefixes: list[GSFeaturePrefix] = gsFont.featurePrefixes
     prefixes.append(GSFeaturePrefix("mongfontbuilder", "include(hudum.fea);"))
     gsFont.disablesNiceNames = True

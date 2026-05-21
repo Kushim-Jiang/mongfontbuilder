@@ -35453,6 +35453,9 @@ width = 568;
 }
 );
 instances = (
+{
+name = Regular;
+}
 );
 kerningLTR = {
 };
