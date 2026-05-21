@@ -21,7 +21,12 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["glyphslib>=6.13.1", "pytest>=8.3.3", "uharfbuzz>=0.42.0"]
+dev = [
+    "glyphs-cli>=0.4.1;sys_platform=='darwin'",
+    "glyphslib>=6.13.1",
+    "pytest>=8.3.3",
+    "uharfbuzz>=0.42.0",
+]
 
 [tool.uv.build-backend]
 module-root = "lib"

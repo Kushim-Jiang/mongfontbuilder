@@ -150,6 +150,15 @@ unicode = [
 ]
 
 [[package]]
+name = "glyphs-cli"
+version = "0.4.1"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/df/c5/d02e0af5b4842472969d1306d73005f7c206720267cf74ed654ac1445174/glyphs_cli-0.4.1-py3-none-macosx_12_0_arm64.whl", hash = "sha256:0819ea01c499de3b2030a16b53d1733603f9311640d99c6a74dc7ff4c3e1724d", size = 2715566, upload-time = "2026-05-17T23:08:54.825Z" },
+    { url = "https://files.pythonhosted.org/packages/94/62/956c13bb902d49422ee6f8687deb2ca01b62e51ac814955991dafa88c10f/glyphs_cli-0.4.1-py3-none-macosx_12_0_x86_64.whl", hash = "sha256:9749bc5fe884b91382add1afd333d10505025ff43d3b923a4722e37e59c3fbb5", size = 2799263, upload-time = "2026-05-17T23:09:34.342Z" },
+]
+
+[[package]]
 name = "glyphslib"
 version = "6.13.1"
 source = { registry = "https://pypi.org/simple" }
@@ -187,6 +196,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "glyphs-cli", marker = "sys_platform == 'darwin'" },
     { name = "glyphslib" },
     { name = "pytest" },
     { name = "uharfbuzz" },
@@ -204,6 +214,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "glyphs-cli", marker = "sys_platform == 'darwin'", specifier = ">=0.4.1" },
     { name = "glyphslib", specifier = ">=6.13.1" },
     { name = "pytest", specifier = ">=8.3.3" },
     { name = "uharfbuzz", specifier = ">=0.42.0" },
