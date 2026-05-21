@@ -24,8 +24,10 @@ FONT_NAME = {
 }
 
 
-def run_ufo(locales: list[LocaleID], input: Path, output: Path):
-    font = Font.open(input)
+def buildFontForLocales(locales: list[LocaleID]) -> Path:
+    fontName = FONT_NAME[locales[0].removesuffix("x")]
+
+    font = Font.open(testsDir / f"{fontName}.ufo")
     c = MongFeaComposer(
         cmap={j: i for i in font.keys() for j in font[i].unicodes},
         glyphs=[*font.keys()],
@@ -34,30 +36,24 @@ def run_ufo(locales: list[LocaleID], input: Path, output: Path):
     spec = c.compose()
     applySpecToFont(spec, font)
     font.features.text = c.asFeatureFile().asFea()
-    output.parent.mkdir(parents=True, exist_ok=True)
-    font.save(output, overwrite=True)
+
+    tempDir.mkdir(parents=True, exist_ok=True)
+    intermediate = tempDir / f"{fontName}.ufo"
+    font.save(intermediate, overwrite=True)
+
+    output = tempDir / f"{fontName}.otf"
+    compileOTF(font).save(output)
+    print(relpath(output))
+    return output
 
 
-def run_otf(locales: list[LocaleID]):
-    locale = locales[0].removesuffix("x")
-    font_name = FONT_NAME[locale]
-    input = testsDir / f"{font_name}.ufo"
-    intermediate = tempDir / input.name
-    output = intermediate.with_suffix(".otf")
-
-    run_ufo(locales, input, intermediate)
-
+def compileOTF(font: Font) -> TTFont:
     compiler = OTFCompiler(
         useProductionNames=False,
         optimizeCFF=CFFOptimization.NONE,
     )
     environ["FONTTOOLS_LOOKUP_DEBUGGING"] = "1"  # For feaLib.builder.Builder
-    font: TTFont = compiler.compile(Font.open(intermediate))
-
-    font.save(output)
-    print(relpath(output))
-
-    return output
+    return compiler.compile(font)
 
 
 def loadTestCases(
