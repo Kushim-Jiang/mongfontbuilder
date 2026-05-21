@@ -22252,7 +22252,7 @@ width = 568;
 );
 },
 {
-category = Separator;
+category = Mark;
 glyphname = fvs1;
 layers = (
 {
@@ -22559,7 +22559,7 @@ subCategory = Other;
 unicode = 6155;
 },
 {
-category = Separator;
+category = Mark;
 glyphname = fvs2;
 layers = (
 {
@@ -22888,7 +22888,7 @@ subCategory = Other;
 unicode = 6156;
 },
 {
-category = Separator;
+category = Mark;
 glyphname = fvs3;
 layers = (
 {
@@ -23224,7 +23224,7 @@ subCategory = Other;
 unicode = 6157;
 },
 {
-category = Separator;
+category = Mark;
 glyphname = fvs4;
 layers = (
 {
@@ -23538,7 +23538,6 @@ subCategory = Other;
 unicode = 6159;
 },
 {
-category = Separator;
 glyphname = mvs;
 layers = (
 {
@@ -23823,7 +23822,6 @@ nodes = (
 width = 770;
 }
 );
-subCategory = Other;
 unicode = 6158;
 },
 {
@@ -23851,7 +23849,6 @@ script = mongolian;
 subCategory = Space;
 },
 {
-category = Separator;
 glyphname = nnbsp;
 layers = (
 {
@@ -24220,7 +24217,6 @@ nodes = (
 width = 770;
 }
 );
-subCategory = Other;
 unicode = 8239;
 },
 {
@@ -24234,7 +24230,7 @@ width = 260;
 unicode = 32;
 },
 {
-category = Separator;
+category = Mark;
 glyphname = zwj;
 layers = (
 {
@@ -24492,11 +24488,11 @@ nodes = (
 width = 770;
 }
 );
-subCategory = Other;
+subCategory = "Spacing Combining";
 unicode = 8205;
 },
 {
-category = Separator;
+category = Mark;
 glyphname = zwnj;
 layers = (
 {
@@ -24769,7 +24765,7 @@ nodes = (
 width = 770;
 }
 );
-subCategory = Other;
+subCategory = "Spacing Combining";
 unicode = 8204;
 },
 {
@@ -28737,6 +28733,7 @@ width = 1102;
 unicode = 6210;
 },
 {
+category = Mark;
 color = 11;
 glyphname = fvs1.valid;
 layers = (
@@ -28745,8 +28742,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = fvs1.ignored;
 layers = (
@@ -28755,8 +28754,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = fvs2.valid;
 layers = (
@@ -28765,8 +28766,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = fvs2.ignored;
 layers = (
@@ -28775,8 +28778,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = fvs3.valid;
 layers = (
@@ -28785,8 +28790,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = fvs3.ignored;
 layers = (
@@ -28795,8 +28802,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = fvs4.valid;
 layers = (
@@ -28805,8 +28814,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = fvs4.ignored;
 layers = (
@@ -28815,8 +28826,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = nirugu.ignored;
 layers = (
@@ -28825,8 +28838,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = zwj.ignored;
 layers = (
@@ -28835,8 +28850,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = zwnj.ignored;
 layers = (
@@ -28845,8 +28862,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = marker.masculine;
 layers = (
@@ -28855,8 +28874,10 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
+category = Mark;
 color = 11;
 glyphname = marker.feminine;
 layers = (
@@ -28865,6 +28886,7 @@ layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 width = 0;
 }
 );
+subCategory = Nonspacing;
 },
 {
 color = 11;

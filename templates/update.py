@@ -76,12 +76,6 @@ def main() -> None:
         name: str = glyph.name
         if name.startswith("_"):
             glyph.export = False
-        if name in ["mvs.narrow", "mvs.wide", "fvs4"]:
-            glyph.script = "mongolian"
-        if name in ["mvs.narrow", "mvs.wide"]:
-            glyph.category, glyph.subCategory = "Separator", "Space"
-        if name in ["mvs", "fvs1", "fvs2", "fvs3", "fvs4", "zwnj", "zwj", "nnbsp"]:
-            glyph.category, glyph.subCategory = "Separator", "Other"
         glyph.note = None
         layer: GSLayer
         [layer] = glyph.layers
@@ -92,6 +86,17 @@ def main() -> None:
             elif not layer.width:
                 glyph.color = 11  # Dark gray
         layer.vertWidth = None
+        if name in ["mvs.narrow", "mvs.wide", "fvs4"]:
+            glyph.script = "mongolian"
+        if spec.openTypeCategories.get(name) == "mark":
+            glyph.category, glyph.subCategory = (
+                "Mark",
+                "Spacing Combining" if layer.width else "Nonspacing",
+            )
+        elif name in ["fvs1", "fvs2", "fvs3", "fvs4"]:
+            glyph.category, glyph.subCategory = "Mark", "Other"
+        elif name in ["mvs.narrow", "mvs.wide"]:
+            glyph.category, glyph.subCategory = "Separator", "Space"
 
     (templatesDir / "hudum.fea").write_text(
         fea.replace(":", ".")  # Glyphs doesn't support ":" in lookup names
