@@ -61,6 +61,7 @@ def main() -> None:
     masterID = "E14AE757-7134-4DB9-897C-AD248BACE90D"  # Stable between updates
     gsFont: GSFont = GlyphsBuilder(ufos=[font]).font
     gsFont.axes.clear()
+    gsFont.customParameters["Don't use Production Names"] = True  # type: ignore
     master: GSFontMaster
     [master] = gsFont.masters
     master.id = masterID
