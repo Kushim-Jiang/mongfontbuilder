@@ -9482,7 +9482,7 @@
     "init": {
       "0": {
         "written": [
-          "Zr"
+          "Zr2"
         ],
         "default": true,
         "locales": {
@@ -9494,7 +9494,7 @@
     "medi": {
       "0": {
         "written": [
-          "Zr"
+          "Zr2"
         ],
         "default": true,
         "locales": {
@@ -9506,7 +9506,7 @@
     "fina": {
       "0": {
         "written": [
-          "Zr"
+          "Zr2"
         ],
         "default": true,
         "locales": {

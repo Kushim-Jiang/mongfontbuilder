@@ -18,10 +18,10 @@
     MCHx: "manchu-ali-gali",
   };
 
-  const prefix = localeToPrefix[locale] || "";
-  const items = links.split(" ").filter(Boolean);
+  const prefix = $derived(localeToPrefix[locale] || "");
+  const items = $derived(links.split(" ").filter(Boolean));
 
-  const categoryItems = category ? locales[locale]?.categories?.[category as keyof (typeof locales)[typeof locale]["categories"]] || [] : [];
+  const categoryItems = $derived(category ? locales[locale]?.categories?.[category as keyof (typeof locales)[typeof locale]["categories"]] || [] : []);
 </script>
 
 {#each items as item}

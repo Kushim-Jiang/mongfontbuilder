@@ -1,56 +1,34 @@
 <script lang="ts">
   interface Props {
-    charName: string;
     position: JoiningPosition;
-    fvs: FVS;
+    id?: WrittenUnitID;
+    written?: WrittenUnitID[];
+    charName?: string;
+    fvs?: FVS;
   }
 
-  let { charName, position, fvs }: Props = $props();
+  let { position, id, written, charName, fvs }: Props = $props();
 
   import type { JoiningPosition } from "../../data/misc";
   import type { FVS } from "../../data/variants";
+  import type { WrittenUnitID } from "../../data/writtenUnits";
+  import { nameToCP, buildWrittenText, niruguText, ctxBefore, ctxAfter } from "./utils";
 
-  import { nameToCP } from "./utils";
-
-  const zwj = "\u{200D}";
-  const nirugu = "\u{180A}";
+  const units = $derived(id ? [id] : written);
+  const showBefore = $derived(ctxBefore(position));
+  const showAfter = $derived(ctxAfter(position));
 
   let text = $derived.by(() => {
-    let text = String.fromCodePoint(nameToCP.get(charName)!);
-    if (fvs) {
-      text += ["\u{180B}", "\u{180C}", "\u{180D}", "\u{180F}"][Number(fvs) - 1];
+    if (units) return buildWrittenText(units, position);
+    if (charName) {
+      let t = String.fromCodePoint(nameToCP.get(charName)!);
+      if (fvs) t += ["\u{180B}", "\u{180C}", "\u{180D}", "\u{180F}"][fvs - 1];
+      return t;
     }
-    if (position == "init" || position == "medi") {
-      text = text + zwj;
-    }
-    if (position == "medi" || position == "fina") {
-      text = zwj + text; // ZWJ may be segmented into a separate OTL run
-    }
-    return text;
+    return "?";
   });
 </script>
 
-<span class="variant">
-  {#if text.startsWith(zwj)}
-    <span class="context">{nirugu}</span>
-  {/if}{text ?? "?"}{#if text.endsWith(zwj)}
-    <span class="context">{nirugu}</span>
-  {/if}
-</span>
-
-<style>
-  @font-face {
-    font-family: "Noto Sans Mongolian Customized";
-    src: url("/DraftNew-Regular.otf");
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  span.variant {
-    font-family: "Noto Sans Mongolian Customized";
-    color: black;
-  }
-  span.context {
-    color: hsl(0 0 0 / 0.25);
-  }
-</style>
+<span class="wu"
+  >{#if showBefore}<span class="wu-context">{niruguText}</span>{/if}{text}{#if showAfter}<span class="wu-context">{niruguText}</span>{/if}</span
+>

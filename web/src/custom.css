@@ -1,5 +1,21 @@
+@font-face {
+  font-family: "WrittenUnits";
+  src: url("/writtenunits-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 table {
+  width: 100%;
   border-collapse: collapse;
+}
+
+.wu {
+  font-family: "WrittenUnits" !important;
+  color: black;
+}
+.wu-context {
+  color: hsl(210 80% 58% / 0.55);
 }
 
 th,

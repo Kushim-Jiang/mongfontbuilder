@@ -13,12 +13,10 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.9",
-    "@astrojs/starlight": "0.39.2",
     "@astrojs/svelte": "8.1.1",
     "@fontsource/noto-sans-mongolian": "5.2.6",
     "@types/node": "25.8.0",
     "@unicode/unicode-17.0.0": "1.6.16",
-    "astro": "6.3.3",
     "prettier": "3.8.3",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-svelte": "3.5.2",
@@ -57,5 +55,9 @@
         }
       }
     ]
+  },
+  "devDependencies": {
+    "@astrojs/starlight": "^0.39.2",
+    "astro": "^6.4.7"
   }
 }

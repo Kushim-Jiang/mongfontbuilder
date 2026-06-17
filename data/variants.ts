@@ -6936,9 +6936,7 @@ export const variants: Record<
           MCH: {
             eac: "MCHAAM1",
           },
-          MCHx: {
-            written: ["Cc"],
-          },
+          MCHx: {},
         },
       },
     },
@@ -7063,20 +7061,6 @@ export const variants: Record<
     },
     fina: {
       "1": {
-        written: ["Iy"],
-        locales: {
-          MCH: {
-            conditions: ["marked"],
-            gb: "0063 manchu i third final form",
-            eac: "MIM3",
-            unrecommended: true,
-          },
-          MCHx: {
-            conditions: ["marked"],
-          },
-        },
-      },
-      "2": {
         written: ["I"],
         default: true,
         locales: {
@@ -7682,7 +7666,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["Zr"],
+        written: ["Zr2"],
         default: true,
         locales: {
           MNGx: {},
@@ -7692,7 +7676,7 @@ export const variants: Record<
     },
     medi: {
       "0": {
-        written: ["Zr"],
+        written: ["Zr2"],
         default: true,
         locales: {
           MNGx: {},
@@ -7702,7 +7686,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["Zr"],
+        written: ["Zr2"],
         default: true,
         locales: {
           MNGx: {},
@@ -7762,9 +7746,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {},
-          TODx: {
-            written: ["init", 0, "TODx"],
-          },
+          TODx: {},
         },
       },
     },
@@ -7774,9 +7756,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {},
-          TODx: {
-            written: ["Ds2"],
-          },
+          TODx: {},
         },
       },
     },
@@ -7786,9 +7766,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {},
-          TODx: {
-            written: ["Ds2"],
-          },
+          TODx: {},
         },
       },
     },
@@ -7798,9 +7776,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {},
-          TODx: {
-            written: ["medi", 0, "TODx"],
-          },
+          TODx: {},
         },
       },
     },
@@ -8030,7 +8006,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["Pg"],
+        written: ["medi", 0],
         default: true,
         locales: {
           MNGx: {},
@@ -8112,7 +8088,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["Rh2"],
+        written: ["medi", 0],
         default: true,
         locales: {
           MNGx: {},

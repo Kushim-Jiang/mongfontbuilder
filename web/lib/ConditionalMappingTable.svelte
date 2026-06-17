@@ -2,83 +2,82 @@
   interface Props {
     locale: LocaleID;
   }
-
   let { locale }: Props = $props();
 
-  import { aliases, type LocaleNamespace } from "../../data/aliases";
-  import { locales, type ConditionalMappingType, type LocaleID } from "../../data/locales";
-  import { joiningPositions, type JoiningPosition } from "../../data/misc";
-  import { variants, type FVS } from "../../data/variants";
-
+  import type { LocaleID, ConditionalMappingType } from "../../data/locales";
+  import type { JoiningPosition } from "../../data/misc";
+  import type { FVS } from "../../data/variants";
+  import type { WrittenUnitID } from "../../data/writtenUnits";
+  import { joiningPositions } from "../../data/misc";
+  import { locales } from "../../data/locales";
+  import { variants } from "../../data/variants";
+  import { aliases } from "../../data/aliases";
   import LetterVariant from "./LetterVariant.svelte";
   import { hexFromCP, nameToCP } from "./utils";
+  import { localeNS, orderedAliases, resolveCharName, mapGetOrCreate, isVariantRef, resolveRef } from "./utils";
 
-  const conditionOrder = locales[locale].conditions;
+  type PE = { fvs: FVS; written: WrittenUnitID[] | undefined; renderPos?: JoiningPosition };
 
-  const charNameToConditionToPositionToFVS = new Map<
-    string,
-    {
-      default: Map<JoiningPosition, FVS>;
-      conditions: Map<ConditionalMappingType, Map<JoiningPosition, FVS>>;
-    }
-  >();
+  const conditionOrder = $derived(locales[locale].conditions);
+  const localeNamespace = $derived(localeNS(locale));
 
-  const localeNamespace = locale.slice(0, 3) as LocaleNamespace;
-  const orderedAlias = [...locales[locale].categories.vowel, ...locales[locale].categories.consonant];
-  let charName = "";
-  for (const alias of orderedAlias) {
-    for (const [charName_, localeToAlias] of Object.entries(aliases)) {
-      // @ts-ignore
-      if (localeToAlias[localeNamespace] === alias) {
-        charName = charName_;
-        break;
-      }
-    }
-    const positionToFVSToVariant = variants[charName];
-    for (const position of joiningPositions) {
-      for (const [fvsKey, { default: default_, locales }] of Object.entries(positionToFVSToVariant[position])) {
-        const variantLocaleData = locales[locale];
-        if (!variantLocaleData) {
-          continue;
-        }
-        const conditions = variantLocaleData.conditions ?? [];
-        if (!default_ && !conditions.length) {
-          continue;
-        }
-        let conditionToPositionToFVS = charNameToConditionToPositionToFVS.get(charName);
-        if (!conditionToPositionToFVS) {
-          conditionToPositionToFVS = { default: new Map(), conditions: new Map() };
-          charNameToConditionToPositionToFVS.set(charName, conditionToPositionToFVS);
-        }
-        const fvs = Number(fvsKey) as FVS;
-        if (default_) {
-          conditionToPositionToFVS.default.set(position, fvs);
-        }
-        for (const condition of conditions) {
-          let positionToFVS = conditionToPositionToFVS.conditions.get(condition);
-          if (!positionToFVS) {
-            positionToFVS = new Map();
-            conditionToPositionToFVS.conditions.set(condition, positionToFVS);
+  const charNameToConditionToPositionToFVS = $derived.by(() => {
+    const _orderedAlias = orderedAliases(locale);
+    const _localeNamespace = localeNS(locale);
+    const map = new Map<string, { default: Map<JoiningPosition, PE>; conditions: Map<ConditionalMappingType, Map<JoiningPosition, PE>> }>();
+
+    for (const alias of _orderedAlias) {
+      const charName = resolveCharName(alias, _localeNamespace);
+      if (!charName) continue;
+      const positionToFVSToVariant = variants[charName];
+      for (const position of joiningPositions) {
+        for (const [fvsKey, { default: default_, locales }] of Object.entries(positionToFVSToVariant[position])) {
+          const variantLocaleData = locales[locale];
+          if (!variantLocaleData) {
+            continue;
           }
-          positionToFVS.set(position, Number(fvsKey) as FVS);
+          const conditions = variantLocaleData.conditions ?? [];
+          if (!default_ && !conditions.length) continue;
+          const charData = mapGetOrCreate(map, charName, () => ({ default: new Map(), conditions: new Map() }));
+          const fvs = Number(fvsKey) as FVS;
+          const baseWritten = variants[charName]?.[position]?.[fvsKey as unknown as FVS]?.written;
+          const written: WrittenUnitID[] | undefined = isVariantRef(variantLocaleData.written ?? baseWritten) ? undefined : ((variantLocaleData.written ?? baseWritten) as WrittenUnitID[] | undefined);
+          if (default_) charData.default.set(position, { fvs, written });
+          for (const condition of conditions)
+            mapGetOrCreate(
+              mapGetOrCreate(charData.conditions, condition, () => new Map()),
+              position,
+              () => ({ fvs, written }),
+            );
         }
       }
     }
-  }
+    // Resolve VariantReferences in default entries
+    for (const [charName, charData] of map) {
+      for (const [position, entry] of charData.default) {
+        if (entry.written) continue;
+        const baseVariant = variants[charName]?.[position]?.[String(entry.fvs) as unknown as FVS];
+        if (!baseVariant) continue;
+        const rawWritten = baseVariant.locales[locale]?.written ?? baseVariant.written;
+        if (!isVariantRef(rawWritten)) continue;
+        const [refPos, refFvs] = rawWritten as unknown as [JoiningPosition, FVS];
+        const resolved = resolveRef(charName, refPos, refFvs, locale);
+        if (resolved) {
+          entry.written = resolved;
+          entry.renderPos = refPos;
+        }
+      }
+    }
+    return map;
+  });
 </script>
 
 <table>
   <thead>
-    <tr>
-      <th rowspan="2">Letter</th>
-      <th rowspan="2">Mapping type</th>
-      <th colspan="4">Variants</th>
-    </tr>
-    <tr>
-      {#each joiningPositions as position}
-        <th>{position}</th>
-      {/each}
-    </tr>
+    <tr><th rowspan="2">Letter</th><th rowspan="2">Mapping type</th><th colspan="4">Variants</th></tr>
+    <tr
+      >{#each joiningPositions as p}<th>{p}</th>{/each}</tr
+    >
   </thead>
   <tbody>
     {#each charNameToConditionToPositionToFVS as [charName, { default: defaultPositionToFVS, conditions: conditionToPositionToFVS }]}
@@ -86,33 +85,29 @@
       {@const hex = hexFromCP(codePoint)}
       {@const char = String.fromCodePoint(codePoint)}
       {@const aliasData = aliases[charName]}
-      {@const alias = typeof aliasData == "object" ? aliasData[localeNamespace] : aliasData}
+      {@const alias = typeof aliasData === "object" ? aliasData[localeNamespace] : aliasData}
       <tr>
         <td rowspan={conditionToPositionToFVS.size + 1} title="U+{hex} {char} {charName}">
-          <a href="#{alias}"
-            >{hex}<br />
-            {char} <i>{alias}</i></a
-          >
+          <a href="#{alias}">{hex}<br />{char} <i>{alias}</i></a>
         </td>
         <td class="default">default</td>
         {#each joiningPositions as position}
-          <td class="default">
-            <span><LetterVariant {charName} {position} fvs={defaultPositionToFVS.get(position)!} /></span>
-          </td>
+          {@const e = defaultPositionToFVS.get(position)}
+          <td id="{alias}-{position}" class="default"
+            >{#if e}<span><LetterVariant {charName} position={e.renderPos ?? position} fvs={e.fvs} written={e.written} /></span>{/if}</td
+          >
         {/each}
       </tr>
       {#each conditionOrder as condition}
         {@const positionToFVS = conditionToPositionToFVS.get(condition)}
         {#if positionToFVS}
           <tr>
-            <td>{condition}</td>
+            <td>{condition.replace(/_/g, "_\u200B")}</td>
             {#each joiningPositions as position}
-              {@const fvs = positionToFVS.get(position)}
-              <td class="variant">
-                {#if fvs != undefined}
-                  <span><LetterVariant {charName} {position} {fvs} /></span>
-                {/if}
-              </td>
+              {@const entry = positionToFVS.get(position)}
+              <td id="{alias}-{position}-{condition}" class="variant"
+                >{#if entry}<span><LetterVariant {charName} {position} fvs={entry.fvs} written={entry.written} /></span>{/if}</td
+              >
             {/each}
           </tr>
         {/if}
@@ -122,26 +117,35 @@
 </table>
 
 <style>
+  :global(table) {
+    display: table !important;
+    overflow: visible !important;
+  }
   td,
   th {
     text-align: center !important;
     vertical-align: middle;
-    word-break: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   td.variant span,
   td.default span {
-    font-size: 2em;
+    font-size: 3em;
+    line-height: 1;
   }
   td.default {
     background-color: whitesmoke;
+  }
+  td:target {
+    background-color: yellow;
   }
   td a {
     text-decoration: none;
   }
   tbody td:first-child {
-    width: 4vw;
+    width: 4rem;
   }
   tbody td:nth-child(n + 3) {
-    width: 6vw;
+    width: 4rem;
   }
 </style>
