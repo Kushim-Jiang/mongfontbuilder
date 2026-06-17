@@ -1430,7 +1430,7 @@
           "Nx"
         ],
         "locales": {
-          "MCH": {
+          "MCHx": {
             "gb": "0069 manchu na third medial form"
           }
         }
@@ -1495,7 +1495,7 @@
           "Nx"
         ],
         "locales": {
-          "MCH": {
+          "MCHx": {
             "gb": "031A manchu na third final form"
           }
         }
@@ -7792,7 +7792,7 @@
           3
         ],
         "locales": {
-          "MCH": {
+          "MCHx": {
             "gb": "0073 manchu da third isolated form"
           }
         }
@@ -7857,7 +7857,7 @@
           "Dt"
         ],
         "locales": {
-          "MCH": {
+          "MCHx": {
             "gb": "0073 manchu da third isolated form"
           }
         }
@@ -8965,10 +8965,9 @@
           1
         ],
         "locales": {
-          "MCH": {
+          "MCHx": {
             "gb": "034F manchu ra second isolated form"
-          },
-          "MCHx": {}
+          }
         }
       }
     },
@@ -8991,10 +8990,9 @@
           "R3"
         ],
         "locales": {
-          "MCH": {
+          "MCHx": {
             "gb": "034F manchu ra second initial form"
-          },
-          "MCHx": {}
+          }
         }
       }
     },
@@ -9017,10 +9015,9 @@
           "R3"
         ],
         "locales": {
-          "MCH": {
+          "MCHx": {
             "gb": "034F manchu ra second medial form"
-          },
-          "MCHx": {}
+          }
         }
       }
     },

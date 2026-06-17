@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_Y.medi" format="2">
+  <advance width="361"/>
+  <outline>
+    <contour>
+      <point x="27" y="-70" type="curve"/>
+      <point x="65" y="-119" type="line"/>
+      <point x="118" y="-79"/>
+      <point x="174" y="-42"/>
+      <point x="233" y="-7" type="curve"/>
+      <point x="166" y="124"/>
+      <point x="114" y="247"/>
+      <point x="78" y="364" type="curve"/>
+      <point x="391" y="364" type="line"/>
+      <point x="391" y="444" type="line"/>
+      <point x="0" y="444" type="line"/>
+      <point x="0" y="364" type="line"/>
+      <point x="29" y="252"/>
+      <point x="71" y="139"/>
+      <point x="126" y="25" type="curve"/>
+      <point x="91" y="-4"/>
+      <point x="58" y="-36"/>
+    </contour>
+  </outline>
+</glyph>

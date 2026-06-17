@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#! /usr/bin/env node data\export.ts
 
 import { join } from "node:path";
 import { writeFile } from "node:fs/promises";

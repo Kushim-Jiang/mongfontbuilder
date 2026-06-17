@@ -1149,7 +1149,7 @@ export const variants: Record<
       "3": {
         written: ["Nx"],
         locales: {
-          MCH: {
+          MCHx: {
             gb: "0069 manchu na third medial form",
           },
         },
@@ -1204,7 +1204,7 @@ export const variants: Record<
       "3": {
         written: ["Nx"],
         locales: {
-          MCH: {
+          MCHx: {
             gb: "031A manchu na third final form",
           },
         },
@@ -6328,7 +6328,7 @@ export const variants: Record<
       "2": {
         written: ["init", 3],
         locales: {
-          MCH: {
+          MCHx: {
             gb: "0073 manchu da third isolated form",
           },
         },
@@ -6375,7 +6375,7 @@ export const variants: Record<
       "3": {
         written: ["Dt"],
         locales: {
-          MCH: {
+          MCHx: {
             gb: "0073 manchu da third isolated form",
           },
         },
@@ -7269,10 +7269,9 @@ export const variants: Record<
       "1": {
         written: ["init", 1],
         locales: {
-          MCH: {
+          MCHx: {
             gb: "034F manchu ra second isolated form",
           },
-          MCHx: {},
         },
       },
     },
@@ -7291,10 +7290,9 @@ export const variants: Record<
       "1": {
         written: ["R3"],
         locales: {
-          MCH: {
+          MCHx: {
             gb: "034F manchu ra second initial form",
           },
-          MCHx: {},
         },
       },
     },
@@ -7313,10 +7311,9 @@ export const variants: Record<
       "1": {
         written: ["R3"],
         locales: {
-          MCH: {
+          MCHx: {
             gb: "034F manchu ra second medial form",
           },
-          MCHx: {},
         },
       },
     },

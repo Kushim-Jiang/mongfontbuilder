@@ -21,8 +21,6 @@
     <string>_A.medi</string>
     <string>_A.fina</string>
     <string>_Aa.fina</string>
-    <string>_Aw.fina</string>
-    <string>_A2.init</string>
     <string>_Ah.medi</string>
     <string>_Ah.fina</string>
     <string>_At.fina</string>
@@ -34,9 +32,6 @@
     <string>_I.fina</string>
     <string>_Iy.fina</string>
     <string>_Ic.init</string>
-    <string>_Ih.init</string>
-    <string>_Iq.init</string>
-    <string>_It.init</string>
     <string>_O.medi</string>
     <string>_O.fina</string>
     <string>_Oh.medi</string>
@@ -47,17 +42,9 @@
     <string>_N.init</string>
     <string>_N.medi</string>
     <string>_N.fina</string>
-    <string>_Nx.medi</string>
-    <string>_Nx.fina</string>
-    <string>_Nb.init</string>
-    <string>_Nb.medi</string>
     <string>_B.init</string>
     <string>_B.medi</string>
     <string>_B.fina</string>
-    <string>_Bc.init</string>
-    <string>_Bc.medi</string>
-    <string>_Bg.init</string>
-    <string>_Bg.medi</string>
     <string>_Pb.init</string>
     <string>_Pb.medi</string>
     <string>_H.init</string>
@@ -68,9 +55,6 @@
     <string>_Hc.medi</string>
     <string>_Hx.medi</string>
     <string>_Hx.fina</string>
-    <string>_Hy.init</string>
-    <string>_Hy.medi</string>
-    <string>_Hy2.medi</string>
     <string>_G.init</string>
     <string>_G.medi</string>
     <string>_G.fina</string>
@@ -88,81 +72,41 @@
     <string>_L.init</string>
     <string>_L.medi</string>
     <string>_L.fina</string>
-    <string>_L2.init</string>
-    <string>_Lc.init</string>
-    <string>_Lc.medi</string>
     <string>_S.init</string>
     <string>_S.medi</string>
     <string>_S.fina</string>
-    <string>_S3.fina</string>
     <string>_Sp.init</string>
     <string>_Sp.medi</string>
     <string>_Sp.fina</string>
-    <string>_Sc.init</string>
-    <string>_Sc.medi</string>
-    <string>_St.init</string>
-    <string>_St.medi</string>
-    <string>_St2.init</string>
-    <string>_St2.medi</string>
-    <string>_Sx.init</string>
-    <string>_Sx.medi</string>
     <string>_T.init</string>
     <string>_Tb.init</string>
     <string>_Th.init</string>
     <string>_Tt.init</string>
-    <string>_Tx.init</string>
-    <string>_Ts.init</string>
     <string>_D.medi</string>
     <string>_Db.medi</string>
     <string>_Dd.medi</string>
     <string>_Dd.fina</string>
     <string>_Dh.medi</string>
-    <string>_Dt.init</string>
     <string>_Dt.medi</string>
-    <string>_Dr.init</string>
-    <string>_Dr.medi</string>
-    <string>_Dr.fina</string>
-    <string>_Dy.init</string>
-    <string>_Dy.medi</string>
-    <string>_Dx.medi</string>
-    <string>_Dw.medi</string>
     <string>_Ch.init</string>
     <string>_Ch.medi</string>
-    <string>_Ch.fina</string>
     <string>_Cc.init</string>
     <string>_Cc.medi</string>
-    <string>_Cc.fina</string>
     <string>_J.medi</string>
-    <string>_J.fina</string>
     <string>_Jc.medi</string>
-    <string>_Jc.fina</string>
-    <string>_Jh.medi</string>
-    <string>_Jq.medi</string>
-    <string>_Jt.medi</string>
-    <string>_Jt.fina</string>
     <string>_Y.init</string>
     <string>_Y.medi</string>
     <string>_R.init</string>
     <string>_R.medi</string>
     <string>_R2.fina</string>
-    <string>_R3.init</string>
-    <string>_R3.medi</string>
     <string>_W.init</string>
     <string>_W.medi</string>
-    <string>_Wn.init</string>
-    <string>_Wn.medi</string>
-    <string>_Wn.fina</string>
-    <string>_Wc.init</string>
-    <string>_Wc.medi</string>
-    <string>_Wd.init</string>
-    <string>_Wd.medi</string>
     <string>_V.init</string>
     <string>_V.medi</string>
     <string>_K2.init</string>
     <string>_K2.medi</string>
     <string>_Kh.init</string>
     <string>_Kh.medi</string>
-    <string>_Kh.fina</string>
     <string>_Kc.init</string>
     <string>_Kc.medi</string>
     <string>_Cs.init</string>
@@ -172,10 +116,6 @@
     <string>_Zs.init</string>
     <string>_Zs.medi</string>
     <string>_Zs.fina</string>
-    <string>_Zt.init</string>
-    <string>_Zt.medi</string>
-    <string>_Ct.init</string>
-    <string>_Ct.medi</string>
     <string>_GA.init</string>
     <string>_GA.medi</string>
     <string>_GAa.isol</string>
@@ -216,22 +156,6 @@
     <string>_GcOI.medi</string>
     <string>_GcUe.isol</string>
     <string>_GcUe.fina</string>
-    <string>_GxA.init</string>
-    <string>_GxA.medi</string>
-    <string>_GxAa.isol</string>
-    <string>_GxAa.fina</string>
-    <string>_GxI.init</string>
-    <string>_GxI.medi</string>
-    <string>_GxI.isol</string>
-    <string>_GxI.fina</string>
-    <string>_GxO.init</string>
-    <string>_GxO.medi</string>
-    <string>_GxO.isol</string>
-    <string>_GxO.fina</string>
-    <string>_GxOI.init</string>
-    <string>_GxOI.medi</string>
-    <string>_GxUe.isol</string>
-    <string>_GxUe.fina</string>
     <string>_GhO.init</string>
     <string>_GhO.medi</string>
     <string>_GhO.isol</string>
@@ -288,50 +212,6 @@
     <string>_PbOI.medi</string>
     <string>_PbUe.isol</string>
     <string>_PbUe.fina</string>
-    <string>_BgA.init</string>
-    <string>_BgA.medi</string>
-    <string>_BgAa.isol</string>
-    <string>_BgAa.fina</string>
-    <string>_BgAh.init</string>
-    <string>_BgAh.medi</string>
-    <string>_BgAt.isol</string>
-    <string>_BgAt.fina</string>
-    <string>_BgI.init</string>
-    <string>_BgI.medi</string>
-    <string>_BgI.isol</string>
-    <string>_BgI.fina</string>
-    <string>_BgO.init</string>
-    <string>_BgO.medi</string>
-    <string>_BgO.isol</string>
-    <string>_BgO.fina</string>
-    <string>_BgOh.init</string>
-    <string>_BgOh.medi</string>
-    <string>_BgOh.isol</string>
-    <string>_BgOh.fina</string>
-    <string>_BgOI.init</string>
-    <string>_BgOI.medi</string>
-    <string>_BgUe.isol</string>
-    <string>_BgUe.fina</string>
-    <string>_BcA.init</string>
-    <string>_BcA.medi</string>
-    <string>_BcAa.isol</string>
-    <string>_BcAa.fina</string>
-    <string>_BcAh.init</string>
-    <string>_BcAh.medi</string>
-    <string>_BcAt.isol</string>
-    <string>_BcAt.fina</string>
-    <string>_BcI.init</string>
-    <string>_BcI.medi</string>
-    <string>_BcI.isol</string>
-    <string>_BcI.fina</string>
-    <string>_BcO.init</string>
-    <string>_BcO.medi</string>
-    <string>_BcO.isol</string>
-    <string>_BcO.fina</string>
-    <string>_BcOh.init</string>
-    <string>_BcOh.medi</string>
-    <string>_BcOh.isol</string>
-    <string>_BcOh.fina</string>
     <string>_K2A.init</string>
     <string>_K2A.medi</string>
     <string>_K2Aa.isol</string>
@@ -356,22 +236,6 @@
     <string>_KcO.medi</string>
     <string>_KcO.isol</string>
     <string>_KcO.fina</string>
-    <string>HhA.init</string>
-    <string>Hh2A.medi</string>
-    <string>HhAa.isol</string>
-    <string>Hh2Aa.fina</string>
-    <string>HyA.init</string>
-    <string>Hy2A.medi</string>
-    <string>HyAa.isol</string>
-    <string>Hy2Aa.fina</string>
-    <string>_WdI.init</string>
-    <string>_WdI.medi</string>
-    <string>_WdI.isol</string>
-    <string>_WdI.fina</string>
-    <string>_WcI.init</string>
-    <string>_WcI.medi</string>
-    <string>_WcI.isol</string>
-    <string>_WcI.fina</string>
     <string>_AGN.medi</string>
     <string>_AGH.medi</string>
     <string>_AGHh.medi</string>
@@ -389,30 +253,6 @@
     <string>_LL.medi</string>
     <string>_ML.medi</string>
     <string>_MM.medi</string>
-    <string>_IhAh.init</string>
-    <string>_JhAh.medi</string>
-    <string>_IhAh.isol</string>
-    <string>_JhAh.fina</string>
-    <string>_IhOh.init</string>
-    <string>_JhOh.medi</string>
-    <string>_IhOh.isol</string>
-    <string>_JhUh.fina</string>
-    <string>_LcAh.init</string>
-    <string>_LcAh.medi</string>
-    <string>_LcAh.isol</string>
-    <string>_LcAh.fina</string>
-    <string>_LcOh.init</string>
-    <string>_LcOh.medi</string>
-    <string>_LcOh.isol</string>
-    <string>_LcUh.fina</string>
-    <string>_ZtAh.init</string>
-    <string>_ZtAh.medi</string>
-    <string>_ZtAh.isol</string>
-    <string>_ZtAh.fina</string>
-    <string>_ZtOh.init</string>
-    <string>_ZtOh.medi</string>
-    <string>_ZtOh.isol</string>
-    <string>_ZtUh.fina</string>
   </array>
 </dict>
 </plist>

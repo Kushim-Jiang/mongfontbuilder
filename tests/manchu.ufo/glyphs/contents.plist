@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>Hh2A.medi</key>
-  <string>H_h2A_.medi.glif</string>
-  <key>Hh2Aa.fina</key>
-  <string>H_h2A_a.fina.glif</string>
-  <key>HhA.init</key>
-  <string>H_hA_.init.glif</string>
-  <key>HhAa.isol</key>
-  <string>H_hA_a.isol.glif</string>
-  <key>Hy2A.medi</key>
-  <string>H_y2A_.medi.glif</string>
-  <key>Hy2Aa.fina</key>
-  <string>H_y2A_a.fina.glif</string>
-  <key>HyA.init</key>
-  <string>H_yA_.init.glif</string>
-  <key>HyAa.isol</key>
-  <string>H_yA_a.isol.glif</string>
   <key>_A.fina</key>
   <string>_A_.fina.glif</string>
   <key>_A.init</key>
@@ -26,8 +10,6 @@
   <string>_A_.isol.glif</string>
   <key>_A.medi</key>
   <string>_A_.medi.glif</string>
-  <key>_A2.init</key>
-  <string>_A_2.init.glif</string>
   <key>_AGH.medi</key>
   <string>_A_G_H_.medi.glif</string>
   <key>_AGHc.medi</key>
@@ -52,8 +34,6 @@
   <string>_A_i.medi.glif</string>
   <key>_At.fina</key>
   <string>_A_t.fina.glif</string>
-  <key>_Aw.fina</key>
-  <string>_A_w.fina.glif</string>
   <key>_B.fina</key>
   <string>_B_.fina.glif</string>
   <key>_B.init</key>
@@ -116,110 +96,10 @@
   <string>_B_U_e.fina.glif</string>
   <key>_BUe.isol</key>
   <string>_B_U_e.isol.glif</string>
-  <key>_Bc.init</key>
-  <string>_B_c.init.glif</string>
-  <key>_Bc.medi</key>
-  <string>_B_c.medi.glif</string>
-  <key>_BcA.init</key>
-  <string>_B_cA_.init.glif</string>
-  <key>_BcA.medi</key>
-  <string>_B_cA_.medi.glif</string>
-  <key>_BcAa.fina</key>
-  <string>_B_cA_a.fina.glif</string>
-  <key>_BcAa.isol</key>
-  <string>_B_cA_a.isol.glif</string>
-  <key>_BcAh.init</key>
-  <string>_B_cA_h.init.glif</string>
-  <key>_BcAh.medi</key>
-  <string>_B_cA_h.medi.glif</string>
-  <key>_BcAt.fina</key>
-  <string>_B_cA_t.fina.glif</string>
-  <key>_BcAt.isol</key>
-  <string>_B_cA_t.isol.glif</string>
-  <key>_BcI.fina</key>
-  <string>_B_cI_.fina.glif</string>
-  <key>_BcI.init</key>
-  <string>_B_cI_.init.glif</string>
-  <key>_BcI.isol</key>
-  <string>_B_cI_.isol.glif</string>
-  <key>_BcI.medi</key>
-  <string>_B_cI_.medi.glif</string>
-  <key>_BcO.fina</key>
-  <string>_B_cO_.fina.glif</string>
-  <key>_BcO.init</key>
-  <string>_B_cO_.init.glif</string>
-  <key>_BcO.isol</key>
-  <string>_B_cO_.isol.glif</string>
-  <key>_BcO.medi</key>
-  <string>_B_cO_.medi.glif</string>
-  <key>_BcOh.fina</key>
-  <string>_B_cO_h.fina.glif</string>
-  <key>_BcOh.init</key>
-  <string>_B_cO_h.init.glif</string>
-  <key>_BcOh.isol</key>
-  <string>_B_cO_h.isol.glif</string>
-  <key>_BcOh.medi</key>
-  <string>_B_cO_h.medi.glif</string>
-  <key>_Bg.init</key>
-  <string>_B_g.init.glif</string>
-  <key>_Bg.medi</key>
-  <string>_B_g.medi.glif</string>
-  <key>_BgA.init</key>
-  <string>_B_gA_.init.glif</string>
-  <key>_BgA.medi</key>
-  <string>_B_gA_.medi.glif</string>
-  <key>_BgAa.fina</key>
-  <string>_B_gA_a.fina.glif</string>
-  <key>_BgAa.isol</key>
-  <string>_B_gA_a.isol.glif</string>
-  <key>_BgAh.init</key>
-  <string>_B_gA_h.init.glif</string>
-  <key>_BgAh.medi</key>
-  <string>_B_gA_h.medi.glif</string>
-  <key>_BgAt.fina</key>
-  <string>_B_gA_t.fina.glif</string>
-  <key>_BgAt.isol</key>
-  <string>_B_gA_t.isol.glif</string>
-  <key>_BgI.fina</key>
-  <string>_B_gI_.fina.glif</string>
-  <key>_BgI.init</key>
-  <string>_B_gI_.init.glif</string>
-  <key>_BgI.isol</key>
-  <string>_B_gI_.isol.glif</string>
-  <key>_BgI.medi</key>
-  <string>_B_gI_.medi.glif</string>
-  <key>_BgO.fina</key>
-  <string>_B_gO_.fina.glif</string>
-  <key>_BgO.init</key>
-  <string>_B_gO_.init.glif</string>
-  <key>_BgO.isol</key>
-  <string>_B_gO_.isol.glif</string>
-  <key>_BgO.medi</key>
-  <string>_B_gO_.medi.glif</string>
-  <key>_BgOI.init</key>
-  <string>_B_gO_I_.init.glif</string>
-  <key>_BgOI.medi</key>
-  <string>_B_gO_I_.medi.glif</string>
-  <key>_BgOh.fina</key>
-  <string>_B_gO_h.fina.glif</string>
-  <key>_BgOh.init</key>
-  <string>_B_gO_h.init.glif</string>
-  <key>_BgOh.isol</key>
-  <string>_B_gO_h.isol.glif</string>
-  <key>_BgOh.medi</key>
-  <string>_B_gO_h.medi.glif</string>
-  <key>_BgUe.fina</key>
-  <string>_B_gU_e.fina.glif</string>
-  <key>_BgUe.isol</key>
-  <string>_B_gU_e.isol.glif</string>
-  <key>_Cc.fina</key>
-  <string>_C_c.fina.glif</string>
   <key>_Cc.init</key>
   <string>_C_c.init.glif</string>
   <key>_Cc.medi</key>
   <string>_C_c.medi.glif</string>
-  <key>_Ch.fina</key>
-  <string>_C_h.fina.glif</string>
   <key>_Ch.init</key>
   <string>_C_h.init.glif</string>
   <key>_Ch.medi</key>
@@ -228,10 +108,6 @@
   <string>_C_s.init.glif</string>
   <key>_Cs.medi</key>
   <string>_C_s.medi.glif</string>
-  <key>_Ct.init</key>
-  <string>_C_t.init.glif</string>
-  <key>_Ct.medi</key>
-  <string>_C_t.medi.glif</string>
   <key>_D.medi</key>
   <string>_D_.medi.glif</string>
   <key>_Db.medi</key>
@@ -242,24 +118,8 @@
   <string>_D_d.medi.glif</string>
   <key>_Dh.medi</key>
   <string>_D_h.medi.glif</string>
-  <key>_Dr.fina</key>
-  <string>_D_r.fina.glif</string>
-  <key>_Dr.init</key>
-  <string>_D_r.init.glif</string>
-  <key>_Dr.medi</key>
-  <string>_D_r.medi.glif</string>
-  <key>_Dt.init</key>
-  <string>_D_t.init.glif</string>
   <key>_Dt.medi</key>
   <string>_D_t.medi.glif</string>
-  <key>_Dw.medi</key>
-  <string>_D_w.medi.glif</string>
-  <key>_Dx.medi</key>
-  <string>_D_x.medi.glif</string>
-  <key>_Dy.init</key>
-  <string>_D_y.init.glif</string>
-  <key>_Dy.medi</key>
-  <string>_D_y.medi.glif</string>
   <key>_G.fina</key>
   <string>_G_.fina.glif</string>
   <key>_G.init</key>
@@ -386,38 +246,6 @@
   <string>_G_x.init.glif</string>
   <key>_Gx.medi</key>
   <string>_G_x.medi.glif</string>
-  <key>_GxA.init</key>
-  <string>_G_xA_.init.glif</string>
-  <key>_GxA.medi</key>
-  <string>_G_xA_.medi.glif</string>
-  <key>_GxAa.fina</key>
-  <string>_G_xA_a.fina.glif</string>
-  <key>_GxAa.isol</key>
-  <string>_G_xA_a.isol.glif</string>
-  <key>_GxI.fina</key>
-  <string>_G_xI_.fina.glif</string>
-  <key>_GxI.init</key>
-  <string>_G_xI_.init.glif</string>
-  <key>_GxI.isol</key>
-  <string>_G_xI_.isol.glif</string>
-  <key>_GxI.medi</key>
-  <string>_G_xI_.medi.glif</string>
-  <key>_GxO.fina</key>
-  <string>_G_xO_.fina.glif</string>
-  <key>_GxO.init</key>
-  <string>_G_xO_.init.glif</string>
-  <key>_GxO.isol</key>
-  <string>_G_xO_.isol.glif</string>
-  <key>_GxO.medi</key>
-  <string>_G_xO_.medi.glif</string>
-  <key>_GxOI.init</key>
-  <string>_G_xO_I_.init.glif</string>
-  <key>_GxOI.medi</key>
-  <string>_G_xO_I_.medi.glif</string>
-  <key>_GxUe.fina</key>
-  <string>_G_xU_e.fina.glif</string>
-  <key>_GxUe.isol</key>
-  <string>_G_xU_e.isol.glif</string>
   <key>_H.init</key>
   <string>_H_.init.glif</string>
   <key>_H.medi</key>
@@ -434,12 +262,6 @@
   <string>_H_x.fina.glif</string>
   <key>_Hx.medi</key>
   <string>_H_x.medi.glif</string>
-  <key>_Hy.init</key>
-  <string>_H_y.init.glif</string>
-  <key>_Hy.medi</key>
-  <string>_H_y.medi.glif</string>
-  <key>_Hy2.medi</key>
-  <string>_H_y2.medi.glif</string>
   <key>_I.fina</key>
   <string>_I_.fina.glif</string>
   <key>_I.init</key>
@@ -450,46 +272,12 @@
   <string>_I_.medi.glif</string>
   <key>_Ic.init</key>
   <string>_I_c.init.glif</string>
-  <key>_Ih.init</key>
-  <string>_I_h.init.glif</string>
-  <key>_IhAh.init</key>
-  <string>_I_hA_h.init.glif</string>
-  <key>_IhAh.isol</key>
-  <string>_I_hA_h.isol.glif</string>
-  <key>_IhOh.init</key>
-  <string>_I_hO_h.init.glif</string>
-  <key>_IhOh.isol</key>
-  <string>_I_hO_h.isol.glif</string>
-  <key>_Iq.init</key>
-  <string>_I_q.init.glif</string>
-  <key>_It.init</key>
-  <string>_I_t.init.glif</string>
   <key>_Iy.fina</key>
   <string>_I_y.fina.glif</string>
-  <key>_J.fina</key>
-  <string>_J_.fina.glif</string>
   <key>_J.medi</key>
   <string>_J_.medi.glif</string>
-  <key>_Jc.fina</key>
-  <string>_J_c.fina.glif</string>
   <key>_Jc.medi</key>
   <string>_J_c.medi.glif</string>
-  <key>_Jh.medi</key>
-  <string>_J_h.medi.glif</string>
-  <key>_JhAh.fina</key>
-  <string>_J_hA_h.fina.glif</string>
-  <key>_JhAh.medi</key>
-  <string>_J_hA_h.medi.glif</string>
-  <key>_JhOh.medi</key>
-  <string>_J_hO_h.medi.glif</string>
-  <key>_JhUh.fina</key>
-  <string>_J_hU_h.fina.glif</string>
-  <key>_Jq.medi</key>
-  <string>_J_q.medi.glif</string>
-  <key>_Jt.fina</key>
-  <string>_J_t.fina.glif</string>
-  <key>_Jt.medi</key>
-  <string>_J_t.medi.glif</string>
   <key>_K2.init</key>
   <string>_K_2.init.glif</string>
   <key>_K2.medi</key>
@@ -530,8 +318,6 @@
   <string>_K_cO_.isol.glif</string>
   <key>_KcO.medi</key>
   <string>_K_cO_.medi.glif</string>
-  <key>_Kh.fina</key>
-  <string>_K_h.fina.glif</string>
   <key>_Kh.init</key>
   <string>_K_h.init.glif</string>
   <key>_Kh.medi</key>
@@ -558,30 +344,8 @@
   <string>_L_.init.glif</string>
   <key>_L.medi</key>
   <string>_L_.medi.glif</string>
-  <key>_L2.init</key>
-  <string>_L_2.init.glif</string>
   <key>_LL.medi</key>
   <string>_L_L_.medi.glif</string>
-  <key>_Lc.init</key>
-  <string>_L_c.init.glif</string>
-  <key>_Lc.medi</key>
-  <string>_L_c.medi.glif</string>
-  <key>_LcAh.fina</key>
-  <string>_L_cA_h.fina.glif</string>
-  <key>_LcAh.init</key>
-  <string>_L_cA_h.init.glif</string>
-  <key>_LcAh.isol</key>
-  <string>_L_cA_h.isol.glif</string>
-  <key>_LcAh.medi</key>
-  <string>_L_cA_h.medi.glif</string>
-  <key>_LcOh.init</key>
-  <string>_L_cO_h.init.glif</string>
-  <key>_LcOh.isol</key>
-  <string>_L_cO_h.isol.glif</string>
-  <key>_LcOh.medi</key>
-  <string>_L_cO_h.medi.glif</string>
-  <key>_LcUh.fina</key>
-  <string>_L_cU_h.fina.glif</string>
   <key>_M.fina</key>
   <string>_M_.fina.glif</string>
   <key>_M.init</key>
@@ -598,14 +362,6 @@
   <string>_N_.init.glif</string>
   <key>_N.medi</key>
   <string>_N_.medi.glif</string>
-  <key>_Nb.init</key>
-  <string>_N_b.init.glif</string>
-  <key>_Nb.medi</key>
-  <string>_N_b.medi.glif</string>
-  <key>_Nx.fina</key>
-  <string>_N_x.fina.glif</string>
-  <key>_Nx.medi</key>
-  <string>_N_x.medi.glif</string>
   <key>_O.fina</key>
   <string>_O_.fina.glif</string>
   <key>_O.medi</key>
@@ -672,10 +428,6 @@
   <string>_R_.medi.glif</string>
   <key>_R2.fina</key>
   <string>_R_2.fina.glif</string>
-  <key>_R3.init</key>
-  <string>_R_3.init.glif</string>
-  <key>_R3.medi</key>
-  <string>_R_3.medi.glif</string>
   <key>_Rr.init</key>
   <string>_R_r.init.glif</string>
   <key>_Rr.medi</key>
@@ -686,42 +438,20 @@
   <string>_S_.init.glif</string>
   <key>_S.medi</key>
   <string>_S_.medi.glif</string>
-  <key>_S3.fina</key>
-  <string>_S_3.fina.glif</string>
-  <key>_Sc.init</key>
-  <string>_S_c.init.glif</string>
-  <key>_Sc.medi</key>
-  <string>_S_c.medi.glif</string>
   <key>_Sp.fina</key>
   <string>_S_p.fina.glif</string>
   <key>_Sp.init</key>
   <string>_S_p.init.glif</string>
   <key>_Sp.medi</key>
   <string>_S_p.medi.glif</string>
-  <key>_St.init</key>
-  <string>_S_t.init.glif</string>
-  <key>_St.medi</key>
-  <string>_S_t.medi.glif</string>
-  <key>_St2.init</key>
-  <string>_S_t2.init.glif</string>
-  <key>_St2.medi</key>
-  <string>_S_t2.medi.glif</string>
-  <key>_Sx.init</key>
-  <string>_S_x.init.glif</string>
-  <key>_Sx.medi</key>
-  <string>_S_x.medi.glif</string>
   <key>_T.init</key>
   <string>_T_.init.glif</string>
   <key>_Tb.init</key>
   <string>_T_b.init.glif</string>
   <key>_Th.init</key>
   <string>_T_h.init.glif</string>
-  <key>_Ts.init</key>
-  <string>_T_s.init.glif</string>
   <key>_Tt.init</key>
   <string>_T_t.init.glif</string>
-  <key>_Tx.init</key>
-  <string>_T_x.init.glif</string>
   <key>_U.fina</key>
   <string>_U_.fina.glif</string>
   <key>_Ue.fina</key>
@@ -736,36 +466,6 @@
   <string>_W_.init.glif</string>
   <key>_W.medi</key>
   <string>_W_.medi.glif</string>
-  <key>_Wc.init</key>
-  <string>_W_c.init.glif</string>
-  <key>_Wc.medi</key>
-  <string>_W_c.medi.glif</string>
-  <key>_WcI.fina</key>
-  <string>_W_cI_.fina.glif</string>
-  <key>_WcI.init</key>
-  <string>_W_cI_.init.glif</string>
-  <key>_WcI.isol</key>
-  <string>_W_cI_.isol.glif</string>
-  <key>_WcI.medi</key>
-  <string>_W_cI_.medi.glif</string>
-  <key>_Wd.init</key>
-  <string>_W_d.init.glif</string>
-  <key>_Wd.medi</key>
-  <string>_W_d.medi.glif</string>
-  <key>_WdI.fina</key>
-  <string>_W_dI_.fina.glif</string>
-  <key>_WdI.init</key>
-  <string>_W_dI_.init.glif</string>
-  <key>_WdI.isol</key>
-  <string>_W_dI_.isol.glif</string>
-  <key>_WdI.medi</key>
-  <string>_W_dI_.medi.glif</string>
-  <key>_Wn.fina</key>
-  <string>_W_n.fina.glif</string>
-  <key>_Wn.init</key>
-  <string>_W_n.init.glif</string>
-  <key>_Wn.medi</key>
-  <string>_W_n.medi.glif</string>
   <key>_Y.init</key>
   <string>_Y_.init.glif</string>
   <key>_Y.medi</key>
@@ -776,26 +476,6 @@
   <string>_Z_s.init.glif</string>
   <key>_Zs.medi</key>
   <string>_Z_s.medi.glif</string>
-  <key>_Zt.init</key>
-  <string>_Z_t.init.glif</string>
-  <key>_Zt.medi</key>
-  <string>_Z_t.medi.glif</string>
-  <key>_ZtAh.fina</key>
-  <string>_Z_tA_h.fina.glif</string>
-  <key>_ZtAh.init</key>
-  <string>_Z_tA_h.init.glif</string>
-  <key>_ZtAh.isol</key>
-  <string>_Z_tA_h.isol.glif</string>
-  <key>_ZtAh.medi</key>
-  <string>_Z_tA_h.medi.glif</string>
-  <key>_ZtOh.init</key>
-  <string>_Z_tO_h.init.glif</string>
-  <key>_ZtOh.isol</key>
-  <string>_Z_tO_h.isol.glif</string>
-  <key>_ZtOh.medi</key>
-  <string>_Z_tO_h.medi.glif</string>
-  <key>_ZtUh.fina</key>
-  <string>_Z_tU_h.fina.glif</string>
   <key>fvs1</key>
   <string>fvs1.glif</string>
   <key>fvs2</key>
