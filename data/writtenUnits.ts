@@ -38,7 +38,7 @@ export const writtenUnits = {
   },
   Bc: {
     init: { code: 0xe104, pre_a: 0xe259, pre_o: 0xe25a },
-    medi: { code: 0xe105, pre_a: 0xe259, pre_o: 0xe25a },
+    medi: { code: 0xe105, pre_a: 0xe263, pre_o: 0xe264 },
   },
   Bg: {
     init: { code: 0xe0d9, pre_a: 0xe24d, pre_o: 0xe24e },
@@ -47,7 +47,7 @@ export const writtenUnits = {
   },
   Bh: {
     init: { code: 0xe0fa, pre_a: 0xe257, pre_o: 0xe258 },
-    medi: { code: 0xe0fb, pre_a: 0xe257, pre_o: 0xe258 },
+    medi: { code: 0xe0fb, pre_a: 0xe267, pre_o: 0xe268 },
   },
   C: {
     init: { code: 0xe055 },
@@ -170,7 +170,7 @@ export const writtenUnits = {
   },
   Gp: {
     init: { code: 0xe074, pre_a: 0xe229, pre_o: 0xe22a },
-    medi: { code: 0xe075, pre_a: 0xe229, pre_o: 0xe22a },
+    medi: { code: 0xe075, pre_a: 0xe261, pre_o: 0xe262 },
   },
   Gx: {
     init: { code: 0xe028, pre_a: 0xe215, pre_o: 0xe216 },
@@ -282,14 +282,14 @@ export const writtenUnits = {
     fina: { code: 0xe11b },
   },
   K: {
-    init: { code: 0xe04f, pre_a: 0xe21d, pre_o: 0xe21e },
-    medi: { code: 0xe050, pre_a: 0xe21f, pre_o: 0xe220 },
-    fina: { code: 0xe051 },
+    init: { code: 0xe052, pre_a: 0xe21d, pre_o: 0xe21e },
+    medi: { code: 0xe053, pre_a: 0xe21f, pre_o: 0xe220 },
+    fina: { code: 0xe054 },
   },
   K2: {
-    init: { code: 0xe052, pre_a: 0xe221, pre_o: 0xe222 },
-    medi: { code: 0xe053, pre_a: 0xe223, pre_o: 0xe224 },
-    fina: { code: 0xe054 },
+    init: { code: 0xe04f, pre_a: 0xe221, pre_o: 0xe222 },
+    medi: { code: 0xe050, pre_a: 0xe223, pre_o: 0xe224 },
+    fina: { code: 0xe051 },
   },
   Kc: {
     init: { code: 0xe0ba, pre_a: 0xe240, pre_o: 0xe241 },
@@ -302,7 +302,7 @@ export const writtenUnits = {
   },
   Kp: {
     init: { code: 0xe081, pre_a: 0xe225, pre_o: 0xe226 },
-    medi: { code: 0xe082, pre_a: 0xe225, pre_o: 0xe226 },
+    medi: { code: 0xe082, pre_a: 0xe25c, pre_o: 0xe25e },
     fina: { code: 0xe083 },
   },
   L: {
@@ -386,11 +386,11 @@ export const writtenUnits = {
   },
   Ph: {
     init: { code: 0xe0fd, pre_a: 0xe255, pre_o: 0xe256 },
-    medi: { code: 0xe0fe, pre_a: 0xe255, pre_o: 0xe256 },
+    medi: { code: 0xe0fe, pre_a: 0xe265, pre_o: 0xe266 },
   },
   Pp: {
     init: { code: 0xe090, pre_a: 0xe227, pre_o: 0xe228 },
-    medi: { code: 0xe091, pre_a: 0xe227, pre_o: 0xe228 },
+    medi: { code: 0xe091, pre_a: 0xe25f, pre_o: 0xe260 },
     fina: { code: 0xe092 },
   },
   Q: {

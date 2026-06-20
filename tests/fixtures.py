@@ -15,7 +15,7 @@ import data
 from mongfontbuilder.data.types import LocaleID
 from mongfontbuilder.otl import MongFeaComposer
 from mongfontbuilder.spec import applySpecToFont
-from utils import parseAliases, parseLetter, parseWrittenUnits, tempDir, testsDir
+from utils import tempDir, testsDir
 
 FONT_NAME = {
     "MNG": "hudum",
@@ -26,6 +26,10 @@ FONT_NAME = {
 
 def buildFontForLocales(locales: list[LocaleID]) -> Path:
     fontName = FONT_NAME[locales[0].removesuffix("x")]
+    output = tempDir / f"{fontName}.otf"
+
+    if output.exists():
+        return output
 
     font = Font.open(testsDir / f"{fontName}.ufo")
     c = MongFeaComposer(
@@ -41,7 +45,6 @@ def buildFontForLocales(locales: list[LocaleID]) -> Path:
     intermediate = tempDir / f"{fontName}.ufo"
     font.save(intermediate, overwrite=True)
 
-    output = tempDir / f"{fontName}.otf"
     compileOTF(font).save(output)
     print(relpath(output))
     return output
@@ -56,8 +59,7 @@ def compileOTF(font: Font) -> TTFont:
     return compiler.compile(font)
 
 
-def loadTestCases(
-    font: Path,
+def loadRawTestCases(
     test_info: dict[str, list[str]],
     font_type: str,
 ) -> list[tuple[str, str, str, str] | ParameterSet]:
@@ -72,53 +74,38 @@ def loadTestCases(
                     if i and not i[0].startswith("#")
                 ]
             for index, letters, goal in rules:
-                try:
-                    parsedText = parseLetter(letters, locale)
-                    test_case = (
-                        f"{testSet}-{locale} > {index}",
-                        parseAliases(parsedText, locale),
-                        parseWrittenUnits(parsedText, font),
-                        goal,
-                    )
-
-                    # Handle MNG specific xfail cases
-                    if font_type == "MNG" and testSet == "eac" and locale == "hud":
-                        if index == "XIM11-46":
-                            test_cases.append(
-                                pytest.param(
-                                    *test_case,
-                                    marks=pytest.mark.xfail(
-                                        reason="The EAC spec expects an invalid FVS after a letter to prevent the MVS shaping step. The UTN model disagrees."
-                                    ),
-                                )
+                test_case = (f"{testSet}-{locale} > {index}", letters, locale, goal)
+                # Handle MNG specific xfail cases
+                if font_type == "MNG" and testSet == "eac" and locale == "hud":
+                    if index == "XIM11-46":
+                        test_cases.append(
+                            pytest.param(
+                                *test_case,
+                                marks=pytest.mark.xfail(
+                                    reason="The EAC spec expects an invalid FVS after a letter to prevent the MVS shaping step. The UTN model disagrees."
+                                ),
                             )
-                        elif index == "XIM11-1012":
-                            test_cases.append(
-                                pytest.param(
-                                    *test_case,
-                                    marks=pytest.mark.xfail(
-                                        reason="When an FVS after a letter prevents the MVS shaping step, the MVS is treated as an NBSP. In this case, the FVS remains valid. The UTN model considers this test case incorrect."
-                                    ),
-                                )
+                        )
+                    elif index == "XIM11-1012":
+                        test_cases.append(
+                            pytest.param(
+                                *test_case,
+                                marks=pytest.mark.xfail(
+                                    reason="When an FVS after a letter prevents the MVS shaping step, the MVS is treated as an NBSP. In this case, the FVS remains valid. The UTN model considers this test case incorrect."
+                                ),
                             )
-                        elif index in ["XIM11-39", "XIM11-40", "XIM11-41"]:
-                            test_cases.append(
-                                pytest.param(
-                                    *test_case,
-                                    marks=pytest.mark.xfail(
-                                        reason="The EAC spec assumes that all features of NNBSP should be disabled. The UTN model considers this test case incorrect. The UTN model considers that the old functionality of NNBSP should be retained."
-                                    ),
-                                )
+                        )
+                    elif index in ["XIM11-39", "XIM11-40", "XIM11-41"]:
+                        test_cases.append(
+                            pytest.param(
+                                *test_case,
+                                marks=pytest.mark.xfail(
+                                    reason="The EAC spec assumes that all features of NNBSP should be disabled. The UTN model considers this test case incorrect. The UTN model considers that the old functionality of NNBSP should be retained."
+                                ),
                             )
-                        else:
-                            test_cases.append(test_case)
+                        )
                     else:
                         test_cases.append(test_case)
-                except AssertionError as e:
-                    pytest.fail(
-                        f"ind:  {testSet}-{locale} > {index}\n"
-                        f"code: {letters}\n"
-                        f"parsedText: {parsedText}\n"
-                        f"err:  \n  {e}"
-                    )
+                else:
+                    test_cases.append(test_case)
     return test_cases

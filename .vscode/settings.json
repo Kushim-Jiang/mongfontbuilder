@@ -20,6 +20,7 @@
   },
   "python.analysis.typeCheckingMode": "basic",
   "python.testing.pytestEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "[toml]": {
     "editor.defaultFormatter": "bodil.prettier-toml"
   },
@@ -28,5 +29,7 @@
   },
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
-  }
+  },
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false
 }

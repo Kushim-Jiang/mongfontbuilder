@@ -232,7 +232,7 @@
                   {#if i > 0}<br />{/if}
                   <span class="wu">
                     {#each row.parts as part}
-                      <span class={part.blue ? "lig-blue" : ""}>{part.text}</span>
+                      <span class={part.blue ? (part.text === niruguText ? "lig-blue" : "lig-gray") : ""}>{part.text}</span>
                     {/each}
                   </span>
                 {/each}
