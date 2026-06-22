@@ -1,9 +1,11 @@
 from dataclasses import dataclass, field
-from typing import Literal, NamedTuple
+from typing import Literal, NamedTuple, get_args
 
 from cattrs import register_structure_hook
 
-from .misc import JoiningPosition, joiningPositions
+JoiningPosition = Literal["isol", "init", "medi", "fina"]
+joiningPositions: list[JoiningPosition] = [*get_args(JoiningPosition)]
+isol, init, medi, fina = joiningPositions
 
 WrittenUnitID = str
 LocaleID = Literal["MNG", "MNGx", "TOD", "TODx", "SIB", "MCH", "MCHx"]

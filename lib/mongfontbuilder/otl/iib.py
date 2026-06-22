@@ -4,8 +4,7 @@ from itertools import product
 from fontTools import unicodedata
 
 from .. import GlyphDescriptor, data, ligateParts, splitWrittens, writtenCombinations
-from ..data.misc import JoiningPosition
-from ..data.types import LocaleID
+from ..data.types import JoiningPosition, LocaleID
 from ..spec import GlyphSpec
 from ..utils import namespaceFromLocale
 from . import MongFeaComposer
@@ -25,7 +24,9 @@ def iib1(c: MongFeaComposer) -> None:
     """
 
     with c.Lookup(f"IIb.ligature", feature="rclt"):
-        inputToLigatureAndRequired = dict[tuple[GlyphDescriptor, ...], tuple[GlyphDescriptor, bool]]()
+        inputToLigatureAndRequired = dict[
+            tuple[GlyphDescriptor, ...], tuple[GlyphDescriptor, bool]
+        ]()
         for locale in c.locales:
             namespace = namespaceFromLocale(locale)
             vowelAliases = data.locales[locale].categories["vowel"]
@@ -33,9 +34,9 @@ def iib1(c: MongFeaComposer) -> None:
                 required = category == "required"
                 for writtens, positions in ligatureToPositions.items():
                     for position in positions:
-                        for input, ligature in iterLigatureSubstitutions(c, writtens, position, locale):
-                            if len(input) != 2:
-                                continue
+                        for input, ligature in iterLigatureSubstitutions(
+                            c, writtens, position, locale
+                        ):
                             if required:
                                 # Check the second glyph, ignoring LVS:
                                 codePoint = input[1].codePoints[0]
@@ -72,6 +73,8 @@ def iterLigatureSubstitutions(
     locale: LocaleID,
 ) -> Iterator[tuple[tuple[GlyphDescriptor, ...], GlyphDescriptor]]:
     for combination in writtenCombinations(splitWrittens(writtens), position):
+        if len(combination) != 2:
+            continue
         writtenLists = [
             [
                 GlyphDescriptor.parse(glyph.glyph)
@@ -99,7 +102,9 @@ def implementLigature(
             # we don't check ligatures when generating, only generate OTL for existing glyphs,
             # so it's possible for the component to be missing.
             return
-        c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec([c.glyphNameProcessor(componentName)])
+        c.spec.newGlyphs[c.glyphNameProcessor(ligatureName)] = GlyphSpec(
+            [c.glyphNameProcessor(componentName)]
+        )
     c.sub(*inputNames, by=ligatureName)
 
 

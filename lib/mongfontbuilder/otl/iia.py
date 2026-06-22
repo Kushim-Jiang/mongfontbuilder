@@ -1,7 +1,7 @@
 from fontTools import unicodedata
 
 from .. import GlyphDescriptor, data, uNameFromCodePoint
-from ..data.misc import joiningPositions
+from ..data.types import joiningPositions
 from . import MongFeaComposer
 
 

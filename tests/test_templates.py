@@ -1,6 +1,5 @@
 import sys
 from subprocess import run
-
 from pytest import mark
 
 from fixtures import loadRawTestCases

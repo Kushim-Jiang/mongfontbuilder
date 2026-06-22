@@ -12,9 +12,18 @@ templatesDir = Path(__file__).parent
 repo = templatesDir / ".."
 
 CONTROL_GLYPHS = [
-    ".notdef", "mvs", "mvs.narrow", "mvs.wide",
-    "fvs1", "fvs2", "fvs3", "fvs4",
-    "zwj", "zwnj", "space", "nnbsp",
+    ".notdef",
+    "mvs",
+    "mvs.narrow",
+    "mvs.wide",
+    "fvs1",
+    "fvs2",
+    "fvs3",
+    "fvs4",
+    "zwj",
+    "zwnj",
+    "space",
+    "nnbsp",
 ]
 
 MASTER_ID = "E14AE757-7134-4DB9-897C-AD248BACE90D"  # Stable between updates

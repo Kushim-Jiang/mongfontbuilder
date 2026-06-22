@@ -1,7 +1,7 @@
 from fontTools.feaLib import ast
 
 from .. import GlyphDescriptor, data, getPosition, ligateParts
-from ..data.misc import fina, init, isol, medi
+from ..data.types import fina, init, isol, medi
 from ..utils import getAliasesByLocale, getCharNameByAlias
 from . import MongFeaComposer
 
@@ -1111,7 +1111,10 @@ def iii5(c: MongFeaComposer) -> None:
                 )
                 c.sub(
                     bowedG,
-                    c.input(c.variants(locale, ["e", "u"]), c.conditions[f"{locale}:post_bowed_feminine"]),
+                    c.input(
+                        c.variants(locale, ["e", "u"]),
+                        c.conditions[f"{locale}:post_bowed_feminine"],
+                    ),
                     by=None,
                 )
                 c.sub(
@@ -1189,82 +1192,41 @@ def iii6(c: MongFeaComposer) -> None:
                             )
 
     if "TOD" in c.locales:
+        _lvsManualTod = [
+            ("TOD-a_lvs.isol", "fvs1.ignored", "u1820_u1843.ALv.isol"),
+            ("TOD-a_lvs.isol", "fvs3.ignored", "u1820_u1843.AALv.isol"),
+            ("TOD-a_lvs.init", "fvs2.ignored", "u1820_u1843.AALv.init"),
+            ("TOD-a_lvs.fina", "fvs1.ignored", "u1820_u1843.AaLv.fina"),
+            ("TOD-a_lvs.fina", "fvs2.ignored", "u1820_u1843.AaLv.fina"),
+        ]
         with c.Lookup("_.manual.lvs.TOD") as _lvs:
-            c.sub(c.input(c.classes["TOD-a_lvs.isol"]), "fvs1.ignored", by="u1820_u1843.ALv.isol")
-            c.sub(c.input(c.classes["TOD-a_lvs.isol"]), "fvs3.ignored", by="u1820_u1843.AALv.isol")
-            c.sub(c.input(c.classes["TOD-a_lvs.init"]), "fvs2.ignored", by="u1820_u1843.AALv.init")
-            c.sub(c.input(c.classes["TOD-a_lvs.fina"]), "fvs1.ignored", by="u1820_u1843.AaLv.fina")
-            c.sub(c.input(c.classes["TOD-a_lvs.fina"]), "fvs2.ignored", by="u1820_u1843.AaLv.fina")
+            for glyphClass, fvs, target in _lvsManualTod:
+                c.sub(c.input(c.classes[glyphClass]), fvs, by=target)
         with c.Lookup("III.fvs.lvs.TOD"):
-            c.sub(
-                c.input(c.classes["TOD-a_lvs.isol"], _lvs),
-                c.input("fvs1.ignored", c.conditions["_.valid"]),
-                by=None,
-            )
-            c.sub(
-                c.input(c.classes["TOD-a_lvs.isol"], _lvs),
-                c.input("fvs3.ignored", c.conditions["_.valid"]),
-                by=None,
-            )
-            c.sub(
-                c.input(c.classes["TOD-a_lvs.init"], _lvs),
-                c.input("fvs2.ignored", c.conditions["_.valid"]),
-                by=None,
-            )
-            c.sub(
-                c.input(c.classes["TOD-a_lvs.fina"], _lvs),
-                c.input("fvs1.ignored", c.conditions["_.valid"]),
-                by=None,
-            )
-            c.sub(
-                c.input(c.classes["TOD-a_lvs.fina"], _lvs),
-                c.input("fvs2.ignored", c.conditions["_.valid"]),
-                by=None,
-            )
+            for glyphClass, fvs, _ in _lvsManualTod:
+                c.sub(
+                    c.input(c.classes[glyphClass], _lvs),
+                    c.input(fvs, c.conditions["_.valid"]),
+                    by=None,
+                )
 
     if "TODx" in c.locales:
+        _lvsManualTodx = [
+            ("TODx-i_lvs.fina", "fvs1.ignored", "u1845_u1843.IpLv.fina"),
+            ("TODx-i_lvs.fina", "fvs2.ignored", "u1845_u1843.I3Lv.fina"),
+            ("TODx-ue_lvs.fina", "fvs1.ignored", "u1849_u1843.OLv.fina"),
+            ("TODx-ue_lvs.fina", "fvs2.ignored", "u1849_u1843.ULv.fina"),
+        ]
         with c.Lookup("_.manual.lvs.TODx") as _lvs:
-            c.sub(
-                c.input(c.classes["TODx-i_lvs.fina"]),
-                "fvs1.ignored",
-                by="u1845_u1843.IpLv.fina",
-            )
-            c.sub(
-                c.input(c.classes["TODx-i_lvs.fina"]),
-                "fvs2.ignored",
-                by="u1845_u1843.I3Lv.fina",
-            )
-            c.sub(
-                c.input(c.classes["TODx-ue_lvs.fina"]),
-                "fvs1.ignored",
-                by="u1849_u1843.OLv.fina",
-            )
-            c.sub(
-                c.input(c.classes["TODx-ue_lvs.fina"]),
-                "fvs2.ignored",
-                by="u1849_u1843.ULv.fina",
-            )
+            for glyphClass, fvs, target in _lvsManualTodx:
+                c.sub(c.input(c.classes[glyphClass]), fvs, by=target)
         with c.Lookup("III.fvs.lvs.TODx"):
-            c.sub(
-                c.input(c.classes["TODx-i_lvs.fina"], _lvs),
-                c.input("fvs1.ignored", c.conditions["_.valid"]),
-                by=None,
-            )
-            c.sub(
-                c.input(c.classes["TODx-i_lvs.fina"], _lvs),
-                c.input("fvs2.ignored", c.conditions["_.valid"]),
-                by=None,
-            )
-            c.sub(
-                c.input(c.classes["TODx-ue_lvs.fina"], _lvs),
-                c.input("fvs1.ignored", c.conditions["_.valid"]),
-                by=None,
-            )
-            c.sub(
-                c.input(c.classes["TODx-ue_lvs.fina"], _lvs),
-                c.input("fvs2.ignored", c.conditions["_.valid"]),
-                by=None,
-            )
+            for glyphClass, fvs, _ in _lvsManualTodx:
+                c.sub(
+                    c.input(c.classes[glyphClass], _lvs),
+                    c.input(fvs, c.conditions["_.valid"]),
+                    by=None,
+                )
 
     if "MNGx" in c.locales:
         with c.Lookup("_.manual.punctuation") as _lvs:

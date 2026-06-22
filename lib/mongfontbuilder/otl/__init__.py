@@ -1,23 +1,15 @@
 import re
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass, replace
+from typing import cast
 
 from fontTools import unicodedata
 from fontTools.feaLib import ast
 from tptq.feacomposer import FeaComposer
-from typing import cast
 
-
-from .. import (
-    GlyphDescriptor,
-    data,
-    splitWrittens,
-    uNameFromCodePoint,
-    writtenCombinations,
-)
+from .. import GlyphDescriptor, data, splitWrittens, uNameFromCodePoint, writtenCombinations
 from ..data import codePointToCmapVariant
-from ..data.misc import JoiningPosition, joiningPositions
-from ..data.types import FVS, LocaleID
+from ..data.types import FVS, JoiningPosition, LocaleID, joiningPositions
 from ..spec import FontSpec, GlyphSpec
 from ..utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
 
@@ -108,24 +100,7 @@ class MongFeaComposer(FeaComposer):
 
                     memberNames: list[str]
                     writtenTarget = replace(target, codePoints=[], suffixes=[])
-                    for source in sources:
-                        if source == writtenTarget:
-                            memberNames = [str(source)]
-                            break
-                    else:
-                        for source in sources:
-                            if replace(source, codePoints=[]) == writtenTarget:
-                                memberNames = [str(source)]
-                                break
-                        else:
-                            for writtenVariants in writtenCombinations(
-                                writtenTarget.units, writtenTarget.position
-                            ):
-                                if len(writtenVariants) == len(writtenTarget.units):
-                                    memberNames = ["_" + i for i in writtenVariants]
-                                    break
-                            else:
-                                raise NotImplementedError(target)
+                    memberNames = _findMemberNames(sources, writtenTarget)
 
                     glyphSpec = GlyphSpec([self.glyphNameProcessor(i) for i in memberNames])
                     if pseudoPosition := target.pseudoPosition():
@@ -458,3 +433,23 @@ def variantGlyphDescriptor(
     charName = getCharNameByAlias(locale, alias)
     variant = data.variants[charName][position][fvs]
     return GlyphDescriptor.fromData(charName, position, variant, locale=locale)
+
+
+def _findMemberNames(
+    sources: list[GlyphDescriptor],
+    writtenTarget: GlyphDescriptor,
+) -> list[str]:
+    """Find glyph names that compose into *writtenTarget*."""
+    # 1) exact match
+    for source in sources:
+        if source == writtenTarget:
+            return [str(source)]
+    # 2) match ignoring codePoints
+    for source in sources:
+        if replace(source, codePoints=[]) == writtenTarget:
+            return [str(source)]
+    # 3) decompose into written-unit parts
+    for writtenVariants in writtenCombinations(writtenTarget.units, writtenTarget.position):
+        if len(writtenVariants) == len(writtenTarget.units):
+            return ["_" + i for i in writtenVariants]
+    raise NotImplementedError(writtenTarget)
