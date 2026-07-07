@@ -5,7 +5,7 @@ title: Todo Ali Gali
 import WrittenUnitTable from "../lib/WrittenUnitTable.svelte";
 import LetterTable from "../lib/LetterTable.svelte";
 import ConditionalMappingTable from "../lib/ConditionalMappingTable.svelte";
-import Mong from "../lib/Mong.svelte";
+import TODx from "../lib/tags/TODx.svelte";
 
 export const locale = "TODx";
 
@@ -32,43 +32,43 @@ export const locale = "TODx";
     <tr>
       <td> _masculine vowel_ </td>
       <td>
-        <Mong locale="TODx" category="vowelMasculine" />
+        <TODx category="vowelMasculine" />
       </td>
     </tr>
     <tr>
       <td> _feminine vowel_ </td>
       <td>
-        <Mong locale="TODx" category="vowelFeminine" />
+        <TODx category="vowelFeminine" />
       </td>
     </tr>
     <tr>
       <td> _neuter vowel_ </td>
       <td>
-        <Mong locale="TODx" category="vowelNeuter" />
+        <TODx category="vowelNeuter" />
       </td>
     </tr>
     <tr>
       <td> _vowel_ </td>
       <td>
-        <Mong locale="TODx" category="vowel" />
+        <TODx category="vowel" />
       </td>
     </tr>
     <tr>
       <td> _long vowel_ </td>
       <td>
-        <Mong locale="TODx" category="lvs" />
+        <TODx category="lvs" />
       </td>
     </tr>
     <tr>
       <td> _consonant_ </td>
       <td>
-        <Mong locale="TODx" category="consonant" />
+        <TODx category="consonant" />
       </td>
     </tr>
     <tr>
       <td> _bowed written unit_ </td>
       <td>
-        <Mong locale="TODx" links="K2" />, <Mong locale="TODx" links="K" />, <Mong locale="TODx" links="G" />, <Mong locale="TODx" links="Bh" />, <Mong locale="TODx" links="Ph" />, <Mong locale="TODx" links="B" />
+        <TODx links="K2" />, <TODx links="K" />, <TODx links="G" />, <TODx links="Bh" />, <TODx links="Ph" />, <TODx links="B" />
       </td>
     </tr>
   </tbody>
@@ -89,7 +89,7 @@ export const locale = "TODx";
     <tr>
       <td rowspan="3">2. Syllabic</td>
       <td rowspan="3">
-        <Mong locale="TODx" links="g" />
+        <TODx links="g" />
       </td>
       <td>__if__ precedes a _masculine vowel_ or a _masculine long vowel_:</td>
       <td>masculine_onset</td>
@@ -100,14 +100,14 @@ export const locale = "TODx";
     </tr>
     <tr>
       <td>
-        __else if__ <Mong locale="TODx" links="g" /> follows a _vowel_ or a _long vowel_:
+        __else if__ <TODx links="g" /> follows a _vowel_ or a _long vowel_:
       </td>
       <td>masculine_devsger</td>
     </tr>
     <tr>
       <td rowspan>5. Post-bowed</td>
       <td>
-        <Mong locale="TODx" links="a" />, <Mong locale="TODx" links="i" />, <Mong locale="TODx" links="u" />, <Mong locale="TODx" links="ue" />
+        <TODx links="a" />, <TODx links="i" />, <TODx links="u" />, <TODx links="ue" />
       </td>
       <td>__if__ follows a _bowed written unit_:</td>
       <td>post_bowed</td>

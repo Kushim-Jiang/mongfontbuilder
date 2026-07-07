@@ -5,7 +5,7 @@ title: Hudum Ali Gali
 import WrittenUnitTable from "../lib/WrittenUnitTable.svelte";
 import LetterTable from "../lib/LetterTable.svelte";
 import ConditionalMappingTable from "../lib/ConditionalMappingTable.svelte";
-import Mong from "../lib/Mong.svelte";
+import MNGx from "../lib/tags/MNGx.svelte";
 
 export const locale = "MNGx";
 
@@ -17,7 +17,7 @@ export const locale = "MNGx";
 
 <LetterTable locale={locale} />
 
-**Final <Mong locale="MNGx" links="A G" /> in letter <Mong locale="MNGx" links="ng" />**. Both final <Mong locale="MNGx" links="N G4" /> and final <Mong locale="MNGx" links="A G4" /> are used to record Tibetan /ŋ/ in _Buddhist Mantras_. The final <Mong locale="MNGx" links="A G4" /> is considered as a variant of final <Mong locale="MNGx" links="A G" />, and the two shapes correspond to the same written form.
+**Final <MNGx links="A G" /> in letter <MNGx links="ng" />**. Both final <MNGx links="N G4" /> and final <MNGx links="A G4" /> are used to record Tibetan /ŋ/ in _Buddhist Mantras_. The final <MNGx links="A G4" /> is considered as a variant of final <MNGx links="A G" />, and the two shapes correspond to the same written form.
 
 ## Shaping process
 
@@ -34,19 +34,19 @@ export const locale = "MNGx";
     <tr>
       <td> _vowel_ </td>
       <td>
-        <Mong locale="MNGx" category="vowel" />
+        <MNGx category="vowel" />
       </td>
     </tr>
     <tr>
       <td> _consonant_ </td>
       <td>
-        <Mong locale="MNGx" category="consonant" />
+        <MNGx category="consonant" />
       </td>
     </tr>
     <tr>
       <td> _bowed written unit_ </td>
       <td>
-        <Mong locale="MNGx" links="G" />, <Mong locale="MNGx" links="K" />, <Mong locale="MNGx" links="K2" />, <Mong locale="MNGx" links="Bg" />, <Mong locale="MNGx" links="Pg" />, <Mong locale="MNGx" links="B" />
+        <MNGx links="G" />, <MNGx links="K" />, <MNGx links="K2" />, <MNGx links="Bg" />, <MNGx links="Pg" />, <MNGx links="B" />
       </td>
     </tr>
   </tbody>
@@ -67,7 +67,7 @@ export const locale = "MNGx";
     <tr>
       <td>1. Chachlag</td>
       <td>
-        <Mong locale="MNGx" links="a" />
+        <MNGx links="a" />
       </td>
       <td>__if__ follows an MVS:</td>
       <td>chachlag</td>
@@ -75,24 +75,24 @@ export const locale = "MNGx";
     <tr>
       <td rowspan="2">2. Syllabic</td>
       <td>
-        <Mong locale="MNGx" links="ü" />
+        <MNGx links="ü" />
       </td>
       <td>__if__ follows an initial _consonant_ or an initial _consonant_ cluster:</td>
       <td>marked</td>
     </tr>
     <tr>
       <td>
-        <Mong locale="MNGx" links="a" />
+        <MNGx links="a" />
       </td>
       <td>
-        __if__ precedes an MVS that precedes an isolated <Mong locale="MNGx" links="a" />:
+        __if__ precedes an MVS that precedes an isolated <MNGx links="a" />:
       </td>
       <td>chachlag_onset</td>
     </tr>
     <tr>
       <td>5. Post-bowed</td>
       <td>
-        <Mong locale="MNGx" links="a" />, <Mong locale="MNGx" links="o" />, <Mong locale="MNGx" links="ue" />
+        <MNGx links="a" />, <MNGx links="o" />, <MNGx links="ue" />
       </td>
       <td>__if__ follows a _bowed written unit_:</td>
       <td>post_bowed</td>

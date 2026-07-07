@@ -5,7 +5,7 @@ title: Manchu Ali Gali
 import WrittenUnitTable from "../lib/WrittenUnitTable.svelte";
 import LetterTable from "../lib/LetterTable.svelte";
 import ConditionalMappingTable from "../lib/ConditionalMappingTable.svelte";
-import Mong from "../lib/Mong.svelte";
+import MCHx from "../lib/tags/MCHx.svelte";
 
 export const locale = "MCHx";
 
@@ -32,49 +32,49 @@ export const locale = "MCHx";
     <tr>
       <td> _masculine vowel_ </td>
       <td>
-        <Mong locale="MCHx" category="vowelMasculine" />
+        <MCHx category="vowelMasculine" />
       </td>
     </tr>
     <tr>
       <td> _feminine vowel_ </td>
       <td>
-        <Mong locale="MCHx" category="vowelFeminine" />
+        <MCHx category="vowelFeminine" />
       </td>
     </tr>
     <tr>
       <td> _neuter vowel_ </td>
       <td>
-        <Mong locale="MCHx" category="vowelNeuter" />
+        <MCHx category="vowelNeuter" />
       </td>
     </tr>
     <tr>
       <td> _vowel_ </td>
       <td>
-        <Mong locale="MCHx" category="vowel" />
+        <MCHx category="vowel" />
       </td>
     </tr>
     <tr>
       <td> _consonant_ </td>
       <td>
-        <Mong locale="MCHx" category="consonant" />
+        <MCHx category="consonant" />
       </td>
     </tr>
     <tr>
       <td> _masculine bowed written unit_ </td>
       <td>
-        <Mong locale="MCHx" links="Kh" />, <Mong locale="MCHx" links="K2" />
+        <MCHx links="Kh" />, <MCHx links="K2" />
       </td>
     </tr>
     <tr>
       <td> _feminine bowed written unit_ </td>
       <td>
-        <Mong locale="MCHx" links="Gh" />, <Mong locale="MCHx" links="G" />, <Mong locale="MCHx" links="Gc" />, <Mong locale="MCHx" links="Hh" />, <Mong locale="MCHx" links="Hh2" />, <Mong locale="MCHx" links="Hy" />, <Mong locale="MCHx" links="Hy2" />, <Mong locale="MCHx" links="Nb" />
+        <MCHx links="Gh" />, <MCHx links="G" />, <MCHx links="Gc" />, <MCHx links="Hh" />, <MCHx links="Hh2" />, <MCHx links="Hy" />, <MCHx links="Hy2" />, <MCHx links="Nb" />
       </td>
     </tr>
     <tr>
       <td> _neuter bowed written unit_ </td>
       <td>
-        <Mong locale="MCHx" links="Bg" />, <Mong locale="MCHx" links="Pb" />, <Mong locale="MCHx" links="B" />, <Mong locale="MCHx" links="Bc" />
+        <MCHx links="Bg" />, <MCHx links="Pb" />, <MCHx links="B" />, <MCHx links="Bc" />
       </td>
     </tr>
   </tbody>
@@ -95,32 +95,32 @@ export const locale = "MCHx";
     <tr>
       <td rowspan="10">2. Syllabic</td>
       <td>
-        <Mong locale="MCHx" links="o" />, <Mong locale="MCHx" links="u" />
+        <MCHx links="o" />, <MCHx links="u" />
       </td>
       <td>__if__ follows an initial _consonant_:</td>
       <td>marked</td>
     </tr>
     <tr>
       <td>
-        <Mong locale="MCHx" links="i" />
+        <MCHx links="i" />
       </td>
       <td>
-        __if__ follows <Mong locale="MCHx" links="cX" /> or <Mong locale="MCHx" links="c" /> or <Mong locale="MCHx" links="z" />:
+        __if__ follows <MCHx links="cX" /> or <MCHx links="c" /> or <MCHx links="z" />:
       </td>
       <td>marked</td>
     </tr>
     <tr>
       <td>
-        <Mong locale="MCHx" links="e" />, <Mong locale="MCHx" links="u" />
+        <MCHx links="e" />, <MCHx links="u" />
       </td>
       <td>
-        __if__ follows <Mong locale="MCHx" links="tX" /> or <Mong locale="MCHx" links="t" /> or <Mong locale="MCHx" links="d" /> or <Mong locale="MCHx" links="dhX" /> or <Mong locale="MCHx" links="g" /> or <Mong locale="MCHx" links="k" /> or <Mong locale="MCHx" links="ghX" /> or <Mong locale="MCHx" links="h" />:
+        __if__ follows <MCHx links="tX" /> or <MCHx links="t" /> or <MCHx links="d" /> or <MCHx links="dhX" /> or <MCHx links="g" /> or <MCHx links="k" /> or <MCHx links="ghX" /> or <MCHx links="h" />:
       </td>
       <td>feminine, feminine_marked</td>
     </tr>
     <tr>
       <td rowspan="2">
-        <Mong locale="MCHx" links="n" />
+        <MCHx links="n" />
       </td>
       <td>__if__ precedes a _vowel_:</td>
       <td>onset</td>
@@ -131,28 +131,28 @@ export const locale = "MCHx";
     </tr>
     <tr>
       <td rowspan="3">
-        <Mong locale="MCHx" links="tX" />, <Mong locale="MCHx" links="t" />, <Mong locale="MCHx" links="d" />, <Mong locale="MCHx" links="dhX" />
+        <MCHx links="tX" />, <MCHx links="t" />, <MCHx links="d" />, <MCHx links="dhX" />
       </td>
       <td>
-        __if__ precedes <Mong locale="MCHx" links="a" /> or <Mong locale="MCHx" links="i" /> or <Mong locale="MCHx" links="o" />:
+        __if__ precedes <MCHx links="a" /> or <MCHx links="i" /> or <MCHx links="o" />:
       </td>
       <td>masculine_onset</td>
     </tr>
     <tr>
       <td>
-        __else if__ precedes <Mong locale="MCHx" links="e" /> or <Mong locale="MCHx" links="u" /> or <Mong locale="MCHx" links="ue" />:
+        __else if__ precedes <MCHx links="e" /> or <MCHx links="u" /> or <MCHx links="ue" />:
       </td>
       <td>feminine</td>
     </tr>
     <tr>
       <td>
-        __else if__ <Mong locale="MCHx" links="t" /> follows a _vowel_:
+        __else if__ <MCHx links="t" /> follows a _vowel_:
       </td>
       <td>devsger</td>
     </tr>
     <tr>
       <td rowspan="2">
-        <Mong locale="MCHx" links="k" />, <Mong locale="MCHx" links="g" />, <Mong locale="MCHx" links="h" />
+        <MCHx links="k" />, <MCHx links="g" />, <MCHx links="h" />
       </td>
       <td>__if__ precedes a _masculine vowel_:</td>
       <td>masculine_onset</td>
@@ -164,7 +164,7 @@ export const locale = "MCHx";
     <tr>
       <td>4. Devsger</td>
       <td>
-        <Mong locale="MCHx" links="i" />, <Mong locale="MCHx" links="u" />
+        <MCHx links="i" />, <MCHx links="u" />
       </td>
       <td>__if__ follows a _vowel_:</td>
       <td>vowel_devsger</td>
@@ -172,14 +172,14 @@ export const locale = "MCHx";
     <tr>
       <td rowspan="2">5. Post-bowed</td>
       <td>
-        <Mong locale="MCHx" links="a" />, <Mong locale="MCHx" links="o" />
+        <MCHx links="a" />, <MCHx links="o" />
       </td>
       <td>__if__ follows a _neuter bowed written unit_ or a _masculine bowed written unit_:</td>
       <td>post_bowed</td>
     </tr>
     <tr>
       <td>
-        <Mong locale="MCHx" links="e" />, <Mong locale="MCHx" links="u" />
+        <MCHx links="e" />, <MCHx links="u" />
       </td>
       <td>__if__ follows a _neuter bowed written unit_ or a _feminine bowed written unit_:</td>
       <td>post_bowed, post_bowed_feminine</td>

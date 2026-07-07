@@ -6,7 +6,7 @@
   }
   let { locale, links = "", category = "" }: Props = $props();
 
-  import { locales, type LocaleID } from "../../data/locales";
+  import { locales, type LocaleID } from "../../../data/locales";
 
   const localeToPrefix: Record<string, string> = {
     MNG: "hudum",
