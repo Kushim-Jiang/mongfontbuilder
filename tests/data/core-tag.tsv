@@ -32,13 +32,13 @@ cha-1	chTag a fvs1 space chTag a fvs1 lvs space chTag i space chTag i lvs space 
 cha-2	chTag a r yTag fvs1 space chTag a r yTag fvs1 lvs space chTag a l yTag fvs1 space chTag a l yTag fvs1 lvs	C A R Ir - C A R Ir Lv - C A L Ir - C A L Ir Lv
 cha-3	chTag e space chTag e e space chTag o space chTag o o	C E - C E E - C Ob - C Ob Ob
 
-ja-1	jTag fvs1 a fvs1 space jTag fvs1 a fvs1 lvs space jTag fvs1 i space jTag fvs1 i lvs space jTag fvs1 ue space jTag fvs1 ue lvs	Zc Aa - Zc Aa Lv - Zc I3 - Zc I3 Lv - Zc U - Zc U Lv
-ja-2	jTag fvs1 a r yTag fvs1 space jTag fvs1 a r yTag fvs1 lvs space jTag fvs1 a l yTag fvs1 space jTag fvs1 a l yTag fvs1 lvs	Zc A R Ir - Zc A R Ir Lv - Zc A L Ir - Zc A L Ir Lv
-ja-3	jTag fvs1 e space jTag fvs1 e e space jTag fvs1 o space jTag fvs1 o o	Zc E - Zc E E - Zc Ob - Zc Ob Ob
+ja-1	jTag fvs1 a fvs1 space jTag fvs1 a fvs1 lvs space jTag fvs1 i space jTag fvs1 i lvs space jTag fvs1 ue space jTag fvs1 ue lvs	Zz2 Aa - Zz2 Aa Lv - Zz2 I3 - Zz2 I3 Lv - Zz2 U - Zz2 U Lv
+ja-2	jTag fvs1 a r yTag fvs1 space jTag fvs1 a r yTag fvs1 lvs space jTag fvs1 a l yTag fvs1 space jTag fvs1 a l yTag fvs1 lvs	Zz2 A R Ir - Zz2 A R Ir Lv - Zz2 A L Ir - Zz2 A L Ir Lv
+ja-3	jTag fvs1 e space jTag fvs1 e e space jTag fvs1 o space jTag fvs1 o o	Zz2 E - Zz2 E E - Zz2 Ob - Zz2 Ob Ob
 
-jha-1	jTag fvs1 hTag a fvs1 space jTag fvs1 hTag a fvs1 lvs space jTag fvs1 hTag i space jTag fvs1 hTag i lvs space jTag fvs1 hTag ue space jTag fvs1 hTag ue lvs	Zc Hr Aa - Zc Hr Aa Lv - Zc Hr I3 - Zc Hr I3 Lv - Zc Hr U - Zc Hr U Lv
-jha-2	jTag fvs1 hTag a r yTag fvs1 space jTag fvs1 hTag a r yTag fvs1 lvs space jTag fvs1 hTag a l yTag fvs1 space jTag fvs1 hTag a l yTag fvs1 lvs	Zc Hr A R Ir - Zc Hr A R Ir Lv - Zc Hr A L Ir - Zc Hr A L Ir Lv
-jha-3	jTag fvs1 hTag e space jTag fvs1 hTag e e space jTag fvs1 hTag o space jTag fvs1 hTag o o	Zc Hr E - Zc Hr E E - Zc Hr Ob - Zc Hr Ob Ob
+jha-1	jTag fvs1 hTag a fvs1 space jTag fvs1 hTag a fvs1 lvs space jTag fvs1 hTag i space jTag fvs1 hTag i lvs space jTag fvs1 hTag ue space jTag fvs1 hTag ue lvs	Zz2 Hr Aa - Zz2 Hr Aa Lv - Zz2 Hr I3 - Zz2 Hr I3 Lv - Zz2 Hr U - Zz2 Hr U Lv
+jha-2	jTag fvs1 hTag a r yTag fvs1 space jTag fvs1 hTag a r yTag fvs1 lvs space jTag fvs1 hTag a l yTag fvs1 space jTag fvs1 hTag a l yTag fvs1 lvs	Zz2 Hr A R Ir - Zz2 Hr A R Ir Lv - Zz2 Hr A L Ir - Zz2 Hr A L Ir Lv
+jha-3	jTag fvs1 hTag e space jTag fvs1 hTag e e space jTag fvs1 hTag o space jTag fvs1 hTag o o	Zz2 Hr E - Zz2 Hr E E - Zz2 Hr Ob - Zz2 Hr Ob Ob
 
 ña-1	ny a fvs1 space ny a fvs1 lvs space ny i space ny i lvs space ny ue space ny ue lvs	Ny Aa - Ny Aa Lv - Ny I3 - Ny I3 Lv - Ny U - Ny U Lv
 ña-2	ny a r yTag fvs1 space ny a r yTag fvs1 lvs space ny a l yTag fvs1 space ny a l yTag fvs1 lvs	Ny A R Ir - Ny A R Ir Lv - Ny A L Ir - Ny A L Ir Lv
@@ -146,6 +146,6 @@ a-1	kTag a space khTag a space gTag a space g fvs3 gTag a	K2 Aa - K Aa - G Aa - 
 a-2	chTag a fvs1 space c a fvs1 space z a fvs1 space ny a fvs1	C Aa - J Aa - Ch Aa - Ny Aa
 a-3	d a fvs1 space t a fvs1 space tTag a fvs1 space n a fvs1	Dp Aa - Tp Aa - Dv Aa - N Aa
 a-4	pTag fvs1 a space p fvs1 a space b a space m a fvs1	Bh Aa - Ph Aa - B Aa - M Aa
-a-5	j a fvs1 space chTag a fvs1 space jTag fvs1 a fvs1 space w a fvs1	Cp Aa - C Aa - Zc Aa - Wb Aa
+a-5	j a fvs1 space chTag a fvs1 space jTag fvs1 a fvs1 space w a fvs1	Cp Aa - C Aa - Zz2 Aa - Wb Aa
 a-6	zhTag a fvs1 space zTag a fvs1 space qTag a fvs1 space y a fvs1	Rz Aa - Zz Aa - Q Aa - I Aa
 a-7	r a fvs1 space l a fvs1 space sh a fvs1 space s a fvs1 space hh a fvs1 space a fvs1 lvs	R Aa - L Aa - Sh Aa - S Aa - A Hr Aa - A Lv

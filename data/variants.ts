@@ -37,11 +37,15 @@ export const variants: Record<
         locales: {
           SIB: {
             written: ["medi", 0],
+            gb: "0005 sibe syllable boundary marker isolated form",
           },
           MCH: {
             written: ["medi", 0],
+            gb: "035B manchu ali gali letter qa isolated form // not exist in GB",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "035B manchu ali gali letter qa isolated form",
+          },
         },
       },
     },
@@ -52,11 +56,15 @@ export const variants: Record<
         locales: {
           SIB: {
             written: ["medi", 0],
+            gb: "0005 sibe syllable boundary marker initial form",
           },
           MCH: {
             written: ["medi", 0],
+            gb: "0005 manchu ali gali letter qa initial form // not exist in GB",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "035B manchu ali gali letter qa initial form",
+          },
         },
       },
     },
@@ -65,11 +73,15 @@ export const variants: Record<
         written: ["A"],
         default: true,
         locales: {
-          SIB: {},
-          MCH: {
-            gb: "1807 sibe syllable boundary",
+          SIB: {
+            gb: "0005 sibe syllable boundary marker medial form",
           },
-          MCHx: {},
+          MCH: {
+            gb: "0005 manchu ali gali letter qa medial form",
+          },
+          MCHx: {
+            gb: "0005 manchu ali gali letter qa medial form",
+          },
         },
       },
     },
@@ -78,9 +90,15 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          SIB: {},
-          MCH: {},
-          MCHx: {},
+          SIB: {
+            gb: "0005 sibe syllable boundary marker final form",
+          },
+          MCH: {
+            gb: "0005 manchu ali gali letter qa final form",
+          },
+          MCHx: {
+            gb: "0005 manchu ali gali letter qa final form",
+          },
         },
       },
     },
@@ -91,16 +109,19 @@ export const variants: Record<
         written: ["A"],
         locales: {
           MNG: {
-            gb: "00B3 a second isolated form",
+            gb: "00B3 mongolian letter a second isolated form",
             eac: "MAD2",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00B3 mongolian letter a second isolated form",
+          },
           TOD: {
-            gb: "1821 a second isolated form",
+            gb: "00B3 todo letter a second isolated form",
             eac: "TAD2",
           },
           TODx: {
             lvs: true,
+            gb: "00B3 todo letter a second isolated form",
           },
         },
       },
@@ -109,11 +130,12 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["chachlag", "particle"],
-            gb: "00B4 a third isolated form",
+            gb: "00B4 mongolian letter a third isolated form",
             eac: "MAD3",
           },
           MNGx: {
             conditions: ["chachlag"],
+            gb: "00B4 mongolian letter a third isolated form",
           },
         },
       },
@@ -122,25 +144,31 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00B2 a first isolated form",
+            gb: "00B2 mongolian letter a first isolated form",
             eac: "MAD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00B2 mongolian letter a first isolated form",
+          },
           TOD: {
-            gb: "1820 a first isolated form",
+            gb: "00B2 todo letter a first isolated form",
             eac: "TAD1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "00B2 todo letter a first isolated form",
+          },
           SIB: {
-            gb: "1820 sibe a isolated form",
+            gb: "00B2 sibe letter a isolated form",
             eac: "SAD1",
           },
           MCH: {
-            gb: "1820 manchu a isolated form",
+            gb: "00B2 manchu letter a isolated form",
             eac: "MAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00B2 manchu letter a isolated form",
+          },
         },
       },
     },
@@ -150,10 +178,12 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "0007 a first initial form",
+            gb: "0007 mongolian letter a second initial form",
             eac: "MAS2",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0007 mongolian letter a second initial form",
+          },
         },
       },
       "2": {
@@ -161,25 +191,31 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0004 a first initial form",
+            gb: "0004 mongolian letter a first initial form",
             eac: "MAS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0004 mongolian letter a first initial form",
+          },
           TOD: {
-            gb: "0004 a initial form",
+            gb: "0004 todo letter a initial form",
             eac: "TAS1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "0004 todo letter a initial form",
+          },
           SIB: {
-            gb: "1820 sibe a initial form",
+            gb: "0004 sibe letter a initial form",
             eac: "SAS1",
           },
           MCH: {
-            gb: "0004 manchu a initial form",
+            gb: "0004 manchu letter a initial form",
             eac: "MAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0004 manchu letter a initial form",
+          },
         },
       },
     },
@@ -189,39 +225,50 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0005 a first medial form",
+            gb: "0005 mongolian letter a first medial form",
             eac: "MAZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0005 mongolian letter a first medial form",
+          },
           TOD: {
-            gb: "0005 a first medial form",
+            gb: "0005 todo letter a first medial form",
             eac: "TAZ1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "0005 todo letter a first medial form",
+          },
           SIB: {
-            gb: "1820 sibe a medial form",
+            gb: "0005 sibe letter a medial form",
             eac: "SAZ1",
           },
           MCH: {
-            gb: "0005 manchu a medial form",
+            gb: "0005 manchu letter a medial form",
             eac: "MAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0005 manchu letter a medial form",
+          },
         },
       },
       "1": {
         written: ["A", "A"],
         locales: {
           MNG: {
-            gb: "0006 a second medial form",
+            gb: "0006 mongolian letter a second medial form",
             eac: "MAZ2",
           },
+          MNGx: {
+            gb: "0006 mongolian letter a second medial form",
+          },
           TOD: {
-            gb: "0006 a second medial form",
+            gb: "0006 todo letter a second medial form",
             eac: "TAZ2",
           },
-          TODx: {},
+          TODx: {
+            gb: "0006 todo letter a second medial form",
+          },
         },
       },
     },
@@ -231,32 +278,37 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["post_bowed"],
-            gb: "0009 a second final form",
+            gb: "0009 mongolian letter a second final form",
             eac: "MAM2",
           },
           MNGx: {
             conditions: ["post_bowed", "chachlag_onset"],
+            gb: "0009 mongolian letter a second final form",
           },
           TOD: {
             conditions: ["post_bowed"],
-            gb: "0009 a second final form",
+            gb: "0009 todo letter a second final form",
             eac: "TAM2",
             lvs: true,
           },
           TODx: {
             conditions: ["post_bowed"],
+            gb: "0009 todo letter a second final form",
             lvs: true,
           },
           SIB: {
             conditions: ["post_bowed"],
+            gb: "0009 sibe letter a second final form",
             eac: "SAM2",
           },
           MCH: {
             conditions: ["post_bowed"],
+            gb: "0009 manchu letter a second final form",
             eac: "MAM2",
           },
           MCHx: {
             conditions: ["post_bowed"],
+            gb: "0009 manchu letter a second final form",
           },
         },
       },
@@ -265,25 +317,31 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0008 a first final form",
+            gb: "0008 mongolian letter a first final form",
             eac: "MAM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0008 mongolian letter a first final form",
+          },
           TOD: {
-            gb: "0008 a first final form",
+            gb: "0008 todo letter a first final form",
             eac: "TAM1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "0008 todo letter a first final form",
+          },
           SIB: {
-            gb: "1820 sibe a final form",
+            gb: "0008 sibe letter a first final form",
             eac: "SAM1",
           },
           MCH: {
-            gb: "0008 manchu a final form",
+            gb: "0008 manchu letter a first final form",
             eac: "MAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0008 manchu letter a first final form",
+          },
         },
       },
     },
@@ -295,7 +353,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["chachlag", "particle"],
-            gb: "00B4 e second isolated form",
+            gb: "00B4 mongolian letter e second isolated form",
             eac: "MED2",
           },
         },
@@ -305,7 +363,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00B3 e first isolated form",
+            gb: "00B3 mongolian letter e first isolated form",
             eac: "MED1",
           },
         },
@@ -317,7 +375,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0007 e first initial form",
+            gb: "0007 mongolian letter e first initial form",
             eac: "MES1",
           },
         },
@@ -327,7 +385,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "0004 e second initial form",
+            gb: "0004 mongolian letter e second initial form",
             eac: "MES2",
           },
         },
@@ -339,7 +397,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0005 e medial form",
+            gb: "0005 mongolian letter e medial form",
             eac: "MEZ1",
           },
         },
@@ -351,7 +409,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["post_bowed"],
-            gb: "0009 e second final form",
+            gb: "0009 mongolian letter e second final form",
             eac: "MEM2",
           },
         },
@@ -361,7 +419,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0008 e first final form",
+            gb: "0008 mongolian letter e first final form",
             eac: "MEM1",
           },
         },
@@ -375,7 +433,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "000B i second isolated form",
+            gb: "000B mongolian letter i second isolated form",
             eac: "MID2",
           },
         },
@@ -385,7 +443,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "00B6 i third isolated form",
+            gb: "00B6 mongolian letter i third isolated form",
             eac: "MID3",
           },
         },
@@ -395,7 +453,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00B5 i first isolated form",
+            gb: "00B5 mongolian letter i first isolated form",
             eac: "MID1",
           },
         },
@@ -407,7 +465,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "00B7 i second initial form",
+            gb: "00B7 mongolian letter i second initial form",
             eac: "MIS2",
           },
         },
@@ -417,7 +475,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "000A i first initial form",
+            gb: "000A mongolian letter i first initial form",
             eac: "MIS1",
           },
         },
@@ -428,7 +486,7 @@ export const variants: Record<
         written: ["A", "I"],
         locales: {
           MNG: {
-            gb: "00B8 i second medial form",
+            gb: "00B8 mongolian letter i second medial form",
             eac: "MIZ2",
           },
         },
@@ -438,7 +496,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["vowel_devsger"],
-            gb: "00B9 i third medial form",
+            gb: "00B9 mongolian letter i third medial form",
             eac: "MIZ3",
           },
         },
@@ -448,7 +506,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00B7 i first medial form",
+            gb: "00B7 mongolian letter i first medial form",
             eac: "MIZ1",
           },
         },
@@ -460,7 +518,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "000B i final form",
+            gb: "000B mongolian letter i final form",
             eac: "MIM0",
           },
         },
@@ -474,19 +532,23 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00BA o isolated form",
+            gb: "00BA mongolian letter o isolated form",
             eac: "MWD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00BA mongolian letter o isolated form",
+          },
           SIB: {
-            gb: "1823 sibe o isolated form",
+            gb: "00BA sibe letter o isolated form",
             eac: "SOD1",
           },
           MCH: {
-            gb: "1823 manchu o isolated form",
+            gb: "00BA manchu letter o isolated form",
             eac: "MOD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00BA manchu letter o isolated form",
+          },
         },
       },
     },
@@ -496,19 +558,23 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00BA o initial form",
+            gb: "00BA mongolian letter o initial form",
             eac: "MWS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00BA mongolian letter o initial form",
+          },
           SIB: {
-            gb: "1823 sibe o initial form",
+            gb: "0307 sibe letter o initial form",
             eac: "SOS1",
           },
           MCH: {
-            gb: "1824 manchu o initial form",
+            gb: "0307 manchu letter o initial form",
             eac: "MOS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0307 manchu letter o initial form",
+          },
         },
       },
     },
@@ -518,26 +584,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "000C o first medial form",
+            gb: "000F mongolian letter o first medial form",
             eac: "MWZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "000F mongolian letter o first medial form",
+          },
           SIB: {
-            gb: "1823 sibe o medial form",
+            gb: "000C sibe letter o medial form",
             eac: "SOZ1",
           },
           MCH: {
-            gb: "000C manchu o medial form",
+            gb: "000C manchu letter o medial form",
             eac: "MOZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "000C manchu letter o medial form",
+          },
         },
       },
       "1": {
         written: ["A", "O"],
         locales: {
           MNG: {
-            gb: "000D o second medial form",
+            gb: "000D mongolian letter o second medial form",
             eac: "MWZ2",
           },
         },
@@ -549,24 +619,26 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["marked", "post_bowed"],
-            gb: "000F o second final form",
+            gb: "000F mongolian letter o second final form",
             eac: "MWM2",
           },
           MNGx: {
             conditions: ["post_bowed"],
+            gb: "000F mongolian letter o second final form",
           },
           SIB: {
             conditions: ["marked", "post_bowed"],
-            gb: "1823 sibe o second final form",
+            gb: "000F sibe letter o second final form",
             eac: "SOM2",
           },
           MCH: {
             conditions: ["marked", "post_bowed"],
-            gb: "000F manchu o second final form",
+            gb: "000F manchu letter o second final form",
             eac: "MOM2",
           },
           MCHx: {
             conditions: ["marked", "post_bowed"],
+            gb: "000F manchu letter o second final form",
           },
         },
       },
@@ -575,19 +647,23 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "000E o first final form",
+            gb: "000E mongolian letter o first final form",
             eac: "MWM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "000E mongolian letter o first final form",
+          },
           SIB: {
-            gb: "1823 sibe o first final form",
+            gb: "000E sibe letter o first final form",
             eac: "SOM1",
           },
           MCH: {
-            gb: "000E manchu o first final form",
+            gb: "000E manchu letter o first final form",
             eac: "MOM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "000E manchu letter o first final form",
+          },
         },
       },
     },
@@ -599,7 +675,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "000E u second isolated form",
+            gb: "000E mongolian letter u second isolated form",
             eac: "MVD2",
           },
         },
@@ -609,7 +685,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "00BB u third isolated form",
+            gb: "00BB mongolian letter u third isolated form",
             eac: "MVD3",
           },
         },
@@ -619,7 +695,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00BA u first isolated form",
+            gb: "00BA mongolian letter u first isolated form",
             eac: "MVD1",
           },
         },
@@ -631,7 +707,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "000F u second initial form",
+            gb: "000F mongolian letter u second initial form",
             eac: "MVS2",
           },
         },
@@ -641,7 +717,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00BA u first initial form",
+            gb: "00BA mongolian letter u first initial form",
             eac: "MVS1",
           },
         },
@@ -653,7 +729,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "000F u first medial form",
+            gb: "000F mongolian letter u first medial form",
             eac: "MVZ1",
           },
         },
@@ -662,7 +738,7 @@ export const variants: Record<
         written: ["A", "O"],
         locales: {
           MNG: {
-            gb: "000D u second medial form",
+            gb: "000D mongolian letter u second medial form",
             eac: "MVZ2",
           },
         },
@@ -674,7 +750,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["marked", "post_bowed"],
-            gb: "000F u second final form",
+            gb: "000F mongolian letter u second final form",
             eac: "MVM2",
           },
         },
@@ -685,7 +761,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "000E u first final form",
+            gb: "000E mongolian letter u first final form",
             eac: "MVM1",
           },
         },
@@ -699,7 +775,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00BC oe first isolated form",
+            gb: "00BC mongolian letter oe first isolated form",
             eac: "MOD1",
           },
         },
@@ -709,7 +785,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "00BD oe second isolated form",
+            gb: "00BD mongolian letter oe second isolated form",
             eac: "MOD2",
           },
         },
@@ -721,7 +797,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00BE oe initial form",
+            gb: "00BE mongolian letter oe initial form",
             eac: "MOS1",
           },
         },
@@ -733,7 +809,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["marked"],
-            gb: "00BF oe second medial form",
+            gb: "00BF mongolian letter oe second medial form",
             eac: "MOZ2",
           },
         },
@@ -742,7 +818,7 @@ export const variants: Record<
         written: ["A", "O", "I"],
         locales: {
           MNG: {
-            gb: "0010 oe third medial form",
+            gb: "0010 mongolian letter oe third medial form",
             eac: "MOZ3",
           },
         },
@@ -752,7 +828,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "000F oe first medial form",
+            gb: "000F mongolian letter oe first medial form",
             eac: "MOZ1",
           },
         },
@@ -764,7 +840,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["marked"],
-            gb: "0011 oe second final form",
+            gb: "0011 mongolian letter oe second final form",
             eac: "MOM2",
           },
         },
@@ -774,7 +850,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["post_bowed"],
-            gb: "000F oe third final form",
+            gb: "000F mongolian letter oe third final form",
             eac: "MOM3",
           },
         },
@@ -784,7 +860,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "000E oe first final form",
+            gb: "000E mongolian letter oe first final form",
             eac: "MOM1",
           },
         },
@@ -798,7 +874,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00BC ue first isolated form",
+            gb: "00BC mongolian letter ue first isolated form",
             eac: "MUD1",
           },
           MNGx: {},
@@ -808,7 +884,7 @@ export const variants: Record<
         written: ["A", "U"],
         locales: {
           MNG: {
-            gb: "00BD ue second isolated form",
+            gb: "00BD mongolian letter ue second isolated form",
             eac: "MUD2",
           },
           MNGx: {},
@@ -819,7 +895,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "000E ue third isolated form",
+            gb: "000E mongolian letter ue third isolated form",
             eac: "MUD3",
           },
         },
@@ -829,7 +905,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "00BB ue fourth isolated form",
+            gb: "00BB mongolian letter ue fourth isolated form",
             eac: "MUD4",
           },
         },
@@ -841,7 +917,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "000F ue second initial form",
+            gb: "000F mongolian letter ue second initial form",
             eac: "MUS2",
           },
         },
@@ -851,7 +927,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00BE ue first initial form",
+            gb: "00BE mongolian letter ue first initial form",
             eac: "MUS1",
           },
           MNGx: {},
@@ -864,7 +940,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["marked"],
-            gb: "00BF ue second medial form",
+            gb: "00BF mongolian letter ue second medial form",
             eac: "MUZ2",
           },
           MNGx: {
@@ -876,7 +952,7 @@ export const variants: Record<
         written: ["A", "O", "I"],
         locales: {
           MNG: {
-            gb: "0010 ue third medial form",
+            gb: "0010 mongolian letter ue third medial form",
             eac: "MUZ3",
           },
         },
@@ -887,7 +963,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "000F ue first medial form",
+            gb: "000F mongolian letter ue first medial form",
             eac: "MUZ1",
           },
           MNGx: {},
@@ -900,7 +976,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["marked"],
-            gb: "0011 ue second final form",
+            gb: "0011 mongolian letter ue second final form",
             eac: "MUM2",
           },
         },
@@ -910,11 +986,12 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["post_bowed"],
-            gb: "000F ue third final form",
+            gb: "000F mongolian letter ue third final form",
             eac: "MUM3",
           },
           MNGx: {
             conditions: ["post_bowed"],
+            gb: "000F mongolian letter ue third final form",
           },
         },
       },
@@ -924,10 +1001,12 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "000E ue first final form",
+            gb: "000E mongolian letter ue first final form",
             eac: "MUM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "000E mongolian letter ue first final form",
+          },
         },
       },
     },
@@ -939,10 +1018,12 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C0 ee isolated form",
+            gb: "00C0 mongolian letter ee isolated form",
             eac: "XED1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C0 mongolian letter ee isolated form",
+          },
         },
       },
     },
@@ -952,10 +1033,12 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0012 ee initial form",
+            gb: "0012 mongolian letter ee initial form",
             eac: "XES1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0012 mongolian letter ee initial form",
+          },
         },
       },
     },
@@ -965,10 +1048,12 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C1 ee medial form",
+            gb: "00C1 mongolian letter ee medial form",
             eac: "XEZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C1 mongolian letter ee medial form",
+          },
         },
       },
     },
@@ -978,10 +1063,12 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0013 ee final form",
+            gb: "0013 mongolian letter ee final form",
             eac: "XEM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0013 mongolian letter ee final form",
+          },
         },
       },
     },
@@ -993,22 +1080,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C2 na first isolated form",
+            gb: "00C2 mongolian letter na first isolated form",
             eac: "MND1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C2 mongolian letter na first isolated form",
+          },
           TOD: {
-            gb: "1828 na isolated form",
+            gb: "00C2 todo letter na first isolated form",
             eac: "TNAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C2 todo letter na first isolated form",
+          },
           SIB: {
+            gb: "00C2 sibe letter na isolated form",
             eac: "SNAD1",
           },
           MCH: {
+            gb: "00C2 manchu letter na isolated form",
             eac: "MNAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C2 manchu letter na isolated form",
+          },
         },
       },
       "1": {
@@ -1016,7 +1111,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "0007 na second isolated form",
+            gb: "0007 mongolian letter na second isolated form",
             eac: "MND2",
           },
         },
@@ -1025,7 +1120,7 @@ export const variants: Record<
         written: ["init", 2],
         locales: {
           TOD: {
-            gb: "",
+            gb: "0016 todo letter na second isolated form",
           },
         },
       },
@@ -1036,25 +1131,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C2 na first initial form",
+            gb: "00C2 mongolian letter na first initial form",
             eac: "MNS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C2 mongolian letter na first initial form",
+          },
           TOD: {
-            gb: "1828 na initial form",
+            gb: "00C2 todo letter na first initial form",
             eac: "TNAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C2 todo letter na first initial form",
+          },
           SIB: {
-            gb: "1828 sibe na initial form",
+            gb: "00C2 sibe letter na initial form",
             eac: "SNAS1",
           },
           MCH: {
-            gb: "1828 manchu na initial form",
+            gb: "00C2 manchu letter na initial form",
             eac: "MNAS1",
           },
           MCHx: {
             conditions: ["onset"],
+            gb: "00C2 manchu letter na initial form",
           },
         },
       },
@@ -1063,11 +1163,8 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "0007 na second initial form",
+            gb: "0007 mongolian letter na second initial form",
             eac: "MNS2",
-          },
-          MCHx: {
-            conditions: ["devsger"],
           },
         },
       },
@@ -1075,7 +1172,7 @@ export const variants: Record<
         written: ["N2"],
         locales: {
           TOD: {
-            gb: "",
+            gb: "0016 todo letter na second initial form",
           },
         },
       },
@@ -1086,30 +1183,34 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["onset"],
-            gb: "0014 na second medial form",
+            gb: "0014 mongolian letter na second medial form",
             eac: "MNZ2",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0014 mongolian letter na second medial form",
+          },
           TOD: {
             conditions: ["onset"],
-            gb: "0014 na second medial form",
+            gb: "0014 todo letter na second medial form",
             eac: "TNAZ2",
           },
           TODx: {
+            gb: "0014 todo letter na second medial form",
             conditions: ["onset"],
           },
           SIB: {
             conditions: ["onset"],
-            gb: "1828 sibe na second medial form",
+            gb: "0014 sibe letter na second medial form",
             eac: "SNAZ2",
           },
           MCH: {
             conditions: ["onset"],
-            gb: "0014 manchu na second medial form",
+            gb: "0014 manchu letter na second medial form",
             eac: "MNAZ2",
           },
           MCHx: {
             conditions: ["onset"],
+            gb: "0014 manchu letter na second medial form",
           },
         },
       },
@@ -1119,30 +1220,34 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["devsger"],
-            gb: "0005 na first medial form",
+            gb: "0005 mongolian letter na first medial form",
             eac: "MNZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0005 mongolian letter na first medial form",
+          },
           TOD: {
             conditions: ["devsger"],
-            gb: "0005 na first medial form",
+            gb: "0005 todo letter na first medial form",
             eac: "TNAZ1",
           },
           TODx: {
             conditions: ["devsger"],
+            gb: "0005 todo letter na first medial form",
           },
           SIB: {
             conditions: ["devsger"],
-            gb: "1828 sibe na first medial form",
+            gb: "0005 sibe letter na first medial form",
             eac: "SNAZ1",
           },
           MCH: {
             conditions: ["devsger"],
-            gb: "0005 manchu na first medial form",
+            gb: "0005 manchu letter na first medial form",
             eac: "MNAZ1",
           },
           MCHx: {
             conditions: ["devsger"],
+            gb: "0005 manchu letter na first medial form",
           },
         },
       },
@@ -1150,7 +1255,7 @@ export const variants: Record<
         written: ["Nx"],
         locales: {
           MCHx: {
-            gb: "0069 manchu na third medial form",
+            gb: "0069 manchu letter na third medial form",
           },
         },
       },
@@ -1161,18 +1266,20 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["chachlag_onset"],
-            gb: "0015 na second final form",
+            gb: "0015 mongolian letter na second final form",
             eac: "MNM2",
           },
           SIB: {
-            gb: "1828 sibe na second final form",
+            gb: "0318 sibe letter na second final form",
             eac: "SNAM2",
           },
           MCH: {
-            gb: "0015 manchu na second final form",
+            gb: "0318 manchu letter na second final form",
             eac: "MNAM2",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0318 manchu letter na second final form",
+          },
         },
       },
       "2": {
@@ -1181,31 +1288,37 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["devsger"],
-            gb: "0008 na first final form",
+            gb: "0008 mongolian letter na first final form",
             eac: "MNM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0008 mongolian letter na first final form",
+          },
           TOD: {
-            gb: "0008 na final form",
+            gb: "0008 todo letter na first final form",
             eac: "TNAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0008 todo letter na first final form",
+          },
           SIB: {
-            gb: "1828 sibe na first final form",
+            gb: "0008 sibe letter na first final form",
             eac: "SNAM1",
           },
           MCH: {
-            gb: "0008 manchu na first final form",
+            gb: "0008 manchu letter na first final form",
             eac: "MNAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0008 manchu letter na first final form",
+          },
         },
       },
       "3": {
         written: ["Nx"],
         locales: {
           MCHx: {
-            gb: "031A manchu na third final form",
+            gb: "031A manchu letter na third final form",
           },
         },
       },
@@ -1218,14 +1331,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C3 ang isolated form",
+            gb: "00C3 mongolian letter ang isolated form",
             eac: "XND1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C3 mongolian letter ang isolated form",
+          },
           MCH: {
+            gb: "00C3 manchu letter ang isolated form",
             eac: "MANGD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C3 manchu letter ang isolated form",
+          },
         },
       },
     },
@@ -1235,14 +1353,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C3 ang initial form",
+            gb: "00C3 mongolian letter ang initial form",
             eac: "XNS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C3 mongolian letter ang initial form",
+          },
           MCH: {
+            gb: "00C3 manchu letter ang initial form",
             eac: "MANGS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C3 manchu letter ang initial form",
+          },
         },
       },
     },
@@ -1252,15 +1375,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C3 ang medial form",
+            gb: "00C3 mongolian letter ang medial form",
             eac: "XNZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C3 mongolian letter ang medial form",
+          },
           MCH: {
-            gb: "1829 manchu ang first medial form",
+            gb: "00C3 manchu letter ang medial form",
             eac: "MANGZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C3 manchu letter ang medial form",
+          },
         },
       },
     },
@@ -1270,15 +1397,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C3 ang final form",
+            gb: "0017 mongolian letter ang final form",
             eac: "XNM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0017 mongolian letter ang final form",
+          },
           MCH: {
-            gb: "0017 manchu ang final form",
+            gb: "0017 manchu letter ang final form",
             eac: "MANGM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0017 manchu letter ang final form",
+          },
         },
       },
     },
@@ -1290,17 +1421,23 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C4 ba isolated form",
+            gb: "00C4 mongolian letter ba isolated form",
             eac: "MBD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C4 mongolian letter ba isolated form",
+          },
           SIB: {
+            gb: "00C4 sibe letter ba isolated form",
             eac: "SBAD1",
           },
           MCH: {
+            gb: "00C4 manchu letter ba isolated form",
             eac: "MBAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C4 manchu letter ba isolated form",
+          },
         },
       },
     },
@@ -1310,19 +1447,23 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C4 ba initial form",
+            gb: "00C4 mongolian letter ba initial form",
             eac: "MBS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C4 mongolian letter ba initial form",
+          },
           SIB: {
-            gb: "182A sibe ba initial form",
+            gb: "00C4 sibe letter ba initial form",
             eac: "SBAS1",
           },
           MCH: {
-            gb: "182A manchu ba initial form",
+            gb: "00C4 manchu letter ba initial form",
             eac: "MBAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C4 manchu letter ba initial form",
+          },
         },
       },
     },
@@ -1332,19 +1473,23 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C4 ba medial form",
+            gb: "00C4 mongolian letter ba medial form",
             eac: "MBZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C4 mongolian letter ba medial form",
+          },
           SIB: {
-            gb: "182A sibe ba medial form",
+            gb: "00C4 sibe letter ba medial form",
             eac: "SBAZ1",
           },
           MCH: {
-            gb: "182A manchu ba medial form",
+            gb: "00C4 manchu letter ba medial form",
             eac: "MBAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C4 manchu letter ba medial form",
+          },
         },
       },
     },
@@ -1354,19 +1499,23 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0018 ba first final form",
+            gb: "0018 mongolian letter ba first final form",
             eac: "MBM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0018 mongolian letter ba first final form",
+          },
           SIB: {
-            gb: "182A sibe ba final form",
+            gb: "0018 sibe letter ba final form",
             eac: "SBAM1",
           },
           MCH: {
-            gb: "0018 manchu ba final form",
+            gb: "0018 manchu letter ba final form",
             eac: "MBAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0018 manchu letter ba final form",
+          },
         },
       },
       "1": {
@@ -1374,10 +1523,12 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "00C5 ba second final form",
+            gb: "00C5 mongolian letter ba second final form",
             eac: "MBM2",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C5 mongolian letter ba second final form",
+          },
         },
       },
     },
@@ -1389,7 +1540,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C6 pa isolated form",
+            gb: "00C6 mongolian letter pa isolated form",
             eac: "MPD1",
           },
         },
@@ -1401,7 +1552,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C6 pa initial form",
+            gb: "00C6 mongolian letter pa initial form",
             eac: "MPS1",
           },
         },
@@ -1413,7 +1564,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C6 pa medial form",
+            gb: "00C6 mongolian letter pa medial form",
             eac: "MPZ1",
           },
         },
@@ -1425,7 +1576,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0019 pa final form",
+            gb: "0019 mongolian letter pa final form",
             eac: "MPM1",
           },
         },
@@ -1439,7 +1590,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C7 qa first isolated form",
+            gb: "00C7 mongolian letter qa first isolated form",
             eac: "MHD1",
           },
         },
@@ -1449,7 +1600,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "00C8 qa second isolated form",
+            gb: "00C8 mongolian letter qa second isolated form",
             eac: "MHD2",
           },
         },
@@ -1458,7 +1609,7 @@ export const variants: Record<
         written: ["init", 2],
         locales: {
           MNG: {
-            gb: "001E qa third isolated form",
+            gb: "001E mongolian letter qa third isolated form",
             eac: "MHD3",
           },
         },
@@ -1468,7 +1619,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "001B qa fourth isolated form",
+            gb: "001B mongolian letter qa fourth isolated form",
             eac: "MHD4",
           },
         },
@@ -1480,7 +1631,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "00C8 qa second initial form",
+            gb: "00C8 mongolian letter qa second initial form",
             eac: "MHS2",
           },
         },
@@ -1490,7 +1641,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["feminine"],
-            gb: "001E qa third initial form",
+            gb: "001E mongolian letter qa third initial form",
             eac: "MHS3",
           },
         },
@@ -1501,7 +1652,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["masculine_onset"],
-            gb: "00C7 qa first initial form",
+            gb: "00C7 mongolian letter qa first initial form",
             eac: "MHS1",
           },
         },
@@ -1511,7 +1662,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "001B qa fourth initial form",
+            gb: "001B mongolian letter qa fourth initial form",
             eac: "MHS4",
           },
         },
@@ -1523,7 +1674,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "001C qa second medial form",
+            gb: "001C mongolian letter qa second medial form",
             eac: "MHZ2",
           },
         },
@@ -1534,7 +1685,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["feminine"],
-            gb: "001E qa third medial form",
+            gb: "001E mongolian letter qa third medial form",
             eac: "MHZ3",
           },
         },
@@ -1544,7 +1695,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["masculine_onset", "masculine_devsger"],
-            gb: "0006 qa first medial form",
+            gb: "0006 mongolian letter qa first medial form",
             eac: "MHZ1",
           },
         },
@@ -1554,7 +1705,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "001B qa fourth medial form",
+            gb: "001B mongolian letter qa fourth medial form",
             eac: "MHZ4",
           },
         },
@@ -1567,7 +1718,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["chachlag_onset", "masculine_devsger"],
-            gb: "001A qa first final form",
+            gb: "001A mongolian letter qa first final form",
             eac: "MHM1",
           },
         },
@@ -1577,7 +1728,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "001D qa second final form",
+            gb: "001D mongolian letter qa second final form",
             eac: "MHM2",
           },
         },
@@ -1591,7 +1742,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C8 ga first isolated form",
+            gb: "00C8 mongolian letter ga first isolated form",
             eac: "MGD1",
           },
         },
@@ -1601,7 +1752,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "00C7 ga second isolated form",
+            gb: "00C7 mongolian letter ga second isolated form",
             eac: "MGD2",
           },
         },
@@ -1610,7 +1761,7 @@ export const variants: Record<
         written: ["init", 2],
         locales: {
           MNG: {
-            gb: "001E ga third isolated form",
+            gb: "001E mongolian letter ga third isolated form",
             eac: "MGD3",
           },
         },
@@ -1620,7 +1771,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "001B ga fourth isolated form",
+            gb: "001B mongolian letter ga fourth isolated form",
             eac: "MGD4",
           },
         },
@@ -1632,7 +1783,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "00C7 ga second initial form",
+            gb: "00C7 mongolian letter ga second initial form",
             eac: "MGS2",
           },
         },
@@ -1642,7 +1793,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["feminine"],
-            gb: "001E ga third initial form",
+            gb: "001E mongolian letter ga third initial form",
             eac: "MGS3",
           },
         },
@@ -1653,7 +1804,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["masculine_onset"],
-            gb: "00C8 ga first initial form",
+            gb: "00C8 mongolian letter ga first initial form",
             eac: "MGS1",
           },
         },
@@ -1663,7 +1814,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "001B ga fourth initial form",
+            gb: "001B mongolian letter ga fourth initial form",
             eac: "MGS4",
           },
         },
@@ -1675,7 +1826,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["masculine_onset"],
-            gb: "001C ga second medial form",
+            gb: "001C mongolian letter ga second medial form",
             eac: "MGZ2",
           },
         },
@@ -1686,7 +1837,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["feminine"],
-            gb: "001E ga third medial form",
+            gb: "001E mongolian letter ga third medial form",
             eac: "MGZ3",
           },
         },
@@ -1696,7 +1847,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["masculine_devsger", "dotless"],
-            gb: "0006 ga first medial form",
+            gb: "0006 mongolian letter ga first medial form",
             eac: "MGZ1",
           },
         },
@@ -1706,7 +1857,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "001B ga fourth medial form",
+            gb: "001B mongolian letter ga fourth medial form",
             eac: "MGZ4",
           },
         },
@@ -1718,7 +1869,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["chachlag_onset_gb", "masculine_devsger", "dotless"],
-            gb: "001A ga first final form",
+            gb: "001A mongolian letter ga first final form",
             eac: "MGM1",
           },
         },
@@ -1729,7 +1880,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["feminine"],
-            gb: "001F ga second final form",
+            gb: "001F mongolian letter ga second final form",
             eac: "MGM2",
           },
         },
@@ -1739,7 +1890,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["chachlag_onset"],
-            gb: "001D ga third final form",
+            gb: "001D mongolian letter ga third final form",
             eac: "MGM3",
           },
         },
@@ -1753,16 +1904,20 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C9 ma isolated form",
+            gb: "00C9 mongolian letter ma isolated form",
             eac: "MMD1",
           },
           SIB: {
+            gb: "00C9 sibe letter ma isolated form",
             eac: "SMAD1",
           },
           MCH: {
+            gb: "00C9 manchu letter ma isolated form",
             eac: "MMAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C9 manchu letter ma isolated form",
+          },
         },
       },
     },
@@ -1772,18 +1927,20 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C9 ma initial form",
+            gb: "00C9 mongolian letter ma initial form",
             eac: "MMS1",
           },
           SIB: {
-            gb: "182E sibe ma initial form",
+            gb: "00C9 sibe letter ma initial form",
             eac: "SMAS1",
           },
           MCH: {
-            gb: "182E manchu ma initial form",
+            gb: "00C9 manchu letter ma initial form",
             eac: "MMAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C9 manchu letter ma initial form",
+          },
         },
       },
     },
@@ -1793,18 +1950,20 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0020 ma medial form",
+            gb: "0020 mongolian letter ma first medial form",
             eac: "MMZ1",
           },
           SIB: {
-            gb: "182E sibe ma medial form",
+            gb: "0020 sibe letter ma medial form",
             eac: "SMAZ1",
           },
           MCH: {
-            gb: "0020 manchu ma medial form",
+            gb: "0020 manchu letter ma medial form",
             eac: "MMAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0020 manchu letter ma medial form",
+          },
         },
       },
     },
@@ -1814,18 +1973,20 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0021 ma final form",
+            gb: "0021 mongolian letter ma final form",
             eac: "MMM1",
           },
           SIB: {
-            gb: "182E sibe ma final form",
+            gb: "0021 sibe letter ma final form",
             eac: "SMAM1",
           },
           MCH: {
-            gb: "0021 manchu ma final form",
+            gb: "0021 manchu letter ma final form",
             eac: "MMAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0021 manchu letter ma final form",
+          },
         },
       },
     },
@@ -1837,29 +1998,37 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CA la isolated form",
+            gb: "00CA mongolian letter la isolated form",
             eac: "MLD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00CA mongolian letter la isolated form",
+          },
           TOD: {
-            gb: "182F la isolated form",
+            gb: "00CA todo letter la isolated form",
             eac: "TLAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00CA todo letter la isolated form",
+          },
           SIB: {
+            gb: "00CA sibe letter la isolated form",
             eac: "SLAD1",
           },
           MCH: {
+            gb: "00CA manchu letter la first isolated form",
             eac: "MLAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00CA manchu letter la first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
           MCHx: {
-            gb: "0350 manchu la second isolated form",
+            gb: "0350 manchu letter la second isolated form",
           },
         },
       },
@@ -1870,31 +2039,37 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CA la initial form",
+            gb: "00CA mongolian letter la initial form",
             eac: "MLS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00CA mongolian letter la initial form",
+          },
           TOD: {
-            gb: "182F la initial form",
+            gb: "00CA todo letter la initial form",
             eac: "TLAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00CA todo letter la initial form",
+          },
           SIB: {
-            gb: "182F sibe la initial form",
+            gb: "00CA sibe letter la initial form",
             eac: "SLAS1",
           },
           MCH: {
-            gb: "182F manchu la initial form",
+            gb: "00CA manchu letter la first initial form",
             eac: "MLAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00CA manchu letter la first initial form",
+          },
         },
       },
       "1": {
         written: ["L2"],
         locales: {
           MCHx: {
-            gb: "0350 manchu la second initial form",
+            gb: "0350 manchu letter la second initial form",
           },
         },
       },
@@ -1905,24 +2080,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0022 la medial form",
+            gb: "0022 mongolian letter la first medial form",
             eac: "MLZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0022 mongolian letter la first medial form",
+          },
           TOD: {
-            gb: "0022 la medial form",
+            gb: "0022 todo letter la medial form",
             eac: "TLAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0022 todo letter la medial form",
+          },
           SIB: {
-            gb: "182F sibe la medial form",
+            gb: "0022 sibe letter la medial form",
             eac: "SLAZ1",
           },
           MCH: {
-            gb: "0022 manchu la medial form",
+            gb: "0022 manchu letter la medial form",
             eac: "MLAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0022 manchu letter la medial form",
+          },
         },
       },
     },
@@ -1932,24 +2113,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0023 la final form",
+            gb: "0023 mongolian letter la final form",
             eac: "MLM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0023 mongolian letter la final form",
+          },
           TOD: {
-            gb: "0023 la final form",
+            gb: "0023 todo letter la final form",
             eac: "TLAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0023 todo letter la final form",
+          },
           SIB: {
-            gb: "182F sibe la final form",
+            gb: "0023 sibe letter la final form",
             eac: "SLAM1",
           },
           MCH: {
-            gb: "0023 manchu la final form",
+            gb: "0023 manchu letter la final form",
             eac: "MLAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0023 manchu letter la final form",
+          },
         },
       },
     },
@@ -1961,22 +2148,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CB sa isolated form",
+            gb: "00CB mongolian letter sa isolated form",
             eac: "MSD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00CB mongolian letter sa isolated form",
+          },
           TOD: {
-            gb: "1830 sa isolated form",
+            gb: "00CB todo letter sa isolated form",
             eac: "TSAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00CB todo letter sa isolated form",
+          },
           SIB: {
+            gb: "00CB sibe letter sa isolated form",
             eac: "SSAD1",
           },
           MCH: {
+            gb: "00CB manchu letter sa isolated form",
             eac: "MSAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00CB manchu letter sa isolated form",
+          },
         },
       },
     },
@@ -1986,24 +2181,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CB sa initial form",
+            gb: "00CB mongolian letter sa initial form",
             eac: "MSS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00CB mongolian letter sa initial form",
+          },
           TOD: {
-            gb: "1830 sa initial form",
+            gb: "00CB todo letter sa initial form",
             eac: "TSAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00CB todo letter sa initial form",
+          },
           SIB: {
-            gb: "1830 sibe sa initial form",
+            gb: "00CB sibe letter sa initial form",
             eac: "SSAS1",
           },
           MCH: {
-            gb: "1830 manchu sa initial form",
+            gb: "00CB manchu letter sa initial form",
             eac: "MSAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00CB manchu letter sa initial form",
+          },
         },
       },
     },
@@ -2013,24 +2214,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0024 sa first medial form",
+            gb: "0024 mongolian letter sa first medial form",
             eac: "MSZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0024 mongolian letter sa first medial form",
+          },
           TOD: {
-            gb: "0024 sa medial form",
+            gb: "0024 todo letter sa medial form",
             eac: "TSAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0024 todo letter sa medial form",
+          },
           SIB: {
-            gb: "1830 sibe sa medial form",
+            gb: "0024 sibe letter sa medial form",
             eac: "SSAZ1",
           },
           MCH: {
-            gb: "0024 manchu sa medial form",
+            gb: "0024 manchu letter sa medial form",
             eac: "MSAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0024 manchu letter sa medial form",
+          },
         },
       },
     },
@@ -2040,24 +2247,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0025 sa first final form",
+            gb: "0025 mongolian letter sa first final form",
             eac: "MSM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0025 mongolian letter sa first final form",
+          },
           TOD: {
-            gb: "0025 sa final form",
+            gb: "0025 todo letter sa final form",
             eac: "TSAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0025 todo letter sa final form",
+          },
           SIB: {
-            gb: "1830 sibe sa final form",
+            gb: "0025 sibe letter sa final form",
             eac: "SSAM1",
           },
           MCH: {
-            gb: "0025 manchu sa first final form",
+            gb: "0025 manchu letter sa first final form",
             eac: "MSAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0025 manchu letter sa first final form",
+          },
         },
       },
       "1": {
@@ -2065,7 +2278,7 @@ export const variants: Record<
         locales: {
           MNG: {
             archaic: true,
-            gb: "0026 sa second final form",
+            gb: "0026 mongolian letter sa second final form",
             eac: "MSM2",
           },
         },
@@ -2073,7 +2286,9 @@ export const variants: Record<
       "2": {
         written: ["S3"],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0027 manchu letter sa second final form",
+          },
         },
       },
     },
@@ -2085,22 +2300,26 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CC sha first isolated form",
+            gb: "00CC mongolian letter sha first isolated form",
             eac: "MXD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00CC mongolian letter sha first isolated form",
+          },
           TOD: {
-            gb: "1831 sha isolated form",
+            gb: "00CC todo letter sha isolated form",
             eac: "TSHAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00CC todo letter sha isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
           MNG: {
-            gb: "00CB sha second isolated form",
+            gb: "00CB mongolian letter sha second isolated form",
             eac: "MXD2",
           },
         },
@@ -2112,7 +2331,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["dotless"],
-            gb: "00CB sha second initial form",
+            gb: "00CB mongolian letter sha second initial form",
             eac: "MXS2",
           },
         },
@@ -2122,15 +2341,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CC sha first initial form",
+            gb: "00CC mongolian letter sha first initial form",
             eac: "MXS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00CC mongolian letter sha first initial form",
+          },
           TOD: {
-            gb: "1831 sha initial form",
+            gb: "00CC todo letter sha initial form",
             eac: "TSHAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00CC todo letter sha initial form",
+          },
         },
       },
     },
@@ -2140,7 +2363,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["dotless"],
-            gb: "0024 sha second medial form",
+            gb: "0024 mongolian letter sha second medial form",
             eac: "MXZ2",
           },
         },
@@ -2150,15 +2373,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0028 sha first medial form",
+            gb: "0028 mongolian letter sha first medial form",
             eac: "MXZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0028 mongolian letter sha first medial form",
+          },
           TOD: {
-            gb: "0028 sha medial form",
+            gb: "0028 todo letter sha medial form",
             eac: "TSHAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0028 todo letter sha medial form",
+          },
         },
       },
     },
@@ -2168,15 +2395,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0029 sha final form",
+            gb: "0029 mongolian letter sha final form",
             eac: "MXM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0029 mongolian letter sha final form",
+          },
           TOD: {
-            gb: "0029 sha final form",
+            gb: "0029 todo letter sha final form",
             eac: "TSHAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0029 todo letter sha final form",
+          },
         },
       },
     },
@@ -2188,7 +2419,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CD ta isolated form",
+            gb: "00CD mongolian letter ta isolated form",
             eac: "MTD1",
           },
         },
@@ -2200,7 +2431,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CD ta initial form",
+            gb: "00CD mongolian letter ta initial form",
             eac: "MTS1",
           },
         },
@@ -2212,7 +2443,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["devsger"],
-            gb: "00CD ta second medial form",
+            gb: "00CD mongolian letter ta second medial form",
             eac: "MTZ2",
           },
         },
@@ -2222,7 +2453,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CE ta first medial form",
+            gb: "00CE mongolian letter ta first medial form",
             eac: "MTZ1",
           },
         },
@@ -2234,7 +2465,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "002B ta final form",
+            gb: "002B mongolian letter ta final form",
             eac: "MTM1",
           },
         },
@@ -2248,7 +2479,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CE da first isolated form",
+            gb: "00CE mongolian letter da first isolated form",
             eac: "MDD1",
           },
         },
@@ -2257,7 +2488,7 @@ export const variants: Record<
         written: ["init", 2],
         locales: {
           MNG: {
-            gb: "00CD da second isolated form",
+            gb: "00CD mongolian letter da second isolated form",
             eac: "MDD2",
           },
         },
@@ -2269,7 +2500,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["marked", "particle"],
-            gb: "00CE da second initial form",
+            gb: "00CE mongolian letter da second initial form",
             eac: "MDS2",
           },
         },
@@ -2280,7 +2511,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["onset"],
-            gb: "00CD da first initial form",
+            gb: "00CD mongolian letter da first initial form",
             eac: "MDS1",
           },
         },
@@ -2292,7 +2523,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["onset"],
-            gb: "00CE da second medial form",
+            gb: "00CE mongolian letter da second medial form",
             eac: "MDZ2",
           },
         },
@@ -2303,7 +2534,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["devsger"],
-            gb: "002C da first medial form",
+            gb: "002C mongolian letter da first medial form",
             eac: "MDZ1",
           },
         },
@@ -2316,7 +2547,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["devsger"],
-            gb: "002D da first final form",
+            gb: "002D mongolian letter da first final form",
             eac: "MDM1",
           },
         },
@@ -2325,7 +2556,7 @@ export const variants: Record<
         written: ["D"],
         locales: {
           MNG: {
-            gb: "002E da second final form",
+            gb: "002E mongolian letter da second final form",
             eac: "MDM2",
           },
         },
@@ -2339,22 +2570,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "002F cha isolated form",
+            gb: "002F mongolian letter cha isolated form",
             eac: "MQD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "002F mongolian letter cha isolated form",
+          },
           TOD: {
-            gb: "1834 dza isolated form",
+            gb: "002F todo letter za isolated form",
             eac: "TZAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "002F todo letter za isolated form",
+          },
           SIB: {
+            gb: "002F sibe letter cha isolated form",
             eac: "SCHAD1",
           },
           MCH: {
+            gb: "002F manchu letter cha isolated form",
             eac: "MCHAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "002F manchu letter cha isolated form",
+          },
         },
       },
     },
@@ -2364,24 +2603,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "002F cha initial form",
+            gb: "002F mongolian letter cha initial form",
             eac: "MQS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "002F mongolian letter cha initial form",
+          },
           TOD: {
-            gb: "1834 dza initial form",
+            gb: "002F todo letter za initial form",
             eac: "TZAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "002F todo letter za initial form",
+          },
           SIB: {
-            gb: "1834 sibe cha initial form",
+            gb: "002F sibe letter cha initial form",
             eac: "SCHAS1",
           },
           MCH: {
-            gb: "1834 manchu cha initial form",
+            gb: "002F manchu letter cha initial form",
             eac: "MCHAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "002F manchu letter cha initial form",
+          },
         },
       },
     },
@@ -2391,24 +2636,30 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "002F cha medial form",
+            gb: "002F mongolian letter cha medial form",
             eac: "MQZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "002F mongolian letter cha medial form",
+          },
           TOD: {
-            gb: "002F dza medial form",
+            gb: "002F todo letter za medial form",
             eac: "TZAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "002F todo letter za medial form",
+          },
           SIB: {
-            gb: "1834 sibe cha medial form",
+            gb: "002F sibe letter cha medial form",
             eac: "SCHAZ1",
           },
           MCH: {
-            gb: "002F manchu cha medial form",
+            gb: "002F manchu letter cha medial form",
             eac: "MCHAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "002F manchu letter cha medial form",
+          },
         },
       },
     },
@@ -2418,26 +2669,32 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0030 cha final form",
+            gb: "0030 mongolian letter cha final form",
             eac: "MQM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0030 mongolian letter cha final form",
+          },
           TOD: {
-            gb: "0030 dza final form",
+            gb: "0030 todo letter za final form",
             eac: "TZAM1",
           },
           TODx: {
-            written: ["medi", 0],
+            gb: "0030 todo letter za final form",
           },
           SIB: {
             written: ["medi", 0],
+            gb: "002F sibe letter cha final form",
             eac: "SCHAM1",
           },
           MCH: {
             written: ["medi", 0],
+            gb: "002F manchu letter cha final form",
             eac: "MCHAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "002F manchu letter cha final form",
+          },
         },
       },
     },
@@ -2449,13 +2706,16 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00B7 ja first isolated form",
+            gb: "00B7 mongolian letter ja first isolated form",
             eac: "MJD1",
           },
           MCH: {
+            gb: "00B7 manchu letter ja isolated form",
             eac: "MJAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00B7 manchu letter ja isolated form",
+          },
         },
       },
       "1": {
@@ -2463,7 +2723,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["chachlag_onset"],
-            gb: "000B ja second isolated form",
+            gb: "000B mongolian letter ja second isolated form",
             eac: "MJD2",
           },
         },
@@ -2475,14 +2735,16 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00B7 ja first initial form",
+            gb: "00B7 mongolian letter ja first initial form",
             eac: "MJS1",
           },
           MCH: {
-            gb: "1835 manchu ja initial form",
+            gb: "00B7 manchu letter ja initial form",
             eac: "MJAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00B7 manchu letter ja initial form",
+          },
         },
       },
     },
@@ -2492,14 +2754,16 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0031 ja first medial form",
+            gb: "0031 mongolian letter ja first medial form",
             eac: "MJZ1",
           },
           MCH: {
-            gb: "0031 manchu ja medial form",
+            gb: "0031 manchu letter ja medial form",
             eac: "MJAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0031 manchu letter ja medial form",
+          },
         },
       },
     },
@@ -2509,14 +2773,17 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0032 ja first final form",
+            gb: "0032 mongolian letter ja first final form",
             eac: "MJM1",
           },
           MCH: {
             written: ["medi", 0],
+            gb: "0031 manchu letter ja final form",
             eac: "MJAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0031 manchu letter ja final form",
+          },
         },
       },
       "1": {
@@ -2524,7 +2791,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["chachlag_onset"],
-            gb: "000B ja second final form",
+            gb: "000B mongolian letter ja second final form",
             eac: "MJM2",
             unrecommended: true,
           },
@@ -2539,23 +2806,27 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CF ya first isolated form",
+            gb: "00CF mongolian letter ya first isolated form",
             eac: "MYD1",
           },
           SIB: {
+            gb: "00CF sibe letter ya isolated form",
             eac: "SYAD1",
           },
           MCH: {
+            gb: "00CF manchu letter ya isolated form",
             eac: "MYAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00CF manchu letter ya isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
           MNG: {
-            gb: "00B7 ya second isolated form",
+            gb: "00B7 mongolian letter ya second isolated form",
             eac: "MYD2",
           },
         },
@@ -2567,7 +2838,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "00B7 ya second initial form",
+            gb: "00B7 mongolian letter ya second initial form",
             eac: "MYS2",
           },
         },
@@ -2577,17 +2848,20 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CF ya first initial form",
+            gb: "00CF mongolian letter ya first initial form",
             eac: "MYS1",
           },
           SIB: {
+            gb: "00CF sibe letter ya initial form",
             eac: "SYAS1",
           },
           MCH: {
-            gb: "1836 manchu ya initial form",
+            gb: "00CF manchu letter ya initial form",
             eac: "MYAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00CF manchu letter ya initial form",
+          },
         },
       },
     },
@@ -2597,7 +2871,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["particle"],
-            gb: "00B7 ya second medial form",
+            gb: "00B7 mongolian letter ya second medial form",
             eac: "MYZ2",
           },
         },
@@ -2606,7 +2880,7 @@ export const variants: Record<
         written: ["I", "I"],
         locales: {
           MNG: {
-            gb: "00B9 ya third medial form",
+            gb: "00B9 mongolian letter ya third medial form",
             eac: "MYZ3",
             unrecommended: true,
           },
@@ -2617,17 +2891,20 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00CF ya first medial form",
+            gb: "00CF mongolian letter ya first medial form",
             eac: "MYZ1",
           },
           SIB: {
+            gb: "00CF sibe letter ya medial form",
             eac: "SYAZ1",
           },
           MCH: {
-            gb: "1836 manchu ya medial form",
+            gb: "00CF manchu letter ya medial form",
             eac: "MYAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00CF manchu letter ya medial form",
+          },
         },
       },
     },
@@ -2637,19 +2914,22 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "000B ya final form",
+            gb: "000B mongolian letter ya final form",
             eac: "MYM1",
           },
           SIB: {
             written: ["medi", 3],
+            gb: "00CF sibe letter ya final form",
             eac: "SYAM1",
           },
           MCH: {
             written: ["medi", 3],
+            gb: "00CF manchu letter ya final form",
             eac: "MYAM1",
           },
           MCHx: {
             written: ["medi", 3],
+            gb: "00CF manchu letter ya final form",
           },
         },
       },
@@ -2662,16 +2942,21 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D0 ra isolated form",
+            gb: "00D0 mongolian letter ra isolated form",
             eac: "MRD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00D0 mongolian letter ra isolated form",
+          },
           TOD: {
-            gb: "1837 ra isolated form",
+            gb: "00D0 todo letter ra isolated form",
             eac: "TRAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00D0 todo letter ra isolated form",
+          },
           SIB: {
+            gb: "00D0 sibe letter ra isolated form",
             eac: "SRAD1",
           },
         },
@@ -2683,16 +2968,21 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D0 ra initial form",
+            gb: "00D0 mongolian letter ra initial form",
             eac: "MRS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00D0 mongolian letter ra initial form",
+          },
           TOD: {
-            gb: "1837 ra initial form",
+            gb: "00D0 todo letter ra initial form",
             eac: "TRAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00D0 todo letter ra initial form",
+          },
           SIB: {
+            gb: "00D0 sibe letter ra initial form",
             eac: "SRAS1",
           },
         },
@@ -2704,16 +2994,21 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D0 ra medial form",
+            gb: "00D0 mongolian letter ra first medial form",
             eac: "MRZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00D0 mongolian letter ra first medial form",
+          },
           TOD: {
-            gb: "1837 ra medial form",
+            gb: "00D0 todo letter ra medial form",
             eac: "TRAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00D0 todo letter ra medial form",
+          },
           SIB: {
+            gb: "00D0 sibe letter ra medial form",
             eac: "SRAZ1",
           },
         },
@@ -2725,16 +3020,21 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0033 ra final form",
+            gb: "0033 mongolian letter ra final form",
             eac: "MRM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0033 mongolian letter ra final form",
+          },
           TOD: {
-            gb: "0033 ra final form",
+            gb: "0033 todo letter ra final form",
             eac: "TRAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0033 todo letter ra final form",
+          },
           SIB: {
+            gb: "0033 sibe letter ra final form",
             eac: "SRAM1",
           },
         },
@@ -2748,21 +3048,27 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C1 wa isolated form",
+            gb: "00C1 mongolian letter wa isolated form",
             eac: "XWD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C1 mongolian letter wa isolated form",
+          },
           TOD: {
-            gb: "1838 fa isolated form",
+            gb: "00C1 todo letter fa isolated form",
             eac: "TFAD1",
           },
           SIB: {
+            gb: "00C1 sibe letter wa isolated form",
             eac: "SFAD1",
           },
           MCH: {
+            gb: "00C1 manchu letter wa isolated form",
             eac: "MWAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C1 manchu letter wa isolated form",
+          },
         },
       },
     },
@@ -2772,22 +3078,27 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C1 wa initial form",
+            gb: "00C1 mongolian letter wa initial form",
             eac: "XWS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C1 mongolian letter wa initial form",
+          },
           TOD: {
-            gb: "1838 fa initial form",
+            gb: "00C1 todo letter fa initial form",
             eac: "TFAS1",
           },
           SIB: {
+            gb: "00C1 sibe letter wa initial form",
             eac: "SFAS1",
           },
           MCH: {
-            gb: "1838 manchu wa initial form",
+            gb: "00C1 manchu letter wa initial form",
             eac: "MWAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C1 manchu letter wa initial form",
+          },
         },
       },
     },
@@ -2797,29 +3108,34 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00C1 wa first medial form",
+            gb: "00C1 mongolian letter wa first medial form",
             eac: "XWZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00C1 mongolian letter wa first medial form",
+          },
           TOD: {
-            gb: "1838 fa medial form",
+            gb: "00C1 todo letter fa medial form",
             eac: "TFAZ1",
           },
           SIB: {
+            gb: "00C1 sibe letter wa medial form",
             eac: "SFAZ1",
           },
           MCH: {
-            gb: "1838 manchu wa medial form",
+            gb: "00C1 manchu letter wa medial form",
             eac: "MWAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C1 manchu letter wa medial form",
+          },
         },
       },
       "1": {
         written: ["O"],
         locales: {
           MNG: {
-            gb: "000F wa second medial form",
+            gb: "000F mongolian letter wa second medial form",
             eac: "XWZ2",
             unrecommended: true,
           },
@@ -2832,16 +3148,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0013 wa first final form",
+            gb: "0013 mongolian letter wa first final form",
             eac: "XWM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0013 mongolian letter wa first final form",
+          },
           TOD: {
-            gb: "0013 fa final form",
+            gb: "0013 todo letter fa final form",
             eac: "TFAM1",
           },
           SIB: {
             written: ["medi", 0],
+            gb: "00C1 sibe letter wa final form",
             eac: "SFAM1",
           },
           MCH: {
@@ -2858,7 +3177,7 @@ export const variants: Record<
         locales: {
           MNG: {
             conditions: ["chachlag_onset"],
-            gb: "000E wa second final form",
+            gb: "000E mongolian letter wa second final form",
             eac: "XWM2",
           },
         },
@@ -2872,7 +3191,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D1 fa isolated form",
+            gb: "00D1 mongolian letter fa isolated form",
             eac: "XFD1",
           },
         },
@@ -2884,7 +3203,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D1 fa initial form",
+            gb: "00D1 mongolian letter fa initial form",
             eac: "XFS1",
           },
         },
@@ -2896,7 +3215,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D1 fa medial form",
+            gb: "00D1 mongolian letter fa medial form",
             eac: "XFZ1",
           },
         },
@@ -2908,7 +3227,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0034 fa final form",
+            gb: "0034 mongolian letter fa final form",
             eac: "XFM1",
           },
         },
@@ -2922,12 +3241,17 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D2 ka isolated form",
+            gb: "00D2 mongolian letter ka isolated form",
             eac: "MKD1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00D2 mongolian letter ka isolated form",
+          },
+          TODx: {
+            gb: "00D2 todo ali gali letter ka isolated form",
+          },
           SIB: {
+            gb: "00D2 sibe letter kaa isolated form",
             eac: "SKAAD1",
           },
           MCH: {
@@ -2943,19 +3267,26 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D2 ka initial form",
+            gb: "00D2 mongolian letter ka initial form",
             eac: "MKS1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00D2 mongolian letter ka initial form",
+          },
+          TODx: {
+            gb: "00D2 todo ali gali letter ka initial form",
+          },
           SIB: {
+            gb: "00D2 sibe letter kaa initial form",
             eac: "SKAAS1",
           },
           MCH: {
-            gb: "183A manchu ka initial form",
+            gb: "00D2 manchu letter kaa initial form",
             eac: "MKAAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00D2 manchu letter kaa initial form",
+          },
         },
       },
     },
@@ -2965,19 +3296,26 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D2 ka medial form",
+            gb: "00D2 mongolian letter ka medial form",
             eac: "MKZ1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00D2 mongolian letter ka medial form",
+          },
+          TODx: {
+            gb: "00D2 todo ali gali letter ka medial form",
+          },
           SIB: {
+            gb: "00D2 sibe letter kaa medial form",
             eac: "SKAAZ1",
           },
           MCH: {
-            gb: "183A manchu ka medial form",
+            gb: "00D2 manchu letter kaa medial form",
             eac: "MKAAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00D2 manchu letter kaa medial form",
+          },
         },
       },
     },
@@ -2987,23 +3325,29 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0035 ka final form",
+            gb: "0035 mongolian letter ka final form",
             eac: "MKM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0035 mongolian letter ka final form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "0035 todo ali gali letter ka final form",
           },
           SIB: {
             written: ["medi", 0],
+            gb: "00D2 sibe letter kaa final form",
             eac: "SKAAM1",
           },
           MCH: {
             written: ["medi", 0],
+            gb: "00D2 manchu letter kaa final form",
             eac: "MKAAM1",
           },
           MCHx: {
             written: ["medi", 0],
+            gb: "00D2 manchu letter kaa final form",
           },
         },
       },
@@ -3016,11 +3360,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D3 kha isolated form",
+            gb: "00D3 mongolian letter kha isolated form",
             eac: "XKD1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00D3 mongolian letter kha isolated form",
+          },
+          TODx: {
+            gb: "00D3 todo ali gali letter kha isolated form",
+          },
         },
       },
     },
@@ -3030,11 +3378,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D3 kha initial form",
+            gb: "00D3 mongolian letter kha initial form",
             eac: "XKS1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00D3 mongolian letter kha initial form",
+          },
+          TODx: {
+            gb: "00D3 todo ali gali letter kha initial form",
+          },
         },
       },
     },
@@ -3044,11 +3396,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D3 kha medial form",
+            gb: "00D3 mongolian letter kha medial form",
             eac: "XKZ1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00D3 mongolian letter kha medial form",
+          },
+          TODx: {
+            gb: "00D3 todo ali gali letter kha medial form",
+          },
         },
       },
     },
@@ -3058,12 +3414,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0036 kha final form",
+            gb: "0036 mongolian letter kha final form",
             eac: "XKM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0036 mongolian letter kha final form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "00D3 todo ali gali letter kha final form",
           },
         },
       },
@@ -3076,11 +3435,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0037 tsa isolated form",
+            gb: "0037 mongolian letter tsa isolated form",
             eac: "XCD1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "0037 mongolian letter tsa isolated form",
+          },
+          TODx: {
+            gb: "0037 todo ali gali letter ja isolated form",
+          },
         },
       },
     },
@@ -3090,11 +3453,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0037 tsa initial form",
+            gb: "0037 mongolian letter tsa initial form",
             eac: "XCS1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "0037 mongolian letter tsa initial form",
+          },
+          TODx: {
+            gb: "0037 todo ali gali letter ja initial form",
+          },
         },
       },
     },
@@ -3104,11 +3471,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0037 tsa medial form",
+            gb: "0037 mongolian letter tsa medial form",
             eac: "XCZ1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "0037 mongolian letter tsa medial form",
+          },
+          TODx: {
+            gb: "0037 todo ali gali letter ja medial form",
+          },
         },
       },
     },
@@ -3118,12 +3489,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0038 tsa final form",
+            gb: "0038 mongolian letter tsa final form",
             eac: "XCM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0038 mongolian letter tsa final form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "0037 todo ali gali letter ja final form",
           },
         },
       },
@@ -3136,10 +3510,12 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0039 za isolated form",
+            gb: "0039 mongolian letter za isolated form",
             eac: "MZD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0039 mongolian letter za isolated form",
+          },
         },
       },
     },
@@ -3149,10 +3525,12 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0039 za initial form",
+            gb: "0039 mongolian letter za initial form",
             eac: "MZS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0039 mongolian letter za initial form",
+          },
         },
       },
     },
@@ -3162,10 +3540,12 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "0039 za medial form",
+            gb: "0039 mongolian letter za medial form",
             eac: "MZZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "0039 mongolian letter za medial form",
+          },
         },
       },
     },
@@ -3175,10 +3555,12 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "003A za final form",
+            gb: "003A mongolian letter za final form",
             eac: "MZM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "003A mongolian letter za final form",
+          },
         },
       },
     },
@@ -3190,12 +3572,14 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D4 haa isolated form",
+            gb: "00D4 mongolian letter haa isolated form",
             eac: "XHD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00D4 mongolian letter haa isolated form",
+          },
           TODx: {
-            written: ["medi", 0],
+            gb: "00D4 todo ali gali letter ha isolated form",
           },
         },
       },
@@ -3206,12 +3590,14 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D4 haa initial form",
+            gb: "00D4 mongolian letter haa initial form",
             eac: "XHS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00D4 mongolian letter haa initial form",
+          },
           TODx: {
-            written: ["medi", 0],
+            gb: "00D4 todo ali gali letter ha initial form",
           },
         },
       },
@@ -3222,11 +3608,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D5 haa medial form",
+            gb: "00D5 mongolian letter haa medial form",
             eac: "XHZ1",
           },
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00D5 mongolian letter haa medial form",
+          },
+          TODx: {
+            gb: "00D5 todo ali gali letter ha medial form",
+          },
         },
       },
     },
@@ -3236,12 +3626,15 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "003B haa final form",
+            gb: "003B mongolian letter haa final form",
             eac: "XHM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "003B mongolian letter haa final form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "00D5 todo ali gali letter ha final form",
           },
         },
       },
@@ -3254,7 +3647,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D6 zra isolated form",
+            gb: "00D6 mongolian letter zra isolated form",
             eac: "XRD1",
           },
         },
@@ -3266,7 +3659,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D6 zra initial form",
+            gb: "00D6 mongolian letter zra initial form",
             eac: "XRS1",
           },
         },
@@ -3278,7 +3671,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D6 zra medial form",
+            gb: "00D6 mongolian letter zra medial form",
             eac: "XRZ1",
           },
         },
@@ -3290,7 +3683,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "003C zra final form",
+            gb: "003C mongolian letter zra final form",
             eac: "XRM1",
           },
         },
@@ -3304,15 +3697,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D7 lha isolated form",
+            gb: "00D7 mongolian letter lha isolated form",
             eac: "XLD1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00D7 mongolian letter lha isolated form",
+          },
           TOD: {
-            gb: "1840 lha isolated form",
+            gb: "00D7 todo letter lha isolated form",
             eac: "TLHAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00D7 todo letter lha isolated form",
+          },
         },
       },
     },
@@ -3322,15 +3719,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D7 lha initial form",
+            gb: "00D7 mongolian letter lha initial form",
             eac: "XLS1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "00D7 mongolian letter lha initial form",
+          },
           TOD: {
-            gb: "1840 lha initial form",
+            gb: "00D7 todo letter lha initial form",
             eac: "TLHAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00D7 todo letter lha initial form",
+          },
         },
       },
     },
@@ -3340,15 +3741,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "003D lha medial form",
+            gb: "003D mongolian letter lha medial form",
             eac: "XLZ1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "003D mongolian letter lha medial form",
+          },
           TOD: {
-            gb: "003D lha medial form",
+            gb: "003D todo letter lha medial form",
             eac: "TLHAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "003D todo letter lha medial form",
+          },
         },
       },
     },
@@ -3358,15 +3763,19 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "003D lha final form",
+            gb: "003D mongolian letter lha final form",
             eac: "XLM1",
           },
-          MNGx: {},
+          MNGx: {
+            gb: "003D mongolian letter lha final form",
+          },
           TOD: {
-            gb: "003D lha final form",
+            gb: "003D todo letter lha final form",
             eac: "TLHAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "003D todo letter lha final form",
+          },
         },
       },
     },
@@ -3378,7 +3787,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D5 zhi isolated form",
+            gb: "00D5 mongolian letter zhi isolated form",
             eac: "XZD1",
           },
         },
@@ -3390,7 +3799,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D5 zhi initial form",
+            gb: "00D5 mongolian letter zhi initial form",
             eac: "XZS1",
           },
         },
@@ -3402,7 +3811,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D5 zhi medial form",
+            gb: "00D5 mongolian letter zhi medial form",
             eac: "XZZ1",
           },
         },
@@ -3414,7 +3823,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D5 zhi final form",
+            gb: "00D5 mongolian letter zhi final form",
             eac: "XZM1",
           },
         },
@@ -3428,7 +3837,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D8 chi isolated form",
+            gb: "00D8 mongolian letter chi isolated form",
             eac: "XQD1",
           },
         },
@@ -3440,7 +3849,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D8 chi initial form",
+            gb: "00D8 mongolian letter chi initial form",
             eac: "XQS1",
           },
         },
@@ -3452,7 +3861,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D8 chi medial form",
+            gb: "00D8 mongolian letter chi medial form",
             eac: "XQZ1",
           },
         },
@@ -3464,7 +3873,7 @@ export const variants: Record<
         default: true,
         locales: {
           MNG: {
-            gb: "00D8 chi final form",
+            gb: "00D8 mongolian letter chi final form",
             eac: "XQM1",
           },
         },
@@ -3478,10 +3887,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1843 todo long vowel sign isolated form",
+            gb: "0308 todo long vowel sign isolated form",
             eac: "TLVSD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0308 todo long vowel sign isolated form",
+          },
         },
       },
     },
@@ -3491,10 +3902,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1843 todo long vowel sign initial form",
+            gb: "0308 todo long vowel sign initial form",
             eac: "TLVSS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0308 todo long vowel sign initial form",
+          },
         },
       },
     },
@@ -3504,10 +3917,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1843 todo long vowel sign medial form",
+            gb: "0308 todo long vowel sign medial form",
             eac: "TLVSZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0308 todo long vowel sign medial form",
+          },
         },
       },
     },
@@ -3517,10 +3932,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1843 todo long vowel sign final form",
+            gb: "0308 todo long vowel sign final form",
             eac: "TLVSM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0308 todo long vowel sign final form",
+          },
         },
       },
     },
@@ -3532,11 +3949,13 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1844 todo e isolated form",
+            gb: "0300 todo letter e isolated form",
             eac: "TED1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "0300 todo letter e isolated form",
+          },
         },
       },
     },
@@ -3546,11 +3965,13 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1844 todo e initial form",
+            gb: "0300 todo letter e initial form",
             eac: "TES1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "0300 todo letter e initial form",
+          },
         },
       },
     },
@@ -3560,21 +3981,25 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "003F todo e first medial form",
+            gb: "003F todo letter e first medial form",
             eac: "TEZ1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "003F todo letter e first medial form",
+          },
         },
       },
       "1": {
         written: ["A", "E"],
         locales: {
           TOD: {
-            gb: "0040 todo e second medial form",
+            gb: "0040 todo letter e second medial form",
             eac: "TEZ2",
           },
-          TODx: {},
+          TODx: {
+            gb: "0040 todo letter e second medial form",
+          },
         },
       },
     },
@@ -3584,11 +4009,13 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "003F todo e first final form",
+            gb: "003F todo letter e final form",
             eac: "TEM1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "003F todo letter e final form",
+          },
         },
       },
     },
@@ -3600,10 +4027,11 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1845 todo i first medial form",
+            gb: "0301 todo letter i isolated form",
             eac: "TID1",
           },
           TODx: {
+            gb: "0301 todo letter i isolated form",
             lvs: true,
           },
         },
@@ -3615,17 +4043,19 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0041 todo i first initial form",
+            gb: "0041 todo letter i first initial form",
             eac: "TIS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0041 todo letter i first initial form",
+          },
         },
       },
       "1": {
         written: ["A", "I"],
         locales: {
           TOD: {
-            gb: "000A todo i second initial form",
+            gb: "000A todo letter i second initial form",
             unrecommended: true,
           },
         },
@@ -3637,10 +4067,12 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["vowel_devsger"],
-            gb: "0043 todo i first medial form",
+            gb: "0043 todo letter i second medial form",
             eac: "TIZ2",
           },
-          TODx: {},
+          TODx: {
+            gb: "0043 todo letter i second medial form",
+          },
         },
       },
       "2": {
@@ -3648,17 +4080,19 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0042 todo i second medial form",
+            gb: "0042 todo letter i first medial form",
             eac: "TIZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0042 todo letter i first medial form",
+          },
         },
       },
       "3": {
         written: ["I"],
         locales: {
           TOD: {
-            gb: "1855 todo i third medial form",
+            gb: "00B7 todo letter i third medial form",
             unrecommended: true,
           },
         },
@@ -3670,10 +4104,11 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0044 todo i first final form",
+            gb: "0044 todo letter i final form",
             eac: "TIM1",
           },
           TODx: {
+            gb: "0044 todo letter i final form",
             lvs: true,
           },
         },
@@ -3687,11 +4122,13 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1846 todo o isolated form",
+            gb: "0303 todo letter o isolated form",
             eac: "TOD1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "0303 todo letter o isolated form",
+          },
         },
       },
     },
@@ -3701,11 +4138,13 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0045 todo o initial form",
+            gb: "0045 todo letter o initial form",
             eac: "TOS1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "0045 todo letter o initial form",
+          },
         },
       },
     },
@@ -3715,21 +4154,25 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0046 todo o first medial form",
+            gb: "0046 todo letter o first medial form",
             eac: "TOZ1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "0046 todo letter o first medial form",
+          },
         },
       },
       "1": {
         written: ["A", "Ob"],
         locales: {
           TOD: {
-            gb: "0047 todo o second medial form",
+            gb: "0047 todo letter o second medial form",
             eac: "TOZ2",
           },
-          TODx: {},
+          TODx: {
+            gb: "0047 todo letter o second medial form",
+          },
         },
       },
     },
@@ -3739,11 +4182,13 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0048 todo o final form",
+            gb: "0048 todo letter o final form",
             eac: "TOM1",
             lvs: true,
           },
-          TODx: {},
+          TODx: {
+            gb: "0048 todo letter o final form",
+          },
         },
       },
     },
@@ -3755,7 +4200,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1847 todo u first isolated form",
+            gb: "0304 todo letter u first isolated form",
             eac: "TUD1",
           },
         },
@@ -3764,7 +4209,7 @@ export const variants: Record<
         written: ["A", "Op"],
         locales: {
           TOD: {
-            gb: "0049 todo u second isolated form",
+            gb: "0049 todo letter u second isolated form",
             eac: "TUD2",
           },
         },
@@ -3776,7 +4221,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "004A todo u initial form",
+            gb: "004A todo letter u initial form",
             eac: "TUS1",
           },
         },
@@ -3787,7 +4232,7 @@ export const variants: Record<
         written: ["A", "Op"],
         locales: {
           TOD: {
-            gb: "004C todo u third medial form",
+            gb: "004C todo letter u second medial form",
             eac: "TUZ2",
           },
         },
@@ -3797,7 +4242,7 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["devsger"],
-            gb: "000C todo u second medial form",
+            gb: "000C todo letter u third medial form",
             eac: "TUZ3",
           },
         },
@@ -3807,7 +4252,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "004B todo u first medial form",
+            gb: "004B todo letter u first medial form",
             eac: "TUZ1",
           },
         },
@@ -3819,7 +4264,7 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["vowel_devsger"],
-            gb: "000E todo u second final form",
+            gb: "000E todo letter u second final form",
             eac: "TUM2",
           },
         },
@@ -3829,6 +4274,7 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["post_bowed"],
+            gb: "0305 todo letter u third final form",
             eac: "TUM3",
           },
         },
@@ -3838,7 +4284,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "004D todo u first final form",
+            gb: "004D todo letter u first final form",
             eac: "TUM1",
           },
         },
@@ -3852,7 +4298,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1848 todo oe isolated form",
+            gb: "0306 todo letter oe isolated form",
             eac: "TOED1",
             lvs: true,
           },
@@ -3865,7 +4311,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "004E todo oe initial form",
+            gb: "004E todo letter oe initial form",
             eac: "TOES1",
             lvs: true,
           },
@@ -3878,7 +4324,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "004F todo oe first medial form",
+            gb: "004F todo letter oe first medial form",
             eac: "TOEZ1",
             lvs: true,
           },
@@ -3888,7 +4334,7 @@ export const variants: Record<
         written: ["A", "Ot"],
         locales: {
           TOD: {
-            gb: "0050 todo oe third medial form",
+            gb: "0050 todo letter oe second medial form",
             eac: "TOEZ2",
           },
         },
@@ -3900,7 +4346,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0051 todo oe first final form",
+            gb: "0051 todo letter oe final form",
             eac: "TOEM1",
             lvs: true,
           },
@@ -3915,10 +4361,11 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1849 todo ue first isolated form",
+            gb: "00BD todo letter ue first isolated form",
             eac: "TUED1",
           },
           TODx: {
+            gb: "00BD todo letter ue first isolated form",
             lvs: true,
           },
         },
@@ -3927,10 +4374,12 @@ export const variants: Record<
         written: ["A", "O"],
         locales: {
           TOD: {
-            gb: "1823 todo ue second isolated form",
+            gb: "00BA todo letter ue second isolated form",
             eac: "TUED2",
           },
-          TODx: {},
+          TODx: {
+            gb: "00BA todo letter ue second isolated form",
+          },
         },
       },
     },
@@ -3940,10 +4389,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1824 todo ue initial form",
+            gb: "0307 todo letter ue initial form",
             eac: "TUES1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0307 todo letter ue initial form",
+          },
         },
       },
     },
@@ -3953,20 +4404,24 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "000C todo ue first medial form",
+            gb: "000C todo letter ue first medial form",
             eac: "TUEZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "000C todo letter ue first medial form",
+          },
         },
       },
       "1": {
         written: ["A", "O"],
         locales: {
           TOD: {
-            gb: "000D todo ue second medial form",
+            gb: "000D todo letter ue second medial form",
             eac: "TUEZ2",
           },
-          TODx: {},
+          TODx: {
+            gb: "000D todo letter ue second medial form",
+          },
         },
       },
     },
@@ -3976,10 +4431,12 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["post_bowed"],
+            gb: "000F todo letter ue second final form",
             eac: "TUEM2",
           },
           TODx: {
             conditions: ["post_bowed"],
+            gb: "000F todo letter ue second final form",
             lvs: true,
           },
         },
@@ -3989,10 +4446,11 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "000E todo ue final form",
+            gb: "000E todo letter ue first final form",
             eac: "TUEM1",
           },
           TODx: {
+            gb: "000E todo letter ue first final form",
             lvs: true,
           },
         },
@@ -4006,10 +4464,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1829 ang isolated form",
+            gb: "00C3 todo letter ang isolated form",
             eac: "TANGD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C3 todo letter ang isolated form",
+          },
         },
       },
     },
@@ -4019,10 +4479,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1829 ang initial form",
+            gb: "00C3 todo letter ang initial form",
             eac: "TANGS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C3 todo letter ang initial form",
+          },
         },
       },
     },
@@ -4032,10 +4494,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1829 ang medial form",
+            gb: "00C3 todo letter ang medial form",
             eac: "TANGZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C3 todo letter ang medial form",
+          },
         },
       },
     },
@@ -4045,10 +4509,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1829 todo ang final form",
+            gb: "0309 todo letter ang final form",
             eac: "TANGM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0309 todo letter ang final form",
+          },
         },
       },
     },
@@ -4060,10 +4526,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "182A ba isolated form",
+            gb: "00C4 todo letter ba isolated form",
             eac: "TBAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C4 todo letter ba isolated form",
+          },
         },
       },
     },
@@ -4073,10 +4541,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "182A ba initial form",
+            gb: "00C4 todo letter ba initial form",
             eac: "TBAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C4 todo letter ba initial form",
+          },
         },
       },
     },
@@ -4086,10 +4556,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "182A ba medial form",
+            gb: "00C4 todo letter ba medial form",
             eac: "TBAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C4 todo letter ba medial form",
+          },
         },
       },
     },
@@ -4099,10 +4571,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "182A todo ba final form",
+            gb: "00C5 todo letter ba final form",
             eac: "TBAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C5 todo letter ba final form",
+          },
         },
       },
     },
@@ -4114,7 +4588,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "184C todo pa isolated form",
+            gb: "030A todo letter pa first isolated form",
             eac: "TPAD1",
           },
         },
@@ -4123,7 +4597,7 @@ export const variants: Record<
         written: ["init", 1],
         locales: {
           TODx: {
-            gb: "",
+            gb: "0331 todo letter pa second isolated form",
           },
         },
       },
@@ -4134,7 +4608,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "184C todo pa initial form",
+            gb: "030A todo letter pa first initial form",
             eac: "TPAS1",
           },
         },
@@ -4143,7 +4617,7 @@ export const variants: Record<
         written: ["Ph"],
         locales: {
           TODx: {
-            gb: "",
+            gb: "0331 todo letter pa second initial form",
           },
         },
       },
@@ -4154,7 +4628,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "184C todo pa medial form",
+            gb: "030A todo letter pa first medial form",
             eac: "TPAZ1",
           },
         },
@@ -4163,7 +4637,7 @@ export const variants: Record<
         written: ["Ph"],
         locales: {
           TODx: {
-            gb: "",
+            gb: "0331 todo letter pa second medial form",
           },
         },
       },
@@ -4174,7 +4648,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0052 todo pa final form",
+            gb: "0052 todo letter pa final form",
             eac: "TPAM1",
           },
           TODx: {
@@ -4191,7 +4665,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "184D todo qa isolated form",
+            gb: "030B todo letter qa first isolated form",
             eac: "TQAD1",
           },
         },
@@ -4200,6 +4674,7 @@ export const variants: Record<
         written: ["init", 1],
         locales: {
           TOD: {
+            gb: "00D3 todo letter qa second isolated form",
             eac: "TQAD2",
           },
         },
@@ -4211,7 +4686,7 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["feminine"],
-            gb: "183B todo qa feminine initial form",
+            gb: "00D3 todo letter qa second initial form",
             eac: "TQAS2",
           },
         },
@@ -4222,7 +4697,7 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["masculine_onset"],
-            gb: "184D todo qa initial form",
+            gb: "030B todo letter qa first initial form",
             eac: "TQAS1",
           },
         },
@@ -4234,7 +4709,7 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["feminine"],
-            gb: "183B todo qa feminine medial form",
+            gb: "00DE todo letter qa second medial form",
             eac: "TQAZ2",
           },
         },
@@ -4245,7 +4720,7 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["masculine_onset"],
-            gb: "001C todo qa medial form with dots",
+            gb: "001C todo letter qa first medial form",
             eac: "TQAZ1",
           },
         },
@@ -4257,7 +4732,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1836 todo qa final form",
+            gb: "0036 todo letter qa final form",
             eac: "TQAM1",
           },
         },
@@ -4271,7 +4746,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "184E todo ga masculine isolated form",
+            gb: "030C todo letter ga first isolated form",
             eac: "TGAD1",
           },
           TODx: {},
@@ -4281,7 +4756,7 @@ export const variants: Record<
         written: ["init", 1],
         locales: {
           TOD: {
-            gb: "1889 todo ga feminine isolated form",
+            gb: "001E todo letter ga second isolated form",
             eac: "TGAD2",
           },
           TODx: {},
@@ -4294,10 +4769,12 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["feminine"],
+            gb: "001E todo letter ga second initial form",
             eac: "TGAS2",
           },
           TODx: {
             conditions: ["feminine"],
+            gb: "001E todo letter ga second initial form",
           },
         },
       },
@@ -4307,11 +4784,12 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["masculine_onset"],
-            gb: "184E todo ga initial form",
+            gb: "030C todo letter ga first initial form",
             eac: "TGAS1",
           },
           TODx: {
             conditions: ["masculine_onset"],
+            gb: "030C todo letter ga first initial form",
           },
         },
       },
@@ -4322,11 +4800,12 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["devsger"],
-            gb: "0054 todo ga second medial form",
+            gb: "0054 todo letter ga second medial form",
             eac: "TGAZ2",
           },
           TODx: {
             conditions: ["devsger"],
+            gb: "0054 todo letter ga second medial form",
           },
         },
       },
@@ -4335,10 +4814,12 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["feminine"],
+            gb: "001E todo letter ga third medial form",
             eac: "TGAZ3",
           },
           TODx: {
             conditions: ["feminine"],
+            gb: "001E todo letter ga third medial form",
           },
         },
       },
@@ -4348,11 +4829,12 @@ export const variants: Record<
         locales: {
           TOD: {
             conditions: ["masculine_onset"],
-            gb: "0053 todo ga first medial form",
+            gb: "0053 todo letter ga first medial form",
             eac: "TGAZ1",
           },
           TODx: {
             conditions: ["masculine_onset"],
+            gb: "0053 todo letter ga first medial form",
           },
         },
       },
@@ -4363,10 +4845,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0055 todo ga first final form",
+            gb: "0055 todo letter ga final form",
             eac: "TGAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0055 todo letter ga final form",
+          },
         },
       },
     },
@@ -4379,10 +4863,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "182E todo ma isolated form",
+            gb: "00C9 todo letter ma isolated form",
             eac: "TMAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C9 todo letter ma isolated form",
+          },
         },
       },
     },
@@ -4393,10 +4879,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "182E todo ma initial form",
+            gb: "00C9 todo letter ma initial form",
             eac: "TMAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00C9 todo letter ma initial form",
+          },
         },
       },
     },
@@ -4407,10 +4895,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "0020 todo ma medial form",
+            gb: "0020 todo letter ma medial form",
             eac: "TMAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0020 todo letter ma medial form",
+          },
         },
       },
     },
@@ -4421,10 +4911,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "184F todo ma final form",
+            gb: "030D todo letter ma final form",
             eac: "TMAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "030D todo letter ma final form",
+          },
         },
       },
     },
@@ -4437,10 +4929,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "1850 todo ta isolated form",
+            gb: "030E todo letter ta isolated form",
             eac: "TTAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "030E todo letter ta isolated form",
+          },
         },
       },
     },
@@ -4451,10 +4945,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "1850 todo ta initial form",
+            gb: "030E todo letter ta initial form",
             eac: "TTAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "030E todo letter ta initial form",
+          },
         },
       },
     },
@@ -4465,10 +4961,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "1850 todo ta medial form",
+            gb: "030E todo letter ta medial form",
             eac: "TTAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "030E todo letter ta medial form",
+          },
         },
       },
     },
@@ -4479,11 +4977,11 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "0056 todo ta final form",
+            gb: "030E todo letter ta final form",
             eac: "TTAM1",
           },
           TODx: {
-            written: ["medi", 0],
+            gb: "030E todo letter ta final form",
           },
         },
       },
@@ -4496,10 +4994,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1851 todo da isolated form",
+            gb: "030F todo letter da isolated form",
             eac: "TDAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "030F todo letter da isolated form",
+          },
         },
       },
     },
@@ -4509,10 +5009,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1851 todo da initial form",
+            gb: "030F todo letter da initial form",
             eac: "TDAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "030F todo letter da initial form",
+          },
         },
       },
     },
@@ -4522,10 +5024,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1851 todo da medial form",
+            gb: "030F todo letter da medial form",
             eac: "TDAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "030F todo letter da medial form",
+          },
         },
       },
     },
@@ -4535,11 +5039,11 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0311 todo da final form",
+            gb: "030F todo letter da final form",
             eac: "TDAM1",
           },
           TODx: {
-            written: ["medi", 0],
+            gb: "030F todo letter da final form",
           },
         },
       },
@@ -4552,7 +5056,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1852 todo cha isolated form",
+            gb: "0057 todo letter cha isolated form",
             eac: "TCHAD1",
           },
         },
@@ -4564,7 +5068,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1852 todo cha initial form",
+            gb: "0057 todo letter cha initial form",
             eac: "TCHAS1",
           },
         },
@@ -4576,7 +5080,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0057 todo cha medial form",
+            gb: "0057 todo letter cha medial form",
             eac: "TCHAZ1",
           },
         },
@@ -4588,7 +5092,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0058 todo cha final form",
+            gb: "0058 todo letter cha final form",
             eac: "TCHAM1",
           },
         },
@@ -4602,10 +5106,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1853 todo ja isolated form",
+            gb: "0059 todo letter ja isolated form",
             eac: "TJAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0059 todo letter ja isolated form",
+          },
         },
       },
     },
@@ -4615,10 +5121,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1853 todo ja initial form",
+            gb: "0059 todo letter ja initial form",
             eac: "TJAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0059 todo letter ja initial form",
+          },
         },
       },
     },
@@ -4628,10 +5136,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "0059 todo ja medial form",
+            gb: "0059 todo letter ja medial form",
             eac: "TJAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0059 todo letter ja medial form",
+          },
         },
       },
     },
@@ -4641,11 +5151,11 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "005A todo ja final form",
+            gb: "005A todo letter ja final form",
             eac: "TJAM1",
           },
           TODx: {
-            written: ["medi", 0],
+            gb: "005A todo letter ja final form",
           },
         },
       },
@@ -4659,10 +5169,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "1854 todo tsa isolated form",
+            gb: "0031 todo letter tsa isolated form",
             eac: "TTSAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0031 todo letter tsa isolated form",
+          },
         },
       },
     },
@@ -4673,10 +5185,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "1854 todo tsa initial form",
+            gb: "0031 todo letter tsa initial form",
             eac: "TTSAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0031 todo letter tsa initial form",
+          },
         },
       },
     },
@@ -4687,10 +5201,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "0031 todo tsa medial form",
+            gb: "0031 todo letter tsa medial form",
             eac: "TTSAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0031 todo letter tsa medial form",
+          },
         },
       },
     },
@@ -4701,11 +5217,11 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "0032 todo tsa final form",
+            gb: "0032 todo letter tsa final form",
             eac: "TTSAM1",
           },
           TODx: {
-            written: ["medi", 0],
+            gb: "0032 todo letter tsa final form",
           },
         },
       },
@@ -4719,10 +5235,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "1855 todo ya isolated form",
+            gb: "00B7 todo letter ya isolated form",
             eac: "TYAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00B7 todo letter ya isolated form",
+          },
         },
       },
     },
@@ -4733,10 +5251,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "1855 todo ya first initial form",
+            gb: "00B7 todo letter ya initial form",
             eac: "TYAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00B7 todo letter ya initial form",
+          },
         },
       },
     },
@@ -4747,10 +5267,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "1855 todo ya first medial form",
+            gb: "00B7 todo letter ya medial form",
             eac: "TYAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00B7 todo letter ya medial form",
+          },
         },
       },
     },
@@ -4761,10 +5283,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "0044 todo ya final form",
+            gb: "00B7 todo letter ya final form",
             eac: "TYAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00B7 todo letter ya final form",
+          },
         },
       },
     },
@@ -4776,10 +5300,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1856 todo wa isolated form",
+            gb: "0310 todo letter wa isolated form",
             eac: "TWAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0310 todo letter wa isolated form",
+          },
         },
       },
     },
@@ -4789,10 +5315,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1856 todo wa initial form",
+            gb: "0310 todo letter wa initial form",
             eac: "TWAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0310 todo letter wa initial form",
+          },
         },
       },
     },
@@ -4802,10 +5330,12 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1856 todo wa first medial form",
+            gb: "0310 todo letter wa medial form",
             eac: "TWAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0310 todo letter wa medial form",
+          },
         },
       },
     },
@@ -4815,11 +5345,11 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "005B todo wa first final form",
+            gb: "005B todo letter wa final form",
             eac: "TWAM1",
           },
           TODx: {
-            written: ["medi", 0],
+            gb: "005B todo letter wa final form",
           },
         },
       },
@@ -4832,7 +5362,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1857 todo ka isolated form",
+            gb: "0311 todo letter ka isolated form",
             eac: "TEKAD1",
           },
         },
@@ -4844,7 +5374,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1857 todo ka initial form",
+            gb: "0311 todo letter ka initial form",
             eac: "TEKAS1",
           },
         },
@@ -4856,7 +5386,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1857 todo ka medial form",
+            gb: "0311 todo letter ka medial form",
             eac: "TEKAZ1",
           },
         },
@@ -4868,7 +5398,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "005C todo ka final form",
+            gb: "005C todo letter ka final form",
             eac: "TEKAM1",
           },
         },
@@ -4882,7 +5412,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1858 todo gaa isolated form",
+            gb: "00FB todo letter gaa isolated form",
             eac: "TGAAD1",
           },
         },
@@ -4894,7 +5424,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1858 todo gaa initial form",
+            gb: "00FB todo letter gaa initial form",
             eac: "TGAAS1",
           },
         },
@@ -4906,7 +5436,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1858 todo gaa medial form",
+            gb: "00FB todo letter gaa medial form",
             eac: "TGAAZ1",
           },
         },
@@ -4918,7 +5448,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "1858 todo gaa final form",
+            gb: "00FB todo letter gaa final form",
             eac: "TGAAM1",
           },
         },
@@ -4933,10 +5463,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "183E todo haa isolated form",
+            gb: "00D4 todo letter haa isolated form",
             eac: "THAAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00D4 todo letter haa isolated form",
+          },
         },
       },
     },
@@ -4947,10 +5479,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "183E todo haa first initial form",
+            gb: "00D4 todo letter haa initial form",
             eac: "THAAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00D4 todo letter haa initial form",
+          },
         },
       },
     },
@@ -4961,10 +5495,12 @@ export const variants: Record<
         locales: {
           MNGx: {},
           TOD: {
-            gb: "005D todo haa first medial form",
+            gb: "005D todo letter haa medial form",
             eac: "THAAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "005D todo letter haa medial form",
+          },
         },
       },
     },
@@ -4977,10 +5513,12 @@ export const variants: Record<
             written: ["Hr"],
           },
           TOD: {
-            gb: "1859 todo haa first final form",
+            gb: "0312 todo letter haa final form",
             eac: "THAAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "0312 todo letter haa final form",
+          },
         },
       },
     },
@@ -4992,7 +5530,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "185A todo jia isolated form",
+            gb: "0313 todo letter jia isolated form",
             eac: "TAKAD1",
           },
         },
@@ -5004,7 +5542,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "185A todo jia initial form",
+            gb: "0313 todo letter jia initial form",
             eac: "TAKAS1",
           },
         },
@@ -5016,7 +5554,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "185A todo jia medial form",
+            gb: "0313 todo letter jia medial form",
             eac: "TAKAZ1",
           },
         },
@@ -5028,7 +5566,7 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "185A todo jia final form",
+            gb: "0313 todo letter jia final form",
             eac: "TAKAM1",
           },
         },
@@ -5041,12 +5579,16 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F9 todo letter nia isolated form",
+          },
           TOD: {
-            gb: "185B todo nia isolated form",
+            gb: "00F9 todo letter nia isolated form",
             eac: "TANAD1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00F9 todo letter nia isolated form",
+          },
         },
       },
     },
@@ -5055,12 +5597,16 @@ export const variants: Record<
         written: ["Ny"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F9 todo letter nia initial form",
+          },
           TOD: {
-            gb: "185B todo nia initial form",
+            gb: "00F9 todo letter nia initial form",
             eac: "TANAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00F9 todo letter nia initial form",
+          },
         },
       },
     },
@@ -5069,12 +5615,16 @@ export const variants: Record<
         written: ["Ny"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F9 todo letter nia medial form",
+          },
           TOD: {
-            gb: "185B todo nia medial form",
+            gb: "00F9 todo letter nia medial form",
             eac: "TANAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00F9 todo letter nia medial form",
+          },
         },
       },
     },
@@ -5085,12 +5635,15 @@ export const variants: Record<
         locales: {
           MNGx: {
             written: ["Ny"],
+            gb: "00F9 todo letter nia final form // = 00F9 todo letter nia medial form",
           },
           TOD: {
-            gb: "185B todo nia final form",
+            gb: "00F9 todo letter nia final form",
             eac: "TANAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00F9 todo letter nia final form",
+          },
         },
       },
     },
@@ -5102,18 +5655,23 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "185C todo dza isolated form",
+            gb: "005E todo letter zhi first isolated form",
             eac: "TADZAD1",
           },
           TODx: {
-            written: ["init", 0, "TODx"],
+            gb: "005E todo letter zhi first isolated form",
           },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
-          TODx: {},
+          TOD: {
+            gb: "032E todo letter zhi second isolated form",
+          },
+          TODx: {
+            gb: "032E todo letter zhi second isolated form",
+          },
         },
       },
     },
@@ -5123,17 +5681,23 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "185C todo dza first initial form",
+            gb: "005E todo letter zhi first initial form",
             eac: "TADZAS1",
           },
-          TODx: {},
+          TODx: {
+            gb: "005E todo letter zhi first initial form",
+          },
         },
       },
       "1": {
-        written: ["Zc"],
+        written: ["Zz2"],
         locales: {
-          TOD: {},
-          TODx: {},
+          TOD: {
+            gb: "032E todo letter zhi second initial form",
+          },
+          TODx: {
+            gb: "032E todo letter zhi second initial form",
+          },
         },
       },
     },
@@ -5143,17 +5707,23 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "005E todo dza first medial form",
+            gb: "005E todo letter zhi first medial form",
             eac: "TADZAZ1",
           },
-          TODx: {},
+          TODx: {
+            gb: "005E todo letter zhi first medial form",
+          },
         },
       },
       "1": {
-        written: ["Zc"],
+        written: ["Zz2"],
         locales: {
-          TOD: {},
-          TODx: {},
+          TOD: {
+            gb: "032E todo letter zhi second medial form",
+          },
+          TODx: {
+            gb: "032E todo letter zhi second medial form",
+          },
         },
       },
     },
@@ -5163,17 +5733,23 @@ export const variants: Record<
         default: true,
         locales: {
           TOD: {
-            gb: "005F todo dza first final form",
+            gb: "00FA todo letter zhi first final form",
             eac: "TADZAM1",
           },
-          TODx: {},
+          TODx: {
+            gb: "00FA todo letter zhi first final form",
+          },
         },
       },
       "1": {
-        written: ["Zc"],
+        written: ["Zz2"],
         locales: {
-          TOD: {},
-          TODx: {},
+          TOD: {
+            gb: "032F todo letter zhi second final form",
+          },
+          TODx: {
+            gb: "032F todo letter zhi second final form",
+          },
         },
       },
     },
@@ -5185,13 +5761,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00B3 sibe letter e isolated form",
             eac: "SED1",
           },
           MCH: {
-            gb: "1821 manchu e isolated form",
+            gb: "00B3 manchu letter e isolated form",
             eac: "MED1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00B3 manchu letter e isolated form",
+          },
         },
       },
     },
@@ -5201,13 +5780,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0007 sibe letter e initial form",
             eac: "SES1",
           },
           MCH: {
-            gb: "0007 manchu e initial form",
+            gb: "0007 manchu letter e initial form",
             eac: "MES1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0007 manchu letter e initial form",
+          },
         },
       },
     },
@@ -5216,16 +5798,18 @@ export const variants: Record<
         written: ["A"],
         locales: {
           SIB: {
+            gb: "0005 sibe letter e second medial form",
             conditions: ["feminine"],
             eac: "SEZ2",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "0005 manchu e second medial form",
+            gb: "0005 manchu letter e second medial form",
             eac: "MEZ2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "0005 manchu letter e second medial form",
           },
         },
       },
@@ -5234,13 +5818,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0060 sibe letter e first medial form",
             eac: "SEZ1",
           },
           MCH: {
-            gb: "0060 manchu e first medial form",
+            gb: "0060 manchu letter e first medial form",
             eac: "MEZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0060 manchu letter e first medial form",
+          },
         },
       },
     },
@@ -5249,16 +5836,18 @@ export const variants: Record<
         written: ["A"],
         locales: {
           SIB: {
+            gb: "0008 sibe letter e second final form",
             conditions: ["feminine"],
             eac: "SEM2",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "0008 manchu e second final form",
+            gb: "0008 manchu letter e second final form",
             eac: "MEM2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "0008 manchu letter e second final form",
           },
         },
       },
@@ -5267,14 +5856,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["post_bowed"],
+            gb: "0315 sibe letter e third final form",
             eac: "SEM3",
           },
           MCH: {
             conditions: ["post_bowed"],
+            gb: "0315 manchu letter e third final form",
             eac: "MEM3",
           },
           MCHx: {
             conditions: ["post_bowed"],
+            gb: "0315 manchu letter e third final form",
           },
         },
       },
@@ -5282,15 +5874,18 @@ export const variants: Record<
         written: ["Aa"],
         locales: {
           SIB: {
+            gb: "0009 sibe letter e fourth final form",
             conditions: ["post_bowed_feminine"],
             eac: "SEM4",
           },
           MCH: {
             conditions: ["post_bowed_feminine"],
+            gb: "0009 manchu letter e fourth final form",
             eac: "MEM4",
           },
           MCHx: {
             conditions: ["post_bowed_feminine"],
+            gb: "0009 manchu letter e fourth final form",
           },
         },
       },
@@ -5299,13 +5894,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0314 sibe letter e first final form",
             eac: "SEM1",
           },
           MCH: {
-            gb: "185D manchu e first final form",
+            gb: "0314 manchu letter e first final form",
             eac: "MEM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0314 manchu letter e first final form",
+          },
         },
       },
     },
@@ -5316,6 +5914,7 @@ export const variants: Record<
         written: ["I"],
         locales: {
           SIB: {
+            gb: "032A sibe letter i second isolated form",
             conditions: ["particle"],
           },
         },
@@ -5325,6 +5924,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00B5 sibe letter i first isolated form",
             eac: "SID1",
           },
         },
@@ -5336,6 +5936,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "000A sibe letter i initial form",
             eac: "SIS1",
           },
         },
@@ -5346,6 +5947,7 @@ export const variants: Record<
         written: ["A", "I"],
         locales: {
           SIB: {
+            gb: "00B8 sibe letter i second medial form",
             conditions: ["vowel_devsger"],
             eac: "SIZ2",
           },
@@ -5356,6 +5958,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00B7 sibe letter i first medial form",
             eac: "SIZ1",
           },
         },
@@ -5367,6 +5970,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "000B sibe letter i final form",
             eac: "SIM1",
           },
         },
@@ -5380,12 +5984,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0317 sibe letter iy isolated form",
             eac: "SIYD1",
           },
           MCH: {
+            gb: "0317 manchu letter iy isolated form",
             eac: "MIYD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0317 manchu letter iy isolated form",
+          },
         },
       },
     },
@@ -5395,12 +6003,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0317 sibe letter iy initial form",
             eac: "SIYS1",
           },
           MCH: {
+            gb: "0317 manchu letter iy initial form",
             eac: "MIYS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0317 manchu letter iy initial form",
+          },
         },
       },
     },
@@ -5410,14 +6022,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "185F sibe iy medial form",
+            gb: "0317 sibe letter iy medial form",
             eac: "SIYZ1",
           },
           MCH: {
-            gb: "185F manchu iy medial form",
+            gb: "0317 manchu letter iy medial form",
             eac: "MIYZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0317 manchu letter iy medial form",
+          },
         },
       },
     },
@@ -5427,14 +6041,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "185F sibe iy final form",
+            gb: "0064 sibe letter iy final form",
             eac: "SIYM1",
           },
           MCH: {
-            gb: "0064 manchu iy final form",
+            gb: "0064 manchu letter iy final form",
             eac: "MIYM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0064 manchu letter iy final form",
+          },
         },
       },
     },
@@ -5446,14 +6062,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1860 sibe ue isolated form",
+            gb: "0316 sibe letter u isolated form",
             eac: "SUED1",
           },
           MCH: {
-            gb: "1860 manchu ue isolated form",
+            gb: "0316 manchu letter u isolated form",
             eac: "MUED1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0316 manchu letter u isolated form",
+          },
         },
       },
     },
@@ -5463,14 +6081,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1860 sibe ue initial form",
+            gb: "0065 sibe letter u initial form",
             eac: "SUES1",
           },
           MCH: {
-            gb: "0065 manchu ue initial form",
+            gb: "0065 manchu letter u initial form",
             eac: "MUES1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0065 manchu letter u initial form",
+          },
         },
       },
     },
@@ -5480,16 +6100,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
-            gb: "1860 sibe ue second medial form",
+            gb: "000C sibe letter u second medial form",
             eac: "SUEZ2",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "000C manchu ue second medial form",
+            gb: "000C manchu letter u second medial form",
             eac: "MUEZ2",
           },
           MCHx: {
             conditions: ["feminine", "vowel_devsger"],
+            gb: "000C manchu letter u second medial form",
           },
         },
       },
@@ -5498,14 +6119,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1860 sibe ue first medial form",
+            gb: "0066 sibe letter u first medial form",
             eac: "SUEZ1",
           },
           MCH: {
-            gb: "0066 manchu ue first medial form",
+            gb: "0066 manchu letter u first medial form",
             eac: "MUEZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0066 manchu letter u first medial form",
+          },
         },
       },
     },
@@ -5515,16 +6138,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
-            gb: "1860 sibe ue second final form",
+            gb: "000E sibe letter u second final form",
             eac: "SUEM2",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "000E manchu ue second final form",
+            gb: "000E manchu letter u second final form",
             eac: "MUEM2",
           },
           MCHx: {
             conditions: ["feminine", "vowel_devsger"],
+            gb: "000E manchu letter u second final form",
           },
         },
       },
@@ -5533,16 +6157,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["marked", "post_bowed"],
-            gb: "1860 sibe ue third final form",
+            gb: "0068 sibe letter u third final form",
             eac: "SUEM3",
           },
           MCH: {
             conditions: ["marked", "post_bowed"],
-            gb: "0068 manchu ue third final form",
+            gb: "0068 manchu letter u third final form",
             eac: "MUEM3",
           },
           MCHx: {
             conditions: ["marked", "post_bowed"],
+            gb: "0068 manchu letter u third final form",
           },
         },
       },
@@ -5551,16 +6176,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine_marked", "post_bowed_feminine"],
-            gb: "1860 sibe ue fourth final form",
+            gb: "000F sibe letter u fourth final form",
             eac: "SUEM4",
           },
           MCH: {
             conditions: ["feminine_marked", "post_bowed_feminine"],
-            gb: "000F manchu ue fourth final form",
+            gb: "000F manchu letter u fourth final form",
             eac: "MUEM4",
           },
           MCHx: {
             conditions: ["feminine_marked", "post_bowed_feminine"],
+            gb: "000F manchu letter u fourth final form",
           },
         },
       },
@@ -5569,14 +6195,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1860 sibe ue first final form",
+            gb: "0067 sibe letter u first final form",
             eac: "SUEM1",
           },
           MCH: {
-            gb: "0067 manchu ue first final form",
+            gb: "0067 manchu letter u first final form",
             eac: "MUEM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0067 manchu letter u first final form",
+          },
         },
       },
     },
@@ -5588,13 +6216,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00BC sibe letter ue isolated form",
             eac: "SUD1",
           },
           MCH: {
-            gb: "1825 manchu u isolated form",
+            gb: "00BC manchu letter ue isolated form",
             eac: "MUD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00BC manchu letter ue isolated form",
+          },
         },
       },
     },
@@ -5604,13 +6235,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00BE sibe letter ue initial form",
             eac: "SUS1",
           },
           MCH: {
-            gb: "1826 manchu u initial form",
+            gb: "00BE manchu letter ue initial form",
             eac: "MUS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00BE manchu letter ue initial form",
+          },
         },
       },
     },
@@ -5620,14 +6254,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1861 sibe u medial form",
+            gb: "00BF sibe letter ue medial form",
             eac: "SUZ1",
           },
           MCH: {
-            gb: "1861 manchu u medial form",
+            gb: "00BF manchu letter ue medial form",
             eac: "MUZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00BF manchu letter ue medial form",
+          },
         },
       },
     },
@@ -5637,14 +6273,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1861 sibe u final form",
+            gb: "0011 sibe letter ue final form",
             eac: "SUM1",
           },
           MCH: {
-            gb: "0011 manchu u final form",
+            gb: "0011 manchu letter ue final form",
             eac: "MUM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0011 manchu letter ue final form",
+          },
         },
       },
     },
@@ -5656,6 +6294,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00C3 sibe letter ang isolated form",
             eac: "SANGD1",
           },
         },
@@ -5667,6 +6306,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00C3 sibe letter ang initial form",
             eac: "SANGS1",
           },
         },
@@ -5678,7 +6318,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1862 sibe ang medial form",
+            gb: "00C3 sibe letter ang medial form",
             eac: "SANGZ1",
           },
         },
@@ -5690,7 +6330,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1862 sibe ang final form",
+            gb: "0319 sibe letter ang final form",
             eac: "SANGM1",
           },
         },
@@ -5704,6 +6344,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00C7 sibe letter ka first isolated form",
             eac: "SKAD1",
           },
         },
@@ -5712,6 +6353,7 @@ export const variants: Record<
         written: ["init", 1],
         locales: {
           SIB: {
+            gb: "001E sibe letter ka second isolated form",
             eac: "SKAD2",
           },
         },
@@ -5723,7 +6365,7 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
-            gb: "1863 sibe ka initial form",
+            gb: "001E sibe letter ka second initial form",
             eac: "SKAS2",
           },
         },
@@ -5734,6 +6376,7 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
+            gb: "00C7 sibe letter ka first initial form",
             eac: "SKAS1",
           },
         },
@@ -5745,7 +6388,7 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["devsger"],
-            gb: "1863 sibe ka medial form",
+            gb: "0069 sibe letter ka second medial form",
             eac: "SKAZ2",
           },
         },
@@ -5755,6 +6398,7 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
+            gb: "001E sibe letter ka third medial form",
             eac: "SKAZ3",
           },
         },
@@ -5765,6 +6409,7 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
+            gb: "0006 sibe letter ka first medial form",
             eac: "SKAZ1",
           },
         },
@@ -5776,7 +6421,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1863 sibe ka final form",
+            gb: "031A sibe letter ka final form",
             eac: "SKAM1",
           },
         },
@@ -5790,24 +6435,32 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "031B sibe letter ga first isolated form",
             eac: "SGAD1",
           },
           MCH: {
+            gb: "031B manchu letter ga first isolated form",
             eac: "MGAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "031B manchu letter ga first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
           SIB: {
+            gb: "006B sibe letter ga second isolated form",
             eac: "SGAD2",
           },
           MCH: {
+            gb: "006B manchu letter ga second isolated form",
             eac: "MGAD2",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "006B manchu letter ga second isolated form",
+          },
         },
       },
     },
@@ -5817,15 +6470,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
+            gb: "006B sibe letter ga second initial form",
             eac: "SGAS2",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "006B manchu ga second initial form",
+            gb: "006B manchu letter ga second initial form",
             eac: "MGAS2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "006B manchu letter ga second initial form",
           },
         },
       },
@@ -5835,16 +6490,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
-            gb: "1864 sibe ga initial form",
+            gb: "031B sibe letter ga first initial form",
             eac: "SGAS1",
           },
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "1864 manchu ga first initial form",
+            gb: "031B manchu letter ga first initial form",
             eac: "MGAS1",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "031B manchu letter ga first initial form",
           },
         },
       },
@@ -5855,15 +6511,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
+            gb: "006B sibe letter ga second medial form",
             eac: "SGAZ2",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "030D manchu ga second medial form",
+            gb: "006B manchu letter ga second medial form",
             eac: "MGAZ2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "006B manchu letter ga second medial form",
           },
         },
       },
@@ -5873,16 +6531,26 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
-            gb: "1864 sibe ga medial form",
+            gb: "006A sibe letter ga first medial form",
             eac: "SGAZ1",
           },
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "006A manchu ga first medial form",
+            gb: "006A manchu letter ga first medial form",
             eac: "MGAZ1",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "006A manchu letter ga first medial form",
+          },
+        },
+      },
+      "3": {
+        written: ["Hh2"],
+        locales: {
+          MCHx: {
+            conditions: ["masculine_onset"],
+            gb: "031B manchu letter ga third medial form",
           },
         },
       },
@@ -5893,12 +6561,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "006A sibe letter ga final form",
             eac: "SGAM1",
           },
           MCH: {
+            gb: "006A manchu letter ga final form",
             eac: "MGAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "006A manchu letter ga final form",
+          },
         },
       },
     },
@@ -5910,24 +6582,32 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "031C sibe letter ha first isolated form",
             eac: "SHAD1",
           },
           MCH: {
+            gb: "031C manchu letter ha first isolated form",
             eac: "MHAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "031C manchu letter ha first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
           SIB: {
+            gb: "006D sibe letter ha second isolated form",
             eac: "SHAD2",
           },
           MCH: {
+            gb: "006D manchu letter ha second isolated form",
             eac: "MHAD2",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "006D manchu letter ha second isolated form",
+          },
         },
       },
     },
@@ -5937,15 +6617,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
+            gb: "006D sibe letter ha second initial form",
             eac: "SHAS2",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "006D manchu ha second initial form",
+            gb: "006D manchu letter ha second initial form",
             eac: "MHAS2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "006D manchu letter ha second initial form",
           },
         },
       },
@@ -5955,16 +6637,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
-            gb: "1865 sibe ha initial form",
+            gb: "031C sibe letter ha first initial form",
             eac: "SHAS1",
           },
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "1865 manchu ha first initial form",
+            gb: "031C manchu letter ha first initial form",
             eac: "MHAS1",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "031C manchu letter ha first initial form",
           },
         },
       },
@@ -5975,15 +6658,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
+            gb: "006D sibe letter ha second medial form",
             eac: "SHAZ2",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "030E manchu ha second medial form",
+            gb: "006D manchu letter ha second medial form",
             eac: "MHAZ2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "006D manchu letter ha second medial form",
           },
         },
       },
@@ -5993,16 +6678,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
-            gb: "1865 sibe ha medial form",
+            gb: "006C sibe letter ha first medial form",
             eac: "SHAZ1",
           },
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "006C manchu ha first medial form",
+            gb: "006C manchu letter ha first medial form",
             eac: "MHAZ1",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "006C manchu letter ha first medial form",
           },
         },
       },
@@ -6013,12 +6699,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "006C sibe letter ha final form",
             eac: "SHAM1",
           },
           MCH: {
+            gb: "006C manchu letter ha final form",
             eac: "MHAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "006C manchu letter ha final form",
+          },
         },
       },
     },
@@ -6030,12 +6720,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "031D sibe letter pa isolated form",
             eac: "SPAD1",
           },
           MCH: {
+            gb: "031D manchu letter pa isolated form",
             eac: "MPAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "031D manchu letter pa isolated form",
+          },
         },
       },
     },
@@ -6045,14 +6739,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1866 sibe pa initial form",
+            gb: "031D sibe letter pa initial form",
             eac: "SPAS1",
           },
           MCH: {
-            gb: "1866 manchu pa first initial form",
+            gb: "031D manchu letter pa initial form",
             eac: "MPAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "031D manchu letter pa initial form",
+          },
         },
       },
     },
@@ -6062,14 +6758,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1866 sibe pa medial form",
+            gb: "031D sibe letter pa medial form",
             eac: "SPAZ1",
           },
           MCH: {
-            gb: "1866 manchu pa first medial form",
+            gb: "031D manchu letter pa medial form",
             eac: "MPAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "031D manchu letter pa medial form",
+          },
         },
       },
     },
@@ -6079,12 +6777,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "031D sibe letter pa final form",
             eac: "SPAM1",
           },
           MCH: {
+            gb: "031D manchu letter pa final form",
             eac: "MPAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "031D manchu letter pa final form",
+          },
         },
       },
     },
@@ -6096,12 +6798,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "031E sibe letter sha isolated form",
             eac: "SSHAD1",
           },
           MCH: {
+            gb: "031E manchu letter sha isolated form",
             eac: "MSHAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "031E manchu letter sha isolated form",
+          },
         },
       },
     },
@@ -6111,14 +6817,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1867 sibe sha initial form",
+            gb: "031E sibe letter sha initial form",
             eac: "SSHAS1",
           },
           MCH: {
-            gb: "1867 manchu sha initial form",
+            gb: "031E manchu letter sha initial form",
             eac: "MSHAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "031E manchu letter sha initial form",
+          },
         },
       },
     },
@@ -6128,14 +6836,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1867 sibe sha medial form",
+            gb: "006E sibe letter sha medial form",
             eac: "SSHAZ1",
           },
           MCH: {
-            gb: "006E manchu sha medial form",
+            gb: "006E manchu letter sha medial form",
             eac: "MSHAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "006E manchu letter sha medial form",
+          },
         },
       },
     },
@@ -6145,13 +6855,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "006F sibe letter sha final form",
             eac: "SSHAM1",
           },
           MCH: {
-            gb: "006F manchu sha final form",
+            gb: "006F manchu letter sha final form",
             eac: "MSHAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "006F manchu letter sha final form",
+          },
         },
       },
     },
@@ -6163,24 +6876,32 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00CD sibe letter ta first isolated form",
             eac: "STAD2",
           },
           MCH: {
+            gb: "00CD manchu letter ta first isolated form",
             eac: "MTAD2",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00CD manchu letter ta first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 2],
         locales: {
           SIB: {
+            gb: "031F sibe letter ta second isolated form",
             eac: "STAD1",
           },
           MCH: {
+            gb: "031F manchu letter ta second isolated form",
             eac: "MTAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "031F manchu letter ta second isolated form",
+          },
         },
       },
     },
@@ -6191,16 +6912,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
-            gb: "1868 sibe ta first initial form",
+            gb: "031F sibe letter ta second initial form",
             eac: "STAS1",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "1868 manchu ta first initial form",
+            gb: "031F manchu letter ta second initial form",
             eac: "MTAS1",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "031F manchu letter ta second initial form",
           },
         },
       },
@@ -6209,16 +6931,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
-            gb: "1868 sibe ta second initial form",
+            gb: "00CD sibe letter ta first initial form",
             eac: "STAS2",
           },
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "1832 manchu ta second initial form",
+            gb: "00CD manchu letter ta first initial form",
             eac: "MTAS2",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "00CD manchu letter ta first initial form",
           },
         },
       },
@@ -6230,16 +6953,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
-            gb: "1868 sibe ta first medial form",
+            gb: "0070 sibe letter ta second medial form",
             eac: "STAZ1",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "0070 manchu ta first medial form",
+            gb: "0070 manchu letter ta second medial form",
             eac: "MTAZ1",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "0070 manchu letter ta second medial form",
           },
         },
       },
@@ -6248,16 +6972,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["devsger"],
-            gb: "1868 sibe ta third medial form",
+            gb: "002C sibe letter ta third medial form",
             eac: "STAZ3",
           },
           MCH: {
             conditions: ["devsger"],
-            gb: "002C manchu ta third medial form",
+            gb: "002C manchu letter ta third medial form",
             eac: "MTAZ3",
           },
           MCHx: {
             conditions: ["devsger"],
+            gb: "002C manchu letter ta third medial form",
           },
         },
       },
@@ -6266,16 +6991,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
-            gb: "1868 sibe ta second medial form",
+            gb: "00CE sibe letter ta first medial form",
             eac: "STAZ2",
           },
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "1833 manchu ta second medial form",
+            gb: "00CE manchu letter ta first medial form",
             eac: "MTAZ2",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "00CE manchu letter ta first medial form",
           },
         },
       },
@@ -6286,14 +7012,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1868 sibe ta first final form",
+            gb: "002D sibe letter ta final form",
             eac: "STAM1",
           },
           MCH: {
-            gb: "002D manchu ta final form",
+            gb: "002D manchu letter ta final form",
             eac: "MTAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "002D manchu letter ta final form",
+          },
         },
       },
     },
@@ -6305,31 +7033,39 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0320 sibe letter da first isolated form",
             eac: "SDAD1",
           },
           MCH: {
+            gb: "0320 manchu letter da first isolated form",
             eac: "MDAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0320 manchu letter da first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
           SIB: {
+            gb: "0071 sibe letter da second isolated form",
             eac: "SDAD2",
           },
           MCH: {
+            gb: "0071 manchu letter da second isolated form",
             eac: "MDAD2",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0071 manchu letter da second isolated form",
+          },
         },
       },
       "2": {
         written: ["init", 3],
         locales: {
           MCHx: {
-            gb: "0073 manchu da third isolated form",
+            gb: "0073 manchu letter da third isolated form",
           },
         },
       },
@@ -6340,16 +7076,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
-            gb: "1869 sibe da second initial form",
+            gb: "0071 sibe letter da second initial form",
             eac: "SDAS2",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "0071 manchu da second initial form",
+            gb: "0071 manchu letter da second initial form",
             eac: "MDAS2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "0071 manchu letter da second initial form",
           },
         },
       },
@@ -6359,16 +7096,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
-            gb: "1869 sibe da first initial form",
+            gb: "0320 sibe letter da first initial form",
             eac: "SDAS1",
           },
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "1869 manchu da first initial form",
+            gb: "0320 manchu letter da first initial form",
             eac: "MDAS1",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "0320 manchu letter da first initial form",
           },
         },
       },
@@ -6376,7 +7114,7 @@ export const variants: Record<
         written: ["Dt"],
         locales: {
           MCHx: {
-            gb: "0073 manchu da third isolated form",
+            gb: "0073 manchu letter da third isolated form",
           },
         },
       },
@@ -6387,16 +7125,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["feminine"],
-            gb: "1869 sibe da second medial form",
+            gb: "0073 sibe letter da second medial form",
             eac: "SDAZ1",
           },
           MCH: {
             conditions: ["feminine"],
-            gb: "0073 manchu da second medial form",
+            gb: "0073 manchu letter da second medial form",
             eac: "MDAZ2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "0073 manchu letter da second medial form",
           },
         },
       },
@@ -6406,16 +7145,17 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["masculine_onset"],
-            gb: "1869 sibe da first medial form",
+            gb: "0072 sibe letter da first medial form",
             eac: "SDAZ2",
           },
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "0072 manchu da first medial form",
+            gb: "0072 manchu letter da first medial form",
             eac: "MDAZ1",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "0072 manchu letter da first medial form",
           },
         },
       },
@@ -6426,12 +7166,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0072 sibe letter da final form",
             eac: "SDAM1",
           },
           MCH: {
+            gb: "0072 manchu letter da final form",
             eac: "MDAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0072 manchu letter da final form",
+          },
         },
       },
     },
@@ -6443,6 +7187,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "00B7 sibe letter ja isolated form",
             eac: "SJAD1",
           },
         },
@@ -6454,7 +7199,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186A sibe ja initial form",
+            gb: "00B7 sibe letter ja initial form",
             eac: "SJAS1",
           },
         },
@@ -6466,7 +7211,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186A sibe ja medial form",
+            gb: "0321 sibe letter ja medial form",
             eac: "SJAZ1",
           },
         },
@@ -6478,6 +7223,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0321 sibe letter ja final form",
             eac: "SJAM1",
           },
         },
@@ -6491,6 +7237,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0322 sibe letter fa isolated form",
             eac: "SFAD1",
           },
         },
@@ -6502,7 +7249,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186B sibe fa initial form",
+            gb: "0322 sibe letter fa initial form",
             eac: "SFAS1",
           },
         },
@@ -6514,7 +7261,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186B sibe fa medial form",
+            gb: "0323 sibe letter fa medial form",
             eac: "SFAZ1",
           },
         },
@@ -6526,6 +7273,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0323 sibe letter fa final form",
             eac: "SFAM1",
           },
         },
@@ -6539,12 +7287,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0324 sibe letter gaa isolated form",
             eac: "SGAAD1",
           },
           MCH: {
+            gb: "0324 manchu letter gaa isolated form",
             eac: "MGAAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0324 manchu letter gaa isolated form",
+          },
         },
       },
     },
@@ -6554,14 +7306,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186C sibe gaa initial form",
+            gb: "0324 sibe letter gaa initial form",
             eac: "SGAAS1",
           },
           MCH: {
-            gb: "186C manchu gaa initial form",
+            gb: "0324 manchu letter gaa initial form",
             eac: "MGAAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0324 manchu letter gaa initial form",
+          },
         },
       },
     },
@@ -6571,14 +7325,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186C sibe gaa medial form",
+            gb: "0324 sibe letter gaa medial form",
             eac: "SGAAZ1",
           },
           MCH: {
-            gb: "186C manchu gaa medial form",
+            gb: "0324 manchu letter gaa medial form",
             eac: "MGAAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0324 manchu letter gaa medial form",
+          },
         },
       },
     },
@@ -6588,14 +7344,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0324 sibe letter gaa final form",
             eac: "SGAAM1",
           },
           MCH: {
+            gb: "0324 manchu letter gaa final form // not exist in GB",
             eac: "MGAAM1",
           },
           MCHx: {
             written: ["Kh"],
-            gb: "0337 manchu gaa final form",
+            gb: "0337 manchu letter gaa final form",
           },
         },
       },
@@ -6608,9 +7366,11 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0325 sibe letter haa isolated form",
             eac: "SHAAD1",
           },
           MCH: {
+            gb: "0325 manchu letter haa isolated form",
             eac: "MHAAD1",
           },
         },
@@ -6622,11 +7382,11 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186D sibe haa initial form",
+            gb: "0325 sibe letter haa initial form",
             eac: "SHAAS1",
           },
           MCH: {
-            gb: "186D manchu haa initial form",
+            gb: "0325 manchu letter haa initial form",
             eac: "MHAAS1",
           },
         },
@@ -6638,11 +7398,11 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186D sibe haa medial form",
+            gb: "0325 sibe letter haa medial form",
             eac: "SHAAZ1",
           },
           MCH: {
-            gb: "186D manchu haa medial form",
+            gb: "0325 manchu letter haa medial form",
             eac: "MHAAZ1",
           },
         },
@@ -6654,9 +7414,11 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0325 sibe letter haa final form",
             eac: "SHAAM1",
           },
           MCH: {
+            gb: "0325 manchu letter haa final form",
             eac: "MHAAM1",
           },
         },
@@ -6670,12 +7432,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0326 sibe letter tsa isolated form",
             eac: "STSAD1",
           },
           MCH: {
+            gb: "0326 manchu letter tsa isolated form",
             eac: "MTSAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0326 manchu letter tsa isolated form",
+          },
         },
       },
     },
@@ -6685,14 +7451,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186E sibe tsa initial form",
+            gb: "0326 sibe letter tsa initial form",
             eac: "STSAS1",
           },
           MCH: {
-            gb: "186E manchu tsa initial form",
+            gb: "0326 manchu letter tsa initial form",
             eac: "MTSAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0326 manchu letter tsa initial form",
+          },
         },
       },
     },
@@ -6702,14 +7470,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186E sibe tsa medial form",
+            gb: "0074 sibe letter tsa medial form",
             eac: "STSAZ1",
           },
           MCH: {
-            gb: "0074 manchu tsa medial form",
+            gb: "0074 manchu letter tsa medial form",
             eac: "MTSAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0074 manchu letter tsa medial form",
+          },
         },
       },
     },
@@ -6719,12 +7489,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0074 sibe letter tsa final form",
             eac: "STSAM1",
           },
           MCH: {
+            gb: "0074 manchu letter tsa final form",
             eac: "MTSAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0074 manchu letter tsa final form",
+          },
         },
       },
     },
@@ -6736,12 +7510,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0327 sibe letter za isolated form",
             eac: "SZAD1",
           },
           MCH: {
+            gb: "0327 manchu letter za isolated form",
             eac: "MZAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0327 manchu letter za isolated form",
+          },
         },
       },
     },
@@ -6751,7 +7529,7 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["marked"],
-            gb: "186F sibe za second initial form",
+            gb: "0075 sibe letter za second initial form",
           },
         },
       },
@@ -6760,14 +7538,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186F sibe za first initial form",
+            gb: "0327 sibe letter za first initial form",
             eac: "SZAS1",
           },
           MCH: {
-            gb: "186F manchu za first initial form",
+            gb: "0327 manchu letter za initial form",
             eac: "MZAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0327 manchu letter za initial form",
+          },
         },
       },
     },
@@ -6777,7 +7557,7 @@ export const variants: Record<
         locales: {
           SIB: {
             conditions: ["marked"],
-            gb: "186F sibe za second medial form",
+            gb: "0077 sibe letter za second medial form",
           },
         },
       },
@@ -6786,14 +7566,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "186F sibe za first medial form",
+            gb: "0076 sibe letter za first medial form",
             eac: "SZAZ1",
           },
           MCH: {
-            gb: "0076 manchu za first medial form",
+            gb: "0076 manchu letter za medial form",
             eac: "MZAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0327 manchu letter za medial form",
+          },
         },
       },
     },
@@ -6803,12 +7585,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0076 sibe letter za final form",
             eac: "SZAM1",
           },
           MCH: {
+            gb: "0076 manchu letter za final form",
             eac: "MZAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0076 manchu letter za final form",
+          },
         },
       },
     },
@@ -6820,9 +7606,11 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0328 sibe letter raa isolated form",
             eac: "SRAD1",
           },
           MCH: {
+            gb: "0328 manchu letter raa isolated form",
             eac: "MRAAD1",
           },
         },
@@ -6834,11 +7622,11 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1870 sibe raa initial form",
+            gb: "0328 sibe letter raa initial form",
             eac: "SRAS1",
           },
           MCH: {
-            gb: "1870 manchu raa initial form",
+            gb: "0328 manchu letter raa initial form",
             eac: "MRAAS1",
           },
         },
@@ -6850,11 +7638,11 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1870 sibe raa medial form",
+            gb: "0328 sibe letter raa medial form",
             eac: "SRAZ1",
           },
           MCH: {
-            gb: "1870 manchu raa medial form",
+            gb: "0328 manchu letter raa medial form",
             eac: "MRAAZ1",
           },
         },
@@ -6866,9 +7654,11 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0328 sibe letter raa final form",
             eac: "SRAM1",
           },
           MCH: {
+            gb: "0328 manchu letter raa final form",
             eac: "MRAAM1",
           },
         },
@@ -6882,12 +7672,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0078 sibe letter chi isolated form",
             eac: "SCHAD1",
           },
           MCH: {
+            gb: "0078 manchu letter chi isolated form",
             eac: "MCHAAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0078 manchu letter chi isolated form",
+          },
         },
       },
     },
@@ -6897,14 +7691,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1871 sibe cha initial form",
+            gb: "0078 sibe letter chi initial form",
             eac: "SCHAS1",
           },
           MCH: {
-            gb: "1871 manchu cha initial form",
+            gb: "0078 manchu letter chi initial form",
             eac: "MCHAAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0078 manchu letter chi initial form",
+          },
         },
       },
     },
@@ -6914,14 +7710,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1871 sibe cha medial form",
+            gb: "0078 sibe letter chi medial form",
             eac: "SCHAZ1",
           },
           MCH: {
-            gb: "0078 manchu cha medial form",
+            gb: "0078 manchu letter chi medial form",
             eac: "MCHAAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0078 manchu letter chi medial form",
+          },
         },
       },
     },
@@ -6931,12 +7729,16 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0078 sibe letter chi final form",
             eac: "SCHAM1",
           },
           MCH: {
+            gb: "0078 manchu letter chi final form",
             eac: "MCHAAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0078 manchu letter chi final form",
+          },
         },
       },
     },
@@ -6948,6 +7750,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0329 sibe letter zhi isolated form",
             eac: "SZHAD1",
           },
         },
@@ -6959,7 +7762,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1872 sibe zha initial form",
+            gb: "0329 sibe letter zhi initial form",
             eac: "SZHAS1",
           },
         },
@@ -6971,7 +7774,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
-            gb: "1872 sibe zha medial form",
+            gb: "0329 sibe letter zhi medial form",
             eac: "SZHAZ1",
           },
         },
@@ -6983,6 +7786,7 @@ export const variants: Record<
         default: true,
         locales: {
           SIB: {
+            gb: "0329 sibe letter zhi final form",
             eac: "SZHAM1",
           },
         },
@@ -6996,6 +7800,7 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["particle"],
+            gb: "032A manchu letter i second isolated form",
           },
         },
       },
@@ -7004,10 +7809,12 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "1822 manchu i isolated form",
+            gb: "00B5 manchu letter i first isolated form",
             eac: "MID1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00B5 manchu letter i first isolated form",
+          },
         },
       },
     },
@@ -7017,10 +7824,12 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "000A manchu i initial form",
+            gb: "000A manchu letter i initial form",
             eac: "MIS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "000A manchu letter i initial form",
+          },
         },
       },
     },
@@ -7030,11 +7839,12 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["vowel_devsger"],
-            gb: "1873 manchu i third medial form",
+            gb: "00B9 manchu letter i second medial form",
             eac: "MIZ2",
           },
           MCHx: {
             conditions: ["vowel_devsger"],
+            gb: "00B9 manchu letter i second medial form",
           },
         },
       },
@@ -7042,9 +7852,11 @@ export const variants: Record<
         written: ["A", "I"],
         locales: {
           MCH: {
-            gb: "1873 manchu i third medial form",
+            gb: "00B8 manchu letter i third medial form",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00B8 manchu letter i third medial form",
+          },
         },
       },
       "3": {
@@ -7052,23 +7864,41 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "1835 manchu i first medial form",
+            gb: "00B7 manchu letter i first medial form",
             eac: "MIZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00B7 manchu letter i first medial form",
+          },
         },
       },
     },
     fina: {
       "1": {
+        written: ["Iy"],
+        locales: {
+          MCH: {
+            conditions: ["marked"],
+            gb: "00E9 manchu letter i second final form",
+            eac: "?", // TODO
+          },
+          MCHx: {
+            conditions: ["marked"],
+            gb: "00E9 manchu letter i second final form",
+          },
+        },
+      },
+      "2": {
         written: ["I"],
         default: true,
         locales: {
           MCH: {
-            gb: "000B manchu i first final form",
+            gb: "000B manchu letter i first final form",
             eac: "MIM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "000B manchu letter i first final form",
+          },
         },
       },
     },
@@ -7080,27 +7910,36 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
+            gb: "00C7 manchu letter ka first isolated form",
             eac: "MKAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00C7 manchu letter ka first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
           MCH: {
+            gb: "001E manchu letter ka second isolated form",
             eac: "MKAD2",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "001E manchu letter ka second isolated form",
+          },
         },
       },
       "2": {
         written: ["init", 2],
         locales: {
           MCH: {
+            gb: "001B manchu letter ka third isolated form",
             eac: "MKAD3",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "001B manchu letter ka third isolated form",
+          },
         },
       },
     },
@@ -7110,11 +7949,12 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["feminine"],
-            gb: "1889 manchu ka second initial form",
+            gb: "001E manchu letter ka second initial form",
             eac: "MKAS2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "1889 manchu letter ka second initial form",
           },
         },
       },
@@ -7122,11 +7962,13 @@ export const variants: Record<
         written: ["Gx"],
         locales: {
           MCH: {
-            gb: "001B manchu ka third initial form",
+            gb: "001B manchu letter ka third initial form",
             eac: "MKAS3",
             archaic: true,
           },
-          MCHx: {},
+          MCHx: {
+            gb: "001B manchu letter ka third initial form",
+          },
         },
       },
       "3": {
@@ -7135,11 +7977,12 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "182C manchu ka first initial form",
+            gb: "00C7 manchu letter ka first initial form",
             eac: "MKAS1",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "00C7 manchu letter ka first initial form",
           },
         },
       },
@@ -7150,11 +7993,12 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["masculine_devsger"],
-            gb: "001C manchu ka second medial form",
+            gb: "001C manchu letter ka second medial form",
             eac: "MKAZ2",
           },
           MCHx: {
             conditions: ["masculine_devsger"],
+            gb: "001C manchu letter ka second medial form",
           },
         },
       },
@@ -7163,11 +8007,12 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["feminine"],
-            gb: "001E manchu ka third medial form",
+            gb: "001E manchu letter ka third medial form",
             eac: "MKAZ3",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "001E manchu letter ka third medial form",
           },
         },
       },
@@ -7177,11 +8022,12 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["masculine_onset"],
-            gb: "0006 manchu ka first medial form",
+            gb: "0006 manchu letter ka first medial form",
             eac: "MKAZ1",
           },
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "0006 manchu letter ka first medial form",
           },
         },
       },
@@ -7189,11 +8035,13 @@ export const variants: Record<
         written: ["Gx"],
         locales: {
           MCH: {
-            gb: "0079 manchu ka fourth medial form",
+            gb: "001B manchu letter ka fourth medial form",
             eac: "MKAZ4",
             archaic: true,
           },
-          MCHx: {},
+          MCHx: {
+            gb: "001B manchu letter ka fourth medial form",
+          },
         },
       },
     },
@@ -7203,11 +8051,12 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["feminine"],
-            gb: "007A manchu ka second final form",
+            gb: "007A manchu letter ka second final form",
             eac: "MKAM2",
           },
           MCHx: {
             conditions: ["feminine"],
+            gb: "007A manchu letter ka second final form",
           },
         },
       },
@@ -7215,11 +8064,13 @@ export const variants: Record<
         written: ["Gx"],
         locales: {
           MCH: {
-            gb: "007B manchu ka third final form",
+            gb: "007B manchu letter ka third final form",
             eac: "MKAM3",
             archaic: true,
           },
-          MCHx: {},
+          MCHx: {
+            gb: "007B manchu letter ka third final form",
+          },
         },
       },
       "3": {
@@ -7228,11 +8079,12 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["masculine_devsger"],
-            gb: "1874 manchu ka first final form",
+            gb: "032B manchu letter ka first final form",
             eac: "MKAM1",
           },
           MCHx: {
             conditions: ["masculine_devsger"],
+            gb: "032B manchu letter ka first final form",
           },
         },
       },
@@ -7245,16 +8097,19 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
+            gb: "00D0 manchu letter ra first isolated form",
             eac: "MRAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00D0 manchu letter ra first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
           MCHx: {
-            gb: "034F manchu ra second isolated form",
+            gb: "034F manchu letter ra second isolated form",
           },
         },
       },
@@ -7265,17 +8120,19 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "1837 manchu ra initial form",
+            gb: "00D0 manchu letter ra first initial form",
             eac: "MRAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00D0 manchu letter ra first initial form",
+          },
         },
       },
       "1": {
         written: ["R3"],
         locales: {
           MCHx: {
-            gb: "034F manchu ra second initial form",
+            gb: "034F manchu letter ra second initial form",
           },
         },
       },
@@ -7286,17 +8143,19 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "1837 manchu ra medial form",
+            gb: "00D0 manchu letter ra first medial form",
             eac: "MRAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "00D0 manchu letter ra first medial form",
+          },
         },
       },
       "1": {
         written: ["R3"],
         locales: {
           MCHx: {
-            gb: "034F manchu ra second medial form",
+            gb: "034F manchu letter ra second medial form",
           },
         },
       },
@@ -7307,10 +8166,12 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "1875 manchu ra final form",
+            gb: "032C manchu letter ra final form",
             eac: "MRAM1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "032C manchu letter ra final form",
+          },
         },
       },
     },
@@ -7322,6 +8183,7 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
+            gb: "0322 manchu letter fa first isolated form",
             eac: "MFAD1",
           },
         },
@@ -7330,6 +8192,7 @@ export const variants: Record<
         written: ["init", 1],
         locales: {
           MCH: {
+            gb: "00C1 manchu letter fa second isolated form",
             eac: "MFAD2",
           },
         },
@@ -7341,7 +8204,7 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["marked"],
-            gb: "1838 manchu fa second initial form",
+            gb: "00C1 manchu letter fa second initial form",
             eac: "MFAS2",
           },
         },
@@ -7351,7 +8214,7 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "186B manchu fa first initial form",
+            gb: "0322 manchu letter fa first initial form",
             eac: "MFAS1",
           },
         },
@@ -7363,7 +8226,7 @@ export const variants: Record<
         locales: {
           MCH: {
             conditions: ["marked"],
-            gb: "1838 manchu fa second medial form",
+            gb: "00C1 manchu letter fa second medial form",
             eac: "MFAZ2",
           },
         },
@@ -7373,7 +8236,7 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "1876 manchu fa first medial form",
+            gb: "0323 manchu letter fa first medial form",
             eac: "MFAZ1",
           },
         },
@@ -7385,6 +8248,7 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
+            gb: "0323 manchu letter fa final form",
             eac: "MFAM1",
           },
         },
@@ -7398,9 +8262,12 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
+            gb: "0329 manchu letter zhi isolated form",
             eac: "MZHAD1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0329 manchu letter zhi isolated form",
+          },
         },
       },
     },
@@ -7410,10 +8277,12 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "1877 manchu zha initial form",
+            gb: "0329 manchu letter zhi initial form",
             eac: "MZHAS1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "0329 manchu letter zhi initial form",
+          },
         },
       },
     },
@@ -7423,10 +8292,12 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
-            gb: "007C manchu zha medial form",
+            gb: "007C manchu letter zhi medial form",
             eac: "MZHAZ1",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "007C manchu letter zhi medial form",
+          },
         },
       },
     },
@@ -7436,10 +8307,12 @@ export const variants: Record<
         default: true,
         locales: {
           MCH: {
+            gb: "007C manchu letter zhi final form // not exist in GB",
             eac: "MZHAM1",
           },
           MCHx: {
             written: ["Jc"],
+            gb: "0343 manchu letter zhi final form",
           },
         },
       },
@@ -7453,6 +8326,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             unrecommended: true,
+            gb: "00E7 manchu ali gali letter aa isolated form",
           },
         },
       },
@@ -7464,6 +8338,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             unrecommended: true,
+            gb: "0004 manchu ali gali letter aa initial form",
           },
         },
       },
@@ -7475,6 +8350,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             unrecommended: true,
+            gb: "0005 manchu ali gali letter aa medial form",
           },
         },
       },
@@ -7484,7 +8360,9 @@ export const variants: Record<
         written: ["Aw"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0080 manchu ali gali letter aa final form",
+          },
         },
       },
     },
@@ -7495,7 +8373,9 @@ export const variants: Record<
         written: ["A", "I4"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00E8 mongolian ali gali letter i isolated form",
+          },
         },
       },
     },
@@ -7504,7 +8384,9 @@ export const variants: Record<
         written: ["A", "I"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "000A mongolian ali gali letter i initial form",
+          },
         },
       },
     },
@@ -7513,7 +8395,9 @@ export const variants: Record<
         written: ["I"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00B7 mongolian ali gali letter i medial form",
+          },
         },
       },
     },
@@ -7522,7 +8406,9 @@ export const variants: Record<
         written: ["I4"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "0084 mongolian ali gali letter i first final form",
+          },
         },
       },
     },
@@ -7533,8 +8419,12 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "0085 mongolian ali gali letter ka isolated form",
+          },
+          TODx: {
+            gb: "001E todo ali gali letter ga isolated form",
+          },
         },
       },
     },
@@ -7543,8 +8433,12 @@ export const variants: Record<
         written: ["G"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "0085 mongolian ali gali letter ka initial form",
+          },
+          TODx: {
+            gb: "001E todo ali gali letter ga initial form",
+          },
         },
       },
     },
@@ -7553,8 +8447,12 @@ export const variants: Record<
         written: ["G"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "0085 mongolian ali gali letter ka medial form",
+          },
+          TODx: {
+            gb: "001E todo ali gali letter ga medial form",
+          },
         },
       },
     },
@@ -7563,9 +8461,12 @@ export const variants: Record<
         written: ["G", "Vi"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "0085 mongolian ali gali letter ka final form // = 0085 mongolian ali gali letter ka medial form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "001E todo ali gali letter ga final form",
           },
         },
       },
@@ -7577,8 +8478,12 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EA mongolian ali gali letter nga isolated form",
+          },
+          TODx: {
+            gb: "00EA todo ali gali letter nga isolated form",
+          },
         },
       },
     },
@@ -7587,8 +8492,12 @@ export const variants: Record<
         written: ["N", "G"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EA mongolian ali gali letter nga initial form",
+          },
+          TODx: {
+            gb: "00EA todo ali gali letter nga initial form",
+          },
         },
       },
     },
@@ -7597,8 +8506,12 @@ export const variants: Record<
         written: ["N", "G"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "0087 mongolian ali gali letter nga medial form",
+          },
+          TODx: {
+            gb: "0087 todo ali gali letter nga medial form",
+          },
         },
       },
     },
@@ -7607,9 +8520,12 @@ export const variants: Record<
         written: ["N", "G4"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "0087 mongolian ali gali letter nga final form // = 0087 mongolian ali gali letter nga medial form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "0087 todo ali gali letter nga final form",
           },
         },
       },
@@ -7621,7 +8537,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "0089 mongolian ali gali letter ca isolated form",
+          },
         },
       },
     },
@@ -7630,7 +8548,9 @@ export const variants: Record<
         written: ["Zc"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "0089 mongolian ali gali letter ca initial form",
+          },
         },
       },
     },
@@ -7639,7 +8559,9 @@ export const variants: Record<
         written: ["Zc"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "0089 mongolian ali gali letter ca medial form",
+          },
         },
       },
     },
@@ -7648,7 +8570,9 @@ export const variants: Record<
         written: ["Zc"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "0089 mongolian ali gali letter ca final form // = 0089 mongolian ali gali letter ca medial form",
+          },
         },
       },
     },
@@ -7659,8 +8583,12 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EB mongolian ali gali letter tta isolated form",
+          },
+          TODx: {
+            gb: "00EB todo ali gali letter tta isolated form",
+          },
         },
       },
     },
@@ -7669,8 +8597,12 @@ export const variants: Record<
         written: ["Zr2"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EB mongolian ali gali letter tta initial form",
+          },
+          TODx: {
+            gb: "00EB todo ali gali letter tta initial form",
+          },
         },
       },
     },
@@ -7679,8 +8611,12 @@ export const variants: Record<
         written: ["Zr2"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EB mongolian ali gali letter tta medial form",
+          },
+          TODx: {
+            gb: "00EB todo ali gali letter tta medial form",
+          },
         },
       },
     },
@@ -7689,9 +8625,12 @@ export const variants: Record<
         written: ["Zr2"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00EB mongolian ali gali letter tta final form // = 00EB mongolian ali gali letter tta medial form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "00EB todo ali gali letter tta final form",
           },
         },
       },
@@ -7703,8 +8642,12 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EC mongolian ali gali letter ttha isolated form",
+          },
+          TODx: {
+            gb: "00EC todo ali gali letter ttha isolated form",
+          },
         },
       },
     },
@@ -7713,8 +8656,12 @@ export const variants: Record<
         written: ["Cr2"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EC mongolian ali gali letter ttha initial form",
+          },
+          TODx: {
+            gb: "00EC todo ali gali letter ttha initial form",
+          },
         },
       },
     },
@@ -7723,8 +8670,12 @@ export const variants: Record<
         written: ["Cr2"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EC mongolian ali gali letter ttha medial form",
+          },
+          TODx: {
+            gb: "00EC todo ali gali letter ttha medial form",
+          },
         },
       },
     },
@@ -7733,8 +8684,12 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EC mongolian ali gali letter ttha final form",
+          },
+          TODx: {
+            gb: "00EC todo ali gali letter ttha final form",
+          },
         },
       },
     },
@@ -7745,8 +8700,12 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00ED mongolian ali gali letter dda isolated form",
+          },
+          TODx: {
+            gb: "00ED todo ali gali letter dda isolated form",
+          },
         },
       },
     },
@@ -7755,8 +8714,12 @@ export const variants: Record<
         written: ["Ds"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00ED mongolian ali gali letter dda initial form",
+          },
+          TODx: {
+            gb: "00ED todo ali gali letter dda initial form",
+          },
         },
       },
     },
@@ -7765,8 +8728,12 @@ export const variants: Record<
         written: ["Ds"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00ED mongolian ali gali letter dda medial form",
+          },
+          TODx: {
+            gb: "00ED todo ali gali letter dda medial form",
+          },
         },
       },
     },
@@ -7775,8 +8742,12 @@ export const variants: Record<
         written: ["Ds"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00ED mongolian ali gali letter dda final form // = 00ED mongolian ali gali letter dda medial form",
+          },
+          TODx: {
+            gb: "00ED todo ali gali letter dda final form",
+          },
         },
       },
     },
@@ -7787,9 +8758,15 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
-          MCHx: {},
+          MNGx: {
+            gb: "00EE mongolian ali gali letter nna isolated form",
+          },
+          TODx: {
+            gb: "00EE todo ali gali letter nna isolated form",
+          },
+          MCHx: {
+            gb: "00EE manchu ali gali letter nna isolated form",
+          },
         },
       },
     },
@@ -7798,9 +8775,15 @@ export const variants: Record<
         written: ["Wn"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
-          MCHx: {},
+          MNGx: {
+            gb: "00EE mongolian ali gali letter nna initial form",
+          },
+          TODx: {
+            gb: "00EE todo ali gali letter nna initial form",
+          },
+          MCHx: {
+            gb: "00EE manchu ali gali letter nna initial form",
+          },
         },
       },
     },
@@ -7809,9 +8792,15 @@ export const variants: Record<
         written: ["Wn"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
-          MCHx: {},
+          MNGx: {
+            gb: "00EE mongolian ali gali letter nna medial form",
+          },
+          TODx: {
+            gb: "00EE todo ali gali letter nna medial form",
+          },
+          MCHx: {
+            gb: "00EE manchu ali gali letter nna medial form",
+          },
         },
       },
     },
@@ -7820,11 +8809,17 @@ export const variants: Record<
         written: ["Wn"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            written: ["medi", 0],
+            gb: "00EE mongolian ali gali letter nna final form // = 00EE mongolian ali gali letter nna medial form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "00EE todo ali gali letter nna final form",
           },
-          MCHx: {},
+          MCHx: {
+            gb: "035E manchu ali gali letter nna final form",
+          },
         },
       },
     },
@@ -7835,8 +8830,12 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EF mongolian ali gali letter ta isolated form",
+          },
+          TODx: {
+            gb: "00EF todo ali gali letter ta isolated form",
+          },
         },
       },
     },
@@ -7845,8 +8844,12 @@ export const variants: Record<
         written: ["Dv"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EF mongolian ali gali letter ta initial form",
+          },
+          TODx: {
+            gb: "00EF todo ali gali letter ta initial form",
+          },
         },
       },
     },
@@ -7855,8 +8858,12 @@ export const variants: Record<
         written: ["Dv"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00EF mongolian ali gali letter ta medial form",
+          },
+          TODx: {
+            gb: "00EF todo ali gali letter ta medial form",
+          },
         },
       },
     },
@@ -7865,9 +8872,12 @@ export const variants: Record<
         written: ["Dv"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00EF mongolian ali gali letter ta final form // = 00EF mongolian ali gali letter ta medial form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "00EF todo ali gali letter ta final form",
           },
         },
       },
@@ -7879,7 +8889,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F0 mongolian ali gali letter da isolated form",
+          },
         },
       },
     },
@@ -7888,7 +8900,9 @@ export const variants: Record<
         written: ["Dq"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F0 mongolian ali gali letter da initial form",
+          },
         },
       },
     },
@@ -7897,7 +8911,9 @@ export const variants: Record<
         written: ["Dq"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F0 mongolian ali gali letter da medial form",
+          },
         },
       },
     },
@@ -7906,7 +8922,9 @@ export const variants: Record<
         written: ["Dq"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F0 mongolian ali gali letter da final form // = 00F0 mongolian ali gali letter da medial form",
+          },
         },
       },
     },
@@ -7917,14 +8935,20 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          MCHx: {},
+          MNGx: {
+            gb: "00F1 mongolian ali gali letter pa isolated form",
+          },
+          MCHx: {
+            gb: "00F1 manchu ali gali letter pa isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0330 todo ali gali letter pa second isolated form",
+          },
         },
       },
     },
@@ -7933,14 +8957,20 @@ export const variants: Record<
         written: ["Bg"],
         default: true,
         locales: {
-          MNGx: {},
-          MCHx: {},
+          MNGx: {
+            gb: "00F1 mongolian ali gali letter pa initial form",
+          },
+          MCHx: {
+            gb: "00F1 manchu ali gali letter pa initial form",
+          },
         },
       },
       "1": {
         written: ["Bh"],
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0330 todo ali gali letter pa second initial form",
+          },
         },
       },
     },
@@ -7949,14 +8979,20 @@ export const variants: Record<
         written: ["Bg"],
         default: true,
         locales: {
-          MNGx: {},
-          MCHx: {},
+          MNGx: {
+            gb: "00F1 mongolian ali gali letter pa medial form",
+          },
+          MCHx: {
+            gb: "00F1 manchu ali gali letter pa medial form",
+          },
         },
       },
       "1": {
         written: ["Bh"],
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0330 todo ali gali letter pa second medial form",
+          },
         },
       },
     },
@@ -7965,12 +9001,16 @@ export const variants: Record<
         written: ["Bg"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F1 mongolian ali gali letter pa final form // = 00F1 mongolian ali gali letter pa medial form",
+          },
           TODx: {
             written: ["medi", 0, "TODx"],
+            gb: "0330 todo ali gali letter pa second final form // not exist in Todo Ali Gali",
           },
           MCHx: {
             written: ["medi", 0],
+            gb: "00F1 manchu ali gali letter pa final form",
           },
         },
       },
@@ -7982,7 +9022,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F2 mongolian ali gali letter pha isolated form",
+          },
         },
       },
     },
@@ -7991,7 +9033,9 @@ export const variants: Record<
         written: ["Pg"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F2 mongolian ali gali letter pha initial form",
+          },
         },
       },
     },
@@ -8000,7 +9044,9 @@ export const variants: Record<
         written: ["Pg"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F2 mongolian ali gali letter pha medial form",
+          },
         },
       },
     },
@@ -8009,7 +9055,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F2 mongolian ali gali letter pha final form",
+          },
         },
       },
     },
@@ -8020,8 +9068,12 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "008A mongolian ali gali letter ssa isolated form",
+          },
+          TODx: {
+            gb: "008A todo ali gali letter ssa isolated form",
+          },
         },
       },
     },
@@ -8030,8 +9082,12 @@ export const variants: Record<
         written: ["Sx"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "008A mongolian ali gali letter ssa initial form",
+          },
+          TODx: {
+            gb: "008A todo ali gali letter ssa initial form",
+          },
         },
       },
     },
@@ -8040,8 +9096,12 @@ export const variants: Record<
         written: ["Sx"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "008A mongolian ali gali letter ssa medial form",
+          },
+          TODx: {
+            gb: "008A todo ali gali letter ssa medial form",
+          },
         },
       },
     },
@@ -8050,9 +9110,12 @@ export const variants: Record<
         written: ["Sx"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "008A mongolian ali gali letter ssa final form // = 008A mongolian ali gali letter ssa medial form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "008A todo ali gali letter ssa final form",
           },
         },
       },
@@ -8064,7 +9127,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F3 mongolian ali gali letter zha isolated form",
+          },
         },
       },
     },
@@ -8073,7 +9138,9 @@ export const variants: Record<
         written: ["Rh2"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F3 mongolian ali gali letter zha initial form",
+          },
         },
       },
     },
@@ -8082,7 +9149,9 @@ export const variants: Record<
         written: ["Rh2"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F3 mongolian ali gali letter zha medial form",
+          },
         },
       },
     },
@@ -8091,7 +9160,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F3 mongolian ali gali letter zha final form",
+          },
         },
       },
     },
@@ -8102,39 +9173,54 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "008B mongolian ali gali letter za isolated form",
+          },
+          TODx: {
+            gb: "008B todo ali gali letter za isolated form",
+          },
         },
       },
     },
     init: {
       "0": {
-        written: ["Zz"],
+        written: ["Zz3"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "008B mongolian ali gali letter za initial form",
+          },
+          TODx: {
+            gb: "008B todo ali gali letter za initial form",
+          },
         },
       },
     },
     medi: {
       "0": {
-        written: ["Zz"],
+        written: ["Zz3"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "008B mongolian ali gali letter za medial form",
+          },
+          TODx: {
+            gb: "008B todo ali gali letter za medial form",
+          },
         },
       },
     },
     fina: {
       "0": {
-        written: ["Zz"],
+        written: ["Zz3"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "008B mongolian ali gali letter za final form // = 008B mongolian ali gali letter za medial form",
+          },
           TODx: {
             written: ["medi", 0],
+            gb: "008B todo ali gali letter za final form",
           },
         },
       },
@@ -8146,8 +9232,12 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00F4 mongolian ali gali letter ah isolated form",
+          },
+          TODx: {
+            gb: "00F4 todo ali gali letter -a isolated form",
+          },
         },
       },
     },
@@ -8156,8 +9246,12 @@ export const variants: Record<
         written: ["Q"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00F4 mongolian ali gali letter ah initial form",
+          },
+          TODx: {
+            gb: "00F4 todo ali gali letter -a initial form",
+          },
         },
       },
     },
@@ -8166,8 +9260,12 @@ export const variants: Record<
         written: ["Q"],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00F4 mongolian ali gali letter ah medial form",
+          },
+          TODx: {
+            gb: "00F4 todo ali gali letter -a medial form",
+          },
         },
       },
     },
@@ -8176,8 +9274,12 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MNGx: {},
-          TODx: {},
+          MNGx: {
+            gb: "00F4 mongolian ali gali letter ah final form",
+          },
+          TODx: {
+            gb: "00F4 todo ali gali letter -a final form",
+          },
         },
       },
     },
@@ -8188,7 +9290,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0336 todo ali gali letter zha isolated form",
+          },
         },
       },
     },
@@ -8197,7 +9301,9 @@ export const variants: Record<
         written: ["Rz"],
         default: true,
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0336 todo ali gali letter zha initial form",
+          },
         },
       },
     },
@@ -8206,7 +9312,9 @@ export const variants: Record<
         written: ["Rz"],
         default: true,
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0336 todo ali gali letter zha medial form",
+          },
         },
       },
     },
@@ -8215,7 +9323,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0336 todo ali gali letter zha final form",
+          },
         },
       },
     },
@@ -8226,7 +9336,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0338 manchu ali gali letter gha isolated form",
+          },
         },
       },
     },
@@ -8235,7 +9347,9 @@ export const variants: Record<
         written: ["Hy"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0338 manchu ali gali letter gha initial form",
+          },
         },
       },
     },
@@ -8243,23 +9357,29 @@ export const variants: Record<
       "1": {
         written: ["Hy2"],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0338 manchu ali gali letter gha second medial form",
+          },
         },
       },
       "2": {
         written: ["Hy"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0339 manchu ali gali letter gha first medial form",
+          },
         },
       },
     },
     fina: {
       "0": {
-        written: ["medi", 0],
+        written: ["medi", 2],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0339 manchu ali gali letter gha final form",
+          },
         },
       },
     },
@@ -8270,7 +9390,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033A manchu ali gali letter nga isolated form",
+          },
         },
       },
     },
@@ -8279,7 +9401,9 @@ export const variants: Record<
         written: ["Nb"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033A manchu ali gali letter nga initial form",
+          },
         },
       },
     },
@@ -8288,7 +9412,9 @@ export const variants: Record<
         written: ["Nb"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033B manchu ali gali letter nga medial form",
+          },
         },
       },
     },
@@ -8297,7 +9423,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033B manchu ali gali letter nga final form",
+          },
         },
       },
     },
@@ -8308,7 +9436,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033C manchu ali gali letter ca isolated form",
+          },
         },
       },
     },
@@ -8317,7 +9447,9 @@ export const variants: Record<
         written: ["Ct"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033C manchu ali gali letter ca initial form",
+          },
         },
       },
     },
@@ -8326,7 +9458,9 @@ export const variants: Record<
         written: ["Ct"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033D manchu ali gali letter ca medial form",
+          },
         },
       },
     },
@@ -8335,7 +9469,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033D manchu ali gali letter ca final form",
+          },
         },
       },
     },
@@ -8346,7 +9482,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033E manchu ali gali letter jha isolated form",
+          },
         },
       },
     },
@@ -8355,7 +9493,9 @@ export const variants: Record<
         written: ["Zt"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033E manchu ali gali letter jha initial form",
+          },
         },
       },
     },
@@ -8364,7 +9504,9 @@ export const variants: Record<
         written: ["Zt"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033F manchu ali gali letter jha medial form",
+          },
         },
       },
     },
@@ -8373,7 +9515,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "033F manchu ali gali letter jha final form",
+          },
         },
       },
     },
@@ -8384,7 +9528,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0340 manchu ali gali letter tta isolated form",
+          },
         },
       },
     },
@@ -8393,7 +9539,9 @@ export const variants: Record<
         written: ["It"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0340 manchu ali gali letter tta initial form",
+          },
         },
       },
     },
@@ -8402,7 +9550,9 @@ export const variants: Record<
         written: ["Jt"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0341 manchu ali gali letter tta medial form",
+          },
         },
       },
     },
@@ -8411,7 +9561,9 @@ export const variants: Record<
         written: ["Jt"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0342 manchu ali gali letter tta final form",
+          },
         },
       },
     },
@@ -8422,7 +9574,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0344 manchu ali gali letter ddha isolated form",
+          },
         },
       },
     },
@@ -8431,7 +9585,9 @@ export const variants: Record<
         written: ["Ih"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0344 manchu ali gali letter ddha initial form",
+          },
         },
       },
     },
@@ -8440,7 +9596,9 @@ export const variants: Record<
         written: ["Jh"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0345 manchu ali gali letter ddha medial form",
+          },
         },
       },
     },
@@ -8449,7 +9607,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0345 manchu ali gali letter ddha final form",
+          },
         },
       },
     },
@@ -8460,13 +9620,17 @@ export const variants: Record<
         written: ["init", 2],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0346 manchu ali gali letter ta first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0347 manchu ali gali letter ta second isolated form",
+          },
         },
       },
     },
@@ -8476,6 +9640,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             conditions: ["feminine"],
+            gb: "0347 manchu ali gali letter ta second initial form",
           },
         },
       },
@@ -8485,6 +9650,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "0346 manchu ali gali letter ta first initial form",
           },
         },
       },
@@ -8495,6 +9661,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             conditions: ["feminine"],
+            gb: "0347 manchu ali gali letter ta second medial form",
           },
         },
       },
@@ -8504,6 +9671,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "0346 manchu ali gali letter ta first medial form",
           },
         },
       },
@@ -8513,7 +9681,9 @@ export const variants: Record<
         written: ["Dr"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0348 manchu ali gali letter ta final form",
+          },
         },
       },
     },
@@ -8524,13 +9694,17 @@ export const variants: Record<
         written: ["init", 2],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0349 manchu ali gali letter dha first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "034A manchu ali gali letter dha second isolated form",
+          },
         },
       },
     },
@@ -8540,6 +9714,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             conditions: ["feminine"],
+            gb: "034A manchu ali gali letter dha second initial form",
           },
         },
       },
@@ -8549,6 +9724,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "0349 manchu ali gali letter dha first initial form",
           },
         },
       },
@@ -8559,6 +9735,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             conditions: ["feminine"],
+            gb: "034C manchu ali gali letter dha second medial form",
           },
         },
       },
@@ -8568,6 +9745,7 @@ export const variants: Record<
         locales: {
           MCHx: {
             conditions: ["masculine_onset"],
+            gb: "034B manchu ali gali letter dha first medial form",
           },
         },
       },
@@ -8577,7 +9755,9 @@ export const variants: Record<
         written: ["medi", 2],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "034B manchu ali gali letter dha final form",
+          },
         },
       },
     },
@@ -8588,7 +9768,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0351 manchu ali gali letter ssa isolated form",
+          },
         },
       },
     },
@@ -8597,7 +9779,9 @@ export const variants: Record<
         written: ["Sx"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0351 manchu ali gali letter ssa initial form",
+          },
         },
       },
     },
@@ -8606,17 +9790,19 @@ export const variants: Record<
         written: ["Sx"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0352 manchu ali gali letter ssa medial form",
+          },
         },
       },
     },
     fina: {
       "0": {
-        written: ["Sx"],
+        written: ["medi", 0],
         default: true,
         locales: {
           MCHx: {
-            written: ["medi", 0],
+            gb: "0352 manchu ali gali letter ssa final form",
           },
         },
       },
@@ -8628,7 +9814,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0353 manchu ali gali letter cya isolated form",
+          },
         },
       },
     },
@@ -8637,7 +9825,9 @@ export const variants: Record<
         written: ["Iq"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0353 manchu ali gali letter cya initial form",
+          },
         },
       },
     },
@@ -8646,7 +9836,9 @@ export const variants: Record<
         written: ["Jq"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0354 manchu ali gali letter cya medial form",
+          },
         },
       },
     },
@@ -8655,7 +9847,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0354 manchu ali gali letter cya final form",
+          },
         },
       },
     },
@@ -8666,13 +9860,17 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0355 manchu ali gali letter zha first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0356 manchu ali gali letter zha second isolated form",
+          },
         },
       },
     },
@@ -8681,13 +9879,17 @@ export const variants: Record<
         written: ["St"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0355 manchu ali gali letter zha first initial form",
+          },
         },
       },
       "1": {
         written: ["St2"],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0356 manchu ali gali letter zha second initial form",
+          },
         },
       },
     },
@@ -8696,13 +9898,17 @@ export const variants: Record<
         written: ["St"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0357 manchu ali gali letter zha first medial form",
+          },
         },
       },
       "1": {
         written: ["St2"],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0358 manchu ali gali letter zha second medial form",
+          },
         },
       },
     },
@@ -8711,7 +9917,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0357 manchu ali gali letter zha final form",
+          },
         },
       },
     },
@@ -8722,7 +9930,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0359 manchu ali gali letter za isolated form",
+          },
         },
       },
     },
@@ -8731,7 +9941,9 @@ export const variants: Record<
         written: ["Sc"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0359 manchu ali gali letter za initial form",
+          },
         },
       },
     },
@@ -8740,7 +9952,9 @@ export const variants: Record<
         written: ["Sc"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "035A manchu ali gali letter za medial form",
+          },
         },
       },
     },
@@ -8749,7 +9963,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "035A manchu ali gali letter za final form",
+          },
         },
       },
     },
@@ -8760,9 +9976,11 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F5 mongolian ali gali letter half u isolated form",
+          },
           TODx: {
-            written: ["fina", 0],
+            gb: "00F5 todo ali gali letter wa isolated form // not exist in Todo Ali Gali",
           },
         },
       },
@@ -8772,9 +9990,11 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F5 mongolian ali gali letter half u initial form",
+          },
           TODx: {
-            written: ["fina", 0],
+            gb: "00F5 todo ali gali letter wa initial form // not exist in Todo Ali Gali",
           },
         },
       },
@@ -8784,9 +10004,11 @@ export const variants: Record<
         written: ["Wp"],
         default: true,
         locales: {
-          MNGx: {},
+          MNGx: {
+            gb: "00F5 mongolian ali gali letter half u medial form",
+          },
           TODx: {
-            written: ["fina", 0],
+            gb: "00F5 todo ali gali letter wa medial form // not exist in Todo Ali Gali",
           },
         },
       },
@@ -8798,8 +10020,11 @@ export const variants: Record<
         locales: {
           MNGx: {
             written: ["medi", 0],
+            gb: "00F5 mongolian ali gali letter half u final form",
           },
-          TODx: {},
+          TODx: {
+            gb: "0335 todo ali gali letter wa final form",
+          },
         },
       },
     },
@@ -8810,7 +10035,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0332 todo ali gali letter ya isolated form",
+          },
         },
       },
     },
@@ -8819,7 +10046,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0332 todo ali gali letter ya initial form",
+          },
         },
       },
     },
@@ -8828,7 +10057,9 @@ export const variants: Record<
         written: ["Yp"],
         default: true,
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0332 todo ali gali letter ya medial form",
+          },
         },
       },
     },
@@ -8837,13 +10068,16 @@ export const variants: Record<
         written: ["Yp"],
         default: true,
         locales: {
-          TODx: {},
+          TODx: {
+            gb: "0333 todo ali gali letter ya first final form",
+          },
         },
       },
       "1": {
         written: ["Ir"],
         locales: {
           TODx: {
+            gb: "0334 todo ali gali letter ya second final form",
             lvs: true,
           },
         },
@@ -8856,19 +10090,25 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "034E manchu ali gali letter bha first isolated form",
+          },
         },
       },
       "1": {
         written: ["init", 1],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0360 manchu ali gali letter bha second isolated form",
+          },
         },
       },
       "2": {
         written: ["init", 2],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0361 manchu ali gali letter bha third isolated form",
+          },
         },
       },
     },
@@ -8877,19 +10117,25 @@ export const variants: Record<
         written: ["Bc"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "034E manchu ali gali letter bha first initial form",
+          },
         },
       },
       "1": {
         written: ["Wd"],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0360 manchu ali gali letter bha second initial form",
+          },
         },
       },
       "2": {
         written: ["Wc"],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0361 manchu ali gali letter bha third initial form",
+          },
         },
       },
     },
@@ -8898,19 +10144,25 @@ export const variants: Record<
         written: ["Bc"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "034E manchu ali gali letter bha first medial form",
+          },
         },
       },
       "1": {
         written: ["Wd"],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0360 manchu ali gali letter bha second medial form",
+          },
         },
       },
       "2": {
         written: ["Wc"],
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "0361 manchu ali gali letter bha third medial form",
+          },
         },
       },
     },
@@ -8919,7 +10171,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "034E manchu ali gali letter bha final form",
+          },
         },
       },
     },
@@ -8930,7 +10184,9 @@ export const variants: Record<
         written: ["init", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "035C manchu ali gali letter lha isolated form",
+          },
         },
       },
     },
@@ -8939,7 +10195,9 @@ export const variants: Record<
         written: ["Lc"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "035C manchu ali gali letter lha initial form",
+          },
         },
       },
     },
@@ -8948,7 +10206,9 @@ export const variants: Record<
         written: ["Lc"],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "035D manchu ali gali letter lha medial form",
+          },
         },
       },
     },
@@ -8957,7 +10217,9 @@ export const variants: Record<
         written: ["medi", 0],
         default: true,
         locales: {
-          MCHx: {},
+          MCHx: {
+            gb: "035D manchu ali gali letter lha final form",
+          },
         },
       },
     },

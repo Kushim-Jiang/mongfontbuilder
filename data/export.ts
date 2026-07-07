@@ -1,4 +1,4 @@
-#! /usr/bin/env node data\export.ts
+#! node data/export.ts
 
 import { join } from "node:path";
 import { writeFile } from "node:fs/promises";
@@ -72,6 +72,23 @@ for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
               });
             }
           }
+        }
+      }
+    }
+  }
+}
+
+const gbPattern =
+  /^[0-9A-F]{4} (?:mongolian|todo|sibe|manchu)(?: ali gali)? (?:syllable boundary marker|long vowel sign|letter [-a-z][-a-z ]*?) (?:(?:first|second|third|fourth) )?(?:initial|isolated|medial|final) form(?: \/\/ .*)?$/;
+
+for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
+  for (const fvsToVariant of Object.values(positionToFVSToVariant)) {
+    for (const variant of Object.values(fvsToVariant)) {
+      for (const localeData of Object.values(variant.locales)) {
+        if (localeData?.gb && !gbPattern.test(localeData.gb)) {
+          throw Error("gb format mismatch", {
+            cause: { charName, gb: localeData.gb },
+          });
         }
       }
     }

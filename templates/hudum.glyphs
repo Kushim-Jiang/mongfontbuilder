@@ -28664,10 +28664,10 @@ layers = (
 layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
 shapes = (
 {
-ref = u183E.Hr.medi;
+ref = u183E.AHr.init;
 }
 );
-width = 521;
+width = 1013;
 }
 );
 unicode = 6206;

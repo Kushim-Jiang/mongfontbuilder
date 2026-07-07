@@ -194,6 +194,9 @@ export const writtenUnits = {
     init: { code: 0xe0b5 },
     medi: { code: 0xe0b6 },
   },
+  Hh2: {
+    medi: { code: 0xe139 },
+  },
   Hp: {
     medi: { code: 0xe078 },
     fina: { code: 0xe079 },
@@ -553,9 +556,9 @@ export const writtenUnits = {
     fina: { code: 0xe05a },
   },
   Zc: {
-    init: { code: 0xe09c },
-    medi: { code: 0xe09d },
-    fina: { code: 0xe09e },
+    init: { code: 0xe133 },
+    medi: { code: 0xe134 },
+    fina: { code: 0xe135 },
   },
   Zr: {
     init: { code: 0xe060 },
@@ -581,6 +584,16 @@ export const writtenUnits = {
     init: { code: 0xe09f },
     medi: { code: 0xe0a0 },
     fina: { code: 0xe0a1 },
+  },
+  Zz2: {
+    init: { code: 0xe09c },
+    medi: { code: 0xe09d },
+    fina: { code: 0xe09e },
+  },
+  Zz3: {
+    init: { code: 0xe136 },
+    medi: { code: 0xe137 },
+    fina: { code: 0xe138 },
   },
 } as const;
 
