@@ -45,7 +45,8 @@ def resolveCmapVariants(
                         if not isinstance(written, VariantReference):
                             variant = written, position
                         else:
-                            continue
+                            units = variantFromReference(written, positionToFVSToVariantData)
+                            variant = units, written.position
                         codePointToPositionToVariant.setdefault(codePoint, {})[position] = variant
                         break
 
