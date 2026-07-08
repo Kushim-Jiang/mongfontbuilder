@@ -99,12 +99,12 @@ export const locale = "SIB";
   </thead>
   <tbody>
     <tr>
-      <td rowspan="11">2. Syllabic</td>
+      <td rowspan="13">2. Syllabic</td>
       <td>
         <SIB links="o" />, <SIB links="u" />
       </td>
       <td>__if__ follows an initial _consonant_:</td>
-      <td>marked</td>
+      <td>`marked`</td>
     </tr>
     <tr>
       <td>
@@ -113,7 +113,7 @@ export const locale = "SIB";
       <td>
         __if__ precedes <SIB links="i" />:
       </td>
-      <td>marked</td>
+      <td>`marked`</td>
     </tr>
     <tr>
       <td>
@@ -122,52 +122,64 @@ export const locale = "SIB";
       <td>
         __if__ follows <SIB links="t" /> or <SIB links="d" /> or <SIB links="k" /> or <SIB links="g" /> or <SIB links="h" />:
       </td>
-      <td>feminine, feminine_marked</td>
+      <td>`feminine`, `feminine_marked`</td>
     </tr>
     <tr>
       <td rowspan="2">
         <SIB links="n" />
       </td>
       <td>__if__ precedes a _vowel_:</td>
-      <td>onset</td>
+      <td>`onset`</td>
     </tr>
     <tr>
       <td>__else if__ precedes a _consonant_:</td>
-      <td>feminine</td>
+      <td>`devsger`</td>
     </tr>
     <tr>
-      <td rowspan="3">
+      <td rowspan="4">
         <SIB links="t" />, <SIB links="d" />
       </td>
       <td>
         __if__ precedes <SIB links="a" /> or <SIB links="i" /> or <SIB links="o" />:
       </td>
-      <td>masculine_onset</td>
+      <td>`masculine_onset`</td>
     </tr>
     <tr>
       <td>
         __else if__ precedes <SIB links="e" /> or <SIB links="u" /> or <SIB links="ue" />:
       </td>
-      <td>feminine</td>
+      <td>`feminine`</td>
     </tr>
     <tr>
-      <td>__else if__ follows a _vowel_:</td>
-      <td>devsger</td>
+      <td>__else if__ precedes a _consonant_:</td>
+      <td>`devsger`</td>
     </tr>
     <tr>
-      <td rowspan="3">
+      <td>
+        __else if__ a _vowel_ precedes <SIB links="t" />:
+      </td>
+      <td>`devsger`</td>
+    </tr>
+    <tr>
+      <td rowspan="4">
         <SIB links="k" />, <SIB links="g" />, <SIB links="h" />
       </td>
       <td>__if__ precedes a _masculine vowel_:</td>
-      <td>masculine_onset</td>
+      <td>`masculine_onset`</td>
     </tr>
     <tr>
       <td>__else if__ precedes a _feminine vowel_ or a _neuter vowel_:</td>
-      <td>feminine</td>
+      <td>`feminine`</td>
     </tr>
     <tr>
-      <td>__else if__ follows a _vowel_:</td>
-      <td>devsger</td>
+      <td>__else if__ precedes a _consonant_:</td>
+      <td>`devsger`</td>
+    </tr>
+    <tr>
+      <td>
+        __else if__ a _vowel_ precedes <SIB links="k" />:
+      </td>
+      <td>`devsger`</td>
     </tr>
     <tr>
       <td>3. Particle</td>
@@ -175,7 +187,7 @@ export const locale = "SIB";
         <SIB links="i" />
       </td>
       <td>__if__ follows an MVS:</td>
-      <td>particle</td>
+      <td>`particle`</td>
     </tr>
     <tr>
       <td>4. Devsger</td>
@@ -183,7 +195,7 @@ export const locale = "SIB";
         <SIB links="i" />
       </td>
       <td>__if__ follows a _vowel_:</td>
-      <td>vowel_devsger</td>
+      <td>`vowel_devsger`</td>
     </tr>
     <tr>
       <td rowspan="2">5. Post-bowed</td>
@@ -191,14 +203,14 @@ export const locale = "SIB";
         <SIB links="a" />, <SIB links="o" />
       </td>
       <td>__if__ follows a _neuter bowed written unit_ or a _masculine bowed written unit_:</td>
-      <td>post_bowed</td>
+      <td>`post_bowed`</td>
     </tr>
     <tr>
       <td>
         <SIB links="e" />, <SIB links="u" />
       </td>
       <td>__if__ follows a _neuter bowed written unit_ or a _feminine bowed written unit_:</td>
-      <td>post_bowed, post_bowed_feminine</td>
+      <td>`post_bowed`, `post_bowed_feminine`</td>
     </tr>
   </tbody>
 </table>

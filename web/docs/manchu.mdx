@@ -95,12 +95,12 @@ Final <MCH links="A I" /> in letter <MCH links="i" />. Final <MCH links="A I" />
   </thead>
   <tbody>
     <tr>
-      <td rowspan="15">2. Syllabic</td>
+      <td rowspan="16">2. Syllabic</td>
       <td>
         <MCH links="o" />, <MCH links="u" />
       </td>
       <td>__if__ follows an initial _consonant_:</td>
-      <td>marked</td>
+      <td>`marked`</td>
     </tr>
     <tr>
       <td>
@@ -109,7 +109,7 @@ Final <MCH links="A I" /> in letter <MCH links="i" />. Final <MCH links="A I" />
       <td>
         __if__ precedes <MCH links="i" /> or <MCH links="o" /> or <MCH links="u" /> or <MCH links="ue" />:
       </td>
-      <td>marked</td>
+      <td>`marked`</td>
     </tr>
     <tr>
       <td>
@@ -118,7 +118,7 @@ Final <MCH links="A I" /> in letter <MCH links="i" />. Final <MCH links="A I" />
       <td>
         __if__ follows <MCH links="z" />:
       </td>
-      <td>marked</td>
+      <td>`marked`</td>
     </tr>
     <tr>
       <td>
@@ -127,72 +127,80 @@ Final <MCH links="A I" /> in letter <MCH links="i" />. Final <MCH links="A I" />
       <td>
         __if__ follows <MCH links="t" /> or <MCH links="d" /> or <MCH links="k" /> or <MCH links="g" /> or <MCH links="h" />:
       </td>
-      <td>feminine, feminine_marked</td>
+      <td>`feminine`, `feminine_marked`</td>
     </tr>
     <tr>
       <td rowspan="2">
         <MCH links="n" />
       </td>
       <td>__if__ precedes a _vowel_:</td>
-      <td>onset</td>
+      <td>`onset`</td>
     </tr>
     <tr>
       <td>__else if__ precedes a _consonant_:</td>
-      <td>feminine</td>
+      <td>`devsger`</td>
     </tr>
     <tr>
-      <td rowspan="3">
+      <td rowspan="4">
         <MCH links="t" />, <MCH links="d" />
       </td>
       <td>
         __if__ precedes <MCH links="a" /> or <MCH links="i" /> or <MCH links="o" />:
       </td>
-      <td>masculine_onset</td>
+      <td>`masculine_onset`</td>
     </tr>
     <tr>
       <td>
         __else if__ precedes <MCH links="e" /> or <MCH links="u" /> or <MCH links="ue" />:
       </td>
-      <td>feminine</td>
+      <td>`feminine`</td>
     </tr>
     <tr>
-      <td>__else if__ follows a _vowel_:</td>
-      <td>devsger</td>
+      <td>__else if__ precedes a _consonant_:</td>
+      <td>`devsger`</td>
     </tr>
     <tr>
+      {" "}
+      <td>
+        __else if__ a _vowel_ precedes <MCH links="t" />:
+      </td>
+      <td>`devsger`</td>
+    </tr>
+    <tr>
+      {" "}
       <td rowspan="6">
         <MCH links="k" />, <MCH links="g" />, <MCH links="h" />
       </td>
       <td>__if__ precedes a _masculine vowel_:</td>
-      <td>masculine_onset</td>
+      <td>`masculine_onset`</td>
     </tr>
     <tr>
       <td>__else if__ precedes a _feminine vowel_ or a _neuter vowel_:</td>
-      <td>feminine</td>
+      <td>`feminine`</td>
     </tr>
     <tr>
       <td>
         __else if__ <MCH links="k" /> follows <MCH links="e" /> that follows <MCH links="t" />:
       </td>
-      <td>masculine_devsger</td>
+      <td>`masculine_devsger`</td>
     </tr>
     <tr>
       <td>
         __else if__ <MCH links="k" /> follows <MCH links="u" /> that follows <MCH links="k" /> or <MCH links="g" /> or <MCH links="h" />:
       </td>
-      <td>feminine</td>
+      <td>`feminine`</td>
     </tr>
     <tr>
       <td>
         __else if__ <MCH links="k" /> follows <MCH links="e" /> or <MCH links="ue" />:
       </td>
-      <td>feminine</td>
+      <td>`feminine`</td>
     </tr>
     <tr>
       <td>
         __else__ <MCH links="k" />:
       </td>
-      <td>masculine_devsger</td>
+      <td>`masculine_devsger`</td>
     </tr>
     <tr>
       <td>3. Particle</td>
@@ -200,7 +208,7 @@ Final <MCH links="A I" /> in letter <MCH links="i" />. Final <MCH links="A I" />
         <MCH links="i" />
       </td>
       <td>__if__ follows an MVS:</td>
-      <td>particle</td>
+      <td>`particle`</td>
     </tr>
     <tr>
       <td>4. Devsger</td>
@@ -208,7 +216,7 @@ Final <MCH links="A I" /> in letter <MCH links="i" />. Final <MCH links="A I" />
         <MCH links="i" />
       </td>
       <td>__if__ follows a _vowel_:</td>
-      <td>vowel_devsger</td>
+      <td>`vowel_devsger`</td>
     </tr>
     <tr>
       <td rowspan="2">5. Post-bowed</td>
@@ -216,14 +224,14 @@ Final <MCH links="A I" /> in letter <MCH links="i" />. Final <MCH links="A I" />
         <MCH links="a" />, <MCH links="o" />
       </td>
       <td>__if__ follows a _neuter bowed written unit_ or a _masculine bowed written unit_:</td>
-      <td>post_bowed</td>
+      <td>`post_bowed`</td>
     </tr>
     <tr>
       <td>
         <MCH links="e" />, <MCH links="u" />
       </td>
       <td>__if__ follows a _neuter bowed written unit_ or a _feminine bowed written unit_:</td>
-      <td>post_bowed, post_bowed_feminine</td>
+      <td>`post_bowed`, `post_bowed_feminine`</td>
     </tr>
   </tbody>
 </table>

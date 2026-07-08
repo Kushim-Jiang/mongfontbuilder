@@ -90,7 +90,7 @@
         <td rowspan={conditionToPositionToFVS.size + 1} title="U+{hex} {char} {charName}">
           <a href="#{alias}">{hex}<br />{char} <i>{alias}</i></a>
         </td>
-        <td class="default">default</td>
+        <td class="default"><code>default</code></td>
         {#each joiningPositions as position}
           {@const e = defaultPositionToFVS.get(position)}
           <td id="{alias}-{position}" class="default"
@@ -102,7 +102,7 @@
         {@const positionToFVS = conditionToPositionToFVS.get(condition)}
         {#if positionToFVS}
           <tr>
-            <td>{condition.replace(/_/g, "_\u200B")}</td>
+            <td><code>{condition}</code></td>
             {#each joiningPositions as position}
               {@const entry = positionToFVS.get(position)}
               <td id="{alias}-{position}-{condition}" class="variant"
@@ -125,8 +125,6 @@
   th {
     text-align: center !important;
     vertical-align: middle;
-    overflow-wrap: break-word;
-    word-break: break-word;
   }
   td.variant span,
   td.default span {

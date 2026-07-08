@@ -4652,7 +4652,7 @@ export const variants: Record<
             eac: "TPAM1",
           },
           TODx: {
-            written: ["medi", 0, "TODx"],
+            written: ["medi", 1],
           },
         },
       },
@@ -9005,7 +9005,7 @@ export const variants: Record<
             gb: "00F1 mongolian ali gali letter pa final form // = 00F1 mongolian ali gali letter pa medial form",
           },
           TODx: {
-            written: ["medi", 0, "TODx"],
+            written: ["medi", 1],
             gb: "0330 todo ali gali letter pa second final form // not exist in Todo Ali Gali",
           },
           MCHx: {

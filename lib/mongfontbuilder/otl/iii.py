@@ -285,7 +285,7 @@ def iii2a(c: MongFeaComposer) -> None:
             if "MNGx" in c.locales:
                 c.sub(
                     c.classes["MNGx-consonant.init"],
-                    c.input(c.variants("MNGx", ["o", "ue"]), c.conditions["MNGx:marked"]),
+                    c.input(c.variants("MNGx", ["ue"]), c.conditions["MNGx:marked"]),
                     by=None,
                 )
                 c.sub(
@@ -911,6 +911,11 @@ def iii4(c: MongFeaComposer) -> None:
             if "MCHx" in c.locales:
                 c.sub(
                     c.classes["MCHx-vowel"],
+                    c.input(c.classes["MCHx-i"], c.conditions["MCHx:vowel_devsger"]),
+                    by=None,
+                )
+                c.sub(
+                    c.classes["MCHx-vowel"],
                     c.input(c.classes["MCHx-u"], c.conditions["MCHx:vowel_devsger"]),
                     by=None,
                 )
@@ -1138,8 +1143,16 @@ def iii5(c: MongFeaComposer) -> None:
         )
         with c.Lookup("III.vowel.post_bowed.MCHx", feature="rclt", flags={"IgnoreMarks": True}):
             c.sub(
-                c.glyphClass([bowedB, bowedG, c.classes["MCHx-ghX"]]),
+                c.glyphClass([bowedB, c.classes["MCHx-ghX"]]),
                 c.input(c.variants("MCHx", ["e", "u"]), c.conditions["MCHx:post_bowed"]),
+                by=None,
+            )
+            c.sub(
+                bowedG,
+                c.input(
+                    c.variants("MCHx", ["e", "u"]),
+                    c.conditions["MCHx:post_bowed_feminine"],
+                ),
                 by=None,
             )
             c.sub(
