@@ -118,7 +118,6 @@
     vertical-align: middle;
   }
   td.variant span {
-    font-size: 3em;
     line-height: 1;
   }
   td.fabricated,

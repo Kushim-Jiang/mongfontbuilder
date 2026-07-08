@@ -5,9 +5,10 @@
     written?: WrittenUnitID[];
     charName?: string;
     fvs?: FVS;
+    aliases?: string[];
   }
 
-  let { position, id, written, charName, fvs }: Props = $props();
+  let { position, id, written, charName, fvs, aliases = [] }: Props = $props();
 
   import type { JoiningPosition } from "../../data/misc";
   import type { FVS } from "../../data/variants";
@@ -32,3 +33,11 @@
 <span class="wu"
   >{#if showBefore}<span class="wu-context">{niruguText}</span>{/if}{text}{#if showAfter}<span class="wu-context">{niruguText}</span>{/if}</span
 >
+{#if aliases.length}
+  <br />
+  <i>
+    {#each aliases as a, i}
+      {i ? " " : ""}<a href="#{a}">{a}</a>
+    {/each}
+  </i>
+{/if}

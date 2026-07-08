@@ -130,7 +130,6 @@
   }
   td.variant span,
   td.default span {
-    font-size: 3em;
     line-height: 1;
   }
   td.default {

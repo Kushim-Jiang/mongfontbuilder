@@ -12,6 +12,8 @@ table {
 
 .wu {
   font-family: "WrittenUnits" !important;
+  font-size: 40px;
+  line-height: 1.4;
   color: black;
 }
 
@@ -31,4 +33,98 @@ th,
 td {
   border: 1px solid var(--sl-color-gray-5) !important;
   padding: 0.25rem 0.5rem !important;
+}
+
+/* ── Sidebar toggle ── */
+
+.sidebar-toggle {
+  position: fixed;
+  z-index: var(--sl-z-index-menu);
+  inset-block-start: 50%;
+  transform: translate(calc(var(--sl-sidebar-width) - 50%), -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--sl-color-hairline-shade);
+  border-radius: 50%;
+  background: var(--sl-color-bg);
+  color: var(--sl-color-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0;
+  transition: transform 0.2s;
+  opacity: 0.6;
+}
+.sidebar-toggle:hover {
+  opacity: 1;
+}
+
+[data-sidebar-collapsed] .sidebar-toggle {
+  transform: translate(0, -50%);
+}
+
+@media (min-width: 50rem) {
+  [data-sidebar-collapsed] .main-frame {
+    --sl-content-inline-start: 0 !important;
+  }
+}
+
+@media (min-width: 50rem) {
+  [data-sidebar-collapsed] .sidebar-pane {
+    width: 0 !important;
+    overflow: hidden !important;
+    border-inline-end: none !important;
+  }
+}
+
+/* ── Remove right sidebar completely ── */
+
+.right-sidebar-container,
+.right-sidebar-panel,
+.right-sidebar,
+.right-sidebar *,
+.starlight-toc,
+mobile-starlight-toc,
+starlight-toc,
+[data-has-toc] .right-sidebar-container {
+  display: none !important;
+}
+
+/* Reset main-pane when TOC is hidden */
+[data-has-toc] .main-pane {
+  --sl-content-margin-inline: auto !important;
+  width: 100% !important;
+}
+
+.toc-under-page {
+  padding: 0 0 0.25rem 0;
+}
+.toc-under-page li {
+  list-style: none;
+}
+.toc-under-page a {
+  display: block;
+  padding: 0.25rem var(--sl-sidebar-pad-x);
+  padding-inline-start: calc(var(--sl-sidebar-pad-x) + 1.5rem);
+  font-size: var(--sl-text-xs);
+  color: var(--sl-color-gray-3);
+  text-decoration: none;
+  border-inline-end: 2px solid transparent;
+  line-height: 1.4;
+}
+.toc-under-page a:hover {
+  color: var(--sl-color-white);
+}
+.toc-under-page a[aria-current="true"] {
+  color: var(--sl-color-accent);
+  border-inline-end-color: var(--sl-color-accent);
+}
+
+@media (max-width: 50rem) {
+  .sidebar-toggle {
+    display: none;
+  }
 }

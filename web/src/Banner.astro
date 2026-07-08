@@ -7,3 +7,71 @@ Astro.locals.starlightRoute.entry.data.banner = {
 ---
 
 <Default />
+
+<script is:inline>
+  const HTML = document.documentElement;
+
+  // ── Left sidebar toggle ──
+
+  const LS_KEY = "starlight:sidebarCollapsed";
+  function initSidebar() {
+    if (localStorage.getItem(LS_KEY) === "true") {
+      HTML.setAttribute("data-sidebar-collapsed", "");
+    }
+  }
+  function toggleSidebar() {
+    HTML.toggleAttribute("data-sidebar-collapsed");
+    localStorage.setItem(LS_KEY, HTML.hasAttribute("data-sidebar-collapsed") ? "true" : "false");
+  }
+  initSidebar();
+
+  const sidebarBtn = document.createElement("button");
+  sidebarBtn.className = "sidebar-toggle";
+  sidebarBtn.setAttribute("aria-label", "Toggle sidebar");
+  sidebarBtn.innerHTML = "‹";
+  sidebarBtn.addEventListener("click", toggleSidebar);
+  new MutationObserver(() => {
+    sidebarBtn.innerHTML = HTML.hasAttribute("data-sidebar-collapsed") ? "›" : "‹";
+  }).observe(HTML, { attributes: true, attributeFilter: ["data-sidebar-collapsed"] });
+
+  // ── Insert TOC under active sidebar item ──
+
+  function insertTocUnderPage() {
+    const toc = document.querySelector("starlight-toc");
+    const activeLink = document.querySelector(".sidebar-content a[aria-current='page']");
+    if (!toc || !activeLink) return;
+    const parent = activeLink.closest("li");
+    if (!parent) return;
+    if (parent.querySelector(".toc-under-page")) return;
+
+    const nav = toc.querySelector("nav");
+    if (!nav) return;
+
+    const wrapper = document.createElement("ul");
+    wrapper.className = "toc-under-page";
+    const clone = nav.cloneNode(true);
+    const list = clone.querySelector("ul");
+    if (list) {
+      while (list.firstChild) {
+        const li = document.createElement("li");
+        li.appendChild(list.firstChild);
+        wrapper.appendChild(li);
+      }
+    }
+    parent.appendChild(wrapper);
+  }
+
+  // ── Insert sidebar button & TOC ──
+
+  function initUI() {
+    const sidebar = document.querySelector(".sidebar-pane");
+    const tocEl = document.querySelector("starlight-toc");
+    if (sidebar && !sidebar.parentNode?.contains(sidebarBtn)) {
+      sidebar.parentNode?.insertBefore(sidebarBtn, sidebar.nextSibling);
+    }
+    insertTocUnderPage();
+    if (sidebar && tocEl) obs.disconnect();
+  }
+  const obs = new MutationObserver(initUI);
+  obs.observe(document.body || HTML, { childList: true, subtree: true });
+</script>

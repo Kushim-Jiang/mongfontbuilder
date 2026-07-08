@@ -215,12 +215,7 @@
             {@const letters = positionToLetters.get(position)}
             <td id="{id}-{position}" class={{ variant: true, undefined: !letters }}>
               {#if letters}
-                <span><LetterVariant id={id as WrittenUnitID} {position} /></span><br />
-                <i>
-                  {#each _orderedAliases.filter((a) => letters.has(a)) as a, i}
-                    {i ? " " : ""}<a href="#{a}">{a}</a>
-                  {/each}
-                </i>
+                <LetterVariant id={id as WrittenUnitID} {position} aliases={_orderedAliases.filter((a) => letters.has(a))} />
               {/if}
             </td>
           {/each}
@@ -255,12 +250,11 @@
     vertical-align: top;
   }
   td.variant span {
-    font-size: 2.5em;
     line-height: 1;
   }
   td.lig {
-    vertical-align: top;
-    font-size: 2.5em;
+    vertical-align: middle;
+    font-size: 40px;
     line-height: 1;
   }
   td.lig .wu {
