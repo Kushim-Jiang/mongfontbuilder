@@ -344,6 +344,12 @@ export const writtenUnits = {
     init: { code: 0xe120 },
     medi: { code: 0xe121 },
   },
+  Ni: {
+    isol: { code: 0xe000 },
+    init: { code: 0xe000 },
+    medi: { code: 0xe000 },
+    fina: { code: 0xe000 },
+  },
   Nx: {
     medi: { code: 0xe0be },
     fina: { code: 0xe0bf },
@@ -605,6 +611,5 @@ export const controls = {
   Zwj: { code: 0xe067 },
   Zwnj: { code: 0xe068 },
   Nnbsp: { code: 0xe069 },
-  Nirugu: { code: 0xe000 },
   Mvs: { code: 0xe06a, wide: 0x0020, narrow: 0xe062 },
 };

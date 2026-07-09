@@ -37,6 +37,15 @@ td {
 
 /* ── Sidebar toggle ── */
 
+.sidebar-pane {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.main-frame {
+  transition: padding-inline-start 0.3s ease;
+}
+
 .sidebar-toggle {
   position: fixed;
   z-index: var(--sl-z-index-menu);
@@ -55,7 +64,7 @@ td {
   font-size: 0.75rem;
   line-height: 1;
   padding: 0;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease;
   opacity: 0.6;
 }
 .sidebar-toggle:hover {
@@ -74,8 +83,7 @@ td {
 
 @media (min-width: 50rem) {
   [data-sidebar-collapsed] .sidebar-pane {
-    width: 0 !important;
-    overflow: hidden !important;
+    transform: translateX(-100%) !important;
     border-inline-end: none !important;
   }
 }

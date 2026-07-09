@@ -496,7 +496,30 @@ def iii2d(c: MongFeaComposer) -> None:
 
                     if locale == "MCHx":
                         c.sub(
-                            c.variants("MCHx", ["ngX", "sbm"]),
+                            c.classes["MCHx-sbm"],
+                            c.input(euLetters, c.conditions["MCHx:feminine"]),
+                            by=None,
+                        )
+
+            # Gx
+            for locale in ["MCH", "MCHx"]:
+                if locale in c.locales:
+                    c.sub(
+                        c.classes[f"{locale}-k.init"],
+                        c.classes["fvs2"],
+                        c.input(euLetters, c.conditions[f"{locale}:feminine"]),
+                        by=None,
+                    )
+                    c.sub(
+                        c.classes[f"{locale}-k.medi"],
+                        c.classes["fvs4"],
+                        c.input(euLetters, c.conditions[f"{locale}:feminine"]),
+                        by=None,
+                    )
+                    if locale == "MCHx":
+                        c.sub(
+                            c.classes["MCHx-g.init"],
+                            c.classes["fvs2"],
                             c.input(euLetters, c.conditions["MCHx:feminine"]),
                             by=None,
                         )
@@ -1104,7 +1127,7 @@ def iii5(c: MongFeaComposer) -> None:
                 f"{locale}-bowedK", c.variants(locale, ["kh", "gh", "hh"]).glyphs
             )
             bowedG = c.namedGlyphClass(
-                f"{locale}-bowedG", c.writtens(locale, ["G", "Gx", "Gh", "Gc"]).glyphs
+                f"{locale}-bowedG", c.writtens(locale, ["G", "Gh", "Gc"]).glyphs
             )
             with c.Lookup(
                 f"III.vowel.post_bowed.{locale}", feature="rclt", flags={"IgnoreMarks": True}
@@ -1128,6 +1151,25 @@ def iii5(c: MongFeaComposer) -> None:
                     by=None,
                 )
 
+                # Gx
+                if locale == "MCH":
+                    c.sub(
+                        c.classes["MCH-k.init"],
+                        c.classes["fvs2"],
+                        c.input(
+                            c.variants("MCH", ["e", "u"]), c.conditions["MCH:post_bowed_feminine"]
+                        ),
+                        by=None,
+                    )
+                    c.sub(
+                        c.classes["MCH-k.medi"],
+                        c.classes["fvs4"],
+                        c.input(
+                            c.variants("MCH", ["e", "u"]), c.conditions["MCH:post_bowed_feminine"]
+                        ),
+                        by=None,
+                    )
+
     if "MCHx" in c.locales:
         bowedB = c.namedGlyphClass(
             "MCHx-bowedB",
@@ -1139,16 +1181,16 @@ def iii5(c: MongFeaComposer) -> None:
         )
         bowedG = c.namedGlyphClass(
             "MCHx-bowedG",
-            c.writtens("MCHx", ["G", "Gh", "Gc"]).glyphs,
+            c.writtens("MCHx", ["G", "Gh", "Gc", "Gx"]).glyphs,
         )
         with c.Lookup("III.vowel.post_bowed.MCHx", feature="rclt", flags={"IgnoreMarks": True}):
             c.sub(
-                c.glyphClass([bowedB, c.classes["MCHx-ghX"]]),
+                bowedB,
                 c.input(c.variants("MCHx", ["e", "u"]), c.conditions["MCHx:post_bowed"]),
                 by=None,
             )
             c.sub(
-                bowedG,
+                c.glyphClass([bowedG, c.classes["MCHx-ghX"]]),
                 c.input(
                     c.variants("MCHx", ["e", "u"]),
                     c.conditions["MCHx:post_bowed_feminine"],
@@ -1156,13 +1198,46 @@ def iii5(c: MongFeaComposer) -> None:
                 by=None,
             )
             c.sub(
-                c.glyphClass([c.classes["MCHx-ngX"], c.classes["MCHx-sbm"]]),
+                c.classes["MCHx-ngX"],
+                c.input(c.classes["MCHx-e"], c.conditions["MCHx:post_bowed_feminine"]),
+                by=None,
+            )
+            c.sub(
+                c.classes["MCHx-sbm"],
                 c.input(c.classes["MCHx-e"], c.conditions["MCHx:post_bowed"]),
                 by=None,
             )
             c.sub(
                 c.glyphClass([bowedB, bowedK]),
                 c.input(c.variants("MCHx", ["a", "o"]), c.conditions["MCHx:post_bowed"]),
+                by=None,
+            )
+
+            c.sub(
+                c.classes["MCHx-k.init"],
+                c.classes["fvs2"],
+                c.input(
+                    c.variants("MCHx", ["e", "u"]),
+                    c.conditions["MCHx:post_bowed_feminine"],
+                ),
+                by=None,
+            )
+            c.sub(
+                c.classes["MCHx-k.medi"],
+                c.classes["fvs4"],
+                c.input(
+                    c.variants("MCHx", ["e", "u"]),
+                    c.conditions["MCHx:post_bowed_feminine"],
+                ),
+                by=None,
+            )
+            c.sub(
+                c.classes["MCHx-g.init"],
+                c.classes["fvs2"],
+                c.input(
+                    c.variants("MCHx", ["e", "u"]),
+                    c.conditions["MCHx:post_bowed_feminine"],
+                ),
                 by=None,
             )
 

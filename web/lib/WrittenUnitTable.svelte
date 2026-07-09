@@ -12,7 +12,7 @@
   import { writtenUnits } from "../../data/writtenUnits";
   import { aliases } from "../../data/aliases";
   import LetterVariant from "./LetterVariant.svelte";
-  import { localeNS, orderedAliases, mapGetOrCreate, isVariantRef, niruguText } from "./utils";
+  import { localeNS, orderedAliases, mapGetOrCreate, isVariantRef, niText } from "./utils";
 
   const _orderedAliases = $derived(orderedAliases(locale));
 
@@ -40,7 +40,7 @@
     return map;
   });
 
-  type LigPart = { text: string; blue: boolean };
+  type LigPart = { text: string; blue: boolean; isNi?: boolean };
   type LigRow = { parts: LigPart[]; kind: string };
   type LigColumn = LigRow[];
 
@@ -64,7 +64,7 @@
           parts: [
             { text: String.fromCodePoint(preCode), blue: true },
             { text: String.fromCodePoint(pos.medi.post_b), blue: false },
-            { text: niruguText, blue: true },
+            { text: niText("fina"), blue: true, isNi: true },
           ],
           kind: "post_b",
         });
@@ -87,7 +87,7 @@
           parts: [
             { text: String.fromCodePoint(pos.init.pre_a), blue: false },
             { text: String.fromCodePoint(postCode), blue: true },
-            { text: niruguText, blue: true },
+            { text: niText("fina"), blue: true, isNi: true },
           ],
           kind: "pre_a",
         });
@@ -96,10 +96,10 @@
         const postCode = (writtenUnits.A.medi as Record<string, number>).post_b;
         medi.push({
           parts: [
-            { text: niruguText, blue: true },
+            { text: niText("init"), blue: true, isNi: true },
             { text: String.fromCodePoint(pos.medi.pre_a), blue: false },
             { text: String.fromCodePoint(postCode), blue: true },
-            { text: niruguText, blue: true },
+            { text: niText("fina"), blue: true, isNi: true },
           ],
           kind: "pre_a",
         });
@@ -112,7 +112,7 @@
           parts: [
             { text: String.fromCodePoint(pos.init.pre_o), blue: false },
             { text: String.fromCodePoint(postCode), blue: true },
-            { text: niruguText, blue: true },
+            { text: niText("fina"), blue: true, isNi: true },
           ],
           kind: "pre_o",
         });
@@ -121,10 +121,10 @@
         const postCode = (writtenUnits[uid === "Gp" || uid === "Kp" ? "Ob" : "O"].medi as Record<string, number>).post_b;
         medi.push({
           parts: [
-            { text: niruguText, blue: true },
+            { text: niText("init"), blue: true, isNi: true },
             { text: String.fromCodePoint(pos.medi.pre_o), blue: false },
             { text: String.fromCodePoint(postCode), blue: true },
-            { text: niruguText, blue: true },
+            { text: niText("fina"), blue: true, isNi: true },
           ],
           kind: "pre_o",
         });
@@ -137,7 +137,7 @@
           parts: [
             { text: String.fromCodePoint(pos.init.pre_i), blue: false },
             { text: String.fromCodePoint(postCode), blue: true },
-            { text: niruguText, blue: true },
+            { text: niText("fina"), blue: true, isNi: true },
           ],
           kind: "pre_i",
         });
@@ -146,20 +146,20 @@
         const postCode = (writtenUnits.I.medi as Record<string, number>).post_b;
         medi.push({
           parts: [
-            { text: niruguText, blue: true },
+            { text: niText("init"), blue: true, isNi: true },
             { text: String.fromCodePoint(pos.medi.pre_i), blue: false },
             { text: String.fromCodePoint(postCode), blue: true },
-            { text: niruguText, blue: true },
+            { text: niText("fina"), blue: true, isNi: true },
           ],
           kind: "pre_i",
         });
       }
 
-      // post_w — Nirugu + Wp.medi + unit's own post_w
+      // post_w — Ni + Wp.medi + unit's own post_w
       if (pos.init?.post_w != null) {
         init.push({
           parts: [
-            { text: niruguText, blue: true },
+            { text: niText("init"), blue: true, isNi: true },
             { text: String.fromCodePoint(writtenUnits.Wp.medi.code), blue: true },
             { text: String.fromCodePoint(pos.init.post_w), blue: false },
           ],
@@ -169,7 +169,7 @@
       if (pos.medi?.post_w != null) {
         medi.push({
           parts: [
-            { text: niruguText, blue: true },
+            { text: niText("init"), blue: true, isNi: true },
             { text: String.fromCodePoint(writtenUnits.Wp.medi.code), blue: true },
             { text: String.fromCodePoint(pos.medi.post_w), blue: false },
           ],
@@ -179,7 +179,7 @@
       if (pos.fina?.post_w != null) {
         fina.push({
           parts: [
-            { text: niruguText, blue: true },
+            { text: niText("init"), blue: true, isNi: true },
             { text: String.fromCodePoint(writtenUnits.Wp.medi.code), blue: true },
             { text: String.fromCodePoint(pos.fina.post_w), blue: false },
           ],
@@ -227,7 +227,7 @@
                   {#if i > 0}<br />{/if}
                   <span class="wu">
                     {#each row.parts as part}
-                      <span class={part.blue ? (part.text === niruguText ? "lig-blue" : "lig-gray") : ""}>{part.text}</span>
+                      <span class={part.blue ? (part.isNi ? "lig-blue" : "lig-gray") : ""}>{part.text}</span>
                     {/each}
                   </span>
                 {/each}

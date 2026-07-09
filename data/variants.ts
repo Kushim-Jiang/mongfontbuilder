@@ -5776,7 +5776,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["A"],
+        written: ["A", "Ni"],
         default: true,
         locales: {
           SIB: {

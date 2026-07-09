@@ -119,8 +119,16 @@ class GlyphDescriptor:
 
         written = None
         if locale and locale in variantData.locales:
-            written = variantData.locales[locale].written
-        if not written:
+            localeWritten = variantData.locales[locale].written
+            if localeWritten is not None:
+                written = localeWritten
+        elif locale and not locale.endswith("x"):
+            xLocale = f"{locale}x"
+            if xLocale in variantData.locales:
+                xWritten = variantData.locales[xLocale].written
+                if xWritten is not None:
+                    written = xWritten
+        if written is None:
             written = variantData.written
         assert written, variantData
 

@@ -12,6 +12,7 @@
     <string>fvs3</string>
     <string>fvs4</string>
     <string>nirugu</string>
+    <string>_Ni.medi</string>
     <string>zwj</string>
     <string>zwnj</string>
     <string>space</string>
@@ -64,6 +65,7 @@
     <string>_H.medi</string>
     <string>_Hh.init</string>
     <string>_Hh.medi</string>
+    <string>_Hh2.medi</string>
     <string>_Hc.init</string>
     <string>_Hc.medi</string>
     <string>_Hx.medi</string>

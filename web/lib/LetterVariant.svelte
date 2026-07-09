@@ -13,7 +13,7 @@
   import type { JoiningPosition } from "../../data/misc";
   import type { FVS } from "../../data/variants";
   import type { WrittenUnitID } from "../../data/writtenUnits";
-  import { nameToCP, buildWrittenText, niruguText, ctxBefore, ctxAfter } from "./utils";
+  import { nameToCP, buildWrittenText, niText, ctxBefore, ctxAfter } from "./utils";
 
   const units = $derived(id ? [id] : written);
   const showBefore = $derived(ctxBefore(position));
@@ -31,7 +31,7 @@
 </script>
 
 <span class="wu"
-  >{#if showBefore}<span class="wu-context">{niruguText}</span>{/if}{text}{#if showAfter}<span class="wu-context">{niruguText}</span>{/if}</span
+  >{#if showBefore}<span class="wu-context">{niText("init")}</span>{/if}{text}{#if showAfter}<span class="wu-context">{niText("fina")}</span>{/if}</span
 >
 {#if aliases.length}
   <br />

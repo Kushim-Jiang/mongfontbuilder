@@ -120,7 +120,9 @@ export function buildWrittenText(
   return result || "?";
 }
 
-export const niruguText = String.fromCodePoint(controls.Nirugu.code);
+export function niText(pos: JoiningPosition): string {
+  return String.fromCodePoint(writtenUnits.Ni[pos].code);
+}
 
 export function ctxBefore(p: JoiningPosition) {
   return p === "medi" || p === "fina";

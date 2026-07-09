@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import pytest
+
 from fixtures import loadRawTestCases
 from utils import parseAliases, parseLetter, parseWrittenUnits
 

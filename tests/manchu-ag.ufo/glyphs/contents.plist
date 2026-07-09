@@ -430,6 +430,8 @@
   <string>_H_h.init.glif</string>
   <key>_Hh.medi</key>
   <string>_H_h.medi.glif</string>
+  <key>_Hh2.medi</key>
+  <string>_H_h2.medi.glif</string>
   <key>_Hx.fina</key>
   <string>_H_x.fina.glif</string>
   <key>_Hx.medi</key>
@@ -602,6 +604,8 @@
   <string>_N_b.init.glif</string>
   <key>_Nb.medi</key>
   <string>_N_b.medi.glif</string>
+  <key>_Ni.medi</key>
+  <string>_N_i.medi.glif</string>
   <key>_Nx.fina</key>
   <string>_N_x.fina.glif</string>
   <key>_Nx.medi</key>

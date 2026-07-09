@@ -6883,7 +6883,8 @@
     "init": {
       "0": {
         "written": [
-          "A"
+          "A",
+          "Ni"
         ],
         "default": true,
         "locales": {
