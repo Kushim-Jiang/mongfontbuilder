@@ -129,7 +129,13 @@ class MongFeaComposer(FeaComposer):
         For nirugu, `nirugu.ignored` indicates the nirugu as a `mark` that needs to be ignored, and `nirugu` indicate the valid nirugu as a `base`.
         """
 
-        from .iii import MARKER_FEMININE, MARKER_MASCULINE
+        from .iii import (
+            MARKER_FEMININE,
+            MARKER_INITIAL,
+            MARKER_MASCULINE,
+            MARKER_MASCULINE_FALSE,
+            MARKER_MASCULINE_TRUE,
+        )
 
         fvses = [f"fvs{i}" for i in range(1, 5)]
         for fvs in fvses:
@@ -202,6 +208,13 @@ class MongFeaComposer(FeaComposer):
                 processedName = self.glyphNameProcessor(name)
                 self.spec.newGlyphs[processedName] = GlyphSpec([])
                 self.spec.openTypeCategories[processedName] = "mark"
+            for name in MARKER_MASCULINE_FALSE, MARKER_MASCULINE_TRUE:
+                processedName = self.glyphNameProcessor(name)
+                self.spec.newGlyphs[processedName] = GlyphSpec([])
+                self.spec.openTypeCategories[processedName] = "base"
+            processedName = self.glyphNameProcessor(MARKER_INITIAL)
+            self.spec.newGlyphs[processedName] = GlyphSpec([])
+            self.spec.openTypeCategories[processedName] = "mark"
 
     def initVariants(self) -> None:
         """

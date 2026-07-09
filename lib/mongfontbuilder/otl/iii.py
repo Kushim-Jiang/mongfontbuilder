@@ -6,6 +6,8 @@ from ..utils import getAliasesByLocale, getCharNameByAlias
 from . import MongFeaComposer
 
 MARKER_MASCULINE, MARKER_FEMININE = "marker.masculine", "marker.feminine"
+MARKER_INITIAL = "marker.initial"
+MARKER_MASCULINE_FALSE, MARKER_MASCULINE_TRUE = "marker.masculine.false", "marker.masculine.true"
 
 
 def compose(c: MongFeaComposer) -> None:
@@ -125,91 +127,97 @@ def iii0b(c: MongFeaComposer) -> None:
                     default = c.getDefault(alias, position)
                     c.sub(default, MARKER_FEMININE, by=default)
 
-    # reverse add masculine
-    unmarkedVariants = c.namedGlyphClass(
-        "MNG-unmarked.A",
-        [
-            c.getDefault(alias, position)
-            for alias in categories["vowelMasculine"]
-            + categories["vowelNeuter"]
-            + categories["consonant"]
-            for position in (init, medi, fina)
-        ],
+    # G': Insert marker.masculine.false after every glyph that participates in gender harmony.
+    # This replaces the per-glyph .marked variant system with two marker glyphs.
+    allAliases = (
+        categories["vowelMasculine"]
+        + categories["vowelFeminine"]
+        + categories["vowelNeuter"]
+        + categories["consonant"]
     )
-    markedVariants = c.namedGlyphClass(
-        "MNG-marked.A",
-        [
-            c.getDefault(alias, position, marked=True)
-            for alias in categories["vowelMasculine"]
-            + categories["vowelNeuter"]
-            + categories["consonant"]
-            for position in (init, medi, fina)
-        ],
+    passingAliases = (
+        categories["vowelMasculine"] + categories["vowelNeuter"] + categories["consonant"]
     )
-
-    with c.Lookup("_.marked.MNG") as _marked:
-        c.sub(unmarkedVariants, by=markedVariants)
-    c.conditions[_marked.name] = _marked
-
-    with c.Lookup("_.unmarked.MNG") as _unmarked:
-        c.sub(markedVariants, by=unmarkedVariants)
-    c.conditions[_unmarked.name] = _unmarked
 
     with c.Lookup("III.ig.preprocessing.G", feature="rclt", flags={"IgnoreMarks": True}):
-        for alias in categories["vowelNeuter"] + categories["consonant"]:
-            for position in (init, medi):
-                unmarked = c.getDefault(alias, position)
-                c.sub(c.input(unmarked, _marked), c.classes["MNG-vowelMasculine"], by=None)
-        for alias in (
-            categories["vowelMasculine"] + categories["vowelNeuter"] + categories["consonant"]
-        ):
-            unmarked = c.getDefault(alias, fina)
-            c.sub(c.input(unmarked, _marked), c.classes["mvs"], c.classes["MNG-a.isol"], by=None)
+        for alias in allAliases:
+            for position in (init, medi, fina):
+                default = c.getDefault(alias, position)
+                c.sub(default, by=[default, MARKER_MASCULINE_FALSE])
 
-    with c.Lookup(
-        "III.ig.preprocessing.H",
-        feature="rclt",
-        flags={"UseMarkFilteringSet": c.glyphClass([MARKER_FEMININE])},
-    ):
-        for alias in categories["vowelNeuter"] + categories["consonant"]:
-            for position in (init, medi):
-                unmarked = c.getDefault(alias, position)
-                marked = c.getDefault(alias, position, marked=True)
-                c.current.append(
-                    ast.ReverseChainSingleSubstStatement(
-                        old_prefix=[],
-                        glyphs=[c._normalized(unmarked)],
-                        old_suffix=[c._normalized(markedVariants)],
-                        replacements=[c._normalized(marked)],
-                    )
-                )
+    with c.Lookup("III.ig.preprocessing.H", feature="rclt", flags={"IgnoreMarks": True}):
+        for alias in categories["vowelMasculine"]:
+            for position in (medi, fina, isol):
+                default = c.getDefault(alias, position)
+                c.sub(default, c.input(MARKER_MASCULINE_FALSE), by=MARKER_MASCULINE_TRUE)
 
-    with c.Lookup("III.ig.preprocessing.I", feature="rclt"):
-        for alias in ["h", "g"]:
-            for position in (init, medi):
-                marked = c.getDefault(alias, position, marked=True)
-                c.sub(c.input(marked, _unmarked), MARKER_MASCULINE, by=None)
+    anyGlyphBetweenMarkers = c.namedGlyphClass(
+        "MNG-any_between_markers",
+        [
+            c.getDefault(alias, position)
+            for alias in passingAliases
+            for position in (init, medi, fina, isol)
+        ]
+        + [
+            MARKER_MASCULINE_FALSE,
+            MARKER_MASCULINE_TRUE,
+            MARKER_MASCULINE,
+            MARKER_FEMININE,
+            c.classes["mvs"],
+        ],
+    )
+    with c.Lookup("III.ig.preprocessing.I.A", feature="rclt", flags={"IgnoreMarks": True}):
+        for marker in [
+            [c.input(MARKER_MASCULINE_FALSE)],
+            [c.input(MARKER_MASCULINE_FALSE), c.classes["fvs"]],
+        ]:
+            c.sub(*marker, c.classes["mvs"], c.getDefault("a", "isol"), c.classes["fvs"], by=None)
+            c.sub(*marker, c.classes["mvs"], c.getDefault("a", "isol"), by=MARKER_MASCULINE_TRUE)
+    with c.Lookup("III.ig.preprocessing.I.B", feature="rclt", flags={"IgnoreMarks": True}):
+        c.current.append(
+            ast.ReverseChainSingleSubstStatement(
+                old_prefix=[],
+                glyphs=[c._normalized(MARKER_MASCULINE_FALSE)],
+                old_suffix=[
+                    c._normalized(anyGlyphBetweenMarkers),
+                    c._normalized(MARKER_MASCULINE_TRUE),
+                ],
+                replacements=[c._normalized(MARKER_MASCULINE_TRUE)],
+            )
+        )
+        c.current.append(
+            ast.ReverseChainSingleSubstStatement(
+                old_prefix=[],
+                glyphs=[c._normalized(MARKER_MASCULINE_FALSE)],
+                old_suffix=[
+                    c._normalized(MARKER_MASCULINE),
+                    c._normalized(anyGlyphBetweenMarkers),
+                    c._normalized(MARKER_MASCULINE_TRUE),
+                ],
+                replacements=[c._normalized(MARKER_MASCULINE_TRUE)],
+            )
+        )
 
     with c.Lookup("III.ig.preprocessing.J", feature="rclt"):
-        markedVariants = c.namedGlyphClass(
-            "MNG-marked.B",
-            [
-                c.getDefault(alias, position, marked=True)
-                for alias in categories["vowelMasculine"]
-                + categories["vowelNeuter"]
-                + categories["consonant"]
-                if alias not in ["h", "g"]
-                for position in (init, medi, fina)
-            ],
-        )
-        c.sub(c.input(markedVariants, _unmarked), by=None)
+        for alias in allAliases:
+            for position in (init, medi, fina):
+                default = c.getDefault(alias, position)
+                c.sub(default, MARKER_MASCULINE_FALSE, by=default)
 
     with c.Lookup("III.ig.preprocessing.K", feature="rclt"):
-        for alias in ["h", "g"]:
-            for position in (init, medi):
-                unmarked = c.getDefault(alias, position)
-                marked = c.getDefault(alias, position, marked=True)
-                c.sub(marked, by=[unmarked, MARKER_MASCULINE])
+        for position in (init, medi, fina):
+            default = c.getDefault("g", position)
+            c.sub(default, c.input(MARKER_MASCULINE_TRUE), by=MARKER_MASCULINE)
+
+    with c.Lookup("III.ig.preprocessing.L", feature="rclt"):
+        for alias in [a for a in allAliases if a != "g"]:
+            for position in (init, medi, fina):
+                default = c.getDefault(alias, position)
+                c.sub(default, MARKER_MASCULINE_TRUE, by=default)
+
+    with c.Lookup("III.ig.preprocessing.M", feature="rclt"):
+        c.sub(MARKER_MASCULINE, MARKER_MASCULINE, by=MARKER_MASCULINE)
+        c.sub(MARKER_MASCULINE, MARKER_FEMININE, by=MARKER_FEMININE)
 
 
 def iii1(c: MongFeaComposer) -> None:
@@ -303,6 +311,38 @@ def iii2a(c: MongFeaComposer) -> None:
                     )
 
     if "MNG" in c.locales:
+        with c.Lookup("III.o_u_oe_ue.marked.emit", feature="rclt", flags={"IgnoreMarks": True}):
+            for alias in categories["consonant"]:
+                default = c.getDefault(alias, "init")
+                c.sub(default, by=[default, MARKER_INITIAL])
+
+        with c.Lookup(
+            "III.o_u_oe_ue.marked.propagate",
+            feature="rclt",
+            flags={"UseMarkFilteringSet": c.glyphClass([MARKER_INITIAL])},
+        ):
+            for alias in categories["consonant"]:
+                for position in (medi, fina):
+                    default = c.getDefault(alias, position)
+                    c.sub(MARKER_INITIAL, c.input(default), by=[default, MARKER_INITIAL])
+
+        with c.Lookup(
+            "III.o_u_oe_ue.marked.mark_vowel",
+            feature="rclt",
+            flags={"UseMarkFilteringSet": c.glyphClass([MARKER_INITIAL])},
+        ):
+            c.sub(
+                MARKER_INITIAL,
+                c.input(c.variants("MNG", ["o", "u", "oe", "ue"]), c.conditions["MNG:marked"]),
+                by=None,
+            )
+
+        with c.Lookup("III.o_u_oe_ue.marked.cleanup", feature="rclt"):
+            for alias in categories["consonant"]:
+                for position in (init, medi, fina):
+                    default = c.getDefault(alias, position)
+                    c.sub(default, MARKER_INITIAL, by=default)
+
         with c.Lookup(
             "III.o_u_oe_ue.marked.GB.A",
             feature="rclt",
@@ -310,6 +350,7 @@ def iii2a(c: MongFeaComposer) -> None:
         ):
             variants = c.variants("MNG", ["o", "u", "oe", "ue"], (medi, fina))
             c.sub(c.input(variants, c.conditions["MNG:reset"]), c.classes["fvs"], by=None)
+            variants = c.variants("MNG", ["o", "u", "oe", "ue"], fina)
             c.sub(c.classes["fvs"], c.input(variants, c.conditions["MNG:reset"]), by=None)
 
         with c.Lookup(
@@ -323,38 +364,6 @@ def iii2a(c: MongFeaComposer) -> None:
                 c.input(c.variants("MNG", ["oe", "ue"], fina), c.conditions["MNG:marked"]),
                 by=None,
             )
-
-        markedVariants = c.namedGlyphClass(
-            "MNG-marked.C",
-            [
-                c.getDefault(alias, position, marked=True)
-                for alias in categories["vowelMasculine"]
-                + categories["vowelNeuter"]
-                + categories["consonant"]
-                for position in (init, medi, fina)
-            ],
-        )
-        with c.Lookup(
-            "III.o_u_oe_ue.initial_marked.GB.A", feature="rclt", flags={"IgnoreMarks": True}
-        ):
-            c.sub(
-                c.glyphClass([c.classes["MNG-consonant.init"], markedVariants]),
-                c.input(c.classes["MNG-consonant.medi"], c.conditions["_.marked.MNG"]),
-                by=None,
-            )
-
-        variants = c.variants("MNG", ["o", "u", "oe", "ue"], medi)
-        with c.Lookup(
-            "III.o_u_oe_ue.initial_marked.GB.B", feature="rclt", flags={"IgnoreMarks": True}
-        ):
-            c.sub(
-                c.glyphClass([c.classes["MNG-consonant.init"], markedVariants]),
-                c.input(variants, c.conditions["MNG:marked"]),
-                by=None,
-            )
-
-        with c.Lookup("III.o_u_oe_ue.initial_marked.GB.C", feature="rclt"):
-            c.sub(c.input(markedVariants, c.conditions["_.unmarked.MNG"]), by=None)
 
         with c.Lookup("III.d.marked", feature="rclt", flags={"IgnoreMarks": True}):
             c.sub(
