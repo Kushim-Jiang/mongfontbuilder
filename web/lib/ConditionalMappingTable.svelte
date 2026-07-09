@@ -94,7 +94,7 @@
         {#each joiningPositions as position}
           {@const e = defaultPositionToFVS.get(position)}
           <td id="{alias}-{position}" class="default"
-            >{#if e}<span><LetterVariant {charName} position={e.renderPos ?? position} fvs={e.fvs} written={e.written} /></span>{/if}</td
+            >{#if e}<span><LetterVariant {charName} position={e.renderPos ?? position} ctxPosition={position} fvs={e.fvs} written={e.written} /></span>{/if}</td
           >
         {/each}
       </tr>

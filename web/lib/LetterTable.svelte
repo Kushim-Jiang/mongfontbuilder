@@ -99,9 +99,11 @@
     <td id={`${alias}-${position}-${fvs}`} class={{ variant: true, undefined: !variant, fabricated: fabricated, archaic: variant?.archaic, unrecommended: variant?.unrecommended }}>
       {#if variant}
         {#if fabricated}
-          {@const refPos = (variant.written as [JoiningPosition, FVS])[0]}
-          <span><LetterVariant {charName} position={refPos} {fvs} written={variant.resolvedWritten} /></span><br />
-          → {variant.written.join(" ")}
+          {@const ref = variant.written as [JoiningPosition, FVS]}
+          {@const refPos = ref[0]}
+          {@const refFvs = ref[1]}
+          <span><LetterVariant {charName} position={refPos} ctxPosition={position} {fvs} written={variant.resolvedWritten} /></span><br />
+          <a href="#{alias}-{refPos}-{refFvs}">→ {refPos}{refFvs ? ` ${refFvs}` : ""}</a>
         {:else}
           <span><LetterVariant {charName} {position} {fvs} written={variant.resolvedWritten ?? (variant.written as WrittenUnitID[])} /></span><br />
           {#each variant.written as unit, index}{index ? " " : ""}<a href="#{unit}">{unit}</a>{/each}

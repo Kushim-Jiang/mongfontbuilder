@@ -5509,9 +5509,7 @@ export const variants: Record<
         written: ["A", "Hr"],
         default: true,
         locales: {
-          MNGx: {
-            written: ["Hr"],
-          },
+          MNGx: {},
           TOD: {
             gb: "0312 todo letter haa final form",
             eac: "THAAM1",

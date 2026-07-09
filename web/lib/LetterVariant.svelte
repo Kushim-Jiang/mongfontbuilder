@@ -1,6 +1,7 @@
 <script lang="ts">
   interface Props {
     position: JoiningPosition;
+    ctxPosition?: JoiningPosition;
     id?: WrittenUnitID;
     written?: WrittenUnitID[];
     charName?: string;
@@ -8,7 +9,7 @@
     aliases?: string[];
   }
 
-  let { position, id, written, charName, fvs, aliases = [] }: Props = $props();
+  let { position, ctxPosition, id, written, charName, fvs, aliases = [] }: Props = $props();
 
   import type { JoiningPosition } from "../../data/misc";
   import type { FVS } from "../../data/variants";
@@ -16,8 +17,9 @@
   import { nameToCP, buildWrittenText, niText, ctxBefore, ctxAfter } from "./utils";
 
   const units = $derived(id ? [id] : written);
-  const showBefore = $derived(ctxBefore(position));
-  const showAfter = $derived(ctxAfter(position));
+  const effectiveCtx = $derived(ctxPosition ?? position);
+  const showBefore = $derived(ctxBefore(effectiveCtx));
+  const showAfter = $derived(ctxAfter(effectiveCtx));
 
   let text = $derived.by(() => {
     if (units) return buildWrittenText(units, position);
