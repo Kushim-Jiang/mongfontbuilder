@@ -28,6 +28,6 @@ Unfinished tasks or ideas can be added as [issues](https://github.com/Kushim-Jia
    npm run dev
    ```
 
-Starlight looks for `.md` or `.mdx` files in the [docs/](docs/) directory. Each file is exposed as a route based on its file name. The `.mdx` files can include Svelte code, and standalone functions can be maintained as reusable components.
+Starlight looks for `.md` or `.mdx` files in the [web/docs/](web/docs/) directory. Each file is exposed as a route based on its file name. The `.mdx` files can include Svelte code, and standalone functions can be maintained as reusable components.
 
 Images can be added to [web/src/](web/src/) and embedded in Markdown using relative links. And static assets, such as favicons, can be placed in [web/public/](web/public/).
