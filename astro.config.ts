@@ -45,6 +45,7 @@ export default defineConfig({
       customCss: ["./web/src/custom.css"],
       components: {
         Banner: "./web/src/Banner.astro",
+        Footer: "./web/src/Footer.astro",
         ThemeProvider: "./web/src/ThemeProvider.astro",
         ThemeSelect: "./web/src/ThemeSelect.astro",
       },
