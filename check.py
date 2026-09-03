@@ -23,6 +23,7 @@ import json
 import subprocess
 import sys
 import time
+from collections.abc import Sequence
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent
@@ -40,12 +41,8 @@ NPM_BIN = REPO / "node_modules" / ".bin"
 RUFF_RULES = "E4,E7,E9,F,I"
 
 
-def run(label: str, args: list[str], cwd: Path = REPO, timeout: int = 600) -> dict:
+def run(label: str, args: Sequence[str | Path], cwd: Path = REPO, timeout: int = 600) -> dict:
     """Run a check command, capturing output. Never raises on non-zero exit."""
-    exe = args[0]
-    if not (REPO / exe).exists() and not Path(exe).suffix:
-        # bare command like "npm" — resolve through the shell on Windows
-        args = args  # noqa: PLW0127
     started = time.perf_counter()
     print(f"\n=== {label} ===", flush=True)
     try:
