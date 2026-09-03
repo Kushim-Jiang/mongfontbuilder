@@ -2,22 +2,60 @@
 title: Architecture
 ---
 
-import MCH from "../lib/tags/MCH.svelte";
+import { Aside } from "@astrojs/starlight/components";
 import MNG from "../lib/tags/MNG.svelte";
 
-Each writing system using Mongolian script and the unified writing system formed by integrating them have the same architecture of text representation and text shaping. The text representation and text shaping rules contained in the individual writing systems and the integrated writing system are the concrete realization of this common architecture. This chapter describes this common architecture, and subsequent chapters describe the specific rules of each writing system in detail.
+Mongolian script is written by several writing systems. This document treats Hudum (`MNG`), Todo (`TOD`), Sibe (`SIB`), and Manchu (`MCH`), together with their Ali Gali extensions. A _writing system_ is the set of conventions by which one of these languages writes the script; a font may cover a single writing system, or a _unified writing system_ formed by integrating several of them. All of these share the same architecture of text representation and text shaping, which this chapter describes; the specific rules of each writing system, which realize this common architecture, are described in the subsequent chapters.
+
+The model is organized around two layers of text, the _character layer_ and the _glyph layer_, and around the two directions between them; the two layers are those of the model described in the [Introduction](/introduction/#structure). The character layer holds the characters of a writing system: the letters it uses, together with the format controls that take part in shaping. The glyph layer holds the written units, the written forms in which the letters are rendered. A letter is not rendered by one fixed written unit; given the context of the letter, text shaping selects the written unit in which the letter is rendered. Text representation and text shaping are the two directions that relate the two layers. Text representation runs from a written unit to the characters that represent it: for a written form one intends to write, it determines the character or character sequence that represents it. Text shaping runs from the characters to the written units in which they are rendered: for a sequence of characters, it determines the written units that are produced. The correspondence between the two layers is not one-to-one: a letter may be rendered by more than one written unit, and a written unit may represent more than one letter. Each direction therefore needs rules of its own.
+
+This chapter first recounts the history that led to this model, and in particular why the variants of a letter are maintained per writing system rather than as the block-wide variant data of the earlier model. It then fixes the characters of a writing system and how they represent its written units, treats the shaping process that turns a sequence of characters into written units, and closes with the texts of the Unicode Standard that cite this document: what each text says, what it asks of this document, and where this document answers it.
+
+### History
+
+Historically, two ways of analyzing the Mongolian script have been in tension. The _graphetic model_ determines the graphemes of each writing system by comparing the Mongolian script chronologically with the Old Uyghur and Sogdian scripts and identifies each grapheme as a character; its written units carry a simple shaping logic, so that the model is in essence the cursive model of the Arabic script, merely set vertically. The _phonetic model_ groups together the glyphs that record the same phoneme of the written language and identifies each phoneme as a character, a phonetic letter.
+
+The phonetic model is the one that the user community came to accept, and it did so for two reasons. First, by the time the script had evolved into Mongolian, each phoneme of Classical Mongolian appears to be reflected in the text, and it is natural, though mistaken, to regard the script as alphabetic on that account. Second, the education that shaped the user community is built on just such an alphabetic analysis; this ultimately goes back to the works of the Mongolian scholar Shadavyn Luvsanvandan, which formed the community’s present understanding of Mongolian writing. From Classical Mongolian this understanding extended to the other writing systems, and thereby to the script as a whole.
+
+Liang states in [L2/24-180, “Proposal to refer to UTN \#57 for implementing the Mongolian script”](https://unicode.org/L2/L2024/24180-mongolian-utn.pdf) that the Unicode Standard should be aligned with the Chinese national standard, which is the de facto international standard for Mongolian text; this UTN is written to that end.
+
+With the characters of Mongolian understood as the phonetic letters of Classical Mongolian, and the characters of each other writing system as the phonetic letters of its written language, the history of the script shows three views of the relation between a character, its variants, and the variation selectors.
+
+#### Variants in the character layer
+
+The original view of the Unicode Standard keeps the variants of a character in the character layer and treats them as free variants of writing: a character is first turned into another character by a variation selector, and that character is then turned, by cursive joining and the rest of shaping, into the joining variants that are its glyphs in the glyph layer. [UTR \#54, “Unicode Mongolian 12.1 Snapshot”](https://www.unicode.org/reports/tr54/) maintained the variants in this way, and its data file is [`StandardizedVariants.txt`](https://www.unicode.org/Public/draft/ucd/StandardizedVariants.txt). For example, the file records
+
+```
+1820 180B; second form; isolate initial medial final # MONGOLIAN LETTER A
+```
+
+in which `1820 180B` is a variation sequence: `1820` is the base character that stands for MONGOLIAN LETTER A, and `180B` the variation selector, and the description “second form” still belongs to the character layer. The sequence then has the four joining variants isolate, initial, medial, and final, which belong to the glyph layer. As the Hudum chapter shows, however, the four joining variants of `1820 180B` do not share a common abstract form—their written units are <MNG links="A" />, <MNG links="A" />, <MNG links="A A" />, and <MNG links="Aa" />. The joining variants of a Mongolian character are not maintained with such an intent, and this view does not hold.
+
+#### Variation selectors as toggles
+
+The earlier Chinese national standard, GB/T 25914—2010 together with [the User Agreement](https://www.babelstone.co.uk/Mongolian/Specification9.pdf), organizes its description around the user who enters Mongolian text from a keyboard, and it assumes two stages. In the first stage the user types the phonetic letters, and text shaping—in part the cursive joining, in part the requirements of orthography—first produces an initial result. In the second stage, when the result is not the one the user expects, the user types a variation selector after the letter to adjust the glyph, switching the wrong glyph to the intended one.
+
+A variation selector is therefore not used to select a specific glyph but to switch from one glyph to another, which has two consequences. First, the selector that switches glyph A to glyph B is very likely the same as the one that switches B to A. Second, if VS1 toggles between A and B and VS2 toggles between C and D, then A cannot be switched to C or D. This view was abandoned. Its concrete steps were left vague by the national standard of the time, and the User Agreement was not public, so that different manufacturers in fact implemented different behavior and text rendered inconsistently across platforms and vendors; in resolving this inconsistency the view as a whole was given up.
+
+#### The current approach
+
+The current approach changes the role of the variation selector. On the one hand, every variant of a character at each joining position is bound to a dedicated variation selector, which makes the selector a true selector, a determiner. Because more selectors are needed than under the earlier views, an additional selector, FVS4, had to be encoded ([L2/20-057](https://www.unicode.org/L2/L2020/20057-mongolian-fvs4.pdf)). On the other hand, the current Chinese national standard describes, for each character, the conditions under which each of its glyphs is used; it does so formally and provides test data (the `eac-` files, for example `eac-hud.json`, in this repository), but it does not prescribe concrete step-by-step shaping steps, leaving that latitude open mainly so that manufacturers can adapt. This UTN therefore proposes an approach that satisfies the current Chinese national standard. Its main structure was proposed by Liang in [L2/19-368](https://www.unicode.org/L2/L2019/19368-draft-utn-mongolian.pdf), and we have improved it and made the changes necessary to meet the Chinese national standard.
+
+Because the variant sets and the selector bindings differ between the writing systems, the data of this document are organized per writing system; the datasets and the tooling that maintain them are described in [Toolchain](/toolchain/).
+
+The Unicode Standard’s own data changed along the same lines, from one block-wide set to none. Until Unicode 13.0 the code chart carried, in addition to the representative glyph of each letter, the glyphs of its positional forms (since Unicode 9.0) and of its standardized variation sequences (since Unicode 7.0), and the Unicode Character Database listed those variation sequences in StandardizedVariants.txt; both belonged to the analysis of the views described above. Unicode 13.0 removed the positional-form and variation-sequence glyphs from the code chart, and [UTR \#54, “Unicode Mongolian 12.1 Snapshot”](https://www.unicode.org/reports/tr54/) was published to preserve the last chart of that design, so that the snapshot and the standardized variants in the database record the same earlier state. The Standard is now discontinuing the maintenance of Mongolian variants as standardized variants: the entries are being deprecated and the surrounding text updated ([L2/26-091](https://www.unicode.org/L2/L2026/26091-mongolian-std-variants.pdf)), with a transitional update of the sequence list for Unicode 18.0 ([L2/26-203](https://www.unicode.org/L2/L2026/26203-mongolian-vs.txt)); the cross-writing-system analysis underlying this decision is presented in [L2/26-207](https://www.unicode.org/L2/L2026/26207-mongolian.pdf). The analysis that this document realizes in place of those data is specified by the Chinese national standards for Hudum, Todo, Sibe, and Manchu, and is documented informatively by this UTN.
 
 ### Character set
 
-The characters included in each writing system of the Mongolian script can be categorized into Mongolian-specific characters and characters shared with other scripts.
+This section treats the character layer. It fixes the characters of a writing system—which letters it uses and which format controls take part in shaping—and, with them, text representation: how the written units of the writing system are represented by characters. The characters used by a writing system can be categorized into Mongolian-specific characters and characters shared with other scripts; the table below groups them. The subsections that follow define the letters and the format controls.
 
 <table>
   <thead>
     <tr>
-      <td>Script</td>
-      <td>Type of characters</td>
-      <td>Examples</td>
-      <td>Note</td>
+      <th>Script</th>
+      <th>Type of characters</th>
+      <th>Examples</th>
+      <th>Note</th>
     </tr>
   </thead>
   <tbody>
@@ -72,77 +110,55 @@ The characters included in each writing system of the Mongolian script can be ca
   </tbody>
 </table>
 
-#### Phonetic letters and written units
+#### Phonetic letters
 
-Due to the introduction of _matres lectionis_, for the writing systems using Mongolian script, both vowels and consonants of the written language correspond to the actual texts, and both are similar in behavior and equal in status. Therefore, although the original writing system was abjad, each writing system using Mongolian script has the characteristics of an alphabet.
+The phonetic model, described in the preceding section, determines the characters of a writing system by a phonemic analysis of the language that the writing system records. The languages recorded by the writing systems treated in this document are four: Tibetan, Sanskrit, Mongolian, and Manchu. Each language is written in one or more of the writing systems, named in parentheses below; for each we list its phonemes, giving the transcription used in this document and, where it differs, the phonetic value.
 
-These writing systems, with the characteristics of both abjad and alphabet, result in two ways of analyzing and encoding the Mongolian script. One is to determine the graphemes used by each writing system by chronologically comparing Mongolian script with Old Uyghur script and Old Turkic script, and to identify each grapheme as a character; the model formed by this method is called the _graphetic model_, and the basic unit in this model is called the _written unit_. The other is to analyze the phonemes of the written language recorded by the writing system, to group together the glyphs that record the same phoneme, and to identify each phoneme as a character; the model formed by this method is called a _phonetic model_, and the basic unit in the model is called the _phonetic letter_.
+**Mongolian** (in Hudum and Todo). The phonemes of Mongolian consist of native and borrowed phonemes. Its native vowels are _a_, _e_ (/ə/ in Hudum, /e/ in Todo), _i_ (lax /i/, tense /ɪ/), _o_, _u_, _ö_ (/ɵ/), and _ü_ (/ʉ/); its only borrowed vowel is _ë_ (/ɤ/ in Hudum; Todo has no _ë_). Its native consonants are _n_, _ng_, _b_, _p_, _x_ (/x/ before a lax vowel, /χ/ before a tense vowel), _g_ (/ɡ/ before a lax vowel, /q/ before a tense vowel), _m_, _l_, _s_, _š_ (/ʃ/), _t_, _d_, _č_ (/tʃ/), _ǰ_ (/dʒ/), _y_ (/j/), _r_, and _w_. The consonants borrowed into Hudum are _f_, _k_, _c_ (/ts/), _z_ (/dz/), _x’_ (/h/ before a tense vowel), _ž_ (/ɹ/), _lh_ (/ɬ/), _ẑ_ (/dʐ/), and _ĉ_ (/tʂ/); those borrowed into Todo are _f_, _k_, _c_ (/ts/), _z_ (/dz/), _g’_ (/ɡ/ before a tense vowel), _x’_ (/x/ before a tense vowel), _ǰ’_ (in Jangar), and _ñ_ and _z’_ (in Mañjuśri). In Mongolian the tense vowels are /a/, /ɪ/, /o/, and /u/, and the lax vowels are /ə/, /i/, /ɵ/, and /ʉ/.
 
-The specification used in this manual is based on the phonemic model, in which the characters correspond to the phonemes of the written language as recorded in the writing systems, with some compromises to maintain relative stability with the existing system. For example, the final <MCH links="Iy" /> in Manchu records the phoneme /ɹ̩/, is the same as the phonetic letter <MCH links="ii" />, but because it corresponds to ⟨i⟩ rather than ⟨y⟩ in the Möllendorff transcription, it is treated as corresponding to the phonetic letter <MCH links="i" /> rather than <MCH links="ii" />. This analysis is inherited in this specification.
+**Manchu** (in Sibe and Manchu). The phonemes of Manchu consist of native and borrowed phonemes; the Möllendorff transcription is the most widely used system. Its native vowels are _a_, _e_ (/ə/), _i_, _o_, _u_, and _ū_ (/o̘/ and /ʊ/); its only borrowed vowel is _i’_ (/ɹ̩/). Its native consonants are _n_, _k_ (/k/ before a lax vowel, /q/ before a tense vowel), _g_ (/ɡ/ before a lax vowel, /q/ before a tense vowel), _h_ (/x/ before a lax vowel, /χ/ before a tense vowel), _b_, _p_, _s_, _š_ (/ʃ/), _t_, _d_, _l_, _m_, _č_ (/tʃ/), _ǰ_ (/dʒ/), _y_ (/j/), _r_, _f_, _w_, and _ng_ (/ŋ/). The borrowed consonants are _k’_ (/k/ before a tense vowel), _g’_ (/ɡ/ before a tense vowel), _h’_ (/x/ before a tense vowel), _c_ (/ts/), _z_ (/dz/), _ž_ (/ɹ/), _ẑ_ (/dʐ/), and _ĉ_ (/tʂ/). In Manchu the tense vowels are /a/, (/i/), /o/, and /ʊ/, and the lax vowels are /ə/, /i/, /o̘/, and /u/.
 
-**Multi-to-one and one-to-multi confusion**. Since the writing units and the phonemes do not have a one-to-one correspondence, the phenomenon of the same phoneme corresponding to more than one written unit and the same written unit corresponding to more than one phoneme may occur. For example, in Hudum, the phonemic letter <MNG links="n" /> is usually written as <MNG links="N" /> when it appears as an onset and as <MNG links="A" /> when it appears as a coda (except for loanwords such as <MNG links="S W K2 O I N D" />); and the grapheme sequence <MNG links="A O R D U" /> may correspond to <MNG links="o r d o" /> “palace”, <MNG links="u r t u" /> “long”, and <MNG links="u r d u" /> “south”.
+**Tibetan** (in Tibetan, Hudum Ali Gali, Manchu Ali Gali, and Todo Ali Gali). The Tibetan recorded in Tibetan script reflects the written phonological system of the ninth century. Its consonants are _ka_ (/k/), _kha_ (/kʰ/), _ga_ (/ɡ/), _nga_ (/ŋ/), _ca_ (/tɕ/), _cha_ (/tɕʰ/), _ja_ (/dʑ/), _nya_ (/ɲ/), _ta_ (/t/), _tha_ (/tʰ/), _da_ (/d/), _na_ (/n/), _pa_ (/p/), _pha_ (/pʰ/), _ba_ (/b/), _ma_ (/m/), _tsa_ (/ts/), _tsha_ (/tsʰ/), _dza_ (/dz/), _wa_ (/w/), _zha_ (/ʑ/), _za_ (/z/), _va_ (/ɦ/), _ya_ (/j/), _ra_ (/r/), _la_ (/l/), _sha_ (/ɕ/), _sa_ (/s/), _ha_ (/h/), and _a_ (/ʔ/). Its vowels are _a_ (/a/), _i_ (/i/), _u_ (/u/), _e_ (/e/), and _o_ (/o/).
+
+When _va_ (/ɦ/) begins a syllable it represents a nasalized onset, as in _vgo_ (_va ga o_; /ŋɡo/), _vju_ (_va ja u_; /ɲdʑu/), _vdi_ (_va da i_; /ndi/), _vbu_ (_va ba u_; /mbu/), and _vdzem_ (_va dza e ma_; /ndzem/); between two vowels its pronunciation is faint or even absent, so that the sequence is readily perceived as a diphthong, as in _ngavi_ (_nga va i_; /ŋai/) and _gavu_ (_ga va u_; /ɡau/). The transcription is intended to be phonemic rather than to mirror the spelling character by character, for example _i_ (_a i_; /ʔi/) and _gyar_ (_ga ya sub a ra_; /ɡjar/), although the draft does not state this principle explicitly.
+
+**Sanskrit** (in Tibetan, Hudum Ali Gali, Manchu Ali Gali, and Todo Ali Gali). The Sanskrit materials in China are found chiefly in the Siddham and Lantsa scripts, and the Sanskrit letters follow IAST. Its initials are _ka_, _kha_, _ga_, _gha_, _ṅa_, _ca_, _cha_, _ja_, _jha_, _ña_, _ṭa_, _ṭha_, _ḍa_, _ḍha_, _ṇa_, _ta_, _tha_, _da_, _dha_, _na_, _pa_, _pha_, _ba_, _bha_, _ma_, _ya_, _ra_, _la_, _wa_, _śa_, _ṣa_, _sa_, _ha_, and _kṣa_. Its finals are _a_, _ā_, _i_, _ī_, _u_, _ū_, _ṛ_, _ṝ_, _ḷ_, _ḹ_, _e_, _ai_, _o_, _au_, _aṃ_, and _aḥ_.
 
 #### Format controls
 
-**Zero Width Non-Joiner (ZWNJ), Zero Width Joiner (ZWJ), and Nirugu**. U+200C and U+200D are Unicode’s standard cursive joining controls. Note that ZWJ also breaks interaction (such as ligation) between two consecutive characters since it is treated as an invisible character. U+180A is a Mongolian-specific character that behaves exactly like ZWJ but is visible as a piece of stem stroke. ZWNJ and ZWJ should not be accessible to the average user on common keyboard layouts, as everyday text does not require these characters.
+Format controls are characters that do not represent phonemes; they control the shaping of the letters around them, and they have no visual appearance of their own. They are characters of the character layer, and their effect takes place in the [shaping process](#shaping-process).
 
-The visible character nirugu should be used to cause joining in everyday text. A common use case is to end a patronymic abbreviation that is the initial syllable body (i.e., an optional onset plus the first vowel) or just the initial consonant letter of the father’s name.
+**Zero Width Non-Joiner (ZWNJ), Zero Width Joiner (ZWJ), and Nirugu**. U+200C and U+200D are Unicode’s standard cursive joining controls. They are invisible characters intended for the cases in which automatic shaping has to be overridden: ZWJ requests a more connected rendering of the neighboring characters, and ZWNJ requests a less connected rendering, breaking a cursive connection or a ligature ([Section 23.2, “Layout Controls”](https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-23/)). In the Mongolian script they may also select a particular positional form of a letter in isolation, or override its expected positional form within a word: thus the isolate, initial, final, and medial forms of the letter a (U+1820) are selected by `U+1820`, `U+1820 U+200D`, `U+200D U+1820`, and `U+200D U+1820 U+200D`, respectively. Because it is treated as an invisible character, ZWJ also breaks interaction, such as ligation, between the two consecutive characters that it stands between. ZWNJ and ZWJ should not be accessible to the average user on common keyboard layouts, as everyday text does not require these characters.
 
-**Vowel Separator (MVS) and Narrow No-Break Space (NNBSP)**. MVS is a Mongolian-specific format control for requesting the chachlag variation. It is transcribed as ‘_·_’ (a middle dot). NNBSP is a whitespace and format control used to represent and present particles. It is transcribed as ‘_–_’ (an en-dash). Use of the NNBSP is discouraged in preference for the MVS, as it sometimes produces anomalous shaping in various contexts.
+U+180A MONGOLIAN NIRUGU is a Mongolian-specific character that behaves exactly like ZWJ but is visible as a piece of stem stroke, and it should be used to cause joining in everyday text. A common use case is to end a patronymic abbreviation that is the initial syllable body (i.e., an optional onset plus the first vowel) or just the initial consonant letter of the father’s name. In the Unicode Standard the nirugu acts as a stem extender: in traditional typography it is used to extend the stem joining the letters of a word, so as to increase the separation between the letters. That stretching should preferably be carried out in the font, rather than by the user inserting U+180A. The nirugu may also be used to join the two parts of a compound word, in which use it resembles a hyphen but is nonbreaking and attaching. The three joining controls act at the [cursive-joining step of the shaping process](#iia-cursive-joining).
 
-**Free Variation Selector (FVS)**. FVS’s are Mongolian-specific format controls. They are applied to follow certain characters to request the forms not captured by the predictive shaping rules.
+**Vowel Separator (MVS) and Narrow No-Break Space (NNBSP)**. MVS is a Mongolian-specific format control. In this document it is the control that requests the chachlag variation, and it is transcribed as `·` (a middle dot). In the Unicode Standard the MVS represents the break between a word-final letter a or e and the rest of the word: it disconnects the two parts—the a or e that follows the MVS is not a suffix but an integral part of the word stem—and it always selects the leftward-tail form of that a or e; it may also affect the form of the preceding letter. In this use the MVS is not needed for Todo, Manchu, or Sibe. NNBSP is a whitespace and format control used to represent and present particles; it is transcribed as `–` (an en-dash). Before Unicode 16.0, the NNBSP was the character used to represent the small gap that precedes a separated suffix, and it retains the Script_Extensions value “Mong” for backward compatibility; its role has been taken over by the MVS, which not only prevents a word or line break before the separated suffix but also triggers the special shaping that the suffix requires. Use of the NNBSP is discouraged in preference for the MVS, as it sometimes produces anomalous shaping in various contexts. The MVS acts at the [reduction step of the shaping process](#iii-reduction-of-phonetic-letters-to-written-units).
 
-**Standardized Variation Selector (VS)**. VS’s are Unicode’s standard format controls for requesting glyph variants. From Unicode 17.0, VS2 is used to specify the Sibe form of quotation marks.
+<Aside type="note">
 
-#### Numbers and Punctuation
+In the model of this document, the MVS has two functions: it can indicate a chachlag, and it can indicate a particle.
 
-The document does not contain specifications for numbers, punctuation, damaru, ubadama, and so on; these will be added in subsequent versions.
+When it indicates a chachlag, the MVS is rendered with no advance width. It only breaks the cursive joining: the letter before it takes its final or isolated form, and the letter after it takes its isolate form. The gap between the two is natural and is not produced by the MVS.
 
-> Preliminary investigation:
->
-> **Numerals**. Mongolian digits from zero to nine are not used in modern China, but in ancient China. The Hudum and Todo ancient literatures use these digits. They also appear a bit different between Hudum and Todo, but they are still in a system.
->
-> The Mongolian digits are employed in modern Mongolia. They appear on Mongolian banknotes.
->
-> The Mongolian digits behave identically to European digits. In various publications, these digits may be rotated (arranged vertically) or upright (arranged vertically or horizontally).
->
-> **Punctuation**.
->
-> Hudum punctuation.
->
-> - ᠀: rotated.
-> - ᠁, ᠄, ᠅: rotated.
-> - ᠂, ᠃: rotated.
-> - %, +, -, =, \~: Latin punctuation, used in ``50%, 3+5=8, 3\~5''.
-> - ·: middle dot， positioned in the middle.
-> - ⁈, ⁉, ；, ！, ？: upright.
-> - ——: rotated.
-> - （）《》〈〉［］: rotated.
->
-> Todo punctuation.
->
-> - U+11660 -- U+1166C: rotated.
-> - 「」『』｛｝: rotated.
-> - ，, 、, 。: upright, positioned in the middle.
-> - ……: rotated.
->
-> Sibe punctuation.
->
-> - ：: upright, positioned in the middle.
-> - ‘, ’, “, ”: upright, ‘ and “ are positioned on the left, ’ and ” are positioned on the right. Instructions for selecting VS need to be added and referred.
-> - ᠈, ᠉: rotated.
->
-> Note that, although there are gaps on both sides of punctuation marks, certain punctuation marks are conventionally followed by a space character. In such cases, it appears that the gap following the punctuation mark should be reduced.
+When it indicates a particle, the MVS is rendered with the same width as an ordinary Mongolian space, and in justified text its width expands and contracts together with that of the other Mongolian spaces, so that the added white space is shared out evenly among them.
+
+</Aside>
+
+**Free Variation Selector (FVS)**. FVS’s are Mongolian-specific format controls. They have no visual appearance of their own and immediately follow the letter they modify; a base letter together with a following FVS is a variation sequence. They are used only when a glyph form that cannot be predicted from the context is required—for example, when writing a foreign word—and in most running text they are not needed. There are four of them, FVS1–FVS4 (U+180B..U+180D, U+180F). Within the [shaping process](#shaping-process), an FVS selects among the variants of a letter at a joining position when the predictive rules do not apply.
+
+**Standardized Variation Selector (VS)**. VS’s are Unicode’s standard format controls for requesting glyph variants. They are combining marks of combining class zero and are default ignorable, and together with the base character they modify they form a variation sequence; whether a particular combination has any effect depends on the variation sequences defined for it ([Section 23.4, “Variation Selectors”](https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-23/#G19053)). From Unicode 17.0, VS3 (U+FE02) is used to specify the Sibe form of quotation marks ([L2/25-028, “Proposal to Add VS3 for Sibe Quotation Marks”](https://www.unicode.org/L2/L2025/25028-vs3-sibe-quotation-marks.pdf)), a matter of punctuation.
 
 ### Shaping process
 
-The Mongolian text shaping process is based on the well-implemented technology foundation for general scripts and cursive scripts, while an additional phase of Mongolian-specific shaping steps is inserted into the ordinary shaping process required by cursive scripts. The minimal shaping process consists of a number of steps as shown below.
+This section treats text shaping, the direction from the character layer to the glyph layer: how a sequence of characters is turned into the written units in which it is rendered. The Mongolian text shaping process is based on the well-implemented technology foundation for general scripts and cursive scripts, while an additional phase of Mongolian-specific shaping steps is inserted into the ordinary shaping process required by cursive scripts.
+
+The ordinary shaping process of a cursive script runs in a fixed order: a basic character-to-glyph mapping (the general phase Ia), cursive joining, which assigns each letter its joining position (phase II), and typography, which closes the process (the general phase Ib). In Mongolian, a letter whose joining position is fixed still usually has more than one possible written unit; before the cursive process continues with the variation within a written unit, each phonetic letter must first be reduced to the written unit it uses. This reduction is the Mongolian-specific phase III. It is inserted between the cursive joining and the sub-written-unit variation—between IIa and IIb—because it takes the joining position as its input and decides, in turn, which written unit the later variation applies to. The shaping process of Mongolian text therefore runs in the order Ia → IIa → III → IIb → Ib, as shown below.
 
 <table>
   <thead>
     <tr>
-      <td colspan="4">Shaping phase</td>
-      <td>Shaping step</td>
+      <th colspan="4">Shaping phase</th>
+      <th>Shaping step</th>
     </tr>
   </thead>
   <tbody>
@@ -208,31 +224,80 @@ The Mongolian text shaping process is based on the well-implemented technology f
   </tbody>
 </table>
 
-#### General shaping phases
+#### Ia. Basic character-to-glyph mapping
 
 These are the basic mechanisms in fonts that apply to all scripts.
 
-The basic character-to-glyph mapping (phase Ia) is typically controlled by the TrueType/OpenType table cmap. The Unicode representative glyphs can be used here as the default glyph mappings for phonetic letters, but these representative glyphs are essentially irrelevant to the final rendering.
+The basic character-to-glyph mapping (phase Ia) is typically controlled by the TrueType/OpenType table `cmap`. The Unicode representative glyphs can be used here as the default glyph mappings for phonetic letters, but these representative glyphs are essentially irrelevant to the final rendering. A Mongolian letter does not have a single glyph: which written form it finally renders is decided by the phases that follow.
 
-Vertical forms of punctuation marks (phase Ib) are critical to the proper setting of Mongolian text, but are not part of the complex shaping between letters and format controls.
+Phase Ia also carries the normalizations that must hold before the shaping proper begins. The NNBSP is one such character: because its function has been taken over by the MVS, as described in the [Format controls](#format-controls) part, an NNBSP in text is substituted with the MVS at this phase, so that text in which the NNBSP was used is shaped by the same rules as text that uses the MVS. The other format controls are not acted on in phase Ia; they reach the later phases unchanged.
 
-#### Cursive script shaping phases
+#### IIa. Cursive joining
 
-On top of the general shaping mechanisms, complex scripts require additional shaping phases to be inserted after the basic character-to-glyph mapping and before typographical treatments. In particular, cursive scripts all undergo the cursive joining mechanism.
+On top of the general shaping mechanisms, complex scripts require additional shaping phases to be inserted after the basic character-to-glyph mapping and before typographical treatments. In particular, cursive scripts all undergo the cursive joining mechanism (phase IIa). Cursive joining runs before variant selection, because which written unit a letter takes depends on whether its two sides join, that is, on its cursive position.
 
-**Cursive joining**. Written forms exhibit the cursive joining mechanism (phase IIa). Both sides of a written form can either be joined to an adjacent written form or not, with up to four different states. Or, more abstractly, each written form is in one of the four cursive positions:
+**Cursive joining**. Both sides of a written form can either be joined to an adjacent written form or not, with up to four different states. Or, more abstractly, each written form is in one of the four cursive positions:
 
-- Isolated, abbreviated as ‘isol’: not joined forward (above, in Mongolian), not joined backward (below, in Mongolian);
-- Initial, abbreviated as ‘init’: not joined forward, joined backward;
-- Medial, abbreviated as ‘medi’: joined forward, joined backward;
-- Final, abbreviated as ‘fina’: joined forward, not joined backward.
+- Isolated, abbreviated as `isol`: not joined forward (above, in Mongolian), not joined backward (below, in Mongolian);
+- Initial, abbreviated as `init`: not joined forward, joined backward;
+- Medial, abbreviated as `medi`: joined forward, joined backward;
+- Final, abbreviated as `fina`: joined forward, not joined backward.
 
 Cursive positions are irrelevant to word boundaries, although they are usually consistent with word-wise positions in Mongolian because cursive joining breaks within a word are limited in the writing system.
 
-**Implementation**. The nominal glyph of each phonetic letter will be mapped to the default glyph of that letter at a given cursive position.
+The joining of a letter is normally derived from the letters around it, but it can be overridden with the format controls: ZWNJ prevents joining on one side, and ZWJ and the nirugu force joining.
 
-**Graphemic variation after bowed written units**. Before the sub-written-unit variation, bowed written units may first cause a vowel to change its form.
+**Implementation**. Cursive joining assigns each letter the joining position that its two sides produce, and the nominal glyph of the letter is then mapped, at that position, to its default written unit—the written unit the letter would use if no later phase changed it. ZWNJ, ZWJ, and the nirugu change the joining of a side, and with it the position that is assigned. What phase IIa produces is therefore, for every letter, the glyph of the default written unit at its joining position; phase III starts from these glyphs.
 
-#### Mongolian-specific shaping phases
+#### III. Reduction of phonetic letters to written units
 
-Phase III consists of a series of steps for Mongolian-specific shaping requirements, and within each step there may be more than one set of non-overlapping rules, each for a different group of letters. Forms not captured by the predictive conditions are requested with an FVS.
+Once the cursive position of each letter is fixed, a letter still usually has more than one possible written unit. In phase III the phonetic letter is reduced to the written unit it must use. The reduction is predictive: it is decided by the orthographic context of the letter, so that no user intervention is required in the ordinary case.
+
+**How the reduction is expressed.** The reduction of a letter is not a single mapping but a sequence of conditional substitutions, and the steps run in a fixed order. Each substitution tests the context of a letter—the letters around it, together with the format controls that lie between them—and, when the context matches, replaces the default written unit that phase IIa produced with the written unit the context requires. The contexts are expressed by classes of letters and by the conditions that a writing system defines on them, so that the whole reduction is driven by the per-writing-system data described in the [Toolchain](/toolchain/) chapter; the writing systems differ from one another in just these data.
+
+Phase III consists of a series of steps for Mongolian-specific shaping requirements. The phonetic conditions are chachlag (requested by MVS), syllabic, and particle; the graphemic conditions are devsger and post-bowed. The phonetic steps run first and the graphemic steps afterwards, because the graphemic condition of a letter is tested against the outcome of the phonetic steps: a letter that a phonetic step has already changed is not offered to the graphemic steps in its earlier form. Within each step there may be more than one set of non-overlapping rules, each for a different group of letters, so that at most one rule of a step applies to a letter. The forms that the phonetic and graphemic conditions do not capture fall to the last step, FVS-selected.
+
+**The format controls within the reduction.** The format controls have no visual form of their own, and the reduction treats them as states rather than as characters to be rendered. The controls that cursive joining has already used—ZWNJ, ZWJ, and the nirugu—have done their work by the time the reduction begins: within phase III they are neutralized, so that they neither render nor interrupt the running of the rules. The MVS and the FVS take an active part instead. The MVS is resolved into the function it indicates, a chachlag or a particle, the two functions described in the MVS paragraph of the [Format controls](#format-controls) part: as a chachlag it is given no advance width, so that it only separates the two written units; as a particle it is given the width of a Mongolian space, setting the following word off from the stem. An FVS follows the letter it modifies and is read by the rules as the request for the variant it names; once the variant has been selected, the FVS is removed. When the reduction is over, the controls that it has consumed are gone, so that nothing of the shaping machinery remains in the glyph layer.
+
+**Conditions that reach across a word.** A condition is usually decided by the letters adjacent to the letter it conditions, but not always. In Hudum the harmonic gender of a word, masculine or feminine, is fixed by the vowels of the word, and a _g_ or _h_ in the word must take the written unit that agrees with that gender even when it stands away from any of the vowels that fixed it. A reduction that runs as a sequence of local substitutions cannot, by itself, see so far. The property is therefore carried across the word by markers: the reduction inserts a marker at the letter that fixes the property, passes it across the letters that do not change it, and reads it at the letter it conditions; once that letter has been decided, the markers are removed. The mechanism leaves no trace in the final text.
+
+**FVS-selected.** When the context of a letter matches none of the predictive conditions, its written form is requested with an FVS. Within a writing system, an FVS switches between the variants of a letter at a given joining position; it does not name a single glyph that the letter must use in every context. In this it differs from a standardized variation sequence, which selects a fixed glyph.
+
+#### IIb. Sub-written-unit variation
+
+After the written units have been fixed, cursive shaping resumes where phase IIa left it, with the variation that runs within a written unit. The reduction of phase III and the variation of this phase both act on written units, but at different scales: the reduction chose a written unit among the variants that a letter has at its joining position, and the sub-written-unit variation now adjusts that written unit in the light of the written units around it. A bowed written unit may first cause a following vowel to change its form; this is the graphemic variation that precedes the sub-written-unit variation. The format controls that the preceding steps consumed are then cleaned up, and optional treatments are applied.
+
+#### Ib. Typography
+
+The shaping process ends with typography. Vertical forms of punctuation marks (phase Ib) are critical to the proper setting of Mongolian text, but are not part of the complex shaping between letters and format controls. Optional treatments may follow.
+
+### Relationship to the Unicode Standard data
+
+The model described above is per writing system, but it is not the only description of Mongolian text to which a user may visit. The Mongolian section of the Core Specification, the code chart for the Mongolian block, and the Unicode Character Database each refer to this document where the choice of a glyph form is concerned, and each thereby asks this document to answer something. This section reviews those three texts and then states what each citation asks of this document and where this document answers it.
+
+#### The texts that cite this document
+
+**The Core Specification.** [Section 13.5, “Mongolian”](https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-13/#G27803), cites this document in three places. Its guidelines for implementation state that guidelines for text representation and text shaping can be found in this document—for text representation, the characters and their variants for the letters and marks of each writing system; for text shaping, hierarchical shaping rules that detail the behavior of each shaping step and the conditions for the presentation of each variant—and add that a Unicode Technical Note has no normative status. Its discussion of cursive joining states that where the variant of a letter is conditioned by context, such as the first syllable of a word or the letter that precedes it, the selection of the variant is determined by hierarchical shaping steps, and refers to this document. Its discussion of the free variation selectors adds a warning: the list of Mongolian standardized variants in `StandardizedVariants.txt` has not yet been updated to synchronize with the requirements of current practice as stated in this document, a defect to be addressed in a future version of the Standard.
+
+The section is written in the terms of the earlier, single-block analysis recounted in the [History](#history): it treats the positional and variant glyph forms of a letter as presentation forms that are not separately encoded, and it treats a base letter followed by a free variation selector as a standardized variant. It keeps that framework because it presents only the outline of Mongolian shaping—cursive joining, positional forms, vowel harmony, and the special shaping of the MVS, separated suffixes, nirugu, and syllable boundary marker—and leaves the choice of any context-conditioned variant to the hierarchical shaping rules of this document. Its warning is the section’s own admission that the data it still carries record the earlier state rather than those rules.
+
+**The code chart.** The [code chart for the Mongolian block](https://www.unicode.org/charts/PDF/U1800.pdf) shows each character with its code point, its name, and one representative glyph; it shows neither the positional forms of a letter nor its variation sequences. Its annotation cites this document—“For detailed information about implementation of Mongolian shaping, see UTN \#57”—and refers to [UTR \#54, “Unicode Mongolian 12.1 Snapshot”](https://www.unicode.org/reports/tr54/), for the last chart that showed the positional variants and variation sequences of the earlier design. The chart is consistent with the character layer of this model: it fixes a character by code point and name, and its representative glyph is not prescriptive. The characters that the subsequent chapters specify correspond to those of the code chart.
+
+**The Unicode Character Database.** [`StandardizedVariants.txt`](https://www.unicode.org/Public/draft/ucd/StandardizedVariants.txt) still lists the Mongolian standardized variation sequences, each a base letter followed by a free variation selector. Its comments for the Mongolian block state that only the free variation selectors FVS1–FVS4 (U+180B..U+180D, U+180F) are used, and that the generic variation selectors are not; that the per-sequence descriptors are arbitrary, numbered labels with no systematic relation to the shapes of the glyphs; that a sequence labeled “not in use” is no longer recommended for use, because it was defined for earlier implementations and is retained so that legacy data remains legible; that any unlisted combination is unspecified and reserved for future standardization; and that it refers to this document for the implementation of Mongolian shaping.
+
+The file belongs to the earlier model whose data structures are being retired. Its entries do not describe the variants of this document, because Mongolian variants do not behave as standardized variants, for the following reasons.
+
+- **Variants are orthographically required, not free alternatives.** At a given joining position the variant of a letter is fixed by the writing system and the surrounding letters, and it may distinguish two words. A variant that is needed by orthography is not a free variant.
+- **A free variation selector switches, rather than determines.** FVS1–FVS4 switch between the variants of a letter at a joining position; they do not name a single glyph that a letter must use in every context.
+- **The variant set of a letter depends on the writing system.** The Mongolian block unifies letters across Hudum, Todo, Sibe, and Manchu and their Ali Gali extensions. These writing systems do not agree on the variant used at every joining position, and a writing system that has no form at a position must render a virtual form derived from another position. A writing-system-neutral list cannot express these differences.
+- **Variant selection takes effect in shaping.** It operates after the orthographic shaping steps, not at the character-to-glyph mapping stage where standardized variants apply.
+
+#### What the citations ask of this document
+
+The citations make this document the reference that completes the outline of the Standard. They do not make it normative, and this document does not claim to be: the analysis that the Standard follows is specified by the Chinese national standards that this document realizes and is documented informatively by this UTN, as the [History](#history) recounts. The three texts put the following questions to this document.
+
+- **What are the characters and written units of each writing system?** The guidelines of the Core Specification ask this document to list the characters of each writing system and their variants. This document answers with the [Character set](#character-set) of this chapter and with the letters and written units given in the chapters on the individual writing systems: [Hudum](/hudum/), [Todo](/todo/), [Sibe](/sibe/), and [Manchu](/manchu/), together with their Ali Gali chapters.
+- **What are the hierarchical shaping rules and their conditions?** The guidelines and the cursive-joining text of the Core Specification ask this document for the shaping steps and the conditions under which each variant is presented. This document answers with the [Shaping process](#shaping-process) of this chapter and, per writing system, with the letter classes and conditions that the chapters just named define for the reduction of letters to written units.
+- **What would the Mongolian entries of `StandardizedVariants.txt` have to be?** The warning of the Core Specification and the note of the file ask this document to state the assignments with which the file would have to be synchronized. This document answers with the per-writing-system variant data: which letter, at which joining position, is presented by which written unit, and which FVS, if any, requests the variant that the context does not predict. The machine-readable form of these data is described in the [Toolchain](/toolchain/) chapter.
+
+The first two questions are answered by the model of this chapter and the data of the subsequent chapters. The third is the one that the Standard states it has not yet answered itself, so this document answers it here. The assignment of a written unit to a letter at a joining position—with or without an FVS—is fixed by the variant data of each writing system given in the subsequent chapters. The descriptors of `StandardizedVariants.txt` are not that assignment: the same descriptor does not describe the same written unit across writing systems, and a descriptor may name a variant that current orthography no longer uses. Until the Standard adopts these data, the file and this document differ, and this document states the current practice.

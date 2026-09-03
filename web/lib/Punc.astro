@@ -1,0 +1,17 @@
+---
+import { punctuation } from "../../data/writtenUnits.ts";
+
+const { name } = Astro.props as { name: keyof typeof punctuation };
+const entry = punctuation[name];
+const left = String.fromCodePoint(punctuation.Boundaryleft.code);
+const right = String.fromCodePoint(punctuation.Boundaryright.code);
+const unicode = "unicode" in entry ? entry.unicode : undefined;
+const space = "space" in entry ? entry.space : false;
+const mark = String.fromCodePoint(entry.code);
+const codepoint = unicode === undefined ? "" : `U+${unicode.toString(16).toUpperCase()}`;
+---
+
+<td>{codepoint}{space ? " (U+0020)" : ""}</td>
+<td>
+  <span class="wu wu-rotated"><span class="wu-gray">{left}</span><span class="wu-box">{mark}</span>{space ? <span class="wu-box"> </span> : null}<span class="wu-gray">{right}</span></span>
+</td>

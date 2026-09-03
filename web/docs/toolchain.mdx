@@ -1,0 +1,165 @@
+---
+title: Toolchain
+---
+
+The preceding chapters specify how Mongolian text is represented and shaped in each writing system. This chapter describes the repository that maintains those specifications as working resources. Together they form the toolchain that accompanies this UTN (see [Introduction](/introduction/#content)).
+
+The toolchain is organized in three groups, which correspond to the parts of the model described in [Architecture](/architecture/). The _specification data and the documentation site_—the TypeScript files in `data/` and the Astro site in `web/`—state the model: they keep the characters and written units of each writing system as data and present them as the tables of the per-writing-system chapters. The _code library and the JSON data_—the Python package in `lib/mongfontbuilder/`, the test suite in `tests/`, and the JSON that `data/` exports for them—realize and verify the model: the package turns a minimal glyph set into a font whose shaping rules are generated from the data, and the tests check those rules against the expected output. The _font templates_ in `templates/` are the part of the toolchain that faces the type designer.
+
+### The specification data and the documentation site
+
+This group is where the model is stated; it lives in the specification data (`data/`) and the documentation site (`web/`).
+
+```text
+mongfontbuilder/
+├─ data/             the specification data (TypeScript, the single source of truth)
+│  └─ export.ts      exports the JSON copies for the code library
+├─ web/              the documentation site (Astro + Starlight)
+│  ├─ docs/          the documentation pages (.mdx)
+│  ├─ lib/           the Svelte components (data tables, writing-system tags)
+│  └─ src/           site styles and configuration
+└─ astro.config.ts   documentation site configuration and sidebar
+```
+
+Because the specification data are the single source of truth, the documentation site imports them directly, and the code library receives them as JSON (see the code library below).
+
+#### The specification data
+
+The canonical specification data are maintained as TypeScript files in `data/`. They correspond to the entities of the character layer described in [Architecture](/architecture/#character-set):
+
+- `data/locales.ts` — the writing systems (MNG, TOD, SIB, MCH) together with their shaping conditions and their categories of characters;
+- `data/writtenUnits.ts` — the written units of the letters;
+- `data/variants.ts` — the variants of each letter by cursive position and by FVS, including which variant is the default; this is where the FVS assignments of each writing system are defined;
+- `data/aliases.ts`, `data/ligatures.ts`, `data/particles.ts` — the aliases, ligatures, and particles used by the data.
+
+The documentation site imports these TypeScript files directly at build time to render the tables of the per-writing-system chapters. Because the TypeScript files are the source of truth, a change to the model begins by editing them and then regenerating the JSON for the code library, as described below.
+
+#### The documentation site
+
+The documentation is an [Astro](https://astro.build/) site built with [Starlight](https://starlight.astro.build/). Install the Node dependencies and start a local development server with:
+
+```sh
+npm install
+npm run dev
+```
+
+The site is served at `http://localhost:4321`. The other npm scripts are:
+
+```sh
+npm run check     # astro check (TypeScript and .astro)
+npm run build     # run checks, then build the static site
+npm run preview   # preview the built site
+npm run format    # format sources with prettier
+```
+
+Each documentation page is an `.mdx` file in `web/docs/` and is exposed as a route named after the file; pages are ordered and grouped by the `sidebar` list in `astro.config.ts`. The `.mdx` pages may embed Svelte components, which live in `web/lib/` and `web/src/`.
+
+### The code library, the JSON data, and the tests
+
+This group is where the model is realized and verified; it lives in the Python package (`lib/mongfontbuilder/`) and the test suite (`tests/`).
+
+```text
+mongfontbuilder/
+├─ lib/mongfontbuilder/   the Python package
+│  ├─ otl/                the OpenType Layout composer (one module per shaping phase)
+│  ├─ data/               the JSON data, exported by data/export.ts
+│  └─ …                   the data model, the glyph descriptors, and the CLI
+└─ tests/                 the pytest suite
+   ├─ *.ufo               the per-writing-system test fonts
+   └─ data/               the shaping test cases (core-*, eac-*)
+```
+
+The group begins with the JSON data, which are the form in which the specification data reach the Python package; the package generates the OpenType Layout rules of a font, and the test suite checks them.
+
+#### The JSON data
+
+The Python package reads JSON copies of the specification data, exported by
+
+```sh
+node data/export.ts
+```
+
+which writes `locales.json`, `aliases.json`, `writtenUnits.json`, `ligatures.json`, `variants.json`, and `particles.json` into `lib/mongfontbuilder/data/`. The export step also validates the data: every variant set must have exactly one default, the conditions and categories of each writing system must be consistent with the variant data, and the national-standard references must match their expected format. The JSON files are generated: edit the TypeScript sources and rerun the export; do not edit the JSON files by hand.
+
+#### The Python package
+
+The package `mongfontbuilder` is maintained in `lib/` and published to [PyPI](https://pypi.org/project/mongfontbuilder/). Set up the environment and install the development tools with:
+
+```sh
+uv sync
+```
+
+The package is developed with [uv](https://docs.astral.sh/uv/), and the development tools (pytest, ruff, pyright, uharfbuzz, glyphsLib) are installed together with it. The package provides a typed Python API over the data files and the OpenType Layout composer (`mongfontbuilder.otl`), which derives feature code from a glyph set and a list of locales. A command-line interface is also available; it reads a source UFO font with a minimal glyph set and writes a complete font with the generated OTL rules:
+
+```sh
+uv run python -m mongfontbuilder input.ufo output.ufo --locales MNG
+uv run python -m mongfontbuilder input.ufo output.otf --locales MNG
+```
+
+Both `.ufo` and `.otf` output formats are supported, and one or more locales may be given from `MNG`, `TOD`, `SIB`, `MCH`. For example, to build a Hudum font from the Hudum test font in the repository:
+
+```sh
+uv run python -m mongfontbuilder tests/hudum.ufo temp/hudum.otf --locales MNG
+```
+
+#### Tests
+
+The test suite is run with:
+
+```sh
+uv run pytest
+```
+
+The harness builds each test font on the fly using the package API, shapes the test strings with [HarfBuzz](https://harfbuzz.github.io/), and compares the resulting glyph sequence with the expected output. The tests are organized per writing system, each with its own UFO test font and test cases under `tests/data/`:
+
+- **Hudum** (`MNG`), from `tests/hudum.ufo`, is validated against the EAC and core suites;
+- **Manchu** (`MCH`), from `tests/manchu.ufo` and `tests/manchu-ag.ufo`, is validated against the core suite;
+- **Sibe** (`SIB`), from `tests/sibe.ufo`, is validated against the core suite.
+
+A small number of cases are expected to fail; the reasons are documented in the repository README.
+
+### Font templates
+
+This group is the part of the toolchain that faces the type designer; it lives in `templates/`.
+
+```text
+mongfontbuilder/
+└─ templates/
+   ├─ update.py       the template update script
+   ├─ hudum.glyphs    the Hudum template
+   ├─ hudum.fea       its OpenType Layout source
+   ├─ manchu.glyphs   the Manchu template
+   └─ manchu.fea      its OpenType Layout source
+```
+
+The template update script `templates/update.py` builds the Glyphs templates from the test UFO fonts and the output of the OTL composer:
+
+```sh
+uv run python templates/update.py
+```
+
+It regenerates `hudum.glyphs` and `manchu.glyphs` (together with their `.fea` sources) from `tests/hudum.ufo` and `tests/manchu.ufo`. The templates let type designers open and work with the generated glyph layout in the Glyphs app. The template tests in `tests/test_templates.py` require the Glyphs app and run on macOS only.
+
+### Development workflow
+
+A typical change flows through the three groups described above.
+
+1. **Change the specification data**: edit the relevant file in `data/`, then run `node data/export.ts` to regenerate the JSON and `uv run pytest` to validate.
+2. **Change the code library or the tests**: edit `lib/` or `tests/`, then run `uv run pytest`.
+3. **Change the documentation**: add or edit `.mdx` files under `web/docs/` and check the result with `npm run dev`.
+4. **Regenerate fonts and templates**: when glyph data change, rebuild sample fonts with the CLI and refresh the templates with `uv run python templates/update.py`.
+5. **Validate everything**: run the unified check at the repository root
+
+```sh
+uv run check.py                  # ruff, pyright, astro check, svelte-check
+uv run check.py --fix            # auto-fix fixable issues first
+uv run check.py --only pyright   # run a single tool
+```
+
+### Continuous integration and publishing
+
+The repository uses GitHub Actions:
+
+- `.github/workflows/test.yml` runs `uv sync --locked` and `uv run pytest` on pushes to `main`;
+- `.github/workflows/pypi.yml` builds the package and publishes it to PyPI when a release is published;
+- the documentation site is deployed to [mongfontbuilder.pages.dev](https://mongfontbuilder.pages.dev/).

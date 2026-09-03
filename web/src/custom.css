@@ -29,10 +29,39 @@ table {
   color: hsl(210 2% 55% / 0.65);
 }
 
+.wu-rotated {
+  display: inline-block;
+  white-space: nowrap;
+  transform: rotate(90deg);
+  padding: 10pt 0pt;
+}
+
+.wu-gray {
+  color: hsl(210 2% 55% / 0.65);
+}
+
+.wu-box {
+  display: inline-block;
+  white-space: pre;
+  border: 2px solid hsl(210 80% 58% / 0.55);
+  margin: 0 1px;
+  transform: translateY(-1px);
+}
+
 th,
 td {
   border: 1px solid var(--sl-color-gray-5) !important;
   padding: 0.25rem 0.5rem !important;
+}
+
+table.punc th,
+table.punc td {
+  vertical-align: middle;
+}
+
+table.punc th:nth-child(3),
+table.punc td:nth-child(3) {
+  text-align: center;
 }
 
 /* ── Sidebar toggle ── */

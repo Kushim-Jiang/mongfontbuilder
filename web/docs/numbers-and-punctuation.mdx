@@ -1,0 +1,452 @@
+---
+title: Numbers and Punctuation
+---
+
+import Punc from "../lib/Punc.astro";
+
+Numbers and punctuation do not take part in the shaping of letters, so they are treated here, apart from the letters of each writing system. Their specifications are not yet complete; the notes below are a preliminary investigation, and the specifications will be added in subsequent versions.
+
+### Numerals
+
+Ten Mongolian digits are encoded in the Mongolian block, U+1810–U+1819, named MONGOLIAN DIGIT ZERO through MONGOLIAN DIGIT NINE:
+
+| Value | Code point | Name                  |
+| ----- | ---------- | --------------------- |
+| 0     | U+1810     | MONGOLIAN DIGIT ZERO  |
+| 1     | U+1811     | MONGOLIAN DIGIT ONE   |
+| 2     | U+1812     | MONGOLIAN DIGIT TWO   |
+| 3     | U+1813     | MONGOLIAN DIGIT THREE |
+| 4     | U+1814     | MONGOLIAN DIGIT FOUR  |
+| 5     | U+1815     | MONGOLIAN DIGIT FIVE  |
+| 6     | U+1816     | MONGOLIAN DIGIT SIX   |
+| 7     | U+1817     | MONGOLIAN DIGIT SEVEN |
+| 8     | U+1818     | MONGOLIAN DIGIT EIGHT |
+| 9     | U+1819     | MONGOLIAN DIGIT NINE  |
+
+In the Unicode Character Database the digits are decimal digits (general category `Nd`) of the Mongolian script, and they are the digits used by Hudum and Todo. They derive from the Tibetan digits U+0F20–U+0F29, whose glyphs the vertical script has turned for its own orientation. Manchu and Sibe use no script-specific digits: European digits will be used in Sibe books. See [Section 13.5, “Mongolian”](https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-13/#G27803) and the [code chart for the Mongolian block](https://www.unicode.org/charts/PDF/U1800.pdf).
+
+Mongolian digits from zero to nine are not used in modern China: Mongolian (Hudum) text printed in China today writes numbers with European digits, and the Mongolian digits appear in the older literature. The Hudum and Todo literatures use these digits; they also appear a bit different between Hudum and Todo, but they are still in one system (the same ten code points).
+
+The Mongolian digits are employed in modern Mongolia. They appear on Mongolian banknotes.
+
+The Mongolian digits behave identically to European digits: they are decimal digits with the same numeric values, and they are sorted and processed by those values; only their shapes differ. In vertical text, they are set in either of the two ways that are common for the European digits. In the rotated layout, the digits are rotated, clockwise by 90° as the European digits are in vertical text, so that each digit runs in the direction of the column. In the upright layout, the digits are not rotated, and the digits of a whole number are set from left to right across the column rather than from top to bottom; such a horizontal run set upright within a vertical line is called “horizontal in vertical.” In horizontal text, the digits are simply upright.
+
+### Punctuation
+
+<table class="punc">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code point</th>
+      <th>Written form</th>
+      <th>Hudum with Ali Gali</th>
+      <th>Todo with Ali Gali</th>
+      <th>Sibe</th>
+      <th>Manchu with Ali Gali</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MONGOLIAN BIRGA</td>
+      <Punc name="Birga" />
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN BIRGA WITH ORNAMENT</td>
+      <Punc name="Birga1a" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN BIRGA WITH DOUBLE ORNAMENT</td>
+      <Punc name="Birga1b" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN DOUBLE BIRGA WITH ORNAMENT</td>
+      <Punc name="Birga1c" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN TRIPLE BIRGA WITH ORNAMENT</td>
+      <Punc name="Birga1d" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN ROTATED BIRGA</td>
+      <Punc name="Birga2a" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN ROTATED BIRGA WITH ORNAMENT</td>
+      <Punc name="Birga2b" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN ROTATED BIRGA WITH DOUBLE ORNAMENT</td>
+      <Punc name="Birga2c" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN INVERTED BIRGA</td>
+      <Punc name="Birga3a" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN INVERTED BIRGA WITH DOUBLE ORNAMENT</td>
+      <Punc name="Birga3b" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN SWIRL BIRGA</td>
+      <Punc name="Birga4a" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN SWIRL BIRGA WITH ORNAMENT</td>
+      <Punc name="Birga4b" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN SWIRL BIRGA WITH DOUBLE ORNAMENT</td>
+      <Punc name="Birga4c" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN TURNED SWIRL BIRGA WITH DOUBLE ORNAMENT</td>
+      <Punc name="Birga4d" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN ELLIPSIS</td>
+      <Punc name="Hudumellipsis" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN COMMA</td>
+      <Punc name="Hudumcomma" />
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN FULL STOP</td>
+      <Punc name="Hudumfullstop" />
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN COLON</td>
+      <Punc name="Hudumcolon" />
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN FOUR DOTS</td>
+      <Punc name="Hudumfourdots" />
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN TODO SOFT HYPHEN</td>
+      <Punc name="Todolinefiller" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN MANCHU COMMA</td>
+      <Punc name="Manchucomma" />
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>✔</td>
+    </tr>
+    <tr>
+      <td>MONGOLIAN MANCHU FULL STOP</td>
+      <Punc name="Manchufullstop" />
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>✔</td>
+    </tr>
+    <tr>
+      <td>MIDDLE DOT</td>
+      <Punc name="Chinamiddledot" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>QUESTION EXCLAMATION MARK</td>
+      <Punc name="Chinaquestionexclamation" />
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>EXCLAMATION QUESTION MARK</td>
+      <Punc name="Chinaexclamationquestion" />
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>FULLWIDTH SEMICOLON</td>
+      <Punc name="Chinasemicolon" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>FULLWIDTH EXCLAMATION MARK</td>
+      <Punc name="Chinaexclamation" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>FULLWIDTH QUESTION MARK</td>
+      <Punc name="Chinaquestion" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>EM DASH</td>
+      <Punc name="Chinaemdash" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>HORIZONTAL ELLIPSIS</td>
+      <Punc name="Chinaellipsis" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>FULLWIDTH COMMA</td>
+      <Punc name="Chinacomma" />
+      <td></td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IDEOGRAPHIC COMMA</td>
+      <Punc name="Chinacomma2" />
+      <td></td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IDEOGRAPHIC FULL STOP</td>
+      <Punc name="Chinafullstop" />
+      <td></td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>FULLWIDTH COLON</td>
+      <Punc name="Chinacolon" />
+      <td></td>
+      <td></td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LEFT SINGLE QUOTATION MARK</td>
+      <Punc name="Chinaquotationleftsingle" />
+      <td></td>
+      <td></td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RIGHT SINGLE QUOTATION MARK</td>
+      <Punc name="Chinaquotationrightsingle" />
+      <td></td>
+      <td></td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LEFT DOUBLE QUOTATION MARK</td>
+      <Punc name="Chinaquotationleftdouble" />
+      <td></td>
+      <td></td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RIGHT DOUBLE QUOTATION MARK</td>
+      <Punc name="Chinaquotationrightdouble" />
+      <td></td>
+      <td></td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>FULLWIDTH LEFT PARENTHESIS</td>
+      <Punc name="Chinabraketleftround" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>FULLWIDTH RIGHT PARENTHESIS</td>
+      <Punc name="Chinabraketrightround" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LEFT DOUBLE ANGLE BRACKET</td>
+      <Punc name="Chinabracketleftdoubleangle" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RIGHT DOUBLE ANGLE BRACKET</td>
+      <Punc name="Chinabracketrightdoubleangle" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LEFT ANGLE BRACKET</td>
+      <Punc name="Chinabracketleftangle" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RIGHT ANGLE BRACKET</td>
+      <Punc name="Chinabracketrightangle" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>FULLWIDTH LEFT SQUARE BRACKET</td>
+      <Punc name="Chinabracketleftsquare" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>FULLWIDTH RIGHT SQUARE BRACKET</td>
+      <Punc name="Chinabracketrightsquare" />
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LEFT CORNER BRACKET</td>
+      <Punc name="Chinabracketleftcorner" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RIGHT CORNER BRACKET</td>
+      <Punc name="Chinabracketrightcorner" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>LEFT WHITE CORNER BRACKET</td>
+      <Punc name="Chinabracketleftwhitecorner" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RIGHT WHITE CORNER BRACKET</td>
+      <Punc name="Chinabracketrightwhitecorner" />
+      <td></td>
+      <td>✔</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+Note that many punctuation marks are visually set with a space on both sides, but the space before a mark is not an actual space character: if one were typed before the mark, a line could break there and move the mark to the beginning of the following line, and a line must not begin with a punctuation mark. The space on the left is therefore built into the design of the glyph, so that the left side of the mark already carries the room of a space. The space after a mark, by contrast, is a real space character that still has to be typed; in the table above, such marks are annotated with `(U+0020)` after their code point.

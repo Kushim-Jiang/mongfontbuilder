@@ -17,6 +17,7 @@ export default defineConfig({
         "index",
         "introduction",
         "architecture",
+        "toolchain",
         {
           label: "Writing systems",
           items: [
@@ -27,6 +28,7 @@ export default defineConfig({
             "hudum-ali-gali",
             "todo-ali-gali",
             "manchu-ali-gali",
+            "numbers-and-punctuation",
           ],
         },
         "comparison",
