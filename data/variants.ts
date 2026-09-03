@@ -1172,6 +1172,7 @@ export const variants: Record<
         written: ["N2"],
         locales: {
           TOD: {
+            conditions: ["particle"],
             gb: "0016 todo letter na second initial form",
           },
         },
@@ -4241,7 +4242,7 @@ export const variants: Record<
         written: ["O"],
         locales: {
           TOD: {
-            conditions: ["devsger"],
+            conditions: ["vowel_devsger"],
             gb: "000C todo letter u third medial form",
             eac: "TUZ3",
           },
@@ -4799,12 +4800,12 @@ export const variants: Record<
         written: ["Hp"],
         locales: {
           TOD: {
-            conditions: ["devsger"],
+            conditions: ["masculine_devsger"],
             gb: "0054 todo letter ga second medial form",
             eac: "TGAZ2",
           },
           TODx: {
-            conditions: ["devsger"],
+            conditions: ["masculine_devsger"],
             gb: "0054 todo letter ga second medial form",
           },
         },

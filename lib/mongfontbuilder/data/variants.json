@@ -1421,6 +1421,9 @@
         ],
         "locales": {
           "TOD": {
+            "conditions": [
+              "particle"
+            ],
             "gb": "0016 todo letter na second initial form"
           }
         }
@@ -5047,7 +5050,7 @@
         "locales": {
           "TOD": {
             "conditions": [
-              "devsger"
+              "vowel_devsger"
             ],
             "gb": "000C todo letter u third medial form",
             "eac": "TUZ3"
@@ -5738,14 +5741,14 @@
         "locales": {
           "TOD": {
             "conditions": [
-              "devsger"
+              "masculine_devsger"
             ],
             "gb": "0054 todo letter ga second medial form",
             "eac": "TGAZ2"
           },
           "TODx": {
             "conditions": [
-              "devsger"
+              "masculine_devsger"
             ],
             "gb": "0054 todo letter ga second medial form"
           }

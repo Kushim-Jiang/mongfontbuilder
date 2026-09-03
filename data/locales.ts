@@ -119,6 +119,7 @@ export const locales = {
       "masculine_devsger",
       "feminine",
       "vowel_devsger",
+      "particle",
       "post_bowed",
     ] as const,
     categories: {
@@ -164,6 +165,7 @@ export const locales = {
       "feminine",
       "masculine_onset",
       "onset",
+      "masculine_devsger",
       "post_bowed",
     ] as const,
     categories: {

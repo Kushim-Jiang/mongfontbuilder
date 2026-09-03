@@ -2,9 +2,33 @@
 title: Modifications
 ---
 
+import MNG from "../lib/tags/MNG.svelte";
 import TOD from "../lib/tags/TOD.svelte";
 
 The following summarizes modifications from the previous version of this document.
+
+**5**
+
+- Polish the wording of the document throughout.
+- Add an introduction to the history of the encoding, and a phonemic analysis of the written languages.
+- Remove the transliterations of single-letter written units and phonetic letters. Add _bowed written unit_ in all the letter class tables. Rename the “Lookups” to “Mapping type” in all the Mongolian-specific phase tables.
+- Add an account of the Unicode Standard documents that cite this UTN, and of what their citations ask of this document.
+- Expand the former toolchain section into a full chapter, describing in detail how to use and maintain this repository.
+- Add a chapter on other letters, digits, and punctuation, which were previously not specified.
+- For Hudum,
+  - Remove the medial variant of <MNG links="Zr"/>, the word <MNG links="m o zr i k2 a n"/> should be <MNG links="m o hh i k2 a n"/>.
+  - Add a note for <MNG links="W"/> in letter <MNG links="ee"/> and <MNG links="w"/>.
+  - Update the shaping logic for <MNG links="n"/>, <MNG links="t"/> and <MNG links="d"/>.
+  - Remove the note for the shaping rules required by EAC. All the shaping rules are now required by GB 25914—2023.
+- For Todo,
+  - Remove the final variant of <TOD links="Ip"/> and the FVS1 final variant of <TOD links="i"/>, as it is the contextual variant in the ligature. Move the final variant of <TOD links="I"/> to the final variant of <TOD links="I3"/>. Move the final ligated variant of <TOD links="Ip"/> to the final ligated variant of <TOD links="I3"/>.
+  - Remove the final variant of <TOD links="N"/>, as it is unattested in Todo. Remove the final variant of <TOD links="Gp"/> (of <TOD links="gh"/>), as it is unattested in Todo. Remove the FVS1 medial variant and the FVS1 final variant of <TOD links="oe"/>, as they are unattested in Todo. Remove the final <TOD links="I3"/> of <TOD links="y"/> and the written unit <MNG links="Y" />, as they are unattested in Todo. Remove the medial <TOD links="O" /> and the final <TOD links="U" /> of <TOD links="w"/>, as they are unattested in Todo.
+  - Add the written unit <MNG links="Zz2"/> (of <MNG links="zr"/>), as it is required by the Chinese national standard.
+  - Assign FVS2 to the medial <TOD links="N2"/> of <TOD links="n"/>, and add the FVS2 isolated variant of <TOD links="n"/>. Also update the note for <TOD links="N2"/>.
+  - Remove the note for <TOD links="ny"/>, as it is found in Todo literature, although it is actually found in a Sanskrit word. Remove the corresponding reference.
+  - Treat the letter <TOD links="lvs"/> as a vowel instead of a consonant.
+  - Add the missing “2. Syllabic”.
+  - Rename the `devsger` in “4. Devsger” to `vowel_devsger`.
 
 **4**
 

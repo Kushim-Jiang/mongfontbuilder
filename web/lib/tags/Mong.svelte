@@ -27,9 +27,9 @@
 {#each items as item}
   <a href={`/${prefix}/#${item}`} style="font-style: {item[0] === item[0].toLowerCase() ? 'italic' : 'normal'}">{item}</a>
 {/each}{#if categoryItems.length > 0}
-  <p>
+  <span>
     {#each categoryItems as catItem, index}
       <a href={`/${prefix}/#${catItem}`} style="font-style: italic">{catItem}</a>{index < categoryItems.length - 1 ? ", " : ""}
     {/each}
-  </p>
+  </span>
 {/if}

@@ -1,29 +1,113 @@
 ---
-title: Numbers and Punctuation
+title: Other letters, digits and punctuation
 ---
 
 import Punc from "../lib/Punc.svelte";
+import TODx from "../lib/tags/TODx.svelte";
 
-Numbers and punctuation do not take part in the shaping of letters, so they are treated here, apart from the letters of each writing system. Their specifications are not yet complete; the notes below are a preliminary investigation, and the specifications will be added in subsequent versions.
+### Other letters
 
-### Numerals
+The letters and marks below lie outside the cursive letter inventories of the writing systems described on the preceding pages, but the font covers them nonetheless. In the figures, the letter or mark under discussion is shown in black; a neighbouring letter quoted in an example is shown in gray; and the _nirugu_ that stands for the cursive join is shown in blue.
 
-Ten Mongolian digits are encoded in the Mongolian block, U+1810–U+1819, named MONGOLIAN DIGIT ZERO through MONGOLIAN DIGIT NINE:
+**MONGOLIAN LETTER CHA WITH TWO DOTS (U+1878)**. This letter is used in Buryat Mongolian, and was proposed for encoding by Andrew West, Amgalan Zhamsoev and Viacheslav Zaytsev in [WG2 N4781](https://www.unicode.org/L2/L2017/17007-n4781-mongolian.pdf) and was added to the Unicode Standard version 14.0. Only its medial form is attested in the historical Buryat sources; the initial and final forms are not attested, but were also proposed for fabricated glyphs.
 
-| Value | Code point | Name                  |
-| ----- | ---------- | --------------------- |
-| 0     | U+1810     | MONGOLIAN DIGIT ZERO  |
-| 1     | U+1811     | MONGOLIAN DIGIT ONE   |
-| 2     | U+1812     | MONGOLIAN DIGIT TWO   |
-| 3     | U+1813     | MONGOLIAN DIGIT THREE |
-| 4     | U+1814     | MONGOLIAN DIGIT FOUR  |
-| 5     | U+1815     | MONGOLIAN DIGIT FIVE  |
-| 6     | U+1816     | MONGOLIAN DIGIT SIX   |
-| 7     | U+1817     | MONGOLIAN DIGIT SEVEN |
-| 8     | U+1818     | MONGOLIAN DIGIT EIGHT |
-| 9     | U+1819     | MONGOLIAN DIGIT NINE  |
+<table>
+  <thead>
+    <tr>
+      <th>isol</th>
+      <th>init</th>
+      <th>medi</th>
+      <th>fina</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color:whitesmoke;width:100px;">→ initial</td>
+      <td style="background-color:whitesmoke;width:100px;">
+        <span class="wu"></span>
+        <span class="wu wu-context"></span>
+      </td>
+      <td style="width:100px;">
+        <span class="wu wu-context"></span>
+        <span class="wu"></span>
+        <span class="wu wu-context"></span>
+      </td>
+      <td style="background-color:whitesmoke;width:100px;">
+        <span class="wu wu-context"></span>
+        <span class="wu"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-In the Unicode Character Database the digits are decimal digits (general category `Nd`) of the Mongolian script, and they are the digits used by Hudum and Todo. They derive from the Tibetan digits U+0F20–U+0F29, whose glyphs the vertical script has turned for its own orientation. Manchu and Sibe use no script-specific digits: European digits will be used in Sibe books. See [Section 13.5, “Mongolian”](https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-13/#G27803) and the [code chart for the Mongolian block](https://www.unicode.org/charts/PDF/U1800.pdf).
+**MONGOLIAN LETTER TODO ALI GALI TA (U+1898)**. This letter is not used in any writing system. It may have been coined by Quejingzhabu. It is conjectured that in one scheme the Todo Ali Gali letter _ta_ was analyzed as <TODx links="Dp" />, but the letter _da_ is also shown as <TODx links="Dp" />, so the creator added a distinguishing stroke to produce the letter for _da_. All of its glyphs are fabricated.
+
+<table>
+  <thead>
+    <tr>
+      <th>isol</th>
+      <th>init</th>
+      <th>medi</th>
+      <th>fina</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color:whitesmoke;width:100px;">→ initial</td>
+      <td style="background-color:whitesmoke;width:100px;">
+        <span class="wu">&#xE143;</span>
+        <span class="wu wu-context">&#xE000;</span>
+      </td>
+      <td style="background-color:whitesmoke;width:100px;">
+        <span class="wu wu-context">&#xE000;</span>
+        <span class="wu">&#xE144;</span>
+        <span class="wu wu-context">&#xE000;</span>
+      </td>
+      <td style="background-color:whitesmoke;width:100px;">→ medial</td>
+    </tr>
+  </tbody>
+</table>
+
+This letter belongs to the Todo Ali Gali letters, which supplement the Todo alphabet for transliterating Sanskrit and Tibetan,
+
+**MONGOLIAN LETTER ALI GALI BALUDA (U+1885) and MONGOLIAN LETTER ALI GALI THREE BALUDA (U+1886)**. U+1885 is used in the Hudum Ali Gali and Manchu Ali Gali writing to mark prodelision — the elision of a word-initial vowel — and attested in the _Tongwen Yuntong_. It derives from U+0F85 TIBETAN MARK PALUTA and corresponds to U+093D DEVANAGARI SIGN AVAGRAHA. U+1886 is equivalent to three U+1885 marks in a row, just as three Tibetan U+0F85 TIBETAN MARK PALUTA or three Devanagari U+093D DEVANAGARI SIGN AVAGRAHA would be written together.
+
+| BALUDA                                                                                                             | THREE BALUDA                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| <span class="wu lig-gray">&#xE212;</span><span class="wu">&#xE145;</span><span class="wu lig-gray">&#xE205;</span> | <span class="wu lig-gray">&#xE212;</span><span class="wu">&#xE146;</span><span class="wu lig-gray">&#xE205;</span> |
+| U+1889, **U+1885**, U+1826                                                                                         | U+1889, **U+1886**, U+1826                                                                                         |
+
+**MONGOLIAN LETTER ALI GALI ANUSVARA ONE (U+1880)**. This letter marks the anusvara. Its plain form is based on U+0F83 TIBETAN SIGN SNA LDAN and its FVS1 form on U+0F7E TIBETAN SIGN RJES SU NGA RO; c.f. U+0901 DEVANAGARI SIGN CANDRABINDU and U+0902 DEVANAGARI SIGN ANUSVARA.
+
+| isol                             | isol with FVS1                   |
+| -------------------------------- | -------------------------------- |
+| <span class="wu">&#xE148;</span> | <span class="wu">&#xE149;</span> |
+| U+1880                           | U+1880, U+180B                   |
+
+**MONGOLIAN LETTER ALI GALI VISARGA ONE (U+1881)**. This letter marks the visarga. Its plain form is based on U+0F7F TIBETAN SIGN RNAM BCAD; c.f. U+0903 DEVANAGARI SIGN VISARGA.
+
+| isol                             | isol with FVS1                   |
+| -------------------------------- | -------------------------------- |
+| <span class="wu">&#xE14A;</span> | <span class="wu">&#xE14B;</span> |
+| U+1881                           | U+1881, U+180B                   |
+
+**MONGOLIAN LETTER ALI GALI DAMARU (U+1882), UBADAMA (U+1883), and INVERTED UBADAMA (U+1884)**. These letters are used to transliterate the Vedic Sanskrit sounds _jihvāmūlīya_ and _upadhmānīya_. DAMARU is based on U+0F88 TIBETAN SIGN LCE TSA CAN and corresponds to U+1CF5 VEDIC SIGN JIHVAMULIYA; UBADAMA and INVERTED UBADAMA are based on U+0F8C TIBETAN SIGN INVERTED MCHU CAN and U+0F89 TIBETAN SIGN MCHU CAN respectively and correspond to U+1CF6 VEDIC SIGN UPADHMANIYA.
+
+| DAMARU (isol)                    | UBADAMA (isol)                   | INVERTED UBADAMA (isol)          |
+| -------------------------------- | -------------------------------- | -------------------------------- |
+| <span class="wu">&#xE14C;</span> | <span class="wu">&#xE14D;</span> | <span class="wu">&#xE14E;</span> |
+| U+1882                           | U+1883                           | U+1884                           |
+
+**MONGOLIAN LETTER ALI GALI DAGALGA (U+18A9)**. This letter is used in the Hudum Ali Gali to mark the _dagalga_ — a syllable-final consonant cluster. It derives from U+0F84 TIBETAN MARK HALANTA and corresponds to U+094D DEVANAGARI SIGN VIRAMA. It is used in combination with the preceding letter to indicate that the following vowel is not pronounced.
+
+| DAGALGA                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------ |
+| <span class="wu lig-gray">&#xE24D;</span><span class="wu">&#xE147;</span><span class="wu lig-gray">&#xE201;</span> |
+| U+1892, **U+18A9**, U+1820                                                                                         |
+
+### Digits
+
+Ten Mongolian digits are encoded in the Mongolian block, U+1810–U+1819, named MONGOLIAN DIGIT ZERO through MONGOLIAN DIGIT NINE. In the Unicode Character Database they are decimal digits (general category `Nd`) of the Mongolian script, and they are the digits used by Hudum and Todo. They derive from the Tibetan digits U+0F20–U+0F29, whose glyphs the vertical script has turned for its own orientation. Manchu and Sibe use no script-specific digits: European digits will be used in Sibe books. See [Section 13.5, “Mongolian”](https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-13/#G27803) and the [code chart for the Mongolian block](https://www.unicode.org/charts/PDF/U1800.pdf).
 
 Mongolian digits from zero to nine are not used in modern China: Mongolian (Hudum) text printed in China today writes numbers with European digits, and the Mongolian digits appear in the older literature. The Hudum and Todo literatures use these digits; they also appear a bit different between Hudum and Todo, but they are still in one system (the same ten code points).
 
@@ -49,7 +133,7 @@ The Mongolian digits behave identically to European digits: they are decimal dig
     <tr>
       <td>MONGOLIAN BIRGA</td>
       <Punc name="Birga" />
-      <td>✔</td>
+      <td></td>
       <td>✔</td>
       <td></td>
       <td></td>
@@ -57,7 +141,7 @@ The Mongolian digits behave identically to European digits: they are decimal dig
     <tr>
       <td>MONGOLIAN BIRGA WITH ORNAMENT</td>
       <Punc name="Birga1a" />
-      <td></td>
+      <td>✔</td>
       <td>✔</td>
       <td></td>
       <td></td>
@@ -105,7 +189,7 @@ The Mongolian digits behave identically to European digits: they are decimal dig
     <tr>
       <td>MONGOLIAN ROTATED BIRGA WITH DOUBLE ORNAMENT</td>
       <Punc name="Birga2c" />
-      <td></td>
+      <td>✔</td>
       <td>✔</td>
       <td></td>
       <td></td>

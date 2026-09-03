@@ -136,6 +136,7 @@
       "masculine_devsger",
       "feminine",
       "vowel_devsger",
+      "particle",
       "post_bowed"
     ],
     "categories": {
@@ -205,6 +206,7 @@
       "feminine",
       "masculine_onset",
       "onset",
+      "masculine_devsger",
       "post_bowed"
     ],
     "categories": {
