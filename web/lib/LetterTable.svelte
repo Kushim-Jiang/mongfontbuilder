@@ -78,7 +78,7 @@
       {@const hex = hexFromCP(codePoint)}
       {@const char = String.fromCodePoint(codePoint)}
       {@const aliasData = aliases[charName]}
-      {@const alias = (typeof aliasData === "object" ? aliasData[localeNamespace] : aliasData) ?? charName}
+      {@const alias = (typeof aliasData === "object" ? aliasData[localeNamespace] : aliasData) ?? ""}
       {@const rowspan = new Set([...positionToFVSToLocalizedVariant.values()].flatMap((m) => [...m.keys()])).size}
       <tr>
         <td id={alias} {rowspan} title="U+{hex} {char} {charName}">{hex}<br />{char} <i>{alias}</i></td>
