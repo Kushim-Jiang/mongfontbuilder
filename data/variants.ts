@@ -6547,7 +6547,6 @@ export const variants: Record<
         written: ["Hh2"],
         locales: {
           MCHx: {
-            conditions: ["masculine_onset"],
             gb: "031B manchu letter ga third medial form",
           },
         },

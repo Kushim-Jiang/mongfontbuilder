@@ -50,15 +50,7 @@ c = MongFeaComposer(
 spec = c.compose()
 
 applySpecToFont(spec, font)
-fea = c.asFeatureFile().asFea()
-# Workaround: remove duplicate substitution in MCHx masculine_onset
-lines = fea.split("\n")
-lines = [
-    line
-    for i, line in enumerate(lines)
-    if not (i == 626 and "sub @MCHx-g.medi by u1864.Hh2.medi" in line)
-]
-font.features.text = "\n".join(lines)
+font.features.text = c.asFeatureFile().asFea()
 
 output.parent.mkdir(parents=True, exist_ok=True)
 
