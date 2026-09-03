@@ -1,3 +1,48 @@
 <script is:inline>
   document.documentElement.dataset.theme = "light";
 </script>
+
+<script is:inline>
+  // Prevent Private Use Area characters (font-internal glyph shapes, e.g.
+  // the U+E000-U+F8FF codepoints used by the written-unit tables) from being
+  // copied out of the page. They only render via this site's webfont and are
+  // meaningless anywhere else, so strip them from whatever the user copies.
+  // Real characters (letters, FVS, MVS, prose) are unaffected.
+  function isPuaCodePoint(cp) {
+    return (cp >= 0xe000 && cp <= 0xf8ff) || (cp >= 0xf0000 && cp <= 0xffffd) || (cp >= 0x100000 && cp <= 0x10fffd);
+  }
+  function stripPua(text) {
+    let out = "";
+    for (const ch of text) {
+      if (!isPuaCodePoint(ch.codePointAt(0))) out += ch;
+    }
+    return out;
+  }
+  function hasPua(text) {
+    for (const ch of text) {
+      if (isPuaCodePoint(ch.codePointAt(0))) return true;
+    }
+    return false;
+  }
+  function scrubPuaFromCopy(event) {
+    const text = window.getSelection()?.toString() ?? "";
+    if (!hasPua(text)) return;
+    event.preventDefault();
+    event.clipboardData?.setData("text/plain", stripPua(text));
+  }
+  // Dragging selected text (e.g. into another app or a text field) is another
+  // way to move text out of the page. Same rule: drop the PUA glyphs from the
+  // payload but keep the drag working for the surrounding real text.
+  function scrubPuaFromDrag(event) {
+    const text = window.getSelection()?.toString() ?? "";
+    if (!hasPua(text)) return;
+    const dataTransfer = event.dataTransfer;
+    if (!dataTransfer) return;
+    const clean = stripPua(text);
+    dataTransfer.setData("text/plain", clean);
+    dataTransfer.setData("text/html", clean);
+  }
+  document.addEventListener("copy", scrubPuaFromCopy, true);
+  document.addEventListener("cut", scrubPuaFromCopy, true);
+  document.addEventListener("dragstart", scrubPuaFromDrag, true);
+</script>
