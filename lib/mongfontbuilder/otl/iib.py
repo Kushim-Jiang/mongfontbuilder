@@ -23,7 +23,7 @@ def iib1(c: MongFeaComposer) -> None:
     Ligatures.
     """
 
-    with c.Lookup(f"IIb.ligature", feature="rclt"):
+    with c.Lookup("IIb.ligature", feature="rclt"):
         inputToLigatureAndRequired = dict[
             tuple[GlyphDescriptor, ...], tuple[GlyphDescriptor, bool]
         ]()

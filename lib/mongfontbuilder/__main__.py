@@ -54,7 +54,9 @@ fea = c.asFeatureFile().asFea()
 # Workaround: remove duplicate substitution in MCHx masculine_onset
 lines = fea.split("\n")
 lines = [
-    l for i, l in enumerate(lines) if not (i == 626 and "sub @MCHx-g.medi by u1864.Hh2.medi" in l)
+    line
+    for i, line in enumerate(lines)
+    if not (i == 626 and "sub @MCHx-g.medi by u1864.Hh2.medi" in line)
 ]
 font.features.text = "\n".join(lines)
 

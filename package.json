@@ -59,6 +59,7 @@
     "@astrojs/starlight": "^0.42.0",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "astro": "^7.2.10",
+    "svelte-check": "^4.7.6",
     "typescript": "6.0.3"
   }
 }

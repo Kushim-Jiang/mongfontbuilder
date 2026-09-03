@@ -8,7 +8,7 @@ import { joiningPositions } from "../../data/misc";
 import { locales } from "../../data/locales";
 import { aliases } from "../../data/aliases";
 import { variants } from "../../data/variants";
-import { writtenUnits, controls } from "../../data/writtenUnits";
+import { writtenUnits } from "../../data/writtenUnits";
 
 export const nameToCP = new Map(
   [...Names].filter(([_, v]) => !v.startsWith("<")).map(([k, v]) => [v, k]),

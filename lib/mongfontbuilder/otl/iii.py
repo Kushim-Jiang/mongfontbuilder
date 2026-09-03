@@ -513,6 +513,7 @@ def iii2d(c: MongFeaComposer) -> None:
             # Gx
             for locale in ["MCH", "MCHx"]:
                 if locale in c.locales:
+                    euLetters = c.variants(locale, ["e", "u"])
                     c.sub(
                         c.classes[f"{locale}-k.init"],
                         c.classes["fvs2"],
@@ -617,9 +618,9 @@ def iii2f(c: MongFeaComposer) -> None:
     """
 
     if {"MNG", "TOD", "SIB", "MCH"}.intersection(c.locales):
-        gLike = lambda locale: c.variants(
-            locale, ["h", "g"] if locale in ["MNG", "TOD"] else ["k", "g", "h"]
-        )
+
+        def makeGLike(locale):
+            return c.variants(locale, ["h", "g"] if locale in ["MNG", "TOD"] else ["k", "g", "h"])
 
         with c.Lookup(
             "III.k_g_h.onset_and_devsger_and_gender.MNG_TOD_SIB_MCH",
@@ -628,7 +629,7 @@ def iii2f(c: MongFeaComposer) -> None:
         ):
             if "MNG" in c.locales:
                 c.sub(
-                    c.input(gLike("MNG")),
+                    c.input(makeGLike("MNG")),
                     c.classes["mvs"],
                     c.variants("MNG", ["a", "e"], isol),
                     by=None,
@@ -636,7 +637,7 @@ def iii2f(c: MongFeaComposer) -> None:
             for locale in ["MNG", "TOD", "SIB", "MCH"]:
                 if locale in c.locales:
                     c.sub(
-                        c.input(gLike(locale), c.conditions[f"{locale}:masculine_onset"]),
+                        c.input(makeGLike(locale), c.conditions[f"{locale}:masculine_onset"]),
                         c.classes[f"{locale}-vowelMasculine"],
                         by=None,
                     )
@@ -644,7 +645,7 @@ def iii2f(c: MongFeaComposer) -> None:
             for locale in ["MNG", "TOD", "SIB", "MCH"]:
                 if locale in c.locales:
                     c.sub(
-                        c.input(gLike(locale), c.conditions[f"{locale}:feminine"]),
+                        c.input(makeGLike(locale), c.conditions[f"{locale}:feminine"]),
                         c.glyphClass(
                             [
                                 c.classes[f"{locale}-vowelFeminine"],
@@ -657,12 +658,12 @@ def iii2f(c: MongFeaComposer) -> None:
             if "MNG" in c.locales:
                 c.sub(
                     c.classes["MNG-vowelMasculine"],
-                    c.input(gLike("MNG"), c.conditions["MNG:masculine_devsger"]),
+                    c.input(makeGLike("MNG"), c.conditions["MNG:masculine_devsger"]),
                     by=None,
                 )
                 c.sub(
                     c.classes["MNG-vowelFeminine"],
-                    c.input(gLike("MNG"), c.conditions["MNG:feminine"]),
+                    c.input(makeGLike("MNG"), c.conditions["MNG:feminine"]),
                     by=None,
                 )
             if "TOD" in c.locales:

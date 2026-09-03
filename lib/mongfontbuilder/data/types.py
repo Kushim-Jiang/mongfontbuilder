@@ -31,7 +31,12 @@ class VariantReference(NamedTuple):
 
 
 Written = list[WrittenUnitID] | VariantReference
-_structureWritten = lambda x, _: VariantReference(*x) if x[0] in joiningPositions else x
+
+
+def _structureWritten(x, _):
+    return VariantReference(*x) if x[0] in joiningPositions else x
+
+
 register_structure_hook(Written, _structureWritten)
 register_structure_hook(Written | None, lambda x, _: _structureWritten(x, None) if x else None)
 

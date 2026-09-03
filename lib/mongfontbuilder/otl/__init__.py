@@ -76,7 +76,7 @@ class MongFeaComposer(FeaComposer):
         for name in self.glyphs:
             try:
                 source = GlyphDescriptor.parse(name)
-            except:
+            except (AssertionError, ValueError):
                 continue
             sources.append(source)
 
@@ -321,7 +321,7 @@ class MongFeaComposer(FeaComposer):
                 self.conditions[lookup.name] = lookup
 
         if "MNG" in self.locales:
-            with self.Lookup(f"MNG:reset") as lookup:
+            with self.Lookup("MNG:reset") as lookup:
                 for position in joiningPositions:
                     for alias in getAliasesByLocale("MNG"):
                         charName = getCharNameByAlias("MNG", alias)
@@ -381,7 +381,9 @@ class MongFeaComposer(FeaComposer):
             )
         else:
             writtens = [writtens] if isinstance(writtens, str) else list(writtens)
-            filter = lambda _: True
+
+            def filter(units: list[str], /) -> bool:
+                return True
 
         glyphs = []
         for alias in aliases:

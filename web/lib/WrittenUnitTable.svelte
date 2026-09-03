@@ -249,15 +249,10 @@
   td.variant {
     vertical-align: top;
   }
-  td.variant span {
-    line-height: 1;
-  }
   td.lig {
     vertical-align: middle;
     font-size: 40px;
     line-height: 1;
-  }
-  td.lig .wu {
   }
   .lig-blue {
     color: hsl(210 80% 58% / 0.55);
@@ -267,9 +262,6 @@
   }
   td:target {
     background-color: yellow;
-  }
-  td a {
-    text-decoration: none;
   }
   td:first-child {
     width: 2rem;
