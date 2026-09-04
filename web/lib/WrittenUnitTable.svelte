@@ -193,7 +193,6 @@
     }
     return map;
   });
-  const useWp = $derived(unitToPositionToLetters.get("Wp" as WrittenUnitID)?.has("medi"));
 </script>
 
 <table>
@@ -220,7 +219,7 @@
             </td>
           {/each}
           {#each ["init", "medi", "fina"] as lp}
-            {@const col = lig?.[lp as "init" | "medi" | "fina"]?.filter((r) => (r.kind !== "post_w" || useWp) && positionToLetters.has(lp as JoiningPosition))}
+            {@const col = lig?.[lp as "init" | "medi" | "fina"]?.filter((r) => (r.kind !== "post_w" || locale === "MNGx") && positionToLetters.has(lp as JoiningPosition))}
             <td class={{ lig: true, undefined: !col?.length }}>
               {#if col}
                 {#each col as row, i}

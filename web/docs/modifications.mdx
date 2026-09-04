@@ -4,31 +4,73 @@ title: Modifications
 
 import MNG from "../lib/tags/MNG.svelte";
 import TOD from "../lib/tags/TOD.svelte";
+import SIB from "../lib/tags/SIB.svelte";
+import MCH from "../lib/tags/MCH.svelte";
+import MNGx from "../lib/tags/MNGx.svelte";
+import TODx from "../lib/tags/TODx.svelte";
+import MCHx from "../lib/tags/MCHx.svelte";
 
 The following summarizes modifications from the previous version of this document.
 
 **5**
 
-- Polish the wording of the document throughout.
-- Add an introduction to the history of the encoding, and a phonemic analysis of the written languages.
-- Remove the transliterations of single-letter written units and phonetic letters. Add _bowed written unit_ in all the letter class tables. Rename the “Lookups” to “Mapping type” in all the Mongolian-specific phase tables.
-- Add an account of the Unicode Standard documents that cite this UTN, and of what their citations ask of this document.
-- Expand the former toolchain section into a full chapter, describing in detail how to use and maintain this repository.
-- Add a chapter on other letters, digits, and punctuation, which were previously not specified.
+- Polish the wording throughout.
+- Add an introduction to the history of the encoding and a phonemic analysis of the written languages.
+- Rename the Ali Gali letters _·H_, _·M_, _·T_ to _·X_.
+- Remove the transliterations of single-letter written units and phonetic letters. Add _bowed written unit_ to all letter class tables. Rename “Lookups” to “Mapping type” in all Mongolian-specific phase tables. Update the onset and devsger logic for _n_, _t_, _d_; rename `devsger` in “4. Devsger” to `vowel_devsger`; and split `post_bowed`/`post_bowed_feminine` and `feminine`/`feminine_marked` to trigger distinct shaping rules per consonant class.
+- Account for the Unicode Standard documents that cite this UTN and what their citations ask of it.
+- Expand the toolchain section into a full chapter on using and maintaining this repository.
+- Add a chapter on other letters, digits, and punctuation.
 - For Hudum,
-  - Remove the medial variant of <MNG links="Zr"/>, the word <MNG links="m o zr i k2 a n"/> should be <MNG links="m o hh i k2 a n"/>.
-  - Add a note for <MNG links="W"/> in letter <MNG links="ee"/> and <MNG links="w"/>.
-  - Update the shaping logic for <MNG links="n"/>, <MNG links="t"/> and <MNG links="d"/>.
-  - Remove the note for the shaping rules required by EAC. All the shaping rules are now required by GB 25914—2023.
+  - Remove <MNG links="Zr.medi"/>; the word <MNG links="m o zr i k2 a n"/> becomes <MNG links="m o hh i k2 a n"/>.
+  - Note <MNG links="W"/> in letters <MNG links="ee"/> and <MNG links="w"/>.
+  - Remove the EAC note: shaping is now required by GB 25914—2023 alone.
 - For Todo,
-  - Remove the final variant of <TOD links="Ip"/> and the FVS1 final variant of <TOD links="i"/>, as it is the contextual variant in the ligature. Move the final variant of <TOD links="I"/> to the final variant of <TOD links="I3"/>. Move the final ligated variant of <TOD links="Ip"/> to the final ligated variant of <TOD links="I3"/>.
-  - Remove the final variant of <TOD links="N"/>, as it is unattested in Todo. Remove the final variant of <TOD links="Gp"/> (of <TOD links="gh"/>), as it is unattested in Todo. Remove the FVS1 medial variant and the FVS1 final variant of <TOD links="oe"/>, as they are unattested in Todo. Remove the final <TOD links="I3"/> of <TOD links="y"/> and the written unit <MNG links="Y" />, as they are unattested in Todo. Remove the medial <TOD links="O" /> and the final <TOD links="U" /> of <TOD links="w"/>, as they are unattested in Todo.
-  - Add the written unit <MNG links="Zz2"/> (of <MNG links="zr"/>), as it is required by the Chinese national standard.
-  - Assign FVS2 to the medial <TOD links="N2"/> of <TOD links="n"/>, and add the FVS2 isolated variant of <TOD links="n"/>. Also update the note for <TOD links="N2"/>.
-  - Remove the note for <TOD links="ny"/>, as it is found in Todo literature, although it is actually found in a Sanskrit word. Remove the corresponding reference.
-  - Treat the letter <TOD links="lvs"/> as a vowel instead of a consonant.
+  - Remove <TOD links="Ip.fina"/> and <TOD links="i.fina.1"/> (contextual in the ligature); move <TOD links="I.fina"/> to <TOD links="I3.fina"/>, likewise the final ligated variant of <TOD links="Ip"/> to <TOD links="I3"/>.
+  - Remove the unattested <TOD links="N.fina"/>, <TOD links="Gp.fina"/>, <TOD links="oe.medi.1"/>, <TOD links="oe.fina.1"/>, <TOD links="I3.fina"/>, the written unit <MNG links="Y" />, <TOD links="O.medi"/> and <TOD links="U.fina"/>.
+  - Add <MNG links="Zz2"/> (of <MNG links="zr"/>), as required by the Chinese national standard.
+  - Assign FVS2 to medial <TOD links="N2"/> of <TOD links="n"/> and add <TOD links="n.isol.2"/>; update the related note.
+  - Remove the note on <TOD links="ny"/> and its reference: the form is attested in Todo literature only inside a Sanskrit word.
+  - Treat <TOD links="lvs"/> as a vowel.
   - Add the missing “2. Syllabic”.
-  - Rename the `devsger` in “4. Devsger” to `vowel_devsger`.
+- For Sibe,
+  - Add <SIB links="Ni.medi"/> (in <SIB links="e" />).
+  - Remove the unattested <SIB links="G.fina"/>, written unit <SIB links="Gx" /> (of <SIB links="k"/>), <SIB links="Ch.fina"/>, <SIB links="Cc.fina"/> and <SIB links="W.fina"/> (of <SIB links="w"/>).
+  - Remove <SIB links="Zs.fina"/>, analyzed as <SIB links="Zs2.medi"/> followed by <SIB links="I.fina"/>; add <SIB links="Zs2"/> (of <SIB links="z"/>), moving the initial and medial ligated variants of <SIB links="Zs"/> to <SIB links="Zs2"/>; assign FVS1 to <SIB links="Zs2"/> and FVS2 to <SIB links="Zs"/> in <SIB links="z"/>; update the related note. The Sibe <SIB links="Zs"/> + <SIB links="I"/> ligature has no Manchu counterpart, so it is a distinct written unit rather than a system-specific ligature judgment.
+  - Shift <SIB links="i.medi.2"/>→<SIB links="i.medi.1"/> and <SIB links="i.medi.3"/>→<SIB links="i.medi.2"/>; move <SIB links="i.fina.3"/> to <SIB links="i.fina.0"/>; delete <SIB links="i.fina.1"/> (contextual in the ligature) and <SIB links="i.fina.2"/> (analyzed as <SIB links="sbm.medi.0"/> followed by <SIB links="i.fina.0"/>); remove the related note.
+  - Swap <SIB links="t.isol.0"/>↔<SIB links="t.isol.1"/>, <SIB links="t.init.1"/>↔<SIB links="t.init.2"/> and <SIB links="t.medi.1"/>↔<SIB links="t.medi.3"/>.
+  - Move the `marked` mapping of <SIB links="z"/> to <SIB links="i"/>; update the onset and devsger logic for <SIB links="k"/>, <SIB links="g"/>, <SIB links="h"/>.
+- For Manchu,
+  - Add <MCH links="Ni.medi"/> (in <MCH links="e" />).
+  - Use <MCH links="Hx2"/> (of <MCH links="k"/>) for <MCH links="Hx.fina"/>.
+  - Remove <MCH links="Zs.fina"/>, analyzed as <MCH links="Zs.medi"/> followed by <MCH links="Iy.fina"/>; remove the unattested <MCH links="Ch.fina"/>, <MCH links="Cc.fina"/>, <MCH links="J.fina"/>, <MCH links="Jc.fina"/> and <MCH links="W.fina"/>.
+  - Shift <MCH links="i.medi.2"/>→<MCH links="i.medi.1"/> and add <MCH links="i.medi.2"/>; move <MCH links="i.fina.2"/>→<MCH links="i.fina.1"/> and <MCH links="i.fina.3"/>→<MCH links="i.fina.2"/>; remove <MCH links="i.fina.1"/> (contextual in the ligature) and <MCH links="i.fina.4"/> (analyzed as <MCH links="sbm.medi.0"/> followed by <MCH links="i.fina.2"/>); remove the related note.
+  - Swap <MCH links="t.isol.0"/>↔<MCH links="t.isol.1"/>, <MCH links="t.init.1"/>↔<MCH links="t.init.2"/> and <MCH links="t.medi.1"/>↔<MCH links="t.medi.3"/>.
+- For Hudum Ali Gali,
+  - Move <MNGx links="A2.fina"/> into the final ligated variant of <MNGx links="A"/> (contextual in the ligature); remove the phonetic letter _aX_ and the related note.
+  - Remove the unattested <MNGx links="Pg.fina"/>, <MNGx links="Rh.fina"/> and <MNGx links="Wp.init"/>.
+  - Rename the letter _h_ to <MNGx links="hh"/>.
+  - Move <MNGx links="hX.medi.1"/> to <MNGx links="hh.medi.0"/>.
+  - Remove the mapping type `post_wa` (part of the ligature).
+- For Todo Ali Gali,
+  - Remove <TODx links="Hp.init"/>, which is actually <TODx links="N.init"/>.
+  - Rename the written unit Zc to <TODx links="Zz2"/> and the letter _jX_ to <TODx links="Zr"/>.
+  - Rename the letter _phX_ to <TODx links="p"/>.
+  - Remove <TODx links="Ip.fina"/> and <TODx links="i.fina.1"/> (contextual in the ligature).
+  - Move <TODx links="hh.medi.1"/> to <TODx links="hX.medi.0"/>.
+  - Treat <TODx links="lvs"/> as a vowel.
+  - Remove `post_bowed` for <TODx links="a"/> (now via FVS).
+- For Manchu Ali Gali,
+  - Rename the written units Al→<MCHx links="Aw"/> and Ds→<MCHx links="Dw"/>.
+  - Use <MCHx links="Hx2"/> (of <MCHx links="k"/>) for <MCHx links="Hx.fina"/>.
+  - Remove the unattested <MCHx links="Jq.fina"/>, <MCHx links="Jh.fina"/>, <MCHx links="Cc.fina"/>, <MCHx links="Sc.fina"/>, <MCHx links="St.fina"/>, <MCHx links="St2.fina"/> and <MCHx links="Sx.fina"/>.
+  - Add <MCHx links="Dt.init"/>.
+  - Remove the written unit Pb2 as an erroneous unit.
+  - Shift <MCHx links="i.medi.2"/>→<MCHx links="i.medi.1"/> and add <MCHx links="i.medi.2"/>; move <MCHx links="i.fina.2"/>→<MCHx links="i.fina.1"/> and <MCHx links="i.fina.3"/>→<MCHx links="i.fina.2"/>; remove <MCHx links="i.fina.1"/> and <MCHx links="i.fina.4"/>.
+  - Assign FVS2 to medial <MCHx links="Hy"/> of <MCHx links="ghX"/>.
+  - Swap <MCHx links="t.isol.0"/>↔<MCHx links="t.isol.1"/>, <MCHx links="t.init.1"/>↔<MCHx links="t.init.2"/> and <MCHx links="t.medi.1"/>↔<MCHx links="t.medi.3"/>.
+  - Add <MCHx links="Nx"/> for <MCHx links="n"/> and <MCHx links="Wd"/>, <MCHx links="Wc"/> for <MCHx links="bhX"/> (Transitional Manchu).
+  - Remove `devsger` for <MCHx links="s"/> (now via FVS).
 
 **4**
 

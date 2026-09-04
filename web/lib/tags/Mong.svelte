@@ -7,6 +7,7 @@
   let { locale, links = "", category = "" }: Props = $props();
 
   import { locales, type LocaleID } from "../../../data/locales";
+  import { writtenUnits } from "../../../data/writtenUnits";
 
   const localeToPrefix: Record<string, string> = {
     MNG: "hudum",
@@ -25,7 +26,15 @@
 </script>
 
 {#each items as item}
-  <a href={`/${prefix}/#${item}`} style="font-style: {item[0] === item[0].toLowerCase() ? 'italic' : 'normal'}">{item}</a>
+  {@const parts = item.split(".")}
+  {@const isPos = parts.length >= 2 && parts[1] !== ""}
+  {@const unit = isPos ? parts[0] : item}
+  {@const pos = isPos ? parts[1] : ""}
+  {@const fvs = isPos && parts.length >= 3 ? parts[2] : undefined}
+  {@const isUnit = unit in writtenUnits}
+  {@const href = !isPos ? `/${prefix}/#${item}` : fvs === undefined ? (isUnit ? `/${prefix}/#${unit}-${pos}` : `/${prefix}/#${unit}-${pos}-0`) : `/${prefix}/#${unit}-${pos}-${fvs}`}
+  {@const label = fvs === undefined ? item : fvs === "0" ? `${unit}.${pos} (default)` : `${unit}.${pos}.${fvs}`}
+  <a {href} style="font-style: {unit[0] === unit[0].toLowerCase() ? 'italic' : 'normal'}">{label}</a>
 {/each}{#if categoryItems.length > 0}
   <span>
     {#each categoryItems as catItem, index}

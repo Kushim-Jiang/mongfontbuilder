@@ -47,7 +47,7 @@ k-1	k a k ue r	H A H O I R2
 k-2	k a k s a h a	H A Hx S A Hc A
 k-3	u k e k	A Oh G A G4
 k-4	k e i f u	G A I I W Uh
-k-5	s u r u k	S Oh R Oh Hx
+k-5	s u r u k	S Oh R Oh Hx2
 
 g-1	g a n i o ng g a	Hh A N I O A G Hh A
 g-2	g e b g e	Gh A B Gh Aa
@@ -149,11 +149,11 @@ syllabic-k/g/h-3	g a space g e space g i	Hh A - Gh Aa - Gh I
 syllabic-k/g/h-4	g o space g u space g ue	Hh O - Gh O - Hh Ue
 syllabic-k/g/h-5	h a space h e space h i	Hc A - Gc Aa - Gc I
 syllabic-k/g/h-6	h o space h u space h ue	Hc O - Gc O - Hc Ue
-syllabic-k/g/h-7	t e k space d e k space n e k	Tb A Hx - Tt A G4 - N Ah G4
+syllabic-k/g/h-7	t e k space d e k space n e k	Tb A Hx2 - Tt A G4 - N Ah G4
 syllabic-k/g/h-8	k u k space g u k space h u k	G O G4 - Gh O G4 - Gc O G4
 syllabic-k/g/h-9	k e k space l e k space s e k	G A G4 - L Ah G4 - S Ah G4
 syllabic-k/g/h-10	s ue k space d ue k space ch ue k	S O I G4 - Tt O I G4 - Ch O I G4
-syllabic-k/g/h-11	s a k space s i k space s o k	S A Hx - S I Hx - S O Hx
+syllabic-k/g/h-11	s a k space s i k space s o k	S A Hx2 - S I Hx2 - S O Hx2
 
 particle-1	a n mvs i	A A A - I
 

@@ -3966,6 +3966,10 @@
             "eac": "MKM1"
           },
           "MNGx": {
+            "written": [
+              "medi",
+              0
+            ],
             "gb": "0035 mongolian letter ka final form"
           },
           "TODx": {
@@ -3998,6 +4002,15 @@
             ],
             "gb": "00D2 manchu letter kaa final form"
           }
+        }
+      },
+      "1": {
+        "written": [
+          "K2",
+          "Vi"
+        ],
+        "locales": {
+          "MNGx": {}
         }
       }
     }
@@ -4076,6 +4089,10 @@
             "eac": "XKM1"
           },
           "MNGx": {
+            "written": [
+              "medi",
+              0
+            ],
             "gb": "0036 mongolian letter kha final form"
           },
           "TODx": {
@@ -6984,6 +7001,7 @@
         "locales": {
           "SIB": {
             "conditions": [
+              "marked",
               "post_bowed"
             ],
             "gb": "0315 sibe letter e third final form",
@@ -6991,6 +7009,7 @@
           },
           "MCH": {
             "conditions": [
+              "marked",
               "post_bowed"
             ],
             "gb": "0315 manchu letter e third final form",
@@ -6998,6 +7017,7 @@
           },
           "MCHx": {
             "conditions": [
+              "marked",
               "post_bowed"
             ],
             "gb": "0315 manchu letter e third final form"
@@ -7012,12 +7032,14 @@
           "SIB": {
             "gb": "0009 sibe letter e fourth final form",
             "conditions": [
+              "feminine_marked",
               "post_bowed_feminine"
             ],
             "eac": "SEM4"
           },
           "MCH": {
             "conditions": [
+              "feminine_marked",
               "post_bowed_feminine"
             ],
             "gb": "0009 manchu letter e fourth final form",
@@ -7025,6 +7047,7 @@
           },
           "MCHx": {
             "conditions": [
+              "feminine_marked",
               "post_bowed_feminine"
             ],
             "gb": "0009 manchu letter e fourth final form"
@@ -8251,7 +8274,7 @@
       "0": {
         "written": [
           "init",
-          1
+          2
         ],
         "default": true,
         "locales": {
@@ -8271,7 +8294,7 @@
       "1": {
         "written": [
           "init",
-          2
+          1
         ],
         "locales": {
           "SIB": {
@@ -9727,7 +9750,7 @@
       },
       "3": {
         "written": [
-          "Hx"
+          "Hx2"
         ],
         "default": true,
         "locales": {
@@ -10614,10 +10637,6 @@
         "default": true,
         "locales": {
           "MNGx": {
-            "written": [
-              "medi",
-              0
-            ],
             "gb": "00EE mongolian ali gali letter nna final form // = 00EE mongolian ali gali letter nna medial form"
           },
           "TODx": {
@@ -11807,7 +11826,7 @@
     "init": {
       "0": {
         "written": [
-          "Sx"
+          "Sx2"
         ],
         "default": true,
         "locales": {
@@ -11820,7 +11839,7 @@
     "medi": {
       "0": {
         "written": [
-          "Sx"
+          "Sx2"
         ],
         "default": true,
         "locales": {
@@ -11833,8 +11852,7 @@
     "fina": {
       "0": {
         "written": [
-          "medi",
-          0
+          "Sx2"
         ],
         "default": true,
         "locales": {
@@ -12057,6 +12075,10 @@
             "gb": "00F5 mongolian ali gali letter half u isolated form"
           },
           "TODx": {
+            "written": [
+              "fina",
+              0
+            ],
             "gb": "00F5 todo ali gali letter wa isolated form // not exist in Todo Ali Gali"
           }
         }
@@ -12074,6 +12096,10 @@
             "gb": "00F5 mongolian ali gali letter half u initial form"
           },
           "TODx": {
+            "written": [
+              "fina",
+              0
+            ],
             "gb": "00F5 todo ali gali letter wa initial form // not exist in Todo Ali Gali"
           }
         }
@@ -12090,6 +12116,10 @@
             "gb": "00F5 mongolian ali gali letter half u medial form"
           },
           "TODx": {
+            "written": [
+              "fina",
+              0
+            ],
             "gb": "00F5 todo ali gali letter wa medial form // not exist in Todo Ali Gali"
           }
         }

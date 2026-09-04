@@ -1166,6 +1166,9 @@ export const variants: Record<
             gb: "0007 mongolian letter na second initial form",
             eac: "MNS2",
           },
+          MCHx: {
+            conditions: ["devsger"],
+          },
         },
       },
       "2": {
@@ -3330,6 +3333,7 @@ export const variants: Record<
             eac: "MKM1",
           },
           MNGx: {
+            written: ["medi", 0],
             gb: "0035 mongolian letter ka final form",
           },
           TODx: {
@@ -3350,6 +3354,12 @@ export const variants: Record<
             written: ["medi", 0],
             gb: "00D2 manchu letter kaa final form",
           },
+        },
+      },
+      "1": {
+        written: ["K2", "Vi"],
+        locales: {
+          MNGx: {},
         },
       },
     },
@@ -3419,6 +3429,7 @@ export const variants: Record<
             eac: "XKM1",
           },
           MNGx: {
+            written: ["medi", 0],
             gb: "0036 mongolian letter kha final form",
           },
           TODx: {
@@ -5854,17 +5865,17 @@ export const variants: Record<
         written: ["At"],
         locales: {
           SIB: {
-            conditions: ["post_bowed"],
+            conditions: ["marked", "post_bowed"],
             gb: "0315 sibe letter e third final form",
             eac: "SEM3",
           },
           MCH: {
-            conditions: ["post_bowed"],
+            conditions: ["marked", "post_bowed"],
             gb: "0315 manchu letter e third final form",
             eac: "MEM3",
           },
           MCHx: {
-            conditions: ["post_bowed"],
+            conditions: ["marked", "post_bowed"],
             gb: "0315 manchu letter e third final form",
           },
         },
@@ -5874,16 +5885,16 @@ export const variants: Record<
         locales: {
           SIB: {
             gb: "0009 sibe letter e fourth final form",
-            conditions: ["post_bowed_feminine"],
+            conditions: ["feminine_marked", "post_bowed_feminine"],
             eac: "SEM4",
           },
           MCH: {
-            conditions: ["post_bowed_feminine"],
+            conditions: ["feminine_marked", "post_bowed_feminine"],
             gb: "0009 manchu letter e fourth final form",
             eac: "MEM4",
           },
           MCHx: {
-            conditions: ["post_bowed_feminine"],
+            conditions: ["feminine_marked", "post_bowed_feminine"],
             gb: "0009 manchu letter e fourth final form",
           },
         },
@@ -6870,7 +6881,7 @@ export const variants: Record<
   "MONGOLIAN LETTER SIBE TA": {
     isol: {
       "0": {
-        written: ["init", 1],
+        written: ["init", 2],
         default: true,
         locales: {
           SIB: {
@@ -6887,7 +6898,7 @@ export const variants: Record<
         },
       },
       "1": {
-        written: ["init", 2],
+        written: ["init", 1],
         locales: {
           SIB: {
             gb: "031F sibe letter ta second isolated form",
@@ -8072,7 +8083,7 @@ export const variants: Record<
         },
       },
       "3": {
-        written: ["Hx"],
+        written: ["Hx2"],
         default: true,
         locales: {
           MCH: {
@@ -8808,7 +8819,6 @@ export const variants: Record<
         default: true,
         locales: {
           MNGx: {
-            written: ["medi", 0],
             gb: "00EE mongolian ali gali letter nna final form // = 00EE mongolian ali gali letter nna medial form",
           },
           TODx: {
@@ -9774,7 +9784,7 @@ export const variants: Record<
     },
     init: {
       "0": {
-        written: ["Sx"],
+        written: ["Sx2"],
         default: true,
         locales: {
           MCHx: {
@@ -9785,7 +9795,7 @@ export const variants: Record<
     },
     medi: {
       "0": {
-        written: ["Sx"],
+        written: ["Sx2"],
         default: true,
         locales: {
           MCHx: {
@@ -9796,7 +9806,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["medi", 0],
+        written: ["Sx2"],
         default: true,
         locales: {
           MCHx: {
@@ -9978,6 +9988,7 @@ export const variants: Record<
             gb: "00F5 mongolian ali gali letter half u isolated form",
           },
           TODx: {
+            written: ["fina", 0],
             gb: "00F5 todo ali gali letter wa isolated form // not exist in Todo Ali Gali",
           },
         },
@@ -9992,6 +10003,7 @@ export const variants: Record<
             gb: "00F5 mongolian ali gali letter half u initial form",
           },
           TODx: {
+            written: ["fina", 0],
             gb: "00F5 todo ali gali letter wa initial form // not exist in Todo Ali Gali",
           },
         },
@@ -10006,6 +10018,7 @@ export const variants: Record<
             gb: "00F5 mongolian ali gali letter half u medial form",
           },
           TODx: {
+            written: ["fina", 0],
             gb: "00F5 todo ali gali letter wa medial form // not exist in Todo Ali Gali",
           },
         },
