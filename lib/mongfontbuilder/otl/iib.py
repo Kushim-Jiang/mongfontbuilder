@@ -112,9 +112,21 @@ def iib2(c: MongFeaComposer) -> None:
     """
     **Phase IIb.2: Cleanup of format controls**
 
-    Optional treatments.
+    A wide MVS renders as a plain space-like separator. At this final stage it is
+    split into a non-breaking space followed by an ignored zero-width MVS. The
+    `nbspace` and `mvs.ignored` glyphs themselves are created up front in
+    `initControls`; only the split substitution happens here.
+
+    - `nbspace` -- identical to `space`, carrying NO-BREAK SPACE U+00A0. Using a
+      non-breaking space here keeps the MVS separator from allowing a line break,
+      just as the space set before a punctuation mark.
+    - `mvs.ignored` -- an ignored, zero-width glyph that preserves the MVS.
+
+    The pair `nbspace` + `mvs.ignored` therefore takes the place of `mvs.wide`.
     """
-    pass
+
+    with c.Lookup("IIb.cleanup.mvs.wide", feature="rclt"):
+        c.sub("mvs.wide", by=["nbspace", "mvs.ignored"])
 
 
 def iib3(c: MongFeaComposer) -> None:

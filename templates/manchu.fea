@@ -73,7 +73,7 @@ lookup _.wide {
 @MCH-a.fina = [u1820.Aa.fina u1820.A.fina];
 @MCH-a = [@MCH-a.isol @MCH-a.init @MCH-a.medi @MCH-a.fina];
 @MCH-e.isol = [u185D.A.isol];
-@MCH-e.init = [u185D.A.init];
+@MCH-e.init = [u185D.ANi.init];
 @MCH-e.medi = [u185D.A.medi u185D.Ah.medi];
 @MCH-e.fina = [u185D.A.fina u185D.At.fina u185D.Aa.fina u185D.Ah.fina];
 @MCH-e = [@MCH-e.isol @MCH-e.init @MCH-e.medi @MCH-e.fina];
@@ -120,7 +120,7 @@ lookup _.wide {
 @MCH-k.isol = [u1874.H.init._isol u1874.G.init._isol u1874.Gx.init._isol];
 @MCH-k.init = [u1874.G.init u1874.Gx.init u1874.H.init];
 @MCH-k.medi = [u1874.Hx.medi u1874.G.medi u1874.H.medi u1874.Gx.medi];
-@MCH-k.fina = [u1874.G4.fina u1874.Gx.fina u1874.Hx.fina];
+@MCH-k.fina = [u1874.G4.fina u1874.Gx.fina u1874.Hx2.fina];
 @MCH-k = [@MCH-k.isol @MCH-k.init @MCH-k.medi @MCH-k.fina];
 @MCH-g.isol = [u1864.Hh.init._isol u1864.Gh.init._isol];
 @MCH-g.init = [u1864.Gh.init u1864.Hh.init];
@@ -152,7 +152,7 @@ lookup _.wide {
 @MCH-sh.medi = [u1867.Sp.medi];
 @MCH-sh.fina = [u1867.Sp.fina];
 @MCH-sh = [@MCH-sh.isol @MCH-sh.init @MCH-sh.medi @MCH-sh.fina];
-@MCH-t.isol = [u1868.Tb.init._isol u1868.T.init._isol];
+@MCH-t.isol = [u1868.T.init._isol u1868.Tb.init._isol];
 @MCH-t.init = [u1868.Tb.init u1868.T.init];
 @MCH-t.medi = [u1868.Db.medi u1868.Dd.medi u1868.D.medi];
 @MCH-t.fina = [u1868.Dd.fina];
@@ -257,6 +257,7 @@ lookup _.wide {
 @MCH-consonant = [@MCH-sbm @MCH-n @MCH-ng @MCH-k @MCH-g @MCH-h @MCH-b @MCH-p @MCH-s @MCH-sh @MCH-t @MCH-d @MCH-l @MCH-m @MCH-ch @MCH-j @MCH-y @MCH-r @MCH-f @MCH-w @MCH-kh @MCH-gh @MCH-hh @MCH-c @MCH-z @MCH-rh @MCH-cr @MCH-zr];
 lookup MCH.marked {
     lookupflag 0;
+    sub @MCH-e.fina by u185D.At.fina;
     sub @MCH-i.fina by u1873.Iy.fina;
     sub @MCH-o.fina by u1823.O.fina;
     sub @MCH-u.fina by u1860.Oh.fina;
@@ -292,7 +293,7 @@ lookup MCH.masculine_onset {
 lookup MCH.masculine_devsger {
     lookupflag 0;
     sub @MCH-k.medi by u1874.Hx.medi;
-    sub @MCH-k.fina by u1874.Hx.fina;
+    sub @MCH-k.fina by u1874.Hx2.fina;
 } MCH.masculine_devsger;
 
 lookup MCH.feminine {
@@ -316,6 +317,7 @@ lookup MCH.feminine {
 
 lookup MCH.feminine_marked {
     lookupflag 0;
+    sub @MCH-e.fina by u185D.Aa.fina;
     sub @MCH-u.fina by u1860.O.fina;
 } MCH.feminine_marked;
 
@@ -380,7 +382,7 @@ feature isol {
         sub u1865 by u1865.Hc.init._isol;
         sub u1866 by u1866.Pb.init._isol;
         sub u1867 by u1867.Sp.init._isol;
-        sub u1868 by u1868.Tb.init._isol;
+        sub u1868 by u1868.T.init._isol;
         sub u1869 by u1869.Th.init._isol;
         sub u186C by u186C.Kh.init._isol;
         sub u186D by u186D.Kc.init._isol;
@@ -416,7 +418,7 @@ feature init {
         sub u1836 by u1836.Y.init;
         sub u1838 by u1838.W.init;
         sub u183A by u183A.K2.init;
-        sub u185D by u185D.A.init;
+        sub u185D by u185D.ANi.init;
         sub u185F by u185F.Ai.medi._init;
         sub u1860 by u1860.AOh.init;
         sub u1861 by u1861.AOI.init;
@@ -521,7 +523,7 @@ feature fina {
         sub u1870 by u1870.Rr.medi._fina;
         sub u1871 by u1871.Cc.medi._fina;
         sub u1873 by u1873.I.fina;
-        sub u1874 by u1874.Hx.fina;
+        sub u1874 by u1874.Hx2.fina;
         sub u1875 by u1875.R2.fina;
         sub u1876 by u1876.V.medi._fina;
         sub u1877 by u1877.Jc.medi._fina;
@@ -587,6 +589,8 @@ feature rclt {
         lookupflag IgnoreMarks;
         sub [@MCH-t @MCH-d @MCH-k @MCH-g @MCH-h] u1860.Oh.fina' lookup MCH.feminine_marked;
         sub [@MCH-t @MCH-d @MCH-k @MCH-g @MCH-h] [@MCH-e @MCH-u]' lookup MCH.feminine;
+        sub @MCH-k.init @fvs2 [@MCH-e @MCH-u]' lookup MCH.feminine;
+        sub @MCH-k.medi @fvs4 [@MCH-e @MCH-u]' lookup MCH.feminine;
     } III.e_u.feminine.SIB_MCH_MCHx;
 
 } rclt;
@@ -637,7 +641,7 @@ feature rclt {
     lookup III.particle.MCH {
         lookupflag UseMarkFilteringSet @fvs;
         ignore sub @mvs' @MCH-i.isol' @fvs;
-        sub @mvs' lookup _.wide @MCH-i.isol' lookup MCH.particle;
+        sub @mvs.invalid' lookup _.wide @MCH-i.isol' lookup MCH.particle;
     } III.particle.MCH;
 
 } rclt;
@@ -654,7 +658,7 @@ feature rclt {
 
 @MCH-bowedB = [@MCH-b @MCH-p];
 @MCH-bowedK = [@MCH-kh @MCH-gh @MCH-hh];
-@MCH-bowedG = [u1874.G.init._isol u1874.Gx.init._isol u1874.G.init u1874.Gx.init u1874.G.medi u1874.Gx.medi u1874.Gx.fina u1864.Gh.init._isol u1864.Gh.init u1864.Gh.medi u1865.Gc.init._isol u1865.Gc.init u1865.Gc.medi];
+@MCH-bowedG = [u1874.G.init._isol u1874.G.init u1874.G.medi u1864.Gh.init._isol u1864.Gh.init u1864.Gh.medi u1865.Gc.init._isol u1865.Gc.init u1865.Gc.medi];
 feature rclt {
     script mong;
     language dflt;
@@ -663,6 +667,8 @@ feature rclt {
         sub @MCH-bowedB [@MCH-e @MCH-u]' lookup MCH.post_bowed;
         sub @MCH-bowedG [@MCH-e @MCH-u]' lookup MCH.post_bowed_feminine;
         sub [@MCH-bowedB @MCH-bowedK] [@MCH-a @MCH-o]' lookup MCH.post_bowed;
+        sub @MCH-k.init @fvs2 [@MCH-e @MCH-u]' lookup MCH.post_bowed_feminine;
+        sub @MCH-k.medi @fvs4 [@MCH-e @MCH-u]' lookup MCH.post_bowed_feminine;
     } III.vowel.post_bowed.MCH;
 
 } rclt;
@@ -709,7 +715,7 @@ lookup _.manual.MCH {
     sub @MCH-k.medi' fvs4.ignored by u1874.Gx.medi;
     sub @MCH-k.fina' fvs1.ignored by u1874.G4.fina;
     sub @MCH-k.fina' fvs2.ignored by u1874.Gx.fina;
-    sub @MCH-k.fina' fvs3.ignored by u1874.Hx.fina;
+    sub @MCH-k.fina' fvs3.ignored by u1874.Hx2.fina;
     sub @MCH-g.isol' fvs1.ignored by u1864.Gh.init._isol;
     sub @MCH-g.init' fvs1.ignored by u1864.Gh.init;
     sub @MCH-g.init' fvs2.ignored by u1864.Hh.init;
@@ -720,7 +726,7 @@ lookup _.manual.MCH {
     sub @MCH-h.init' fvs2.ignored by u1865.Hc.init;
     sub @MCH-h.medi' fvs1.ignored by u1865.Gc.medi;
     sub @MCH-h.medi' fvs2.ignored by u1865.Hc.medi;
-    sub @MCH-t.isol' fvs1.ignored by u1868.T.init._isol;
+    sub @MCH-t.isol' fvs1.ignored by u1868.Tb.init._isol;
     sub @MCH-t.init' fvs1.ignored by u1868.Tb.init;
     sub @MCH-t.init' fvs2.ignored by u1868.T.init;
     sub @MCH-t.medi' fvs1.ignored by u1868.Db.medi;
@@ -1039,5 +1045,15 @@ feature rclt {
         sub u182E.M.medi u182F.L.medi by u182E_u182F.ML.medi;
         sub u182E.M.medi u182E.M.medi by u182E_u182E.MM.medi;
     } IIb.ligature;
+
+} rclt;
+
+feature rclt {
+    script mong;
+    language dflt;
+    lookup IIb.cleanup.mvs.wide {
+        lookupflag 0;
+        sub mvs.wide by nbspace mvs.ignored;
+    } IIb.cleanup.mvs.wide;
 
 } rclt;

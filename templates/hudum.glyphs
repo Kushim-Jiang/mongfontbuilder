@@ -28833,6 +28833,34 @@ width = 0;
 subCategory = Nonspacing;
 },
 {
+color = 10;
+glyphname = nbspace;
+layers = (
+{
+layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
+shapes = (
+{
+ref = space;
+}
+);
+width = 260;
+}
+);
+unicode = 160;
+},
+{
+category = Mark;
+color = 11;
+glyphname = mvs.ignored;
+layers = (
+{
+layerId = "E14AE757-7134-4DB9-897C-AD248BACE90D";
+width = 0;
+}
+);
+subCategory = Nonspacing;
+},
+{
 category = Mark;
 color = 11;
 glyphname = nirugu.ignored;
@@ -34582,10 +34610,6 @@ width = 568;
 );
 instances = (
 {
-axesValues = (
-100,
-100
-);
 name = Regular;
 }
 );
@@ -34643,6 +34667,7 @@ marker.masculine = mark;
 marker.masculine.false = base;
 marker.masculine.true = base;
 mvs = base;
+mvs.ignored = mark;
 mvs.narrow = base;
 mvs.wide = base;
 nirugu = base;

@@ -164,6 +164,18 @@ class MongFeaComposer(FeaComposer):
             for glyphName in glyphClass.glyphSet():
                 self.spec.openTypeCategories[glyphName.glyph] = "mark"
 
+        # `nbspace` (a clone of `space` carrying NO-BREAK SPACE U+00A0) and the
+        # zero-width ignored `mvs.ignored` are set up here, alongside the other
+        # control glyphs, so they are created early and appear early in glyph
+        # order. `iib2` later splits a wide MVS into `nbspace` + `mvs.ignored`.
+        spaceName = self.glyphNameProcessor("space")
+        nbspaceName = self.glyphNameProcessor("nbspace")
+        ignoredName = self.glyphNameProcessor("mvs.ignored")
+        self.spec.newGlyphs[nbspaceName] = GlyphSpec([spaceName])
+        self.spec.newGlyphs[ignoredName] = GlyphSpec([])
+        self.spec.cmap[0x00A0] = nbspaceName
+        self.spec.openTypeCategories[ignoredName] = "mark"
+
         with self.Lookup("_.ignored") as _ignored:
             for original in ["nirugu", "zwj", "zwnj"]:
                 variant = original + ".ignored"

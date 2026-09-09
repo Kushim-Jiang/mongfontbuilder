@@ -31,6 +31,7 @@ writingSystemToLocaleID: dict[str, LocaleID] = {
 glyphNameMapping: dict[str, str | None] = {
     "space": "uni0020.Widespace.nomi",
     "uni0020": "uni0020.Widespace.nomi",
+    "nbspace": "nbspace.Widespace.nomi",
 }
 for filename in ["marks.yaml", "format-controls.yaml", "bases.yaml"]:
     path = files(data) / filename
