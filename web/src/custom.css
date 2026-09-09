@@ -151,3 +151,10 @@ starlight-toc,
     display: none;
   }
 }
+
+/* ── Links ── */
+
+/* Links are not underlined anywhere on the site; they are signalled by colour. */
+a {
+  text-decoration: none !important;
+}
