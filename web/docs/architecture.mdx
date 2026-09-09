@@ -304,6 +304,16 @@ The file belongs to the earlier model whose data structures are being retired. I
 - **The variant set of a letter depends on the writing system.** The Mongolian block unifies letters across Hudum, Todo, Sibe, and Manchu and their Ali Gali extensions. These writing systems do not agree on the variant used at every joining position, and a writing system that has no form at a position must render a fabricated form derived from another position. A writing-system-neutral list cannot express these differences.
 - **Variant selection takes effect in shaping.** It operates after the orthographic shaping steps, not at the character-to-glyph mapping stage where standardized variants apply.
 
+Compared with the preceding version, the `StandardizedVariants.txt` updated for Unicode 18.0 removes the following entries, each for the reason given.
+
+- `1820 180C` (third form), medial. It is an initial variant, so it is moved to the initial of `1820 180B` (second form).
+- `1835 180B` (second form), medial. It is an isolated variant, so it is moved to the isolated of `1835 180B` (second form).
+- `1848 180B` (second form), medial, is changed to `1848 180C` (third form), medial. The Todo shaping Chinese national standard added a variant on the second form and then removed it in the revised standard, so the FVS of this form changed.
+- `185E 180B` (second form), final. It is a contextual variant that appears in a ligature, not a standalone orthographic variant. Likewise `185E 180C` (third form), final, which is part of a ligature and is not a standalone orthographic variant.
+- `1887 180B` (second form), isolated. It is a stylistic variant of the isolated of `1820 180B` (second form). Its final is a contextual variant of the final of `1820 180C` (third form) in a specific ligature. `1887 180C` (third form), final, is a contextual variant of the final of `1820 180B` (second form) in a specific ligature. `1887 180D` (fourth form), final, is analyzed as the medial of `1820` (first form) followed by the final of `1887` (first form).
+- `1888 180B` (second form), final. It is used in Manchu Ali Gali and is merged into the final of `1873 180B` (second form).
+- `188A 180B` (second form), initial and medial. They are contextual variants in a specific ligature.
+
 #### What the citations ask of this document
 
 The citations make this document the reference that completes the outline of the Standard. They do not make it normative, and this document does not claim to be: the analysis that the Standard follows is specified by the Chinese national standards that this document realizes and is documented informatively by this UTN, as the [History](#history) recounts. The three texts put the following questions to this document.
