@@ -5,6 +5,7 @@ title: Hudum
 import WrittenUnitTable from "../lib/WrittenUnitTable.svelte";
 import LetterTable from "../lib/LetterTable.svelte";
 import ConditionalMappingTable from "../lib/ConditionalMappingTable.svelte";
+import ParticleTable from "../lib/ParticleTable.svelte";
 import MNG from "../lib/tags/MNG.svelte";
 
 export const locale = "MNG";
@@ -312,6 +313,12 @@ The variants in gray indicate the fabricated variants, _i.e._ variants borrowed 
 ### Conditional mapping
 
 <ConditionalMappingTable locale={locale} />
+
+### Particle mapping
+
+When the nominal spelling of a particle in the table below occurs in text, its letters are reshaped using the `particle` mapping (step 3 in the shaping process above). In the written form, the written units shown in blue are those whose shape is determined by the `particle` condition. A particle prefixed with `mvs` is a standalone particle that follows a Mongolian vowel separator; the preceding MVS is then widened to set it off.
+
+<ParticleTable locale={locale} />
 
 ## References
 

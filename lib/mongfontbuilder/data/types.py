@@ -30,6 +30,12 @@ class VariantReference(NamedTuple):
     locale: LocaleID | None = None
 
 
+@dataclass
+class ParticleData:
+    form: str
+    indices: list[int]
+
+
 Written = list[WrittenUnitID] | VariantReference
 
 

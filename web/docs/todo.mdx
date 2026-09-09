@@ -5,6 +5,7 @@ title: Todo
 import WrittenUnitTable from "../lib/WrittenUnitTable.svelte";
 import LetterTable from "../lib/LetterTable.svelte";
 import ConditionalMappingTable from "../lib/ConditionalMappingTable.svelte";
+import ParticleTable from "../lib/ParticleTable.svelte";
 import MNG from "../lib/tags/MNG.svelte";
 import TOD from "../lib/tags/TOD.svelte";
 
@@ -66,7 +67,9 @@ The variants in gray indicate the fabricated variants, _i.e._ variants borrowed 
     </tr>
     <tr>
       <td> _long vowel_ </td>
-      <td><TOD category="lvs" /> with <TOD links="lvs" /></td>
+      <td>
+        <TOD category="lvs" /> with <TOD links="lvs" />
+      </td>
     </tr>
     <tr>
       <td> _consonant_ </td>
@@ -165,6 +168,12 @@ The variants in gray indicate the fabricated variants, _i.e._ variants borrowed 
 <ConditionalMappingTable locale={locale} />
 
 **Function of the sign <TOD links="lvs" />**. The sign <TOD links="lvs" /> behaves as a base character in some cases, but its logic in the shaping process behaves as a combining mark. For this reason, the necessary preprocessing and postprocessing should be introduced: before the Mongolian-specific steps begin, <TOD links="lvs" /> is shaped in mark class, modifying the joining type of the characters before and after <TOD links="lvs" />; after the Mongolian-specific steps finish, those signs <TOD links="lvs" /> that need to be represented as marks are shaped to ligature with the neighboring letters. These extra steps are not included in the condition table shown above, but are completed in the specific implementation.
+
+### Particle mapping
+
+When the nominal spelling of a particle in the table below occurs in text, its letters are reshaped using the `particle` mapping (step 3 in the shaping process above). In the written form, the written units shown in blue are those whose shape is determined by the `particle` condition. A particle prefixed with `mvs` is a standalone particle that follows a Mongolian vowel separator; the preceding MVS is then widened to set it off.
+
+<ParticleTable locale={locale} />
 
 ## References
 

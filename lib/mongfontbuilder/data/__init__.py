@@ -12,6 +12,7 @@ from .types import (
     JoiningPosition,
     LocaleData,
     LocaleID,
+    ParticleData,
     VariantData,
     WrittenUnitID,
 )
@@ -47,6 +48,9 @@ with (dir / "variants.json").open(encoding="utf-8") as f:
     )
 
 with (dir / "particles.json").open(encoding="utf-8") as f:
-    particles = structure(json.load(f), dict[LocaleID, dict[str, list[FVS]]])
+    particles = structure(
+        json.load(f),
+        dict[LocaleID, dict[str, ParticleData]],
+    )
 
 codePointToCmapVariant = resolveCmapVariants(variants)

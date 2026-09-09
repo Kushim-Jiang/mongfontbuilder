@@ -827,8 +827,9 @@ def iii3(c: MongFeaComposer) -> None:
                 feature="rclt",
                 flags={"UseMarkFilteringSet": c.classes["fvs"]},
             ):
-                for aliasString, indices in data.particles[locale].items():
+                for aliasString, particle in data.particles[locale].items():
                     aliasList = aliasString.split()
+                    indices = particle.indices
                     hasMvs = aliasList[0] == "mvs"
                     if hasMvs:
                         aliasList = aliasList[1:]
@@ -841,7 +842,9 @@ def iii3(c: MongFeaComposer) -> None:
                     ]
 
                     subArgs: list = (
-                        [c.input(c.classes["mvs"], c.conditions["_.wide"])] if hasMvs else []
+                        [c.input(c.classes["mvs.invalid"], c.conditions["_.wide"])]
+                        if hasMvs
+                        else []
                     )
                     ignoreSubArgs: list = [c.input(c.classes["mvs"])] if hasMvs else []
                     minIndex = 0 if hasMvs else min(indices)
