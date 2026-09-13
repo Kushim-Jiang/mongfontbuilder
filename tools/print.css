@@ -1,0 +1,212 @@
+/* ========================================================================
+   Paged-media stylesheet for the merged documentation PDF (WeasyPrint).
+   Provides page numbers, a dotted-leader TOC with real page numbers, and
+   print-friendly table handling. Appended after Starlight's own CSS.
+   ======================================================================== */
+
+@page {
+    size: A4;
+    margin: 20mm 16mm 18mm 16mm;
+
+    @bottom-center {
+        content: counter(page) " / " counter(pages);
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 8pt;
+        color: #777;
+    }
+
+    @top-right {
+        content: string(doctitle);
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 8pt;
+        color: #999;
+    }
+}
+
+/* Front matter (title + TOC): no footer page number. */
+@page front {
+    @bottom-center {
+        content: none;
+    }
+}
+
+html,
+body {
+    font-family: "Segoe UI", "Noto Sans", Arial, sans-serif;
+    color: #1b1b1f;
+    font-size: 10.5pt;
+    line-height: 1.55;
+}
+
+/* ---------------------------------------------------------------- front */
+.doc-front {
+    page: front;
+}
+
+.doc-title {
+    margin-top: 5.5em;
+    text-align: center;
+}
+
+.doc-title h1 {
+    font-size: 26pt;
+    margin: 0 0 0.25em;
+    string-set: doctitle content();
+}
+
+.doc-title .doc-subtitle {
+    color: #555;
+    font-size: 11pt;
+}
+
+.toc {
+    margin-top: 3em;
+}
+
+.toc-title {
+    font-size: 14pt;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.25em;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0 0;
+}
+
+.toc li {
+    margin: 0.15em 0;
+}
+
+.toc a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.toc a::after {
+    content: leader(". ") target-counter(attr(href), page);
+    color: #888;
+}
+
+.toc .toc-l0>a {
+    font-weight: 600;
+}
+
+.toc li.toc-l1 {
+    padding-left: 1.4em;
+}
+
+.toc li.toc-l2 {
+    padding-left: 2.8em;
+}
+
+.toc li.toc-l3 {
+    padding-left: 4.2em;
+}
+
+/* ------------------------------------------------------------ page body */
+section.print-page {
+    page-break-before: always;
+}
+
+h1.page-title {
+    font-size: 20pt;
+    margin: 0 0 0.8em;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid #3369ff;
+}
+
+.page-body h2 {
+    font-size: 14pt;
+    margin-top: 1.4em;
+}
+
+.page-body h3 {
+    font-size: 12pt;
+    margin-top: 1.2em;
+}
+
+.page-body h4 {
+    font-size: 11pt;
+    margin-top: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    page-break-after: avoid;
+}
+
+/* Extra breathing room between paragraphs in the content. */
+.page-body p {
+    margin: 1em 0;
+}
+
+/* ------------------------------------------------------- tables & glyphs */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: auto;
+}
+
+tr {
+    page-break-inside: avoid;
+}
+
+thead {
+    display: table-header-group;
+}
+
+th,
+td {
+    padding: 2pt 4pt !important;
+    font-size: 9pt;
+    vertical-align: middle;
+}
+
+.wu {
+    font-size: 26px !important;
+}
+
+code,
+pre {
+    font-family: "Cascadia Mono", Consolas, monospace;
+    font-size: 8.5pt;
+}
+
+pre {
+    page-break-inside: avoid;
+    background: #f5f5f7;
+    padding: 6px 8px;
+}
+
+/* Compact Expressive Code blocks in print: drop the terminal title bar and
+   the copy button, and tighten the padding around the code. */
+.expressive-code .frame .header {
+    display: none !important;
+}
+
+.expressive-code .copy {
+    display: none;
+}
+
+.expressive-code .frame pre {
+    margin: 0 !important;
+    padding: 6px 10px !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: #3369ff;
+}
+
+.starlight-aside {
+    margin: 1em 0;
+}
