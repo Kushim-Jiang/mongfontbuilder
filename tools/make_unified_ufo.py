@@ -42,7 +42,6 @@ POSITIONS = ("isol", "init", "medi", "fina")
 CONTROL_GLYPHS = (
     "mvs",
     "mvs.narrow",
-    "mvs.wide",
     "fvs1",
     "fvs2",
     "fvs3",
@@ -69,23 +68,46 @@ OTHER_LETTER_CODEPOINTS = (
 
 DIGIT_CODEPOINTS = tuple(range(0x1810, 0x181A))
 
-# The frame marks are drawn by the font only, and have no code point of their own.
-FRAME_CODEPOINTS = (0xE300, 0xE301)
-
 # Noto names a few standalone characters descriptively instead of `uniXXXX`.
 NOTO_ALIASES = {0x1885: "baluda", 0x1886: "tribaluda", 0x18A9: "dagalga"}
+
+# Noto draws several written units that this project names differently — `Dw` is its
+# `Ds`, `Sx2` its `Sx`, `Zz2` its `Zc`, `Zz3` its `Zz` — and some whose Noto name does not
+# follow its usual `uniXXXX.‹units›.‹position›` shape. Such a glyph names its source here;
+# the name is only a hint, so a glyph whose source is missing is still left empty.
+NOTO_GLYPH = {
+    "_Dw.medi": "uni18A1.Ds.medi",
+    "_Hx2.fina": "uni1874.Hx.fina",
+    "_Kh.fina": "uni186C.Kh.medi._fina",
+    "_N2.init": "N2.init.mvs",
+    "_Sx2.init": "uni18A2.Sx.init",
+    "_Sx2.medi": "uni18A2.Sx.medi",
+    "_Sx2.fina": "uni18A2.Sx.fina",
+    "_Zr2.init": "uni188C.Zr.init",
+    "_Zr2.medi": "uni188C.Zr.medi",
+    "_Zr2.fina": "uni188C.Zr.fina",
+    "_Zz2.init": "uni185C.Zc.init",
+    "_Zz2.medi": "uni185C.Zc.medi",
+    # `_Zz2.fina` has no counterpart in Noto, and is deliberately left empty.
+    "_Zz3.init": "uni1896.Zz.init",
+    "_Zz3.medi": "uni1896.Zz.medi",
+    "_Zz3.fina": "uni1896.Zz.fina",
+}
 
 
 def readJson(name: str):
     return json.loads((DATA_DIR / f"{name}.json").read_text(encoding="utf-8"))
 
 
-def punctuationCodePoints() -> list[int]:
-    """Code points of the punctuation table in ``data/writtenUnits.ts``."""
+def punctuationEntries() -> list[tuple[str, int]]:
+    """Names and code points of the punctuation table in ``data/writtenUnits.ts``."""
 
     source = (REPO / "data" / "writtenUnits.ts").read_text(encoding="utf-8")
     block = source.split("export const punctuation = {")[1].split("} as const;")[0]
-    return [int(i, 16) for i in re.findall(r"unicode: (0x[0-9A-Fa-f]+)", block)]
+    return [
+        (name, int(codePoint, 16))
+        for name, codePoint in re.findall(r"(\w+): \{ unicode: (0x[0-9A-Fa-f]+)", block)
+    ]
 
 
 # Noto names a written-unit glyph either `<units>.<position>` (a shared ligature) or
@@ -151,6 +173,8 @@ def notoCandidates(name: str, index: dict[str, list[str]]) -> list[str]:
     """Noto glyphs that can stand in for a glyph of this project, best first."""
 
     found = list[str]()
+    if override := NOTO_GLYPH.get(name):
+        found.append(override)
     if body := bodyOf(name):
         found.extend(index.get(body, []))
     if match := UNIT_WITH_CODE_POINTS.match(name):
@@ -310,13 +334,17 @@ def main() -> None:
     standalone = [
         *DIGIT_CODEPOINTS,
         *OTHER_LETTER_CODEPOINTS,
-        *punctuationCodePoints(),
-        *FRAME_CODEPOINTS,
+        *(codePoint for _, codePoint in punctuationEntries()),
     ]
+    # The Chinese punctuation is drawn upright as well, in a vertical form of its own,
+    # which follows the glyph it is the vertical form of.
+    vertical = {codePoint for name, codePoint in punctuationEntries() if name.startswith("China")}
     for codePoint in sorted(set(standalone)):
         if codePoint in letterCodePoints:
             continue  # the composer builds this one from its written units
         want(f"u{codePoint:04X}", [codePoint])
+        if codePoint in vertical:
+            want(f"u{codePoint:04X}.vert")
 
     # Whatever the composer references but neither the datasets above nor the composer
     # itself provide: a character whose default written form differs in every writing
@@ -324,6 +352,12 @@ def main() -> None:
     referenced, created = composerGlyphNames([*wanted])
     for name in sorted(referenced - created - {*wanted}):
         want(name)
+
+    # Glyphs the composer builds by itself are not source glyphs, even where the data
+    # above names them: the wide MVS is built from the space, the nirugu written unit
+    # from the nirugu.
+    for name in sorted(created & {*wanted}):
+        del wanted[name]
 
     font = Font.open(TEMPLATE_UFO)
     # Keep the template's font info, but start from a clean glyph set. The template
