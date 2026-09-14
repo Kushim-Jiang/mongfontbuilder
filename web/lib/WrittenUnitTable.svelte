@@ -1,8 +1,10 @@
 <script lang="ts">
   interface Props {
     locale: LocaleID | LocaleID[];
+    /** Written units that no character writes, which the table lists in place. */
+    outside?: WrittenUnitID[];
   }
-  let { locale }: Props = $props();
+  let { locale, outside = [] }: Props = $props();
 
   import type { LocaleID } from "../../data/locales";
   import type { JoiningPosition } from "../../data/misc";
@@ -44,6 +46,19 @@
     }
     return map;
   });
+
+  /**
+   * The joining positions a written unit is drawn in: the positions that some character of
+   * the writing systems writes it in, or, for a unit no character writes, the positions
+   * the data gives it.
+   */
+  function positionsOf(id: WrittenUnitID): Map<JoiningPosition, Map<LocaleID, Set<string>>> | undefined {
+    const written = unitToPositionToLetters.get(id);
+    if (written) return written;
+    if (!outside.includes(id)) return undefined;
+    const positions = writtenUnits[id] as Partial<Record<JoiningPosition, unknown>>;
+    return new Map(joiningPositions.filter((position) => position in positions).map((position) => [position, new Map<LocaleID, Set<string>>()]));
+  }
 
   type LigPart = { text: string; blue: boolean; isNi?: boolean };
   type LigRow = { parts: LigPart[]; kind: string };
@@ -220,7 +235,7 @@
   </thead>
   <tbody>
     {#each Object.keys(writtenUnits) as id}
-      {@const positionToLetters = unitToPositionToLetters.get(id as WrittenUnitID)}
+      {@const positionToLetters = positionsOf(id as WrittenUnitID)}
       {@const lig = unitToLigature.get(id as WrittenUnitID)}
       {#if positionToLetters}
         <tr>

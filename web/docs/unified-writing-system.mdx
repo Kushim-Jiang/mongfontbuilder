@@ -5,6 +5,8 @@ description: Every written unit and every character of the supported writing sys
 
 import WrittenUnitTable from "../lib/WrittenUnitTable.svelte";
 import LetterTable from "../lib/LetterTable.svelte";
+import TODx from "../lib/tags/TODx.svelte";
+import { outsideLetters, outsideUnits } from "../lib/outsideLetters";
 
 export const locales = ["MNG", "MNGx", "TOD", "TODx", "SIB", "MCH", "MCHx"];
 
@@ -14,12 +16,18 @@ export const locales = ["MNG", "MNGx", "TOD", "TODx", "SIB", "MCH", "MCHx"];
 
 This table collects every written unit of all supported writing systems. Each position shows one shape.
 
-<WrittenUnitTable locale={locales} />
+<WrittenUnitTable locale={locales} outside={outsideUnits} />
 
 ## Characters
 
 This table collects every character of all supported writing systems, with its variants by joining position.
 
-<LetterTable locale={locales} />
+<LetterTable locale={locales} outside={outsideLetters} />
+
+**[MONGOLIAN LETTER CHA WITH TWO DOTS (U+1878)](https://utcstage.unicode.org/Public/18.0.0/charts/nameslist/1800/#1878)**. This letter is used in Buryat Mongolian, and was proposed for encoding by Andrew West, Amgalan Zhamsoev and Viacheslav Zaytsev in [WG2 N4781](https://www.unicode.org/L2/L2017/17007-n4781-mongolian.pdf) and was added to the Unicode Standard version 14.0. Only its medial form is attested in the historical Buryat sources; the initial and final forms are not attested, but were also proposed for fabricated glyphs.
+
+**[MONGOLIAN LETTER TODO ALI GALI TA (U+1898)](https://utcstage.unicode.org/Public/18.0.0/charts/nameslist/1800/#1898)**. This letter is not used in any writing system. It may have been coined by Quejingzhabu. It is conjectured that in one scheme the Todo Ali Gali letter _ta_ was analyzed as <TODx links="Dp" />, but the letter _da_ is also shown as <TODx links="Dp" />, so the creator added a distinguishing stroke to produce the letter for _da_. All of its glyphs are fabricated.
+
+This letter belongs to the Todo Ali Gali letters, which supplement the Todo alphabet for transliterating Sanskrit and Tibetan,
 
 </div>

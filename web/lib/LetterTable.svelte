@@ -1,13 +1,16 @@
 <script lang="ts">
   interface Props {
     locale: LocaleID | LocaleID[];
+    /** Letters that lie outside the writing systems, which this table lists in place. */
+    outside?: OutsideLetter[];
   }
-  let { locale }: Props = $props();
+  let { locale, outside = [] }: Props = $props();
 
   import type { LocaleID } from "../../data/locales";
   import type { JoiningPosition } from "../../data/misc";
   import type { FVS, VariantData } from "../../data/variants";
   import type { WrittenUnitID } from "../../data/writtenUnits";
+  import type { OutsideLetter } from "./outsideLetters";
   import { joiningPositions } from "../../data/misc";
   import { variants } from "../../data/variants";
   import { aliases } from "../../data/aliases";
@@ -94,6 +97,31 @@
 
     return map;
   });
+
+  /**
+   * The rows of the table: the characters in the order the data lists them, and the
+   * letters that lie outside the writing systems. A unified table lists them by code
+   * point instead, which is the order that interleaves the writing systems.
+   */
+  const rows = $derived.by(() => {
+    const unknown = Number.POSITIVE_INFINITY;
+    const rows = [...charNameToPositionToFVSToLocaleToLocalizedVariant].map(([charName, positionToFVSToData]) => ({
+      codePoint: nameToCP.get(charName) ?? unknown,
+      charName,
+      positionToFVSToData,
+      letter: undefined as OutsideLetter | undefined,
+    }));
+    if (!unified) return rows;
+    for (const letter of outside) {
+      rows.push({
+        codePoint: nameToCP.get(letter.charName) ?? unknown,
+        charName: "",
+        positionToFVSToData: undefined,
+        letter,
+      });
+    }
+    return rows.sort((i, j) => i.codePoint - j.codePoint);
+  });
 </script>
 
 <table class="characters">
@@ -112,27 +140,54 @@
     >
   </thead>
   <tbody>
-    {#each charNameToPositionToFVSToLocaleToLocalizedVariant as [charName, positionToFVSToData]}
-      {@const codePoint = nameToCP.get(charName)!}
-      {@const hex = hexFromCP(codePoint)}
-      {@const char = String.fromCodePoint(codePoint)}
-      {@const aliasData = aliases[charName]}
-      {@const aliasesOfChar = localesToShow.map((l) => [l, (typeof aliasData === "object" ? aliasData[localeNS(l)] : aliasData) ?? ""] as const).filter(([, a]) => a)}
-      {@const alias = aliasesOfChar[0]?.[1] ?? ""}
-      {@const fvses = sortedFVSKeys(positionToFVSToData)}
-      <tr>
-        <td id={alias} rowspan={fvses.length + 1} title="U+{hex} {char} {charName}">
-          {hex}<br />{char}{#if !unified}
-            <i>{alias}</i>{/if}
-        </td>
-        {@render variantCells(charName, positionToFVSToData, 0, alias)}
-      </tr>
-      {#each fvses as fvs}
-        <tr>{@render variantCells(charName, positionToFVSToData, fvs, alias)}</tr>
-      {/each}
+    {#each rows as { charName, positionToFVSToData, letter }}
+      {#if letter}
+        {@render outsideRow(letter)}
+      {:else if positionToFVSToData}
+        {@const codePoint = nameToCP.get(charName)!}
+        {@const hex = hexFromCP(codePoint)}
+        {@const char = String.fromCodePoint(codePoint)}
+        {@const aliasData = aliases[charName]}
+        {@const aliasesOfChar = localesToShow.map((l) => [l, (typeof aliasData === "object" ? aliasData[localeNS(l)] : aliasData) ?? ""] as const).filter(([, a]) => a)}
+        {@const alias = aliasesOfChar[0]?.[1] ?? ""}
+        {@const fvses = sortedFVSKeys(positionToFVSToData)}
+        <tr>
+          <td id={alias} rowspan={fvses.length + 1} title="U+{hex} {char} {charName}">
+            {hex}<br />{char}{#if !unified}{" "}
+              <i>{alias}</i>{/if}
+          </td>
+          {@render variantCells(charName, positionToFVSToData, 0, alias)}
+        </tr>
+        {#each fvses as fvs}
+          <tr>{@render variantCells(charName, positionToFVSToData, fvs, alias)}</tr>
+        {/each}
+      {/if}
     {/each}
   </tbody>
 </table>
+
+{#snippet outsideRow(letter: OutsideLetter)}
+  {@const codePoint = nameToCP.get(letter.charName)!}
+  {@const hex = hexFromCP(codePoint)}
+  {@const char = String.fromCodePoint(codePoint)}
+  <tr>
+    <td id={letter.charName} title="U+{hex} {char} {letter.charName}">{hex}<br />{char}</td>
+    <td>-</td>
+    {#each joiningPositions as position}
+      {@const from = letter.borrowed[position]}
+      {@const unit = letter.drawn[from ?? position]}
+      <td id={`${letter.charName}-${position}-0`} class={{ variant: true, fabricated: !!from, unrecommended: letter.unrecommended?.includes(position) }}>
+        {#if from}
+          <span><LetterVariant position={from} ctxPosition={position} written={unit ? [unit] : undefined} /></span><br />
+          <a href="#{letter.charName}-{from}-0">→ {from}</a>
+        {:else}
+          <span><LetterVariant {position} written={unit ? [unit] : undefined} /></span><br />
+          {#if unit}<a href="#{unit}">{unit}</a>{/if}
+        {/if}
+      </td>
+    {/each}
+  </tr>
+{/snippet}
 
 {#snippet variantCells(charName: string, positionToFVSToData: Map<JoiningPosition, Map<FVS, Map<LocaleID, LocalizedVariant>>>, fvs: FVS, alias: string)}
   <td>{fvs || "-"}</td>
