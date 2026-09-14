@@ -63,6 +63,7 @@ OTHER_LETTER_CODEPOINTS = (
     0x1884,
     0x1885,
     0x1886,
+    0x1898,
     0x18A9,
 )
 
@@ -76,22 +77,38 @@ NOTO_ALIASES = {0x1885: "baluda", 0x1886: "tribaluda", 0x18A9: "dagalga"}
 # follow its usual `uniXXXX.‹units›.‹position›` shape. Such a glyph names its source here;
 # the name is only a hint, so a glyph whose source is missing is still left empty.
 NOTO_GLYPH = {
+    "_Cx.fina": "uni1878.Cx.medi._fina",
+    "_Cx.init": "uni1878.Cx.init",
+    "_Cx.medi": "uni1878.Cx.medi",
     "_Dw.medi": "uni18A1.Ds.medi",
+    "_Dz.init": "uni1898.Dz.init",
+    "_Dz.medi": "uni1898.Dz.medi",
     "_Hx2.fina": "uni1874.Hx.fina",
+    "_Hx.fina.mvs": "Hx.fina.mvs",
     "_Kh.fina": "uni186C.Kh.medi._fina",
     "_N2.init": "N2.init.mvs",
+    "_N.fina.mvs": "N.fina.mvs",
     "_Sx2.init": "uni18A2.Sx.init",
     "_Sx2.medi": "uni18A2.Sx.medi",
     "_Sx2.fina": "uni18A2.Sx.fina",
+    "_WpA.fina": "WpA2.fina",
     "_Zr2.init": "uni188C.Zr.init",
     "_Zr2.medi": "uni188C.Zr.medi",
     "_Zr2.fina": "uni188C.Zr.fina",
+    "_Zs2I.isol": "ZsI.isol",
+    "_Zs2I.init": "ZsI.init",
+    "_Zs2I.medi": "ZsI.medi",
+    "_Zs2I.fina": "ZsI.fina",
     "_Zz2.init": "uni185C.Zc.init",
     "_Zz2.medi": "uni185C.Zc.medi",
     # `_Zz2.fina` has no counterpart in Noto, and is deliberately left empty.
     "_Zz3.init": "uni1896.Zz.init",
     "_Zz3.medi": "uni1896.Zz.medi",
     "_Zz3.fina": "uni1896.Zz.fina",
+    # The two letters outside every writing system draw their isolated form as the
+    # initial one, so the character glyph takes the initial written unit.
+    "u1878": "uni1878.Cx.init",
+    "u1898": "uni1898.Dz.init",
 }
 
 
@@ -301,11 +318,14 @@ def main() -> None:
 
     # Variants first: every written unit, at each joining position it is drawn in, in
     # alphabetical order of the written unit and isol/init/medi/fina order of the
-    # position.
+    # position. A written unit drawn before an MVS follows the plain one.
     for unit in sorted(i for i in writtenUnits if not isLvs(i)):
         for position in POSITIONS:
-            if position in writtenUnits[unit]:
-                want(f"_{unit}.{position}")
+            if position not in writtenUnits[unit]:
+                continue
+            want(f"_{unit}.{position}")
+            if "pre_mvs" in cast(dict[str, object], writtenUnits[unit][position]):
+                want(f"_{unit}.{position}.mvs")
 
     # Then the variants with the long vowel sign: the `Lv` written unit itself, and the
     # written forms a long vowel sign follows, e.g. `_AALv.isol`.
