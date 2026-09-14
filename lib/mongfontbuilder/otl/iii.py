@@ -862,13 +862,10 @@ def iii3(c: MongFeaComposer) -> None:
                     c.sub(*subArgs, by=None)
 
     if "TOD" in c.locales:
-        with c.Lookup("TOD:particle") as _particle:
-            c.sub(c.classes["TOD-n.init"], by="u1828.N.init.mvs")
-
         with c.Lookup("III.particle.TOD", feature="rclt", flags={"IgnoreMarks": True}):
             c.sub(
                 c.input(c.classes["mvs"], c.conditions["_.wide"]),
-                c.input(c.classes["TOD-n.init"], _particle),
+                c.input(c.classes["TOD-n.init"], c.conditions["TOD:particle"]),
                 c.classes["TOD-i.fina"],
                 by=None,
             )
@@ -1094,7 +1091,6 @@ def iii5(c: MongFeaComposer) -> None:
                 c.input(c.variants("MNGx", vowels, fina), c.conditions["MNGx:post_bowed"]),
                 by=None,
             )
-            c.sub(c.classes["MNGx-waX"], c.input(c.classes["MNGx-a"]), by="u1820.Aa.isol.post_wa")
 
     if "TOD" in c.locales:
         bowedB = c.namedGlyphClass("TOD-bowedB", c.variants("TOD", ["b", "p"]).glyphs)
@@ -1109,7 +1105,7 @@ def iii5(c: MongFeaComposer) -> None:
                 by=None,
             )
 
-            c.sub(bowed, c.input(c.classes["TOD:a_lvs.fina"]), by="u1820_u1843.AaLv.fina")
+            c.sub(bowed, c.input(c.classes["TOD-a_lvs.fina"]), by="u1820_u1843.AaLv.fina")
 
     if "TODx" in c.locales:
         bowedB = c.namedGlyphClass(
@@ -1314,7 +1310,7 @@ def iii6(c: MongFeaComposer) -> None:
     if "TODx" in c.locales:
         _lvsManualTodx = [
             ("TODx-i_lvs.fina", "fvs1.ignored", "u1845_u1843.IpLv.fina"),
-            ("TODx-i_lvs.fina", "fvs2.ignored", "u1845_u1843.I3Lv.fina"),
+            ("TODx-i_lvs.fina", "fvs2.ignored", "u1845_u1843.IpLv.fina"),
             ("TODx-ue_lvs.fina", "fvs1.ignored", "u1849_u1843.OLv.fina"),
             ("TODx-ue_lvs.fina", "fvs2.ignored", "u1849_u1843.ULv.fina"),
         ]
