@@ -9,7 +9,14 @@ from tptq.feacomposer import FeaComposer
 
 from .. import GlyphDescriptor, data, splitWrittens, uNameFromCodePoint, writtenCombinations
 from ..data import codePointToCmapVariant
-from ..data.types import FVS, CharacterName, JoiningPosition, LocaleID, joiningPositions
+from ..data.types import (
+    FVS,
+    CharacterName,
+    JoiningPosition,
+    LocaleID,
+    WrittenUnitID,
+    joiningPositions,
+)
 from ..spec import FontSpec, GlyphSpec
 from ..utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
 
@@ -62,6 +69,7 @@ class MongFeaComposer(FeaComposer):
     def compose(self) -> FontSpec:
         from . import ia, ib, iia, iib, iii
 
+        self.initWrittenUnits()
         self.constructPredefinedGlyphs()
         self.initControls()
         self.initVariants()
@@ -77,6 +85,43 @@ class MongFeaComposer(FeaComposer):
         ib.compose(self)
 
         return self.spec
+
+    def initWrittenUnits(self) -> None:
+        """Create the written units that are drawn as a control character.
+
+        The nirugu written unit is the nirugu itself: the source font carries the
+        control glyph, and `_Ni.medi` is built from it for the writing systems that
+        write with it. It is built before everything else, because the written forms
+        that join with the nirugu are built as components of it.
+        """
+
+        if not self.isWrittenUnitUsed("Ni"):
+            return
+
+        niruguName = self.glyphNameProcessor("nirugu")
+        name = self.glyphNameProcessor("_Ni.medi")
+        self.spec.newGlyphs[name] = GlyphSpec([niruguName] if niruguName in self.glyphs else [])
+
+    def isWrittenUnitUsed(self, unit: WrittenUnitID) -> bool:
+        """Whether any targeted writing system writes with *unit*.
+
+        A written unit is only needed where a written form of one of the targeted
+        writing systems is written with it; the nirugu, for example, is written by Sibe
+        and by Manchu.
+        """
+
+        for charName, positionToFVSToVariant in data.variants.items():
+            for position, fvsToVariant in positionToFVSToVariant.items():
+                for variant in fvsToVariant.values():
+                    for locale in self.locales:
+                        if locale not in variant.locales:
+                            continue
+                        written = GlyphDescriptor.fromData(
+                            charName, position, variant, locale=locale
+                        )
+                        if unit in written.units:
+                            return True
+        return False
 
     def constructPredefinedGlyphs(self) -> None:
         sources = list[GlyphDescriptor]()
@@ -199,14 +244,17 @@ class MongFeaComposer(FeaComposer):
             for glyphName in glyphClass.glyphSet():
                 self.spec.openTypeCategories[glyphName.glyph] = "mark"
 
-        # `nbspace` (a clone of `space` carrying NO-BREAK SPACE U+00A0) and the
-        # zero-width ignored `mvs.ignored` are set up here, alongside the other
-        # control glyphs, so they are created early and appear early in glyph
-        # order. `iib2` later splits a wide MVS into `nbspace` + `mvs.ignored`.
+        # `nbspace` (a clone of `space` carrying NO-BREAK SPACE U+00A0), the wide MVS
+        # (which draws as a space) and the zero-width ignored `mvs.ignored` are set up
+        # here, alongside the other control glyphs, so they are created early and appear
+        # early in glyph order. `iib2` later splits a wide MVS into `nbspace` +
+        # `mvs.ignored`.
         spaceName = self.glyphNameProcessor("space")
         nbspaceName = self.glyphNameProcessor("nbspace")
+        wideName = self.glyphNameProcessor("mvs.wide")
         ignoredName = self.glyphNameProcessor("mvs.ignored")
         self.spec.newGlyphs[nbspaceName] = GlyphSpec([spaceName])
+        self.spec.newGlyphs[wideName] = GlyphSpec([spaceName])
         self.spec.newGlyphs[ignoredName] = GlyphSpec([])
         self.spec.cmap[0x00A0] = nbspaceName
         self.spec.openTypeCategories[ignoredName] = "mark"

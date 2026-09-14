@@ -344,10 +344,7 @@ export const writtenUnits = {
     medi: { code: 0xe121 },
   },
   Ni: {
-    isol: { code: 0xe000 },
-    init: { code: 0xe000 },
     medi: { code: 0xe000 },
-    fina: { code: 0xe000 },
   },
   Nx: {
     medi: { code: 0xe0be },

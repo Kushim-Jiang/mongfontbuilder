@@ -604,8 +604,6 @@
   <string>_N_b.init.glif</string>
   <key>_Nb.medi</key>
   <string>_N_b.medi.glif</string>
-  <key>_Ni.medi</key>
-  <string>_N_i.medi.glif</string>
   <key>_Nx.fina</key>
   <string>_N_x.fina.glif</string>
   <key>_Nx.medi</key>
@@ -812,8 +810,6 @@
   <string>mvs.glif</string>
   <key>mvs.narrow</key>
   <string>mvs.narrow.glif</string>
-  <key>mvs.wide</key>
-  <string>mvs.wide.glif</string>
   <key>nirugu</key>
   <string>nirugu.glif</string>
   <key>nnbsp</key>

@@ -120,8 +120,12 @@ export function buildWrittenText(
   return result || "?";
 }
 
+/** The nirugu joins the same way everywhere, and the data defines it medially. */
 export function niText(pos: JoiningPosition): string {
-  return String.fromCodePoint(writtenUnits.Ni[pos].code);
+  const ni = writtenUnits.Ni as Partial<
+    Record<JoiningPosition, { code: number }>
+  >;
+  return String.fromCodePoint(ni[pos]?.code ?? writtenUnits.Ni.medi.code);
 }
 
 export function ctxBefore(p: JoiningPosition) {
