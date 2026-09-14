@@ -8,7 +8,8 @@ from . import MongFeaComposer
 
 # Letters that lie outside every writing system. Each is written with a written unit of
 # its own, which no character of the data writes with, so nothing else reaches its joining
-# forms.
+# forms, and its character glyph is built from that unit rather than stored in the source
+# font.
 OUTSIDE_WRITTEN_UNITS = {0x1878: "Cx", 0x1898: "Dz"}
 
 
@@ -17,6 +18,35 @@ def coversEveryWritingSystem(c: MongFeaComposer) -> bool:
 
     targeted = {i.removesuffix("x") for i in c.locales}
     return targeted == {i.removesuffix("x") for i in data.locales}
+
+
+def initOutsideLetters(c: MongFeaComposer) -> dict[int, str]:
+    """
+    Register the character glyph of each letter outside every writing system.
+
+    Such a letter draws its isolated form as the shape of the first form its written unit
+    has, which is the initial one, and it is not a source glyph: the font builds it from
+    that shape, which is also how it gets its cmap entry.
+    """
+
+    outside: dict[int, str] = {}
+    for codePoint, unit in OUTSIDE_WRITTEN_UNITS.items():
+        default = next(
+            (
+                member
+                for position in ("isol", "init", "medi", "fina")
+                if (member := f"_{unit}.{position}") in c.glyphs
+            ),
+            None,
+        )
+        if default is None:
+            # A source font without the written unit draws no such letter.
+            continue
+        name = c.glyphNameProcessor(uNameFromCodePoint(codePoint))
+        c.spec.cmap[codePoint] = name
+        c.spec.newGlyphs.setdefault(name, GlyphSpec([c.glyphNameProcessor(default)]))
+        outside[codePoint] = unit
+    return outside
 
 
 def compose(c: MongFeaComposer) -> None:
@@ -29,7 +59,7 @@ def compose(c: MongFeaComposer) -> None:
     """
 
     localeSet = {*c.locales}
-    outside = OUTSIDE_WRITTEN_UNITS if coversEveryWritingSystem(c) else {}
+    outside = initOutsideLetters(c) if coversEveryWritingSystem(c) else {}
     for position in joiningPositions:
         with c.Lookup(f"IIa.{position}", feature=position):
             for charName, positionToFVSToVariant in data.variants.items():
