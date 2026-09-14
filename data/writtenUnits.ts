@@ -83,6 +83,11 @@ export const writtenUnits = {
     init: { code: 0xe106 },
     medi: { code: 0xe107 },
   },
+  Cx: {
+    init: { code: 0xe140 },
+    medi: { code: 0xe141 },
+    fina: { code: 0xe142 },
+  },
   D: {
     init: { code: 0xe03a },
     medi: { code: 0xe03b },
@@ -136,6 +141,10 @@ export const writtenUnits = {
   Dy: {
     init: { code: 0xe10e },
     medi: { code: 0xe10f },
+  },
+  Dz: {
+    init: { code: 0xe143 },
+    medi: { code: 0xe144 },
   },
   E: {
     medi: { code: 0xe071, post_b: 0xe071 },

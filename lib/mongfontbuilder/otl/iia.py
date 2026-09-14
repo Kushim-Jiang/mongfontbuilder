@@ -1,17 +1,35 @@
 from fontTools import unicodedata
 
-from .. import data, uNameFromCodePoint
+from .. import GlyphDescriptor, data, uNameFromCodePoint
 from ..data import codePointToCmapVariant
 from ..data.types import joiningPositions
+from ..spec import GlyphSpec
 from . import MongFeaComposer
+
+# Letters that lie outside every writing system. Each is written with a written unit of
+# its own, which no character of the data writes with, so nothing else reaches its joining
+# forms.
+OUTSIDE_WRITTEN_UNITS = {0x1878: "Cx", 0x1898: "Dz"}
+
+
+def coversEveryWritingSystem(c: MongFeaComposer) -> bool:
+    """Whether the font is composed for every writing system the data knows."""
+
+    targeted = {i.removesuffix("x") for i in c.locales}
+    return targeted == {i.removesuffix("x") for i in data.locales}
 
 
 def compose(c: MongFeaComposer) -> None:
     """
     **Phase IIa.1: Initiation of cursive positions**
+
+    The letters that lie outside every writing system take their joining forms here as
+    well, but only where the font covers every writing system: they are written with
+    written units no character of the data writes with.
     """
 
     localeSet = {*c.locales}
+    outside = OUTSIDE_WRITTEN_UNITS if coversEveryWritingSystem(c) else {}
     for position in joiningPositions:
         with c.Lookup(f"IIa.{position}", feature=position):
             for charName, positionToFVSToVariant in data.variants.items():
@@ -28,3 +46,13 @@ def compose(c: MongFeaComposer) -> None:
                         uNameFromCodePoint(codePoint),
                         by=c.defaultVariant(charName, position),
                     )
+            for codePoint, unit in outside.items():
+                member = f"_{unit}.{position}"
+                if member not in c.glyphs:
+                    # A source font without the written unit draws no such form.
+                    continue
+                glyph = str(GlyphDescriptor([codePoint], [unit], position))
+                c.spec.newGlyphs[c.glyphNameProcessor(glyph)] = GlyphSpec(
+                    [c.glyphNameProcessor(member)]
+                )
+                c.sub(uNameFromCodePoint(codePoint), by=glyph)
