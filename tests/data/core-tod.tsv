@@ -10,10 +10,10 @@ a-6	b u y a n zwj a r b i n	B Op I A A A A R B Ip A
 e-1	e	A E
 e-2	e r t e	A E R Tp E
 e-3	e n e l g e n	A E N E L G E A
-e-4	h i sh i g zwj e r d e n i	K Ip Sh Ip Hp A E R Dp E N I3
+e-4	h i sh i g zwj e r d e n i	K Ip Sh Ip Hp A E R Dp E N Ip
 
-i-1	i	A I3
-i-2	i sh i	A Ip Sh I3
+i-1	i	A Ip
+i-2	i sh i	A Ip Sh Ip
 i-3	sh i l b i	Sh Ip L B Ip
 i-4	s a i n	S A A Ip A
 
@@ -39,16 +39,16 @@ ue-3	ue g e i g ue ue	A O G E A Ip G O U
 ue-4	ue z ue ue l h ue	A O Ch O O L K O
 ue-5	ch i ng zwj ue n e n	Jb Ip A G A O N E A
 
-lvs-1	a lvs sh i	A A Lv Sh I3
+lvs-1	a lvs sh i	A A Lv Sh Ip
 lvs-2	o b o lvs	A Ob B Ob Lv
 
 n-1	n a n d i n	N A A Dp Ip A
 n-2	e n e r g i	A E N E R G Ip
-n-3	b e lvs j i n mvs n i	B E Lv Cp Ip A - N2 I3
+n-3	b e lvs j i n mvs n i	B E Lv Cp Ip A - N2 Ip
 
 ng-1/p-1	p i ng p a ng	Pp Ip A G Pp A A G2
 
-b-1	b o r d o b u r i	B Ob R Dp Ob B Op R I3
+b-1	b o r d o b u r i	B Ob R Dp Ob B Op R Ip
 b-2	e l d e b	A E L Dp E B2
 
 p-2	t a i p	Tp A A Ip Pp
@@ -99,7 +99,7 @@ r-2	h a sh i r	Hx2 A Sh Ip R
 r-3	b ue r i n	B O R Ip A
 
 w-1	w i t a m i n	Wb Ip Tp A M Ip A
-w-2	sh u w a zr i	Sh Op Wb A Zz I3
+w-2	sh u w a zr i	Sh Op Wb A Zz Ip
 w-3	s l a w	S L A Wb
 
 f-1	f a sh i s t	W A Sh Ip S Tp
@@ -128,11 +128,11 @@ jy-2	jy i b	B Yp Ip B2
 jy-3	jy a m c a	B Yp A M J A
 jy-4	d o m jy a b	Dp Ob M B Yp A B2
 
-ny-1	ny i m i	Ny Ip M I3
+ny-1	ny i m i	Ny Ip M Ip
 ny-2	j i ny o	Cp Ip Ny Ob
 
 zr-1	zr a n d a n	Zz A A Dp A A
-zr-2	t a i zr i	Tp A A Ip Zz I3
+zr-2	t a i zr i	Tp A A Ip Zz Ip
 zr-3	d a n zr	Dp A A Zz
 
 lh-1	lh a r a m b a	L Hr A R A M B Aa
@@ -149,7 +149,7 @@ syllabic-h/g-1	h a g a c a h u	Hx2 A Hb A J A Hx Up
 syllabic-h/g-2	h i g e lvs d	K Ip G E Lv Dp
 syllabic-h/g-3	e l e g d e h ue	A E L E Hp Dp E K O
 
-particle-1	mvs n i	- N2 I3
+particle-1	mvs n i	- N2 Ip
 
 devsger-1	s a i n	S A A Ip A
 devsger-2	a d u u n	A A Dp Op O A

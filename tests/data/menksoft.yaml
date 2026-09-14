@@ -336,11 +336,11 @@
 0xF000A: uni1844.E.fina # 󰀊
 
 # uni1845
-0xE366: uni1845.AI3.isol # 
+0xE366: uni1845.AIp.isol # 
 0xE36D: uni1845.AIp.init # 
 0xE370: uni1845.Ip.medi # 
 0xE36F: uni1845.AIp.medi # 
-0xE36E: uni1845.I3.fina # 
+0xE36E: uni1845.Ip.fina # 
 0xE3AF: uni1845.Ip.fina # 
 
 # uni1846
@@ -453,7 +453,7 @@
 # uni1855.Y.init
 # uni1855.I.medi
 # uni1855.Y.medi
-0xE3A1: uni1855.I3.fina # 
+0xE3A1: uni1855.Ip.fina # 
 
 # uni1856
 0xE3A2: uni1856.Wb.init # 

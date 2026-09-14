@@ -4808,7 +4808,7 @@
       "0": {
         "written": [
           "A",
-          "I3"
+          "Ip"
         ],
         "default": true,
         "locales": {
@@ -4836,7 +4836,8 @@
             "eac": "TIS1"
           },
           "TODx": {
-            "gb": "0041 todo letter i first initial form"
+            "gb": "0041 todo letter i first initial form",
+            "lvs": true
           }
         }
       },
@@ -4883,7 +4884,8 @@
             "eac": "TIZ1"
           },
           "TODx": {
-            "gb": "0042 todo letter i first medial form"
+            "gb": "0042 todo letter i first medial form",
+            "lvs": true
           }
         }
       },
@@ -4902,7 +4904,7 @@
     "fina": {
       "0": {
         "written": [
-          "I3"
+          "Ip"
         ],
         "default": true,
         "locales": {
@@ -5241,7 +5243,8 @@
             "eac": "TUED2"
           },
           "TODx": {
-            "gb": "00BA todo letter ue second isolated form"
+            "gb": "00BA todo letter ue second isolated form",
+            "lvs": true
           }
         }
       }
@@ -5259,7 +5262,8 @@
             "eac": "TUES1"
           },
           "TODx": {
-            "gb": "0307 todo letter ue initial form"
+            "gb": "0307 todo letter ue initial form",
+            "lvs": true
           }
         }
       }
@@ -5276,7 +5280,8 @@
             "eac": "TUEZ1"
           },
           "TODx": {
-            "gb": "000C todo letter ue first medial form"
+            "gb": "000C todo letter ue first medial form",
+            "lvs": true
           }
         }
       },

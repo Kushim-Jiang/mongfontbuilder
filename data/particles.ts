@@ -57,7 +57,7 @@ export const particles: Partial<Record<LocaleID, Record<string, Particle>>> = {
     "mvs d e": { form: "Mvs.wide D A", indices: [1] },
   },
   TOD: {
-    "mvs n i": { form: "Mvs.wide N2 I3", indices: [1] },
+    "mvs n i": { form: "Mvs.wide N2 Ip", indices: [1] },
   },
   SIB: {
     "mvs i": { form: "Mvs.wide I", indices: [1] },

@@ -306,7 +306,7 @@
   },
   "TOD": {
     "mvs n i": {
-      "form": "Mvs.wide N2 I3",
+      "form": "Mvs.wide N2 Ip",
       "indices": [
         1
       ]

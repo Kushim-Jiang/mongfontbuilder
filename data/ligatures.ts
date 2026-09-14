@@ -168,6 +168,8 @@ export const ligatures: Record<
     Zs2I: ["isol", "init", "medi", "fina"],
     ZtAh: ["init", "medi"],
     ZtOh: ["isol", "init", "medi", "fina"],
+    WpA: ["fina"],
+    NGAa: ["isol", "fina"],
     BALv: ["init", "medi"],
     BAaLv: ["isol", "fina"],
     BELv: ["isol", "init", "medi", "fina"],

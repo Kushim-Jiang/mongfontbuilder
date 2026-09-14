@@ -227,9 +227,6 @@ export const writtenUnits = {
     medi: { code: 0xe009, post_b: 0xe202 },
     fina: { code: 0xe00a, post_b: 0xe203 },
   },
-  I3: {
-    fina: { code: 0xe07b, post_b: 0xe22b },
-  },
   I4: {
     fina: { code: 0xe0e8, post_b: 0xe203 },
   },
@@ -242,6 +239,7 @@ export const writtenUnits = {
   },
   Ip: {
     medi: { code: 0xe07c, post_b: 0xe07c },
+    fina: { code: 0xe07b, post_b: 0xe22b },
   },
   Iq: {
     init: { code: 0xe114 },

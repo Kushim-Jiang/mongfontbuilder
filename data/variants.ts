@@ -4035,7 +4035,7 @@ export const variants: Record<
   "MONGOLIAN LETTER TODO I": {
     isol: {
       "0": {
-        written: ["A", "I3"],
+        written: ["A", "Ip"],
         default: true,
         locales: {
           TOD: {
@@ -4060,6 +4060,7 @@ export const variants: Record<
           },
           TODx: {
             gb: "0041 todo letter i first initial form",
+            lvs: true,
           },
         },
       },
@@ -4097,6 +4098,7 @@ export const variants: Record<
           },
           TODx: {
             gb: "0042 todo letter i first medial form",
+            lvs: true,
           },
         },
       },
@@ -4112,7 +4114,7 @@ export const variants: Record<
     },
     fina: {
       "0": {
-        written: ["I3"],
+        written: ["Ip"],
         default: true,
         locales: {
           TOD: {
@@ -4391,6 +4393,7 @@ export const variants: Record<
           },
           TODx: {
             gb: "00BA todo letter ue second isolated form",
+            lvs: true,
           },
         },
       },
@@ -4406,6 +4409,7 @@ export const variants: Record<
           },
           TODx: {
             gb: "0307 todo letter ue initial form",
+            lvs: true,
           },
         },
       },
@@ -4421,6 +4425,7 @@ export const variants: Record<
           },
           TODx: {
             gb: "000C todo letter ue first medial form",
+            lvs: true,
           },
         },
       },
