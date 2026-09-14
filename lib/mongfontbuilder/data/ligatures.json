@@ -391,55 +391,45 @@
       "fina"
     ],
     "Hh2A": [
-      "init",
       "medi"
     ],
     "Hh2Aa": [
-      "isol",
       "fina"
     ],
     "HhA": [
-      "init",
-      "medi"
+      "init"
     ],
     "HhAa": [
-      "isol",
-      "fina"
+      "isol"
     ],
     "Hy2A": [
-      "init",
       "medi"
     ],
     "Hy2Aa": [
-      "isol",
       "fina"
     ],
     "HyA": [
-      "init",
-      "medi"
+      "init"
     ],
     "HyAa": [
-      "isol",
-      "fina"
+      "isol"
     ],
     "IhAh": [
-      "init",
-      "medi"
+      "isol",
+      "init"
     ],
     "IhOh": [
       "isol",
-      "init",
+      "init"
+    ],
+    "JhAh": [
       "medi",
       "fina"
     ],
-    "JhAh": [
-      "init",
+    "JhOh": [
       "medi"
     ],
-    "JhOh": [
-      "isol",
-      "init",
-      "medi",
+    "JhUh": [
       "fina"
     ],
     "K2A": [
@@ -601,13 +591,17 @@
       "fina"
     ],
     "LcAh": [
+      "isol",
       "init",
-      "medi"
+      "medi",
+      "fina"
     ],
     "LcOh": [
       "isol",
       "init",
-      "medi",
+      "medi"
+    ],
+    "LcUh": [
       "fina"
     ],
     "PA": [
@@ -803,13 +797,17 @@
       "fina"
     ],
     "ZtAh": [
+      "isol",
       "init",
-      "medi"
+      "medi",
+      "fina"
     ],
     "ZtOh": [
       "isol",
       "init",
-      "medi",
+      "medi"
+    ],
+    "ZtUh": [
       "fina"
     ],
     "WpA": [
