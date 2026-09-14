@@ -39,23 +39,40 @@ NOTO_UFO = Path("D:/Github/notofonts-mongolian/sources/NotoSansMongolian.ufo")
 
 POSITIONS = ("isol", "init", "medi", "fina")
 
+# Shapes the composer draws other glyphs from, e.g. the wide MVS from the space and the
+# nirugu written unit from the nirugu. They come before the written forms, so that a
+# reader of the font meets the building blocks first.
+BASE_GLYPHS = ("mvs.narrow", "nirugu", "space")
+
 CONTROL_GLYPHS = (
     "mvs",
     "mvs.narrow",
+    "mvs.nominal",
+    "nirugu",
+    "space",
+    "nnbsp",
     "fvs1",
     "fvs2",
     "fvs3",
     "fvs4",
-    "nirugu",
     "zwj",
     "zwnj",
-    "space",
-    "nnbsp",
 )
 
-# Letters and marks that lie outside the cursive letter inventories.
+# Characters that are not drawn as written units, in the order the font lists them: the
+# marks of the Mongolian block that the punctuation table names, the digits, and the
+# letters and signs outside the cursive letter inventories.
+MONGOLIAN_MARK_CODEPOINTS = (
+    0x1800,
+    *range(0x11660, 0x1166D),
+    *range(0x1801, 0x1807),
+    0x1808,
+    0x1809,
+)
+
+DIGIT_CODEPOINTS = tuple(range(0x1810, 0x181A))
+
 OTHER_LETTER_CODEPOINTS = (
-    0x1878,
     0x1880,
     0x1881,
     0x1882,
@@ -63,11 +80,14 @@ OTHER_LETTER_CODEPOINTS = (
     0x1884,
     0x1885,
     0x1886,
-    0x1898,
     0x18A9,
 )
 
-DIGIT_CODEPOINTS = tuple(range(0x1810, 0x181A))
+# Letters of the above that are drawn in a shape of their own before FVS1.
+FVS1_VARIANT_CODEPOINTS = (0x1880, 0x1881)
+
+# The dotted circle, which stands in for a written unit with no letter around it.
+DOTTED_CIRCLE_CODEPOINT = 0x25CC
 
 # Noto names a few standalone characters descriptively instead of `uniXXXX`.
 NOTO_ALIASES = {0x1885: "baluda", 0x1886: "tribaluda", 0x18A9: "dagalga"}
@@ -105,10 +125,10 @@ NOTO_GLYPH = {
     "_Zz3.init": "uni1896.Zz.init",
     "_Zz3.medi": "uni1896.Zz.medi",
     "_Zz3.fina": "uni1896.Zz.fina",
-    # The two letters outside every writing system draw their isolated form as the
-    # initial one, so the character glyph takes the initial written unit.
-    "u1878": "uni1878.Cx.init",
-    "u1898": "uni1898.Dz.init",
+    # The em dash and its upright form are drawn as the fullwidth hyphen-minus and its
+    # upright form, which Noto draws as such.
+    "u2014": "uniFF0D",
+    "u2014.vert": "uniFF0D.vert",
 }
 
 
@@ -316,7 +336,11 @@ def main() -> None:
     def want(name: str, unicodes: list[int] | None = None) -> None:
         wanted.setdefault(name, [] if unicodes is None else unicodes)
 
-    # Variants first: every written unit, at each joining position it is drawn in, in
+    # The building blocks first, in the order a written form draws them.
+    for name in BASE_GLYPHS:
+        want(name)
+
+    # Then the variants: every written unit, at each joining position it is drawn in, in
     # alphabetical order of the written unit and isol/init/medi/fina order of the
     # position. A written unit drawn before an MVS follows the plain one.
     for unit in sorted(i for i in writtenUnits if not isLvs(i)):
@@ -346,25 +370,34 @@ def main() -> None:
                 for position in sorted(table[name], key=POSITIONS.index):
                     want(f"_{name}.{position}")
 
-    # Everything else: the control characters, the characters that are not drawn as
-    # written units, and the long vowel sign variants.
-    for name in CONTROL_GLYPHS:
-        want(name)
-
-    standalone = [
+    # Then the characters that are not written as written units: the marks of the
+    # punctuation table that belong to the Mongolian block, the digits, and the letters
+    # and signs outside the cursive letter inventories.
+    for codePoint in (
+        *MONGOLIAN_MARK_CODEPOINTS,
         *DIGIT_CODEPOINTS,
         *OTHER_LETTER_CODEPOINTS,
-        *(codePoint for _, codePoint in punctuationEntries()),
-    ]
-    # The Chinese punctuation is drawn upright as well, in a vertical form of its own,
-    # which follows the glyph it is the vertical form of.
-    vertical = {codePoint for name, codePoint in punctuationEntries() if name.startswith("China")}
-    for codePoint in sorted(set(standalone)):
+    ):
         if codePoint in letterCodePoints:
             continue  # the composer builds this one from its written units
         want(f"u{codePoint:04X}", [codePoint])
-        if codePoint in vertical:
+        if codePoint in FVS1_VARIANT_CODEPOINTS:
+            want(f"u{codePoint:04X}.fvs1")
+
+    # Then the punctuation of the other scripts, in code point order, each followed by
+    # the upright form the composer draws for it.
+    for name, codePoint in sorted(punctuationEntries(), key=lambda i: i[1]):
+        if codePoint in MONGOLIAN_MARK_CODEPOINTS:
+            continue  # an entry of the Mongolian marks above
+        want(f"u{codePoint:04X}", [codePoint])
+        if name.startswith("China"):
             want(f"u{codePoint:04X}.vert")
+
+    # Then the dotted circle, which stands in for a written unit that has no letter
+    # around it, and the control characters that shape the written forms.
+    want(f"u{DOTTED_CIRCLE_CODEPOINT:04X}", [DOTTED_CIRCLE_CODEPOINT])
+    for name in CONTROL_GLYPHS:
+        want(name)
 
     # Whatever the composer references but neither the datasets above nor the composer
     # itself provide: a character whose default written form differs in every writing
@@ -423,8 +456,8 @@ def main() -> None:
         # Anchors are deliberately not copied.
         copiedCount += 1
 
-    # Glyph order: variants, then ligatures, then the rest — the order the glyphs
-    # were created in above.
+    # Glyph order: the building blocks, the variants, the ligatures, then the rest — the
+    # order the glyphs were created in above.
     font.lib["public.glyphOrder"] = [".notdef", *wanted]
     font.lib.pop("public.skipExportGlyphs", None)
 
