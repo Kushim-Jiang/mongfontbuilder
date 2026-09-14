@@ -18,6 +18,7 @@ export default defineConfig({
         "introduction",
         "architecture",
         "toolchain",
+        "written-units",
         {
           label: "Writing systems",
           items: [

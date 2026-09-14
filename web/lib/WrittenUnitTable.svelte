@@ -1,6 +1,6 @@
 <script lang="ts">
   interface Props {
-    locale: LocaleID;
+    locale: LocaleID | LocaleID[];
   }
   let { locale }: Props = $props();
 
@@ -12,27 +12,30 @@
   import { writtenUnits } from "../../data/writtenUnits";
   import { aliases } from "../../data/aliases";
   import LetterVariant from "./LetterVariant.svelte";
-  import { localeNS, orderedAliases, mapGetOrCreate, isVariantRef, niText } from "./utils";
+  import { localeNS, mapGetOrCreate, isVariantRef, niText } from "./utils";
 
-  const _orderedAliases = $derived(orderedAliases(locale));
+  const localesToShow = $derived(Array.isArray(locale) ? locale : [locale]);
 
   const unitToPositionToLetters = $derived.by(() => {
-    const _localeNamespace = localeNS(locale);
-    const map = new Map<WrittenUnitID, Map<JoiningPosition, Set<string>>>();
-    for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
-      const aliasData = aliases[charName];
-      const alias = typeof aliasData === "object" ? aliasData[_localeNamespace] : aliasData;
-      if (!alias) continue;
-      for (const [position, fvsToVariant] of Object.entries(positionToFVSToVariant)) {
-        for (const variant of Object.values(fvsToVariant)) {
-          const localeData = variant.locales[locale];
-          if (!localeData) continue;
-          const written = localeData.written ?? variant.written;
-          if (isVariantRef(written)) continue;
-          for (const [index, unit] of (written as WrittenUnitID[]).entries()) {
-            const positionToLetters = mapGetOrCreate(map, unit, () => new Map<JoiningPosition, Set<string>>());
-            const up: JoiningPosition = written.length === 1 ? (position as JoiningPosition) : ["isol", "init"].includes(position) && index === 0 ? "init" : ["isol", "fina"].includes(position) && index === written.length - 1 ? "fina" : "medi";
-            mapGetOrCreate(positionToLetters, up, () => new Set()).add(alias);
+    const map = new Map<WrittenUnitID, Map<JoiningPosition, Map<LocaleID, Set<string>>>>();
+    for (const currentLocale of localesToShow) {
+      const _localeNamespace = localeNS(currentLocale);
+      for (const [charName, positionToFVSToVariant] of Object.entries(variants)) {
+        const aliasData = aliases[charName];
+        const alias = typeof aliasData === "object" ? aliasData[_localeNamespace] : aliasData;
+        if (!alias) continue;
+        for (const [position, fvsToVariant] of Object.entries(positionToFVSToVariant)) {
+          for (const variant of Object.values(fvsToVariant)) {
+            const localeData = variant.locales[currentLocale];
+            if (!localeData) continue;
+            const written = localeData.written ?? variant.written;
+            if (isVariantRef(written)) continue;
+            for (const [index, unit] of (written as WrittenUnitID[]).entries()) {
+              const positionToLetters = mapGetOrCreate(map, unit, () => new Map<JoiningPosition, Map<LocaleID, Set<string>>>());
+              const up: JoiningPosition = written.length === 1 ? (position as JoiningPosition) : ["isol", "init"].includes(position) && index === 0 ? "init" : ["isol", "fina"].includes(position) && index === written.length - 1 ? "fina" : "medi";
+              const localeToLetters = mapGetOrCreate(positionToLetters, up, () => new Map<LocaleID, Set<string>>());
+              mapGetOrCreate(localeToLetters, currentLocale, () => new Set()).add(alias);
+            }
           }
         }
       }
@@ -211,17 +214,17 @@
         <tr>
           <td {id}>{id}</td>
           {#each joiningPositions as position}
-            {@const letters = positionToLetters.get(position)}
-            <td id="{id}-{position}" class={{ variant: true, undefined: !letters }}>
-              {#if letters}
-                <LetterVariant id={id as WrittenUnitID} {position} aliases={_orderedAliases.filter((a) => letters.has(a))} />
+            {@const localeToLetters = positionToLetters.get(position)}
+            <td id="{id}-{position}" class={{ variant: true, undefined: !localeToLetters }}>
+              {#if localeToLetters}
+                <LetterVariant id={id as WrittenUnitID} {position} />
               {/if}
             </td>
           {/each}
           {#each ["init", "medi", "fina"] as lp}
-            {@const col = lig?.[lp as "init" | "medi" | "fina"]?.filter((r) => (r.kind !== "post_w" || locale === "MNGx") && positionToLetters.has(lp as JoiningPosition))}
-            <td class={{ lig: true, undefined: !col?.length }}>
-              {#if col}
+            {@const col = lig?.[lp as "init" | "medi" | "fina"]?.filter((r) => r.kind !== "post_w" || localesToShow.includes("MNGx"))}
+            <td class={{ lig: true, undefined: !col?.length || !positionToLetters.has(lp as JoiningPosition) }}>
+              {#if col && positionToLetters.has(lp as JoiningPosition)}
                 {#each col as row, i}
                   {#if i > 0}<br />{/if}
                   <span class="wu">
