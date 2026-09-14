@@ -86,7 +86,13 @@ def iterLigatureSubstitutions(
             for units in combination
         ]
         for parts in product(*writtenLists):
-            yield parts, ligateParts([*parts])
+            try:
+                ligature = ligateParts([*parts])
+            except KeyError:
+                # The positions of these parts do not join — two final forms, for
+                # example — so they form no ligature.
+                continue
+            yield parts, ligature
 
 
 def implementLigature(

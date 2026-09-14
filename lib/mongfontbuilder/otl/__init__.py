@@ -9,7 +9,7 @@ from tptq.feacomposer import FeaComposer
 
 from .. import GlyphDescriptor, data, splitWrittens, uNameFromCodePoint, writtenCombinations
 from ..data import codePointToCmapVariant
-from ..data.types import FVS, JoiningPosition, LocaleID, joiningPositions
+from ..data.types import FVS, CharacterName, JoiningPosition, LocaleID, joiningPositions
 from ..spec import FontSpec, GlyphSpec
 from ..utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
 
@@ -39,9 +39,16 @@ class MongFeaComposer(FeaComposer):
         self.locales = locales
         self.spec = FontSpec(cmap={}, newGlyphs={}, openTypeCategories={})
 
-        # TODO: only support one locale
-        assert len({locale.removesuffix("x") for locale in self.locales}) == 1
-        self.locale: LocaleID = cast(LocaleID, self.locales[0].removesuffix("x"))
+        # Every writing system keeps its own namespace (glyph classes, lookups and
+        # conditions are all prefixed with the locale), so several writing systems can
+        # be composed into one font. `self.locale` is the primary writing system; it is
+        # only used where the output can carry a single answer for a character that is
+        # shared between writing systems (see `iia`).
+        self.writingSystems: list[LocaleID] = [
+            cast(LocaleID, locale.removesuffix("x"))
+            for locale in dict.fromkeys(locale.removesuffix("x") for locale in self.locales)
+        ]
+        self.locale: LocaleID = self.writingSystems[0]
 
         self.classes = {}
         self.conditions = {}
@@ -86,37 +93,65 @@ class MongFeaComposer(FeaComposer):
             variantNames = list[str]()
             for position, fvsToVariant in positionToFVSToVariant.items():
                 for variant in fvsToVariant.values():
-                    if not targetedLocales.intersection(variant.locales):
+                    usedLocales = targetedLocales.intersection(variant.locales)
+                    if not usedLocales:
                         continue
 
-                    target = GlyphDescriptor.fromData(
-                        charName, position, variant, locale=self.locale
-                    )
-                    targetName = str(target)
-                    variantNames.append(targetName)
+                    # A variant may be shared by several writing systems; each locale
+                    # resolves its own written form, so one target is built per locale.
+                    for target in (
+                        GlyphDescriptor.fromData(
+                            charName, position, variant, locale=cast(LocaleID, usedLocale)
+                        )
+                        for usedLocale in sorted(usedLocales, key=self.locales.index)
+                    ):
+                        targetName = str(target)
+                        variantNames.append(targetName)
 
-                    if self.glyphNameProcessor(targetName) in self.glyphs:
-                        continue
+                        if self.glyphNameProcessor(targetName) in self.glyphs:
+                            continue
 
-                    memberNames: list[str]
-                    writtenTarget = replace(target, codePoints=[], suffixes=[])
-                    memberNames = _findMemberNames(sources, writtenTarget)
+                        memberNames: list[str]
+                        writtenTarget = replace(target, codePoints=[], suffixes=[])
+                        memberNames = _findMemberNames(sources, writtenTarget)
 
-                    glyphSpec = GlyphSpec([self.glyphNameProcessor(i) for i in memberNames])
-                    if pseudoPosition := target.pseudoPosition():
-                        glyphSpec.initPadding = pseudoPosition in ["isol", "init"]
-                        glyphSpec.finaPadding = pseudoPosition in ["isol", "fina"]
-                    self.spec.newGlyphs[self.glyphNameProcessor(targetName)] = glyphSpec
+                        glyphSpec = GlyphSpec([self.glyphNameProcessor(i) for i in memberNames])
+                        if pseudoPosition := target.pseudoPosition():
+                            glyphSpec.initPadding = pseudoPosition in ["isol", "init"]
+                            glyphSpec.finaPadding = pseudoPosition in ["isol", "fina"]
+                        self.spec.newGlyphs[self.glyphNameProcessor(targetName)] = glyphSpec
 
             if variantNames:
                 codePoint = ord(unicodedata.lookup(charName))
-                variant = GlyphDescriptor([codePoint], *codePointToCmapVariant[codePoint])
-                codePointToVariantGlyph[codePoint] = str(variant)
+                # A character whose default variant is written differently in every
+                # writing system has no cross-locale written form, hence no cmap entry.
+                if resolved := codePointToCmapVariant.get(codePoint):
+                    codePointToVariantGlyph[codePoint] = str(
+                        GlyphDescriptor([codePoint], *resolved)
+                    )
 
         for codePoint, variantGlyph in codePointToVariantGlyph.items():
             processedName = self.glyphNameProcessor(uNameFromCodePoint(codePoint))
             self.spec.cmap[codePoint] = processedName
             self.spec.newGlyphs[processedName] = GlyphSpec([self.glyphNameProcessor(variantGlyph)])
+
+    def constructLvsGlyphs(self, variants: list[GlyphDescriptor]) -> None:
+        """Create the glyph of each long vowel sign variant.
+
+        A long vowel sign variant is drawn as the written form it follows plus `Lv`,
+        which the source font carries as one written form — `_AALv.isol` draws
+        `u1820_u1843.AALv.isol` — so the variant is built as a component of it rather
+        than stored in the source font.
+        """
+
+        for variant in variants:
+            name = self.glyphNameProcessor(str(variant))
+            if name in self.spec.newGlyphs:
+                continue
+            member = self.glyphNameProcessor(
+                "_" + str(GlyphDescriptor([], variant.units, variant.position))
+            )
+            self.spec.newGlyphs[name] = GlyphSpec([member] if member in self.glyphs else [])
 
     def initControls(self) -> None:
         """
@@ -259,7 +294,14 @@ class MongFeaComposer(FeaComposer):
                     positionalClass = self.namedGlyphClass(
                         letter + "." + position,
                         [
-                            str(GlyphDescriptor.fromData(charName, position, i, locale=self.locale))
+                            str(
+                                GlyphDescriptor.fromData(
+                                    charName,
+                                    position,
+                                    i,
+                                    locale=cast(LocaleID, locale.removesuffix("x")),
+                                )
+                            )
                             for i in variants.values()
                             if locale in i.locales
                         ],
@@ -271,21 +313,24 @@ class MongFeaComposer(FeaComposer):
                     ).append(positionalClass)
 
                     lvsVariants = [
-                        GlyphDescriptor.fromData(charName, position, i, locale=self.locale)
+                        GlyphDescriptor.fromData(
+                            charName,
+                            position,
+                            i,
+                            locale=cast(LocaleID, locale.removesuffix("x")),
+                        )
                         for i in variants.values()
                         if locale in i.locales and i.locales[locale].lvs
                     ]
                     if lvsVariants:
                         lvsVariants = [
-                            str(
-                                GlyphDescriptor(
-                                    v.codePoints + [0x1843], v.units + ["Lv"], v.position
-                                )
-                            )
+                            GlyphDescriptor(v.codePoints + [0x1843], v.units + ["Lv"], v.position)
                             for v in lvsVariants
                         ]
+                        self.constructLvsGlyphs(lvsVariants)
                         lvsPositionalClass = self.namedGlyphClass(
-                            letter + "_lvs." + position, lvsVariants
+                            letter + "_lvs." + position,
+                            [str(v) for v in lvsVariants],
                         )
                         self.classes[letter + "_lvs." + position] = lvsPositionalClass
                         lvsPositionalClasses.append(lvsPositionalClass)
@@ -326,7 +371,10 @@ class MongFeaComposer(FeaComposer):
                                         self.classes[letter + "." + position],
                                         by=str(
                                             GlyphDescriptor.fromData(
-                                                charName, position, variant, locale=self.locale
+                                                charName,
+                                                position,
+                                                variant,
+                                                locale=cast(LocaleID, locale.removesuffix("x")),
                                             )
                                         ),
                                     )
@@ -423,6 +471,24 @@ class MongFeaComposer(FeaComposer):
                             ]
                     glyphs.extend(str(v) for v in variants if str(v) not in glyphs)
         return self.glyphClass(glyphs)
+
+    def defaultVariant(self, charName: CharacterName, position: JoiningPosition) -> str:
+        """The glyph that `position` maps a character to by default.
+
+        A character shared between writing systems is written differently in each of
+        them, but the font can only carry one answer for it. A real variant wins over a
+        fabricated one — a variant borrowed from another joining position, marked by a
+        `_position` suffix; among fabricated variants the first writing system in
+        `self.locales` wins.
+        """
+
+        candidates = [
+            GlyphDescriptor.fromData(charName, position, locale=locale) for locale in self.locales
+        ]
+        for candidate in candidates:
+            if candidate.pseudoPosition() is None:
+                return str(candidate)
+        return str(candidates[0])
 
     def getDefault(
         self,

@@ -1,6 +1,7 @@
 from fontTools import unicodedata
 
-from .. import GlyphDescriptor, data, uNameFromCodePoint
+from .. import data, uNameFromCodePoint
+from ..data import codePointToCmapVariant
 from ..data.types import joiningPositions
 from . import MongFeaComposer
 
@@ -14,11 +15,16 @@ def compose(c: MongFeaComposer) -> None:
     for position in joiningPositions:
         with c.Lookup(f"IIa.{position}", feature=position):
             for charName, positionToFVSToVariant in data.variants.items():
+                codePoint = ord(unicodedata.lookup(charName))
+                # A character written differently in every writing system has no
+                # cross-locale default, so no glyph of it exists to be mapped here.
+                if codePoint not in codePointToCmapVariant:
+                    continue
                 if any(
                     localeSet.intersection(i.locales)
                     for i in positionToFVSToVariant[position].values()
                 ):
                     c.sub(
-                        uNameFromCodePoint(ord(unicodedata.lookup(charName))),
-                        by=str(GlyphDescriptor.fromData(charName, position, locale=c.locale)),
+                        uNameFromCodePoint(codePoint),
+                        by=c.defaultVariant(charName, position),
                     )
