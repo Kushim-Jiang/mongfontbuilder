@@ -166,3 +166,44 @@ starlight-toc,
 a {
   text-decoration: none !important;
 }
+
+/* ── Unified writing system ── */
+
+/* Both tables of this chapter are wider than the pane, so they use it in full and
+   keep the even shape columns the columns declare. */
+.main-pane:has(.unified-writing-system) {
+  --sl-content-width: 100%;
+}
+
+.main-pane:has(.unified-writing-system) table {
+  table-layout: fixed;
+}
+
+/* The components give their cells a width for the single writing system chapters,
+   where every column is a shape. Here the even columns above decide, so the cells
+   must stay out of it. */
+.main-pane:has(.unified-writing-system) table th,
+.main-pane:has(.unified-writing-system) table td {
+  width: auto;
+}
+
+.main-pane:has(.unified-writing-system) table.written-units col.unit {
+  width: 9%;
+}
+
+.main-pane:has(.unified-writing-system) table.written-units col.variant,
+.main-pane:has(.unified-writing-system) table.written-units col.ligature {
+  width: 13%;
+}
+
+.main-pane:has(.unified-writing-system) table.characters col.letter {
+  width: 12%;
+}
+
+.main-pane:has(.unified-writing-system) table.characters col.fvs {
+  width: 8%;
+}
+
+.main-pane:has(.unified-writing-system) table.characters col.variant {
+  width: 20%;
+}

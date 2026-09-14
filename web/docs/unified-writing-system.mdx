@@ -1,0 +1,25 @@
+---
+title: Unified writing system
+description: Every written unit and every character of the supported writing systems, in one table each.
+---
+
+import WrittenUnitTable from "../lib/WrittenUnitTable.svelte";
+import LetterTable from "../lib/LetterTable.svelte";
+
+export const locales = ["MNG", "MNGx", "TOD", "TODx", "SIB", "MCH", "MCHx"];
+
+<div class="unified-writing-system">
+
+## Written units
+
+This table collects every written unit of all supported writing systems. Each position shows one shape.
+
+<WrittenUnitTable locale={locales} />
+
+## Characters
+
+This table collects every character of all supported writing systems, with its variants by joining position.
+
+<LetterTable locale={locales} />
+
+</div>

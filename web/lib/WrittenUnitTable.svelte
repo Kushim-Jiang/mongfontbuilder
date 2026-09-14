@@ -15,6 +15,8 @@
   import { localeNS, mapGetOrCreate, isVariantRef, niText } from "./utils";
 
   const localesToShow = $derived(Array.isArray(locale) ? locale : [locale]);
+  /** A unified table merges the writing systems, so each shape is labelled with them. */
+  const unified = $derived(localesToShow.length > 1);
 
   const unitToPositionToLetters = $derived.by(() => {
     const map = new Map<WrittenUnitID, Map<JoiningPosition, Map<LocaleID, Set<string>>>>();
@@ -198,7 +200,17 @@
   });
 </script>
 
-<table>
+<table class="written-units">
+  <colgroup>
+    <col class="unit" />
+    <col class="variant" />
+    <col class="variant" />
+    <col class="variant" />
+    <col class="variant" />
+    <col class="ligature" />
+    <col class="ligature" />
+    <col class="ligature" />
+  </colgroup>
   <thead>
     <tr><th rowspan="2">ID</th><th colspan="4">Variants</th><th colspan="3">Ligated Variants</th></tr>
     <tr>
@@ -217,6 +229,9 @@
             {@const localeToLetters = positionToLetters.get(position)}
             <td id="{id}-{position}" class={{ variant: true, undefined: !localeToLetters }}>
               {#if localeToLetters}
+                {#if unified}
+                  <span class="locale-label">{[...localeToLetters.keys()].join(" ")}</span>
+                {/if}
                 <LetterVariant id={id as WrittenUnitID} {position} />
               {/if}
             </td>

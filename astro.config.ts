@@ -18,7 +18,6 @@ export default defineConfig({
         "introduction",
         "architecture",
         "toolchain",
-        "written-units",
         {
           label: "Writing systems",
           items: [
@@ -31,6 +30,7 @@ export default defineConfig({
             "manchu-ali-gali",
           ],
         },
+        "unified-writing-system",
         "digits-and-punctuation",
         "comparison",
         "modifications",
