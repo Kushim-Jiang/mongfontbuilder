@@ -1981,14 +1981,17 @@ export const variants: Record<
             eac: "MMM1",
           },
           SIB: {
+            written: ["M3"],
             gb: "0021 sibe letter ma final form",
             eac: "SMAM1",
           },
           MCH: {
+            written: ["M3"],
             gb: "0021 manchu letter ma final form",
             eac: "MMAM1",
           },
           MCHx: {
+            written: ["M3"],
             gb: "0021 manchu letter ma final form",
           },
         },

@@ -331,6 +331,9 @@ export const writtenUnits = {
   M2: {
     fina: { code: 0xe086 },
   },
+  M3: {
+    fina: { code: 0xe13e },
+  },
   N: {
     init: { code: 0xe013 },
     medi: { code: 0xe014 },
