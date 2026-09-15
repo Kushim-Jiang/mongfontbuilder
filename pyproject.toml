@@ -42,5 +42,9 @@ src = [".", "lib", "tests"] # Treat as first-party for sorting imports
 line-length = 100
 lint.select = []
 
+[tool.pyright]
+include = ["lib", "tests", "tools"]
+extraPaths = ["lib"]
+
 [tool.pytest.ini_options]
 addopts = "lib tests --doctest-modules --doctest-report ndiff --color=yes"

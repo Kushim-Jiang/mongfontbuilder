@@ -50,8 +50,8 @@ def _setup_weasyprint() -> None:
 
 _setup_weasyprint()
 
-from lxml import etree  # noqa: E402
-from lxml import html as lhtml
+import lxml.etree as etree  # noqa: E402
+from lxml import html as lhtml  # noqa: E402
 from weasyprint import HTML  # noqa: E402
 
 # --------------------------------------------------------------------------- #
