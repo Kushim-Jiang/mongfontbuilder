@@ -1166,9 +1166,7 @@ export const variants: Record<
             gb: "0007 mongolian letter na second initial form",
             eac: "MNS2",
           },
-          MCHx: {
-            conditions: ["devsger"],
-          },
+          MCHx: {},
         },
       },
       "2": {

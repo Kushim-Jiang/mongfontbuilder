@@ -28,6 +28,10 @@
       "medi",
       "fina"
     ],
+    "BI4": [
+      "isol",
+      "fina"
+    ],
     "BIp": [
       "isol",
       "init",
@@ -136,6 +140,10 @@
       "isol",
       "init",
       "medi",
+      "fina"
+    ],
+    "BgI4": [
+      "isol",
       "fina"
     ],
     "BgO": [
@@ -248,6 +256,10 @@
       "isol",
       "init",
       "medi",
+      "fina"
+    ],
+    "GI4": [
+      "isol",
       "fina"
     ],
     "GIp": [
@@ -464,6 +476,10 @@
       "medi",
       "fina"
     ],
+    "K2I4": [
+      "isol",
+      "fina"
+    ],
     "K2Ip": [
       "isol",
       "init",
@@ -518,6 +534,10 @@
       "isol",
       "init",
       "medi",
+      "fina"
+    ],
+    "KI4": [
+      "isol",
       "fina"
     ],
     "KIp": [
@@ -712,6 +732,10 @@
       "isol",
       "init",
       "medi",
+      "fina"
+    ],
+    "PgI4": [
+      "isol",
       "fina"
     ],
     "PgO": [
