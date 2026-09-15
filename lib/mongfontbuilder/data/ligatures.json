@@ -78,6 +78,10 @@
       "medi",
       "fina"
     ],
+    "BWpA": [
+      "isol",
+      "fina"
+    ],
     "BcA": [
       "init",
       "medi"
@@ -154,6 +158,10 @@
       "isol",
       "init",
       "medi",
+      "fina"
+    ],
+    "BgWpA": [
+      "isol",
       "fina"
     ],
     "BhA": [
@@ -278,6 +286,10 @@
       "isol",
       "init",
       "medi",
+      "fina"
+    ],
+    "GWpA": [
+      "isol",
       "fina"
     ],
     "GcA": [
@@ -484,6 +496,10 @@
       "medi",
       "fina"
     ],
+    "K2WpA": [
+      "isol",
+      "fina"
+    ],
     "KA": [
       "init",
       "medi"
@@ -540,6 +556,10 @@
       "isol",
       "init",
       "medi",
+      "fina"
+    ],
+    "KWpA": [
+      "isol",
       "fina"
     ],
     "KcA": [
@@ -712,6 +732,10 @@
       "isol",
       "init",
       "medi",
+      "fina"
+    ],
+    "PgWpA": [
+      "isol",
       "fina"
     ],
     "PhA": [
