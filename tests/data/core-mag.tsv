@@ -124,9 +124,9 @@ pu1-śa-1	sh a space sh a aaX space sh i space sh i i space sh u space sh u u	Sp
 pu1-śa-2	sh i r fvs1 i space sh i r fvs1 i i space sh i l i space sh i l i i	Sp I R3 I - Sp I R3 I I - Sp I L I - Sp I L I I
 pu1-śa-3	sh e space sh e i space sh o space sh o o	Sp Ah - Sp Ah I - Sp O - Sp O U
 
-pu1-ṣa-1	shX a space shX a aaX space shX i space shX i i space shX u space shX u u	Sx A - Sx A Aw - Sx I - Sx I I - Sx Oh - Sx Oh U
-pu1-ṣa-2	shX i r fvs1 i space shX i r fvs1 i i space shX i l i space shX i l i i	Sx I R3 I - Sx I R3 I I - Sx I L I - Sx I L I I
-pu1-ṣa-3	shX e space shX e i space shX o space shX o o	Sx Ah - Sx Ah I - Sx O - Sx O U
+pu1-ṣa-1	shX a space shX a aaX space shX i space shX i i space shX u space shX u u	Sx2 A - Sx2 A Aw - Sx2 I - Sx2 I I - Sx2 Oh - Sx2 Oh U
+pu1-ṣa-2	shX i r fvs1 i space shX i r fvs1 i i space shX i l i space shX i l i i	Sx2 I R3 I - Sx2 I R3 I I - Sx2 I L I - Sx2 I L I I
+pu1-ṣa-3	shX e space shX e i space shX o space shX o o	Sx2 Ah - Sx2 Ah I - Sx2 O - Sx2 O U
 
 pu1-sa-1	s a space s a aaX space s i space s i i space s u space s u u	S A - S A Aw - S I - S I I - S Oh - S Oh U
 pu1-sa-2	s i r fvs1 i space s i r fvs1 i i space s i l i space s i l i i	S I R3 I - S I R3 I I - S I L I - S I L I I
@@ -136,9 +136,9 @@ pu1-ha-1	h a space h a aaX space h i space h i i space h ue space h ue u	Hc A - 
 pu1-ha-2	h i r fvs1 i space h i r fvs1 i i space h i l i space h i l i i	Gc I R3 I - Gc I R3 I I - Gc I L I - Gc I L I I
 pu1-ha-3	h e space h e i space h o space h o o	Gc Aa - Gc A I - Hc O - Hc O U
 
-pu1-kṣa-1	gh shX a space gh shX a aaX space gh shX i space gh shX i i space gh shX u fvs2 space gh shX u u	Kh Sx A - Kh Sx A Aw - Kh Sx I - Kh Sx I I - Kh Sx Oh - Kh Sx Oh U
-pu1-kṣa-2	gh shX i r fvs1 i space gh shX i r fvs1 i i space gh shX i l i space gh shX i l i i	Kh Sx I R3 I - Kh Sx I R3 I I - Kh Sx I L I - Kh Sx I L I I
-pu1-kṣa-3	gh shX e space gh shX e i space gh shX o fvs1 space gh shX o o	Kh Sx Ah - Kh Sx Ah I - Kh Sx O - Kh Sx O U
+pu1-kṣa-1	gh shX a space gh shX a aaX space gh shX i space gh shX i i space gh shX u fvs2 space gh shX u u	Kh Sx2 A - Kh Sx2 A Aw - Kh Sx2 I - Kh Sx2 I I - Kh Sx2 Oh - Kh Sx2 Oh U
+pu1-kṣa-2	gh shX i r fvs1 i space gh shX i r fvs1 i i space gh shX i l i space gh shX i l i i	Kh Sx2 I R3 I - Kh Sx2 I R3 I I - Kh Sx2 I L I - Kh Sx2 I L I I
+pu1-kṣa-3	gh shX e space gh shX e i space gh shX o fvs1 space gh shX o o	Kh Sx2 Ah - Kh Sx2 Ah I - Kh Sx2 O - Kh Sx2 O U
 
 # bowed class: gh, kh, pX, p, b, bhX
 # halfbowed class: g, ghX, ngX, h
@@ -153,7 +153,7 @@ pu2-ña	n i y a space n i y r a space n i y l a space n i o w a	N I Y A - N I Y 
 pu3-bowed	gh gh a space kh kh a space pX pX a space p p a	Kh Kh Aa - K2 K2 Aa - Bg Bg Aa - Pb Pb Aa
 pu3-halfbowed	g g a space ghX ghX a space ngX ngX a space h h a	Hh Hh A - Hy Hy A - Nb Nb A - Hc Hc A
 pu3-nonbowed	cX cX a space c c a space z z a space jhX jhX a	Ct Ct A - Cs Cs A - Zs Zs A - Zt Zt A
-pu3-other	n i y n i y a space gh shX gh shX a	N I Y N I Y A - Kh Sx Kh Sx A
+pu3-other	n i y n i y a space gh shX gh shX a	N I Y N I Y A - Kh Sx2 Kh Sx2 A
 
 pu4-1	ngX gh a space ngX kh a space ngX g a space ngX ghX a	Nb Kh Aa - Nb K2 Aa - Nb Hh A - Nb Hy A
 pu4-2	n i y cX a space n i y c a space n i y z a space n i y jhX a	N I Y Ct A - N I Y Cs A - N I Y Zs A - N I Y Zt A
@@ -161,10 +161,10 @@ pu4-3	nrX trX a space nrX cr a space nrX zr a space nrX drhX a	Wn Jt A - Wn Cc A
 pu4-4	n tX a space n t a space n d a space n dhX a	N Dr A - N D A - N Dh A - N Dx A
 pu4-5	m pX a space m p a space m b a space m bhX a	M Bg Aa - M Pb Aa - M B Aa - M Bc Aa
 
-pu5-bowed	l gh a space sh gh a space shX gh a space s gh a	L Kh Aa - Sp Kh Aa - Sx Kh Aa - S Kh Aa
-pu5-halfbowed	l g a space sh g a space shX g a space s g a	L Hh A - Sp Hh A - Sx Hh A - S Hh A
-pu5-nonbowed	l cX a space sh cX a space shX cX a space s cX a	L Ct A - Sp Ct A - Sx Ct A - S Ct A
-pu5-other	l n i y a space sh n i y a space shX n i y a space s n i y a	L N I Y A - Sp N I Y A - Sx N I Y A - S N I Y A
+pu5-bowed	l gh a space sh gh a space shX gh a space s gh a	L Kh Aa - Sp Kh Aa - Sx2 Kh Aa - S Kh Aa
+pu5-halfbowed	l g a space sh g a space shX g a space s g a	L Hh A - Sp Hh A - Sx2 Hh A - S Hh A
+pu5-nonbowed	l cX a space sh cX a space shX cX a space s cX a	L Ct A - Sp Ct A - Sx2 Ct A - S Ct A
+pu5-other	l n i y a space sh n i y a space shX n i y a space s n i y a	L N I Y A - Sp N I Y A - Sx2 N I Y A - S N I Y A
 
 pu6-1	r gh a space r kh a space r g a space r ghX a space r ngX a	R Kh Aa - R K2 Aa - R Hh A - R Hy A - R Nb A
 pu6-2	r cX a space r c a space r z a space r jhX a space r n i y a	R Ct A - R Cs A - R Zs A - R Zt A - R N I Y A
@@ -172,7 +172,7 @@ pu6-3	r trX a space r cr a space r zr a space r drhX a space r nrX a	R Jt A - R 
 pu6-4	r tX a space r t a space r d a space r dhX a space r n a	R Dr A - R D A - R Dh A - R Dx A - R N A
 pu6-5	r pX a space r p a space r b a space r bhX a space r m a	R Bg Aa - R Pb Aa - R B Aa - R Bc Aa - R M A
 pu6-6	r y a space r r a space r l a space r w a	R Y A - R R A - R L A - R W A
-pu6-7	r sh a space r shX a space r s a space r h a space r gh shX a	R Sp A - R Sx A - R S A - R Hc A - R Kh Sx A
+pu6-7	r sh a space r shX a space r s a space r h a space r gh shX a	R Sp A - R Sx2 A - R S A - R Hc A - R Kh Sx2 A
 
 pu7	gh baluda o space gh tribaluda o o	Kh O Baluda - Kh O Tribaluda U
 pu8	damaru gh a space damaru kh a	Damaru Kh Aa - Damaru K2 Aa
@@ -181,27 +181,27 @@ pu9	invubadama pX a space ubadama pX a space invubadama p a space ubadama p a	In
 pu10-1	z n i y a space gh s a space gh a o	Zs N I Y A - Kh S A - Kh A U
 pu10-2	anusvara z l o space sh r fvs1 i i space h r fvs1 i i	Anusvara Zs L U - Sp R3 I I - Hc R3 I I
 pu10-3	anusvara bhX r u u space tX y u space b y u	Anusvara Bc R Oh U - Dr Y Uh - B Y Uh
-pu10-4	s y u space d y u space z y u space gh shX y u	S Y Uh - Th Y Uh - Zs Y Uh - Kh Sx Y Uh
+pu10-4	s y u space d y u space z y u space gh shX y u	S Y Uh - Th Y Uh - Zs Y Uh - Kh Sx2 Y Uh
 pu10-5	anusvara s a m a r a y u space anusvara tX s a r a y u space anusvara t a l a h a aaX	Anusvara S A M A R A Y Uh - Anusvara Dr S A R A Y Uh - Anusvara T A L A Hc A Aw
 pu10-6	gh a kh a g a ghX a ngX a space cX a c a z a jhX a n i y a	Kh A K2 A Hh A Hy A Nb A - Ct A Cs A Zs A Zt A N I Y A
 pu10-7	trX a cr a zr a drhX a nrX a space tX a t a d a dhX a n a	It A Cc A Jc A Jh A Wn A - Dr A D A Dh A Dx A N A
-pu10-8	pX a p a b a bhX a m a space y a r a l a w a space sh a shX a s a h a	Bg A Pb A B A Bc A M A - Y A R A L A W A - Sp A Sx A S A Hc A
-pu10-9	anusvara gh shX a m a r a y u space anusvara h a gh shX a m a l a w a r a y a	Anusvara Kh Sx A M A R A Y Uh - Anusvara Hc A Kh Sx A M A L A W A R A Y A
-pu10-10	anusvara h a gh shX a m a l a w a r a y a ng	Anusvara Hc A Kh Sx A M A L A W A R A Y A A G
+pu10-8	pX a p a b a bhX a m a space y a r a l a w a space sh a shX a s a h a	Bg A Pb A B A Bc A M A - Y A R A L A W A - Sp A Sx2 A S A Hc A
+pu10-9	anusvara gh shX a m a r a y u space anusvara h a gh shX a m a l a w a r a y a	Anusvara Kh Sx2 A M A R A Y Uh - Anusvara Hc A Kh Sx2 A M A L A W A R A Y A
+pu10-10	anusvara h a gh shX a m a l a w a r a y a ng	Anusvara Hc A Kh Sx2 A M A L A W A R A Y A A G
 
 pu11-bowed	gh a n space gh i n space gh u n space gh e n space gh o n	Kh A A - Kh I A - Kh Oh A - Kh Ah A - Kh O A
 pu11-halfbowed	g a n space g fvs2 i n space g ue n space g fvs2 e n space g o n	Hh A A - Hh I A - Hh O I A - Hh A A - Hh O A
 pu11-nonbowed	cX a n space cX i n space cX u n space cX e n space cX o n	Ct A A - Ct I A - Ct Oh A - Ct Ah A - Ct O A
-pu11-a	a n space i n space u n space e n space o n	A A A - A I A - A Oh A - A A - A O A
+pu11-a	a n space i n space u n space e n space o n	A A A - A I A - A Oh A - A Ni A - A O A
 pu11-ña	n i y a n space n i n space n i o w e n space n i y e n space n i o w a n	N I Y A A - N I A - N I O W Ah A - N I Y Ah A - N I O W A A
-pu11-kṣa	gh shX a n space gh shX i n space gh shX u n space gh shX e n space gh shX o n	Kh Sx A A - Kh Sx I A - Kh Sx Oh A - Kh Sx Ah A - Kh Sx O A
+pu11-kṣa	gh shX a n space gh shX i n space gh shX u n space gh shX e n space gh shX o n	Kh Sx2 A A - Kh Sx2 I A - Kh Sx2 Oh A - Kh Sx2 Ah A - Kh Sx2 O A
 
 pu12-bowed	gh a ng space gh i ng space gh u ng space gh e ng space gh o ng	Kh A A G - Kh I A G - Kh Oh A G - Kh Ah A G - Kh O A G
 pu12-halfbowed	g a ng space g fvs2 i ng space g ue ng space g fvs2 e ng space g o ng	Hh A A G - Hh I A G - Hh O I A G - Hh A A G - Hh O A G
 pu12-nonbowed	cX a ng space cX i ng space cX u ng space cX e ng space cX o ng	Ct A A G - Ct I A G - Ct Oh A G - Ct Ah A G - Ct O A G
-pu12-a	a ng space i ng space u ng space e ng space o ng	A A A G - A I A G - A Oh A G - A A G - A O A G
+pu12-a	a ng space i ng space u ng space e ng space o ng	A A A G - A I A G - A Oh A G - A Ni A G - A O A G
 pu12-ña	n i y a ng space n i ng space n i u ng space n i y e ng space n i o w a ng	N I Y A A G - N I A G - N I O A G - N I Y Ah A G - N I O W A A G
-pu12-kṣa	gh shX a ng space gh shX i ng space gh shX u ng space gh shX e ng space gh shX o ng	Kh Sx A A G - Kh Sx I A G - Kh Sx Oh A G - Kh Sx Ah A G - Kh Sx O A G
+pu12-kṣa	gh shX a ng space gh shX i ng space gh shX u ng space gh shX e ng space gh shX o ng	Kh Sx2 A A G - Kh Sx2 I A G - Kh Sx2 Oh A G - Kh Sx2 Ah A G - Kh Sx2 O A G
 
 # Tibetan syllabaries
 
@@ -225,10 +225,10 @@ pu4-2	zhX a ng space zhX i ng space zhX u ng space zhX e ng space zhX o ng	St A 
 pu5-ka	gh a s fvs2 space gh i s fvs2 space gh u s fvs2 space gh e s fvs2 space gh o s fvs2	Kh A S3 - Kh I S3 - Kh Oh S3 - Kh Ah S3 - Kh O S3
 pu5-ña	n i y a s fvs2 space n i y i s fvs2 space n i o w e s fvs2 space n i y e s fvs2 space n i o w a s fvs2	N I Y A S3 - N I Y I S3 - N I O W Ah S3 - N I Y Ah S3 - N I O W A S3
 pu5-ma	m a s fvs2 space m i s fvs2 space m u s fvs2 space m e s fvs2 space m o s fvs2	M A S3 - M I S3 - M Oh S3 - M Ah S3 - M O S3
-pu5-a	a s fvs2 space i s fvs2 space u s fvs2 space e s fvs2 space o s fvs2	A A S3 - A I S3 - A Oh S3 - A S3 - A O S3
+pu5-a	a s fvs2 space i s fvs2 space u s fvs2 space e s fvs2 space o s fvs2	A A S3 - A I S3 - A Oh S3 - A Ni S3 - A O S3
 
 pu6-ka	gh y a space gh y i space gh y u space gh y e space gh y o	Kh Y A - Kh Y I - Kh Y Uh - Kh Y Ah - Kh Y U
-pu6-ma	m y a space m y i space m y u space m y e space m y o	M Y A - M Y I - M Y Uh - M Y Ah - M Y U
+pu6-ma	m y a space m y i space m y u space m y e space m y o fvs2	M Y A - M Y I - M Y Uh - M Y Ah - M Y U
 
 pu7-ka	gh y a n fvs1 space gh y i n fvs1 space gh y u n fvs1 space gh y e n fvs1 space gh y o n fvs1	Kh Y A N - Kh Y I N - Kh Y Oh N - Kh Y Ah N - Kh Y O N
 pu7-ma	m y a n fvs1 space m y i n fvs1 space m y u n fvs1 space m y e n fvs1 space m y o n fvs1	M Y A N - M Y I N - M Y Oh N - M Y Ah N - M Y O N

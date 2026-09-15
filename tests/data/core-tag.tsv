@@ -4,15 +4,15 @@ a-1	a fvs1 space a fvs1 lvs space i space i lvs space ue space ue lvs	A - A Lv -
 a-2	r yX fvs1 space r yX fvs1 lvs space l yX fvs1 space l yX fvs1 lvs	R Ir - R Ir Lv - L Ir - L Ir Lv
 a-3	e space e e space o space o o	A E - A E E - A Ob - A Ob Ob
 
-ka-1	kX a space kX a lvs space kX i space kX i lvs space kX ue space kX ue lvs	K2 Aa - K2 A Aa Lv - K2 Ip - K2 Ip Iy Lv - K2 O - K2 O Lv
+ka-1	kX a space kX a lvs space kX i space kX i lvs space kX ue space kX ue lvs	K2 Aa - K2 Aa Lv - K2 Ip - K2 Ip Lv - K2 O - K2 O Lv
 ka-2	kX a r yX fvs1 space kX a r yX fvs1 lvs space kX a l yX fvs1 space kX a l yX fvs1 lvs	K2 A R Ir - K2 A R Ir Lv - K2 A L Ir - K2 A L Ir Lv
 ka-3	kX e space kX e e space kX o space kX o o	K2 E - K2 E E - K2 Ob - K2 Ob Ob
 
-kha-1	khX a space khX a lvs space khX i space khX i lvs space khX ue space khX ue lvs	K Aa - K A Aa Lv - K Ip - K Ip Iy Lv - K O - K O Lv
+kha-1	khX a space khX a lvs space khX i space khX i lvs space khX ue space khX ue lvs	K Aa - K Aa Lv - K Ip - K Ip Lv - K O - K O Lv
 kha-2	khX a r yX fvs1 space khX a r yX fvs1 lvs space khX a l yX fvs1 space khX a l yX fvs1 lvs	K A R Ir - K A R Ir Lv - K A L Ir - K A L Ir Lv
 kha-3	khX e space khX e e space khX o space khX o o	K E - K E E - K Ob - K Ob Ob
 
-ga-1	gX a space gX a lvs space gX i space gX i lvs space gX ue space gX ue lvs	G Aa - G A Aa Lv - G Ip - G Ip Iy Lv - G O - G O Lv
+ga-1	gX a space gX a lvs space gX i space gX i lvs space gX ue space gX ue lvs	G Aa - G Aa Lv - G Ip - G Ip Lv - G O - G O Lv
 ga-2	gX a r yX fvs1 space gX a r yX fvs1 lvs space gX a l yX fvs1 space gX a l yX fvs1 lvs	G A R Ir - G A R Ir Lv - G A L Ir - G A L Ir Lv
 ga-3	gX e space gX e e space gX o space gX o o	G E - G E E - G Ob - G Ob Ob
 
@@ -20,9 +20,9 @@ gha-1	gX hX a fvs1 space gX hX a fvs1 lvs space gX hX i space gX hX i lvs space 
 gha-2	gX hX a r yX fvs1 space gX hX a r yX fvs1 lvs space gX hX a l yX fvs1 space gX hX a l yX fvs1 lvs	G Hr A R Ir - G Hr A R Ir Lv - G Hr A L Ir - G Hr A L Ir Lv
 gha-3	gX hX e space gX hX e e space gX hX o space gX hX o o	G Hr E - G Hr E E - G Hr Ob - G Hr Ob Ob
 
-ṅa-1	g fvs3 gX a space g fvs3 gX a lvs space g fvs3 gX a i space g fvs3 gX a i lvs space g fvs3 gX a ue space g fvs3 gX a ue lvs	Hp G Aa - Hp G A Aa Lv - Hp G A Ip - Hp G A Ip Lv - Hp G A U - Hp G A U Lv
-ṅa-2	g fvs3 gX a r yX fvs1 space g fvs3 gX a r yX fvs1 lvs space g fvs3 gX a l yX fvs1 space g fvs3 gX a l yX fvs1 lvs	Hp G A R Ir - Hp G A R Ir Lv - Hp G A L Ir - Hp G A L Ir Lv
-ṅa-3	g fvs3 gX a e space g fvs3 gX a e e space g fvs3 gX a o space g fvs3 gX a o o	Hp G A E - Hp G A E E - Hp G A Ob - Hp G A Ob Ob
+ṅa-1	n gX a space n gX a lvs space n gX a i space n gX a i lvs space n gX a ue space n gX a ue lvs	N G Aa - N G Aa Lv - N G A Ip - N G A Ip Lv - N G A U - N G A U Lv
+ṅa-2	n gX a r yX fvs1 space n gX a r yX fvs1 lvs space n gX a l yX fvs1 space n gX a l yX fvs1 lvs	N G A R Ir - N G A R Ir Lv - N G A L Ir - N G A L Ir Lv
+ṅa-3	n gX a e space n gX a e e space n gX a o space n gX a o o	N G A E - N G A E E - N G A Ob - N G A Ob Ob
 
 ca-1	j a fvs1 space j a fvs1 lvs space j i space j i lvs space j ue space j ue lvs	Cp Aa - Cp Aa Lv - Cp Ip - Cp Ip Lv - Cp U - Cp U Lv
 ca-2	j a r yX fvs1 space j a r yX fvs1 lvs space j a l yX fvs1 space j a l yX fvs1 lvs	Cp A R Ir - Cp A R Ir Lv - Cp A L Ir - Cp A L Ir Lv
@@ -32,33 +32,33 @@ cha-1	chX a fvs1 space chX a fvs1 lvs space chX i space chX i lvs space chX ue s
 cha-2	chX a r yX fvs1 space chX a r yX fvs1 lvs space chX a l yX fvs1 space chX a l yX fvs1 lvs	C A R Ir - C A R Ir Lv - C A L Ir - C A L Ir Lv
 cha-3	chX e space chX e e space chX o space chX o o	C E - C E E - C Ob - C Ob Ob
 
-ja-1	jX fvs1 a fvs1 space jX fvs1 a fvs1 lvs space jX fvs1 i space jX fvs1 i lvs space jX fvs1 ue space jX fvs1 ue lvs	Zz2 Aa - Zz2 Aa Lv - Zz2 Ip - Zz2 Ip Lv - Zz2 U - Zz2 U Lv
-ja-2	jX fvs1 a r yX fvs1 space jX fvs1 a r yX fvs1 lvs space jX fvs1 a l yX fvs1 space jX fvs1 a l yX fvs1 lvs	Zz2 A R Ir - Zz2 A R Ir Lv - Zz2 A L Ir - Zz2 A L Ir Lv
-ja-3	jX fvs1 e space jX fvs1 e e space jX fvs1 o space jX fvs1 o o	Zz2 E - Zz2 E E - Zz2 Ob - Zz2 Ob Ob
+ja-1	zr fvs1 a fvs1 space zr fvs1 a fvs1 lvs space zr fvs1 i space zr fvs1 i lvs space zr fvs1 ue space zr fvs1 ue lvs	Zz2 Aa - Zz2 Aa Lv - Zz2 Ip - Zz2 Ip Lv - Zz2 U - Zz2 U Lv
+ja-2	zr fvs1 a r yX fvs1 space zr fvs1 a r yX fvs1 lvs space zr fvs1 a l yX fvs1 space zr fvs1 a l yX fvs1 lvs	Zz2 A R Ir - Zz2 A R Ir Lv - Zz2 A L Ir - Zz2 A L Ir Lv
+ja-3	zr fvs1 e space zr fvs1 e e space zr fvs1 o space zr fvs1 o o	Zz2 E - Zz2 E E - Zz2 Ob - Zz2 Ob Ob
 
-jha-1	jX fvs1 hX a fvs1 space jX fvs1 hX a fvs1 lvs space jX fvs1 hX i space jX fvs1 hX i lvs space jX fvs1 hX ue space jX fvs1 hX ue lvs	Zz2 Hr Aa - Zz2 Hr Aa Lv - Zz2 Hr Ip - Zz2 Hr Ip Lv - Zz2 Hr U - Zz2 Hr U Lv
-jha-2	jX fvs1 hX a r yX fvs1 space jX fvs1 hX a r yX fvs1 lvs space jX fvs1 hX a l yX fvs1 space jX fvs1 hX a l yX fvs1 lvs	Zz2 Hr A R Ir - Zz2 Hr A R Ir Lv - Zz2 Hr A L Ir - Zz2 Hr A L Ir Lv
-jha-3	jX fvs1 hX e space jX fvs1 hX e e space jX fvs1 hX o space jX fvs1 hX o o	Zz2 Hr E - Zz2 Hr E E - Zz2 Hr Ob - Zz2 Hr Ob Ob
+jha-1	zr fvs1 hX a fvs1 space zr fvs1 hX a fvs1 lvs space zr fvs1 hX i space zr fvs1 hX i lvs space zr fvs1 hX ue space zr fvs1 hX ue lvs	Zz2 Hr Aa - Zz2 Hr Aa Lv - Zz2 Hr Ip - Zz2 Hr Ip Lv - Zz2 Hr U - Zz2 Hr U Lv
+jha-2	zr fvs1 hX a r yX fvs1 space zr fvs1 hX a r yX fvs1 lvs space zr fvs1 hX a l yX fvs1 space zr fvs1 hX a l yX fvs1 lvs	Zz2 Hr A R Ir - Zz2 Hr A R Ir Lv - Zz2 Hr A L Ir - Zz2 Hr A L Ir Lv
+jha-3	zr fvs1 hX e space zr fvs1 hX e e space zr fvs1 hX o space zr fvs1 hX o o	Zz2 Hr E - Zz2 Hr E E - Zz2 Hr Ob - Zz2 Hr Ob Ob
 
 ña-1	ny a fvs1 space ny a fvs1 lvs space ny i space ny i lvs space ny ue space ny ue lvs	Ny Aa - Ny Aa Lv - Ny Ip - Ny Ip Lv - Ny U - Ny U Lv
 ña-2	ny a r yX fvs1 space ny a r yX fvs1 lvs space ny a l yX fvs1 space ny a l yX fvs1 lvs	Ny A R Ir - Ny A R Ir Lv - Ny A L Ir - Ny A L Ir Lv
 ña-3	ny e space ny e e space ny o space ny o o	Ny E - Ny E E - Ny Ob - Ny Ob Ob
 
-ṭa-1	trX a fvs1 space trX a fvs1 lvs space trX i space trX i lvs space trX ue space trX ue lvs	Zr Aa - Zr Aa Lv - Zr Ip - Zr Ip Lv - Zr U - Zr U Lv
-ṭa-2	trX a r yX fvs1 space trX a r yX fvs1 lvs space trX a l yX fvs1 space trX a l yX fvs1 lvs	Zr A R Ir - Zr A R Ir Lv - Zr A L Ir - Zr A L Ir Lv
-ṭa-3	trX e space trX e e space trX o space trX o o	Zr E - Zr E E - Zr Ob - Zr Ob Ob
+ṭa-1	trX a fvs1 space trX a fvs1 lvs space trX i space trX i lvs space trX ue space trX ue lvs	Zr2 Aa - Zr2 Aa Lv - Zr2 Ip - Zr2 Ip Lv - Zr2 U - Zr2 U Lv
+ṭa-2	trX a r yX fvs1 space trX a r yX fvs1 lvs space trX a l yX fvs1 space trX a l yX fvs1 lvs	Zr2 A R Ir - Zr2 A R Ir Lv - Zr2 A L Ir - Zr2 A L Ir Lv
+ṭa-3	trX e space trX e e space trX o space trX o o	Zr2 E - Zr2 E E - Zr2 Ob - Zr2 Ob Ob
 
 ṭha-1	trhX a fvs1 space trhX a fvs1 lvs space trhX i space trhX i lvs space trhX ue space trhX ue lvs	Cr2 Aa - Cr2 Aa Lv - Cr2 Ip - Cr2 Ip Lv - Cr2 U - Cr2 U Lv
 ṭha-2	trhX a r yX fvs1 space trhX a r yX fvs1 lvs space trhX a l yX fvs1 space trhX a l yX fvs1 lvs	Cr2 A R Ir - Cr2 A R Ir Lv - Cr2 A L Ir - Cr2 A L Ir Lv
 ṭha-3	trhX e space trhX e e space trhX o space trhX o o	Cr2 E - Cr2 E E - Cr2 Ob - Cr2 Ob Ob
 
-ḍa-1	drX fvs1 a fvs1 space drX fvs1 a fvs1 lvs space drX fvs1 i space drX fvs1 i lvs space drX fvs1 ue space drX fvs1 ue lvs	Ds2 Aa - Ds2 Aa Lv - Ds2 Ip - Ds2 Ip Lv - Ds2 U - Ds2 U Lv
-ḍa-2	drX fvs1 a r yX fvs1 space drX fvs1 a r yX fvs1 lvs space drX fvs1 a l yX fvs1 space drX fvs1 a l yX fvs1 lvs	Ds2 A R Ir - Ds2 A R Ir Lv - Ds2 A L Ir - Ds2 A L Ir Lv
-ḍa-3	drX fvs1 e space drX fvs1 e e space drX fvs1 o space drX fvs1 o o	Ds2 E - Ds2 E E - Ds2 Ob - Ds2 Ob Ob
+ḍa-1	drX a fvs1 space drX a fvs1 lvs space drX i space drX i lvs space drX ue space drX ue lvs	Ds Aa - Ds Aa Lv - Ds Ip - Ds Ip Lv - Ds U - Ds U Lv
+ḍa-2	drX a r yX fvs1 space drX a r yX fvs1 lvs space drX a l yX fvs1 space drX a l yX fvs1 lvs	Ds A R Ir - Ds A R Ir Lv - Ds A L Ir - Ds A L Ir Lv
+ḍa-3	drX e space drX e e space drX o space drX o o	Ds E - Ds E E - Ds Ob - Ds Ob Ob
 
-ḍha-1	drX fvs1 hX a fvs1 space drX fvs1 hX a fvs1 lvs space drX fvs1 hX i space drX fvs1 hX i lvs space drX fvs1 hX ue space drX fvs1 hX ue lvs	Ds2 Hr Aa - Ds2 Hr Aa Lv - Ds2 Hr Ip - Ds2 Hr Ip Lv - Ds2 Hr U - Ds2 Hr U Lv
-ḍha-2	drX fvs1 hX a r yX fvs1 space drX fvs1 hX a r yX fvs1 lvs space drX fvs1 hX a l yX fvs1 space drX fvs1 hX a l yX fvs1 lvs	Ds2 Hr A R Ir - Ds2 Hr A R Ir Lv - Ds2 Hr A L Ir - Ds2 Hr A L Ir Lv
-ḍha-3	drX fvs1 hX e space drX fvs1 hX e e space drX fvs1 hX o space drX fvs1 hX o o	Ds2 Hr E - Ds2 Hr E E - Ds2 Hr Ob - Ds2 Hr Ob Ob
+ḍha-1	drX hX a fvs1 space drX hX a fvs1 lvs space drX hX i space drX hX i lvs space drX hX ue space drX hX ue lvs	Ds Hr Aa - Ds Hr Aa Lv - Ds Hr Ip - Ds Hr Ip Lv - Ds Hr U - Ds Hr U Lv
+ḍha-2	drX hX a r yX fvs1 space drX hX a r yX fvs1 lvs space drX hX a l yX fvs1 space drX hX a l yX fvs1 lvs	Ds Hr A R Ir - Ds Hr A R Ir Lv - Ds Hr A L Ir - Ds Hr A L Ir Lv
+ḍha-3	drX hX e space drX hX e e space drX hX o space drX hX o o	Ds Hr E - Ds Hr E E - Ds Hr Ob - Ds Hr Ob Ob
 
 ṇa-1	nrX a fvs1 space nrX a fvs1 lvs space nrX i space nrX i lvs space nrX ue space nrX ue lvs	Wn Aa - Wn Aa Lv - Wn Ip - Wn Ip Lv - Wn U - Wn U Lv
 ṇa-2	nrX a r yX fvs1 space nrX a r yX fvs1 lvs space nrX a l yX fvs1 space nrX a l yX fvs1 lvs	Wn A R Ir - Wn A R Ir Lv - Wn A L Ir - Wn A L Ir Lv
@@ -84,15 +84,15 @@ na-1	n a fvs1 space n a fvs1 lvs space n i space n i lvs space n ue space n ue l
 na-2	n a r yX fvs1 space n a r yX fvs1 lvs space n a l yX fvs1 space n a l yX fvs1 lvs	N A R Ir - N A R Ir Lv - N A L Ir - N A L Ir Lv
 na-3	n e space n e e space n o space n o o	N E - N E E - N Ob - N Ob Ob
 
-pa-1	pX fvs1 a space pX fvs1 a lvs space pX fvs1 i space pX fvs1 i lvs space pX fvs1 ue space pX fvs1 ue lvs	Bh Aa - Bh A Aa Lv - Bh Ip - Bh Ip Iy Lv - Bh O - Bh O Lv
+pa-1	pX fvs1 a space pX fvs1 a lvs space pX fvs1 i space pX fvs1 i lvs space pX fvs1 ue space pX fvs1 ue lvs	Bh Aa - Bh Aa Lv - Bh Ip - Bh Ip Lv - Bh O - Bh O Lv
 pa-2	pX fvs1 a r yX fvs1 space pX fvs1 a r yX fvs1 lvs space pX fvs1 a l yX fvs1 space pX fvs1 a l yX fvs1 lvs	Bh A R Ir - Bh A R Ir Lv - Bh A L Ir - Bh A L Ir Lv
 pa-3	pX fvs1 e space pX fvs1 e e space pX fvs1 o space pX fvs1 o o	Bh E - Bh E E - Bh Ob - Bh Ob Ob
 
-pha-1	p fvs1 a space p fvs1 a lvs space p fvs1 i space p fvs1 i lvs space p fvs1 ue space p fvs1 ue lvs	Ph Aa - Ph A Aa Lv - Ph Ip - Ph Ip Iy Lv - Ph O - Ph O Lv
+pha-1	p fvs1 a space p fvs1 a lvs space p fvs1 i space p fvs1 i lvs space p fvs1 ue space p fvs1 ue lvs	Ph Aa - Ph Aa Lv - Ph Ip - Ph Ip Lv - Ph O - Ph O Lv
 pha-2	p fvs1 a r yX fvs1 space p fvs1 a r yX fvs1 lvs space p fvs1 a l yX fvs1 space p fvs1 a l yX fvs1 lvs	Ph A R Ir - Ph A R Ir Lv - Ph A L Ir - Ph A L Ir Lv
 pha-3	p fvs1 e space p fvs1 e e space p fvs1 o space p fvs1 o o	Ph E - Ph E E - Ph Ob - Ph Ob Ob
 
-ba-1	b a space b a lvs space b i space b i lvs space b ue space b ue lvs	B Aa - B A Aa Lv - B Ip - B Ip Iy Lv - B O - B O Lv
+ba-1	b a space b a lvs space b i space b i lvs space b ue space b ue lvs	B Aa - B Aa Lv - B Ip - B Ip Lv - B O - B O Lv
 ba-2	b a r yX fvs1 space b a r yX fvs1 lvs space b a l yX fvs1 space b a l yX fvs1 lvs	B A R Ir - B A R Ir Lv - B A L Ir - B A L Ir Lv
 ba-3	b e space b e e space b o space b o o	B E - B E E - B Ob - B Ob Ob
 
@@ -142,10 +142,10 @@ kṣa-3	kX shX e space kX shX e e space kX shX o space kX shX o o	K2 Sx E - K2 S
 
 # Tibetan syllabaries
 
-a-1	kX a space khX a space gX a space g fvs3 gX a	K2 Aa - K Aa - G Aa - Hp G Aa
+a-1	kX a space khX a space gX a space n gX a	K2 Aa - K Aa - G Aa - N G Aa
 a-2	chX a fvs1 space c a fvs1 space z a fvs1 space ny a fvs1	C Aa - J Aa - Ch Aa - Ny Aa
 a-3	d a fvs1 space t a fvs1 space tX a fvs1 space n a fvs1	Dp Aa - Tp Aa - Dv Aa - N Aa
 a-4	pX fvs1 a space p fvs1 a space b a space m a fvs1	Bh Aa - Ph Aa - B Aa - M Aa
-a-5	j a fvs1 space chX a fvs1 space jX fvs1 a fvs1 space w a fvs1	Cp Aa - C Aa - Zz2 Aa - Wb Aa
-a-6	zhX a fvs1 space zX a fvs1 space qX a fvs1 space y a fvs1	Rz Aa - Zz Aa - Q Aa - I Aa
+a-5	j a fvs1 space chX a fvs1 space zr fvs1 a fvs1 space w a fvs1	Cp Aa - C Aa - Zz2 Aa - Wb Aa
+a-6	zhX a fvs1 space zX a fvs1 space qX a fvs1 space y a fvs1	Rz Aa - Zz3 Aa - Q Aa - I Aa
 a-7	r a fvs1 space l a fvs1 space sh a fvs1 space s a fvs1 space hh a fvs1 space a fvs1 lvs	R Aa - L Aa - Sh Aa - S Aa - A Hr Aa - A Lv

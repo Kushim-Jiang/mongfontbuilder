@@ -160,7 +160,7 @@ syllabic-o/u-1	n o space n u	N O - N O
 syllabic-o/u-2	n oe space n ue	N Ue - N Ue
 syllabic-o/u-3	b o space b u	B O - B O
 syllabic-o/u-4	b oe space b ue	B Ue - B Ue
-syllabic-o/u-5	k2 l ue b	K2 L O I B
+syllabic-o/u-5	k2 l ue fvs1 b	K2 L O I B
 syllabic-d-1	d a space d e space d i	D A - D A - D I
 syllabic-d-2	d o space d u	D O - D O
 syllabic-d-3	d oe space d ue	D Ue - D Ue
