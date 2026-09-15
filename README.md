@@ -62,13 +62,17 @@ Tests are organized per writing system with separate test fonts:
 
 The test harness builds each font on the fly using `mongfontbuilder`’s Python API directly, then shapes the test input strings with [HarfBuzz](https://harfbuzz.github.io/) and compares the resulting glyph sequence against expected output.
 
-Currently the following EAC Hudum test cases are expected to fail:
+### Cases the EAC expects differently
 
-- `eac-hud > XIM11-39`, `eac-hud > XIM11-40`, `eac-hud > XIM11-41`
-  - The EAC spec assumes that all features of NNBSP should be disabled. The UTN model considers this test case incorrect. The UTN model considers that the old functionality of NNBSP should be retained.
-- `eac-hud > XIM11-46`
-  - The EAC spec expects an invalid FVS after a letter to prevent the MVS shaping step. The UTN model disagrees.
-- `eac-hud > XIM11-1012`
-  - When an FVS after a letter prevents the MVS shaping step, the MVS is treated as an NBSP. In this case, the FVS remains valid. The UTN model considers this test case incorrect.
-- `eac-hud > MSM11-2`, `eac-hud > XIM11-16`
-  - The currently exported font does not yet account for shaping rules based on locale, resulting in these two tests failing. Future efforts will focus on resolving this issue to pass both tests.
+The EAC suite is settled by the Hudum standard alone. Where the UTN model disagrees with it, the case is marked as an expected failure — it is kept in the suite, and the reason is kept in [`tests/fixtures.py`](https://github.com/Kushim-Jiang/mongfontbuilder/blob/main/tests/fixtures.py) — so that the run stays green and the disagreement stays visible.
+
+A font that writes with every writing system at once (`test_unified.py`) is the one that has to be marked for the cases below: the meeting held that the effect of an FVS does not depend on the locale, so the FVS stays valid and selects its variant wherever the character is shared. A font that writes with one writing system answers them as the EAC expects.
+
+- `MND11-2`, `MNM10-2`, `MNM11-2`, `MNS11-26`, `MNZ11-3`, `MNZ21-5`, `XIM11-11`, `XIM11-675`, `XIM11-678`, `XIM11-681`, `XIM11-684`, `XIM11-687`, `XIM11-690`, `XIM11-694`
+
+`XIM11-46` (`e n fvs3 mvs e`) is answered differently by every font as well, but for a reason of its own: the FVS3 follows the _n_, and the UTN model draws the form it selects rather than the one the EAC expects.
+
+The cases below are marked for every font, because the UTN model answers them differently from the EAC in a way that does not depend on which writing systems a font carries.
+
+- `XIM11-39`, `XIM11-40`, `XIM11-41` — the UTN model keeps the old functionality of NNBSP, so the features of NNBSP stay on.
+- `XIM11-1012` — a letter before an MVS is in the final position, so the FVS after it selects the final variant.
