@@ -1,5 +1,5 @@
 import re
-from collections.abc import Callable, Iterable
+from collections.abc import Callable, Iterable, Iterator
 from dataclasses import dataclass, replace
 from typing import cast
 
@@ -9,16 +9,18 @@ from tptq.feacomposer import FeaComposer
 
 from .. import GlyphDescriptor, data, splitWrittens, uNameFromCodePoint, writtenCombinations
 from ..data import codePointToCmapVariant
+from ..data.logic import choosesLvs, choosesVariant
 from ..data.types import (
     FVS,
     CharacterName,
     JoiningPosition,
     LocaleID,
+    VariantData,
     WrittenUnitID,
     joiningPositions,
 )
 from ..spec import FontSpec, GlyphSpec
-from ..utils import getAliasesByLocale, getCharNameByAlias, namespaceFromLocale
+from ..utils import getAliasesByLocale, getCharNameByAlias, getVariants, namespaceFromLocale
 
 
 @dataclass
@@ -110,18 +112,30 @@ class MongFeaComposer(FeaComposer):
         and by Manchu.
         """
 
-        for charName, positionToFVSToVariant in data.variants.items():
-            for position, fvsToVariant in positionToFVSToVariant.items():
-                for variant in fvsToVariant.values():
-                    for locale in self.locales:
-                        if locale not in variant.locales:
-                            continue
-                        written = GlyphDescriptor.fromData(
-                            charName, position, variant, locale=locale
-                        )
-                        if unit in written.units:
-                            return True
+        for charName, positionsToFVSToVariant in data.variants.items():
+            for position, variant, locale in self.usedVariants(charName, positionsToFVSToVariant):
+                written = GlyphDescriptor.fromData(charName, position, variant, locale=locale)
+                if unit in written.units:
+                    return True
         return False
+
+    def usedVariants(
+        self,
+        charName: CharacterName,
+        positionsToFVSToVariant: dict[JoiningPosition, dict[FVS, VariantData]],
+    ) -> Iterator[tuple[JoiningPosition, VariantData, LocaleID]]:
+        """Every variant of *charName* that a targeted writing system resolves for itself.
+
+        A variant may be shared by several writing systems, and each of them resolves its
+        own written form, so one answer is given per writing system, in the order the
+        writing systems are targeted.
+        """
+
+        for position, fvsToVariant in positionsToFVSToVariant.items():
+            for variant in fvsToVariant.values():
+                for locale in self.locales:
+                    if locale in variant.locales:
+                        yield position, variant, locale
 
     def constructPredefinedGlyphs(self) -> None:
         sources = list[GlyphDescriptor]()
@@ -133,52 +147,59 @@ class MongFeaComposer(FeaComposer):
             sources.append(source)
 
         codePointToVariantGlyph = dict[int, str]()
-        targetedLocales = {*self.locales}
-        for charName, positionToFVSToVariant in data.variants.items():
-            variantNames = list[str]()
-            for position, fvsToVariant in positionToFVSToVariant.items():
-                for variant in fvsToVariant.values():
-                    usedLocales = targetedLocales.intersection(variant.locales)
-                    if not usedLocales:
-                        continue
+        for charName, positionsToFVSToVariant in data.variants.items():
+            variantNames = [
+                self.constructPredefinedGlyph(sources, charName, position, variant, locale)
+                for position, variant, locale in self.usedVariants(
+                    charName, positionsToFVSToVariant
+                )
+            ]
+            if not variantNames:
+                continue
 
-                    # A variant may be shared by several writing systems; each locale
-                    # resolves its own written form, so one target is built per locale.
-                    for target in (
-                        GlyphDescriptor.fromData(
-                            charName, position, variant, locale=cast(LocaleID, usedLocale)
-                        )
-                        for usedLocale in sorted(usedLocales, key=self.locales.index)
-                    ):
-                        targetName = str(target)
-                        variantNames.append(targetName)
-
-                        if self.glyphNameProcessor(targetName) in self.glyphs:
-                            continue
-
-                        memberNames: list[str]
-                        writtenTarget = replace(target, codePoints=[], suffixes=[])
-                        memberNames = _findMemberNames(sources, writtenTarget)
-
-                        glyphSpec = GlyphSpec([self.glyphNameProcessor(i) for i in memberNames])
-                        if pseudoPosition := target.pseudoPosition():
-                            glyphSpec.initPadding = pseudoPosition in ["isol", "init"]
-                            glyphSpec.finaPadding = pseudoPosition in ["isol", "fina"]
-                        self.spec.newGlyphs[self.glyphNameProcessor(targetName)] = glyphSpec
-
-            if variantNames:
-                codePoint = ord(unicodedata.lookup(charName))
-                # A character whose default variant is written differently in every
-                # writing system has no cross-locale written form, hence no cmap entry.
-                if resolved := codePointToCmapVariant.get(codePoint):
-                    codePointToVariantGlyph[codePoint] = str(
-                        GlyphDescriptor([codePoint], *resolved)
-                    )
+            codePoint = ord(unicodedata.lookup(charName))
+            # A character whose default variant is written differently in every writing
+            # system has no cross-locale written form, hence no cmap entry.
+            if resolved := codePointToCmapVariant.get(codePoint):
+                codePointToVariantGlyph[codePoint] = str(GlyphDescriptor([codePoint], *resolved))
 
         for codePoint, variantGlyph in codePointToVariantGlyph.items():
             processedName = self.glyphNameProcessor(uNameFromCodePoint(codePoint))
             self.spec.cmap[codePoint] = processedName
             self.spec.newGlyphs[processedName] = GlyphSpec([self.glyphNameProcessor(variantGlyph)])
+
+    def constructPredefinedGlyph(
+        self,
+        sources: list[GlyphDescriptor],
+        charName: CharacterName,
+        position: JoiningPosition,
+        variant: VariantData,
+        locale: LocaleID,
+    ) -> str:
+        """Create the glyph of *variant* as *locale* writes it, and name it.
+
+        Each writing system resolves its own written form of a shared variant, and so does
+        every extension of a writing system — `MNGx` beside `MNG` — so the locale is not
+        reduced to its namespace here. The written form itself is a glyph of its own — the
+        one the source font draws and the written form lookups reference — so the variant
+        is built as a component of it unless the source font already carries it. A variant
+        is written with the padding of the position it borrows its shape from, which may
+        not be its own.
+        """
+
+        target = GlyphDescriptor.fromData(charName, position, variant, locale=locale)
+        targetName = str(target)
+        if self.glyphNameProcessor(targetName) in self.glyphs:
+            return targetName
+
+        writtenTarget = replace(target, codePoints=[], suffixes=[])
+        memberNames = _findMemberNames(sources, writtenTarget)
+        glyphSpec = GlyphSpec([self.glyphNameProcessor(i) for i in memberNames])
+        if pseudoPosition := target.pseudoPosition():
+            glyphSpec.initPadding = pseudoPosition in ["isol", "init"]
+            glyphSpec.finaPadding = pseudoPosition in ["isol", "fina"]
+        self.spec.newGlyphs[self.glyphNameProcessor(targetName)] = glyphSpec
+        return targetName
 
     def constructLvsGlyphs(self, variants: list[GlyphDescriptor]) -> None:
         """Create the glyph of each long vowel sign variant.
@@ -315,12 +336,6 @@ class MongFeaComposer(FeaComposer):
         """
         Initialize glyph classes for variants.
 
-        `positionalClass` -- locale + "-" + alias + "." + position, e.g. `@MNG-a.isol`.
-
-        `letterClass` -- locale + "-" + alias, e.g. `@MNG-a`.
-
-        `categoryClass` -- locale + "-" + category (+ "." + position), e.g. `@MNG-vowel` or `@MNG-vowel.init`.
-
         Initialize condition lookups for variants.
 
         Conditions generated from `variant.locales` -- locale + "-" + condition, e.g. `MNG-chachlag`.
@@ -331,74 +346,7 @@ class MongFeaComposer(FeaComposer):
         for locale in self.locales:
             categoryToClasses = dict[str, list[ast.GlyphClassDefinition]]()
             for alias in getAliasesByLocale(locale):
-                charName = getCharNameByAlias(locale, alias)
-                letter = locale + "-" + alias
-                category = next(k for k, v in data.locales[locale].categories.items() if alias in v)
-                genderNeutralCategory = re.sub("[A-Z][a-z]+", "", category)
-
-                positionalClasses = list[ast.GlyphClassDefinition]()
-                lvsPositionalClasses = list[ast.GlyphClassDefinition]()
-                for position, variants in data.variants[charName].items():
-                    positionalClass = self.namedGlyphClass(
-                        letter + "." + position,
-                        [
-                            str(
-                                GlyphDescriptor.fromData(
-                                    charName,
-                                    position,
-                                    i,
-                                    locale=cast(LocaleID, locale.removesuffix("x")),
-                                )
-                            )
-                            for i in variants.values()
-                            if locale in i.locales
-                        ],
-                    )
-                    self.classes[letter + "." + position] = positionalClass
-                    positionalClasses.append(positionalClass)
-                    categoryToClasses.setdefault(
-                        locale + "-" + genderNeutralCategory + "." + position, []
-                    ).append(positionalClass)
-
-                    lvsVariants = [
-                        GlyphDescriptor.fromData(
-                            charName,
-                            position,
-                            i,
-                            locale=cast(LocaleID, locale.removesuffix("x")),
-                        )
-                        for i in variants.values()
-                        if locale in i.locales and i.locales[locale].lvs
-                    ]
-                    if lvsVariants:
-                        lvsVariants = [
-                            GlyphDescriptor(v.codePoints + [0x1843], v.units + ["Lv"], v.position)
-                            for v in lvsVariants
-                        ]
-                        self.constructLvsGlyphs(lvsVariants)
-                        lvsPositionalClass = self.namedGlyphClass(
-                            letter + "_lvs." + position,
-                            [str(v) for v in lvsVariants],
-                        )
-                        self.classes[letter + "_lvs." + position] = lvsPositionalClass
-                        lvsPositionalClasses.append(lvsPositionalClass)
-
-                letterClass = self.namedGlyphClass(letter, positionalClasses)
-                self.classes[letter] = letterClass
-                if genderNeutralCategory != category:
-                    categoryToClasses.setdefault(locale + "-" + genderNeutralCategory, []).append(
-                        letterClass
-                    )
-                categoryToClasses.setdefault(locale + "-" + category, []).append(letterClass)
-
-                if lvsPositionalClasses:
-                    letterClass = self.namedGlyphClass(letter + "_lvs", lvsPositionalClasses)
-                    self.classes[letter + "_lvs"] = letterClass
-                    if genderNeutralCategory != category:
-                        categoryToClasses.setdefault(
-                            locale + "-" + genderNeutralCategory, []
-                        ).append(letterClass)
-                    categoryToClasses.setdefault(locale + "-" + category, []).append(letterClass)
+                self.initAliasVariants(locale, alias, categoryToClasses)
 
             for name, positionalClasses in categoryToClasses.items():
                 self.classes[name] = self.namedGlyphClass(name, positionalClasses)
@@ -406,38 +354,171 @@ class MongFeaComposer(FeaComposer):
         for locale in self.locales:
             for condition in data.locales[locale].conditions:
                 with self.Lookup(f"{locale}:{condition}") as lookup:
-                    for alias in getAliasesByLocale(locale):
-                        charName = getCharNameByAlias(locale, alias)
-                        letter = locale + "-" + alias
-                        for position, fvsToVariant in data.variants[charName].items():
-                            for variant in fvsToVariant.values():
-                                if (
-                                    locale in variant.locales
-                                    and condition in variant.locales[locale].conditions
-                                ):
-                                    self.sub(
-                                        self.classes[letter + "." + position],
-                                        by=str(
-                                            GlyphDescriptor.fromData(
-                                                charName,
-                                                position,
-                                                variant,
-                                                locale=cast(LocaleID, locale.removesuffix("x")),
-                                            )
-                                        ),
-                                    )
+                    self.constructCondition(locale, condition)
                 self.conditions[lookup.name] = lookup
 
         if "MNG" in self.locales:
             with self.Lookup("MNG:reset") as lookup:
-                for position in joiningPositions:
-                    for alias in getAliasesByLocale("MNG"):
-                        charName = getCharNameByAlias("MNG", alias)
-                        self.sub(
-                            self.classes["MNG-" + alias + "." + position],
-                            by=str(GlyphDescriptor.fromData(charName, position)),
-                        )
+                self.constructReset()
             self.conditions[lookup.name] = lookup
+
+    def constructReset(self) -> None:
+        """Reset every letter of Hudum to its default variant.
+
+        A letter may carry the written form of another writing system when the writing
+        systems share their letters — Manchu writes Hudum _a_ differently — so a letter
+        that is written as a Hudum letter is reset to the Hudum written form.
+        """
+
+        for position in joiningPositions:
+            for alias in getAliasesByLocale("MNG"):
+                positionalClass = self.classes[f"MNG-{alias}.{position}"]
+                charName = getCharNameByAlias("MNG", alias)
+                default = str(GlyphDescriptor.fromData(charName, position))
+                self.sub(positionalClass, by=default)
+
+    def initAliasVariants(
+        self,
+        locale: LocaleID,
+        alias: str,
+        categoryToClasses: dict[str, list[ast.GlyphClassDefinition]],
+    ) -> None:
+        """Initialize the glyph classes of one letter of *locale*.
+
+        `letterClass` -- locale + "-" + alias, e.g. `@MNG-a`.
+
+        `categoryClass` -- locale + "-" + category (+ "." + position), e.g. `@MNG-vowel` or `@MNG-vowel.init`.
+
+        A category class gathers the letters of a category, such as the vowels or the consonants of a writing system. A writing system that writes a category differently from the writing systems it shares its letters with answers both with its own category and with the gender-neutral one the category is derived from.
+        """
+
+        letter = locale + "-" + alias
+        charName = getCharNameByAlias(locale, alias)
+        category = next(k for k, v in data.locales[locale].categories.items() if alias in v)
+        genderNeutralCategory = re.sub("[A-Z][a-z]+", "", category)
+        categories = [category]
+        if genderNeutralCategory != category:
+            categories.insert(0, genderNeutralCategory)
+
+        positionalClasses = list[ast.GlyphClassDefinition]()
+        lvsPositionalClasses = list[ast.GlyphClassDefinition]()
+        for position, variants in data.variants[charName].items():
+            positionalClass, lvsPositionalClass = self.initPositionalClasses(
+                locale, charName, letter, position, variants.values()
+            )
+            positionalClasses.append(positionalClass)
+            categoryClasses(
+                categoryToClasses, locale, genderNeutralCategory + "." + position, positionalClass
+            )
+            if lvsPositionalClass:
+                lvsPositionalClasses.append(lvsPositionalClass)
+
+        letterClass = self.namedGlyphClass(letter, positionalClasses)
+        self.classes[letter] = letterClass
+        for name in categories:
+            categoryClasses(categoryToClasses, locale, name, letterClass)
+
+        if not lvsPositionalClasses:
+            return
+
+        lvsLetterClass = self.namedGlyphClass(letter + "_lvs", lvsPositionalClasses)
+        self.classes[letter + "_lvs"] = lvsLetterClass
+        for name in categories:
+            categoryClasses(categoryToClasses, locale, name, lvsLetterClass)
+
+    def initPositionalClasses(
+        self,
+        locale: LocaleID,
+        charName: CharacterName,
+        letter: str,
+        position: JoiningPosition,
+        variants: Iterable[VariantData],
+    ) -> tuple[ast.GlyphClassDefinition, ast.GlyphClassDefinition | None]:
+        """Initialize the glyph classes of one joining position of a letter.
+
+        `positionalClass` -- locale + "-" + alias + "." + position, e.g. `@MNG-a.isol`.
+
+        `lvsPositionalClass` -- the same of the long vowel sign forms, e.g. `@MNG-a_lvs.isol`, or `None` when the letter has no long vowel sign form in the position.
+        """
+
+        descriptors = self.variantDescriptors(locale, charName, position, variants)
+        positionalClass = self.namedGlyphClass(
+            letter + "." + position, [str(i) for i in descriptors]
+        )
+        self.classes[letter + "." + position] = positionalClass
+
+        lvsVariants = self.lvsVariantDescriptors(locale, charName, position, variants)
+        if not lvsVariants:
+            return positionalClass, None
+        self.constructLvsGlyphs(lvsVariants)
+        lvsPositionalClass = self.namedGlyphClass(
+            letter + "_lvs." + position, [str(v) for v in lvsVariants]
+        )
+        self.classes[letter + "_lvs." + position] = lvsPositionalClass
+        return positionalClass, lvsPositionalClass
+
+    def constructCondition(self, locale: LocaleID, condition: str) -> None:
+        """Offer every letter of *locale* the variant that answers *condition*.
+
+        A condition is a property of the letters around a letter — the harmonic gender of
+        its word, say — and every variant of a letter names the conditions it answers, so
+        the lookup of a condition is the variants of that condition of every letter.
+        """
+
+        for alias in getAliasesByLocale(locale):
+            self.constructAliasCondition(locale, alias, condition)
+
+    def constructAliasCondition(self, locale: LocaleID, alias: str, condition: str) -> None:
+        """Offer one letter of *locale* every variant it has that answers *condition*."""
+
+        for alias, charName, position, _, variant in getVariants(locale, [alias]):
+            if not choosesVariant(locale, variant, condition):
+                continue
+            target = GlyphDescriptor.fromData(
+                charName, position, variant, locale=namespaceFromLocale(locale)
+            )
+            self.sub(self.classes[f"{locale}-{alias}.{position}"], by=str(target))
+
+    def variantDescriptors(
+        self,
+        locale: LocaleID,
+        charName: CharacterName,
+        position: JoiningPosition,
+        variants: Iterable[VariantData],
+    ) -> list[GlyphDescriptor]:
+        """The written form of every variant that *locale* answers.
+
+        A character whose variants differ per writing system resolves its written form
+        per locale, so a variant that *locale* does not answer is left out. The written
+        form is that of the writing system, not of one of its extensions.
+        """
+
+        namespace = namespaceFromLocale(locale)
+        return [
+            GlyphDescriptor.fromData(charName, position, i, locale=namespace)
+            for i in variants
+            if locale in i.locales
+        ]
+
+    def lvsVariantDescriptors(
+        self,
+        locale: LocaleID,
+        charName: CharacterName,
+        position: JoiningPosition,
+        variants: Iterable[VariantData],
+    ) -> list[GlyphDescriptor]:
+        """The long vowel sign form of every written form that has one.
+
+        A long vowel sign is drawn after the written form it follows, so the long vowel
+        sign form is that written form with an `Lv` unit appended.
+        """
+
+        return [
+            GlyphDescriptor(v.codePoints + [0x1843], v.units + ["Lv"], v.position)
+            for v in self.variantDescriptors(
+                locale, charName, position, [i for i in variants if choosesLvs(locale, i)]
+            )
+        ]
 
     def variants(
         self,
@@ -495,30 +576,46 @@ class MongFeaComposer(FeaComposer):
 
         glyphs = []
         for alias in aliases:
-            charName = getCharNameByAlias(locale, alias)
             for position in positions:
                 for written in writtens:
-                    if "Lv" not in written:
-                        variants = [
-                            w
-                            for fvs in data.variants[charName][position].keys()
-                            if (w := variantGlyphDescriptor(locale, alias, position, fvs)).units
-                            == splitWrittens(written)
-                            and filter(w.units)
-                            and locale in data.variants[charName][position][fvs].locales
-                        ]
-                    else:
-                        variants = []
-                        key = f"{locale}-{alias}_lvs.{position}"
-                        if key in self.classes:
-                            variants = [
-                                GlyphDescriptor.parse(g.glyph)
-                                for g in self.classes[key].glyphs.glyphs
-                                if written in g.glyph
-                                and filter(GlyphDescriptor.parse(g.glyph).units)
-                            ]
+                    variants = self.writtenVariants(locale, alias, position, written, filter)
                     glyphs.extend(str(v) for v in variants if str(v) not in glyphs)
         return self.glyphClass(glyphs)
+
+    def writtenVariants(
+        self,
+        locale: LocaleID,
+        alias: str,
+        position: JoiningPosition,
+        written: str,
+        filter: Callable[[list[str]], bool],
+    ) -> list[GlyphDescriptor]:
+        """The variants of *alias* in *position* whose written form is *written*.
+
+        A written form without `Lv` is carried by the variants themselves, matched by
+        units; a written form with `Lv` is a long vowel sign form, built into the class of
+        the long vowel sign variants and matched by glyph name.
+        """
+
+        if "Lv" in written:
+            key = f"{locale}-{alias}_lvs.{position}"
+            if key not in self.classes:
+                return []
+            return [
+                GlyphDescriptor.parse(g.glyph)
+                for g in self.classes[key].glyphs.glyphs
+                if written in g.glyph and filter(GlyphDescriptor.parse(g.glyph).units)
+            ]
+
+        charName = getCharNameByAlias(locale, alias)
+        return [
+            w
+            for fvs in data.variants[charName][position]
+            if (w := variantGlyphDescriptor(locale, alias, position, fvs)).units
+            == splitWrittens(written)
+            and filter(w.units)
+            and locale in data.variants[charName][position][fvs].locales
+        ]
 
     def defaultVariant(self, charName: CharacterName, position: JoiningPosition) -> str:
         """The glyph that `position` maps a character to by default.
@@ -556,6 +653,24 @@ class MongFeaComposer(FeaComposer):
         if marked and processedName not in self.glyphs:
             self.spec.newGlyphs[processedName] = GlyphSpec([])
         return name
+
+
+def categoryClasses(
+    categoryToClasses: dict[str, list[ast.GlyphClassDefinition]],
+    locale: LocaleID,
+    category: str,
+    *glyphClasses: ast.GlyphClassDefinition,
+) -> None:
+    """Record *glyphClasses* as the class of *category* in *locale*.
+
+    A category class gathers every letter of a category — the vowels of a writing system,
+    say, in one position or in all of them. A writing system that writes a category
+    differently from the writing systems it shares its letters with is recorded under both
+    its own category and the gender-neutral one it is derived from, hence
+    `genderNeutralCategory` in `initVariants`.
+    """
+
+    categoryToClasses.setdefault(f"{locale}-{category}", []).extend(glyphClasses)
 
 
 def variantGlyphDescriptor(

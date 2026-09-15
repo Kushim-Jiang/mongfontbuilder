@@ -68,14 +68,14 @@ def compose(c: MongFeaComposer) -> None:
                 # cross-locale default, so no glyph of it exists to be mapped here.
                 if codePoint not in codePointToCmapVariant:
                     continue
-                if any(
+                writtenIn = any(
                     localeSet.intersection(i.locales)
                     for i in positionToFVSToVariant[position].values()
-                ):
-                    c.sub(
-                        uNameFromCodePoint(codePoint),
-                        by=c.defaultVariant(charName, position),
-                    )
+                )
+                if not writtenIn:
+                    continue
+                default = c.defaultVariant(charName, position)
+                c.sub(uNameFromCodePoint(codePoint), by=default)
             for codePoint, unit in outside.items():
                 member = f"_{unit}.{position}"
                 if member not in c.glyphs:
