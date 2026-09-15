@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_Wp.medi" format="2">
+  <advance width="311"/>
+  <outline>
+    <contour>
+      <point x="361" y="364" type="line"/>
+      <point x="314" y="235"/>
+      <point x="252" y="29" type="qcurve"/>
+      <point x="149" y="29" type="line"/>
+      <point x="93" y="106"/>
+      <point x="11" y="294"/>
+      <point x="0" y="364" type="qcurve"/>
+      <point x="0" y="444" type="line"/>
+      <point x="311" y="444" type="line"/>
+    </contour>
+    <contour>
+      <point x="237" y="228"/>
+      <point x="282" y="364" type="qcurve"/>
+      <point x="82" y="364" type="line"/>
+      <point x="90" y="310"/>
+      <point x="148" y="172"/>
+      <point x="194" y="102" type="qcurve"/>
+    </contour>
+  </outline>
+</glyph>

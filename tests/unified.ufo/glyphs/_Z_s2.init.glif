@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="_Zs2.init" format="2">
+  <advance width="425"/>
+  <outline>
+    <contour>
+      <point x="258" y="694" type="qcurve"/>
+      <point x="114" y="694" type="line"/>
+      <point x="114" y="756" type="line"/>
+      <point x="499" y="756" type="line"/>
+      <point x="499" y="694" type="line"/>
+      <point x="352" y="694" type="line"/>
+      <point x="405" y="531"/>
+      <point x="450" y="364" type="qcurve"/>
+      <point x="377" y="364" type="line"/>
+      <point x="343" y="497"/>
+      <point x="308" y="590" type="qcurve"/>
+      <point x="304" y="590" type="line"/>
+      <point x="291" y="522"/>
+      <point x="250" y="396"/>
+      <point x="188" y="346"/>
+      <point x="135" y="346" type="qcurve"/>
+      <point x="88" y="346"/>
+      <point x="45" y="371" type="qcurve"/>
+      <point x="45" y="446" type="line"/>
+      <point x="91" y="427"/>
+      <point x="130" y="427" type="qcurve"/>
+      <point x="164" y="427"/>
+      <point x="206" y="483"/>
+      <point x="225" y="552" type="qcurve"/>
+      <point x="252" y="661"/>
+    </contour>
+  </outline>
+</glyph>
