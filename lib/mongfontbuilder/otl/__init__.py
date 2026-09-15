@@ -493,9 +493,8 @@ class MongFeaComposer(FeaComposer):
         form is that of the writing system, not of one of its extensions.
         """
 
-        namespace = namespaceFromLocale(locale)
         return [
-            GlyphDescriptor.fromData(charName, position, i, locale=namespace)
+            GlyphDescriptor.fromData(charName, position, i, locale=locale)
             for i in variants
             if locale in i.locales
         ]

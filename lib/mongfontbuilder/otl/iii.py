@@ -1,13 +1,31 @@
+from collections.abc import Iterable, Iterator
+
 from fontTools.feaLib import ast
 
-from .. import GlyphDescriptor, data, getPosition, ligateParts
-from ..data.types import LocaleID, ParticleData, fina, init, isol, medi
+from .. import GlyphDescriptor, data, getPosition
+from ..data.logic import choosesLvs
+from ..data.types import (
+    CharacterName,
+    JoiningPosition,
+    LocaleID,
+    ParticleData,
+    VariantData,
+    fina,
+    init,
+    isol,
+    medi,
+)
 from ..utils import getCharNameByAlias, getVariants
 from . import MongFeaComposer
 
 MARKER_MASCULINE, MARKER_FEMININE = "marker.masculine", "marker.feminine"
 MARKER_INITIAL = "marker.initial"
 MARKER_MASCULINE_FALSE, MARKER_MASCULINE_TRUE = "marker.masculine.false", "marker.masculine.true"
+
+# The position a letter before the Todo long vowel sign takes in the buffer, by the position
+# it takes at the end of the word: the long vowel sign joins the letter, so the letter is
+# drawn one joining position before the one it ends the word in.
+JOINED_BEFORE: dict[JoiningPosition, JoiningPosition] = {isol: init, fina: medi}
 
 
 def compose(c: MongFeaComposer) -> None:
@@ -35,7 +53,7 @@ def iii0a(c: MongFeaComposer) -> None:
     """
     Before Mongolian-specific shaping steps, nirugu, Todo (Ali Gali) long vowel sign and FVS need to be substituted to ignored glyphs, while MVS needs to be substituted to invalid glyph. ZWNJ and ZWJ also need to be substituted to ignored glyphs to avoid HarfBuzz converting them to zero-width spaces.
 
-    Specifically, for Todo (Ali Gali) long vowel sign, when the final long vowel sign is substituted to ignored glyph, the joining position of the previous letter will be changed (from `init` to `isol`, from `medi` to `fina`).
+    Specifically, for Todo (Ali Gali) long vowel sign, the final long vowel sign closes the word, so the letter before it is drawn in the joining position it takes at the end of a word (from `init` to `isol`, from `medi` to `fina`).
     """
 
     with c.Lookup("III.controls.preprocessing", feature="rclt"):
@@ -59,27 +77,80 @@ def iii0a(c: MongFeaComposer) -> None:
 
 
 def preprocessLvs(c: MongFeaComposer, locale: LocaleID) -> None:
-    """Substitute each Todo letter and long vowel sign with the written form they share."""
+    """Draw each letter that the final Todo long vowel sign follows as it is drawn at the end of a word.
 
-    lvsCharName = getCharNameByAlias("TOD", "lvs")
-    with c.Lookup(f"III.lvs.preprocessing.{locale}", feature="rclt", flags={"IgnoreMarks": True}):
-        for alias in data.locales[locale].categories["lvs"]:
-            charName = getCharNameByAlias(locale, alias)
-            for position in (init, medi):
-                charVar = GlyphDescriptor.fromData(charName, position)
-                ligateWithLvs(c, charVar, lvsCharName)
-
-
-def ligateWithLvs(c: MongFeaComposer, charVar: GlyphDescriptor, lvsCharName: str) -> None:
-    """Ligate a Todo letter with the long vowel sign that follows it.
-
-    The Todo long vowel sign is written after the letter it follows, and the two are drawn
-    as one written form; the ligature is built from the two written forms.
+    The long vowel sign joins the letter before it, so the letter holds the joining position
+    before the last one — an `init` where it ends the word as an `isol`, a `medi` where it
+    ends it as a `fina`. The final long vowel sign closes the word, so the letter is drawn in
+    the position it ends a word in, and the FVS lookups of Phase III.6 select the variant of
+    that position that the text asks for; `ligateLvs` then draws the letter and the long
+    vowel sign as one written form. A long vowel sign that another letter follows is drawn in
+    the middle of a word, and the letter before it is drawn in the position it holds.
     """
 
-    for lvsPosition in (medi, fina):
-        lvsVar = GlyphDescriptor.fromData(lvsCharName, lvsPosition)
-        c.sub(str(charVar), str(lvsVar), by=str(ligateParts([charVar, lvsVar])))
+    lvs = GlyphDescriptor.fromData(getCharNameByAlias("TOD", "lvs"), fina)
+    with c.Lookup(f"III.lvs.preprocessing.{locale}", feature="rclt", flags={"IgnoreMarks": True}):
+        for charName, position in lvsLetters(locale):
+            before = GlyphDescriptor.fromData(charName, JOINED_BEFORE[position])
+            after = GlyphDescriptor.fromData(charName, position)
+            c.sub(c.input(str(before)), str(lvs), by=str(after))
+
+
+def ligateLvs(c: MongFeaComposer) -> None:
+    """Draw each letter and the final Todo long vowel sign that follows it as one written form.
+
+    The written form that the two make is named by the written form of the letter that the
+    long vowel sign is written with — `Ir` and `Lv` are drawn as the written form of `IrLv`
+    — and the letter is only drawn with that written form after the FVS lookups of Phase
+    III.6 have selected it, so this runs after them and before the ligatures of Phase IIb.1,
+    which would draw the letter with the written form that the long vowel sign is a part of.
+    """
+
+    lvs = GlyphDescriptor.fromData(getCharNameByAlias("TOD", "lvs"), fina)
+    for locale in ["TOD", "TODx"]:
+        if locale not in c.locales:
+            continue
+        with c.Lookup(f"III.lvs.ligature.{locale}", feature="rclt", flags={"IgnoreMarks": True}):
+            for charName, position, variant in lvsVariants(locale):
+                written = GlyphDescriptor.fromData(charName, position, variant)
+                ligature = GlyphDescriptor(
+                    written.codePoints + lvs.codePoints, written.units + ["Lv"], position
+                )
+                c.sub(str(written), str(lvs), by=str(ligature))
+
+
+def lvsVariants(locale: LocaleID) -> list[tuple[CharacterName, JoiningPosition, VariantData]]:
+    """The written forms of *locale* that a Todo long vowel sign is written with.
+
+    A letter is drawn with such a written form when the long vowel sign follows it, which
+    the data marks on the written form; the letter may be drawn with any of its variants
+    there, including the one an FVS selects.
+    """
+
+    return [
+        (charName, position, variant)
+        for _alias, charName, position, _fvs, variant in getVariants(locale)
+        if choosesLvs(locale, variant)
+    ]
+
+
+def lvsLetters(locale: LocaleID) -> list[tuple[CharacterName, JoiningPosition]]:
+    """Every letter of *locale* that a Todo long vowel sign is written with, and the joining
+    position it takes at the end of a word there.
+
+    A written form is marked where the long vowel sign draws the letter, and the letter is
+    drawn in the position it takes at the end of a word — an `isol` or a `fina`. A marked
+    written form of a position that joins both ways asks for no change: the letter is drawn
+    with it whether the long vowel sign follows or not.
+    """
+
+    return list(
+        dict.fromkeys(
+            (charName, position)
+            for charName, position, _ in lvsVariants(locale)
+            if position in JOINED_BEFORE
+        )
+    )
 
 
 def iii0b(c: MongFeaComposer) -> None:
@@ -324,6 +395,10 @@ def iii2a(c: MongFeaComposer) -> None:
                     c.sub(initials, marked, by=None)
 
     if "MNG" in c.locales:
+        # The `marked` that an initial consonant asks for is carried to the vowel that ends
+        # the syllable, across the consonants of the cluster between them, so that
+        # `k2 l ue` draws the marked `ue` as `k2 l ue` does when the vowel follows the
+        # initial consonant alone. GB 25914—2023 requires it.
         with c.Lookup("III.o_u_oe_ue.marked.emit", feature="rclt", flags={"IgnoreMarks": True}):
             for alias in categories["consonant"]:
                 default = c.getDefault(alias, "init")
@@ -508,7 +583,16 @@ def iii2d(c: MongFeaComposer) -> None:
 
 
 def feminineFollowingT(c: MongFeaComposer, locale: LocaleID) -> None:
-    """Apply `feminine` to the _e_ or _u_ that follows a t-like consonant of *locale*."""
+    """Apply `feminine` to the _e_ or _u_ that follows a t-like consonant of *locale*.
+
+    The t-like consonant makes the word feminine, and the vowel that follows it is written
+    with the feminine form of its position. A vowel of the same word may follow that vowel
+    — `u u`, where the second _u_ ends the word, or `ue u` — and the word stays feminine, so
+    the `feminine` lookup is reached through a vowel as well. Without it the word would be
+    feminine where a consonant made it so and not where its own vowel carried the gender
+    on, and the final _u_ of such a word would keep the form the character is written with
+    by default.
+    """
 
     consonants = c.variants(locale, ["t", "d", "k", "g", "h"])
     if locale == "MCHx":
@@ -518,6 +602,7 @@ def feminineFollowingT(c: MongFeaComposer, locale: LocaleID) -> None:
     feminine = c.input(euLetters, c.conditions[f"{locale}:feminine"])
     c.sub(consonants, feminineMarked, by=None)
     c.sub(consonants, feminine, by=None)
+    c.sub(c.classes[f"{locale}-vowel"], feminine, by=None)
 
     if locale == "MCHx":
         c.sub(c.classes["MCHx-sbm"], feminine, by=None)
@@ -955,13 +1040,19 @@ def iii5(c: MongFeaComposer) -> None:
             c.sub(bowed, c.input(c.classes["TOD-a_lvs.fina"]), by="u1820_u1843.AaLv.fina")
 
     if "TODx" in c.locales:
+        # A bowed letter of Todo Ali Gali is written with a form of its own where the writing
+        # systems that share the character agree on another one — the initial _pX_ is `Bh`
+        # for Todo Ali Gali and `Bg` for the others — and the shared form is the one the
+        # letter carries until the FVS lookups of Phase III.6 draw its own. The bow is drawn
+        # the same way in both, so both are taken here, or the vowel after the bow would not
+        # be redrawn as it is written after one.
         bowedB = c.namedGlyphClass(
             "TODx-bowedB",
-            c.variants("TODx", ["pX", "p", "b"]).glyphs,
+            withSharedVariants(c, "TODx", ["pX", "p", "b"]),
         )
         bowedK = c.namedGlyphClass(
             "TODx-bowedK",
-            c.variants("TODx", ["kX", "khX", "gX"]).glyphs,
+            withSharedVariants(c, "TODx", ["kX", "khX", "gX"]),
         )
         with c.Lookup("III.vowel.post_bowed.TODx", feature="rclt", flags={"IgnoreMarks": True}):
             bowed = c.glyphClass([bowedB, bowedK])
@@ -1038,9 +1129,9 @@ def iii6(c: MongFeaComposer) -> None:
 
     (1) Apply `manual` for letters preceding FVS.
 
-    (2) Apply `manual` for letters preceding FVS that precedes LVS for Todo and Todo Ali Gali.
+    (2) Apply `manual` for punctuation.
 
-    (3) Apply `manual` for punctuation.
+    (3) Draw a letter and the final Todo long vowel sign that follows it as one written form.
     """
 
     for locale in c.locales:
@@ -1050,36 +1141,7 @@ def iii6(c: MongFeaComposer) -> None:
         with c.Lookup(f"III.fvs.{locale}", feature="rclt"):
             automatedFvses(c, locale, _lvs)
 
-    if "TOD" in c.locales:
-        _lvsManualTod = [
-            ("TOD-a_lvs.isol", "fvs1.ignored", "u1820_u1843.ALv.isol"),
-            ("TOD-a_lvs.isol", "fvs3.ignored", "u1820_u1843.AALv.isol"),
-            ("TOD-a_lvs.init", "fvs2.ignored", "u1820_u1843.AALv.init"),
-            ("TOD-a_lvs.fina", "fvs1.ignored", "u1820_u1843.AaLv.fina"),
-            ("TOD-a_lvs.fina", "fvs2.ignored", "u1820_u1843.AaLv.fina"),
-        ]
-        with c.Lookup("_.manual.lvs.TOD") as _lvs:
-            for glyphClass, fvs, target in _lvsManualTod:
-                c.sub(c.input(c.classes[glyphClass]), fvs, by=target)
-        with c.Lookup("III.fvs.lvs.TOD"):
-            for glyphClass, fvs, _ in _lvsManualTod:
-                valid = c.input(fvs, c.conditions["_.valid"])
-                c.sub(c.input(c.classes[glyphClass], _lvs), valid, by=None)
-
-    if "TODx" in c.locales:
-        _lvsManualTodx = [
-            ("TODx-i_lvs.fina", "fvs1.ignored", "u1845_u1843.IpLv.fina"),
-            ("TODx-i_lvs.fina", "fvs2.ignored", "u1845_u1843.IpLv.fina"),
-            ("TODx-ue_lvs.fina", "fvs1.ignored", "u1849_u1843.OLv.fina"),
-            ("TODx-ue_lvs.fina", "fvs2.ignored", "u1849_u1843.ULv.fina"),
-        ]
-        with c.Lookup("_.manual.lvs.TODx") as _lvs:
-            for glyphClass, fvs, target in _lvsManualTodx:
-                c.sub(c.input(c.classes[glyphClass]), fvs, by=target)
-        with c.Lookup("III.fvs.lvs.TODx"):
-            for glyphClass, fvs, _ in _lvsManualTodx:
-                valid = c.input(fvs, c.conditions["_.valid"])
-                c.sub(c.input(c.classes[glyphClass], _lvs), valid, by=None)
+    ligateLvs(c)
 
     if "MNGx" in c.locales:
         with c.Lookup("_.manual.punctuation") as _lvs:
@@ -1092,24 +1154,81 @@ def iii6(c: MongFeaComposer) -> None:
             c.sub(c.input("u1881", _lvs), valid, by=None)
 
 
-def manualFvses(c: MongFeaComposer, locale: LocaleID) -> None:
-    """Apply `manual` to every letter of *locale* that precedes an FVS."""
+def fvsPrecedingLetters(
+    c: MongFeaComposer, locale: LocaleID
+) -> Iterator[tuple[ast.GlyphClass | ast.GlyphClassDefinition, int, str]]:
+    """Every letter of *locale* that precedes an FVS, with the FVS it precedes.
+
+    A letter whose writing system writes the position with a form of its own, while the
+    writing systems that share the character agree on another form, reaches the shared
+    form through the cross-writing-system lookups of Phase IIa — those lookups answer for
+    every writing system at once, so they cannot answer with the form of one of them. The
+    writing system has to accept the shared form beside its own here, and it draws its own
+    form from the shared one in the lookups of Phase III.6.
+    """
 
     for alias, charName, position, fvs, variant in getVariants(locale):
         if fvs == 0 or locale not in variant.locales:
             continue
         glyphClass = c.classes[f"{locale}-{alias}.{position}"]
+        members = [*glyphClass.glyphSet()]
+        if shared := sharedVariant(c, charName, position, members):
+            glyphClass = c.glyphClass([shared, *members])
         by = str(GlyphDescriptor.fromData(charName, position, variant))
+        yield glyphClass, fvs, by
+
+
+def manualFvses(c: MongFeaComposer, locale: LocaleID) -> None:
+    """Draw the own form of every letter of *locale* that precedes an FVS."""
+
+    for glyphClass, fvs, by in fvsPrecedingLetters(c, locale):
         c.sub(c.input(glyphClass), f"fvs{fvs}.ignored", by=by)
 
 
-def automatedFvses(c: MongFeaComposer, locale: LocaleID, _lvs: ast.LookupBlock) -> None:
-    """Select the variant of every letter of *locale* that precedes an FVS."""
+def sharedVariant(
+    c: MongFeaComposer,
+    charName: CharacterName,
+    position: JoiningPosition,
+    members: Iterable,
+) -> str | None:
+    """The glyph the cross-writing-system lookups draw the position with, if not *members*.
 
-    for alias, charName, position, fvs, variant in getVariants(locale):
-        if fvs == 0 or locale not in variant.locales:
-            continue
-        glyphClass = c.classes[f"{locale}-{alias}.{position}"]
+    A glyph of the position that no written form of *locale* names is the one the shared
+    lookups draw, so a letter that comes through them carries it.
+    """
+
+    shared = c.defaultVariant(charName, position)
+    if any(i.glyph == shared for i in members):
+        return None
+    return shared
+
+
+def withSharedVariants(c: MongFeaComposer, locale: LocaleID, aliases: list[str]) -> list[str]:
+    """The written forms of *aliases* of *locale*, each beside the form it shares.
+
+    A writing system that writes a letter with a form of its own carries the shared form of
+    the character until the FVS lookups of Phase III.6 draw its own, so a class that a
+    lookup before Phase III.6 reads has to hold both. The shared form is the one the font
+    draws the character with, which is the same for every writing system that shares it.
+    """
+
+    members = list[str]()
+    for alias in aliases:
+        charName = getCharNameByAlias(locale, alias)
+        for position in data.variants[charName]:
+            own = c.classes[f"{locale}-{alias}.{position}"].glyphSet()
+            members.extend(
+                i.glyph for i in own if GlyphDescriptor.parse(i.glyph).pseudoPosition() is None
+            )  # type: ignore[attr-defined]
+            if shared := sharedVariant(c, charName, position, own):
+                members.append(shared)
+    return list(dict.fromkeys(members))
+
+
+def automatedFvses(c: MongFeaComposer, locale: LocaleID, _lvs: ast.LookupBlock) -> None:
+    """Consume the FVS of every letter of *locale* that precedes one."""
+
+    for glyphClass, fvs, _ in fvsPrecedingLetters(c, locale):
         valid = c.input(f"fvs{fvs}.ignored", c.conditions["_.valid"])
         c.sub(c.input(glyphClass, _lvs), valid, by=None)
 

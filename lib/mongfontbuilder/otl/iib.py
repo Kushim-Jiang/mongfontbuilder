@@ -17,29 +17,39 @@ def compose(c: MongFeaComposer) -> None:
     iib3(c)
 
 
-def constructWpA(c: MongFeaComposer) -> None:
-    """Draw the `‹C›WpA` written form of Hudum Ali Gali from the two it is written with.
+def constructBowedForms(c: MongFeaComposer) -> None:
+    """Draw the Hudum Ali Gali written forms that a bowed written unit is written with.
 
-    Hudum Ali Gali writes a bowed written unit with a `Wp` and an `_a_` after it as one
-    written form: the `‹C›O` ligature that the bow forms with the `Wp`, and the `_a_` in
-    the shape it takes after a `Wp`.
+    A bowed written unit of Hudum Ali Gali that the word joins on the bow is written as one
+    form: the `‹C›WpA` of the bow with the `Wp` and the `_a_` in the shape it takes after a
+    `Wp`, and the `‹C›I4` of the bow with the Ali Gali _i_ that ends the word.
     """
 
-    if "MCHx" not in c.locales:
-        return
-    for consonant in WP_A_CONSONANTS:
-        for position, basePosition in WP_A_POSITIONS:
-            members = [f"_{consonant}O.{basePosition}", "_A.fina.Wp_"]
-            if all(i in c.glyphs for i in members):
-                c.spec.newGlyphs[f"_{consonant}WpA.{position}"] = GlyphSpec(members)
+
+    # The bowed written units of Hudum Ali Gali, which take a `Wp` and an `_a_`, or an _i_.
+    BOWED_CONSONANTS = ["G", "K", "K2", "Bg", "Pg", "B"]
+
+    # The written form of a bowed written unit that the word joins on the bow, the locale that
+    # writes it, and the members it is drawn from — the bow at the joining position before the
+    # one the written form is written in, where a `Wp`/`_a_` that follows makes it a ligature.
+    BOWED_FORMS = {
+        "WpA": (
+            "MCHx",
+            [("isol", "init"), ("fina", "medi")],
+            lambda x, b: [f"_{x}O.{b}", "_A.fina.Wp_"],
+        ),
+        "I4": ("MNGx", [("isol", "init"), ("fina", "medi")], lambda x, b: [f"_{x}I.{b}"]),
+    }
 
 
-# The bowed written units of Hudum Ali Gali that take a `Wp` and an `_a_`.
-WP_A_CONSONANTS = ["G", "K", "K2", "Bg", "Pg", "B"]
-
-# The position of the `‹C›WpA` written form, and the position of the `‹C›O` ligature it is
-# drawn from: the `_a_` of the written form is the one drawn after a `Wp`.
-WP_A_POSITIONS = [("isol", "init"), ("fina", "medi")]
+    for name, (locale, positions, members) in BOWED_FORMS.items():
+        if locale not in c.locales:
+            continue
+        for position, base in positions:
+            for consonant in BOWED_CONSONANTS:
+                written = members(consonant, base)
+                if all(i in c.glyphs for i in written):
+                    c.spec.newGlyphs[f"_{consonant}{name}.{position}"] = GlyphSpec(written)
 
 
 class LigatureCollector:
@@ -126,9 +136,11 @@ def iib1(c: MongFeaComposer) -> None:
     Ligatures.
     """
 
-    constructWpA(c)
-
-    with c.Lookup("IIb.ligature", feature="rclt"):
+    constructBowedForms(c)
+    # A mark between the parts of a ligature does not keep the ligature from being formed:
+    # the Baluda of `G Baluda O` is a mark, and the two letters around it are still the
+    # written form the ligature is drawn for.
+    with c.Lookup("IIb.ligature", feature="rclt", flags={"IgnoreMarks": True}):
         for input, (ligature, _) in LigatureCollector(c).collect().items():
             implementLigature(c, input, ligature)
 

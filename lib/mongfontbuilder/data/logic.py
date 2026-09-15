@@ -81,19 +81,47 @@ def getCrossLocaleVariant(
 ) -> tuple[list[WrittenUnitID], JoiningPosition] | None:
     """The default variant of *position* that every writing system writes the same way.
 
-    A default variant that answers no writing system with a written form of its own is
-    written the same way in all of them, so it is the cross-locale written form. A variant
-    borrowed from another joining position is resolved to the written form it borrows.
+    The written units of the variant are what a writing system agrees on: a writing system
+    that writes the variant with written units of its own has an answer of its own, and the
+    font cannot carry one answer for every writing system at once. A writing system that
+    writes it with the same written units — from another joining position, say — agrees, and
+    the variant borrowed from another joining position is resolved to the written form it
+    borrows.
     """
 
     for data in positionToFVSToVariantData[position].values():
         if not data.default:
             continue
-        if any(locale_data.written for locale_data in data.locales.values()):
-            continue
         written = data.written
-        if not isinstance(written, VariantReference):
-            return written, position
-        units = variantFromReference(written, positionToFVSToVariantData)
-        return units, written.position
+        if isinstance(written, VariantReference):
+            units = variantFromReference(written, positionToFVSToVariantData)
+            borrowedPosition = written.position
+        else:
+            units = written
+            borrowedPosition = position
+        if any(
+            localeUnits(data, locale, positionToFVSToVariantData) not in (None, units)
+            for locale in data.locales
+        ):
+            continue
+        return units, borrowedPosition
     return None
+
+
+def localeUnits(
+    data: VariantData,
+    locale: LocaleID,
+    positionToFVSToVariantData: dict[JoiningPosition, dict[FVS, VariantData]],
+) -> list[WrittenUnitID] | None:
+    """The written units *locale* writes *data* with, when it writes it with its own.
+
+    A writing system that writes the variant with a reference borrows the written units of
+    the joining position it names, which is what it agrees with the others on.
+    """
+
+    written = data.locales[locale].written
+    if written is None:
+        return None
+    if isinstance(written, VariantReference):
+        return variantFromReference(written, positionToFVSToVariantData)
+    return written
