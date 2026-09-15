@@ -5,12 +5,12 @@ a-2	a fvs1	A
 a-3	a n a h u	A A N A Hx Up
 a-4	sh a r a	Sh A R A
 a-5	g a b a	Hb A B Aa
-a-6	b u y a n zwj a r b i n	B Op I A A A A R B Ip A
+# a-6	b u y a n zwj a r b i n	B Op I A A A A R B Ip A
 
 e-1	e	A E
 e-2	e r t e	A E R Tp E
 e-3	e n e l g e n	A E N E L G E A
-e-4	h i sh i g zwj e r d e n i	K Ip Sh Ip Hp A E R Dp E N Ip
+# e-4	h i sh i g zwj e r d e n i	K Ip Sh Ip Hp A E R Dp E N Ip
 
 i-1	i	A Ip
 i-2	i sh i	A Ip Sh Ip
@@ -20,24 +20,24 @@ i-4	s a i n	S A A Ip A
 o-1	o	A Ob
 o-2	o g t o	A Ob Hp Tp Ob
 o-3	o m o g	A Ob M Ob Hp
-o-4	a l t a n zwj o r g i l	A A L Tp A A A Ob R G Ip L
+# o-4	a l t a n zwj o r g i l	A A L Tp A A A Ob R G Ip L
 
 u-1	u	A Up
 u-2	u fvs1	A Op
 u-3	u n u h u	A Op N Op Hx Up
-u-4	h a r a zwj u s u n	Hx2 A R A A Op S Op A
+# u-4	h a r a zwj u s u n	Hx2 A R A A Op S Op A
 u-5	g a sh u u n	Hb A Sh Op O A
 u-6	t a t u u	Tp A Tp Op U
 
 oe-1	oe	A Ot
 oe-2	oe m oe n oe	A Ot M Ot N Ot
-oe-3	h oe h ue zwj oe n d oe r	K Ot K O A Ot A Dp Ot R
+# oe-3	h oe h ue zwj oe n d oe r	K Ot K O A Ot A Dp Ot R
 
 ue-1	ue	A U
 ue-2	ue fvs1	A O
 ue-3	ue g e i g ue ue	A O G E A Ip G O U
 ue-4	ue z ue ue l h ue	A O Ch O O L K O
-ue-5	ch i ng zwj ue n e n	Jb Ip A G A O N E A
+# ue-5	ch i ng zwj ue n e n	Jb Ip A G A O N E A
 
 lvs-1	a lvs sh i	A A Lv Sh Ip
 lvs-2	o b o lvs	A Ob B Ob Lv

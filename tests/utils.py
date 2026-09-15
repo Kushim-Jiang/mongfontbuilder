@@ -127,13 +127,15 @@ def loadHBFont(path: Path) -> uharfbuzz.Font:  # type: ignore
     return Font(Face(Blob.from_file_path(path)))
 
 
-def parseWrittenUnits(text: str, font: Path) -> str:
+def parseWrittenUnits(text: str, font: Path, language: str | None = None) -> str:
     from uharfbuzz import Buffer, shape  # type: ignore
 
     hbFont = loadHBFont(font)
     buffer = Buffer()
     buffer.add_str(text)
     buffer.guess_segment_properties()
+    if language:
+        buffer.language = language
     shape(hbFont, buffer)
 
     glyphNames = [hbFont.glyph_to_string(info.codepoint) for info in buffer.glyph_infos]

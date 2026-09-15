@@ -49,19 +49,19 @@ pu1-cha-3	c a r iX space c a r iX iX	C A R I4 - C A R I I4
 pu1-cha-4	c a l iX space c a l iX iX	C A L I4 - C A L I I4
 pu1-cha-5	c ee space c ee ee space c o w a space c o w w a	C W - C W W - C O W A - C O W W A
 
-pu1-ja-1	zX a fvs1 space zX a fvs1 mvs a	Zz Aa - Zz Aa _ Aa
-pu1-ja-2	zX iX space zX iX iX space zX ue fvs3 space zX o ue	Zz I4 - Zz I I4 - Zz U - Zz O U
-pu1-ja-3	zX a r iX space zX a r iX iX	Zz A R I4 - Zz A R I I4
-pu1-ja-4	zX a l iX space zX a l iX iX	Zz A L I4 - Zz A L I I4
-pu1-ja-5	zX ee space zX ee ee space zX o w a space zX o w w a	Zz W - Zz W W - Zz O W A - Zz O W W A
+pu1-ja-1	zX a fvs1 space zX a fvs1 mvs a	Zz3 Aa - Zz3 Aa _ Aa
+pu1-ja-2	zX iX space zX iX iX space zX ue fvs3 space zX o ue	Zz3 I4 - Zz3 I I4 - Zz3 U - Zz3 O U
+pu1-ja-3	zX a r iX space zX a r iX iX	Zz3 A R I4 - Zz3 A R I I4
+pu1-ja-4	zX a l iX space zX a l iX iX	Zz3 A L I4 - Zz3 A L I I4
+pu1-ja-5	zX ee space zX ee ee space zX o w a space zX o w w a	Zz3 W - Zz3 W W - Zz3 O W A - Zz3 O W W A
 
-pu1-jha-1	zX hh a fvs1 space zX hh a fvs1 mvs a	Zz Hr Aa - Zz Hr Aa _ Aa
-pu1-jha-2	zX hh iX space zX hh iX iX	Zz Hr I4 - Zz Hr I I4
-pu1-jha-3	zX hh ue space zX hh o ue	Zz Hr U - Zz Hr O U
-pu1-jha-4	zX hh a r iX space zX hh a r iX iX	Zz Hr A R I4 - Zz Hr A R I I4
-pu1-jha-5	zX hh a l iX space zX hh a l iX iX	Zz Hr A L I4 - Zz Hr A L I I4
-pu1-jha-6	zX hh ee space zX hh ee ee	Zz Hr W - Zz Hr W W
-pu1-jha-7	zX hh o w a space zX hh o w w a	Zz Hr O W A - Zz Hr O W W A
+pu1-jha-1	zX hh a fvs1 space zX hh a fvs1 mvs a	Zz3 Hr Aa - Zz3 Hr Aa _ Aa
+pu1-jha-2	zX hh iX space zX hh iX iX	Zz3 Hr I4 - Zz3 Hr I I4
+pu1-jha-3	zX hh ue space zX hh o ue	Zz3 Hr U - Zz3 Hr O U
+pu1-jha-4	zX hh a r iX space zX hh a r iX iX	Zz3 Hr A R I4 - Zz3 Hr A R I I4
+pu1-jha-5	zX hh a l iX space zX hh a l iX iX	Zz3 Hr A L I4 - Zz3 Hr A L I I4
+pu1-jha-6	zX hh ee space zX hh ee ee	Zz3 Hr W - Zz3 Hr W W
+pu1-jha-7	zX hh o w a space zX hh o w w a	Zz3 Hr O W A - Zz3 Hr O W W A
 
 pu1-ña-1	nyX a fvs1 space nyX a fvs1 mvs a	Ny Aa - Ny Aa _ Aa
 pu1-ña-2	nyX iX space nyX iX iX space nyX ue fvs3 space nyX o ue	Ny I4 - Ny I I4 - Ny U - Ny O U
@@ -226,19 +226,19 @@ pu1-kṣa-7	kX shX o w a space kX shX o w w a	G Sx O W A - G Sx O W W A
 # nonbowed class: cX, c, zX, nyX, trX, trhX, drX, nrX, tX, thX, dX, n, mX, yX, r, l, w, sh, shX, s, hX
 # other: a, ngX
 
-pu2-bowed	pX iX mvs a space pX r mvs a space pX l a space pX waX aX	Bg I _ Aa - Bg R _ Aa - Bg L A - Bg O A2
-pu2-h	drX hh iX mvs a space drX hh r mvs a space drX hh l a space drX hh waX aX	Ds Hr I4 _ Aa - Ds Hr R _ Aa - Ds Hr L A - Ds Hr Wp A2
-pu2-nonbowed	cX iX mvs a space cX r mvs a space cX l a space cX waX aX	Zc I4 _ Aa - Zc R _ Aa - Zc L A - Zc Wp A2
-pu2-other	ngX iX mvs a space ngX r mvs a space ngX l a space ngX waX aX	N G I4 _ Aa - N G R _ Aa - N G L A - N G Wp A2
+pu2-bowed	pX iX mvs a space pX r mvs a space pX l a space pX waX a	Bg I _ Aa - Bg R _ Aa - Bg L A - Bg O A
+pu2-h	drX hh iX mvs a space drX hh r mvs a space drX hh l a space drX hh waX a	Ds Hr I4 _ Aa - Ds Hr R _ Aa - Ds Hr L A - Ds Hr Wp A
+pu2-nonbowed	cX iX mvs a space cX r mvs a space cX l a space cX waX a	Zc I4 _ Aa - Zc R _ Aa - Zc L A - Zc Wp A
+pu2-other	ngX iX mvs a space ngX r mvs a space ngX l a space ngX waX a	N G I4 _ Aa - N G R _ Aa - N G L A - N G Wp A
 
 pu3-bowed	kX kX a space k k a space pX pX a space phX phX a	G G Aa - K K Aa - Bg Bg Aa - Pg Pg Aa
 pu3-h	k2 hh k2 hh a fvs1 space z hh z hh a fvs1 space drX hh drX hh a fvs1	K2 Hr K2 Hr Aa - Z Hr Z Hr Aa - Ds Hr Ds Hr Aa
-pu3-nonbowed	cX cX a fvs1 space c c a fvs1 space z z a fvs1 space trX trX a fvs1	Zc Zc Aa - C C Aa - Z Z Aa - Zr Zr Aa
+pu3-nonbowed	cX cX a fvs1 space c c a fvs1 space z z a fvs1 space trX trX a fvs1	Zc Zc Aa - C C Aa - Z Z Aa - Zr2 Zr2 Aa
 pu3-other	ngX ngX a fvs1	N G N G Aa
 
 pu4-1	ngX kX a space ngX k a space ngX k2 a space ngX k2 hh a fvs1	N G G Aa - N G K Aa - N G K2 Aa - N G K2 Hr Aa
 pu4-2	nyX cX a fvs1 space nyX c a fvs1 space nyX z a fvs1 space nyX z hh a fvs1	Ny Zc Aa - Ny C Aa - Ny Z Aa - Ny Z Hr Aa
-pu4-3	nrX trX a fvs1 space nrX trhX a fvs1 space nrX drX a fvs1 space nrX drX hh a fvs1	Wn Zr Aa - Wn Cr2 Aa - Wn Ds Aa - Wn Ds Hr Aa
+pu4-3	nrX trX a fvs1 space nrX trhX a fvs1 space nrX drX a fvs1 space nrX drX hh a fvs1	Wn Zr2 Aa - Wn Cr2 Aa - Wn Ds Aa - Wn Ds Hr Aa
 pu4-4	n tX a fvs1 space n thX a fvs1 space n dX a fvs1 space n dX hh a fvs1	N Dv Aa - N Tp Aa - N Dq Aa - N Dq Hr Aa
 pu4-5	mX pX a space mX phX a space mX b a space mX b hh a fvs1	M Bg Aa - M Pg Aa - M B Aa - M B Hr Aa
 
@@ -249,7 +249,7 @@ pu5-other	l ngX a fvs1 space sh ngX a fvs1 space shX ngX a fvs1 space s ngX a fv
 
 pu6-1	r kX a space r k a space r k2 a space r k2 hh a fvs1 space r ngX a fvs1	R G Aa - R K Aa - R K2 Aa - R K2 Hr Aa - R N G Aa
 pu6-2	r cX a fvs1 space r c a fvs1 space r z a fvs1 space r z hh a fvs1 space r nyX a fvs1	R Zc Aa - R C Aa - R Z Aa - R Z Hr Aa - R Ny Aa
-pu6-3	r trX a fvs1 space r trhX a fvs1 space r drX a fvs1 space r drX hh a fvs1 space r nrX a fvs1	R Zr Aa - R Cr2 Aa - R Ds Aa - R Ds Hr Aa - R Wn Aa
+pu6-3	r trX a fvs1 space r trhX a fvs1 space r drX a fvs1 space r drX hh a fvs1 space r nrX a fvs1	R Zr2 Aa - R Cr2 Aa - R Ds Aa - R Ds Hr Aa - R Wn Aa
 pu6-4	r tX a fvs1 space r thX a fvs1 space r dX a fvs1 space r dX hh a fvs1 space r n a fvs1	R Dv Aa - R Tp Aa - R Dq Aa - R Dq Hr Aa - R N Aa
 pu6-5	r pX a space r phX a space r b a space r b hh a fvs1 space r mX a fvs1	R Bg Aa - R Pg Aa - R B Aa - R B Hr Aa - R M Aa
 pu6-6	r yX a fvs1 space r r a fvs1 space r l a fvs1 space r w a fvs1	R I Aa - R R Aa - R L Aa - R W Aa
@@ -265,7 +265,7 @@ pu10-3	anusvara b hh r o ue mvs a space tX yX ue space b yX ue	Anusvara B Hr R O
 pu10-4	s yX ue space dX yX ue space z yX ue space kX shX yX ue	S I U - Dq I U - Z I U - G Sx I U
 pu10-5	anusvara s a mX a r a yX ue space anusvara tX a s a r a yX ue space anusvara tX a l a hX a fvs1 mvs a	Anusvara S A M A R A I U - Anusvara Dv A S A R A I U - Anusvara Dv A L A A Hr Aa _ Aa
 pu10-6	kX a k a k2 a k2 hh a ngX a fvs1 space cX a c a z a z hh a nyX a fvs1	G A K A K2 A K2 Hr A N G Aa - Zc A C A Z A Z Hr A Ny Aa
-pu10-7	trX a trhX a drX a drX hh a nrX a fvs1 space tX a thX a dX a dX hh a n a fvs1	Zr A Cr2 A Ds A Ds Hr A Wn Aa - Dv A Tp A Dq A Dq Hr A N Aa
+pu10-7	trX a trhX a drX a drX hh a nrX a fvs1 space tX a thX a dX a dX hh a n a fvs1	Zr2 A Cr2 A Ds A Ds Hr A Wn Aa - Dv A Tp A Dq A Dq Hr A N Aa
 pu10-8	pX a phX a b a b hh a mX a fvs1 space yX a r a l a w a fvs1 space sh a shX a s a hX a fvs1	Bg A Pg A B A B Hr A M Aa - I A R A L A W Aa - Sh A Sx A S A A Hr Aa
 pu10-9	anusvara kX shX a mX a r a yX ue space anusvara hX a kX shX a mX a l a w a r a yX a fvs1	Anusvara G Sx A M A R A I U - Anusvara A Hr A G Sx A M A L A W A R A I Aa
 pu10-10	anusvara hX a kX shX a mX a l a w a r a iX mvs a	Anusvara A Hr A G Sx A M A L A W A R A I4 _ Aa
@@ -289,7 +289,7 @@ pu1-2	crX a fvs1 space ch a fvs1 space yX a fvs1 space nyX a fvs1	J Aa - Ch Aa -
 pu1-3	tX a fvs1 space thX a fvs1 space dX a fvs1 space n a fvs1	Dv Aa - Tp Aa - Dq Aa - N Aa
 pu1-4	pX a space phX a space b a space mX a fvs1	Bg Aa - Pg Aa - B Aa - M Aa
 pu1-5	cX a fvs1 space c a fvs1 space z a fvs1 space w a fvs1	Zc Aa - C Aa - Z Aa - W Aa
-pu1-6	zrX a fvs1 space zX a fvs1 space qX a fvs1 space yX a fvs1 space r a fvs1 space l a fvs1	Rh2 Aa - Zz Aa - Q Aa - I Aa - R Aa - L Aa
+pu1-6	zrX a fvs1 space zX a fvs1 space qX a fvs1 space yX a fvs1 space r a fvs1 space l a fvs1	Rh2 Aa - Zz3 Aa - Q Aa - I Aa - R Aa - L Aa
 pu1-7	sh a fvs1 space s a fvs1 space hX a fvs1 space a fvs1	Sh Aa - S Aa - A Hr Aa - A
 
 pu2	crX a fvs1 space crX iX space crX ue fvs3 space crX ee space crX o w a	J Aa - J I4 - J U - J W - J O W A
@@ -318,5 +318,5 @@ pu10-4	k2 zrX a s space k2 zrX iX s space k2 zrX ue fvs1 s space k2 zrX ee s spa
 
 pu11	dX b a space dX b iX mvs a space z l a fvs1	Dq B Aa - Dq B I _ Aa - Z L Aa
 pu12	kX r mvs a space k r mvs a space k2 r mvs a space dX r mvs a	G R _ Aa - K R _ Aa - K2 R _ Aa - Dq R _ Aa
-pu13	r kX a space kX iX waX aX	R G Aa - G I Wp A2
+pu13	r kX a space kX iX waX a	R G Aa - G I Wp A2
 pu14	l hX a fvs1	L A Hr Aa
