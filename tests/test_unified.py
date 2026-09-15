@@ -18,7 +18,7 @@ import uharfbuzz as hb
 from _pytest.mark.structures import ParameterSet
 from ufoLib2 import Font
 
-from fixtures import compileOTF, loadRawTestCases
+from fixtures import EAC_UNIFIED_XFAIL, compileOTF, loadRawTestCases
 from mongfontbuilder import GlyphDescriptor, data
 from mongfontbuilder.data.types import LocaleID
 from mongfontbuilder.otl import MongFeaComposer
@@ -47,27 +47,6 @@ LANGUAGE = {
 TEST_SUITES = {
     "eac": ["hud"],
     "core": ["hud", "hag", "tod", "tag", "sib", "man", "mag"],
-}
-
-# The EAC suite settles an FVS by the Hudum standard alone, which calls a sequence after a
-# letter invalid there. In the unified font the same character is valid in the writing
-# systems that share it, so the sequence is not invalid, and the written form the suite
-# expects of an invalid FVS does not follow.
-XFAIL = {
-    "eac-hud > MND11-2",
-    "eac-hud > MNS11-26",
-    "eac-hud > MNZ11-3",
-    "eac-hud > MNZ21-5",
-    "eac-hud > MNM10-2",
-    "eac-hud > MNM11-2",
-    "eac-hud > XIM11-11",
-    "eac-hud > XIM11-675",
-    "eac-hud > XIM11-678",
-    "eac-hud > XIM11-681",
-    "eac-hud > XIM11-684",
-    "eac-hud > XIM11-687",
-    "eac-hud > XIM11-690",
-    "eac-hud > XIM11-694",
 }
 
 # Written forms that a bowed written form leaves a stem to: the medial and final forms
@@ -500,16 +479,28 @@ def caseMarks(case: Case) -> list:
     return [*case.marks] if isinstance(case, ParameterSet) else []
 
 
+def caseIsXfail(case: Case) -> bool:
+    """Whether *case* is one the suites expect the font to answer differently."""
+
+    return any(mark.name == "xfail" for mark in caseMarks(case))
+
+
 def conformanceCases() -> list:
-    """The cases of the suites, marked where the unified font answers differently."""
+    """The cases of the suites, marked where the unified font answers differently.
+
+    The EAC suite settles the cases below by one writing system alone, and another writing
+    system that shares the character answers them differently, so the font that writes with
+    every writing system at once is the one that has to be marked; a font that writes with
+    one of them answers them as the suite expects.
+    """
 
     cases = list()
     for case in loadRawTestCases(TEST_SUITES, "MNG"):
         values = caseValues(case)
         marks = caseMarks(case)
-        if values[0] in XFAIL:
-            marks.append(pytest.mark.xfail(reason="The EAC expects an FVS to be invalid"))
-        cases.append(pytest.param(*values, marks=marks) if marks else values)
+        if reason := EAC_UNIFIED_XFAIL.get(values[0]):
+            marks.append(pytest.mark.xfail(reason=reason))
+        cases.append(pytest.param(*values, marks=marks) if marks else case)
     return cases
 
 

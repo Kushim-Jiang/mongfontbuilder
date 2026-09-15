@@ -23,6 +23,52 @@ FONT_NAME = {
     "MCH": "manchu",
 }
 
+# The EAC cases the font answers differently from the EAC spec. The UTN model is taken as
+# the correct one, so such a case is marked as an expected failure rather than being taken
+# out of the suite; the reasoning of each is in the README, under "Tests".
+FVS_LOCALE = (
+    "The EAC spec expects the FVS to be invalid here, because the locale is not the one it "
+    "expects, but the meeting held that the effect of an FVS does not depend on the locale, "
+    "so the FVS stays valid and selects its variant."
+)
+NNBSP = (
+    "The EAC spec assumes that every feature of NNBSP should be disabled. The UTN model "
+    "holds that the old functionality of NNBSP should be retained."
+)
+MVS_FINA = (
+    "The EAC spec takes an FVS after a letter to prevent the MVS shaping step, and the MVS "
+    "then to be an NBSP, which leaves the FVS valid. The UTN model holds that a letter "
+    "before an MVS is in the fina position, so the FVS after it selects the fina variant."
+)
+
+# The cases every font this project builds answers differently, marked where the suites are
+# loaded. A font that writes with one writing system alone answers the cases below it as
+# the EAC expects, which is why they are marked by `test_unified.py` instead.
+EAC_XFAIL: dict[str, str] = {
+    "XIM11-39": NNBSP,
+    "XIM11-40": NNBSP,
+    "XIM11-41": NNBSP,
+    "XIM11-46": FVS_LOCALE,
+    "XIM11-1012": MVS_FINA,
+}
+
+EAC_UNIFIED_XFAIL: dict[str, str] = {
+    "eac-hud > MND11-2": FVS_LOCALE,
+    "eac-hud > MNM10-2": FVS_LOCALE,
+    "eac-hud > MNM11-2": FVS_LOCALE,
+    "eac-hud > MNS11-26": FVS_LOCALE,
+    "eac-hud > MNZ11-3": FVS_LOCALE,
+    "eac-hud > MNZ21-5": FVS_LOCALE,
+    "eac-hud > XIM11-11": FVS_LOCALE,
+    "eac-hud > XIM11-675": FVS_LOCALE,
+    "eac-hud > XIM11-678": FVS_LOCALE,
+    "eac-hud > XIM11-681": FVS_LOCALE,
+    "eac-hud > XIM11-684": FVS_LOCALE,
+    "eac-hud > XIM11-687": FVS_LOCALE,
+    "eac-hud > XIM11-690": FVS_LOCALE,
+    "eac-hud > XIM11-694": FVS_LOCALE,
+}
+
 
 def buildFontForLocales(locales: list[LocaleID]) -> Path:
     fontName = FONT_NAME[locales[0].removesuffix("x")]
@@ -75,37 +121,12 @@ def loadRawTestCases(
                 ]
             for index, letters, goal in rules:
                 test_case = (f"{testSet}-{locale} > {index}", letters, locale, goal)
-                # Handle MNG specific xfail cases
                 if font_type == "MNG" and testSet == "eac" and locale == "hud":
-                    if index == "XIM11-46":
+                    reason = EAC_XFAIL.get(index)
+                    if reason:
                         test_cases.append(
-                            pytest.param(
-                                *test_case,
-                                marks=pytest.mark.xfail(
-                                    reason="The EAC spec expects an invalid FVS after a letter to prevent the MVS shaping step. The UTN model disagrees."
-                                ),
-                            )
+                            pytest.param(*test_case, marks=pytest.mark.xfail(reason=reason))
                         )
-                    elif index == "XIM11-1012":
-                        test_cases.append(
-                            pytest.param(
-                                *test_case,
-                                marks=pytest.mark.xfail(
-                                    reason="When an FVS after a letter prevents the MVS shaping step, the MVS is treated as an NBSP. In this case, the FVS remains valid. The UTN model considers this test case incorrect."
-                                ),
-                            )
-                        )
-                    elif index in ["XIM11-39", "XIM11-40", "XIM11-41"]:
-                        test_cases.append(
-                            pytest.param(
-                                *test_case,
-                                marks=pytest.mark.xfail(
-                                    reason="The EAC spec assumes that all features of NNBSP should be disabled. The UTN model considers this test case incorrect. The UTN model considers that the old functionality of NNBSP should be retained."
-                                ),
-                            )
-                        )
-                    else:
-                        test_cases.append(test_case)
-                else:
-                    test_cases.append(test_case)
+                        continue
+                test_cases.append(test_case)
     return test_cases
