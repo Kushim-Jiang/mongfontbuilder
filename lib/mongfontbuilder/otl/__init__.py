@@ -207,16 +207,16 @@ class MongFeaComposer(FeaComposer):
         A long vowel sign variant is drawn as the written form it follows plus `Lv`,
         which the source font carries as one written form — `_AALv.isol` draws
         `u1820_u1843.AALv.isol` — so the variant is built as a component of it rather
-        than stored in the source font.
+        than stored in the source font. The written form names itself: a descriptor
+        without code points is already written with a leading `_`.
         """
 
         for variant in variants:
             name = self.glyphNameProcessor(str(variant))
             if name in self.spec.newGlyphs:
                 continue
-            member = self.glyphNameProcessor(
-                "_" + str(GlyphDescriptor([], variant.units, variant.position))
-            )
+            written = str(GlyphDescriptor([], variant.units, variant.position))
+            member = self.glyphNameProcessor(written)
             self.spec.newGlyphs[name] = GlyphSpec([member] if member in self.glyphs else [])
 
     def initControls(self) -> None:

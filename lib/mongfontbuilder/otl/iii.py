@@ -17,6 +17,7 @@ from ..data.types import (
 )
 from ..utils import getCharNameByAlias, getVariants
 from . import MongFeaComposer
+from .iib import implementLigature
 
 MARKER_MASCULINE, MARKER_FEMININE = "marker.masculine", "marker.feminine"
 MARKER_INITIAL = "marker.initial"
@@ -116,7 +117,7 @@ def ligateLvs(c: MongFeaComposer) -> None:
                 ligature = GlyphDescriptor(
                     written.codePoints + lvs.codePoints, written.units + ["Lv"], position
                 )
-                c.sub(str(written), str(lvs), by=str(ligature))
+                implementLigature(c, (written, lvs), ligature)
 
 
 def lvsVariants(locale: LocaleID) -> list[tuple[CharacterName, JoiningPosition, VariantData]]:
