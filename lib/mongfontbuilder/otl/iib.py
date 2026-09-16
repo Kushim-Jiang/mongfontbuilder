@@ -10,6 +10,12 @@ from ..spec import GlyphSpec
 from ..utils import namespaceFromLocale
 from . import MongFeaComposer
 
+# The writing systems that draw the final form of the letter _m_ with a large tail, and the
+# written units the localized treatment swaps: the form this font draws the character with,
+# and the form the writing systems write instead.
+LARGE_TAIL = ["SIB", "MCH"]
+LOCALIZED_M_FINA = ("u182E.M.fina", "u182E.M3.fina")
+
 
 def compose(c: MongFeaComposer) -> None:
     iib1(c)
@@ -238,15 +244,35 @@ def iib3(c: MongFeaComposer) -> None:
     The localized form runs in `rclt` rather than in `locl`: an engine applies `locl` before
     cursive joining, when the character is still its bare glyph, so the written unit to
     replace does not exist yet.
+
+    A font that writes with one of the writing systems alone already draws the design that
+    writing system uses, so there is no design of another to localize: the written unit to
+    replace is not drawn, and neither is the one to replace it with. The treatment is
+    therefore written only where both are drawn, which is the font that writes with several
+    writing systems at once.
     """
 
-    if not (languages := [i for i in ("SIB", "MCH") if i in c.locales]):
+    if not (languages := [i for i in LARGE_TAIL if i in c.locales]):
+        return
+    if not all(hasGlyph(c, i) for i in LOCALIZED_M_FINA):
         return
     # The language system of a writing system is named after it, padded to four characters,
     # as the OpenType script/language tags are.
     tags = {i for i in c.languageSystems["mong"] if i.strip() in languages}
     with c.Lookup("IIb.localized.M.fina", feature="rclt", languageSystems={"mong": tags}):
-        c.sub("u182E.M.fina", by="u182E.M3.fina")
+        c.sub(LOCALIZED_M_FINA[0], by=LOCALIZED_M_FINA[1])
+
+
+def hasGlyph(c: MongFeaComposer, name: str) -> bool:
+    """Whether the composed font draws *name*, from the source font or from the spec.
+
+    The source font is what the composition starts from and the spec is what it adds, so a
+    glyph is drawn when either of them carries it. A phase that acts on a glyph the font
+    does not draw has nothing to act on, and writing the rule anyway leaves the feature file
+    referring to a glyph that is nowhere, which feaLib refuses.
+    """
+
+    return name in c.glyphs or name in c.spec.newGlyphs
 
 
 def iib4(c: MongFeaComposer) -> None:
