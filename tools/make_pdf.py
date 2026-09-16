@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the Astro docs site into a single PDF.
+r"""Render the Astro docs site into a single PDF.
 
 Prints every documentation page, in the same order as the site's sidebar, into
 one PDF with:
@@ -11,12 +11,9 @@ one PDF with:
 It renders the *built* site in `dist/`, so run `npm run build` first, or pass
 `--build` to do it here.
 
-On Windows this needs WeasyPrint and the MSYS2 UCRT64 Pango runtime (the DLLs
-are located via `_setup_weasyprint()`, overridable with `WEASYPRINT_DLL_DIR`).
-
 Usage:
-    python tools/make_pdf.py            # dist/ -> temp/mongolian-utn.pdf
-    python tools/make_pdf.py --build    # run `npm run build` first
+    npm run pdf                     # dist/ -> temp/mongolian-utn.pdf
+    npm run pdf -- --build          # run `npm run build` first
     python tools/make_pdf.py --out out.pdf
 """
 
@@ -34,18 +31,42 @@ DIST = ROOT / "dist"
 OUT_DEFAULT = ROOT / "temp" / "mongolian-utn.pdf"
 ASTRO_CONFIG = ROOT / "astro.config.ts"
 
-_MSYS64_BIN = r"C:\msys64\ucrt64\bin"
+
+def _pango_dir() -> str | None:
+    r"""The directory carrying the Pango/GLib DLLs, if one can be found.
+
+    Only Windows needs this: elsewhere WeasyPrint loads the system Pango by name. On
+    Windows `WEASYPRINT_DLL_DIR` names the directory outright; failing that the usual
+    MSYS2 location is tried, and failing that the DLL is looked for along `PATH`, which
+    finds a GTK build that shipped with some other program. WeasyPrint locates the DLL
+    itself on `PATH`, but its own dependencies are only resolved once the directory is
+    in the DLL search path, which is what `add_dll_directory` arranges.
+    """
+
+    _MSYS64_BIN = r"C:\msys64\ucrt64\bin"
+    _PANGO_DLL = "libpango-1.0-0.dll"
+
+    if os.name != "nt":
+        return None
+    if named := os.environ.get("WEASYPRINT_DLL_DIR"):
+        return named
+    if Path(_MSYS64_BIN).is_dir():
+        return _MSYS64_BIN
+    for entry in os.environ.get("PATH", "").split(os.pathsep):
+        if entry and (Path(entry) / _PANGO_DLL).is_file():
+            return entry
+    return None
 
 
 def _setup_weasyprint() -> None:
-    """Make the MSYS2 UCRT64 Pango/GLib DLLs discoverable before importing WeasyPrint."""
-    bin_dir = os.environ.get("WEASYPRINT_DLL_DIR", _MSYS64_BIN)
-    if bin_dir and Path(bin_dir).is_dir():
-        try:
-            os.add_dll_directory(bin_dir)  # Python >= 3.8
-        except OSError:
-            pass
-        os.environ["PATH"] = bin_dir + os.pathsep + os.environ.get("PATH", "")
+    """Make the Pango/GLib DLLs discoverable before importing WeasyPrint."""
+    if (bin_dir := _pango_dir()) is None:
+        return
+    try:
+        os.add_dll_directory(bin_dir)  # Python >= 3.8
+    except OSError:
+        pass
+    os.environ["PATH"] = bin_dir + os.pathsep + os.environ.get("PATH", "")
 
 
 _setup_weasyprint()
@@ -140,28 +161,59 @@ def collect_css(doc, seen: dict[str, str]) -> None:
             seen.setdefault(f"inline:{hash(text)}", text)
 
 
+def firstWithClass(node, className: str):
+    """Return the first descendant of *node* carrying the CSS class *className*."""
+    found = node.xpath(
+        f".//*[contains(concat(' ', normalize-space(@class), ' '), ' {className} ')]"
+    )
+    return found[0] if found else None
+
+
+def extractHero(root) -> str:
+    """Return the hero of a page as HTML: its tagline, then the links it offers.
+
+    A page that carries a hero has no content of its own (the home page): the hero is
+    what the page is — the sentence under the title, and the links the reader is asked
+    to go on with. A printed link is nothing to click, so every one of them is written
+    out with the address it goes to.
+    """
+
+    hero = firstWithClass(root, "hero")
+    if hero is None:
+        return ""
+
+    parts: list[str] = []
+    if (tagline := firstWithClass(hero, "tagline")) is not None:
+        parts.append(f"<p class='doc-tagline'>{html.escape(tagline.text_content().strip())}</p>")
+
+    actions = firstWithClass(hero, "actions")
+    links = actions.xpath(".//a[@href]") if actions is not None else []
+    if links:
+        items = "".join(
+            "<li>"
+            f"<a href='{html.escape(a.get('href', ''), quote=True)}'>"
+            f"{html.escape(' '.join(a.itertext()).strip())}</a>"
+            f"<span class='doc-link-address'>{html.escape(a.get('href', ''))}</span>"
+            "</li>"
+            for a in links
+        )
+        parts.append(f"<ul class='doc-links'>{items}</ul>")
+
+    return "\n".join(parts)
+
+
 def extract_page(doc):
     """Return (title, body_html) for a page, pulling the markdown content."""
     root = doc.getroot()
     h1s = root.xpath("//h1")
     title = " ".join(h1s[0].itertext()).strip() if h1s else ""
-    content = root.xpath(
-        "(//*[contains(concat(' ', normalize-space(@class), ' '), ' sl-markdown-content ')])[1]"
-    )
-    content = content[0] if content else None
+    hero_html = extractHero(root)
+    content = firstWithClass(root, "sl-markdown-content")
     if content is None:
-        # Hero-only pages (the home page) have no markdown content body.
-        tagline = root.xpath(
-            "(//*[contains(concat(' ', normalize-space(@class), ' '), ' tagline ')])[1]"
-        )
-        tagline = tagline[0] if tagline else None
-        body_html = (
-            f"<p class='doc-tagline'>{html.escape(tagline.text_content().strip())}</p>"
-            if tagline is not None
-            else ""
-        )
+        # A page with no markdown content of its own — the home page — is its hero.
+        body_html = hero_html
     else:
-        body_html = etree.tostring(content, method="html", encoding="unicode")
+        body_html = hero_html + etree.tostring(content, method="html", encoding="unicode")
     return title, body_html
 
 
@@ -263,28 +315,32 @@ def build_document(slugs: list[str], site_title: str) -> tuple[str, int]:
     css_blocks = "\n".join(f"<style>{css}</style>" for css in seen_css.values())
     print_css = (Path(__file__).parent / "print.css").read_text(encoding="utf-8")
 
-    doc_html = f"""<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-<meta charset="utf-8"/>
-<title>{html.escape(site_title)} — Documentation</title>
-{css_blocks}
-<style>{print_css}</style>
-</head>
-<body>
-<section class="doc-front">
-  <div class="doc-title">
-    <h1>{html.escape(site_title)}</h1>
-    <p class="doc-subtitle">Documentation &amp; draft of the Mongolian UTN (UTN #57)</p>
-  </div>
-  <nav class="toc">
-    <h2 class="toc-title">Contents</h2>
-    <ul>{"".join(toc_items)}</ul>
-  </nav>
-</section>
-{"".join(sections)}
-</body>
-</html>"""
+    doc_html = "\n".join(
+        [
+            "<!DOCTYPE html>",
+            '<html lang="en" data-theme="light">',
+            "<head>",
+            '<meta charset="utf-8"/>',
+            f"<title>{html.escape(site_title)} — Documentation</title>",
+            css_blocks,
+            f"<style>{print_css}</style>",
+            "</head>",
+            "<body>",
+            '<section class="doc-front">',
+            '  <div class="doc-title">',
+            f"    <h1>{html.escape(site_title)}</h1>",
+            '    <p class="doc-subtitle">Documentation &amp; draft of the Mongolian UTN (UTN #57)</p>',
+            "  </div>",
+            '  <nav class="toc">',
+            '    <h2 class="toc-title">Contents</h2>',
+            f"    <ul>{''.join(toc_items)}</ul>",
+            "  </nav>",
+            "</section>",
+            *sections,
+            "</body>",
+            "</html>",
+        ]
+    )
 
     page_count = len(pages)
     return doc_html, page_count
