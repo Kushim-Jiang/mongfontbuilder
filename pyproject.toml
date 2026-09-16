@@ -1,6 +1,6 @@
 [project]
 name = "mongfontbuilder"
-version = "0.12.1"
+version = "0.12.2"
 description = "Mongolian Font Builder."
 license = { text = "MIT" }
 readme = "README.md"
@@ -58,6 +58,7 @@ lint.ignore = [
     "E501", # The prose of the documentation is wrapped by hand, not to a column.
     "RUF002", # The prose quotes the characters it is about: ‹ › ‘ ’ – are the point.
     "SIM118", # `ufoLib2.Font` iterates its Glyphs, not its names, so `.keys()` is meant.
+
 ]
 
 [tool.pyright]
