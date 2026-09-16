@@ -22,6 +22,8 @@
     <integer>500</integer>
     <key>openTypeVheaVertTypoDescender</key>
     <integer>-500</integer>
+    <key>openTypeVheaVertTypoLineGap</key>
+    <integer>0</integer>
     <key>postscriptFontName</key>
     <string>NotoSansMongolian-Regular</string>
     <key>styleMapFamilyName</key>
