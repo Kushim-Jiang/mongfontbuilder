@@ -28,7 +28,7 @@ from mongfontbuilder.data.types import LocaleID
 from mongfontbuilder.otl import MongFeaComposer
 from mongfontbuilder.otl.iii import lvsVariants
 from mongfontbuilder.spec import FontSpec, GlyphSpec, applySpecToFont
-from mongfontbuilder.utils import getAliasesByLocale, getCharNameByAlias
+from mongfontbuilder.utils import getAliasesByLocale
 from utils import parseAliases, parseLetter, parseWrittenUnits, tempDir, testsDir
 
 SOURCE = testsDir / "unified.ufo"
@@ -161,10 +161,11 @@ VERTICAL_HEIGHT = 1000
 
 # The marks that are drawn over the written form they follow rather than beside it, which
 # `markAnchors` anchors at the origin so that they stay where they were drawn, and the
-# writing systems that write with them. A mark of another writing system is not anchored:
-# whether a mark is written over a written form is a choice each writing system makes.
+# writing systems that write with them. Hudum and Manchu write with them, and so do their
+# Ali Gali extensions; a mark of another writing system is not anchored, because whether a
+# mark is written over a written form is a choice each writing system makes.
 MARK_GLYPHS = ["u1885", "u1886", "u18A9"]
-MARK_LOCALES: list[LocaleID] = ["MNG", "MNGx"]
+MARK_LOCALES: list[LocaleID] = ["MNG", "MNGx", "MCH", "MCHx"]
 MARK_CLASS_NAME = "Mongolian"
 
 # How this font draws the written form of a letter and the long vowel sign, one rule per
@@ -271,39 +272,39 @@ class UnifiedMongFeaComposer(MongFeaComposer):
         self.spliceLvsWrittenForms()
         spec = super().compose()
         self.composeVerticalForms()
-        self.composeMarkAnchors()
         self.iib4()
         return spec
 
-    def composeMarkAnchors(self) -> None:
-        """Anchor the marks that are drawn over a written form, which the library leaves open.
+    def composeVerticalForms(self) -> None:
+        """Write the vertical forms of the punctuation marks, which Phase Ib leaves open.
 
-        The source font carries no anchors, because the marks of this font are drawn over
-        the whole written form rather than at a place on it, and whether a font positions
-        them at all is a choice a font makes. This font takes the choice.
+        The library leaves Phase Ib empty: whether a font writes a punctuation mark with a
+        vertical form, and how that form is drawn, is a choice a font makes. This font takes
+        the choice, so the phase is written here.
         """
 
-        self.markAnchors()
+        self.verticalForms()
 
-    def markAnchors(self) -> None:
+    def markAnchors(self, font: Font) -> None:
         """Anchor every mark of the font at the origin, and every written form under it.
+
+        This is written after the composition rather than during it, because the bases are
+        the glyphs that carry an advance and the advance is only settled once the spec is
+        applied. Writing it twice is not possible either: the mark class is declared with the
+        definition, and a second declaration of the same class is rejected.
 
         The marks `baluda`, `tribaluda` and `dagalga` are drawn over the written form they
         follow rather than beside it, so both the mark and the written form are anchored at
-        the origin and the mark stays where it was drawn. The written forms that carry them
-        are the ones of Hudum and Hudum Ali Gali, which are the writing systems the marks
-        are written with, and the dotted circle, which stands in for a written form that is
-        written with no letter around it.
+        the origin and the mark stays where it was drawn.
 
-        A written form may be drawn under a mark in any of its joining positions, so every
-        position of the letters of the two writing systems is anchored, and so are the
-        written units they are drawn with.
+        The written form is what is positioned, so the lookup has to hold every written form
+        a mark can follow. `markAnchorBases` names them.
         """
 
         markNames = [self.glyphNameProcessor(i) for i in MARK_GLYPHS if i in self.glyphs]
         if not markNames:
             return
-        bases = self.markAnchorBases()
+        bases = self.markAnchorBases(font)
         if not bases:
             return
         markClass = ast.MarkClass(MARK_CLASS_NAME)
@@ -317,34 +318,31 @@ class UnifiedMongFeaComposer(MongFeaComposer):
                 ast.MarkBasePosStatement(self.glyphClass(bases), [(ast.Anchor(0, 0), markClass)])
             )
 
-    def markAnchorBases(self) -> list[str]:
-        """The written forms the marks of this font are drawn over.
+    def markAnchorBases(self, font: Font) -> list[str]:
+        """The glyphs a mark of this font can be drawn over.
 
-        The marks belong to Hudum and its Ali Gali extension, so the written forms of those
-        two writing systems are the ones that carry them: every writing form of every letter
-        they write, in every joining position the letter is drawn in.
+        A mark is drawn over the written form it follows, and it is the written form that is
+        positioned against the mark: the layout looks the base of the mark up in the lookup,
+        and a written form the lookup does not hold leaves the mark unpositioned. An
+        unpositioned mark is not left where it was drawn — the pen has already passed it —
+        so the mark is flung past the written form it belongs over rather than drawn on it.
+
+        The set is therefore every glyph a mark can follow, which is every glyph of the font
+        that is not itself a mark. Whether a glyph is a mark is what its advance says: a mark
+        carries no advance of its own, and a glyph that carries one is a written form, a
+        ligature, or a control that stands where a written form does. That is what keeps the
+        set complete — a mark is written over the ligatures and the localized written forms
+        as well as over the plain ones, and over the dotted circle that stands in for a
+        written form written with no letter around it — where naming the written forms of
+        the writing systems the marks belong to left the ligatures out and flung the mark
+        past them.
+
+        The glyphs are read off *font* rather than off `self.glyphs`, because the ligatures
+        and the localized written forms are built by the composition and are not in the
+        source font the composer was given.
         """
 
-        written = set[str]()
-        for locale in MARK_LOCALES:
-            if locale not in self.locales:
-                continue
-            for alias in getAliasesByLocale(locale):
-                charName = getCharNameByAlias(locale, alias)
-                for position in data.variants[charName]:
-                    for variant in data.variants[charName][position].values():
-                        written.add(str(GlyphDescriptor.fromData(charName, position, variant)))
-        return sorted(i for i in written if i in self.glyphs or i in self.spec.newGlyphs)
-
-    def composeVerticalForms(self) -> None:
-        """Write the vertical forms of the punctuation marks, which Phase Ib leaves open.
-
-        The library leaves Phase Ib empty: whether a font writes a punctuation mark with a
-        vertical form, and how that form is drawn, is a choice a font makes. This font takes
-        the choice, so the phase is written here.
-        """
-
-        self.verticalForms()
+        return sorted(name for name in font.keys() if font[name].width)
 
     def verticalForms(self) -> None:
         """Write the vertical form of every punctuation mark that is drawn with one.
@@ -679,6 +677,10 @@ def composeUnified(locales: list[LocaleID] | None = None) -> Font:
     )
     spec = composer.compose()
     applySpecToFont(spec, font)
+    # The marks are positioned against every glyph of the font that carries an advance, and a
+    # glyph the composition built knows its advance only once the spec is applied, so the
+    # lookup is written here rather than during the composition.
+    composer.markAnchors(font)
     composer.verticalProportions(font)
     markGeneratedGlyphs(font, composer, spec, sourceNames)
     font.features.text = composer.asFeatureFile().asFea()
