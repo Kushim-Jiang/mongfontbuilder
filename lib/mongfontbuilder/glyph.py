@@ -51,17 +51,17 @@ def writtenCombinations(writtens: list[str], position: JoiningPosition) -> Itera
     rightJoin = 1 if position in (init, medi) else 0
     placeholder = "X"
     if leftJoin:
-        parts = [placeholder] + parts
+        parts = [placeholder, *parts]
     if rightJoin:
-        parts += [placeholder]
+        parts = [*parts, placeholder]
 
     combinations: list[list[str]] = [[]]
     for part in parts:
         newCombinations = list[list[str]]()
         for comb in combinations:
-            newCombinations.append(comb + [part])
+            newCombinations.append([*comb, part])
             if comb:
-                newCombinations.append(comb[:-1] + [comb[-1] + part])
+                newCombinations.append([*comb[:-1], comb[-1] + part])
         combinations = newCombinations
 
     for comb in combinations:
@@ -94,7 +94,8 @@ class GlyphDescriptor:
             else name  # u1820.A.init
         ).split(".")
         units = splitWrittens(y)
-        assert units and all(i in writtenUnits for i in units), name
+        assert units, name
+        assert all(i in writtenUnits for i in units), name
         assert position in joiningPositions, name
         instance = cls(
             codePoints=[int(i.removeprefix("u"), 16) for i in x.split("_")] if x else [],
@@ -111,9 +112,11 @@ class GlyphDescriptor:
         charName: CharacterName,
         position: JoiningPosition,
         variantData: VariantData | None = None,
-        suffixes: list[str] = [],
+        suffixes: list[str] | None = None,
         locale: LocaleID | None = None,
     ) -> GlyphDescriptor:
+        if suffixes is None:
+            suffixes = []
         if not variantData:
             variantData = next(i for i in variants[charName][position].values() if i.default)
 

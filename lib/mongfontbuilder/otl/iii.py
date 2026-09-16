@@ -115,7 +115,9 @@ def ligateLvs(c: MongFeaComposer) -> None:
             for charName, position, variant in lvsVariants(locale):
                 written = GlyphDescriptor.fromData(charName, position, variant)
                 ligature = GlyphDescriptor(
-                    written.codePoints + lvs.codePoints, written.units + ["Lv"], position
+                    [*written.codePoints, *lvs.codePoints],
+                    [*written.units, "Lv"],
+                    position,
                 )
                 implementLigature(c, (written, lvs), ligature)
 

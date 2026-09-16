@@ -11,7 +11,6 @@ The build on its own, without the suites, is ``tests/build.py``.
 
 from collections import Counter
 from collections.abc import Iterator
-from dataclasses import replace
 from functools import cache
 from pathlib import Path
 from re import match as reMatch
@@ -19,14 +18,13 @@ from re import match as reMatch
 import pytest
 import uharfbuzz as hb
 from _pytest.mark.structures import ParameterSet
-from fontTools import unicodedata
 from fontTools.feaLib import ast
 from ufoLib2 import Font
 from ufoLib2.objects import Glyph
 
 from fixtures import EAC_UNIFIED_XFAIL, compileOTF, loadRawTestCases
-from mongfontbuilder import GlyphDescriptor, data, splitWrittens, uNameFromCodePoint
-from mongfontbuilder.data.types import JoiningPosition, LocaleID, fina
+from mongfontbuilder import GlyphDescriptor, data
+from mongfontbuilder.data.types import LocaleID
 from mongfontbuilder.otl import MongFeaComposer
 from mongfontbuilder.otl.iii import lvsVariants
 from mongfontbuilder.spec import FontSpec, GlyphSpec, applySpecToFont
@@ -424,15 +422,16 @@ class UnifiedMongFeaComposer(MongFeaComposer):
             return
         for name in verticalForms:
             font[name].height = VERTICAL_HEIGHT
-        lineHeight = VERTICAL_HEIGHT
-        languageSystems = {
-            "DFLT": {"dflt"},
-            **self.languageSystems,
-        }
+        # The placement of a vertical form is read from the top of the horizontal line, so
+        # the font has to declare that line. The vertical line is the one the fontinfo
+        # declares through the vhea metrics, which is `VERTICAL_HEIGHT`, not the ascender to
+        # the descender of the horizontal line.
+        ascender = font.info.ascender
+        assert ascender is not None
         with self.Lookup(
             "Ib.punctuation.proportions",
             feature="vpal",
-            languageSystems=languageSystems,
+            languageSystems={"DFLT": {"dflt"}, **self.languageSystems},
         ):
             for name in verticalForms:
                 ink = inkBox(font[name])
@@ -446,8 +445,8 @@ class UnifiedMongFeaComposer(MongFeaComposer):
                             (
                                 ast.GlyphName(self.glyphNameProcessor(name)),
                                 ast.ValueRecord(
-                                    yPlacement=int(font.info.ascender - VERTICAL_MARGIN - ink[3]),
-                                    yAdvance=box - lineHeight,
+                                    yPlacement=int(ascender - VERTICAL_MARGIN - ink[3]),
+                                    yAdvance=box - VERTICAL_HEIGHT,
                                 ),
                             )
                         ],
@@ -502,7 +501,7 @@ class UnifiedMongFeaComposer(MongFeaComposer):
         writing system contributes the written forms of the letters it draws with a bow.
         """
 
-        members = list()
+        members = []
         for locale in self.locales:
             aliases = getAliasesByLocale(locale)
             for alias in BOWED:
@@ -617,7 +616,7 @@ class UnifiedMongFeaComposer(MongFeaComposer):
                 continue
             for charName, position, variant in lvsVariants(locale):
                 written = GlyphDescriptor.fromData(charName, position, variant)
-                yield str(GlyphDescriptor([], written.units + ["Lv"], written.position))
+                yield str(GlyphDescriptor([], [*written.units, "Lv"], written.position))
 
     def lvsFormMembers(self, name: str, forms: dict[str, list[str]]) -> list[str]:
         """The drawings a written form of the sign is drawn from.
@@ -664,9 +663,11 @@ def lvsRuleConsonant(units: list[str], rule: str) -> str | None:
     return written.removesuffix(ending) or None
 
 
-def composeUnified(locales: list[LocaleID] = [*data.locales]) -> Font:
+def composeUnified(locales: list[LocaleID] | None = None) -> Font:
     """Compose the unified source font, targeting *locales* (every writing system)."""
 
+    if locales is None:
+        locales = [*data.locales]
     font = Font.open(SOURCE)
     # The names the source font carries are taken before the composition adds to them:
     # a glyph the source font draws is not a generated one.
@@ -779,7 +780,8 @@ def unifiedFont() -> Path:
 
 
 def test_unified(unifiedFont: Path) -> None:
-    assert composedUFO.exists() and unifiedFont.exists()
+    assert composedUFO.exists()
+    assert unifiedFont.exists()
 
 
 # A case of the suites: the index, the letters, the locale and what they shape to, or the
@@ -824,7 +826,7 @@ def conformanceCases() -> list:
     one of them answers them as the suite expects.
     """
 
-    cases = list()
+    cases = []
     for case in loadRawTestCases(TEST_SUITES, "MNG"):
         values = caseValues(case)
         marks = caseMarks(case)
