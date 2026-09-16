@@ -1704,8 +1704,6 @@
   <string>space.glif</string>
   <key>u00B7</key>
   <string>u00B_7.glif</string>
-  <key>u00B7.vert</key>
-  <string>u00B_7.vert.glif</string>
   <key>u11660</key>
   <string>u11660.glif</string>
   <key>u11661</key>
@@ -1792,8 +1790,6 @@
   <string>u18A_9.glif</string>
   <key>u2014</key>
   <string>u2014.glif</string>
-  <key>u2014.vert</key>
-  <string>u2014.vert.glif</string>
   <key>u2018</key>
   <string>u2018.glif</string>
   <key>u2018.vert</key>
@@ -1812,8 +1808,6 @@
   <string>u201D_.vert.glif</string>
   <key>u2026</key>
   <string>u2026.glif</string>
-  <key>u2026.vert</key>
-  <string>u2026.vert.glif</string>
   <key>u2048</key>
   <string>u2048.glif</string>
   <key>u2048.vert</key>

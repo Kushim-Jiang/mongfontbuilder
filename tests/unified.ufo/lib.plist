@@ -890,9 +890,7 @@
     <string>u1886</string>
     <string>u18A9</string>
     <string>u00B7</string>
-    <string>u00B7.vert</string>
     <string>u2014</string>
-    <string>u2014.vert</string>
     <string>u2018</string>
     <string>u2018.vert</string>
     <string>u2019</string>
@@ -902,7 +900,6 @@
     <string>u201D</string>
     <string>u201D.vert</string>
     <string>u2026</string>
-    <string>u2026.vert</string>
     <string>u2048</string>
     <string>u2048.vert</string>
     <string>u2049</string>
