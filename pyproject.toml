@@ -40,7 +40,25 @@ build-backend = "uv_build"
 [tool.ruff]
 src = [".", "lib", "tests"] # Treat as first-party for sorting imports
 line-length = 100
-lint.select = []
+lint.select = [
+    "E4",
+    "E7",
+    "E9",
+    "F",
+    "W",
+    "I",
+    "UP",
+    "B",
+    "C4",
+    "SIM",
+    "PT",
+    "RUF",
+]
+lint.ignore = [
+    "E501", # The prose of the documentation is wrapped by hand, not to a column.
+    "RUF002", # The prose quotes the characters it is about: ‹ › ‘ ’ – are the point.
+    "SIM118", # `ufoLib2.Font` iterates its Glyphs, not its names, so `.keys()` is meant.
+]
 
 [tool.pyright]
 include = ["lib", "tests", "tools"]
