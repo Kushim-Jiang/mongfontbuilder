@@ -163,14 +163,14 @@ The ordinary shaping process of a cursive script runs in a fixed order: a basic 
   </thead>
   <tbody>
     <tr>
-      <td rowspan="13"></td>
+      <td rowspan="14"></td>
       <td colspan="3" style="border-left-style: hidden !important;">
         Ia. General
       </td>
       <td>Basic character-to-glyph mapping</td>
     </tr>
     <tr>
-      <td rowspan="10"></td>
+      <td rowspan="11"></td>
       <td colspan="2" style="border-left-style: hidden !important;">
         IIa. Cursive script
       </td>
@@ -201,13 +201,16 @@ The ordinary shaping process of a cursive script runs in a fixed order: a basic 
       <td>FVS-selected</td>
     </tr>
     <tr>
-      <td colspan="2" rowspan="3" style="border-left-style: hidden !important;">
+      <td colspan="2" rowspan="4" style="border-left-style: hidden !important;">
         IIb. Cursive script (continued) <br /> _Sub-written-unit variations_
       </td>
       <td>Variation involving bowed written units</td>
     </tr>
     <tr>
       <td>Cleanup of format controls</td>
+    </tr>
+    <tr>
+      <td>Localized treatments</td>
     </tr>
     <tr>
       <td>Optional treatments</td>
@@ -265,11 +268,15 @@ Phase III consists of a series of steps for Mongolian-specific shaping requireme
 
 #### IIb. Sub-written-unit variation
 
-After the written units have been fixed, cursive shaping resumes where phase IIa left it, with the variation that runs within a written unit. The reduction of phase III and the variation of this phase both act on written units, but at different scales: the reduction chose a written unit among the variants that a letter has at its joining position, and the sub-written-unit variation now adjusts that written unit in the light of the written units around it. A bowed written unit may first cause a following vowel to change its form; this is the graphemic variation that precedes the sub-written-unit variation. The format controls that the preceding steps consumed are then cleaned up, and optional treatments are applied.
+After the written units have been fixed, cursive shaping resumes where phase IIa left it, with the variation that runs within a written unit. The reduction of phase III and the variation of this phase both act on written units, but at different scales: the reduction chose a written unit among the variants that a letter has at its joining position, and the sub-written-unit variation now adjusts that written unit in the light of the written units around it. A bowed written unit may first cause a following vowel to change its form; this is the graphemic variation that precedes the sub-written-unit variation. The format controls that the preceding steps consumed are then cleaned up, the designs that a writing system draws differently from the writing systems it shares its characters with are localized, and optional treatments are applied.
+
+**Localized treatments.** A character that the writing systems share may be written with a different design by each of them. The final form of the letter _m_ (U+182E), for example, ends in a small tail in Hudum and in a large tail in Sibe and Manchu. Because the written unit is the same and the writing systems differ only in its design, the font keeps one design as the default and gives the others theirs in this step. The localized form has to be selected in `rclt` rather than in `locl`: an engine applies `locl` before cursive joining, when the character is still its bare glyph, so the written unit to replace does not exist yet.
+
+**Optional treatments.** The last step of the phase carries out the treatments that a font may or may not take. Stretching the stem of a written form where a bowed written form is followed by an extending one is one of them: the nirugu is the stem extender of the script, and a font that stretches the stem in the shaping keeps the user from inserting U+180A by hand.
 
 #### Ib. Typography
 
-The shaping process ends with typography. Vertical forms of punctuation marks (phase Ib) are critical to the proper setting of Mongolian text, but are not part of the complex shaping between letters and format controls. Optional treatments may follow.
+The shaping process ends with typography. Vertical forms of punctuation marks (phase Ib) are critical to the proper setting of Mongolian text, but are not part of the complex shaping between letters and format controls. A mark that is drawn over the written form it follows rather than beside it is anchored at this phase, and optional treatments may follow.
 
 ### Unified writing systems
 
