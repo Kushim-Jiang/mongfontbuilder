@@ -15,6 +15,7 @@ def compose(c: MongFeaComposer) -> None:
     iib1(c)
     iib2(c)
     iib3(c)
+    iib4(c)
 
 
 def constructBowedForms(c: MongFeaComposer) -> None:
@@ -24,7 +25,6 @@ def constructBowedForms(c: MongFeaComposer) -> None:
     form: the `‹C›WpA` of the bow with the `Wp` and the `_a_` in the shape it takes after a
     `Wp`, and the `‹C›I4` of the bow with the Ali Gali _i_ that ends the word.
     """
-
 
     # The bowed written units of Hudum Ali Gali, which take a `Wp` and an `_a_`, or an _i_.
     BOWED_CONSONANTS = ["G", "K", "K2", "Bg", "Pg", "B"]
@@ -40,7 +40,6 @@ def constructBowedForms(c: MongFeaComposer) -> None:
         ),
         "I4": ("MNGx", [("isol", "init"), ("fina", "medi")], lambda x, b: [f"_{x}I.{b}"]),
     }
-
 
     for name, (locale, positions, members) in BOWED_FORMS.items():
         if locale not in c.locales:
@@ -229,7 +228,30 @@ def iib2(c: MongFeaComposer) -> None:
 
 def iib3(c: MongFeaComposer) -> None:
     """
-    **Phase IIb.3: Optional treatments**
+    **Phase IIb.3: Localized treatments**
+
+    A character that the writing systems share may be written with a different design by
+    each of them — the final form of the letter _m_ ends in a small tail in Hudum and in a
+    large tail in Sibe and Manchu — and the font keeps one design as the default and gives
+    the others theirs here.
+
+    The localized form runs in `rclt` rather than in `locl`: an engine applies `locl` before
+    cursive joining, when the character is still its bare glyph, so the written unit to
+    replace does not exist yet.
+    """
+
+    if not (languages := [i for i in ("SIB", "MCH") if i in c.locales]):
+        return
+    # The language system of a writing system is named after it, padded to four characters,
+    # as the OpenType script/language tags are.
+    tags = {i for i in c.languageSystems["mong"] if i.strip() in languages}
+    with c.Lookup("IIb.localized.M.fina", feature="rclt", languageSystems={"mong": tags}):
+        c.sub("u182E.M.fina", by="u182E.M3.fina")
+
+
+def iib4(c: MongFeaComposer) -> None:
+    """
+    **Phase IIb.4: Optional treatments**
 
     Optional treatments.
     """
