@@ -1237,7 +1237,25 @@ def automatedFvses(c: MongFeaComposer, locale: LocaleID, _lvs: ast.LookupBlock) 
 def iii7(c: MongFeaComposer) -> None:
     """
     **Phase III.7: Control character postprocessing**
+
+    An nnbsp that no shaping took is written as the glyph of the nnbsp, which is the glyph
+    the source font draws for the character.
+
+    Unicode 16.0 hands the function of the nnbsp to the MVS, so every lookup that shapes an
+    MVS shapes an nnbsp as well — `@mvs`, `@mvs.invalid` and `@mvs.valid` all hold it — and
+    an nnbsp that a chachlag, a particle or a wide space consumed is already written with
+    the glyphs that shaping writes. What reaches this phase unwritten is therefore the nnbsp
+    that nothing followed, which is the nnbsp that stands as a space of its own, and it is
+    written with the glyph of the character rather than with the `mvs` the MVS is drawn
+    with. The substitution is made here, at the end of the shaping, because every lookup
+    before it reads the nnbsp by the name it shares with the MVS.
     """
+
+    name = c.glyphNameProcessor("nnbsp")
+    if name not in c.glyphs and name not in c.spec.newGlyphs:
+        return
+    with c.Lookup("III.nnbsp.postprocessing", feature="rclt"):
+        c.sub("nnbsp", by=name)
 
     with c.Lookup("III.controls.postprocessing", feature="rclt"):
         c.sub(
