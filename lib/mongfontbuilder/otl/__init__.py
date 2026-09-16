@@ -64,7 +64,12 @@ class MongFeaComposer(FeaComposer):
 
         super().__init__(
             languageSystems={
-                "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in self.locales}
+                # The default script is declared beside the Mongolian one so that a lookup
+                # can be written for a layout that does not resolve its text to `mong` —
+                # a layout reads the features of the script its text is written with, and
+                # one that resolves to another script reads `DFLT`.
+                "DFLT": {"dflt"},
+                "mong": {"dflt"} | {namespaceFromLocale(i).ljust(4) for i in self.locales},
             }
         )
 
