@@ -5,6 +5,8 @@ whole block composes from a single source font. This module builds that font for
 writing systems and leaves the composed UFO and OTF in ``temp/`` for inspection:
 
     uv run pytest tests/test_unified.py -s
+
+The build on its own, without the suites, is ``tests/build.py``.
 """
 
 from collections import Counter
@@ -20,9 +22,10 @@ from _pytest.mark.structures import ParameterSet
 from fontTools import unicodedata
 from fontTools.feaLib import ast
 from ufoLib2 import Font
+from ufoLib2.objects import Glyph
 
 from fixtures import EAC_UNIFIED_XFAIL, compileOTF, loadRawTestCases
-from mongfontbuilder import GlyphDescriptor, data, splitWrittens
+from mongfontbuilder import GlyphDescriptor, data, splitWrittens, uNameFromCodePoint
 from mongfontbuilder.data.types import JoiningPosition, LocaleID, fina
 from mongfontbuilder.otl import MongFeaComposer
 from mongfontbuilder.otl.iii import lvsVariants
@@ -139,11 +142,24 @@ BOWED = ["b", "p", "f", "k", "k2"]
 # The Ali Gali vowel written forms, which an extended written form stands before.
 VOWELS = {"MNG": ["a", "ue", "ee", "o"], "MNGx": ["a", "iX", "ue", "ee", "o"]}
 
-# The margin the punctuation marks are drawn with, at each side of the drawing: a mark is
-# drawn with this much space to its left and to its right, and its vertical form is drawn
-# with the same margin above and below. The margin is what `verticalMargins` gives a
-# vertical form, and it is why this font writes no `vpal` feature.
+# The margin the punctuation marks are drawn with, at each end of the drawing: a mark is
+# drawn with this much space before it and after it, and its vertical form is drawn with the
+# same margin at each end of it. A vertical form is read along the line, which is the
+# direction its advance is taken in, so the margin of a vertical form is taken along y. The
+# margin is what `verticalProportions` gives a vertical form through `vpal`.
 VERTICAL_MARGIN = 100
+
+# The height of the line a vertical form is read in, and so the vertical advance of every
+# vertical form and the `vhea` of the font. It is the sum of the `openTypeVheaVertTypoAscender`
+# and `openTypeVheaVertTypoDescender` of the source font, which the fontinfo declares as
+# 500 and -500: a vertical form of this font is read in a box of 1000 along the line, not in
+# the 1226 the horizontal line takes from the ascender to the descender of the font.
+#
+# A glyph is given this height through `vmtx`, which is what tells the layout that the
+# glyph has a vertical advance of its own. Without it the layout synthesizes a vertical
+# origin for the glyph, places the glyph by that origin rather than by the line, and the
+# margin a vertical form is drawn with is not the margin it is read with.
+VERTICAL_HEIGHT = 1000
 
 # The marks that are drawn over the written form they follow rather than beside it, which
 # `markAnchors` anchors at the origin so that they stay where they were drawn, and the
@@ -224,6 +240,22 @@ LVS_FORMS: list[tuple[str, dict[str, list[str]]]] = [
         },
     ),
 ]
+
+
+def inkBox(glyph: Glyph) -> tuple[float, float, float, float]:
+    """The box the drawing of *glyph* fills, as the least and most of x and of y.
+
+    The box is read off the points of the drawing rather than from the outline, which is what
+    the drawings of this font are drawn and positioned by. A glyph that draws nothing fills a
+    box with no sides.
+    """
+
+    points = [point for contour in glyph.contours for point in contour.points]
+    if not points:
+        return 0, 0, 0, 0
+    x = [point.x for point in points]
+    y = [point.y for point in points]
+    return min(x), min(y), max(x), max(y)
 
 
 class UnifiedMongFeaComposer(MongFeaComposer):
@@ -324,10 +356,11 @@ class UnifiedMongFeaComposer(MongFeaComposer):
         runs vertically, which is what the `vert` feature asks for.
 
         Noto carries a second feature, `vpal`, whose proportional placements pull the
-        vertical forms of the brackets and the quotes onto a common height. This font gives
-        every vertical form the margin the horizontal form is drawn with — `VERTICAL_MARGIN`
-        at each end of the drawing, by `verticalMargins` — so no proportional placement is
-        needed and `vpal` is not written.
+        vertical forms of the brackets and the quotes onto a common length. This font gives
+        most of its vertical forms the margin the horizontal form is drawn with —
+        `VERTICAL_MARGIN` at each end of the drawing, by `verticalProportions` — and leaves
+        the forms that are read at the edge of the line in the box of the line, which
+        `NO_VPAL` holds, so `vpal` is written here.
         """
 
         verticalForms = self.verticalFormNames()
@@ -346,26 +379,83 @@ class UnifiedMongFeaComposer(MongFeaComposer):
 
         return [name for name in self.glyphs if name.endswith(".vert")]
 
-    def verticalMargins(self, font: Font) -> None:
-        """Give each vertical form a margin of `VERTICAL_MARGIN` at both ends of its drawing.
+    def verticalProportions(self, font: Font) -> None:
+        """**Write `vpal`: the box of a vertical form is its drawing plus the margin**
 
-        The marks are drawn with 100 units of space above and below, which is the margin the
-        horizontal forms carry on their sides, so a vertical form is moved to start that far
-        above the baseline and its advance is set to the drawing plus the margin at each end.
-        The drawing itself is left as it is: the margin is what the layout reads, and it is
-        applied to the composed font rather than to the source font.
+        A drawing is read along the line, and a vertical form is read along the line by its y
+        axis, which is the direction the layout takes its advance in. A font that gives a
+        glyph no vertical advance of its own gives every glyph the height of the line — from
+        the ascender to the descender — and the source font draws each vertical form in that
+        box, wherever in it the mark belongs.
+
+        A vertical form is given `VERTICAL_HEIGHT` as its height first, which is what makes
+        the font carry `vmtx` at all: a glyph whose height is set has a vertical advance of
+        its own, and the layout then reads the glyph by the line the font gives it rather
+        than by a vertical origin it synthesizes. The synthesized origin is what a reading
+        is otherwise placed by, and it is taken across the line from the width of the glyph
+        rather than from the drawing, so a vertical form read without `vmtx` does not keep
+        the margin it is drawn with. The height is the same for every form, so `vhea` is
+        written once and every vertical form shares the line.
+
+        A horizontal form of this font is drawn with the margin the mark is read with: its
+        ink runs from `VERTICAL_MARGIN` to the advance less `VERTICAL_MARGIN`, so the mark is
+        read with the same margin before it and after it and nothing else. A vertical form is
+        the same mark turned onto the line, so it is read with that same margin at each end
+        of it along the line. The advance of a vertical form is therefore set to its drawing
+        plus `VERTICAL_MARGIN` at each end of it, and the drawing is moved so that it sits
+        `VERTICAL_MARGIN` from the start of that advance.
+
+        Both are proportional placements: values the layout reads rather than ink on the
+        glyph. The drawing is what the source font drew, and the placement is what `vpal` is
+        for; the advance a glyph of this font is looked up with is the height of the line, so
+        the placement is what the advance of the form is read as.
+
+        The placement is written for the default script as well as for the Mongolian one.
+        A layout reads the placement of the script its text is written with, and only the
+        writing systems of this font are registered under `mong`; a layout that resolves
+        its text to another script — or to no script at all — reads `DFLT`, and a `vpal`
+        of the Mongolian script alone would be a placement that layout never reads. The
+        box of a vertical form is a property of the form itself, so it is written once for
+        every layout that reads the font.
         """
 
-        for name in self.verticalFormNames():
-            glyph = font[name]
-            points = [point for contour in glyph.contours for point in contour.points]
-            yMin = min((point.y for point in points), default=0)
-            yMax = max((point.y for point in points), default=0)
-            height = yMax - yMin
-            if not height:
-                continue  # a vertical form with no drawing has no margin to be given
-            glyph.move((0, VERTICAL_MARGIN - yMin))
-            glyph.width = height + 2 * VERTICAL_MARGIN
+        verticalForms = self.verticalFormNames()
+        if not verticalForms:
+            return
+        for name in verticalForms:
+            font[name].height = VERTICAL_HEIGHT
+        lineHeight = VERTICAL_HEIGHT
+        languageSystems = {
+            "DFLT": {"dflt"},
+            **self.languageSystems,
+        }
+        with self.Lookup(
+            "Ib.punctuation.proportions",
+            feature="vpal",
+            languageSystems=languageSystems,
+        ):
+            for name in verticalForms:
+                ink = inkBox(font[name])
+                drawing = ink[3] - ink[1]
+                if not drawing:
+                    continue  # a vertical form with no drawing has no box to be given
+                box = drawing + 2 * VERTICAL_MARGIN
+                self.current.append(
+                    ast.SinglePosStatement(
+                        [
+                            (
+                                ast.GlyphName(self.glyphNameProcessor(name)),
+                                ast.ValueRecord(
+                                    yPlacement=int(font.info.ascender - VERTICAL_MARGIN - ink[3]),
+                                    yAdvance=box - lineHeight,
+                                ),
+                            )
+                        ],
+                        [],
+                        [],
+                        False,
+                    )
+                )
 
     def iib4(self) -> None:
         """**Phase IIb.4: Stretching the stem where a bow is followed by an extending form**
@@ -588,10 +678,29 @@ def composeUnified(locales: list[LocaleID] = [*data.locales]) -> Font:
     )
     spec = composer.compose()
     applySpecToFont(spec, font)
-    composer.verticalMargins(font)
+    composer.verticalProportions(font)
     markGeneratedGlyphs(font, composer, spec, sourceNames)
     font.features.text = composer.asFeatureFile().asFea()
     return font
+
+
+def buildUnifiedFont() -> Path:
+    """Compose the unified font and write the composed UFO and OTF to ``temp/``.
+
+    The suites compose the font on the way to shaping it, which is a run of thousands of
+    cases; this is the build by itself, which ``tests/build.py`` and ``tests/failures.py``
+    are run for.
+    """
+
+    print("composing the unified font …", flush=True)
+    font = composeUnified()
+    tempDir.mkdir(parents=True, exist_ok=True)
+    print(f"  composed {len(font)} glyphs, writing the UFO …", flush=True)
+    font.save(composedUFO, overwrite=True)
+    print("  wrote the UFO, compiling the OTF …", flush=True)
+    compileOTF(font).save(composedOTF)
+    print(f"composed {composedOTF}", flush=True)
+    return composedOTF
 
 
 # The colours the composed font marks a generated glyph with, by the kind of glyph it is.
@@ -666,15 +775,7 @@ def unifiedFont() -> Path:
     build; the composed UFO and OTF are left in ``temp/``.
     """
 
-    print("composing the unified font …", flush=True)
-    font = composeUnified()
-    tempDir.mkdir(parents=True, exist_ok=True)
-    print(f"  composed {len(font)} glyphs, writing the UFO …", flush=True)
-    font.save(composedUFO, overwrite=True)
-    print("  compiled the UFO, compiling the OTF …", flush=True)
-    compileOTF(font).save(composedOTF)
-    print(f"composed {composedOTF}", flush=True)
-    return composedOTF
+    return buildUnifiedFont()
 
 
 def test_unified(unifiedFont: Path) -> None:

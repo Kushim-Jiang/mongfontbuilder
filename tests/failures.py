@@ -48,20 +48,14 @@ COMPACT = REPO / "temp" / "unified-failures-compact.txt"
 
 
 def composeIfNeeded() -> None:
-    """Compose the unified font when the tests have not left one behind."""
+    """Compose the unified font when one has not been built already."""
 
     if composedOTF.exists():
         return
 
-    from fixtures import compileOTF
-    from mongfontbuilder.data import locales
-    from test_unified import composeUnified
+    from test_unified import buildUnifiedFont
 
-    print("composing the unified font …", flush=True)
-    font = composeUnified([*locales])
-    composedUFO.parent.mkdir(parents=True, exist_ok=True)
-    font.save(composedUFO, overwrite=True)
-    compileOTF(font).save(composedOTF)
+    buildUnifiedFont()
 
 
 @dataclass
