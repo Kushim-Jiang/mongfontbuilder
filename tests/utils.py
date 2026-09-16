@@ -77,11 +77,11 @@ def getWrittenUnits(utnName: UTNGlyphName) -> str:
     position = utnName.joiningPosition or ""
     units: list[str]
     if position.startswith("init"):
-        units = utnName.writtenUnits + ["Right"]
+        units = [*utnName.writtenUnits, "Right"]
     elif position.startswith("medi"):
-        units = ["Left"] + utnName.writtenUnits + ["Right"]
+        units = ["Left", *utnName.writtenUnits, "Right"]
     elif position.startswith("fina"):
-        units = ["Left"] + utnName.writtenUnits
+        units = ["Left", *utnName.writtenUnits]
     else:
         units = utnName.writtenUnits
     return "".join(units)
@@ -115,7 +115,7 @@ def parseLetter(names: str, writing_system: str) -> str:
             )
             result.append(unicodedata.lookup(charName))
         except StopIteration:
-            raise ValueError(f"No alias found for name: {name}")
+            raise ValueError(f"No alias found for name: {name}") from None
 
     return "".join(result)
 

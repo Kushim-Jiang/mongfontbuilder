@@ -476,7 +476,7 @@ class MongFeaComposer(FeaComposer):
     def constructAliasCondition(self, locale: LocaleID, alias: str, condition: str) -> None:
         """Offer one letter of *locale* every variant it has that answers *condition*."""
 
-        for alias, charName, position, _, variant in getVariants(locale, [alias]):
+        for _, charName, position, _, variant in getVariants(locale, [alias]):
             if not choosesVariant(locale, variant, condition):
                 continue
             target = GlyphDescriptor.fromData(
@@ -518,7 +518,7 @@ class MongFeaComposer(FeaComposer):
         """
 
         return [
-            GlyphDescriptor(v.codePoints + [0x1843], v.units + ["Lv"], v.position)
+            GlyphDescriptor([*v.codePoints, 0x1843], [*v.units, "Lv"], v.position)
             for v in self.variantDescriptors(
                 locale, charName, position, [i for i in variants if choosesLvs(locale, i)]
             )
@@ -549,7 +549,7 @@ class MongFeaComposer(FeaComposer):
         locale: LocaleID,
         writtens: str | Iterable[str] | Callable[[list[str]], bool],
         positions: JoiningPosition | Iterable[JoiningPosition] | None = None,
-        aliases: list[str] = [],
+        aliases: list[str] | None = None,
     ) -> ast.GlyphClass:
         """
         >>> composer = MongFeaComposer(cmap={}, glyphs=[], locales=["MNG"])
@@ -569,7 +569,7 @@ class MongFeaComposer(FeaComposer):
                     "".join(variantGlyphDescriptor(locale, alias, position, fvs).units)
                     for alias in aliases
                     for position in positions
-                    for fvs in data.variants[getCharNameByAlias(locale, alias)][position].keys()
+                    for fvs in data.variants[getCharNameByAlias(locale, alias)][position]
                 ],
             )
         else:

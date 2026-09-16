@@ -65,10 +65,10 @@ def resolveCmapVariants(
     codePointToVariant = dict[int, tuple[list[WrittenUnitID], JoiningPosition]]()
     for codePoint, positionToVariant in sorted(codePointToPositionToVariant.items()):
         for position in joiningPositions:
-            if variant := positionToVariant.get(position):
-                if variant not in codePointToVariant.values():
-                    codePointToVariant[codePoint] = variant
-                    break
+            variant = positionToVariant.get(position)
+            if variant is not None and variant not in codePointToVariant.values():
+                codePointToVariant[codePoint] = variant
+                break
         else:
             raise NotImplementedError
 
