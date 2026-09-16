@@ -20,6 +20,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import contextlib
 import html
 import os
 import re
@@ -62,10 +63,8 @@ def _setup_weasyprint() -> None:
     """Make the Pango/GLib DLLs discoverable before importing WeasyPrint."""
     if (bin_dir := _pango_dir()) is None:
         return
-    try:
+    with contextlib.suppress(OSError):
         os.add_dll_directory(bin_dir)  # Python >= 3.8
-    except OSError:
-        pass
     os.environ["PATH"] = bin_dir + os.pathsep + os.environ.get("PATH", "")
 
 

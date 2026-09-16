@@ -38,7 +38,6 @@ from test_unified import (  # noqa: E402
     caseIsXfail,
     caseValues,
     composedOTF,
-    composedUFO,
     languageOf,
 )
 from utils import parseAliases, parseLetter, parseWrittenUnits  # noqa: E402

@@ -113,7 +113,7 @@ def loadRawTestCases(
     for testSet, locales in test_info.items():
         for locale in locales:
             file_path = files(data) / f"{testSet}-{locale}.tsv"
-            with open(file_path, "r", encoding="utf-8") as f:  # type: ignore
+            with open(file_path, encoding="utf-8") as f:  # type: ignore
                 rules = [
                     tuple(i)
                     for i in csv.reader(f, delimiter="\t")
